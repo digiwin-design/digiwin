@@ -11,7 +11,6 @@ $seminar-color: (
 @import 'progressBars';
 
 main {
-    padding-bottom: 60px;
     .container {
         padding: 0 20px;
     }
@@ -42,6 +41,7 @@ main {
         }
     }
     .section2 {
+        padding-bottom: 60px;
         h1 {
             margin-bottom: 1em;
         }

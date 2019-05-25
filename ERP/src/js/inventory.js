@@ -1,3 +1,4 @@
+httpVueLoader.register(Vue, 'components/inventory/Contact.vue');
 httpVueLoader.register(Vue, 'components/inventory/HoverBox.vue');
 httpVueLoader.register(Vue, 'components/inventory/Case.vue');
 

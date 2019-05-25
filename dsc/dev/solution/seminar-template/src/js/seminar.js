@@ -1,3 +1,5 @@
+httpVueLoader.register(Vue, 'components/Contact.vue');
+
 const store = new Vuex.Store({
     state: {
         isMobile: false,

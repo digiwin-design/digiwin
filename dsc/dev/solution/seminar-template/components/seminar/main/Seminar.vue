@@ -20,6 +20,8 @@
                 <progress-bars :progress-bars="progressBars"></progress-bars>
             </div>
         </article>
+
+        <contact v-bind:multiple="false" source=""></contact>
     </div>
 </template>
 

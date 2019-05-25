@@ -7,6 +7,7 @@ const del = require('del');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const args = require('yargs').argv;
+const exists = require('path-exists').sync;
 
 // 編譯sass並加入css prefix
 gulp.task('sass', function() {
@@ -73,13 +74,19 @@ gulp.task('server', function() {
 
 // 取出套件主要檔案
 gulp.task('bower', function() {
-    return gulp.src(mainBowerFiles({
+    let option = {
         'overrides': {
-            'jquery': {
-                'main': 'dist/jquery.min.js'
-            }
+            'lodash': {
+                'main': 'dist/lodash.min.js'
+            },
         }
-    })).pipe(gulp.dest('assets'));
+    };
+    // Replace files by their minified version when possible
+    let bowerWithMin = mainBowerFiles(option).map( function(path, index, arr) {
+        let newPath = path.replace(/.([^.]+)$/g, '.min.$1');
+        return exists( newPath ) ? newPath : path;
+    });
+    return gulp.src(bowerWithMin).pipe(gulp.dest('assets'));
 });
 
 // 編譯pug
