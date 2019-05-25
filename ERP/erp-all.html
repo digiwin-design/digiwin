@@ -35,8 +35,6 @@
       <header></header>
     </div>
     <!-- 後台上稿內容開始-->
-    <link rel="stylesheet" href="/tw/dsc/css/Eform/form-rwd.css">
-    <script src="/tw/dsc/js/Eform/form.js" defer></script>
     <link rel="stylesheet" href="/tw/dsc/css/Eform/xcConfirm.css">
     <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
     <link rel="stylesheet" href="assets/swiper.css">
@@ -53,128 +51,66 @@
     <link rel="stylesheet" href="assets/animate.css">
     <link rel="stylesheet" href="css/erpAll/style.css">
     <script src="js/erpAll.min.js" defer></script>
-    <main v-cloak v-show="result"><template v-if="result">
-    <div class="header">
-        <div class="container">
-            <div>
-                <h1><img src="images/erpAll/header-text.png" alt="轉型"></h1>
-                <h2>從創造數位價值開始</h2>
-                <p>適合您的資訊化成長路徑<br>提升企業營運管理效率</p>
-                <div class="header-btns">
-                    <a href="#contact" class="btn js-nav">想要了解更多</a>
-                    <a href="#contact" class="btn js-nav">預約諮詢服務</a>
-                </div>
+    <main v-cloak v-if="result"><div class="header">
+    <div class="container">
+        <div>
+            <h1><img src="images/erpAll/header-text.png" alt="轉型"></h1>
+            <h2>從創造數位價值開始</h2>
+            <p>適合您的資訊化成長路徑<br>提升企業營運管理效率</p>
+            <div class="header-btns">
+                <a href="#contact" class="btn js-nav">想要了解更多</a>
+                <a href="#contact" class="btn js-nav">預約諮詢服務</a>
             </div>
         </div>
     </div>
-    
-    <article class="section1">
-        <div class="container">
-            <div class="section1-header">
-                <h1>您導入資訊化的原因？</h1>
-                <p class="section1-desc">管理從創造資訊系統的應用效益開始，幫助企業提升運營效能。<br>探索各行各業所有業務流程，因應各職能需求，提供適合的ERP系統，推出真正有效的行業智慧整合解決方案，<br>讓企業運營更高效、更快速、更簡單。</p>
-            </div>
-            <columns v-bind:columns="result.section1"></columns>
+</div>
+
+<article class="section1">
+    <div class="container">
+        <div class="section1-header">
+            <h1>您導入資訊化的原因？</h1>
+            <p class="section1-desc">管理從創造資訊系統的應用效益開始，幫助企業提升運營效能。<br>探索各行各業所有業務流程，因應各職能需求，提供適合的ERP系統，推出真正有效的行業智慧整合解決方案，<br>讓企業運營更高效、更快速、更簡單。</p>
         </div>
-    </article>
-    
-    <article id="section2" class="section2">
-        <banner v-bind:banner="result.section2.banner"></banner>
-        <hover-boxs v-bind:boxs="result.section2.hoverBoxs"></hover-boxs>
-    </article>
-    
-    <article id="section3" class="section3">
-        <banner v-bind:banner="result.section3.banner"></banner>
-        <hover-boxs v-bind:boxs="result.section3.hoverBoxs"></hover-boxs>
-    </article>
-    
-    <article id="section4" class="section4">
-        <banner v-bind:banner="result.section4.banner"></banner>
-        <div class="container">
-            <map-component></map-component>
-        </div>
-    </article>
-    
-    <article id="section5" class="section5">
-        <banner v-bind:banner="result.section5.banner"></banner>
-        <div class="container">
-            <accordion v-bind:accordion="result.section5.accordion"></accordion>
-        </div>
-    </article>
-    
-    <article class="section6">
-        <div class="container">
-            <div class="section6-header">
-                <h1>我們的專業保障</h1>
-                <p class="section6-desc">從專業出發，為您實現數字價值</p>
-            </div>
-            <columns v-bind:columns="result.section6" v-bind:is-link="false"></columns>
-            <a href="#contact" class="section6-btn btn js-nav">立即諮詢服務</a>
-        </div>
-    </article>
-</template><div id="contact">
-    <div id="contactTxt" class="clearfix">
-        <h2>資料索取與諮詢</h2>
-        <div id="info">
-            <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，謝謝！</p>
-            <ul>
-                <li class="mail">
-                    <a href="mailto:marketing01@digiwin.com"></a>
-                </li>
-                <li class="fb">
-                    <a href="https://www.facebook.com/DSCmain" target="_blank"></a>
-                </li>
-            </ul>
-        </div>
-        <div id="formBlock" class="form">
-            <a id="fromSource" href="javascript:;">WB002950</a>
-            <div id="contactInput" class="clearfix">
-                <span class="hideLabel ">*公司名稱：</span><input type="text" placeholder="*完整公司名稱" name="contact-company" id="contact-company" class="contact required"><span class="hideLabel perLabel">*姓名：</span><input type="text" placeholder="*姓名" name="contact_person" id="contact_person" class="contact required"><span class="hideLabel evenLable">*聯絡電話：</span><input type="text" placeholder="*聯絡電話" name="telephone" id="telephone" class="contact required end"><span class="hideLabel evenLable">*E-mail：</span>
-                <input type="text" placeholder="*E-mail" name="contact-email" id="contact-email" class="contact required"><span class="hideLabel">*部門：</span><input type="text" placeholder="*部門" name="contact-dept" id="contact-dept" class="contact required"><span class="hideLabel">*職稱：</span><input type="text" placeholder="*職稱" name="contact-job" id="contact-job" class="contact required end">
-            </div>
-            <div class="consult-cont">
-                <p class="hideLabel">請在這裡描述您的需求：</p>
-                <textarea id="contact-query" cols='40' placeholder="請在這裡描述您的需求(500字以內)：" rows='4' class="" maxlength="500"></textarea>
-            </div>
-            <div class="inforCheck">
-                <label for="dm_ask"> <input name="information" class="information" id="dm_ask" type="checkbox" value="資料索取">索取 ERP 相關資料</label> 
-            </div>
-            <hr>
-            <div class="verifica">
-                <span class="veriSpan">＊請輸入驗證碼：</span>
-                <span class="veriSpan-m">驗證碼:</span>
-                <input type="text" name="" id="identCode" class="identCode" onblur="validate()">
-                <input type="button" id="vericodePic" />
-                <span class="renovCode" onclick="createCode()"></span>
-                <span id="codeSuces"></span>
-            </div>
-            <input type="button" id="submit" value="送　　出">
-            <label for="agree" class="checAgree"><input type="checkbox" name="agree" value="" id="agree" checked="">
-                我同意接受鼎新電腦<a href="/tw/portal/page/index/id/1202.html" target="_blank">隱私權聲明</a></label>
-        </div>
+        <columns v-bind:columns="result.section1"></columns>
     </div>
-</div><!-- loading -->
-<div id="loading">
-<p><i></i>資料提交中，請稍後</p>
-</div>
-<!-- thx page -->
-<div id="thx">
-<div id="thxContent">
-<div class="close">X</div>
-<p class="title">資料己送出</p>
-<p class="thxparg"></p>
-<p class="suprtCall">
-<span>如需要立即的支援與服務，</span>
-<span>請直撥免付費專線 0800-888-162，謝謝！</span>
-</p>
-<p class="thxSourLoad1">
-<a id="SourLoadLink" href="" target="_blank">資料下載</a>
-</p>
-<p id="goIndex">
-<a href="javascript:;">繼續瀏覽網站</a>
-</p>
-</div>
-</div>
+</article>
+
+<article id="section2" class="section2">
+    <banner v-bind:banner="result.section2.banner"></banner>
+    <hover-boxs v-bind:boxs="result.section2.hoverBoxs"></hover-boxs>
+</article>
+
+<article id="section3" class="section3">
+    <banner v-bind:banner="result.section3.banner"></banner>
+    <hover-boxs v-bind:boxs="result.section3.hoverBoxs"></hover-boxs>
+</article>
+
+<article id="section4" class="section4">
+    <banner v-bind:banner="result.section4.banner"></banner>
+    <div class="container">
+        <map-component></map-component>
+    </div>
+</article>
+
+<article id="section5" class="section5">
+    <banner v-bind:banner="result.section5.banner"></banner>
+    <div class="container">
+        <accordion v-bind:accordion="result.section5.accordion"></accordion>
+    </div>
+</article>
+
+<article class="section6">
+    <div class="container">
+        <div class="section6-header">
+            <h1>我們的專業保障</h1>
+            <p class="section6-desc">從專業出發，為您實現數字價值</p>
+        </div>
+        <columns v-bind:columns="result.section6" v-bind:is-link="false"></columns>
+        <a href="#contact" class="section6-btn btn js-nav">立即諮詢服務</a>
+    </div>
+</article>
+
+<contact v-bind:multiple="false" source="WB002950"></contact>
     </main>
     <!-- 後台上稿內容結束
     -->

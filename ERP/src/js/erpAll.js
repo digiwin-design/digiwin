@@ -1,4 +1,5 @@
 Vue.use(VueAwesomeSwiper);
+httpVueLoader.register(Vue, 'components/erpAll/Contact.vue');
 httpVueLoader.register(Vue, 'components/erpAll/Columns.vue');
 httpVueLoader.register(Vue, 'components/erpAll/Banner.vue');
 httpVueLoader.register(Vue, 'components/erpAll/HoverBoxs.vue');

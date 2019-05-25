@@ -42,8 +42,6 @@ html(lang='zh-Hant-TW')
 
         // 後台上稿內容開始
         //- form
-        link(rel='stylesheet', href='/tw/dsc/css/Eform/form-rwd.css')
-        script(src='/tw/dsc/js/Eform/form.js', defer)
         link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
         script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
 
@@ -58,9 +56,7 @@ html(lang='zh-Hant-TW')
         
         block includes
         
-        main(v-cloak, v-show="result")
+        main(v-cloak, v-if="result")
             block content
-            include partial/contact_v2.html
-            include ../../../dsc/template/form_component
         // 後台上稿內容結束
             
