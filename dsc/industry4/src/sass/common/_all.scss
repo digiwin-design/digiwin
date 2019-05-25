@@ -1,0 +1,288 @@
+main {
+    color: #333;
+    font-family: Arial, '微軟正黑體';
+    h3 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 19px;
+    }
+
+    p {
+        text-align: justify;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    a.btn {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .section {
+        position: relative;
+        padding: 70px 0;
+        min-width: 1000px;
+        max-width: 1920px;
+        width: 100%;
+    }
+
+    .content {
+        position: relative;
+        margin: 0 auto;
+        width: 1000px;
+    }
+
+    .vAlignMiddle {
+        text-align: center;
+        font-size: 0;
+    }
+
+    .vAlignMiddle:before {
+        display: inline-block;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+    }
+
+    .vAlignMiddle .vAlignContent {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .sectionNote {
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .imgStyle {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    .cursorMove {
+        cursor: move;
+    }
+
+    /*color style*/
+    .yellow {
+        color: #ff0;
+    }
+
+    .gray {
+        color: #bbb;
+    }
+
+    .lineBreakPC {
+        display: block;
+    }
+
+    /*ad style*/
+    #rightIcon {
+        position: fixed;
+        right: 5%;
+        bottom: 20px;
+        z-index: 998;
+        display: none;
+    }
+
+    #rightIcon .rightIcon {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: rgba(0,0,0,.7);
+        background-color: #333 \9;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #rightIcon .rightIcon:hover {
+        background-color: rgba(0,192,255,1);
+        background-color: #00c0ff \9;
+    }
+
+    #rightIcon .adIcon,
+    #rightIcon .adIconMobile,
+    #rightIcon .serviceIcon {
+        position: relative;
+        margin-bottom: 7px;
+        padding-top: 2px;
+        line-height: 24px;
+    }
+
+    #rightIcon .adIcon a,
+    #rightIcon .adIconMobile a {
+        display: block;
+        color: #fff;
+    }
+
+    #rightIcon .adIconMobile {
+        display: none;
+    }
+
+    #rightIcon .rightIcon i {
+        color: #fff;
+        font-size: 27px;
+        line-height: 50px;
+    }
+
+    #adBox {
+        position: fixed;
+        right: -270px;
+        bottom: -500px;
+        z-index: 999;
+        padding: 10px;
+        width: 270px;
+        border: 1px solid #aaa;
+        background-color: #fff;
+    }
+
+    #adBox .adImg {
+        width: 100%;
+    }
+
+    #adBox .adTxt {
+        margin-top: 10px;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    #adBox .readMore {
+        display: block;
+        margin: 10px auto 0;
+        width: 100px;
+        border: 1px solid #ff7200;
+        color: #ff7200;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    #adBox .readMore:hover {
+        background-color: #ff7200;
+        color: #fff;
+    }
+
+    #adBox .closeBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        background-color: rgba(0,0,0,.7);
+        background-color: #333 \9;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        .section {
+            position: relative;
+            padding: 50px 10px;
+            min-width: 100%;
+            width: 100%;
+        }
+
+        .content {
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .vAlignMiddle {
+            text-align: center;
+            font-size: 0;
+        }
+
+        .vAlignMiddle:before {
+            display: block;
+            height: 0;
+            content: '';
+            vertical-align: middle;
+        }
+
+        .vAlignMiddle .vAlignContent {
+            display: block;
+            vertical-align: middle;
+        }
+
+        .sectionNote {
+            text-align: center;
+            font-size: 19px;
+        }
+
+        .lineBreak {
+            display: block;
+        }
+
+        .lineBreakPC {
+            display: inline;
+        }
+
+        /*聯絡表單*/
+        #contactTxt {
+            min-width: 100%;
+        }
+
+        #contactTxt #contactText {
+            padding: 0 10px;
+            width: 100%;
+        }
+
+        #contactTxt #info {
+            float: none;
+            width: 100%;
+        }
+
+        #contactTxt #iframeForm {
+            float: none;
+            margin-top: -30px;
+            width: 100%;
+        }
+
+        iframe {
+            margin: 0 auto -10px;
+            width: 100%;
+            border: none;
+        }
+
+        iframe form #check #submit {
+            float: none;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        h3 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #rightIcon {
+            right: 10px;
+            bottom: 0px;
+        }
+
+        #rightIcon .goTop,
+        #rightIcon .adIcon,
+        #adBox {
+            display: none;
+        }
+
+        #rightIcon .adIconMobile {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+extends ../layout_awd.pug
+
+block vars
+    - var description = '設備稼動效率要求高、訂單交期壓力大、生產履歷與品質追溯負荷，生產製造資訊看不見、管理控不住！數字戰情中心，實現車間透明化、可視化管理，讓數據驅動的製造業數位化轉型，數智工廠打造智能化現場，不需要從新開始！'
+    - var keywords = 'MES,工廠管理,訂單交期,智能現場,製造現場,生產製造'
+    - var title = '鼎新電腦-數智工廠戰情中心全流程方案|生產現場裝上腦袋 打造數位化管理軟實力'
+
+append head
+    link(rel='stylesheet', href='assets/animate.css')
+    link(rel='stylesheet', href=`css/WB00283808.css`)
+    script(src='assets/modernizr-custom.js')
+    script(src='assets/mobile-detect.js')
+    script(src='assets/mobile-detect-modernizr.js')
+    script(src='assets/picturefill.js', defer)
+    script(src='assets/lodash.js', defer)
+    script(src='assets/jquery.sticky.js', defer)
+    script(src='assets/jquery.navScroll.js', defer)
+    script(src='assets/wow.js', defer)
+    script(src='assets/vue.min.js')
+    script(src='https://unpkg.com/http-vue-loader', defer)
+    script(src=`js/common.min.js`, defer)
+    script(src=`js/WB00283808.min.js`, defer)
+
+block main
+    include 08/pc.html
+    include 08/mobile.html
+    include 08/form.html
+
+    #toolbar

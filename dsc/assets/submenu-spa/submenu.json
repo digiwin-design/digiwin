@@ -1,0 +1,118 @@
+[
+    {
+        "id": "WB002839",
+        "title": "中小企業SmartERP",
+        "menus": [
+            {
+                "text": "中小企業首頁",
+                "url": "#/"
+            },
+            {
+                "text": "製造業管理",
+                "url": "#/manufacture"
+            },
+            {
+                "text": "買賣業管理",
+                "url": "#/merchandise"
+            },
+            {
+                "text": "常見作業困擾",
+                "url": "#/",
+                "anchor": "#problem"
+            },
+            {
+                "text": "方案介紹",
+                "url": "#/solution"
+            },
+            {
+                "text": "成功案例",
+                "url": "#/case"
+            },
+            {
+                "text": "其它方案",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "網購接單",
+                        "url": "#/online"
+                    },
+                    {
+                        "text": "清真認證",
+                        "url": "/tw/dsc/event/WB002841/WB00284101.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "食品追蹤追溯",
+                        "url": "/tw/dsc/solution/WB002574/WB00257401.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "電子發票",
+                        "url": "/tw/dsc/solution/WB002742/WB00274201_solution",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "ISO文管",
+                        "url": "#/iso"
+                    },
+                    {
+                        "text": "電子表單",
+                        "url": "#/eform"
+                    },
+                    {
+                        "text": "薪資計算",
+                        "url": "/tw/dsc/solution/WB002741/WB00274101_HR",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "條碼方案",
+                        "url": "/tw/dsc/solution/WB002839/barcode"
+                    },
+                    {
+                        "text": "庫存方案",
+                        "url": "#/inventory"
+                    }
+                ]
+            },
+            {
+                "text": "聯絡我們",
+                "anchor": "#contact"
+            }
+        ]
+    },
+    {
+        "id": "WB002742",
+        "title": "電子發票",
+        "menus": [
+            {
+                "text": "電子發票首頁",
+                "url": "#/"
+            },
+            {
+                "text": "相關法規",
+                "url": "#/law"
+            },
+            {
+                "text": "研討會",
+                "url": "#/seminar"
+            },
+            {
+                "text": "解決方案",
+                "url": "#/solution"
+            },
+            {
+                "text": "前往各行業",
+                "url": "#/",
+                "anchor": "#solution"
+            },
+            {
+                "text": "資料索取",
+                "anchor": "#contact"
+            },
+            {
+                "text": "聯絡我們",
+                "anchor": "#contact"
+            }
+        ]
+    }
+]

@@ -1,0 +1,222 @@
+/* #region function */
+/* #endregion function */
+/* #region mixin */
+/* #endregion mixin */
+/* #region extend */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* #endregion extend */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* #region custom */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  word-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body, input, textarea, select, button {
+  font-family: Helvetica, Arial, 'Heiti TC', 'Microsoft JhengHei', sans-serif;
+}
+
+/* #endregion custom */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 19891015;
+  min-width: 290px;
+  width: calc(100% - 30px);
+  color: #000;
+  font-size: 100%;
+  font-family: Helvetica, Arial, 'Heiti TC', 'Microsoft JhengHei', sans-serif;
+  line-height: initial;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 481px) {
+  .popup {
+    width: 450px;
+  }
+}
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 19891014;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.popup-title {
+  position: absolute;
+  top: -32px;
+  left: calc(50% - 32px);
+  display: flex;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #4792e0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 481px) {
+  .popup-title {
+    top: -45px;
+    left: calc(50% - 45px);
+    width: 90px;
+    height: 90px;
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+.popup-content {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.popup-text {
+  padding-top: 59px;
+  height: 169px;
+  background-color: #fff;
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+}
+@media (min-width: 481px) {
+  .popup-text {
+    padding-top: 81px;
+    height: 209px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+.popup-btns {
+  display: flex;
+}
+.popup-btns a {
+  border-top: 1px solid #b5b5b5;
+  font-size: 18px;
+}
+@media (min-width: 481px) {
+  .popup-btns a {
+    font-size: 24px;
+  }
+}
+.popup-btns a:first-of-type {
+  display: block;
+  height: 60px;
+  border-radius: 0;
+  background-color: #eee;
+  color: #000;
+  text-align: center;
+  line-height: 60px;
+  width: 50%;
+  border-right: 1px solid #b5b5b5;
+}
+@media (min-width: 481px) {
+  .popup-btns a:first-of-type {
+    height: 70px;
+    line-height: 70px;
+  }
+}
+.popup-btns a:last-of-type {
+  display: block;
+  height: 60px;
+  border-radius: 0;
+  background-color: #4792e0;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  width: 50%;
+}
+@media (min-width: 481px) {
+  .popup-btns a:last-of-type {
+    height: 70px;
+    line-height: 70px;
+  }
+}
+.popup-btns a:last-of-type:hover {
+  background-color: #66acf4;
+}
+.popup-close {
+  height: 30px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABrElEQVRIicWXMU7DMBSGv4Jg6RKWHoAhUscOXMASsJS5vUMXLlCpHCALrTrlCt0LrGTiDsxNqARDl8Jghto0pHVtpzT80i9FsfO+xPZznmu46QS4Bi6BC+AcCFTbB/AKvABPwAPw5RjXqAAYABkgHf2mngk2ojmqC8w8gEXPVAxnHQPjPYBFj1VMK3Tyh1DtiQ0+PABUe2SCdg4I1e4UoQGQVgBOFYsjBb4FGqahCMMQIYSpeUM7+jYUC4BTLHkaRZGUUso4jq1flSSJTNNUCiFMfTLFpG0LBsg4jq1wB6h2G+DeBWyDe0Alq+zh2RWch/f7/bJQCSTY5tcEXywWstfr/br2iJEBLH3BeXgJqASWOp281Ww2AajX67RarVIxvIc6P6d6zqMo8h7qpCxU3ysxzwl4pNOu1esJH4LjBuKSMtPp1BV+A6vta74vNN/XAv/ZMmFVIxmDCSFkGIbO68DSf0BOVf0WM7YUgVUUAsbib3RAqLH0gX8s9jS88vI2ry77LbgUz4I+rwC4w5LnBc/VMzuPMDXHF9CHtivWh7Yz1fbO+tD2qPxpC/gNyTINL8ADU3cAAAAASUVORK5CYII=');
+  width: 30px;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+}
+
+/*# sourceMappingURL=style.css.map */

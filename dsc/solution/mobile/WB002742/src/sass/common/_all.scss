@@ -1,0 +1,39 @@
+main {
+    padding-top: 50px;
+    margin: 0 auto;
+    padding-top: 48px;
+    min-width: 360px;
+    max-width: 768px;
+    color: #3b3a3a;
+    font-size: 18px;
+    line-height: 1.5;
+    @media (min-width: $tablet-width + 1) {
+        padding-top: 0;
+    }
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .mainTitle {
+        margin-bottom: 1em;
+        color: #0e7aa7;
+        font-weight: bold;
+        font-size: 26px;
+    }
+    .header {
+        h1 {
+            margin-bottom: 24px;
+            color: #fffc00;
+            line-height: 40px;
+        }
+        &-list {
+            padding-left: 1em;
+            color: #fff;
+            list-style-type: disc;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}

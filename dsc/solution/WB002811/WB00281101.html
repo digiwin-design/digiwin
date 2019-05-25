@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.digiwin.com/tw/static/css/public.css">
+    <link rel="stylesheet" href="https://www.digiwin.com/tw/static/css/style.css">
+    <script src="https://www.digiwin.com/tw/static/js/jquery-1.11.3.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&amp;flags=gated"></script>
+    <script src="/tw/dsc/assets/fetch-polyfill.js"></script>
+    <script src="/tw/dsc/assets/modernizr-custom.js" defer></script>
+    <script src="/tw/dsc/assets/mobile-detect.js"></script>
+    <script src="/tw/dsc/assets/mobile-detect-modernizr.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js" defer></script>
+    <script src="https://unpkg.com/vuex" defer></script>
+    <script src="https://unpkg.com/http-vue-loader" defer></script>
+    <script src="/tw/dsc/js/common.js"></script>
+    <style>
+      .header-box {
+          height: auto;
+      }
+      .page-submenu {
+          position: fixed;
+          z-index: 28;
+          width: 100%;
+      }
+      main {
+          padding-top: 96px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-box">
+      <header></header>
+    </div>
+    <!-- 以下為後台內容-->
+    <link rel="stylesheet" href="/tw/dsc/css/Eform/form-rwd.css">
+    <script src="/tw/dsc/js/Eform/form.js" defer></script>
+    <link rel="stylesheet" href="/tw/dsc/css/Eform/xcConfirm.css">
+    <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
+    <link rel="stylesheet" href="/tw/dsc/shadowbox/shadowbox.css">
+    <script src="/tw/dsc/shadowbox/shadowbox.js"></script>
+    <link rel="stylesheet" href="assets/swiper.min.css">
+    <script src="assets/swiper.min.js" defer="defer"></script>
+    <link rel="stylesheet" href="../../assets/submenu/submenu.css">
+    <script src="../../assets/submenu/submenu.min.js"></script>
+    <link rel="stylesheet" href="/tw/dsc/css/reset_dsc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/tw/dsc/Library/js/jquery-ui.min.js"></script>
+    <script src="/tw/dsc/js/modernizr-custom.js"></script>
+    <script src="js/common.min.js" defer></script>
+    <script src="js/WB002811_common.min.js" defer="defer"></script>
+    <link rel="stylesheet" href="css/WB002811_index.css">
+    <main><div id="WB002811" class="WB002811_index">
+    <div id="indBanner" class="section">
+        <div class="indBanner-inner">
+            <a href="WB00281101_research.html">
+                <h1>搶攻AM市場，交期怎麼縮短？</h1>
+                <p class="pageDesc">客戶以前下單給你二十天出貨，現在只給你十天，消失了十天如何交貨？</p>
+            </a>
+        </div>
+    </div>
+    
+    <div id="foreword" class="section">
+        <div class="content">
+            <h2>各家大廠都想爭奪AM市場這塊大餅，您準備好了嗎？</h2>
+            <p class="sectionDesc-center">有家彰化的老客戶，後視鏡產品銷售偏及歐洲、中南美洲、美國及大陸等約44個國家，
+                <br>市場開拓能力強勁，研發部門每年開發超過50個新車種，並且持續倍數成長中客戶告訴我們AM市場就是...
+                <br>
+                <strong class="highLight">品質+價格+交期=取得訂單關鍵</strong>
+            </p>
+    
+            <!-- slider -->
+            <div class="swiper-container">
+                <div class="newsGroup swiper-wrapper">
+                    <div class="list swiper-slide">
+                        <div class="outline">
+                            <h4>
+                                <a href="http://www.chinatimes.com/newspapers/20160411000269-260210" target="_blank">記銘汽車後視鏡創新能力領先</a>
+                            </h4>
+                            <p> 至於中國大陸潛力雄厚的汽車AM市場，更被黃宗銘寄予厚望，決以自建鷹悍士(EHS)品牌與銷售通路切入。他強調，中國大陸汽車年銷售量已...</p>
+                            <p class="date">2016/4/11 中時電子報</p>
+                        </div>
+                    </div>
+                    <div class="list swiper-slide">
+                        <div class="outline">
+                            <h4>
+                                <a href="http://www.chinatimes.com/newspapers/20170405000153-260206" target="_blank">正新建大布局雙印啟動投產</a>
+                            </h4>
+                            <p>正新印尼廠的機車胎同樣也先搶攻AM市場，並在取得原廠認證後，兼做OE市場。由於東協各國之間的產品進出口，均享受免關稅優惠，所以印尼廠...</p>
+                            <p class="date">2017/4/5 中時電子報</p>
+                        </div>
+                    </div>
+                    <div class="list swiper-slide">
+                        <div class="outline">
+                            <h4>
+                                <a href="http://www.chinatimes.com/realtimenews/20170417002595-260410" target="_blank">《電機股》北美AM市場可望穩定成長，耿鼎營運正面看待</a>
+                            </h4>
+                            <p>耿鼎主攻北美AM市場，北美營收占比達7成，產品主要為引擎蓋及葉子板，2015年提列反托拉斯賠償，2016年沒有罰金影響，全年正式轉為獲利...</p>
+                            <p class="date">2017/4/17 中時電子報</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <div class="getOrder clearfix">
+        <h3 class="getOrder-title">搶單就像打戰，這些狀況只會愈來愈多！</h3>
+        <ul class="getOrder-list">
+            <li>客戶要求更高品質、更短交期</li>
+            <li>更多、更複雜的客製化</li>
+            <li>更嚴苛的成本競爭</li>
+            <li>更高的存貨呆滯風險</li>
+            <li>研發能力跟不上市場的需求......</li>
+        </ul>
+        <a href="WB00281101_research.html" class="pageLink-bgColor">
+            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </a>
+    </div>
+    
+    <div id="quality" class="section">
+        <div class="content">
+            <h2>從接單就開始進行品質管理</h2>
+            <p class="sectionDesc-center">某公司副總接獲客訴，得知產品出貨後造成客戶重大損失，客戶要求三天內必須提出改善報告，
+                <br>大家都知道要先釐清問題出在哪裡？但要怎麼找出問題才是大難題？</p>
+            <div class="jobProblem clearfix">
+                <div class="txt txt01">
+                    <div class="outline">
+                        <div class="nameLayer">
+                            <img src="images/icon_people02.svg" alt="業務的困擾">
+                            <p>業務</p>
+                        </div>
+                        <div class="jobProblem-txtLayer-mb">
+                            <p>8D report 、FMEA...這些文件都是紙本管理，無法快速查找品質相關所有文件...</p>
+                            <p>客戶對公司不信任，以後可能不會再下單了...</p>
+                        </div>
+                        <div class="txtLayer clearfix">
+                            <p>8D report 、FMEA...這些文件都是紙本管理，無法快速查找品質相關所有文件...</p>
+                            <p>客戶對公司不信任，以後可能不會再下單了...</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="handTop">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="txt txt02">
+                    <div class="outline">
+                        <div class="nameLayer">
+                            <img src="images/icon_people03.svg" alt="品保的困擾">
+                            <p>品保</p>
+                        </div>
+                        <div class="jobProblem-txtLayer-mb">
+                            <p>生產及品質相關資料都是紙本記錄，無法快速追溯生產履歷資料。</p>
+                            <p>品質檢測都用人工記錄，繁瑣又容易錯誤，而且需要耗費時間做管制圖表及檢驗報告。</p>
+                            <p>品檢規範皆紙本文件，與品號無連結，QC無法快速調閱品檢規範。</p>
+                        </div>
+                        <div class="txtLayer clearfix">
+                            <p>生產及品質相關資料都是紙本記錄，無法快速追溯生產履歷資料。</p>
+                            <p>品質檢測都用人工記錄，繁瑣又容易錯誤，而且需要耗費時間做管制圖表及檢驗報告。</p>
+                            <p>品檢規範皆紙本文件，與品號無連結，QC無法快速調閱品檢規範。</p>
+                        </div>
+                        <div class="mask"></div>
+                        <div class="handTop">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="pageBtn-normal" href="WB00281101_quality.html">
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> 維持品質從預防異常開始，您可以這樣作！</a>
+        </div>
+    </div>
+    
+    <!-- 研討會資訊 -->
+    <div class="seminarInfo section">
+        <h2>研討會資訊</h2>
+        <div class="seminarInfo-content content">
+            <img class="seminarInfo-illu" src="images/index/seminarInfo-illu.png" alt="">
+            <div class="seminarInfo-text">
+                <h3>以品質優勢創造未來利基 IATF 16949轉版挑戰與因應之道</h3>
+                <p>
+                    如何通過驗證？取得證書後，該如何落實品質管理系統？
+                    <br> 本次研討會特邀曾帶領企業榮獲國家品質獎，且富有數十間國際汽車電子大廠稽核主導經驗的BSI英國標準協會講師，剖析這一年來，企業進行新版 IATF 16949驗證常見問題，以及通過驗證之後，企業各部門環節的因應重點，探討如何透過資訊化的輔助落實研發及製造程序，讓搶攻車用市場的企業能順利通過品質驗證更能透過品質管理優化推動營運成長，掌握未來車業破億商機！
+                </p>
+                <a class="seminarInfo-btn pageLink-bgColor" href="https://www.digiwin.com/tw/dsc/activity/WB002870/WB00287001.htm" target="_blank">
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                    了解更多課程內容
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="case" class="section">
+        <div class="content">
+            <h2>輔導案例</h2>
+            <div class="caseGroup clearfix">
+                <div class="list">
+                    <img src="images/case/img_caseList01.jpg" alt="記銘工業">
+                    <div class="outline clearfix">
+                        <span class="type">後視鏡製造</span>
+                        <h3 class="name">
+                            <a href="https://www.digiwin.com/tw/case/626.html" target="_blank">記銘工業</a>
+                        </h3>
+                        <p class="desc">客人明天要出貨，我們可以馬上回答他可不可以，並準確跟客戶講哪天可以交貨，這是公司近幾年營收能成長10%~15%的主因....</p>
+                        <a href="https://www.digiwin.com/tw/case/626.html" class="pageLink-bgColor" target="_blank">瀏覽閱讀</a>
+                    </div>
+                </div>
+                <div class="list">
+                    <img src="images/case/img_caseList02.jpg" alt="漢育工業">
+                    <div class="outline clearfix">
+                        <span class="type">汽車零件電動窗</span>
+                        <h3 class="name">
+                            <a href="https://www.digiwin.com/tw/case/1502.html" target="_blank">漢育工業</a>
+                        </h3>
+                        <p class="desc">廖總經理提到：「只要有系統可以協助人員管理，就要適時的導入，傻瓜的事交給電腦，人員才有時間精進及管理改善。」</p>
+                        <a href="https://www.digiwin.com/tw/case/1502.html" class="pageLink-bgColor" target="_blank">瀏覽閱讀</a>
+                    </div>
+                </div>
+                <div class="list">
+                    <img src="images/case/img_caseList03.jpg" alt="詠勝昌">
+                    <div class="outline clearfix">
+                        <span class="type">汽車零組件</span>
+                        <h3 class="name">
+                            <a href="https://www.digiwin.com/tw/case/1525.html" target="_blank">詠勝昌</a>
+                        </h3>
+                        <p class="desc">各單位主管能直接登入BI系統取得分析資訊；國外則由副總親自對總裁報告分析內容及系統操作方法，讓總裁能利用BI系統快速了解台灣經營狀況。</p>
+                        <a href="https://www.digiwin.com/tw/case/1525.html" class="pageLink-bgColor" target="_blank">瀏覽閱讀</a>
+                    </div>
+                </div>
+                <div class="list">
+                    <img src="images/case/img_caseList04.jpg" alt="亞生特電業">
+                    <div class="outline clearfix">
+                        <span class="type">汽機車組立配線</span>
+                        <h3 class="name">
+                            <a href="https://www.digiwin.com/tw/case/567.html" target="_blank">亞生特電業</a>
+                        </h3>
+                        <p class="desc">一個專案向前規範與了解，多半起源於『需求』，不論是管理高層的需求、產品的進步，或是任務完成的需求，透過專案運作勢必能得到一波成長。</p>
+                        <a href="https://www.digiwin.com/tw/case/567.html" class="pageLink-bgColor" target="_blank">瀏覽閱讀</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="solution" class="section">
+        <div class="content">
+            <h2>汽車零件產業完整解決方案</h2>
+            <p class="sectionDesc-center">以速度創造競爭優勢，取得市場先機；用彈性打造智能現場，獲取更多訂單！
+                <br>從預防異常維持品質，訂單接二連三；由降低浪費掌控成本，提升訂單利潤！</p>
+            <img src="images/index/img_solution.svg" alt="以快為師，翻轉企業運營效益">
+        </div>
+    </div>
+</div>
+    </main><div id="contact">
+    <div id="contactTxt" class="clearfix">
+        <h2>資料索取與諮詢</h2>
+        <div id="info">
+            <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，謝謝！</p>
+            <ul>
+                <li class="mail">
+                    <a href="mailto:marketing01@digiwin.com"></a>
+                </li>
+                <li class="fb">
+                    <a href="https://www.facebook.com/DSCmain" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+        <div id="formBlock" class="form">
+            <a id="fromSource" href="javascript:;">WB002476</a>
+            <div id="contactInput" class="clearfix">
+                <span class="hideLabel ">*公司名稱：</span><input type="text" placeholder="*完整公司名稱" name="contact-company" id="contact-company" class="contact required"><span class="hideLabel perLabel">*姓名：</span><input type="text" placeholder="*姓名" name="contact_person" id="contact_person" class="contact required"><span class="hideLabel evenLable">*聯絡電話：</span><input type="text" placeholder="*聯絡電話" name="telephone" id="telephone" class="contact required end"><span class="hideLabel evenLable">*E-mail：</span>
+                <input type="text" placeholder="*E-mail" name="contact-email" id="contact-email" class="contact required"><span class="hideLabel">*部門：</span><input type="text" placeholder="*部門" name="contact-dept" id="contact-dept" class="contact required"><span class="hideLabel">*職稱：</span><input type="text" placeholder="*職稱" name="contact-job" id="contact-job" class="contact required end">
+            </div>
+            <div class="consult-cont">
+                <p class="hideLabel">請在這裡描述您的需求：</p>
+                <textarea id="contact-query" cols='40' placeholder="請在這裡描述您的需求(500字以內)：" rows='4' class="" maxlength="500"></textarea>
+            </div>
+            <div class="demandCheck clearfix">
+                <label for="contact-demand01"><input name="contact-demand" class="contact-demand" id="contact-demand01" type="checkbox" value="索取交通業相關資料" /> 索取交通業相關資料 </label>
+            </div>
+            <hr>
+            <div class="verifica">
+                <span class="veriSpan">＊請輸入驗證碼：</span>
+                <span class="veriSpan-m">驗證碼:</span>
+                <input type="text" name="" id="identCode" class="identCode" onblur="validate()">
+                <input type="button" id="vericodePic" />
+                <span class="renovCode" onclick="createCode()"></span>
+                <span id="codeSuces"></span>
+            </div>
+            <input type="button" id="submit" value="送　　出">
+            <label for="agree" class="checAgree"><input type="checkbox" name="agree" value="" id="agree" checked="">
+                我同意接受鼎新電腦<a href="/tw/portal/page/index/id/1202.html" target="_blank">隱私權聲明</a></label>
+        </div>
+    </div>
+</div><!-- loading -->
+<div id="loading">
+<p><i></i>資料提交中，請稍後</p>
+</div>
+<!-- thx page -->
+<div id="thx">
+<div id="thxContent">
+<div class="close">X</div>
+<p class="title">資料己送出</p>
+<p class="thxparg"></p>
+<p class="suprtCall">
+<span>如需要立即的支援與服務，</span>
+<span>請直撥免付費專線 0800-888-162，謝謝！</span>
+</p>
+<p class="thxSourLoad1">
+<a id="SourLoadLink" href="" target="_blank">資料下載</a>
+</p>
+<p id="goIndex">
+<a href="javascript:;">繼續瀏覽網站</a>
+</p>
+</div>
+</div>
+  </body>
+</html>

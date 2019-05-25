@@ -1,0 +1,50 @@
+block vars
+doctype html
+html(lang='zh-Hant-TW')
+    head
+        block head
+            meta(charset='utf-8')
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            meta(http-equiv='x-ua-compatible', content='ie=edge')
+            meta(name='description', content=`${description}`)
+            meta(name='keywords', content=`${keywords}`)
+
+            title #{title}
+
+            link(rel='stylesheet', href='/tw/dsc/Library/css/bar_m.css')
+
+            script(src='assets/mobile-detect.js', defer)
+            script(src='/tw/dsc/plugins/modernizr-custom.js', defer)
+            script(src='assets/picturefill.js', defer)
+            script(src='assets/jquery.min.js', defer)
+            script(src='/tw/dsc/Library/js/menu_m.js', defer)
+            script(src='assets/jquery.navScroll.js', defer)
+            script(src='assets/lodash.js', defer)
+            script(src='assets/jquery.sticky.js', defer)
+            script(src='assets/jquery.preload.min.js', defer)
+
+            // Google Tag Manager
+            script.
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MRWJL2');
+            // End Google Tag Manager
+
+            // Google webmasters
+            meta(name='google-site-verification', content='DWJQ32Piw7z7POAd_PfK5hMcYqbmmmPjEs6Okyw6D8o')
+            // End Google webmasters
+
+            // Yahoo webmasters
+            meta(name='msvalidate.01', content='422AE217DDD4B8932908D8E3CFFB4F89')
+            // End Yahoo webmasters
+    body
+        // Google Tag Manager (noscript)
+        noscript
+            iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-MRWJL2', height='0', width='0', style='display:none;visibility:hidden')
+        // End Google Tag Manager (noscript)
+
+        include ../../../../template/cis_top_m162
+        block main
+        include ../../../../template/cis_footer

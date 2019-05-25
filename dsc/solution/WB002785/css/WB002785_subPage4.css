@@ -1,0 +1,855 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main.WB00278501_service #navLink,
+main.WB00278501_service #navLink .subLink {
+    background-color: #f9f9f9;
+}
+
+main.WB00278501_service .subPage {
+    margin-top: 25px;
+}
+
+main.WB00278501_service .subPage h3 {
+    margin: 0 0 15px;
+    font-size: 30px;
+    text-align: left;
+}
+
+main.WB00278501_service .subPage .textLeft {
+    text-align: left;
+}
+
+main.WB00278501_service .subPage .textCenter {
+    text-align: center;
+}
+
+main.WB00278501_service .otherLink {
+    display: inline-block;
+    padding: 5px 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+main.WB00278501_service #otherLink.section {
+    padding-top: 0;
+}
+
+main.WB00278501_service #otherLink .content {
+    border-bottom: 1px solid #bbb;
+}
+
+main.WB00278501_service #otherLink i {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 10px;
+    font-size: 17px;
+}
+
+main.WB00278501_service #otherLink a {
+    font-size: 17px;
+}
+
+main.WB00278501_service #otherLink a:hover, main.WB00278501_service #otherLink a:hover i {
+    color: #ffb400;
+}
+
+main.WB00278501_service .subPage .quotaOrange,
+main.WB00278501_service .subPage .quotaYellow {
+    position: relative;
+    margin: 50px auto;
+    padding: 25px 45px;
+    border-radius: 7px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+main.WB00278501_service .subPage .quotaOrange:before,
+main.WB00278501_service .subPage .quotaYellow:before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    width: 49px;
+    height: 49px;
+}
+
+main.WB00278501_service .subPage .quotaOrange:after,
+main.WB00278501_service .subPage .quotaYellow:after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    right: 20px;
+    width: 49px;
+    height: 49px;
+}
+
+main.WB00278501_service .subPage .quotaYellow {
+    border: 3px solid #fff200;
+}
+
+main.WB00278501_service .subPage .quotaOrange:before {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center 0;
+}
+
+main.WB00278501_service .subPage .quotaOrange:after {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -49px;
+}
+
+main.WB00278501_service .subPage .quotaYellow:before {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -98px;
+}
+
+main.WB00278501_service .subPage .quotaYellow:after {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -147px;
+}
+
+main.WB00278501_service .subBanner {
+    height: 350px;
+    margin-top: 100px;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+main.WB00278501_service .subBanner:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+main.WB00278501_service .subBanner .content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main.WB00278501_service .subBanner h2 {
+    width: 680px;
+    font-size: 40px;
+    text-align: left;
+}
+
+main.WB00278501_service .subBanner p {
+    width: 630px;
+    font-size: 19px;
+    line-height: 30px;
+}
+
+main.WB00278501_service .subBanner.equipPage {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/otherMedical/equipBanner.jpg) no-repeat center top;
+}
+
+main.WB00278501_service .subBanner.hosPage {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/otherMedical/hosBanner.jpg) no-repeat center top;
+}
+
+main.WB00278501_service .subBanner.beautyPage {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/otherMedical/beautyBanner.jpg) no-repeat center top;
+}
+
+main.WB00278501_service .equipPage i {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 50px;
+}
+
+main.WB00278501_service .equipPage h3 {
+    padding-left: 40px;
+    margin-left: -40px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/h3TitleIcon.png) no-repeat left -300px;
+}
+
+main.WB00278501_service #equipCase h3 {
+    background-position: left -350px;
+}
+
+main.WB00278501_service .equipPage h4 {
+    margin: 0;
+}
+
+main.WB00278501_service .equipManage {
+    width: 420px;
+    margin: 0 0 0 10px;
+}
+
+main.WB00278501_service #equipManage .column_2,
+main.WB00278501_service #beautyProcess .column_2 {
+    width: 480px;
+    margin-right: 40px;
+}
+
+main.WB00278501_service #equipManage li:nth-of-type(even).column_2,
+main.WB00278501_service #beautyProcess li:nth-of-type(even).column_2 {
+    margin: 0;
+}
+
+main.WB00278501_service #equipManage li {
+    margin-bottom: 40px;
+}
+
+main.WB00278501_service #equipCase .imgStyle {
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+}
+
+main.WB00278501_service #equipCourse .imgStyle {
+    border: 1px solid #eaeaea;
+}
+
+main.WB00278501_service #otherLink.equipPage ul {
+    margin: 10px 0 0;
+}
+
+main.WB00278501_service .hosPage h3 {
+    padding-left: 40px;
+    margin-left: -40px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/h3TitleIcon.png) no-repeat left -100px;
+}
+
+main.WB00278501_service #hosCase.hosPage h3 {
+    background-position: left -150px;
+}
+
+main.WB00278501_service #hosCase h4 {
+    position: relative;
+    margin: 10px 0;
+}
+
+main.WB00278501_service #hosCase h4:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    margin-left: -100px;
+    border-bottom: 1px solid #feffc1;
+}
+
+main.WB00278501_service #hosCase h4:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 40px;
+    margin-right: -100px;
+    border-bottom: 1px solid #feffc1;
+}
+
+main.WB00278501_service #hosCase p {
+    padding: 0 30px;
+}
+
+main.WB00278501_service #hosCase .imgStyle {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+}
+
+main.WB00278501_service #otherLink.hosPage ul {
+    width: 940px;
+    margin: 20px 0 0;
+}
+
+main.WB00278501_service #otherLink.hosPage li:nth-of-type(1),
+main.WB00278501_service #otherLink.hosPage li:nth-of-type(2) {
+    width: 25%;
+}
+
+main.WB00278501_service #otherLink.hosPage li:nth-of-type(3) {
+    width: 50%;
+}
+
+main.WB00278501_service .beautyPage h3 {
+    padding-left: 40px;
+    margin-left: -40px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/h3TitleIcon.png) no-repeat left -200px;
+}
+
+main.WB00278501_service #beautyProcess h4 {
+    margin: 10px 0 0;
+}
+
+main.WB00278501_service #beautyProcess ul {
+    margin: 75px 0 0;
+}
+
+main.WB00278501_service #beautyProcess .imgStyle {
+    margin: 0 15px 0 0;
+}
+
+main.WB00278501_service #beautyCourse.section {
+    padding-top: 0;
+}
+
+main.WB00278501_service #IPOnews .content {
+    width: 830px;
+}
+
+main.WB00278501_service #IPOnews h2 {
+    font-size: 40px;
+    margin: 30px 0 15px;
+}
+
+main.WB00278501_service #IPOnews h3 {
+    padding-left: 40px;
+    margin-left: -40px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/h3TitleIcon.png) no-repeat left 0;
+}
+
+main.WB00278501_service #IPOnews .quotaOrange {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+main.WB00278501_service #newsPDF {
+    margin-top: 30px;
+}
+
+main.WB00278501_service #newsPDF iframe {
+    border-bottom: 1px solid #2a2a2a;
+}
+
+main.WB00278501_service #newsPDF .imgNote {
+    margin: 30px 0 0;
+}
+
+main.WB00278501_service #newsManage .quotaYellow,
+main.WB00278501_service #newsStrategy .quotaOrange {
+    width: 810px;
+}
+
+main.WB00278501_service #newsManage span.dataSource {
+    display: block;
+}
+
+main.WB00278501_service #newsManage .imgStyle {
+    display: block;
+    border-radius: 7px;
+    margin: 15px auto;
+}
+
+main.WB00278501_service #newsStrategy h4 {
+    padding: 0 15px;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+main.WB00278501_service #newsStrategy .circle {
+    width: 110px;
+    height: 110px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/news/newsIcon01.png) no-repeat left top #4fcc6a;
+}
+
+main.WB00278501_service #newsStrategy li:nth-of-type(1) .circle {
+    background-position: 0 top;
+}
+
+main.WB00278501_service #newsStrategy li:nth-of-type(2) .circle {
+    background-position: -110px top;
+}
+
+main.WB00278501_service #newsStrategy li:nth-of-type(3) .circle {
+    background-position: -220px top;
+}
+
+main.WB00278501_service #newsStrategy li:nth-of-type(4) .circle {
+    background-position: -330px top;
+}
+
+main.WB00278501_service #newsStrategy li:nth-of-type(5) .circle {
+    background-position: -440px top;
+}
+
+main.WB00278501_service #otherLink.newsPage ul {
+    width: 940px;
+    margin: 10px 0 0;
+}
+
+main.WB00278501_service #otherLink.newsPage li:nth-of-type(odd) {
+    width: 65%;
+}
+
+main.WB00278501_service #otherLink.newsPage li:nth-of-type(even) {
+    width: 35%;
+}
+
+main.WB00278501_service #solutionIssue {
+    position: relative;
+    padding: 0;
+    margin: 125px 0 0;
+}
+
+main.WB00278501_service #solutionIssue #bgImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center 0;
+}
+
+main.WB00278501_service #solutionIssue #bgImg.bgBD {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center 0;
+}
+
+main.WB00278501_service #solutionIssue #bgImg.bgBL {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center -350px;
+}
+
+main.WB00278501_service #solutionIssue #bgImg.bgR {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center -700px;
+}
+
+main.WB00278501_service #solutionIssue .content {
+    overflow: hidden;
+}
+
+main.WB00278501_service #solutionIssue .tabList {
+    text-align: center;
+}
+
+main.WB00278501_service #solutionIssue .tabList ul {
+    display: inline-block;
+    margin: 0 0 7px;
+    font-size: 19px;
+}
+
+main.WB00278501_service #solutionIssue .tabList li {
+    position: relative;
+    padding: 2px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+main.WB00278501_service #solutionIssue .tabList li:last-child {
+    margin-right: 0;
+}
+
+main.WB00278501_service #solutionIssue .tabList li:hover,
+main.WB00278501_service #solutionIssue .tabList li.tabNow {
+    background-color: #ff8d00;
+}
+
+main.WB00278501_service #solutionIssue .tabList li.tabNow:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -12px;
+    border-top: 10px solid #ff8d00;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+main.WB00278501_service #solContent {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 8000px;
+}
+
+main.WB00278501_service #solContent .solContent {
+    width: 1000px;
+    height: 350px;
+}
+
+main.WB00278501_service #solContent .solContent h4 {
+    margin-top: 45px;
+    font-size: 30px;
+    text-align: left;
+}
+
+main.WB00278501_service #solContent .solContent ul {
+    width: 720px;
+    margin-left: 30px;
+    list-style: disc outside;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+main.WB00278501_service #solContent .solContent {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBgImg.png) no-repeat right top;
+}
+
+main.WB00278501_service #solContent .solContent:nth-of-type(2) {
+    background-position: right -350px;
+}
+
+main.WB00278501_service #solContent .solContent:nth-of-type(3) {
+    background-position: right -700px;
+}
+
+main.WB00278501_service #solContent .solContent:nth-of-type(4) {
+    background-position: right -1050px;
+}
+
+main.WB00278501_service #solContent .solContent:nth-of-type(5) {
+    background-position: right -1400px;
+}
+
+main.WB00278501_service #solContent .solContent:nth-of-type(6) {
+    background-position: right -1750px;
+}
+
+main.WB00278501_service #solContent .solContent:nth-of-type(7) {
+    background-position: right -2100px;
+}
+
+main.WB00278501_service #solContent .solContent:nth-of-type(8) {
+    background-position: right -2450px;
+}
+
+main.WB00278501_service #solutionManage.subPage {
+    margin: 0;
+}
+
+main.WB00278501_service .picsPage:nth-of-type(even) {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/searchbgImg2.png) no-repeat center center fixed;
+}
+
+main.WB00278501_service html, main.WB00278501_service body {
+    height: 100%;
+}
+
+main.WB00278501_service .MBtn {
+    display: block;
+    width: 500px;
+    line-height: 60px;
+    margin: 20px auto;
+    font-size: 24px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #0aa1a3;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+main.WB00278501_service .MBtn a {
+    display: block;
+    color: #0aa1a3;
+}
+
+main.WB00278501_service .MBtn a:hover {
+    display: block;
+    width: 500px;
+    line-height: 60px;
+    margin: 0px auto;
+    font-size: 24px;
+    text-align: center;
+    background-color: #0aa1a3;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+main.WB00278501_service #picsTop {
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+main.WB00278501_service #picsTop:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+main.WB00278501_service #picsTop .content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main.WB00278501_service #picsTop.subPage h2 {
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+
+main.WB00278501_service #picsTop.subPage p {
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+main.WB00278501_service #picsTop .circle {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/service/serviceIcon01.png) no-repeat left top #0784ad;
+}
+
+main.WB00278501_service #picsTop .circle:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 145%;
+    margin-top: -10px;
+    border-left: 20px solid #777777;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    content: "";
+}
+
+main.WB00278501_service #picsTop .circle:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -12px;
+    border-top: 20px solid #0784ad;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+main.WB00278501_service #picsTop li:nth-of-type(4) .circle:before {
+    display: none;
+}
+
+main.WB00278501_service #picsTop li h4 {
+    width: 65%;
+    margin: 20px auto 0;
+    padding: 3px 0;
+    border-radius: 7px;
+}
+
+main.WB00278501_service #picsTop li:hover .circle,
+main.WB00278501_service #picsTop li:hover h4 {
+    background-color: #ffb400;
+    cursor: pointer;
+}
+
+main.WB00278501_service #picsTop li:hover .circle:after {
+    border-top: 20px solid #ffb400;
+}
+
+main.WB00278501_service #picsTop li:nth-of-type(1) .circle {
+    background-position: 0 top;
+}
+
+main.WB00278501_service #picsTop li:nth-of-type(2) .circle {
+    background-position: -125px top;
+}
+
+main.WB00278501_service #picsTop li:nth-of-type(3) .circle {
+    background-position: -250px top;
+}
+
+main.WB00278501_service #picsTop li:nth-of-type(4) .circle {
+    background-position: -375px top;
+}
+
+main.WB00278501_service .picsDetail .content {
+    overflow: hidden;
+}
+
+main.WB00278501_service .picsContent {
+    position: relative;
+    width: 2000px;
+}
+
+main.WB00278501_service .picsProblem, main.WB00278501_service .picsSolition {
+    width: 1000px;
+    float: left;
+}
+
+main.WB00278501_service .rightList {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 99;
+    margin: -100px 0 0;
+    font-size: 18px;
+    font-family: Arial, "微軟正黑體";
+    text-align: right;
+}
+
+main.WB00278501_service .rightLink {
+    line-height: 50px;
+}
+
+main.WB00278501_service .rightLink a:hover, main.WB00278501_service .rightLink.selected a {
+    color: #ff8d00;
+}
+
+main.WB00278501_service .picsProblem h3,
+main.WB00278501_service .picsSolition h3 {
+    position: relative;
+    height: 150px;
+    padding-left: 180px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/service/picsTitle.png) no-repeat left top;
+    font-size: 21px;
+    line-height: 27px;
+    margin-bottom: 50px;
+}
+
+main.WB00278501_service #Block01 .picsProblem h3,
+main.WB00278501_service #Block01 .picsSolition h3 {
+    font-size: 21px;
+}
+
+main.WB00278501_service #Block02 .picsProblem h3,
+main.WB00278501_service #Block02 .picsSolition h3 {
+    padding-left: 250px;
+    font-size: 21px;
+    background-position: left -155px;
+}
+
+main.WB00278501_service #Block03 .picsProblem h3,
+main.WB00278501_service #Block03 .picsSolition h3 {
+    background-position: left -310px;
+    font-size: 21px;
+}
+
+main.WB00278501_service #produce .picsProblem h3,
+main.WB00278501_service #produce .picsSolition h3 {
+    background-position: left -465px;
+}
+
+main.WB00278501_service .picsSolition h3 {
+    font-size: 30px;
+}
+
+main.WB00278501_service #Block02 .picsSolition h3,
+main.WB00278501_service #produce .picsSolition h3,
+main.WB00278501_service #proposal .picsSolition h3 {
+    font-size: 21px;
+}
+
+main.WB00278501_service .picsProblem span,
+main.WB00278501_service .picsSolition span {
+    position: absolute;
+    bottom: -15px;
+    left: 261px;
+    width: 730px;
+    height: 53px;
+}
+
+main.WB00278501_service .picsSolition span {
+    bottom: -20px;
+}
+
+main.WB00278501_service #proposal .picsProblem span {
+    bottom: -20px;
+}
+
+main.WB00278501_service .picsDetail {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+main.WB00278501_service .picsPage:nth-of-type(odd).subPage .quotaOrange:before {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -196px;
+}
+
+main.WB00278501_service .picsPage:nth-of-type(odd).subPage .quotaOrange:after {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -245px;
+}
+
+main.WB00278501_service .picsPage .quota {
+    width: 720px;
+    padding: 25px 0 25px 15px;
+    margin: 0 auto 50px;
+    font-size: 19px;
+    border: 1px solid #ff8d00;
+}
+
+main.WB00278501_service .picsPage .quota h4 {
+    margin: 0;
+    padding-left: 15px;
+    color: #ff8d00;
+    font-size: 21px;
+    text-align: right;
+}
+
+main.WB00278501_service .picsPage .quota ul {
+    width: 550px;
+    margin: 0 0 0 25px;
+    list-style: disc outside;
+}
+
+main.WB00278501_service .picsPage .quota li {
+    width: 45%;
+    margin: 0 0 0 15px;
+    line-height: 30px;
+}
+
+main.WB00278501_service #proposal.picsPage .quota h4 {
+    margin: 10px 0 0;
+}
+
+main.WB00278501_service #proposal.picsPage .quota ul {
+    width: 530px;
+}
+
+main.WB00278501_service #Block02.picsPage .quota h4 {
+    font-size: 21px;
+}
+
+main.WB00278501_service #Block02.picsPage .quota ul {
+    width: 550px;
+    list-style: disc outside;
+}
+
+main.WB00278501_service #Block02.picsPage .quota li:nth-of-type(odd) {
+    width: 60%;
+    margin: 0 0 0 10px;
+}
+
+main.WB00278501_service #Block02.picsPage .quota li:nth-of-type(even) {
+    width: 35%;
+    margin: 0 0 0 10px;
+}
+
+main.WB00278501_service #Block03.picsPage .quota li:nth-of-type(1),
+main.WB00278501_service #produce.picsPage .quota li:nth-of-type(1) {
+    width: 90%;
+}
+
+main.WB00278501_service .picsPage .btnGroup {
+    width: 335px;
+    margin: 0 auto;
+}
+
+main.WB00278501_service .picsPage .btn {
+    width: 165px;
+    line-height: 45px;
+    background-color: #0bb580;
+    color: #ffffff;
+    font-size: 21px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00278501_service .picsPage .btn:hover {
+    background-color: #ff8d00;
+}
+
+main.WB00278501_service .picsPage .btn.now {
+    background-color: #ffb400;
+}
+
+main.WB00278501_service .picsPage .btn.now:hover {
+    background-color: #ffb400;
+}
+
+main.WB00278501_service .picsProblem .quotaOrange {
+    width: 630px;
+    margin-top: 0;
+    border: 2px solid #ff8d00;
+    font-size: 21px;
+}
+
+main.WB00278501_service #picsCourse.subPage {
+    padding-top: 20px;
+}

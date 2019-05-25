@@ -1,0 +1,18 @@
+extends ../layout.pug
+
+block includes
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    link(rel='stylesheet', href='css/jquery-ui.min.css')
+    script(src='assets/jquery-ui.min.js', defer)
+    script(src='assets/jquery.ui.touch-punch.min.js', defer)
+    link(rel='stylesheet', href='css/swiper.min.css')
+    script(src='assets/swiper.min.js', defer)
+    link(rel='stylesheet', href='css/jquery.fancybox.css')
+    link(rel='stylesheet', href='css/jquery.fancybox-thumbs.css')
+    script(src='assets/jquery.fancybox.pack.js', defer)
+    script(src='assets/jquery.fancybox-thumbs.js', defer)
+    link(rel='stylesheet', href='css/smartFactory.css')
+    script(src='js/smartFactory.js', defer)
+
+block content
+    include smartFactory.html

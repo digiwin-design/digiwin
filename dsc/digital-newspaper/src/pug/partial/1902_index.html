@@ -1,0 +1,64 @@
+<div class="header">
+    <div class="container">
+        <hgroup>
+            <h1>傳承接班加速度<br>企業躍進新世代</h1>
+            <h2>智慧傳承，從接班人到領導人心法大公開</h2>
+        </hgroup>
+    </div>
+</div>
+
+<article class="section1">
+    <div class="container">
+        <h1 class="sectionTitle">二代接班關鍵時刻</h1>
+        <p class="sectionDesc">接班海嘯來襲，傳承與變革竟能撼動台灣經濟</p>
+        <div class="section1-boxs">
+            <hover-box v-for="(item,idx) in result.section1" v-bind:key="item.title">
+                <template slot="content">
+                    <picture>
+                        <source media="(min-width: 769px)" v-bind:srcset="'images/1902/section1-icon'+(idx+1)+'.png'">
+                        <img v-bind:src="'images/1902/section1-icon'+(idx+1)+'-s.png'" alt="">
+                    </picture>
+                    <div class="hoverBox-title">{{item.title}}</div>
+                </template>
+                <template slot="hover">
+                    <p v-html="item.hoverText"></p>
+                </template>
+            </hover-box>
+        </div>
+    </div>
+</article>
+
+<article class="section2">
+    <div class="container">
+        <h1 class="sectionTitle">接班是靠「自己」還是靠「智慧」？<br>傳承新思維</h1>
+        <p class="sectionDesc">創辦人開拓市場，賺的是機會財，第一代的寶貴經驗如何轉換為營運智慧呢？</p>
+        <div class="section2-cols">
+            <div v-for="(item,idx) in result.section2" v-bind:key="item.title" class="section2-col" onclick>
+                <template v-if="isMobile">
+                    <h2 v-on:click="slideToggle" v-bind:class="{active:idx===0}">{{item.title}}</h2>
+                    <div v-if="idx===0" v-bind:style="{display:'block'}"><p>{{item.detail}}</p></div>
+                    <div v-else><p>{{item.detail}}</p></div>
+                </template>
+                <figure v-else class="imghvr-shutter-out-horiz">
+                    <img v-bind:src="item.imgSrc">
+                    <figcaption>
+                        <p>{{item.title}}</p>
+                        <p>{{item.detail}}</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="section3">
+    <h1 class="sectionTitle container">傳承與變革，我們的接班真實上演</h1>
+    <player v-bind:result="result.player"></player>
+</article>
+
+<div class="bottom container">
+    <a href="https://www.digiwin.com/tw/dsc/project/WB002940/index" target="_blank">
+        <img v-if="isMobile" src="images/1902/bottom-banner-s.jpg" alt="數位專輯-企業數位化轉型">
+        <img v-else src="images/1902/bottom-banner.jpg" alt="數位專輯-企業數位化轉型">
+    </a>
+</div>

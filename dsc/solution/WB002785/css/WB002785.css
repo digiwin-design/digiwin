@@ -1,0 +1,366 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+
+main.WB00278501 #banner {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bannerBg.jpg) no-repeat center top;
+		height:470px;
+}
+
+main.WB00278501 #banner.section {
+
+	padding: 0;
+	    overflow: hidden;
+}
+
+
+main.WB00278501 #banner.content {
+
+	padding: 0;
+	    overflow: hidden;
+}
+
+
+main.WB00278501 #news {
+    margin-top: 0px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/news/bg.png) top no-repeat;
+    overflow: hidden;
+    height: 800px;
+}
+
+main.WB00278501 #news .content {
+    width: 980px;
+    height: 1000px;
+    position: relative;
+}
+
+main.WB00278501 #news .bg2 {
+    position: absolute;
+    width: 178px;
+    height: 188px;
+    top: 0px;
+    left: 4px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/news/logo.png) top no-repeat;
+}
+
+main.WB00278501 #news .title {
+    position: absolute;
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+    width: 769px;
+    height: 200px;
+    top: 31px;
+    left: 185px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFF;
+}
+
+main.WB00278501 #news .news01 {
+    transition: all 0.2s ease-out;
+    position: absolute;
+    width: 636px;
+    height: 183px;
+    top: 213px;
+    left: 32px;
+}
+
+main.WB00278501 #news .news01:hover {
+    transform: translateX(-30px) translateY(-20px);
+}
+
+main.WB00278501 #news .news02 {
+    transition: all 0.2s ease-out;
+    position: absolute;
+    width: 636px;
+    height: 183px;
+    top: 318px;
+    left: 218px;
+}
+
+main.WB00278501 #news .news02:hover {
+    transform: translateX(30px) translateY(-20px);
+}
+
+main.WB00278501 #news .news03 {
+    transition: all 0.2s ease-out;
+    position: absolute;
+    width: 636px;
+    height: 183px;
+    top: 437px;
+    left: 358px;
+}
+
+main.WB00278501 #news .news03:hover {
+    transform: translateX(30px) translateY(-20px);
+}
+
+main.WB00278501 #news .news04 {
+    transition: all 0.2s ease-out;
+    position: absolute;
+    width: 636px;
+    height: 183px;
+    top: 545px;
+    left: 43px;
+}
+
+main.WB00278501 #news .news04:hover {
+    transform: translateX(-30px) translateY(-20px);
+}
+
+main.WB00278501 #news .news05 {
+    transition: all 0.2s ease-out;
+    position: absolute;
+    width: 636px;
+    height: 183px;
+    top: 651px;
+    left: 280px;
+}
+
+main.WB00278501 #news .news05:hover {
+    transform: translateX(-30px) translateY(-20px);
+}
+
+main.WB00278501 #course {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgGray.jpg) top no-repeat;
+    overflow: hidden;
+    height: 600px;
+}
+
+main.WB00278501 #course .content {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+main.WB00278501 #problems {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgGreen.jpg) top no-repeat;
+    overflow: hidden;
+    height:600px;
+}
+
+main.WB00278501 #problems h4 {
+    text-align: center;
+}
+
+main.WB00278501 #problems p.contactBtn {
+    width: 400px;
+    line-height: 60px;
+    margin: 20px auto;
+    border: 1px solid #ffffff;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00278501 #problems p.contactBtn a {
+    color: #FFF;
+}
+
+main.WB00278501 #problems p.contactBtn:hover {
+    color: #FFF;
+    background-color: #ff7e00;
+}
+
+main.WB00278501 #problems .circle {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/problemsIcon.png) no-repeat left top #000;
+}
+
+main.WB00278501 #problems .circle:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 145%;
+    z-index: -1;
+    margin-top: -10px;
+    border-left: 20px solid #777777;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    content: "";
+}
+
+main.WB00278501 #problems li:nth-of-type(4) .circle:before {
+    display: none;
+}
+
+main.WB00278501 #problems li:hover .circle {
+    background-color: #ffb400;
+    cursor: pointer;
+}
+
+main.WB00278501 #problems li:hover h4 {
+    color: #ffb400;
+    cursor: pointer;
+}
+
+main.WB00278501 #problems li:nth-of-type(1) .circle {
+    background-position: 0 top;
+}
+
+main.WB00278501 #problems li:nth-of-type(2) .circle {
+    background-position: -125px top;
+}
+
+main.WB00278501 #problems li:nth-of-type(3) .circle {
+    background-position: -250px top;
+}
+
+main.WB00278501 #problems li:nth-of-type(4) .circle {
+    background-position: -375px top;
+}
+
+main.WB00278501 #problems p {
+    padding: 0 25px;
+}
+
+main.WB00278501 #Illustration {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgGray.jpg) top no-repeat;
+    overflow: hidden;
+    height: 860px;
+}
+
+main.WB00278501 #Illustration .content {
+    width: 1000px;
+    height: 860px;
+    position: relative;
+}
+
+main.WB00278501 #Illustration p.contactBtn {
+    width: 400px;
+    line-height: 60px;
+    margin: 40px auto;
+    border: 1px solid #ffffff;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00278501 #Illustration p.contactBtn a {
+    color: #FFF;
+}
+
+main.WB00278501 #Illustration p.contactBtn:hover {
+    background-color: #ff7e00;
+}
+
+main.WB00278501 #Operation {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgGreen.jpg) top no-repeat;
+    overflow: hidden;
+    height: 580px;
+}
+
+main.WB00278501 #case {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgGray.jpg) top no-repeat;
+    overflow: hidden;
+    height: 500px;
+}
+
+main.WB00278501 #case h4 {
+    margin: 0;
+    text-align: center;
+}
+
+main.WB00278501 #case .imgStyle {
+    border: 2px solid #fff;
+    border-radius: 7px;
+}
+
+main.WB00278501 #case p.contactBtn {
+    width: 400px;
+    line-height: 60px;
+    margin: 50px auto 0;
+    border: 1px solid #ffffff;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00278501 #case p.contactBtn a {
+    color: #FFF;
+}
+
+main.WB00278501 #case p.contactBtn:hover {
+    background-color: #ff7e00;
+}
+main #seminar { width: 100%; background-color:#eeeeee;font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif; }
+main #banner_bg2 {
+    width: 1000px;
+	margin: 0 auto;
+    height: 430px;
+	}
+main #banner_bg2 h2 {
+	width: 1000px;
+	padding: 50px 0px 20px 0px;
+	text-align: center;
+	margin: 0 auto;
+	color: #00a2a5;
+	font-size: 32px;
+	
+}
+main #banner_bg2 .txtbox {
+    float: left;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+main #banner_bg2 .txtbox .txtbox_L {
+    float: left;
+    width: 300px;
+    margin-right: 15px;
+}
+
+main #banner_bg2 .txtbox .txtbox_R {
+    float: right;
+    width: 685px;
+}
+
+main #banner_bg2 .txtbox .txtbox_R h3 {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #00a2a5;
+}
+
+main #banner_bg2 .txtbox .txtbox_R p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #202020;
+    padding-bottom: 20px;
+	text-align: justify;
+}
+main #button_R {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+main .btnR {
+    float: left;
+    font-size: 16px;
+    font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+    width: 250px;
+    height: 30px;
+    margin: 0 auto;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+main .btnR a {
+    display: block;
+    color: #00a2a5;
+    text-decoration: none;
+    border: #00a2a5 solid 1px;
+}
+
+main .btnR a:hover {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #00a2a5;
+    margin: 0 auto;
+    border-bottom: #00a2a5 solid 1px;
+}

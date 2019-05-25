@@ -1,0 +1,54 @@
+doctype html
+html(lang='zh-Hant-TW')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        
+        //- 全站共用
+        link(rel='stylesheet', href='https://www.digiwin.com/tw/static/css/public.css')
+        link(rel='stylesheet', href='https://www.digiwin.com/tw/static/css/style.css')
+        script(src='https://www.digiwin.com/tw/static/js/jquery-1.11.3.min.js')
+
+        //- 全站共用(自定義)
+        script(src='https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&flags=gated')
+        script(src='/tw/dsc/assets/fetch-polyfill.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js', defer)
+        script(src='/tw/dsc/assets/modernizr-custom.js', defer)
+        script(src='/tw/dsc/assets/mobile-detect.js')
+        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer)
+        script(src='https://unpkg.com/axios/dist/axios.min.js', defer)
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js')
+        script(src='https://unpkg.com/vue-router/dist/vue-router.js', defer)
+        script(src='https://unpkg.com/vuex', defer)
+        script(src='https://unpkg.com/http-vue-loader', defer)
+        script(src='/tw/dsc/js/common.js')
+
+        //- submenu
+        style.
+            .header-box {
+                height: auto;
+            }
+            .page-submenu {
+                position: fixed;
+                z-index: 28;
+                width: 100%;
+            }
+            main {
+                padding-top: 50px !important;
+            }
+    body
+        //- submenu
+        .header-box
+            header
+
+        // 以下為後台上稿內容
+        link(rel='stylesheet', href='assets/submenu/submenu.css')
+        script(src='assets/submenu/submenu.min.js')
+        link(rel='stylesheet', href='assets/animate.css')
+        link(rel='stylesheet', href='/tw/dsc/css/reset_dsc.css')
+        link(rel='stylesheet', href='css/1901_index.css')
+        script(src='assets/lodash.min.js', defer)
+        script(src='js/1901_index.min.js', defer)
+
+        main

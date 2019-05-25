@@ -1,0 +1,96 @@
+main .banner {
+    $color: (
+    2: #7265ed,
+    3: #3987f9,
+    4: #c0cd56,
+    5: #e1ba20
+    );
+    $margin-bottom: (
+    2: 70px,
+    3: 70px,
+    4: 70px,
+    5: 95px,
+    );
+    position: relative;
+    background-repeat: no-repeat;
+    color: #fff;
+    // color
+    @for $i from 2 through 5 {
+        @at-root {
+            main .section#{$i} .banner {
+                margin-bottom: map-get($margin-bottom, $i);
+                background-color: map-get($color, $i);
+                @media (min-width: $tablet-width+1) {
+                    background-color: transparent;
+                    background-image: image-url('erpAll/section#{$i}-bg.jpg');
+                }
+            }
+            main .section#{$i} .banner::after {
+                border-top-color: map-get($color, $i);
+            }
+        }
+    }
+    @media (min-width: $content-width) {
+        background-position: 50% 0;
+    }
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        justify-content: center;
+    }
+    h1 {
+        display: flex;
+        margin-bottom: 1em;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 1.3;
+        flex-wrap: wrap;
+        @media (min-width: $tablet-width+1) {
+            font-size: 30px;
+        }
+    }
+    &-desc {
+        margin-bottom: 2em;
+        line-height: 1.4;
+        @media (min-width: $tablet-width+1) {
+            font-size: 22px;
+        }
+        br {
+            display: none;
+            @media (min-width: $tablet-width+1) {
+                display: block;
+            }
+        }
+    }
+    &-btns {
+        display: flex;
+        a {
+            @include btn(137px, 28px, #000, #fff45c, 5px);
+            @media (min-width: $tablet-width + 1) {
+                width: 230px;
+                height: 40px;
+                font-size: 24px;
+                line-height: 40px;
+            }
+            & + a {
+                margin-left: 20px;
+            }
+        }
+    }
+    &::after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-width: 41px 41px 0 41px;
+        border-style: solid;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        content: '';
+        transform: translateX(-50%);
+    }
+}

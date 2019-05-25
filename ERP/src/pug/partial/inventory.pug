@@ -1,0 +1,9 @@
+extends ../layout.pug
+
+block includes
+    link(rel='stylesheet', href='css/inventory/style.css')
+    script(src='assets/lodash.min.js', defer)
+    script(src='js/inventory.min.js', defer)
+
+block content
+    include inventory.html

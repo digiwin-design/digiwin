@@ -1,0 +1,16 @@
+/* #region 活動結束-索取資料banner */
+#end_banner {
+    position: fixed;
+    bottom: 0;
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+    background: url(/images/event_end_bg.jpg) no-repeat center center;
+    color: #868484;
+    text-align: center;
+}
+#end_banner img {
+    border: 0;
+} 
+/* #endregion 活動結束-索取資料banner */

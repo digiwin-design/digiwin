@@ -1,0 +1,60 @@
+block vars
+doctype html
+html(lang='zh-Hant-TW')
+    head
+        block head
+            meta(charset='utf-8')
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+            meta(http-equiv='x-ua-compatible', content='ie=edge')
+            meta(name='description', content=`${description}`)
+            meta(name='robots', content='index,follow')
+            meta(name='author', content='鼎新電腦')
+            meta(name='keywords', content=`${keywords}`)
+
+            title #{title}
+
+            link(rel='stylesheet', href='/tw/dsc/Library/css/bar_m.css')
+            link(rel='stylesheet', href='/tw/dsc/plugins/font-awesome/css/font-awesome.min.css')
+            link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
+
+            script(src='assets/jquery.min.js', defer)
+            script(src='https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&flags=gated')
+            script(src='/tw/dsc/assets/fetch-polyfill.js', defer)
+            script(src='/tw/dsc/Library/js/menu_m.js', defer)
+            script(src='/tw/dsc/js/EDMendBanner.js', defer)
+            script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
+            script(src='/tw/dsc/js/Eform/form.js', defer)
+            script(src='/tw/dsc/js/contact.js', defer)
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js')
+            script(src='https://unpkg.com/http-vue-loader', defer='')
+
+            // 右下角浮動廣告
+            //- link(rel='preload', as='image', href='/tw/dsc/assets/ad/images/ad1-online.jpg')
+            //- link(rel='preload', as='image', href='/tw/dsc/assets/ad/images/ad2.jpg')
+            //- link(rel='preload', as='image', href='/tw/dsc/assets/ad/images/ad2-1.jpg')
+            //- link(rel='preload', as='image', href='/tw/dsc/assets/ad/images/ad2-2.jpg')
+            //- link(rel='preload', as='image', href='/tw/dsc/assets/ad/images/ad2-3.jpg')
+            //- link(rel='preload', as='image', href='/tw/dsc/assets/ad/images/ad2-online.jpg')
+            //- script(src='/tw/dsc/assets/ad/ad.min.js', defer='')
+
+            // Google Tag Manager
+            script.
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-MRWJL2');
+            // End Google Tag Manager
+    body
+        // Google Tag Manager (noscript)
+        noscript
+            iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-MRWJL2', height='0', width='0', style='display:none;visibility:hidden')
+        // End Google Tag Manager (noscript)
+
+        include ../../../../template/cis_top_m162
+        include ../../../../template/mbnav
+        block main
+        include ../../../../template/form_component
+        include ../../../../template/cis_footer
+
+        #toolbar

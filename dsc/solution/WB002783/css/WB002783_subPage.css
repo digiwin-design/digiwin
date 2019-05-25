@@ -1,0 +1,39 @@
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main body {
+  padding-top: 100px;
+}
+main h1 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: normal;
+}
+main #navLink,
+main #navLink .subLink {
+  background-color: #f9f9f9;
+}
+main .otherLink {
+  display: block;
+  width: 300px;
+  margin: 50px auto 0;
+  border: 1px solid #0092b1;
+  border-radius: 5px;
+  color: #0092b1;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+main .otherLink:hover {
+  background-color: #0092b1;
+  color: #fff;
+}
+main #pageTitle {
+  color: #fff;
+}
+main #pageTitle .sectionNote {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+}

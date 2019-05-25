@@ -1,0 +1,78 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+
+
+main #qaContent ul, main li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main #qaContent {
+  width: 950px;
+}
+main #qaContent ul.accordionPart {
+  margin: 10px 10px 10px 10px;
+}
+main #qaContent ul.accordionPart li {
+  border-bottom: solid 1px #e3e3e3;
+  padding-bottom: 12px;
+  margin-top: 12px;
+}
+main #qaContent ul.accordionPart li .qa_title {
+  background: url(../images/HRicon_q_a.png) no-repeat 0px 0px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  letter-spacing: 5px;
+  line-height: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+main #qaContent ul.accordionPart li .qa_title a:link {
+  color: #fff;
+}
+main #qaContent ul.accordionPart li .qa_title a:hover {
+  color: #000;
+}
+main #qaContent ul.accordionPart li .qa_title a:visited {
+  color: #fff;
+}
+main #qaContent ul.accordionPart li .qa_title a:active {
+  color: #fff;
+}
+main #qaContent ul.accordionPart li #qa_title09 a:link {
+  display: block;
+  width: 950px;
+  color: #fff;
+}
+main #qaContent ul.accordionPart li #qa_title09 a:hover {
+  display: block;
+  width: 950px;
+  color: #000;
+}
+main #qaContent ul.accordionPart li .qa_title p {
+  line-height: 1.6;
+}
+main #qaContent ul.accordionPart li .qa_title_on {
+  background: url(../images/HRicon_q_a2.png) no-repeat 0px 0px;
+  color: #000;
+}
+main #qaContent ul.accordionPart li .qa_title_on a {
+  background: url(../images/HRicon_q_a2.png) no-repeat 0px 0px;
+  color: #000;
+}
+main #qaContent ul.accordionPart li .qa_content {
+  padding: 30px;
+  width: 870px;
+  background: #f4f4f4;
+  font-size: 17px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  color: #363636;
+  line-height: 50px;
+}
+main #qaContent ul.accordionPart li .qa_content p {
+  line-height: 1.5;
+}

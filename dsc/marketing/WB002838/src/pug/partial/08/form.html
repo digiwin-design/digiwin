@@ -1,0 +1,65 @@
+<div id="contact" class="section">
+    <div class="container">
+        <p class="title">生產質量良莠不齊、訂單交期難控管，問題出在哪？<br>立即來電諮詢，專人健診你的工廠狀況</p>
+        <p class="sectionDesc-center">需要立即的支援與服務請直撥免付費專線 <a href="tel:0800009890">0800-009-890</a></p>
+        <div id="form">
+            <form>
+                <a id="fromSource" href="javascript:;">WB002838</a>
+                <div class="inforCheck">
+                    <p class="inforCheck-caption">讓工廠數智化變得簡單，生產製造全流程數據整合，真正做到100%透明化、智能化！</p>
+                    <label for="demand01"><input name="contact-demand" class="contact-demand" id="demand01" type="checkbox" value="我家工廠想要智能化管理" /> 我家工廠想要智能化管理</label>
+                    <div class="outline">若您有其他建議或想法，歡迎與我們分享：</div>
+                    <div class="consult-cont">
+                        <p class="inputTitle"></p>
+                        <textarea id="contact-query" cols="40" rows="4" maxlength="500"></textarea>
+                        <p class="wordNum">可輸入 <span class="remaining">500</span> 字</p>
+                    </div>
+                </div>
+
+                <div class="basciInfo">
+                    <div class="outline">
+                        <input type="text" name="contact-company" id="contact-company" class="contact required">
+                        <p class="inputTitle"><span class="requiredHint">*</span>公司名稱 <span class="fillHint"> (請填寫完整公司名稱)</span><i class="fa fa-exclamation-circle" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="outline">
+                        <input type="text" name="telephone" id="telephone" class="contact required">
+                        <p class="inputTitle"><span class="requiredHint">*</span>聯絡電話<i class="fa fa-exclamation-circle" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="outline">
+                        <input type="text" name="contact_person" id="contact_person" class="contact required">
+                        <p class="inputTitle"><span class="requiredHint">*</span>聯絡人<i class="fa fa-exclamation-circle" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="outline">
+                        <input type="text" name="contact-dept" id="contact-dept" class="contact required">
+                        <p class="inputTitle"><span class="requiredHint">*</span>部門<i class="fa fa-exclamation-circle" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="outline">
+                        <input type="text" name="contact-job" id="contact-job" class="contact required">
+                        <p class="inputTitle"><span class="requiredHint">*</span>職稱<i class="fa fa-exclamation-circle" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="outline">
+                        <input type="text" name="contact-email" id="contact-email" class="contact required">
+                        <p class="inputTitle"><span class="requiredHint">*</span>E-mail<span class="fillHint"> (例：example@digiwin.com)</span><i class="fa fa-exclamation-circle" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="verifica clearfix">
+                        <div class="outline">
+                            <input type="text" name="" id="identCode" class="identCode" onBlur="validate()">
+                            <p class="inputTitle"><span class="requiredHint">*</span>請輸入驗證碼</p>
+                        </div>
+                        <input type="button" id="vericodePic" />
+                        <span class="renovCode" onClick="createCode()"></span>
+                        <span id="codeSuces"></span>
+                    </div>
+                </div>
+                <div class="btnBlock">
+                    <input type="button" id="submit" value="提交資料">
+                    <div class="agreeLabel">
+                        <label for="agree">
+                        <input type="checkbox" name="agree" value="" id="agree" checked> 我同意接受鼎新電腦<a class="links" href="http://tw.digiwin.biz/legal.html" target="_blank">隱私權聲明</a>
+                    </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

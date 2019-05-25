@@ -1,0 +1,428 @@
+<link rel="stylesheet" type="text/css" href="https://www.digiwin.com/tw/dsc/css/Eform/xcConfirm.css">
+<link rel="stylesheet" type="text/css" href="https://www.digiwin.com/tw/dsc/css/Eform/form.css">
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/solution/WB002675/css/WB00267501_2.css" />
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/solution/WB002675/css/animate.css">
+
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/js/Eform/xcConfirm.js"></script>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/change.js"></script>
+<script type="text/javascript">
+$(function() {
+	var f1Top=$('.section2').offset().top-50;
+	var f2Top=$('.section3').offset().top-50;
+	var f3Top=$('.section4').offset().top-50;
+	var f7Top=$('#contact').offset().top-600;
+
+	var jianCe=function(){
+
+		var windowScrollTop=$(window).scrollTop();
+
+		if(windowScrollTop > f7Top) {
+
+			$('.listNavUl').show();
+			$('.listNavUl li').addClass('active2');
+		}else if(windowScrollTop>=f3Top-100){
+
+			$('.listNavUl').show();
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl li').eq(2).addClass('active').siblings('li').removeClass('active');
+
+		}else if(windowScrollTop>=f2Top-100){
+
+			$('.listNavUl').show();
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl li').eq(1).addClass('active').siblings('li').removeClass('active');
+
+		}else if(windowScrollTop>=f1Top-100){
+
+			$('.listNavUl').show();
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl li').eq(0).addClass('active').siblings('li').removeClass('active');
+
+		}else{
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl').hide();
+
+		}
+
+	}
+
+	$(window).scroll(jianCe);
+	$('.move').click(function(event) {
+		$('html,body').stop().animate({'scrollTop':f1Top+50-125}, 500,function(){
+					$(window).scroll(jianCe);
+				});
+	});
+	$('.navLi8').click(function(event) {
+		$('html,body').stop().animate({'scrollTop':f7Top+600-125}, 500,function(){
+					$(window).scroll(jianCe);
+				});
+	});
+	$('.listNavUl li,.banUl li').click(function(event) {
+
+
+		$('.listNavUl li').removeClass('active2');
+		
+		$(this).addClass('active').siblings('li').removeClass('active');
+
+		
+		var i=$(this).index()+1;
+		if(i==3){
+
+			$('html,body').stop().animate({'scrollTop':f3Top+50-125}, 500,function(){
+				$(window).scroll(jianCe);
+			});
+
+
+		}else if(i==2){
+
+			$('html,body').stop().animate({'scrollTop':f2Top+50-125}, 500,function(){
+				$(window).scroll(jianCe);
+			});
+
+		}else if(i==1){
+
+			$('html,body').stop().animate({'scrollTop':f1Top+50-125}, 500,function(){
+				$(window).scroll(jianCe);
+			});
+
+		}
+		
+	});
+});
+</script>
+
+<!-- submenu -->
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/assets/submenu/submenu.css">
+<script src="https://www.digiwin.com/tw/dsc/assets/submenu/submenu.min.js"></script>
+
+<main class="WB00267501_2">
+	<div class="section section1">	
+		<div class="banner">
+			<div class="content mt125">
+				<p class="phead">作連鎖賣場KA生意，您也是這樣嗎?</p>
+				<ul class="banUl">
+					<li class="banLi banLi1 clearfix"><span></span><p>通路合約</p></li>
+					<li class="banLi banLi2 clearfix"><span></span><p>促銷管理</p></li>
+					<li class="banLi banLi3 clearfix"><span></span><p>允收‧效期</p></li>
+				</ul>
+				<div class="move">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section section0 section2">
+		<div class="label"><span>通路合約</span></div>
+		
+		<div class="content">
+			<div class="contentCon">
+				<ul class="changeDiv">
+					<li class="nowli painli" style="display:block; ">
+						<div class="pain">
+							<h3>今天要出貨到家樂福xx分店三十箱、大潤發要請款了還沒出對帳單、全家跟7-11的電子發票還沒上傳…</h3>
+							<p class="sec2_p1">公司產品鋪貨到各個通路販售，合約內容費用都不同，每月只要遇到請款對帳結帳就想離職...<br />老闆說我是今年第八個找進來的會計了...
+							</p>
+							<div class="dialog">
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_a1.png" class="dialog1 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80"  alt="" />
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_a2.png" class="dialog2 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1s" alt="" />
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_a3.png" class="dialog3 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="2s" alt="" />
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_a4.png" class="dialog4 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="3s" alt="" />
+							<span class="people_a1"></span>
+							<span class="people_a2"></span>
+							</div>
+							<div class="hope">
+								<p>自動按合約依實際業績算出通路費用，並產生通路對帳單快速跟客戶請款，<br />並按各客戶配合的電子發票平台上傳電子發票。</p>
+							</div>
+							<span class="tip"></span>
+						</div>	
+					</li>
+					<li class="soluli">
+						<div class="solution">
+							<h3>作連鎖通路生意，其實您可以這樣管</h3>
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2solution_a.png"  alt="" />
+							<div class="rightp">
+								<h4>通路合約控管好、加快結帳與對帳</h4>
+								<ul>
+									<li><p>通路合約條件可建立在系統內，月初、月中可試算，預估業績多少時，未來這個通路可能會有多少的通路費用，預先試算哪個通路賺錢？哪個通路不賺錢？</p></li>
+									<li><p>讓營業單位可按市場策略性考量，針對通路特性做差異化處理。</p></li>
+									<li><p>月底財務對帳時，可自動按合約依實際業績算出通路費用，並產生通路對帳單快速跟客戶請款，並按各客戶配合的電子發票平台上傳電子發票。</p></li>
+								</ul>					
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ol class="button clearfix">
+				<li class="buttonLi1 current">常見困擾</li>
+				<li class="buttonLi2">解決方案</li>			
+			</ol>
+        </div>
+	</div>
+	</div>
+	<div class="section section0 section3">
+		<div class="label"><span>促銷管理</span></div>
+		<div class="content">
+				<div class="contentCon">
+					<ul class="changeDiv">
+						<li class="chli painli acitve">
+							<div class="pain">
+								<h3>配合家樂福促銷的組合品庫存還有多少?...<br />COSTCO的促銷組合還沒包裝...條碼要怎麼印?...</h3>
+								<p class="sec2_p1">商品種類多，怎麼搭配組合才能增加營收、降低庫存？<br />每個通路多個檔期同時進行，常常搞錯價格！我不想被扣獎金阿...
+							</p>
+								<div class="dialog">
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_b1.png" class="dialog1 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_b2.png" class="dialog2 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1.5s"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_b3.png" class="dialog3 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="3s"  alt="" />
+								<!-- <img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_b4.png" class="dialog4"  alt="" /> -->
+								<span class="people_b1"></span>
+								<span class="people_b2"></span>
+								<span class="people_b3"></span>
+								</div>
+								<div class="hope">
+									<p>打單時可以自動判斷促銷期間優惠價，不用擔心價格打錯。<br />可以配合量販通路之商品包裝規格、商品組合，印出商品條碼標。<br />隨時掌握活動業績狀況，分析此檔促銷是否有效、帶給公司多少利潤。</p>
+								</div>
+							</div>
+						</li>
+						<li class="chli soluli">
+							<div class="solution">
+								<h3>作連鎖通路生意，其實您可以這樣管</h3>
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2solution_b.png"  alt="" />
+								<div class="rightp">
+									<h4>促銷很複雜? 數據幫助你</h4>
+									<ul>
+										<li><p>促銷提報時，可以參考呆滯品、短效期品分析表、產品成本/毛利分析…等，充分掌握促銷可利用資源。</p></li>
+										<li><p>促銷優惠價、產品組合可設定於系統中，業助打單時可自動判斷促銷期間優惠價，不用擔心價格打錯。</p></li>
+										<li><p>配合量販通路之商品包裝規格、商品組合，可由系統印出商品條碼標，以因應客戶出貨所需。</p></li>
+										<li><p>促銷中，可隨時掌握活動業績狀況，可配合活動狀況機動應變。</p></li>
+										<li><p>促銷活動結束後，可做促銷成效檢討，分析此檔促銷是否有效、帶給公司多少利潤。</p></li>
+									</ul>					
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>					
+				<ul class="button clearfix">
+					<li class="buttonLi1 current">常見困擾</li>
+					<li class="buttonLi2">解決方案</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="section section0 section4">
+		<div class="label"><span>允收‧效期</span></div>
+		<div class="content">
+			<div class="contentCon">
+				<ul class="changeDiv">
+					<li class="chli painli acitve">
+						<div class="pain">
+							<h3>COSTCO說這批貨過了允收期，不收了...家福樂也不要這批貨...</h3>
+							<p class="sec2_p1">商每家量販店效期規範都不同，這批貨到底要出給誰阿...<br/>每天一直出貨都沒有注意到哪些快過期，報廢傷利潤，還得賠錢耶！
+							</p>
+							<div class="dialog">
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_c1.png" class="dialog1 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2txt_c2.png" class="dialog2 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1.5s"  alt="" />
+								<span class="people_b1"></span>
+								<span class="people_b2"></span>
+							</div>
+							<div class="hope">
+								<p>出貨時有工具幫我依照客戶的商品允收期條件自動帶出出貨[批號] ；<br />有神器能夠提早警示及提醒我有短效期品，可以盡早讓[即期品]在未過期前充分被利用。</p>
+							</div>
+						</div>
+					</li>
+					<li class="chli soluli">
+						<div class="solution">
+							<h3>作連鎖通路KA生意，其實您可以這樣管</h3>
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/2solution_c.png"  alt="" />
+							<div class="rightp">
+								<h4>善用批號管理、進而降低報廢成本</h4>
+								<ul>
+									<li><p>可按客戶商品允收期條件建立於系統中。</p></li>
+									<li><p>出貨時由系統依照該客戶的商品允收期條件自動帶出出貨[批號]，倉庫人員僅需按系統建議的批號指示去倉庫撿貨即可。</p></li>
+									<li><p>若有短效期品，系統能夠提早警示及提醒，讓同仁能盡早將[即期品]在未過期前充分被利用，降低報廢成本。</p></li>
+									<li><p>避免出錯的批號導致被客戶退貨或罰款。</p></li>
+								</ul>					
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>						
+			<ul class="button clearfix">
+				<li class="buttonLi1 current">常見困擾</li>
+				<li class="buttonLi2">解決方案</li>
+			</ul>
+		</div>
+	</div>
+
+<div id="section_case">
+<div id="content">
+<h3>輔導案例</h3>
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_01.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>有機園公司</h4>
+    <p>過去所使用的系統，由於分屬不同階段購置，因各自設備與系統獨立，維護費時費力上各系統間的資料都需以人工整理報表，資料核對更是人力的負擔…</p>
+    <div id="button_R">
+     <div class="btnR"><a href="https://www.digiwin.com/tw/case/1532.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>有機園品牌持續發展已包括：正直村：有機生機食品零售；康健生機：為品牌產品；芽菜趣：餐飲與健康教室。經營模式涵蓋生產製造、量販、超市通路、自有商店、有機餐飲與網購宅配等。</p>
+</div>
+</div><!--end txtbox -->
+
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_02.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>福壽實業</h4>
+    <p>畢竟我們是傳統產業而且流動率很低，所以大家已經很習慣舊系統，因此導入新系統初期抗拒過程是一定會的」徐經理如是說，並笑稱這是「DOS轉換為Windows的戰爭」。</p>
+    <div id="button_R">
+     <div class="btnR"><a href="https://www.digiwin.com/tw/case/1536.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>福壽實業創立於民國9年，發展至今已邁入第91個年頭，自創業以來，秉持『勤儉信實』的經營理念，及堅守『品質、創新、服務』的工作信念，而受到廣大客戶的支持與肯定，在飼料、油脂、寵物食品、肥料生物科技等領域，匯聚眾力資源創造精良產品。</p>
+</div>
+</div><!--end txtbox -->
+
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_03.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>森田藥妝</h4>
+    <p>林財務長說：「森田是品牌企業，不同於零售或連鎖業型態，當公司要追求十倍成長時，對零售或連鎖業而言至少需開八倍的店面，但是透過有效的品牌運作則能創造目標效益」</p>
+    <div id="button_R">
+     <div class="btnR"><a href="https://www.digiwin.com/tw/case/1038.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>森田藥粧從小賣店、特色店、批發零售到自有品牌經營，市場規模從單店、連鎖門市、全台灣擴展到香港、大陸與新加坡等亞太區域，立志從「國民第一」成為「亞洲第一」的面膜專家。</p>
+</div>
+</div><!--end txtbox -->
+
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_04.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>金豐盛食品</h4>
+    <p>羅錫欽董事長表示：<br />
+      「一個企業要經營得好，最重要的事情就是要對自己的市場及客戶相當了解，要能清楚掌握產品供給及銷售狀況。」</p>
+    <div id="button_R">
+      <div class="btnR"><a href="https://www.digiwin.com/tw/case/1034.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>金豐盛食品為國產生鮮雞肉一條龍的專業行銷公司，並持續創新產品、服務與經營模式。主要通路為大盤商以及直接銷售給全省各大超商、量販店、連鎖餐廳、菜市場、肉品加工廠..等，自創品牌「舒康雞」則透過零售、企業團購、博客來美食區…等網購通路銷售。 </p>
+</div>
+</div><!--end txtbox -->
+
+</div><!-- End content-->
+</div><!-- End section_case-->
+
+<div class="listNav">
+	<ul class="listNavUl">
+		<li class="listNavUlLi2"><span>通路合約</span><i></i></li>
+		<li class="listNavUlLi3"><span>促銷管理</span><i></i></li>
+		<li class="listNavUlLi4"><span>允收效期</span><i></i></li>
+	</ul>
+</div>	
+</main>
+<!--資料索取-->
+<div id="contact">
+    <div id="contactTxt" class="clearfix">
+        <h2>資料索取與諮詢</h2>
+        <div id="info">
+            <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，謝謝！</p>
+            <ul>
+              <li class="mail"><a href="mailto:marketing01@digiwin.com"></a></li>
+              <li class="fb"><a href="https://www.facebook.com/DSCmain" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div id="formBlock" class="form">
+            <a id="fromSource" href="javascript:;">WB002675</a>
+            <div id="contactInput" class="clearfix">
+                <span class="hideLabel ">*公司名稱：</span><input type="text" placeholder="*公司名稱" name="contact-company" id="contact-company" class="contact required"><span class="hideLabel perLabel">*姓名：</span><input type="text" placeholder="*姓名" name="contact_person" id="contact_person" class="contact required"><span class="hideLabel evenLable">*聯絡電話：</span><input type="text" placeholder="*聯絡電話" name="telephone" id="telephone" class="contact required end"><span class="hideLabel evenLable">*E-mail：</span><input type="text" placeholder="*E-mail" name="contact-email" id="contact-email" class="contact required"><span class="hideLabel">*部門：</span><input type="text" placeholder="*部門" name="contact-dept" id="contact-dept" class="contact required"><span class="hideLabel">*職稱：</span><input type="text" placeholder="*職稱" name="contact-job" id="contact-job" class="contact required end">
+            </div>
+            <div class="consult-cont">
+				<p class="hideLabel">請在這裡描述您的需求：</p>
+				<textarea id="contact-query" cols="40" placeholder="請在這裡描述您的需求(500字以內)：" rows="4" class="" maxlength="500"></textarea>
+			</div>
+            <div class="demandCheck clearfix">
+                <p>請勾選貴司想要改善的項目：</p>
+                <div class="demandGroup clearfix">
+                    <p>• 多通路管理：</p>
+                    <div class="demandGroupList">
+                        <label for="contact-demand01"><input name="contact-demand" class="contact-demand" id="contact-demand01" type="checkbox" value="經銷批發" /> 經銷批發</label>
+                        <label for="contact-demand02"><input name="contact-demand" class="contact-demand" id="contact-demand02" type="checkbox" value="連鎖賣場KA" /> 連鎖賣場KA</label>
+                        <label for="contact-demand03"><input name="contact-demand" class="contact-demand" id="contact-demand03" type="checkbox" value="門市專櫃" /> 門市專櫃</label>
+                        <label for="contact-demand04"> <input name="contact-demand" class="contact-demand" id="contact-demand04" type="checkbox" value="網購" /> 網購</label>       
+                        <label for="contact-demand05"><input name="contact-demand" class="contact-demand" id="contact-demand05" type="checkbox" value="觀光工廠" /> 觀光工廠</label>          
+						<label for="contact-demand06"><input name="contact-demand" class="contact-demand" id="contact-demand06" type="checkbox" value="進出口貿易" /> 進出口貿易</label>
+						<label for="contact-demand07"><input name="contact-demand" class="contact-demand" id="contact-demand07" type="checkbox" value="行動經銷" /> 行動經銷</label>
+                    </div>
+                </div>
+                <div class="demandGroup even clearfix">
+                    <p>• 其　　　他：</p>
+                    <div class="demandGroupList">
+                        <label for="contact-demand07"><input name="contact-demand" class="contact-demand" id="contact-demand07" type="checkbox" value="生產、委外發包" />  生產、委外發包</label>           
+                        <label for="contact-demand08"><input name="contact-demand" class="contact-demand" id="contact-demand08" type="checkbox" value="庫存數量、成本計算" /> 庫存數量、成本計算</label>
+                        <label for="contact-demand09"><input name="contact-demand" class="contact-demand" id="contact-demand09" type="checkbox" value="IPO上市櫃規劃" /> IPO上市櫃規劃</label>  
+                        <label for="contact-demand10"><input name="contact-demand" class="contact-demand" id="contact-demand10" type="checkbox" value="電子發票" /> 電子發票</label>   
+                    </div>    
+                </div>
+            </div>
+            <hr>
+            <div class="verifica">
+                <span class="veriSpan">＊請輸入驗證碼：</span>
+                <span class="veriSpan-m">驗證碼:</span>
+                <input type="text" name="" id="identCode" class="identCode" onblur= "validate()">
+                <input type = "button" id="vericodePic" />
+                <span class="renovCode" onclick="createCode()"></span>
+                <span id = "codeSuces"></span>
+            </div>  
+            <input type="button" id="submit" value="送　　出">
+            <label for="agree" class="checAgree"><input type="checkbox" name="agree" value="" id="agree" checked=""> 我同意接受鼎新電腦<a href="/tw/portal/page/index/id/1202.html" target="_blank">隱私權聲明</a></label>
+        </div>
+    </div> 
+</div>
+ 
+<!-- loading -->
+<div id="loading"><p><i></i>資料處理中，請稍後...</p></div>
+
+<!-- thx page -->
+<div id="thx">
+    <div id="thxContent">
+        <div class="close">X</div>
+        <h3>資料己送出</h3>
+        <p class="thxparg"></p>
+        <p class="suprtCall">
+            <span>如需要立即的支援與服務，</span>
+            <span>請直撥免付費專線0800-888-162，謝謝！</span>
+        </p>
+        <p class="thxSourLoad1"><a id="SourLoadLink" href="" target="_blank">資料下載</a></p>
+        <p id="goIndex"><a href="javascript:;">繼續瀏覽網站</a></p>
+    </div>
+</div>
+<script>				
+	var $windowHig = $(window).height();
+	console.log($windowHig)
+	if ($windowHig<600){
+		$('.phead').css('margin-top',50+'px')
+
+	}else if($windowHig>601&&$windowHig<800){
+		$('.phead').css('margin-top',100+'px')
+		$('.move span').css('margin-top',40+'px')
+	}else if($windowHig>801){
+		$('.phead').css('margin-top',180+'px')
+	}
+</script>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/js/Eform/form.js"></script>
+<script src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/wow.min.js"></script>
+<script src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/top.js"></script>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>

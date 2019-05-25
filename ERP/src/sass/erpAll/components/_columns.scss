@@ -1,0 +1,78 @@
+main {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .col {
+        width: calc((150 / 320) * 100%);
+        @media (max-width: $tablet-width) {
+            @include first(2) {
+                margin-bottom: 1.5em;
+            };
+        }
+        @media (min-width: $tablet-width + 1) {
+            width: calc((210 / 1200) * 100%);
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            transition: color .2s;
+            align-items: center;
+            &:hover {
+                color: #000; /* override */
+            }
+            &.disabled {
+                pointer-events: none;
+            }
+            div {
+                position: relative;
+                width: 120px;
+                height: 120px;
+                @media (min-width: $content-width) {
+                    width: 190px;
+                    height: 190px;
+                }
+            }
+        }
+        img {
+            position: absolute;
+            transition: opacity .2s;
+            &.mouseenter {
+                @at-root {
+                    .col a.is-hover img.mouseenter {
+                        opacity: 0;
+                    }
+                }
+            }
+            &.mouseleave {
+                opacity: 0;
+                @at-root {
+                    .col a.is-hover img.mouseleave {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        p {
+            width: 100%;
+            &:nth-of-type(1) {
+                margin-top: .8em;
+                margin-bottom: .3em;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 1;
+                @media (min-width: $content-width) {
+                    font-size: 30px;
+                }
+            }
+            &:nth-of-type(2) {
+                font-size: 15px;
+                @media (min-width: $content-width) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,471 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+
+main.WB00278501_seminar #navLink,
+main.WB00278501_seminar #navLink .subLink {
+    background-color: #f9f9f9;
+}
+
+main.WB00278501_seminar .section h3 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+main.WB00278501_seminar .section h4 {
+    font-size: 21px;
+    margin: 20px 0 7px 40px;
+    text-align: left;
+    color: #1ba6ab;
+}
+
+main.WB00278501_seminar .section h6 {
+    font-size: 17px;
+    margin: 40px 0px 0px 40px;
+    text-align: left;
+    color: #004a9d;
+}
+
+main.WB00278501_seminar .section p {
+    margin: 20px 0 7px 40px;
+    padding: 0;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+main.WB00278501_seminar .section p.left60 {
+    margin: 20px 0 7px 60px;
+    padding: 0;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+main.WB00278501_seminar .section {
+    width: 100%;
+    min-width: 1000px;
+    padding: 20px 0;
+    color: #444444;
+    font-family: Arial, "微軟正黑體";
+    letter-spacing: 1px;
+}
+
+main.WB00278501_seminar .content {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+main.WB00278501_seminar .font_mainColor {
+    color: #0bb580;
+}
+
+main.WB00278501_seminar .font_orange {
+    color: #ff6600;
+}
+
+main.WB00278501_seminar .font_blue {
+    color: #058fa8;
+}
+
+main.WB00278501_seminar .font_blue2 {
+    color: #b5e6ff;
+}
+
+main.WB00278501_seminar .font_green {
+    color: #4fcc6a;
+}
+
+main.WB00278501_seminar .font_yellow1 {
+    color: #fffc00;
+}
+
+main.WB00278501_seminar .font_yellow {
+    color: #ffb400;
+}
+
+main.WB00278501_seminar .font_yellowLight {
+    color: #feffc1;
+}
+
+main.WB00278501_seminar .font_yellowDark {
+    color: #ff8d00;
+}
+
+main.WB00278501_seminar .font_redLight {
+    color: #ff5454;
+}
+
+main.WB00278501_seminar .font_white {
+    color: #ffffff;
+}
+
+main.WB00278501_seminar .font_gray {
+    color: #bbbbbb;
+}
+
+main.WB00278501_seminar .font_blackB {
+    color: #000000;
+    font-weight: bold;
+}
+
+main.WB00278501_seminar .font_green2 {
+    color: #eaff01;
+}
+
+main.WB00278501_seminar .bg_mainColor {
+    background-color: #0bb580;
+}
+
+main.WB00278501_seminar .bg_green {
+    background-color: #4fcc6a;
+}
+
+main.WB00278501_seminar .bg_yellow {
+    background-color: #ffb400;
+}
+
+main.WB00278501_seminar .bg_yellowDark {
+    background-color: #ff8d00;
+}
+
+main.WB00278501_seminar .bg_gray {
+    background-color: #bbbbbb;
+}
+
+main.WB00278501_seminar .bg_greenImg {
+    background: url(../images/bgGreen.jpg) no-repeat center center;
+}
+
+main.WB00278501_seminar .bg_ {
+    background: url(../images/bgGreen.jpg) no-repeat center center;
+}
+
+main.WB00278501_seminar .hover_yellow:hover h4 {
+    color: #ffb400;
+}
+
+main.WB00278501_seminar .circle {
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+main.WB00278501_seminar p.imgNote {
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+main.WB00278501_seminar p.sectionNote {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 19px;
+}
+
+main.WB00278501_seminar p.pageBtn {
+    width: 400px;
+    line-height: 60px;
+    margin: 50px auto 0;
+    border: 1px solid #ffffff;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00278501_seminar .Block01bg {
+    padding-bottom: 50px;
+    width: 100%;
+    background: url(../images/bgImg3.jpg) no-repeat center center fixed;
+}
+
+main.WB00278501_seminar h3.Block01_icon {
+    text-align: center;
+    padding-left: 40px;
+    color: #1ba6ab;
+}
+
+main.WB00278501_seminar #Block01 .P_center {
+    text-align: center;
+}
+
+main.WB00278501_seminar #Block01 {
+    width: 950px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+    padding-top: 100px;
+}
+
+main.WB00278501_seminar #Block01 #icons {
+    width: 900px;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+
+main.WB00278501_seminar #Block01 #icons ul li {
+    float: left;
+    display: block;
+    line-height: 50px;
+    margin: 10px 10px 10px 30px;
+    padding-left: 50px;
+}
+
+main.WB00278501_seminar .iconA {
+    background: url(../images/seminar/icon2.png) no-repeat left 0px;
+}
+
+main.WB00278501_seminar .iconB {
+    background: url(../images/seminar/icon2.png) no-repeat left -50px;
+}
+
+main.WB00278501_seminar .iconC {
+    background: url(../images/seminar/icon2.png) no-repeat left -100px;
+}
+
+main.WB00278501_seminar #Block01 a {
+    color: #1172a4;
+}
+
+main.WB00278501_seminar #Block01 a:hover {
+    color: #F60;
+}
+
+main.WB00278501_seminar .section {
+    padding-bottom: 0;
+}
+
+main.WB00278501_seminar .section1 {
+    display: block;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    font-family: Arial, "微軟正黑體";
+}
+
+main.WB00278501_seminar .section1 .sec-header {
+    margin-top: 20px;
+    /*margin-bottom: 26px;*/
+    height: 51px;
+    width: 1000px;
+    /*padding: 14px 12px 10px 13px;*/
+    background: url(../images/seminar/section1_h.png) no-repeat;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+main.WB00278501_seminar .section1 .sec-header .secIcon-1 {
+    display: inline-block;
+    font-size: 15px;
+    border-right: 1px #FFF solid;
+    padding-right: 10px;
+    margin-left: 14px;
+    margin-top: 12px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 28px;
+    background: url(../images/seminar/section1_icon1.png) 0 center no-repeat;
+}
+
+main.WB00278501_seminar .section1 .sec-header p {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+    /*width: 700px;*/
+}
+
+main.WB00278501_seminar .sec-header .secIconMore {
+    position: absolute;
+    top: -4px;
+    right: 10px;
+    height: 51px;
+    width: 50px;
+    line-height: 36px;
+    background: url(../images/seminar/secIconMore.png) center 33px no-repeat;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00278501_seminar .changeDIV {
+    width: 100%;
+    height: 98%;
+    padding-top: 2%;
+    position: relative;
+}
+
+main.WB00278501_seminar .leftPart1 {
+    float: left;
+    padding-left: 20px;
+    width: 300px;
+    height: 500px;
+    padding-bottom: 3%;
+}
+
+main.WB00278501_seminar .leftPart1 a {
+    display: inline-block;
+}
+
+main.WB00278501_seminar .turna {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 33px;
+    text-align: center;
+    width: 336px;
+}
+
+main.WB00278501_seminar .turna a {
+    margin-top: 25px;
+    width: 297px;
+    height: 39px;
+    line-height: 39px;
+    border: 1px solid #0294aa;
+    color: #0294aa;
+}
+
+main.WB00278501_seminar .turna a:hover {
+    background: #0294aa;
+    color: #fff;
+}
+
+main.WB00278501_seminar .rightPart1 {
+    float: right;
+    margin-right: 20px;
+    width: 628px;
+    height: 97%;
+    padding-bottom: 3%;
+}
+
+main.WB00278501_seminar .rightPart1 h6 {
+    color: #35afc1;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 5px;
+    line-height: 30px;
+}
+
+main.WB00278501_seminar .rightPart1_left {
+    margin-left: 35px;
+}
+
+main.WB00278501_seminar .rightPart1 p {
+    font-size: 17px;
+    margin-top: 18px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+main.WB00278501_seminar #box_t {
+    font: "微軟正黑體",Arial, Helvetica, sans-serif;
+    width: 620px;
+    height: 180px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+main.WB00278501_seminar #box_t .leftimg {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+main.WB00278501_seminar #box_t .rightP {
+    display: block;
+    position: absolute;
+    top: 95px;
+    left: 160px;
+}
+
+main.WB00278501_seminar #box_t .righttopP {
+    display: block;
+    position: absolute;
+    width: 442px;
+    top: 39px;
+    left: 160px;
+    height: 47px;
+    font-size: 16px;
+}
+
+main.WB00278501_seminar #box_t .P_Blod {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main.WB00278501_seminar .changeDIV h4 {
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    color: #1f9bae;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+main.WB00278501_seminar .changeDIV p {
+    color: #262626;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+main.WB00278501_seminar .changeDIV h5 {
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+main.WB00278501_seminar .changeDIV dl {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+main.WB00278501_seminar .changeDIV dt {
+    font-weight: bold;
+}
+
+main.WB00278501_seminar .changeDIV .last-dl {
+    margin-bottom: 0;
+}
+
+main.WB00278501_seminar .section2 .changeDIV {
+    display: none;
+}
+
+main.WB00278501_seminar .section2 .sec-header {
+    background: url(../images/seminar/section2_h.png) no-repeat;
+}
+
+main.WB00278501_seminar .section2 .sec-header .secIcon-1 {
+    /*margin-top:10px;*/
+    background: url(../images/seminar/section2_icon1.png) 0 center no-repeat;
+}
+
+main.WB00278501_seminar .section3 .changeDIV {
+    display: none;
+}
+
+main.WB00278501_seminar .section3 .sec-header {
+    background: url(../images/seminar/section3_h.png) no-repeat;
+}
+
+main.WB00278501_seminar .section3 .sec-header .secIcon-1 {
+    /*margin-top:10px;*/
+    background: url(../images/seminar/section3_icon1.png) 0 center no-repeat;
+}
+
+main.WB00278501_seminar #contact {
+    margin-top: 100px;
+}

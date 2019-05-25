@@ -1,0 +1,53 @@
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+body {font-family: Arial, "微軟正黑體", "新細明體"; background-color: #f5f5f5;}
+
+#link {width: 100%; min-width: 1000px; height: 95px; text-align: center; background-color: #FFF; z-index: 999; padding: 10px 0 10px;}
+.link {position: fixed; top: 0; }
+#link > ul {width: 995px; padding: 0; margin: 0 auto;}
+#link > ul > li{width: 141px; height: 95px; float: left; border-left: 1px solid #CCC;  text-indent: -9999px;}
+#link .link1 {background: url(../images/link_01.png) no-repeat left top;}
+#link .link2 {background: url(../images/link_02.png) no-repeat right top;}
+#link .link3 {background: url(../images/link_03.png) no-repeat left top;}
+#link .link4 {background: url(../images/link_04.png) no-repeat left top;}
+#link .link5 {background: url(../images/link_05.png) no-repeat left top;}
+#link .link6 {background: url(../images/link_06.png) no-repeat left top;}
+#link .link7 {background: url(../images/link_07.png)  no-repeat left top; border-right: 1px solid #CCC;}
+#link > ul > li > a {height: 95px; display: block;}
+#link > ul > li:hover {background-position: right top;}
+.selected{background-position: right top;}
+#link .subLink { display: none; background-color: #FFF; text-align: center; width: 141px; border: 1px solid #CCC; border-top: none; margin-left: -1px; padding-top: 10px; text-indent: 0px;}
+#link .subLink > li {font-size: 17px; line-height: 40px; width: 141px;}
+#link .subLink > li a {display: block;}
+#link .subLink > li a:hover {background-color: #1db580; color: #FFF;}
+
+h2 {width: 100%; font-size: 36px; line-height: 36px; text-align: center; margin: 40px 0 15px; padding-left: 50px;}
+.content {width: 960px; margin: 0 auto; position: relative; font-size: 18px; line-height: 30px;letter-spacing: 1px;}
+.content ul {list-style: disc outside; margin-left: 30px;}
+ul.solTxt {list-style: none; margin-left: 15px;}
+ul.solTxt li {width: 148px; line-height: 36px; text-align: center; float: left; margin: 0 10px 10px 0; }
+ul.solTxt .long {width: 200px;}
+ul.solTxt li.end {margin-right: 0;}
+ul.solTxt li a {display: block; background: url(../images/solBg.jpg) repeat-x left top; border: 1px solid #ddd; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
+ul.solTxt li a:hover {color: #fff; background: #fdb813; border-color: #fdb813;}
+
+.secGreen {width: 100%; min-width: 960px; color: #fff; background-color: #0bb580; padding: 25px 0 45px;}
+.secGreen h2 {color: #fff; text-align: left; background: url(../images/icon01.png) no-repeat left top;}
+.secGreen h2.sol {background: url(../images/icon02.png) no-repeat left top;}
+.secGreen img {float:right; margin-top: 25px;}
+.secGreen .problem {width: 550px; float:left; margin-right: 10px;}
+
+.secGray {width: 100%; min-width: 960px; background-color: #f5f5f5; padding: 20px 0 45px;}
+.secGray h2 {color: #0bb580; text-align: left; background: url(../images/icon03.png) no-repeat left top;}
+.secGray h2.sol {background: url(../images/icon04.png) no-repeat left top;}
+.secGray img {float:left; margin-top: 25px;}
+.secGray .problem {width: 550px; float:right; margin-left: 10px;}
+
+#section1 {margin-top: 110px;}
+
+#button {width: 458px; margin: 50px auto 100px;}
+#button p {width: 204px; height:54px; float: left; text-indent: -9999px;}
+#button #contactDSC {background: url(../images/contactDSC.png) no-repeat left top;}
+#button #back {background: url(../images/back.png) no-repeat left top; margin-left: 50px;}
+#button #contactDSC:hover, #button #back:hover {background-position: right top;}

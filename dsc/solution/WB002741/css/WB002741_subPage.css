@@ -1,0 +1,830 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main .explo7 {
+  *display: inline;
+  zoom: 1;
+}
+main .exploAll {
+  font-size: 0;
+}
+main .fl {
+  float: left;
+  display: inline;
+}
+main .fr {
+  float: right;
+  display: inline;
+}
+main #navLink,
+main #navLink .subLink {
+  background-color: #f9f9f9;
+}
+main .subBanner {
+  height: 450px;
+  margin-top: 0px;
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+  clear: both;
+  display: block;
+}
+main .subBanner:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+main .subBanner .content {
+  display: inline-block;
+  vertical-align: middle;
+}
+main .subBanner h2 {
+  width: 680px;
+  font-size: 40px;
+  text-align: left;
+}
+main .subBanner p {
+  width: 630px;
+  font-size: 19px;
+  line-height: 30px;
+}
+main .subBanner.lawPage {
+  background: url(../images/lawBanner01.jpg) no-repeat center top;
+}
+main .subBanner.effectPage {
+  background: url(../images/effectBanner01.jpg) no-repeat center top;
+}
+main .subBanner.solutionPage {
+  background: url(../images/solutionBanner01.jpg) no-repeat center top;
+}
+main .subBanner.HRPage {
+  background: url(../images/HRBanner01.jpg) no-repeat center top;
+}
+main .subblock01bg {
+  width: 100%;
+}
+main #subblock01 {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  padding: 50px;
+  font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+main #subblock01 table {
+  font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #F3F3F3;
+}
+main #subblock01 table td {
+  border-bottom: #FFF 1px solid;
+  border-left: #FFF 1px solid;
+  padding: 20px;
+}
+main #subblock01 table td p {
+  font-size: 15px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 2;
+}
+main #subblock01 table .titletopB {
+  font-size: 32px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+  padding: 15px 0 15px 0;
+}
+main #subblock01 table .titletop {
+  font-size: 22px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 15px 0 15px 0;
+}
+main #subblock01 table .title {
+  font-size: 20px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 15px 0 15px 0;
+}
+main #subblock01 table .titleBlack {
+  font-size: 20px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+main #subblock01 .titleNEW {
+  width: 900px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  margin: 0 auto;
+  font-size: 30px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background-color: #333;
+  color: #FFF;
+  border: 1px solid #FFF;
+}
+main .effectblock01bg {
+  width: 100%;
+}
+main #effectblock01 {
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  padding-top: 50px;
+  font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+main .bodergray {
+  border: #b9b9b9 1px solid;
+}
+main .bodergraybottom {
+  border-bottom: #b9b9b9 1px solid;
+}
+main #effectblock01 table {
+  font-size: 17px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+main #effectblock01 table td {
+  border-bottom: #FFF 1px solid;
+  border-right: #fff 1px solid;
+  padding: 5px;
+}
+main #effectblock01 table .titletopB {
+  font-size: 32px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+  padding: 15px 0 15px 0;
+}
+main #effectblock01 table .titletop {
+  font-size: 22px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 15px 0 15px 0;
+}
+main #effectblock01 table .title {
+  font-size: 20px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 15px 0 15px 0;
+}
+main #effectblock01 table p {
+  font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding: 15px 0 15px 0;
+}
+main #effectblock01 table .titleBlack {
+  font-size: 20px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+main #effectrespond {
+  width: 950px;
+  overflow: hidden;
+  margin-top: 80px;
+}
+main #effectrespond .title {
+  font-size: 32px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+  padding: 15px 0 15px 0;
+  background-color: #686868;
+}
+main #effectrespond .box {
+  width: 950px;
+  height: 570px;
+  position: relative;
+  background: url(../images/effect01.png) no-repeat top;
+  font-size: 17px;
+  margin-bottom: 80px;
+}
+main #effectrespond .box .text1 {
+  position: absolute;
+  width: 276px;
+  height: 149px;
+  left: 58px;
+  top: 52px;
+}
+main #effectrespond .box .text2 {
+  position: absolute;
+  width: 301px;
+  height: 198px;
+  left: 605px;
+  top: 34px;
+}
+main #effectrespond .box .text3 {
+  position: absolute;
+  width: 239px;
+  height: 116px;
+  left: 81px;
+  top: 361px;
+}
+main #effectrespond .box .text4 {
+  position: absolute;
+  width: 283px;
+  height: 118px;
+  left: 609px;
+  top: 332px;
+}
+main .effectblock02bg {
+  width: 100%;
+  background: url(../images/effect02_bg.png) no-repeat top center;
+}
+main #effectblock02 {
+  width: 980px;
+  height: 750px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 80px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+}
+main .Solutionblock02bg {
+  width: 100%;
+  background: #fff;
+}
+main #Solutionblock02 {
+  width: 980px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 80px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+}
+main #Solutionblock02b {
+  width: 980px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 80px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+}
+main .Solutionblock03bg {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0px 30px 0px;
+  background: #e8c899;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+main #Solutionblock03 {
+  width: 980px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 50px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  padding-bottom: 30px;
+}
+main #Solutionblock03 .secLi1 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) top left no-repeat;
+  margin: 0 40px 20px 30px;
+  color: #000;
+}
+main #Solutionblock03 .secLi1 a:hover {
+  box-sizing: border-box;
+  background-position: top right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi2 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -150px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi2 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -150px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi3 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -300px no-repeat;
+  margin: 0 40px 20px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi3 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -300px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi4 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -450px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi4 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -450px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi5 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -600px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi5 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -600px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi6 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -750px no-repeat;
+  margin: 0 40px 40px 30px;
+  color: #000;
+}
+main #Solutionblock03 .secLi6 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -750px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi7 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -900px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi7 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -900px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi8 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -1050px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi8 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -1050px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi9 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -1200px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi9 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -1200px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi10 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -1350px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi10 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -1350px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi11 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -1500px no-repeat;
+  margin: 0 40px 40px 30px;
+  color: #000;
+}
+main #Solutionblock03 .secLi11 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -1500px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi12 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -1650px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi12 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -1650px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi13 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -1800px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi13 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -1800px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi14 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -1950px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi14 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -1950px no-repeat;
+  overflow: hidden;
+}
+main #Solutionblock03 .secLi15 a {
+  display: block;
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  font-family: "微軟正黑體", "新細明體", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 110px;
+  background: url(../images/iconbtn.png) 0 -2100px no-repeat;
+  margin: 0 40px 40px 0;
+  color: #000;
+}
+main #Solutionblock03 .secLi15 a:hover {
+  box-sizing: border-box;
+  background: url(../images/iconbtn.png) right -2100px no-repeat;
+  overflow: hidden;
+}
+main .HRblock01bg {
+  width: 100%;
+}
+main #HRblock01 {
+  width: 950px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  padding: 50px 0;
+  font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+main #HRblock01 h2 {
+  margin-top: 50px;
+}
+main .HRblock02bg {
+  width: 100%;
+}
+main #HRblock02 {
+  width: 950px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  padding: 50px 0;
+  font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+main .HRblock03bg {
+  width: 100%;
+}
+main #HRblock03 {
+  width: 950px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  padding: 50px 0;
+  font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+main #HRblock03 .HRblockbox {
+  width: 950px;
+  height: 285px;
+  position: relative;
+  background: url(../images/hr01.png) no-repeat;
+  margin: 30px 0;
+}
+main #HRblock03 .HRblockbox .Himg {
+  width: 233px;
+  height: 233px;
+  top: 29px;
+  position: absolute;
+  left: 55px;
+}
+main #HRblock03 .HRblockbox .Htext_T {
+  width: 556px;
+  height: 151px;
+  top: 60px;
+  position: absolute;
+  left: 308px;
+}
+main #HRblock03 .HRblockbox .Htext_Ta {
+  width: 556px;
+  height: 151px;
+  top: 31px;
+  position: absolute;
+  left: 310px;
+}
+main #HRblock03 .HRblockbox .Htext_Ts {
+  width: 556px;
+  height: 96px;
+  top: 115px;
+  position: absolute;
+  left: 308px;
+}
+main #HRblock03 .HRblockbox .Htext_N {
+  width: 325px;
+  height: 60px;
+  top: 214px;
+  position: absolute;
+  left: 516px;
+  font-size: 24px;
+  color: #995813;
+  text-align: right;
+}
+main .section h2 {
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-size: 36px;
+  text-align: center;
+  color: #58595b;
+}
+main .section h3 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: left;
+}
+main .section h4 {
+  font-size: 21px;
+  margin: 20px 0 7px;
+  text-align: left;
+}
+main .section p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+}
+main .section .figure {
+  margin: 30px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-align: center;
+  color: #58595b;
+}
+main .section .foreword {
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+main .section .foreword_left {
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: left;
+}
+main .conblock {
+  width: 100%;
+  background-color: #e8c899;
+  padding: 50px 0;
+}
+main .conblockG {
+  width: 100%;
+  background-color: #e5e5e5;
+  padding: 50px 0;
+}
+main #conblock {
+  width: 680px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+main #conblock2 {
+  width: 350px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+}
+main .btn1 {
+  width: 310px;
+  height: 70px;
+  background-color: #000;
+  float: left;
+  font-weight: bold;
+}
+main .btn1 a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 70px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+main .btn1 a:hover {
+  border: solid #fff 1px;
+}
+main .btn2 {
+  width: 310px;
+  height: 70px;
+  background-color: #fff;
+  float: right;
+  margin-left: 20px;
+  font-weight: bold;
+}
+main .btn2 a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  line-height: 70px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+main .btn2 a:hover {
+  border: solid #000 1px;
+}

@@ -1,0 +1,10 @@
+html {
+    background-color: #fff;
+}
+body {
+    min-width: 320px;
+}
+.container {
+    margin: 0 auto;
+    max-width: $content-width;
+}

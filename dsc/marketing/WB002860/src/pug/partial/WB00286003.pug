@@ -1,0 +1,21 @@
+extends ../layout.pug
+
+block vars
+    - var description = '自2007年導入Workflow ERP後，安得烈相隔十年決心再次攜手鼎新規劃智能製造整合應用，導入「廠內智能物流」改變傳產體質，聚焦「高效精準的倉儲透明化管理」確保帳料一致、單據即時、庫存管控透明，做為智慧製造轉型起跑點。'
+    - var keywords = '安得烈,ERP,廠內智能物流,智慧製造,帳料一致,倉儲管理'
+    - var title = '拒絕讓資金變成一攤死水！安得烈轉型智慧製造從改善「倉儲管理」開始'
+
+append head
+    link(rel='stylesheet', href='assets/animate.css')
+    link(rel='stylesheet', href=`css/WB00286003.css`)
+    script(src='assets/modernizr-custom.js', defer)
+    script(src='assets/mobile-detect.js', defer)
+    script(src='assets/mobile-detect-modernizr.js', defer)
+    script(src='assets/picturefill.js', defer)
+    script(src='assets/lodash.js', defer)
+    script(src='assets/jquery.sticky.js', defer)
+    script(src='assets/jquery.navScroll.js', defer)
+    script(src=`js/WB00286003.min.js`, defer)
+
+block main
+    include WB00286003.html

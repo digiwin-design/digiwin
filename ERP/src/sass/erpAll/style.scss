@@ -1,0 +1,145 @@
+$btn-hover-color: #8cf2fb;
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+@import '../common/all';
+@import 'components/columns';
+@import 'components/banner';
+@import 'components/hoverBoxs';
+@import 'components/hoverBox';
+@import 'components/map';
+@import 'components/accordion';
+
+main {
+    .btn {
+        transition: background-color .15s ease-in-out;
+        @at-root {
+            html.no-mobile main .btn:hover {
+                background-color: $btn-hover-color;
+            }
+        }
+    }
+    .header {
+        @include headerBg('erpAll/header-bg.jpg', 'erpAll/header-bg-s.jpg');
+        background-size: cover;
+        @media (min-width: $tablet-width + 1) {
+            background-size: auto;
+        }
+        .container {
+            height: image-height('erpAll/header-bg.jpg');
+        }
+        h1 {
+            margin-bottom: 24px;
+        }
+        h2 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 45px;
+            }
+        }
+        p {
+            margin-bottom: 40px;
+            color: #fff;
+            font-size: 20px;
+            line-height: 1.4;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 22px;
+            }
+        }
+        &-btns {
+            display: flex;
+            a {
+                @include btn(137px, 28px, #000, #b4f38a, 5px);
+                @media (min-width: $tablet-width + 1) {
+                    width: 230px;
+                    height: 40px;
+                    font-size: 24px;
+                    line-height: 40px;
+                }
+                & + a {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .section1 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                margin-bottom: 1em;
+                color: #333;
+                font-size: 30px;
+                line-height: 1;
+            }
+        }
+        &-desc {
+            margin-bottom: 1.5em;
+            color: #333;
+            @media (min-width: 960px) {
+                margin-bottom: 3em;
+                text-align: center;
+            }
+            br {
+                display: none;
+                @media (min-width: 960px) {
+                    display: block;
+                }
+            }
+        }
+    }
+    .section2,
+    .section3 {
+        @media (min-width: $tablet-width+1) {
+            padding-bottom: 58px;
+        }
+    }
+    .section4 {
+        padding-bottom: 50px;
+        @media (min-width: $tablet-width + 1) {
+            padding-bottom: 120px;
+        }
+    }
+    .section5 {
+        padding-bottom: 65px;
+        @media (min-width: $content-width+10) {
+            padding-bottom: 120px;
+        }
+    }
+    .section6 {
+        @include bg('erpAll/section6-bg.jpg');
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                margin-bottom: 1em;
+                color: #333;
+                font-size: 30px;
+                line-height: 1;
+            }
+        }
+        &-desc {
+            margin-bottom: 1.5em;
+            color: #333;
+            @media (min-width: $tablet-width + 1) {
+                margin-bottom: 2em;
+                text-align: center;
+            }
+        }
+        &-btn {
+            @include btn(230px, 40px, #000, #fff45c, 5px);
+            margin: 2em auto 0;
+            font-size: 24px;
+        }
+    }
+}

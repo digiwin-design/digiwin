@@ -1,0 +1,210 @@
+main .player {
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    &-carousel {
+        $pointerHeight: 38px;
+        .swiper-container {
+            padding-top: 34px;
+            width: 100%;
+        }
+        .swiper-wrapper {
+            padding-bottom: $pointerHeight;
+        }
+        .swiper-slide {
+            display: flex;
+            text-align: center;
+            font-weight: 700;
+            font-size: 38px;
+            transition: transform .4s;
+            transform: scale(.8);
+            justify-content: center;
+            align-items: center;
+            @media (max-width: $tablet-width) {
+                padding-right: 20px;
+                padding-left: 20px;
+                transform: none;
+                &::after {
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    border-width: 38px 38px 0 38px;
+                    border-style: solid;
+                    border-color: #e46b00 transparent transparent transparent;
+                    content: '';
+                    transform: translateX(-50%);
+                }
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                background-color: rgba(#0d0c12, .5);
+                content: '';
+                transition: background-color .2s;
+                @media (max-width: $tablet-width) {
+                    display: none;
+                }
+                @at-root {
+                    html.no-mobile main .vueSwiper .swiper-slide:hover::before {
+                        background-color: rgba(#0d0c12, .3);
+                    }
+                }
+            }
+            figure {
+                position: relative;
+                @media (min-width: $tablet-width + 1) {
+                    width: 100%;
+                }
+            }
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 84px;
+                background-color: rgba(#b35e18, .65);
+                color: #fff;
+                font-size: 22px;
+                line-height: 1.3;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .swiper-slide-active,
+        .swiper-slide-next + .swiper-slide {
+            position: relative;
+            cursor: pointer;
+        }
+        .swiper-slide-active {
+            transform: scale(.8) translateX(10px);
+            transform-origin: 100% 50% 0;
+            @media (max-width: $tablet-width) {
+                transform: none;
+            }
+        }
+        .swiper-slide-next + .swiper-slide {
+            transform: scale(.8) translateX(-10px);
+            transform-origin: 0 50% 0;
+            @media (max-width: $tablet-width) {
+                transform: none;
+            }
+        }
+        .swiper-slide-next {
+            position: relative;
+            z-index: 1;
+            box-shadow: 0px 0 8px rgba(#000, .4);
+            opacity: 1;
+            transform: scale(1);
+            @media (max-width: $tablet-width) {
+                box-shadow: none;
+            }
+            &::before {
+                display: none;
+            }
+            &::after {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-width: 38px 38px 0 38px;
+                border-style: solid;
+                border-color: #e46b00 transparent transparent transparent;
+                content: '';
+                transform: translateX(-50%);
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            background-color: #ee4706;
+            background-image: none;
+            transform: translateY(-#{$pointerHeight / 2});
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-button-prev {
+            left: 0;
+            &::before {
+                width: 0;
+                height: 0;
+                border-width: 10px 20px 10px 0;
+                border-style: solid;
+                border-color: transparent #fff transparent transparent;
+                content: '';
+            }
+        }
+        .swiper-button-next {
+            right: 0;
+            &::before {
+                width: 0;
+                height: 0;
+                border-width: 10px 0 10px 20px;
+                border-style: solid;
+                border-color: transparent transparent transparent #fff;
+                content: '';
+            }
+        }
+        .swiper-pagination {
+            top: 0;
+            bottom: auto;
+            display: flex;
+            line-height: 14px;
+            justify-content: center;
+        }
+        .swiper-pagination-bullet {
+            margin: 0 3px !important;
+            width: 14px;
+            height: 14px;
+            border-radius: 0;
+            background-color: #ee4706;
+        }
+    }
+    &-video {
+        margin-top: 20px;
+        &-title {
+            padding-right: 20px;
+            padding-left: 20px;
+            color: #464646;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 34px;
+            }
+        }
+        &-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 */
+            width: 100%;
+            height: 0;
+            background-color: #000;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            opacity: .8;
+            transform: translate(-50%, -50%) scale(.5);
+        }
+    }
+}

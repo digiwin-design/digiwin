@@ -1,0 +1,30 @@
+{
+  "name": "WB002838",
+  "authors": [
+    "Kenge <pgkusn@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "jquery": "^3.3.1",
+    "jquery-navScroll": "jquery-nav-scroll#^1.4.1",
+    "lodash": "^4.17.10",
+    "jquery.sticky": "^1.0.0",
+    "wow": "wow.js#^1.1.2",
+    "mobile-detect": "^1.4.3",
+    "picturefill": "^3.0.3",
+    "swiper": "^4.4.1",
+    "handlebars": "^4.0.12",
+    "vue": "^2.5.17"
+  }
+}

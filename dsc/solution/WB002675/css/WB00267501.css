@@ -1,0 +1,770 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+
+main.WB00267501 body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+main.WB00267501 button, main.WB00267501 input, main.WB00267501 select, main.WB00267501 textarea {
+    font-size: 16px;
+    font-family: "微軟正黑體" , "新細明體", Arial, Helvetica, sans-serif;
+}
+
+main.WB00267501 p {
+    color: #3e3a39;
+}
+
+main.WB00267501 h2 {
+    font-size: 30px;
+}
+
+main.WB00267501 .outBanner {
+    position: relative;
+}
+
+/* banner */
+main.WB00267501 .banner {
+    width: 1920px;
+    height: 470px;
+}
+main.WB00267501 .banner-slide1 {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/banner2a.jpg) no-repeat center center;
+}
+main.WB00267501 .banner-slide2 {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/banner1a.jpg) no-repeat center center;
+}
+main.WB00267501 .banner-pagination {
+    width: 90px;
+    height: 10px;
+    position: absolute;
+    left: 25%;
+    bottom: 10px;
+    z-index: 1;
+}
+main.WB00267501 .banner-pagination-bullet {
+    width: 35px;
+    height: 10px;
+    margin-right: 8px;
+    text-align: center;
+    float: left;
+    background: #636363;
+    cursor: pointer;
+}
+main.WB00267501 .banner-pagination-bullet-active {
+    background-color: #fc9208;
+    border: #f3f3f3 1px solid;
+}
+
+main.WB00267501 .contain {
+    width: 998px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 16px;
+    font-family: "微軟正黑體" , "新細明體", Arial, Helvetica, sans-serif;
+}
+
+main.WB00267501 .inBanner {
+    height: 470px;
+    position: absolute;
+    top: -470px;
+    right: 0px;
+    z-index: 1;
+}
+
+main.WB00267501 .inBanner ul {
+    width: 210px;
+    height: 470px;
+    float: left;
+}
+
+main.WB00267501 .inBanner li {
+    clear: left;
+    /*height: 125px;
+	width: 260px;*/
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding-top: 41px;
+    /*padding-top: 0px\9;*/
+    padding-left: 35px;
+    padding-bottom: 44px;
+    padding-bottom: 41px\9;
+    position: relative;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/background.png);
+    /*background: rgba(0,0,0,.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);*/
+}
+
+main.WB00267501 * + html .inBanner li {
+    padding-bottom: 43px;
+    padding-top: 18px;
+}
+
+main.WB00267501 * + html .inBanner li.liPink {
+    padding-top: 2px;
+    padding-bottom: 32px;
+}
+
+main.WB00267501 * + html .inBanner li.inBan {
+    padding-top: 5px;
+    padding-bottom: 18px;
+}
+
+main.WB00267501 .inBanner li.liPink {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+main.WB00267501 .inBanner li.inBan {
+    border-bottom: none;
+}
+
+main.WB00267501 .inBanner li h3 {
+    width: 160px;
+    font-size: 15px;
+    height: 36px;
+    line-height: 19px;
+}
+
+main.WB00267501 .inBanner li.liYell h3 {
+    height: 28px;
+    line-height: 25px;
+}
+
+main.WB00267501 .inBanner li p {
+    color: #fff;
+    font-size: 13px;
+    width: 160px;
+    line-height: 1.5;
+}
+
+main.WB00267501 .inBanner span {
+    font-size: 25px;
+    position: absolute;
+    top: 40%;
+    left: 8px;
+}
+
+main.WB00267501 .inBanner .hidDiv a {
+    display: block;
+}
+
+main.WB00267501 .inBanner .hidDiv {
+    position: absolute;
+    display: none;
+    top: 0px;
+    right: 210px;
+}
+
+main.WB00267501 .inBanner .hidDiv2 {
+    top: -158px;
+}
+
+main.WB00267501 .inBanner .hidDiv3 {
+    top: -310px;
+}
+
+main.WB00267501 .inBanner .hidDiv2 {
+    top: -159px\9;
+}
+
+main.WB00267501 .inBanner .hidDiv3 {
+    top: -309px\9;
+}
+
+main.WB00267501 * + html .inBanner .hidDiv3 {
+    top: -310px;
+}
+
+main.WB00267501 * + html .inBanner .hidDiv2 {
+    top: -156px;
+}
+
+@-moz-document url-prefix() {
+    main.WB00267501 .inBanner .hidDiv2 {
+        top: -156px;
+    }
+    main.WB00267501 .inBanner .hidDiv3 {
+        top: -309px;
+    }
+}
+
+main.WB00267501 .inBanner .hidDiv img {
+    z-index: 2;
+    display: block;
+    width: 720px;
+    max-width: none; /* override */
+    height: 470px;
+}
+
+main.WB00267501 .inBanner li:hover {
+    color: #000;
+}
+
+main.WB00267501 .inBanner li:hover p {
+    color: #000;
+}
+
+main.WB00267501 .inBanner li:hover span {
+    display: none;
+}
+
+main.WB00267501 .inBanner li.liPink:hover {
+    background: #fad5d2;
+}
+
+main.WB00267501 .inBanner li:hover .hidDiv {
+    display: block;
+}
+
+main.WB00267501 .inBanner li.liYell:hover {
+    background: #f9e4bd;
+}
+
+main.WB00267501 .inBanner .liYell .hidDiv img {
+    z-index: 2;
+}
+
+main.WB00267501 .inBanner .inBan {
+    padding-top: 21px;
+    padding-bottom: 27px;
+    padding-bottom: 26px\9;
+    *padding-bottom: 24px;
+}
+
+@media all and (-ms-high-contrast: none) {
+    main.WB00267501 *::-ms-backdrop, main.WB00267501 .inBanner .inBan {
+        padding-bottom: 23px;
+    }
+}
+
+@media all and (-ms-high-contrast: none) {
+    main.WB00267501 *::-ms-backdrop, main.WB00267501 .inBanner .hidDiv3 {
+        top: -312px;
+    }
+}
+
+main.WB00267501 * + html .inBanner .inBan {
+    padding-bottom: 41px;
+    padding-top: 8px;
+}
+
+@-moz-document url-prefix() {
+    main.WB00267501 .inBanner li.liPink {
+        padding-bottom: 29px;
+    }
+    main.WB00267501 .inBanner .inBan {
+        padding-bottom: 26px;
+    }
+}
+
+main.WB00267501 .inBanner li h3 {
+    height: 55px;
+    line-height: 25px;
+}
+
+main.WB00267501 .inBanner li.inBan:hover {
+    background: #fff098;
+}
+
+main.WB00267501 .inBanner .inBan .hidDiv img {
+    z-index: 2;
+}
+
+main.WB00267501 .inBanner li.inBan:hover {
+    background: #f45784;
+}
+
+main.WB00267501 .outNav {
+    background: #fff;
+    width: 100%;
+}
+
+main.WB00267501 .myNav {
+    width: 1001px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: "微軟正黑體" , "新細明體", Arial, Helvetica, sans-serif;
+}
+
+main.WB00267501 .myNav ul {
+    width: 1001px;
+    height: 80px;
+}
+
+main.WB00267501 .navLi {
+    float: left;
+    position: relative;
+}
+
+main.WB00267501 .secmar .navLi {
+    width: calc(100% / 6);
+}
+
+main.WB00267501 .navLi .navLia {
+    display: block;
+    width: 124px;
+    height: 0;
+    border-left: 1px solid #ccc;
+    text-align: center;
+    padding-top: 80px;
+    color: #999;
+    font-weight: bold;
+}
+
+main.WB00267501 .myNav .navLi1 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_01.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi2 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_02.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi3 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_03.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi4 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_04.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi5 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_05.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi6 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_06.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi7 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_07.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi8 .navLia {
+    border-right: 1px solid #ccc;
+    color: #fbbf61;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/Link_08.png) no-repeat left center;
+}
+
+main.WB00267501 .myNav .navLi4 .navLia {
+    border: 0;
+}
+
+main.WB00267501 .myNav .navLi3 .navLia {
+    border-right: 1px solid #ccc;
+}
+
+main.WB00267501 .myNav .navLi8 .navLia:hover {
+    color: #ff9000;
+}
+
+main.WB00267501 .myNav .navLi .navLia:hover {
+    background-position: right center;
+    color: #eb1a4a;
+}
+
+main.WB00267501 .myNav .navLi ol {
+    display: none;
+    /*height: 90px;*/
+    width: 124px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    top: 75px;
+    z-index: 5;
+}
+
+main.WB00267501 .myNav .navLi4 ol {
+    width: 124px;
+    left: -1px;
+}
+
+main.WB00267501 .myNav .navLi ol li {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+}
+
+main.WB00267501 .myNav .navLi ol li.nav_li1 {
+    margin-top: 10px;
+}
+
+main.WB00267501 .myNav .navLi5:hover ol {
+    display: block;
+}
+
+main.WB00267501 .myNav .navLi3:hover ol {
+    display: block;
+}
+
+main.WB00267501 .myNav .navLi4:hover ol {
+    display: block;
+}
+
+main.WB00267501 .myNav .navLi6:hover ol {
+    display: block;
+}
+
+main.WB00267501 .myNav .navLi ol .ollast {
+    border-bottom: 1px solid #ccc;
+    margin-top: 0;
+}
+
+main.WB00267501 .myNav .navLi ol li a {
+    color: #000;
+}
+
+main.WB00267501 .myNav .navLi ol li:hover {
+    background: #eb1a4a;
+}
+
+main.WB00267501 .myNav .navLi ol li:hover a {
+    color: #FFF;
+}
+
+main.WB00267501 .hasFixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    /*margin-left: -488px;*/
+    z-index: 50;
+}
+
+main.WB00267501 .outNav .myNav .navLi2 .currentNav {
+    background-position: right center;
+    color: #eb1a4a;
+}
+
+main.WB00267501 .outNav .myNav .navLi3 .currentNav {
+    background-position: right center;
+    color: #eb1a4a;
+}
+
+main.WB00267501 .outNav .myNav .navLi4 .currentNav {
+    background-position: right center;
+    color: #eb1a4a;
+}
+
+main.WB00267501 .outNav .myNav .navLi5 .currentNav {
+    background-position: right center;
+    color: #eb1a4a;
+}
+
+main.WB00267501 .outNav .myNav .navLi7 .currentNav {
+    background-position: right center;
+    color: #ff9000;
+}
+
+main.WB00267501 .outNav .myNav .navLi6 .currentNav {
+    background-position: right center;
+    color: #eb1a4a;
+}
+
+main.WB00267501 .outNav .myNav .navLi8 .currentNav {
+    background-position: right center;
+    color: #ff9000;
+}
+
+main.WB00267501 .secBg {
+    /*width: 100%;*/
+    height: 100%;
+    overflow: hidden;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/section1.jpg) no-repeat center center;
+}
+
+main.WB00267501 .section {
+    text-align: center;
+    width: 960px;
+    height: 555px;
+    margin: 0 auto;   
+    font-family: "微軟正黑體" , "新細明體", Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+main.WB00267501 .section h2 {
+    font-size: 40px;
+    padding-top: 80px;
+    font-weight: normal;
+}
+
+main.WB00267501 .section p {
+    text-align: left;
+    margin-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+main.WB00267501 .section ul {
+    margin-top: 50px;
+}
+
+main.WB00267501 .section .navLia {
+    border: 0;
+    color: #000;
+    height: 10px;
+    padding-top: 130px;
+}
+
+main.WB00267501 .secLi1 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_01.png) no-repeat center;
+    font-size: 18px;
+}
+
+main.WB00267501 .secLi2 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_02.png) no-repeat center;
+    font-size: 18px;
+}
+
+main.WB00267501 .secLi3 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_03.png) no-repeat center;
+    font-size: 18px;
+}
+
+main.WB00267501 .secLi4 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_04.png) no-repeat center;
+    font-size: 18px;
+}
+
+main.WB00267501 .secLi5 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_05.png) no-repeat center;
+    font-size: 18px;
+    margin-right: 0;
+}
+
+main.WB00267501 .secLi6 .navLia {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_06.png) no-repeat center;
+    font-size: 18px;
+    margin-right: 0;
+}
+
+main.WB00267501 .secLi1 .navLia:hover {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_01h.png) no-repeat center;
+}
+
+main.WB00267501 .secLi2 .navLia:hover {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_02h.png) no-repeat center;
+}
+
+main.WB00267501 .secLi3 .navLia:hover {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_03h.png) no-repeat center;
+}
+
+main.WB00267501 .secLi4 .navLia:hover {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_04h.png) no-repeat center;
+}
+
+main.WB00267501 .secLi5 .navLia:hover {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_05h.png) no-repeat center;
+}
+
+main.WB00267501 .secLi6 .navLia:hover {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/icon_06h.png) no-repeat center;
+}
+
+main.WB00267501 .secBg3 {
+    width: 100%;
+    height: 470px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/banner_bg2.jpg) no-repeat center top;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+main.WB00267501 .secBg1 {
+    background-color: #ffe892;
+}
+
+main.WB00267501 .secBg1 .section {
+    width: 865px;
+    height: auto;
+    padding-bottom: 58px;
+    text-align: center;
+}
+
+main.WB00267501 .secBg1 h2 {
+    margin-bottom: 70px;
+}
+
+main.WB00267501 .secBg1 h2 span {
+    color: #ec1949;
+}
+
+main.WB00267501 .secBg1 p {
+    width: 275px;
+    float: left;
+    margin-top: 0px;
+    line-height: 2.2;
+    text-align: justify;
+}
+
+main.WB00267501 .secBg1 img {
+    float: right;
+    /*vertical-align: top;*/
+}
+
+main.WB00267501 .section .knowMore {
+    display: inline-block;
+    width: 200px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #ec1949;
+    margin-top: 50px;
+    color: #ec1949;
+    font-family: "微軟正黑體" , "新細明體", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+main.WB00267501 .section .knowMore:hover {
+    color: #fff;
+    background: #e93030;
+}
+
+main.WB00267501 .secBg4 {
+    /*width: 100%;*/
+    height: 140px;
+    overflow: hidden;
+    padding-top: 350px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/event_ibg.jpg) no-repeat center center;
+}
+
+main.WB00267501 .otherSec {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/otherSec.jpg) no-repeat center;
+    font-size: 18px;
+    font-family: "微軟正黑體" , "新細明體", Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+main.WB00267501 .otherSec a {
+    display: block;
+    margin-right: 32px;
+    margin-bottom: 45px;
+    color: #000;
+}
+
+main.WB00267501 .otherSec .noRight a {
+    margin-right: 0px;
+}
+
+main.WB00267501 .otherSec a span {
+    display: block;
+}
+
+main.WB00267501 .otherSec a:hover img {
+    width: 138px;
+    height: 98px;
+    border: 1px solid #ec1949;
+}
+
+main.WB00267501 .otherSec a:hover {
+    color: #ec1949;
+}
+
+main.WB00267501 .secBg2 {
+    background: #20c2d9;
+    padding-bottom: 100px;
+}
+
+main.WB00267501 .guest {
+    margin-top: 50px;
+    width: 850px;
+    height: 355px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/shadow_03.png) repeat-y;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+main.WB00267501 .shadow {
+    width: 790px;
+    margin: 0 auto;
+    height: 36px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/guestdiv.png) no-repeat center;
+}
+
+main.WB00267501 .guest ul {
+    width: 3460px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+main.WB00267501 .guest ul li {
+    width: 850px;
+    height: 250px;
+    float: left;
+}
+
+main.WB00267501 .guest ul img {
+    float: left;
+    margin-left: 40px;
+}
+
+main.WB00267501 .guest ul div {
+    float: left;
+    width: 440px;
+    height: 150px;
+    margin-left: 15px;
+}
+
+main.WB00267501 .guest ul h3 {
+    color: #fff;
+    font-size: 22px;
+    text-align: left;
+}
+
+main.WB00267501 .guest ul p {
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    padding: 0px;
+    color: #000;
+}
+
+main.WB00267501 .guest ul .knowMore {
+    width: 160px;
+    background: #c5f6fd;
+    color: #04707f;
+    font-size: 16px;
+    border: 0;
+    float: right;
+    margin-top: 30px;
+}
+
+main.WB00267501 .guest ol {
+    width: 90px;
+    display: inline-block;
+    margin-top: 15px;
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    bottom: 30px;
+}
+
+main.WB00267501 .guest ol li {
+    float: left;
+    width: 18px;
+    height: 18px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002675/images/gulist_03.png) no-repeat 0px center;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+main.WB00267501 .currentOl {
+    background-position: -29px center !important;
+}
+
+main.WB00267501 .guest .guestUl .knowMore:hover {
+    color: #c5f6fd;
+    border: 1px solid #c5f6fd;
+    background: #3599b1;
+}

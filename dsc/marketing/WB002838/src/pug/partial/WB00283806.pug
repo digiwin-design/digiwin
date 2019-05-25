@@ -1,0 +1,22 @@
+extends ../layout.pug
+
+block vars
+    - var description = '面對勞檢人員，擔心文件準備不齊全而被罰款？未依規定加給延長工時工資、未依規定記載勞工出勤紀錄等等等，企業最常違規法令前5名你中了幾項？不想違規？解決方案報你知！'
+    - var keywords = '鼎新,人資,HR,勞檢,出勤,HRM'
+    - var title = '鼎新電腦-勞動檢查持續進行，免被開罰秘笈大公開！'
+
+append head
+    link(rel='stylesheet', href='assets/animate.css')
+    link(rel='stylesheet', href=`css/WB00283806.css`)
+    script(src='assets/modernizr-custom.js', defer)
+    script(src='assets/mobile-detect.js', defer)
+    script(src='assets/mobile-detect-modernizr.js', defer)
+    script(src='assets/picturefill.js', defer)
+    script(src='assets/lodash.js', defer)
+    script(src='assets/jquery.sticky.js', defer)
+    script(src='assets/jquery.navScroll.js', defer)
+    script(src=`js/common.min.js?v=${Math.random()}`, defer)
+    script(src=`js/WB00283806.min.js`, defer)
+
+block main
+    include WB00283806.html

@@ -1,0 +1,28 @@
+doctype html
+html(lang='zh-Hant-TW')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        link(rel='stylesheet', href='css/reset.css')
+        script(src='assets/jquery.min.js', defer)
+        script(src='https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js', defer)
+    body
+        header
+
+        // 以下為後台內容
+
+        link(rel='stylesheet', href='https://www.digiwin.com/tw/dsc/css/Eform/form-rwd.css')
+        link(rel='stylesheet', href='https://www.digiwin.com/tw/dsc/css/Eform/xcConfirm.css')
+        link(rel='stylesheet', href='https://www.digiwin.com/tw/dsc/assets/submenu/submenu.css')
+        script(src='https://www.digiwin.com/tw/dsc/js/Eform/form.js', defer)
+        script(src='https://www.digiwin.com/tw/dsc/js/Eform/xcConfirm.js', defer)
+        script(src='https://www.digiwin.com/tw/dsc/assets/submenu/submenu.min.js')
+
+        block includes
+
+        main
+            block content
+
+        include partial/contact.html
+        include ../../../../template/form_component

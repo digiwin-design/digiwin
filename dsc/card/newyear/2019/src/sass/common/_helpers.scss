@@ -1,0 +1,114 @@
+/* #region function */
+@function rem($px) {
+    $result: 0;
+    @if ($px < 12) {
+        $result: $px + px;
+    }
+    @else {
+        $result: ($px / 16) + rem;
+    }
+    @return $result;
+}
+
+@function lineHeight($px, $fz: 16) {
+    @return $px / $fz;
+}
+
+// Converting Photoshop Letter Spacing to CSS
+@function getLetterSpacing($num) {
+    @return ($num / 1000) + em;
+}
+/* #endregion function */
+
+/* #region mixin */
+@mixin bg($img) {
+    width: image-width($img);
+    height: image-height($img);
+    background-image: image-url($img);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* #region mixin */
+@mixin imgBg($img, $is-inline: false, $maxWidth: false) {
+    height: image-height($img);
+
+    @if ($is-inline) {
+        background-image: inline-image($img);
+    }
+    @else {
+        background-image: image-url($img);
+    }
+
+    @if ($maxWidth == true) {
+        max-width: image-width($img);
+    }
+    @else {
+        width: image-width($img);
+    }
+
+    @content;
+}
+
+@mixin btn($width, $height, $color, $bgColor, $radius: 5px) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    background-color: $bgColor;
+    color: $color;
+    text-align: center;
+    line-height: $height;
+    @content
+}
+
+// 增加點擊範圍
+// $width: 原寬度(false: 不增加)
+// $height: 原高度(false: 不增加)
+// $widthScope: 可點擊寬度
+// $heightScope: 可點擊高度
+@mixin clickableArea($width, $height, $widthScope: 44px, $heightScope: 44px) {
+    position: absolute;
+    content: '';
+
+    // 寬度
+    @if ($width != false) {
+        right: -($widthScope - $width) / 2;
+        left: -($widthScope - $width) / 2;
+    }
+    @else {
+        right: 0;
+        left: 0;
+    }
+
+    // 高度
+    @if ($height != false) {
+        top: -($heightScope - $height) / 2;
+        bottom: -($heightScope - $height) / 2;
+    }
+    @else {
+        top: 0;
+        bottom: 0;
+    }
+}
+/* #endregion mixin */
+
+/* #region extend */
+%clearfix {
+    &:before {
+        display: table;
+        content: '';
+    }
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+%hide-text {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+/* #endregion extend */

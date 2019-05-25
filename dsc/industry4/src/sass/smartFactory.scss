@@ -1,0 +1,909 @@
+@import 'common/helpers';
+@import 'common/family';
+@import 'common/reset';
+@import 'common/all';
+
+main {
+    $min-width: 1000px;
+    min-width: $min-width;
+    /* ========================================================================== */
+    /* case */
+    /* ========================================================================== */
+    .sectionNote {
+        margin: 0 0 25px;
+    }
+
+    /*mainVisual*/
+
+    #mainVisual {
+        @include youtubeIframe();
+    }
+
+    @keyframes arrowDown {
+        0% {
+            top: 33px;
+        }
+
+        50% {
+            top: 53px;
+        }
+
+        100% {
+            top: 33px;
+        }
+    }
+
+
+    @keyframes arrowDown2 {
+        0% {
+            top: 25px;
+        }
+
+        50% {
+            top: 45px;
+        }
+
+        100% {
+            top: 25px;
+        }
+    }
+
+
+    /*sixProcess*/
+
+    #sixProcess {
+        &.section {
+            padding: 70px 0 0;
+            height: 900px;
+            background: url(../images/smartFactory/bg_pc_sixProcess.jpg) no-repeat center top #eae9ea;
+        }
+        h3,
+        .sectionNote {
+            color: #fff;
+        }
+        .sixProcessBtn {
+            position: absolute;
+            cursor: pointer;
+            &.active:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                content: '';
+                animation: ripple 3s infinite;
+            }
+        }
+        .sixProcessBtn01 {
+            top: 194px;
+            left: 90px;
+        }
+        .sixProcessBtn02 {
+            top: 161px;
+            left: 517px;
+        }
+        .sixProcessBtn03 {
+            top: 196px;
+            left: 715px;
+        }
+        .sixProcessBtn04 {
+            top: 333px;
+            left: 433px;
+        }
+        .sixProcessBtn05 {
+            top: 378px;
+            left: 225px;
+        }
+        .sixProcessBtn06 {
+            top: 566px;
+            left: 95px;
+        }
+        .sixProcessBtn07 {
+            top: 490px;
+            left: 808px;
+        }
+        .sixProcessEkb01 {
+            position: absolute;
+            top: 95px;
+            left: 325px;
+        }
+        .sixProcessEkb02 {
+            position: absolute;
+            top: 330px;
+            left: 85px;
+        }
+        .sixProcessEkb03 {
+            position: absolute;
+            top: 260px;
+            left: 590px;
+        }
+        .sixProcessBtn.active {
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                content: '';
+                animation: ripple 2s infinite;
+                animation-timing-function: ease-out;
+            }
+            &:after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                content: '';
+                animation: ripple 2s infinite;
+                animation-timing-function: ease-out;
+                animation-delay: .5s;
+            }
+        }
+        .scrollDown {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            margin-left: -135px;
+            width: 270px;
+            text-align: center;
+            /*color: #fff;*/
+            font-size: 17px;
+            cursor: pointer;
+            &:before {
+                position: absolute;
+                top: 33px;
+                left: 50%;
+                margin-left: -15px;
+                border-top: 15px solid rgba(125, 125, 125, .9);
+                border-right: 15px solid transparent;
+                border-left: 15px solid transparent;
+                content: '';
+                animation: arrowDown 1.5s infinite;
+                animation-timing-function: ease-out;
+            }
+            &:after {
+                position: absolute;
+                top: 23px;
+                left: 50%;
+                margin-left: -15px;
+                border-top: 15px solid rgba(125, 125, 125, .5);
+                border-right: 15px solid transparent;
+                border-left: 15px solid transparent;
+                content: '';
+                animation: arrowDown2 1.5s infinite;
+                animation-timing-function: ease-out;
+            }
+        }
+    }
+
+    @keyframes ripple {
+        0% {
+            width: 0;
+            height: 0;
+            background-color: rgba(0, 200, 248, 1);
+        }
+
+        100% {
+            margin: -25px 0 0 -25px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 200, 248, 0);
+        }
+    }
+
+
+    @keyframes ripple {
+        0% {
+            width: 0;
+            height: 0;
+            background-color: rgba(0, 172, 162, 1);
+        }
+
+        100% {
+            margin: -50px 0 0 -50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 172, 162, 0);
+        }
+    }
+
+
+    @keyframes arrowDown {
+        0% {
+            top: 33px;
+        }
+
+        50% {
+            top: 53px;
+        }
+
+        100% {
+            top: 33px;
+        }
+    }
+
+
+    @keyframes arrowDown2 {
+        0% {
+            top: 25px;
+        }
+
+        50% {
+            top: 45px;
+        }
+
+        100% {
+            top: 25px;
+        }
+    }
+
+
+    /*sixProcessTxtGroup*/
+
+    #sixProcessTxtGroup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        .sixProcessList {
+            position: relative;
+            overflow-x: hidden;
+            width: 500px;
+        }
+        .sixProcessListInner {
+            position: relative;
+            z-index: 9999;
+            margin-top: 30px;
+            width: 3500px;
+        }
+        .sixProcessTxtOuter {
+            float: left;
+            width: 500px;
+        }
+        .sixProcessTxt {
+            position: relative;
+            margin: 0 auto;
+            padding: 20px;
+            width: 300px;
+            border: 7px solid #55c3dd;
+            border-radius: 7px;
+            background-color: #fff;
+            h4 {
+                position: relative;
+                margin-bottom: 10px;
+                border-radius: 7px 7px 0 0;
+                color: #55c3dd;
+                font-size: 21px;
+            }
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 99999;
+            margin-top: -46px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 20px;
+            display: none;
+        }
+        .next {
+            right: 20px;
+        }
+        .processName {
+            width: 40px;
+        }
+        .prev .processName {
+            text-align: right;
+        }
+        .next .processName {
+            text-align: left;
+        }
+        .close {
+            position: absolute;
+            top: -30px;
+            left: 100%;
+            z-index: 9999;
+            margin-left: -20px;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #fff;
+            border-radius: 100%;
+            background-color: #000;
+            color: #fff;
+            font-size: 21px;
+            line-height: 35px;
+            cursor: pointer;
+        }
+    }
+
+    /*wrapper(threePoint+benefit bg)*/
+
+    #wrapper {
+        background: url(../images/smartFactory/bg_wrapper.png) no-repeat center top;
+    }
+
+    /*threePoint*/
+
+    #threePoint {
+        &.section {
+            padding-bottom: 0;
+            color: #fff;
+        }
+        .imgStyle {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .threePointContent {
+            position: relative;
+            float: left;
+            margin: 0 40px 0 45px;
+        }
+        .threePointIcon {
+            position: absolute;
+            cursor: pointer;
+            .imgStyle {
+                position: relative;
+                z-index: 3;
+            }
+        }
+        .threePointIcon00 {
+            top: 50%;
+            left: 50%;
+            margin: -40px 0 0 -30px;
+        }
+        .threePointIcon01 {
+            top: 10px;
+            left: 50%;
+            margin-left: -80px;
+        }
+        .threePointIcon02 {
+            top: 160px;
+            left: 30px;
+        }
+        .threePointIcon03 {
+            top: 160px;
+            left: 235px;
+        }
+        strong {
+            color: #ff0;
+        }
+        .threePointIcon.active {
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+                margin: -40px 0 0 -40px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                content: '';
+                animation: ripple2 3s infinite;
+                animation-timing-function: ease-out;
+                animation-delay: 0;
+            }
+            &:after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+                margin: -40px 0 0 -40px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                content: '';
+                animation: ripple2 3s infinite;
+                animation-timing-function: ease-out;
+                animation-delay: .5s;
+            }
+        }
+    }
+
+    /*
+      #threePoint .threePointTxt {
+          float: right;
+          width: 445px;
+          margin-top: 105px;
+          padding-right: 35px;
+      }
+      */
+
+    @keyframes ripple2 {
+        0% {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        100% {
+            margin: -100px 0 0 -100px;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+    }
+
+
+    /*threePointTxtGroup*/
+
+    #threePointTxtGroup {
+        float: left;
+        margin-top: 70px;
+        width: 445px;
+        height: 175px;
+        .threePointList {
+            position: relative;
+            overflow: hidden;
+            width: 445px;
+        }
+        .threePointListInner {
+            position: relative;
+            z-index: 99999;
+            width: 2000px;
+        }
+        .threePointTxtOuter {
+            float: left;
+            width: 445px;
+        }
+        .threePointTxt h5 {
+            padding-left: 25px;
+            background: url(../images/smartFactory/icon_threePointAll_color.png) no-repeat left 0;
+            color: #ff0;
+            text-align: left;
+            font-size: 19px;
+            line-height: 35px;
+        }
+        .threePointTxtOuter01 h5 {
+            &.firProcess {
+                background-position: left 5px;
+            }
+            &.secProcess {
+                background-position: left -33px;
+            }
+        }
+        .threePointTxtOuter02 h5 {
+            &.firProcess {
+                background-position: left -73px;
+            }
+            &.secProcess {
+                background-position: left -115px;
+            }
+        }
+        .threePointTxtOuter03 h5 {
+            &.firProcess {
+                background-position: left -155px;
+            }
+            &.secProcess {
+                background-position: left -193px;
+            }
+        }
+        .threePointTxtOuter00 p {
+            line-height: 27px;
+        }
+        .threePointTxtOuter01 p,
+        .threePointTxtOuter02 p,
+        .threePointTxtOuter03 p {
+            padding: 0 0 0 25px;
+        }
+    }
+
+    /*#threePointTxtGroup .threePointTxt {
+          position: relative;
+          width: 445px;
+          margin: 0 auto;
+      }*/
+
+    /*benefit*/
+
+    #benefit {
+        &.section {
+            margin-top: 25px;
+            padding-top: 0;
+        }
+        .benefitTxt {
+            margin-bottom: 20px;
+        }
+        .subTitle {
+            margin: 15px 0;
+            padding-left: 115px;
+            div {
+                position: relative;
+                float: left;
+                padding: 10px 0;
+                width: 50%;
+                text-align: center;
+                font-size: 21px;
+            }
+            .right {
+                color: #ff9000;
+                font-weight: bold;
+            }
+            div:before {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -40px;
+                width: 80px;
+                height: 1px;
+                background-color: #888;
+                content: '';
+            }
+            .right:before {
+                background-color: #ff9000;
+            }
+        }
+        .benefitTxt {
+            h5 {
+                position: relative;
+                float: left;
+                padding: 15px 0 15px 60px;
+                width: 115px;
+                height: 85px;
+                border-radius: 0 20px;
+                background: url(../images/smartFactory/icon_benefitAll.png) no-repeat left top;
+                color: #fff;
+                font-size: 21px;
+                &:before {
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -9px;
+                    border-top: 10px solid #55c3dd;
+                    border-right: 9px solid transparent;
+                    border-left: 9px solid transparent;
+                    content: '';
+                }
+            }
+            h6 {
+                text-align: center;
+                font-size: 19px;
+            }
+            ul {
+                position: relative;
+                float: right;
+                width: 885px;
+                border-bottom: 1px dashed #bbb;
+                &:before {
+                    position: absolute;
+                    right: 0;
+                    bottom: -1px;
+                    width: 3px;
+                    height: 3px;
+                    background-color: #bbb;
+                    content: '';
+                }
+            }
+            li {
+                position: relative;
+                float: left;
+                padding: 15px 55px;
+                width: 50%;
+                height: 84px;
+            }
+            .left:before {
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                margin-top: -2px;
+                width: 5px;
+                height: 5px;
+                background-color: #bbb;
+                content: '';
+            }
+        }
+        .benefitTxt01 h5 {
+            background-color: #55c3dd;
+            background-position: -10px -10px;
+        }
+        .benefitTxt02 h5 {
+            background-color: #16aaca;
+            background-position: -10px -110px;
+        }
+        .benefitTxt03 h5 {
+            background-color: #0095c0;
+            background-position: -10px -210px;
+        }
+        .benefitTxt04 h5 {
+            background-color: #008ea3;
+            background-position: -10px -305px;
+        }
+        .benefitTxt05 h5 {
+            background-color: #18a8b9;
+            background-position: -10px -405px;
+        }
+        .benefitTxt06 h5 {
+            background-color: #3bc1cd;
+            background-position: -10px -505px;
+        }
+        .benefitTxt02 h5:before {
+            border-top-color: #16aaca;
+        }
+        .benefitTxt03 h5:before {
+            border-top-color: #0095c0;
+        }
+        .benefitTxt04 h5:before {
+            border-top-color: #008ea3;
+        }
+        .benefitTxt05 h5:before {
+            border-top-color: #18a8b9;
+        }
+        .benefitTxt06 h5:before {
+            border: none;
+        }
+    }
+
+    /*advantage*/
+
+    #advantage {
+        background: url(../images/smartFactory/bg_pc_advantage.jpg) no-repeat center center;
+        color: #fff;
+        .advantageG01 {
+            float: left;
+            width: 45%;
+        }
+        .advantageG02 {
+            float: right;
+            width: 45%;
+        }
+        .imgStyle {
+            float: left;
+            margin-top: 5px;
+            width: 60px;
+        }
+        .advantageTxt {
+            margin-bottom: 25px;
+            padding-left: 75px;
+        }
+        h4 {
+            margin-bottom: 5px;
+            color: #ff0;
+            text-align: left;
+            font-size: 19px;
+        }
+    }
+
+    /*videoCase*/
+
+    #videoCase {
+        .videoContainer {
+            margin-top: 25px;
+            p {
+                margin-top: 10px;
+                padding: 0 15px;
+                text-align: center;
+            }
+        }
+        .videoTxt {
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            width: 235px;
+            &.end {
+                margin-right: 0;
+            }
+            a {
+                &:link {
+                    color: #333;
+                }
+                &:visited {
+                    color: #555;
+                }
+                &:hover,
+                &:active {
+                    color: #ff9000;
+                }
+            }
+        }
+        .imgStyle {
+            width: 100%;
+        }
+        h4 {
+            position: relative;
+            margin: 40px 0 35px;
+            text-align: center;
+            font-size: 24px;
+            &:before {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin: 10px 0 0 -45px;
+                width: 90px;
+                height: 2px;
+                background-color: #888;
+                content: '';
+            }
+        }
+    }
+
+    /*solution*/
+
+    #solution {
+        padding: 50px 10px 40px;
+        background: url(../images/smartFactory/bg_solution.jpg) no-repeat center top #01bbb2;
+        color: #fff;
+        .sectionNote {
+            text-align: justify;
+        }
+        h4 {
+            color: #ff0;
+            text-align: justify;
+            font-size: 21px;
+        }
+        a {
+            color: #ff0;
+        }
+        .block01,
+        .block02 {
+            position: relative;
+        }
+        .block01 {
+            .paragraphNote {
+                position: relative;
+                float: left;
+                margin: 70px 0 0 25px;
+                padding: 20px 35px;
+                width: 450px;
+                border: 3px solid #fff;
+                border-radius: 15px;
+            }
+            .imgStyle {
+                float: left;
+                margin: 5px 0 35px 55px;
+                max-width: 430px;
+                width: 100%;
+            }
+            .magnifier {
+                position: absolute;
+                right: 55px;
+                bottom: 45px;
+            }
+        }
+        .block02 {
+            .paragraphNote {
+                position: relative;
+                float: left;
+                margin-top: 40px;
+                padding: 20px 35px;
+                width: 370px;
+                border: 3px solid #fff;
+                border-radius: 15px;
+            }
+            .imgStyle {
+                float: left;
+                margin: 5px 40px 35px 25px;
+                max-width: 520px;
+                width: 100%;
+            }
+            .magnifier {
+                position: absolute;
+                bottom: 40px;
+                left: 485px;
+            }
+        }
+        .block01 .paragraphNote:before,
+        .block02 .paragraphNote:before {
+            position: absolute;
+            top: -18px;
+            left: -25px;
+            width: 49px;
+            height: 37px;
+            background: url(../images/quota.jpg) no-repeat center top;
+            content: '';
+        }
+        .block01 .paragraphNote:after,
+        .block02 .paragraphNote:after {
+            position: absolute;
+            right: -25px;
+            bottom: -18px;
+            width: 49px;
+            height: 37px;
+            background: url(../images/quota.jpg) no-repeat center -37px;
+            content: '';
+        }
+    }
+    .case {
+        padding-top: 50px;
+        padding-bottom: 70px;
+        background-color: #e3e3e3;
+        background-image: image-url('smartFactory/case-bg-s.png');
+        background-position: 0 80px;
+        background-repeat: no-repeat;
+        h3 {
+            margin-bottom: 30px;
+            @media (min-width: $min-width) {
+                margin-bottom: 0;
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        .content {
+            @media (max-width: $min-width - 1) {
+                width: auto;
+            }
+        }
+        &-container {
+            display: flex;
+            padding-right: 10px;
+            padding-left: 10px;
+            flex-wrap: wrap;
+            @media (min-width: $min-width) {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+        &-content {
+            margin-bottom: 26px;
+            width: 100%;
+            @media (min-width: $min-width) {
+                margin-right: 18px;
+                margin-bottom: 0;
+                width: 582px;
+                map {
+                    display: none;
+                }
+            }
+        }
+        &-text {
+            padding: 15px 20px;
+            background-color: rgba(#fff, .7);
+            font-size: 17px;
+            line-height: 27px;
+            strong {
+                color: #028fa3;
+                font-weight: normal;
+            }
+            a {
+                color: #ff6c00;
+                text-decoration: underline;
+            }
+        }
+        &-videos {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: flex-end;
+            @media (min-width: $min-width) {
+                width: 383px;
+            }
+        }
+        &-video {
+            @include youtubeIframe();
+            &:first-child {
+                margin-bottom: 25px;
+            }
+        }
+        &-pagination {
+            position: absolute;
+            bottom: 20px !important;
+            display: flex;
+            justify-content: center;
+            &-bullet {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #888;
+                cursor: pointer;
+                &:first-of-type {
+                    margin-right: 7px;
+                }
+                &-active {
+                    background-color: #008ea3;
+                }
+            }
+        }
+    }
+}

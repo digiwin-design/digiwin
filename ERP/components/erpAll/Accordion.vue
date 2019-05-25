@@ -1,0 +1,106 @@
+<template>
+    <div ref="accordion" class="accordion">
+        <div
+            v-for="(item,idx) in accordion"
+            v-bind:key="item.title"
+            class="accordion-col js-accordion-col"
+            onclick
+        >
+            <h2 v-on:click="slideToggle">
+                <i>{{item.title}}</i>
+            </h2>
+            <div v-bind:style="{display:displayHandler(idx)}">
+                <div class="accordion-content">
+                    <p>{{item.detail}}</p>
+                    <a v-bind:href="item.link.url" v-bind:target="item.link.target">
+                        了解
+                        <br>更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+module.exports = {
+    props: ['accordion'],
+    data: function () {
+        return {
+            isMobile: false,
+            timeline: new TimelineMax(),
+        }
+    },
+    watch: {
+        isMobile: function (value) {
+            if (value) {
+                this.timeline.clear();
+                $('.js-accordion-col').removeAttr('style');
+            }
+        }
+    },
+    methods: {
+        mediaSensor: _.throttle(function () {
+            let mm = window.matchMedia('(min-width: 1210px)');
+            mm.addListener(this.resizeWidth);
+            this.resizeWidth(mm);
+        }, 100),
+        resizeWidth: function (pMatchMedia) {
+            this.isMobile = pMatchMedia.matches ? false : true;
+        },
+        slideToggle: function (evt) {
+            if (this.isMobile) {
+                let target = evt.target.tagName === 'I' ? evt.target.parentNode : evt.target;
+                $(target).toggleClass('active').next().slideToggle();
+            }
+        },
+        displayHandler: function (idx) {
+            return this.isMobile && idx !== 0 ? 'none' : 'block';
+        },
+        initGUI: function () {
+            let _this = this;
+            let gui = new dat.GUI();
+            let controls = {
+                restart: function () {
+                    _this.timeline.restart();
+                    window.addEventListener('scroll', _this.scrollHandler);
+                },
+                pause: function () {
+                    _this.timeline.pause(0);
+                    window.addEventListener('scroll', _this.scrollHandler);
+                }
+            };
+            gui.add(controls, 'restart');
+            gui.add(controls, 'pause');
+        },
+        initAn: function () {
+            this.timeline.pause();
+            this.timeline.staggerFrom('.js-accordion-col', .5, {
+                y: '-=200',
+                opacity: 0
+            }, -0.5);
+        },
+        scrollHandler: _.throttle(function () {
+            let el = this.$refs.accordion;
+            let offset = el.offsetHeight / 2;
+            getScrollPos(el, offset, function () {
+                this.timeline.play();
+                window.removeEventListener('scroll', this.scrollHandler);
+            }.bind(this));
+        }, 100),
+    },
+    mounted: function () {
+        window.addEventListener('resize', this.mediaSensor);
+        this.mediaSensor();
+        if (!this.isMobile) {
+            window.addEventListener('scroll', this.scrollHandler);
+            // this.initGUI();
+            this.initAn();
+        }
+    },
+    beforeDestroy: function () {
+        window.removeEventListener('resize', this.mediaSensor);
+        window.removeEventListener('scroll', this.scrollHandler);
+    }
+}
+</script>

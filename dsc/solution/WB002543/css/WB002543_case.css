@@ -1,0 +1,163 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main.WB00254301_case body {
+    font-family: Arial, "微軟正黑體", "新細明體";
+    background-color: #f5f5f5;
+}
+
+main.WB00254301_case #banner {
+    width: 100%;
+    min-width: 1000px;
+    height: 380px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/WB00254301_1/bannerBg2.jpg) no-repeat top center;
+}
+
+main.WB00254301_case #banner #blockCon {
+    width: 1000px;
+    height: 329px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+main.WB00254301_case #banner .block {
+    position: absolute;
+    top: 0;
+    left: 1000px;
+}
+
+main.WB00254301_case #banner .block img {
+    float: left;
+    margin-top: 25px;
+}
+
+main.WB00254301_case #banner .block p {
+    width: 610px;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding: 0 20px 0 0;
+    float: right;
+    margin-top: 85px;
+}
+
+main.WB00254301_case #banner .block span {
+    color: #0bb580;
+    font-weight: bold;
+    text-align: right;
+    display: block;
+}
+
+main.WB00254301_case #banner .block a:hover span {
+    color: #ff6c00;
+}
+
+main.WB00254301_case #banner ul {
+    width: 150px;
+    margin: 15px auto 0;
+}
+
+main.WB00254301_case #banner li {
+    width: 40px;
+    height: 13px;
+    text-indent: -9999px;
+    background-color: #777;
+    float: left;
+    margin-left: 10px;
+}
+
+main.WB00254301_case #banner #block1 {
+    left: 0;
+}
+
+main.WB00254301_case #banner #num {
+    cursor: pointer;
+}
+
+main.WB00254301_case #banner .now {
+    left: 0;
+}
+
+main.WB00254301_case #banner .tabNow {
+    background-color: #0bb580;
+}
+
+main.WB00254301_case #wrapper {
+    width: 960px;
+    padding: 40px 0;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+main.WB00254301_case #wrapper li {
+    width: 295px;
+    margin: 0 37px 25px 0;
+    float: left;
+    transform: translate(0, 0);
+    transition: all 0.2s ease-out;
+}
+
+main.WB00254301_case #wrapper li:hover {
+    transform: translate(0, -20px);
+}
+
+main.WB00254301_case #wrapper li.end {
+    margin-right: 0;
+}
+
+main.WB00254301_case #wrapper h4 {
+    padding-left: 10px;
+}
+
+main.WB00254301_case #wrapper h4 a {
+    color: #0bb580;
+}
+
+main.WB00254301_case #wrapper h4 a:hover {
+    color: #fdb813;
+}
+
+main.WB00254301_case #wrapper p {
+    padding: 0 10px;
+}
+
+main.WB00254301_case #wrapper span a {
+    color: #ff6c00;
+    font-weight: bold;
+}
+
+main.WB00254301_case #wrapper span a:hover {
+    color: #e63404;
+}
+
+main.WB00254301_case #button {
+    width: 458px;
+    margin: 50px auto 100px;
+}
+
+main.WB00254301_case #button p {
+    width: 204px;
+    height: 54px;
+    float: left;
+    text-indent: -9999px;
+}
+
+main.WB00254301_case #button #contactDSC {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/WB00254301_1/contactDSC.png) no-repeat left top;
+}
+
+main.WB00254301_case #button #back {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/WB00254301_1/back.png) no-repeat left top;
+    margin-left: 50px;
+}
+
+main.WB00254301_case #button #contactDSC:hover, main.WB00254301_case #button #back:hover {
+    background-position: right top;
+}

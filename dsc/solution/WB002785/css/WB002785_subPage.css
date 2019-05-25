@@ -1,0 +1,920 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+
+main #navLink,
+main #navLink .subLink {
+    background-color: #f9f9f9;
+}
+
+main .subPage {
+    margin-top: 25px;
+}
+
+main .subPage h3 {
+    margin: 0 0 15px;
+    font-size: 30px;
+    text-align: left;
+}
+
+
+main .subPage .textLeft {
+    text-align: left;
+}
+
+main .subPage .textCenter {
+    text-align: center;
+}
+
+main .otherLink {
+    display: inline-block;
+    padding: 5px 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+main #otherLink.section {
+    padding-top: 0;
+}
+
+main #otherLink .content {
+    border-bottom: 1px solid #bbb;
+}
+
+main #otherLink i {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 10px;
+    font-size: 17px;
+}
+
+main #otherLink a {
+    font-size: 17px;
+}
+
+main #otherLink a:hover, main #otherLink a:hover i {
+    color: #ffb400;
+}
+
+main .subPage .quotaOrange,
+main .subPage .quotaYellow {
+    position: relative;
+    margin: 50px auto;
+    padding: 25px 45px;
+    border-radius: 7px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+main .subPage .quotaOrange:before,
+main .subPage .quotaYellow:before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    width: 49px;
+    height: 49px;
+}
+
+main .subPage .quotaOrange:after,
+main .subPage .quotaYellow:after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    right: 20px;
+    width: 49px;
+    height: 49px;
+}
+
+main .subPage .quotaYellow {
+    border: 3px solid #fff200;
+}
+
+main .subPage .quotaOrange:before {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center 0;
+}
+
+main .subPage .quotaOrange:after {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -49px;
+}
+
+main .subPage .quotaYellow:before {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -98px;
+}
+
+main .subPage .quotaYellow:after {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -147px;
+}
+
+main .subBanner {
+    height: 350px;
+    margin-top: 0px;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+main .subBanner:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+main .subBanner .content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main .subBanner h2 {
+    width: 680px;
+    font-size: 40px;
+    text-align: left;
+}
+
+main .subBanner p {
+    width: 630px;
+    font-size: 19px;
+    line-height: 30px;
+}
+
+main .subBanner.lawPage {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/otherMedical/lawBanner.jpg) no-repeat center top;
+}
+
+main .caseBanner {
+    height: 750px;
+    margin-top: 0px;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+main .caseBanner:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+main .caseBanner .content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main .caseBanner h3 {
+    margin-top: 50px;
+    width: 1000px;
+    font-size: 36px;
+    text-align: center;
+}
+
+main .caseBanner.casePage {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgImg5.jpg) no-repeat center top;
+}
+
+main .case02bg {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgImg3.jpg) no-repeat center center fixed;
+}
+
+main #BOX_s {
+    width: 950px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-bottom: #CCC 1px solid;
+}
+
+main #BOX_s .titleA2 {
+    margin: 0px;
+    width: 130px;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 10px;
+    border-right: #05b3b7 solid 3px;
+    background: #fff;
+}
+
+main #BOX_s .titleA3 {
+    margin: 0px;
+    width: 130px;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    padding: 35px 10px;
+    border-right: #05b3b7 solid 3px;
+    background: #fff;
+}
+
+main #BOX_s .titleA1 {
+    margin: 0px;
+    width: 130px;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-right: #05b3b7 solid 3px;
+    background: #fff;
+}
+
+main #BOX_s .titleB {
+    margin: 0px;
+    width: 700px;
+    display: block;
+    float: left;
+    padding: 20px 15px;
+    font-size: 16px;
+}
+
+main #BOX_s .more {
+    border-radius: 50px;
+    width: 50px;
+    display: block;
+    float: left;
+    font-size: 10px;
+    background-color: #05b3b7;
+    line-height: 50px;
+    margin-top: 15px;
+    color: #FFF;
+    text-align: center;
+}
+
+main #BOX_s .more a {
+    color: #FFF;
+}
+
+main #BOX_s .more a:hover {
+    display: block;
+    background-color: #000;
+    border-radius: 50px;
+}
+
+main .verify01bg {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgImg3.jpg);
+}
+
+main .verify02bg {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgImg4.jpg) no-repeat center center fixed;
+}
+
+main .verify03bg {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgImg6.jpg) no-repeat center center fixed;
+}
+
+main .titlelogo {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/h3TitleIcon.png) left 10px no-repeat;
+    padding-left: 40px;
+    line-height: 50px;
+}
+
+main .titlelogo_W {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/h3TitleIcon.png) left -40px no-repeat;
+    padding-left: 40px;
+    line-height: 50px;
+}
+
+main .content {
+    width: 1000px;
+    position: relative;
+}
+
+main .Description {
+    width: 980px;
+    margin: 0 auto;
+    background: #FFF;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+main .Description h5 {
+    width: 980px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #3db2b6;
+    color: #FFF;
+}
+
+main #verify01 {
+    overflow: hidden;
+}
+
+main #verify02 {
+    overflow: hidden;
+}
+
+main #verify02 p {
+    padding-left: 100px;
+    font-size: 22px;
+    line-height: 40px;
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+}
+
+main .tickfront {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/tick.png) left top no-repeat;
+    padding-left: 50px;
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+    display: block;
+    margin-left: 150px;
+
+}
+
+main #lawProcess {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bgImg3.jpg) no-repeat center center fixed;
+}
+
+main #lawProcess h4 {
+    margin: 10px 0 0;
+    font-size: 18px;
+    line-height: 60px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/otherMedical/titleicon.png) no-repeat top left;
+    text-align: left;
+    padding-left: 70px;
+    color: #ec9f0a;
+}
+
+main #lawProcess p {
+    margin-top: 80px;
+}
+
+main #lawProcess p a:link {
+    margin-top: 80px;
+}
+
+main #lawProcess p a:hover {
+    margin-top: 80px;
+    color: #45b9bc;
+}
+
+main #IPOnews .content {
+    width: 830px;
+}
+
+main #IPOnews h2 {
+    font-size: 40px;
+    margin: 30px 0 15px;
+}
+
+main #IPOnews h3 {
+    padding-left: 40px;
+    margin-left: -40px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/h3TitleIcon.png) no-repeat left 0;
+}
+
+main #IPOnews .quotaOrange {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+main #newsPDF {
+    margin-top: 30px;
+}
+
+main #newsPDF iframe {
+    border-bottom: 1px solid #2a2a2a;
+}
+
+main #newsPDF .imgNote {
+    margin: 30px 0 0;
+}
+
+main #newsManage .quotaYellow,
+main #newsStrategy .quotaOrange {
+    width: 810px;
+}
+
+main #newsManage span.dataSource {
+    display: block;
+}
+
+main #newsManage .imgStyle {
+    display: block;
+    border-radius: 7px;
+    margin: 15px auto;
+}
+
+main #newsStrategy h4 {
+    padding: 0 15px;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+main #newsStrategy .circle {
+    width: 110px;
+    height: 110px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/news/newsIcon01.png) no-repeat left top #4fcc6a;
+}
+
+main #newsStrategy li:nth-of-type(1) .circle {
+    background-position: 0 top;
+}
+
+main #newsStrategy li:nth-of-type(2) .circle {
+    background-position: -110px top;
+}
+
+main #newsStrategy li:nth-of-type(3) .circle {
+    background-position: -220px top;
+}
+
+main #newsStrategy li:nth-of-type(4) .circle {
+    background-position: -330px top;
+}
+
+main #newsStrategy li:nth-of-type(5) .circle {
+    background-position: -440px top;
+}
+
+main #otherLink.newsPage ul {
+    width: 940px;
+    margin: 10px 0 0;
+}
+
+main #otherLink.newsPage li:nth-of-type(odd) {
+    width: 65%;
+}
+
+main #otherLink.newsPage li:nth-of-type(even) {
+    width: 35%;
+}
+
+main #solutionIssue {
+    position: relative;
+    padding: 0;
+    margin: 125px 0 0;
+}
+
+main #solutionIssue #bgImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center 0;
+}
+
+main #solutionIssue #bgImg.bgBD {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center 0;
+}
+
+main #solutionIssue #bgImg.bgBL {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center -350px;
+}
+
+main #solutionIssue #bgImg.bgR {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBg.jpg) no-repeat center -700px;
+}
+
+main #solutionIssue .content {
+    overflow: hidden;
+}
+
+main #solutionIssue .tabList {
+    text-align: center;
+}
+
+main #solutionIssue .tabList ul {
+    display: inline-block;
+    margin: 0 0 7px;
+    font-size: 19px;
+}
+
+main #solutionIssue .tabList li {
+    position: relative;
+    padding: 2px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+main #solutionIssue .tabList li:last-child {
+    margin-right: 0;
+}
+
+main #solutionIssue .tabList li:hover,
+main #solutionIssue .tabList li.tabNow {
+    background-color: #ff8d00;
+}
+
+main #solutionIssue .tabList li.tabNow:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -12px;
+    border-top: 10px solid #ff8d00;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+main #solContent {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 8000px;
+}
+
+main #solContent .solContent {
+    width: 1000px;
+    height: 350px;
+}
+
+main #solContent .solContent h4 {
+    margin-top: 45px;
+    font-size: 30px;
+    text-align: left;
+}
+
+main #solContent .solContent ul {
+    width: 720px;
+    margin-left: 30px;
+    list-style: disc outside;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+main #solContent .solContent {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/solution/solutionBgImg.png) no-repeat right top;
+}
+
+main #solContent .solContent:nth-of-type(2) {
+    background-position: right -350px;
+}
+
+main #solContent .solContent:nth-of-type(3) {
+    background-position: right -700px;
+}
+
+main #solContent .solContent:nth-of-type(4) {
+    background-position: right -1050px;
+}
+
+main #solContent .solContent:nth-of-type(5) {
+    background-position: right -1400px;
+}
+
+main #solContent .solContent:nth-of-type(6) {
+    background-position: right -1750px;
+}
+
+main #solContent .solContent:nth-of-type(7) {
+    background-position: right -2100px;
+}
+
+main #solContent .solContent:nth-of-type(8) {
+    background-position: right -2450px;
+}
+
+main #solutionManage.subPage {
+    margin: 0;
+}
+
+main .picsPage:nth-of-type(even) {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/searchbgImg.png) no-repeat center center fixed;
+}
+
+main html, main body {
+    height: 100%;
+}
+
+main .MBtn {
+    display: block;
+    width: 500px;
+    line-height: 60px;
+    margin: 20px auto;
+    font-size: 24px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #0aa1a3;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+main .MBtn a {
+    display: block;
+    color: #0aa1a3;
+}
+
+main .MBtn a:hover {
+    display: block;
+    width: 500px;
+    line-height: 60px;
+    margin: 0px auto;
+    font-size: 24px;
+    text-align: center;
+    background-color: #0aa1a3;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+main #picsTop {
+
+	height: 700px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+main #picsTop:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+main #picsTop .content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main #picsTop.subPage h2 {
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+
+main #picsTop.subPage p {
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+main #picsTop .circle {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/research/researchIcon01.png) no-repeat left top #30c2c4;
+}
+
+main #picsTop .circle:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 145%;
+    margin-top: -10px;
+    border-left: 20px solid #777777;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    content: "";
+}
+
+main #picsTop .circle:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -12px;
+    border-top: 20px solid #30c2c4;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+main #picsTop li:nth-of-type(4) .circle:before {
+    display: none;
+}
+
+main #picsTop li h4 {
+    width: 65%;
+    margin: 20px auto 0;
+    padding: 3px 0;
+    border-radius: 7px;
+}
+
+main #picsTop li:hover .circle,
+main #picsTop li:hover h4 {
+    background-color: #ffb400;
+    cursor: pointer;
+}
+
+main #picsTop li:hover .circle:after {
+    border-top: 20px solid #ffb400;
+}
+
+main #picsTop li:nth-of-type(1) .circle {
+    background-position: 0 top;
+}
+
+main #picsTop li:nth-of-type(2) .circle {
+    background-position: -125px top;
+}
+
+main #picsTop li:nth-of-type(3) .circle {
+    background-position: -250px top;
+}
+
+main #picsTop li:nth-of-type(4) .circle {
+    background-position: -375px top;
+}
+
+main .picsDetail .content {
+    overflow: hidden;
+}
+
+main .picsContent {
+    position: relative;
+    width: 2000px;
+}
+
+main .picsProblem, main .picsSolition {
+    width: 1000px;
+    float: left;
+}
+
+main .rightList {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 99;
+    margin: -100px 0 0;
+    font-size: 18px;
+    font-family: Arial, "微軟正黑體";
+    text-align: right;
+}
+
+main .rightLink {
+    line-height: 50px;
+}
+
+main .rightLink a:hover, main .rightLink.selected a {
+    color: #ff8d00;
+}
+
+main .picsProblem h3,
+main .picsSolition h3 {
+    position: relative;
+    height: 150px;
+    padding-left: 180px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/research/picsTitle.png) no-repeat left top;
+    font-size: 21px;
+    line-height: 27px;
+    margin-bottom: 50px;
+}
+
+main #Block02 .picsProblem h3,
+main #Block02 .picsSolition h3 {
+    padding-left: 250px;
+    background-position: left -155px;
+}
+
+main #Block03 .picsProblem h3,
+main #Block03 .picsSolition h3 {
+    background-position: left -310px;
+}
+
+main #Block04 .picsProblem h3,
+main #Block04 .picsSolition h3 {
+    background-position: left -465px;
+}
+
+main .picsSolition h3 {
+    font-size: 30px;
+}
+
+main #Block02 .picsSolition h3,
+main #Block04 .picsSolition h3,
+main #Block01 .picsSolition h3 {
+    font-size: 21px;
+}
+
+main .picsProblem span,
+main .picsSolition span {
+    position: absolute;
+    bottom: -15px;
+    left: 261px;
+    width: 730px;
+    height: 53px;
+}
+
+main .picsSolition span {
+    bottom: -20px;
+}
+
+main #Block01 .picsProblem span {
+    bottom: -20px;
+}
+
+main .picsDetail {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+main .picsPage:nth-of-type(odd).subPage .quotaOrange:before {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -196px;
+}
+
+main .picsPage:nth-of-type(odd).subPage .quotaOrange:after {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/quota.png) no-repeat center -245px;
+}
+
+main .picsPage .quota {
+    width: 720px;
+    padding: 25px 0 25px 15px;
+    margin: 0 auto 50px;
+    font-size: 19px;
+    border: 1px solid #ff8d00;
+}
+
+main .picsPage .quota h4 {
+    margin: 0;
+    padding-left: 15px;
+    color: #ff8d00;
+    font-size: 21px;
+    text-align: right;
+}
+
+main .picsPage .quota ul {
+    width: 550px;
+    margin: 0 0 0 25px;
+    list-style: disc outside;
+}
+
+main .picsPage .quota li {
+    width: 45%;
+    margin: 0 0 0 15px;
+    line-height: 30px;
+}
+
+main #Block01.picsPage .quota h4 {
+    margin: 10px 0 0;
+}
+
+main #Block01.picsPage .quota ul {
+    width: 530px;
+}
+
+main #Block02.picsPage .quota h4 {
+    font-size: 21px;
+}
+
+main #Block02.picsPage .quota ul {
+    width: 550px;
+    list-style: disc outside;
+}
+
+main #Block02.picsPage .quota li:nth-of-type(odd) {
+    width: 60%;
+    margin: 0 0 0 10px;
+}
+
+main #Block02.picsPage .quota li:nth-of-type(even) {
+    width: 35%;
+    margin: 0 0 0 10px;
+}
+
+main #Block03.picsPage .quota li:nth-of-type(1),
+main #Block04.picsPage .quota li:nth-of-type(1) {
+    width: 90%;
+}
+
+main .picsPage .btnGroup {
+    width: 335px;
+    margin: 0 auto;
+}
+
+main .picsPage .btn {
+    width: 165px;
+    line-height: 45px;
+    background-color: #0bb580;
+    color: #ffffff;
+    font-size: 21px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main .picsPage .btn:hover {
+    background-color: #ff8d00;
+}
+
+main .picsPage .btn.now {
+    background-color: #ffb400;
+}
+
+main .picsPage .btn.now:hover {
+    background-color: #ffb400;
+}
+
+main .picsProblem .quotaOrange {
+    width: 630px;
+    margin-top: 0;
+    border: 2px solid #ff8d00;
+    font-size: 21px;
+}
+
+main #picsCourse.subPage {
+    padding-top: 20px;
+}

@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block vars
+    - var description = '訂單多樣少量，需要頻繁更換生產線，何時能交貨？經常遇到客戶急單、抽插單頻繁怎麼辦？客戶驗廠，品質履歷怎麼追溯？庫存管理不精準，帳戶不清楚，上千上萬零件盤點耗時?讓工廠管理即時監控生產資訊，第一步就做對！'
+    - var keywords = 'MES,工廠管理,製程溯源,在製品管制,報工,品質控管,設備整合,設備稼動'
+    - var title = '鼎新電腦-製造業現場面臨生產管理三不盲點！訂單進度追蹤不確定、不知道、不清楚怎麼辦？'
+
+append head
+    link(rel='stylesheet', href='assets/animate.css')
+    link(rel='stylesheet', href='assets/swiper.css')
+    link(rel='stylesheet', href=`css/WB00283807.css`)
+    script(src='assets/modernizr-custom.js', defer)
+    script(src='assets/mobile-detect.js', defer)
+    script(src='assets/mobile-detect-modernizr.js', defer)
+    script(src='assets/picturefill.js', defer)
+    script(src='assets/lodash.js', defer)
+    script(src='assets/jquery.sticky.js', defer)
+    script(src='assets/jquery.navScroll.js', defer)
+    script(src='assets/jquery-ui-1.12.1.custom/jquery-ui.min.js', defer)
+    script(src='assets/swiper.js', defer)
+    script(src='assets/polyfill.min.js', defer)
+    script(src='assets/fetch.umd.js', defer)
+    script(src='assets/vue.min.js')
+    script(src='https://unpkg.com/http-vue-loader', defer)
+    script(src=`js/common.min.js`, defer)
+    script(src=`js/WB00283807.min.js`, defer)
+
+block main
+    include WB00283807.html

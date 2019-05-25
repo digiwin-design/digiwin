@@ -1,0 +1,79 @@
+doctype html
+html(lang='zh-Hant-TW')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+        //- 共用
+        link(rel='stylesheet', href='https://www.digiwin.com/tw/static/css/public.css')
+        link(rel='stylesheet', href='https://www.digiwin.com/tw/static/css/style.css')
+        script(src='https://www.digiwin.com/tw/static/js/jquery-1.11.3.min.js')
+
+        //- 共用(自定義)
+        script(src='https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&flags=gated')
+        script(src='/tw/dsc/assets/fetch-polyfill.js')
+        script(src='/tw/dsc/assets/modernizr-custom.js', defer)
+        script(src='/tw/dsc/assets/mobile-detect.js')
+        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer)
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js')
+        script(src='https://unpkg.com/vue-router/dist/vue-router.js', defer)
+        script(src='https://unpkg.com/vuex', defer)
+        script(src='https://unpkg.com/http-vue-loader', defer)
+        script(src='/tw/dsc/js/common.js')
+
+        //- submenu
+        style.
+            .header-box {
+                height: auto;
+            }
+            .page-submenu {
+                position: fixed;
+                z-index: 28;
+                width: 100%;
+            }
+            main {
+                padding-top: 96px !important;
+            }
+    body
+        //- submenu
+        .header-box
+            header
+
+        // 以下為後台上稿內容
+        //- form
+        link(rel='stylesheet', href='/tw/dsc/css/Eform/form-rwd.css')
+        script(src='/tw/dsc/js/Eform/form.js', defer)
+        link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
+        script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
+
+        //- submenu
+        link(rel='stylesheet', href='/tw/dsc/assets/submenu-spa/submenu.css')
+        script(src='/tw/dsc/assets/submenu-spa/submenu.min.js')
+
+        //- preload
+        link(rel="preload", href="images/index/header-bg.jpg", as="image")
+        link(rel="preload", href="images/law/header-bg.jpg", as="image")
+        link(rel='preload', href='images/seminar/header-bg.jpg', as="image")
+        link(rel="preload", href="images/solution/header-bg.jpg", as="image")
+
+        //- plugin
+        script(src="assets/jquery.preload.min.js", defer)
+        script(src='assets/jquery-ui.min.js', defer)
+        script(src='assets/lodash.js', defer)
+        script(src='assets/countUp.min.js', defer)
+        link(rel="stylesheet", href="assets/nprogress.css")
+        script(src='assets/nprogress.js', defer)
+        script(src='https://unpkg.com/axios/dist/axios.min.js', defer)
+        
+        link(rel='stylesheet', href='/tw/dsc/css/reset_dsc.css')
+        link(rel='stylesheet', href='css/seminar/seminar.css')
+        link(rel='stylesheet', href='css/style.css')
+        script(src='js/common.min.js', defer)
+        script(src='js/script.min.js', defer)
+        
+        main
+            router-view
+            
+        include contact_v2.html
+        include ../../../../../template/form_component

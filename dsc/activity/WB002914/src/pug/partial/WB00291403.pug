@@ -1,0 +1,20 @@
+extends ../layout.pug
+
+block vars
+    - var description = 'AI．空間．體驗論壇 從消費體驗到再創需求'
+    - var keywords = 'AI．空間．體驗論壇 從消費體驗到再創需求'
+    - var title = 'AI．空間．體驗論壇 從消費體驗到再創需求 - 鼎新電腦'
+
+append head
+    link(rel='stylesheet', href='assets/swiper.css')
+    link(rel='stylesheet', href=`css/WB00291403.css?v=${Math.random()}`)
+    
+    script(src='assets/jquery.sticky.js', defer)
+    script(src='assets/swiper.js', defer)
+    script(src='https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js', defer)
+    script(src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js", defer)
+    script(src=`js/common.min.js?v=${Math.random()}`, defer)
+    script(src=`js/WB00291403.min.js?v=${Math.random()}`, defer)
+
+block main
+    include WB00291403.html

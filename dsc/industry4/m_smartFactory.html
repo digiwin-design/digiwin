@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js" defer></script>
+  </head>
+  <body>
+    <header></header>
+    <!-- 以下為後台內容-->
+    <link rel="stylesheet" href="/tw/dsc/css/Eform/form-rwd.css">
+    <script src="/tw/dsc/js/Eform/form.js" defer></script>
+    <link rel="stylesheet" href="/tw/dsc/css/Eform/xcConfirm.css">
+    <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="assets/jquery-ui.min.js" defer></script>
+    <script src="assets/jquery.ui.touch-punch.min.js" defer></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="assets/swiper.min.js" defer></script>
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+    <script src="assets/jquery.fancybox.pack.js" defer></script>
+    <script src="assets/jquery.fancybox-thumbs.js" defer></script>
+    <link rel="stylesheet" href="css/m_smartFactory.css">
+    <script src="js/m_smartFactory.js" defer></script>
+    <main><script>
+    var WHAT = navigator.userAgent;
+    if (!WHAT.match(/(iPhone|Android)/)) {
+        window.location = "smartFactory.html";
+    }
+</script>
+
+<script>
+    $(function () {
+        $("#mainVisual").css("height", $(window).height());
+    });
+</script>
+
+<!-- <div id="adBox">
+    <div class="closeBox cursor">X</div>
+    <a class="adLink" href="" target="_blank"><img class="adImg" src="" alt="" /></a>
+    <p class="adTxt"></p>
+    <a class="readMore" href="" target="_blank">了解詳情</a>
+</div> -->
+
+<div id="mainVisual">
+    <iframe src="https://www.youtube.com/embed/YWgHztdzBpk?controls=0&version=3&loop=1&playlist=YWgHztdzBpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div id="sixProcess" class="section">
+    <div class="content">
+        <h3>訂單無法準時交付，<span class="lineBreak">廠內作業一團亂</span></h3>
+        <p class="sectionNote">您的企業是否正面臨以下困擾？</p>
+        <div class="sixProcessContainer">
+            <img class="imgStyle" src="images/smartFactory/mobile/img_mobile_sixProcess.svg" alt="您的企業是否正面臨以下困擾？" />
+            <div class="sixProcessBtnGroup">
+                <div class="sixProcessBtn active"><img src="images/smartFactory/mobile/icon_sixProcess01.svg" alt="採購收貨" /></div>
+                <div class="sixProcessBtn"><img src="images/smartFactory/mobile/icon_sixProcess02.svg" alt="入庫盤點" /></div>
+                <div class="sixProcessBtn"><img src="images/smartFactory/mobile/icon_sixProcess03.svg" alt="生產領料" /></div>
+                <div class="sixProcessBtn"><img src="images/smartFactory/mobile/icon_sixProcess04.svg" alt="製造加工" /></div>
+                <div class="sixProcessBtn"><img src="images/smartFactory/mobile/icon_sixProcess05.svg" alt="完工入庫" /></div>
+                <div class="sixProcessBtn"><img src="images/smartFactory/mobile/icon_sixProcess06.svg" alt="出貨盤點" /></div>
+                <div class="sixProcessBtn"><img src="images/smartFactory/mobile/icon_sixProcess07.svg" alt="訂單出貨" /></div>
+            </div>
+            <div class="sixProcessEkb01 sixProcessEkb"><img class="imgStyle" src="images/smartFactory/mobile/img_sixProcessEkb01.svg" alt="ekb01" /></div>
+            <div class="sixProcessEkb02 sixProcessEkb"><img class="imgStyle" src="images/smartFactory/mobile/img_sixProcessEkb02.svg" alt="ekb02" /></div>
+            <div class="sixProcessEkb03 sixProcessEkb"><img class="imgStyle" src="images/smartFactory/mobile/img_sixProcessEkb03.svg" alt="ekb03" /></div>
+        </div>
+    </div>
+</div>
+
+<div id="sixProcessTxtGroup" class="vAlignMiddle txtGroup">
+    <div class="sixProcessList vAlignContent">
+        <div class="prev arrow">
+            <img class="imgStyle" src="images/smartFactory/mobile/img_arrowLeft.svg" alt="向前" />
+            <div class="processName"></div>
+        </div>
+        <div class="next arrow">
+            <img class="imgStyle" src="images/smartFactory/mobile/img_arrowRight.svg" alt="向後" />
+            <div class="processName">入庫盤點</div>
+        </div>
+        <div class="sixProcessListInner clearfix">
+            <div class="sixProcessTxtOuter">
+                <div class="sixProcessTxt">
+                    <div class="close">X</div>
+                    <img src="images/smartFactory/mobile/icon_sixProcess01_small.svg" alt="" class="imgStyle" />
+                    <h4>採購收貨</h4>
+                    <p>供應商送貨收料時間長，錯發與漏發頻繁，雖然還沒入庫但也只能趕送現場！</p>
+                </div>
+            </div>
+            <div class="sixProcessTxtOuter">
+                <div class="sixProcessTxt">
+                    <div class="close">X</div>
+                    <img src="images/smartFactory/mobile/icon_sixProcess02_small.svg" alt="" class="imgStyle" />
+                    <h4>入庫盤點</h4>
+                    <p>貨物資料獲取困難，人工盤點耗時還長，漏洞百出。</p>
+                </div>
+            </div>
+            <div class="sixProcessTxtOuter">
+                <div class="sixProcessTxt">
+                    <div class="close">X</div>
+                    <img src="images/smartFactory/mobile/icon_sixProcess03_small.svg" alt="" class="imgStyle" />
+                    <h4>生產領料</h4>
+                    <p>物料太多，領料發料節奏快，人工領料常出錯，物料過期報廢損失太大！</p>
+                </div>
+            </div>
+            <div class="sixProcessTxtOuter">
+                <div class="sixProcessTxt">
+                    <div class="close">X</div>
+                    <img src="images/smartFactory/mobile/icon_sixProcess04_small.svg" alt="" class="imgStyle" />
+                    <h4>製造加工</h4>
+                    <p>生產現場不透明，排程無法管控，人力成本與，生產成本高居不下。</p>
+                </div>
+            </div>
+            <div class="sixProcessTxtOuter">
+                <div class="sixProcessTxt">
+                    <div class="close">X</div>
+                    <img src="images/smartFactory/mobile/icon_sixProcess05_small.svg" alt="" class="imgStyle" />
+                    <h4>完工入庫</h4>
+                    <p>帳實不符，貨物流轉慢，入庫耗時耗力，管控困難。</p>
+                </div>
+            </div>
+            <div class="sixProcessTxtOuter">
+                <div class="sixProcessTxt">
+                    <div class="close">X</div>
+                    <img src="images/smartFactory/mobile/icon_sixProcess02_small.svg" alt="" class="imgStyle" />
+                    <h4>出貨盤點</h4>
+                    <p>倉庫物料堆放雜亂，找貨理貨成難題，就算連夜加班也盤點不完！</p>
+                </div>
+            </div>
+            <div class="sixProcessTxtOuter">
+                <div class="sixProcessTxt">
+                    <div class="close">X</div>
+                    <img src="images/smartFactory/mobile/icon_sixProcess07_small.svg" alt="" class="imgStyle" />
+                    <h4>訂單出貨</h4>
+                    <p>出貨時間長，還經常錯發漏發，客戶等著收貨，貨物卻遲遲無法發出！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="threePoint" class="section">
+    <div class="content">
+        <h3>智能倉儲？透明現場？<span class="lineBreak">貨動單到？</span></h3>
+        <p class="sectionNote">鼎新廠內智能物流系統都幫您實現！</p>
+        <div class="threePointContent">
+            <img src="images/smartFactory/mobile/fig_threePoint.svg" alt="智能製造三大關鍵指標" class="imgStyle" />
+            <div class="threePointIcon active"><img class="imgStyle" src="images/smartFactory/mobile/icon_threePoint01.svg" alt="交期承諾、服務策略" /></div>
+            <div class="threePointIcon"><img class="imgStyle" src="images/smartFactory/mobile/icon_threePoint02.svg" alt="生產效率、供應策略" /></div>
+            <div class="threePointIcon"><img class="imgStyle" src="images/smartFactory/mobile/icon_threePoint03.svg" alt="庫存周轉、庫存策略" /></div>
+        </div>
+        <p>廠內智能物流系統透過條碼串聯移動設備、電子看板、ERP系統，從採購、領料、生產、倉儲、出貨到售後服務等管理流程智慧化作業，提升<strong>現場生產效率、訂單交期承諾以及存貨週轉</strong>三大智慧製造關鍵指標，為加速企業實現智慧製造邁向工業4.0！</p>
+    </div>
+</div>
+
+<div id="threePointTxtGroup" class="vAlignMiddle txtGroup">
+    <div class="threePointList vAlignContent">
+        <div class="threePointListInner clearfix">
+            <div class="threePointTxtOuter">
+                <div class="threePointTxt">
+                    <div class="close">X</div>
+                    <h4>交期承諾</h4>
+                    <h5>完工入庫</h5>
+                    <p>節省往返確認的時間，快速完成入庫，還能降低人工入庫的出錯率。</p>
+                    <h5>訂單出貨</h5>
+                    <p>倉儲效率提升，單次出貨時間大大縮短，訂單準時交付率也水漲船高。</p>
+                </div>
+            </div>
+            <div class="threePointTxtOuter">
+                <div class="threePointTxt">
+                    <div class="close">X</div>
+                    <h4>生產效率</h4>
+                    <h5>生產領料</h5>
+                    <p>根據生產任務單自動生成領料單據，倉庫掃碼揀料零差錯。</p>
+                    <h5>製造加工</h5>
+                    <p>行動終端即時報工、現場無紙化、移動品檢即時回饋進度，生產狀況即時查詢。</p>
+                </div>
+            </div>
+            <div class="threePointTxtOuter">
+                <div class="threePointTxt">
+                    <div class="close">X</div>
+                    <h4>庫存周轉</h4>
+                    <h5>採購收貨</h5>
+                    <p>行動裝置掃碼點收，提升效率與正確性；隨掃隨查看板資訊即時推送，縮短等待時間。</p>
+                    <h5>倉庫盤點</h5>
+                    <p>無需訓練快速上手，掃碼只需幾小時即可實現出、入庫整體盤點，錯誤率幾乎為0。</p>
+                </div>
+            </div>
+        </div>
+        <ul class="order clearfix">
+            <li class="active">交期承諾</li>
+            <li>生產效率</li>
+            <li>庫存周轉</li>
+        </ul>
+    </div>
+</div>
+
+<div id="benefit" class="section">
+    <div class="content">
+        <h3>小投入 大回報</h3>
+        <p class="sectionNote">廠內智能物流系統，效益看的見！</p>
+        <div class="benefitTxt">
+            <h5>採購收貨</h5>
+            <ul class="clearfix">
+                <li>
+                    <h6>Before</h6>
+                    <p>人工輸入收貨單，平均費時8分鐘以上，輸入時間長，影響後續生產作業。</p>
+                </li>
+                <li>
+                    <h6>After</h6>
+                    <p>PDA等行動裝置快速掃條碼，串聯ERP只需3分鐘！還可透過電子看板即時監控進度！</p>
+                </li>
+            </ul>
+        </div>
+        <div class="benefitTxt">
+            <h5>生產領料</h5>
+            <ul class="clearfix">
+                <li>
+                    <h6>Before</h6>
+                    <p>人工領料常出錯，物料盤損率高。</p>
+                </li>
+                <li>
+                    <h6>After</h6>
+                    <p>系統根據生產任務自動產生領料單，倉庫掃條碼撿料零出錯！</p>
+                </li>
+            </ul>
+        </div>
+        <div class="benefitTxt">
+            <h5>製造加工</h5>
+            <ul class="clearfix">
+                <li>
+                    <h6>Before</h6>
+                    <p>製造現場負荷狀況不透明，排程調度難管控。</p>
+                </li>
+                <li>
+                    <h6>After</h6>
+                    <p>計劃執行可視化，生產狀況即時回報，排程調度只需半小時，工單準時完工率達80%！</p>
+                </li>
+            </ul>
+        </div>
+        <div class="benefitTxt">
+            <h5>完工入庫</h5>
+            <ul class="clearfix">
+                <li>
+                    <h6>Before</h6>
+                    <p>產品不能按時完工入庫，導致客戶訂單無法準時交貨。</p>
+                </li>
+                <li>
+                    <h6>After</h6>
+                    <p>完工入庫的製成品或加工入庫的品項，5分鐘即可完成自動驗收。</p>
+                </li>
+            </ul>
+        </div>
+        <div class="benefitTxt">
+            <h5>訂單出貨</h5>
+            <ul class="clearfix">
+                <li>
+                    <h6>Before</h6>
+                    <p>訂單出貨時間長，經常找不到貨或漏發、錯發，無法進行有效帳料管理。</p>
+                </li>
+                <li>
+                    <h6>After</h6>
+                    <p>提高倉儲效率、準確度，並減少領錯料的機會，訂單準時交付率提升至70%以上！</p>
+                </li>
+            </ul>
+        </div>
+        <div class="benefitTxt">
+            <h5>倉庫盤點</h5>
+            <ul class="clearfix">
+                <li>
+                    <h6>Before</h6>
+                    <p>料號多盤點不易，即便連夜加班也盤不完，還容易出錯！</p>
+                </li>
+                <li>
+                    <h6>After</h6>
+                    <p>出貨時同時作盤點，庫存精確又不耗費多餘成本。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="case" class="case swiper-container">
+    <h3>客戶成功案例</h3>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="content">
+                <div class="case-container">
+                    <div class="case-content">
+                        <picture>
+                            <source media="(min-width: 769px)" srcset="images/smartFactory/case-illust1.png" />
+                            <source srcset="images/smartFactory/case-illust1-s.png" />
+                            <img src="images/smartFactory/case-illust1-s.png" alt="" />
+                        </picture>
+                        <div class="case-text">現在單據輸入<strong>即時率達90%以上，帳料也精準一致</strong>， 對部門價值最大的提升就是可以往前去追料， 管理已經是跑在供應商出貨的前面，可以知道何時進料、整料入庫， 尤其2018年安得烈走向計劃性的生產，採購物料的量也能更加精準， 這樣的物控與採購才是對公司產值有貢獻的。<a href="https://goo.gl/FjQZET" target="_blank">..《全文閱讀》</a></div>
+                    </div>
+                    <div class="case-videos">
+                        <div class="case-video"><iframe src="https://www.youtube.com/embed/ncNhR77Tr-g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                        <div class="case-video"><iframe src="https://www.youtube.com/embed/EMkvW80K1ug" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="content">
+                <div class="case-container">
+                    <div class="case-content">
+                        <picture>
+                            <source media="(min-width: 769px)" srcset="images/smartFactory/case-illust2.png" />
+                            <source srcset="images/smartFactory/case-illust2-s.png" />
+                            <img src="images/smartFactory/case-illust2-s.png" alt="" />
+                        </picture>
+                        <div class="case-text">力肯僅僅在導入智能應用方案二個月，<strong>就讓製造週期縮短六天， 整體存貨金額降低一千四百萬元(降幅8.3%)，減少兩位帳務登打人力， 且在帳料即時一致的狀態下，存貨資料的正確率達到100%</strong>， 更重要的是建置透明化平台， 將過去已知的問題透過鼎新顧問團隊協助， 從系統數據分析找到改善製造管理流程的關鍵節點與方法。<a href="https://goo.gl/SR42Mr" target="_blank">..《全文閱讀》</a></div>
+                    </div>
+                    <div class="case-videos">
+                        <div class="case-video"><iframe src="https://www.youtube.com/embed/elvWdqh4xZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                        <div class="case-video"><iframe src="https://www.youtube.com/embed/I4PEbVrDVUA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="case-pagination"></div>
+</div>
+
+<div id="advantage" class="section">
+    <div class="content">
+        <h3>低成本、低風險、高相容</h3>
+        <p class="sectionNote">您所看到的遠不止這些！</p>
+        <ul>
+            <li class="clearfix">
+                <img src="images/smartFactory/mobile/icon_advantage_equip.svg" alt="支援主流行動裝置" class="imgStyle" />
+                <div class="advantageTxt">
+                    <h4>支援主流行動裝置</h4>
+                    <p>支援各類行動裝置（手機、平板、工業PDA），實現移動下單、移動接單、移動監測、移動檢驗。</p>
+                </div>
+            </li>
+            <li class="clearfix">
+                <img src="images/smartFactory/mobile/icon_advantage_wifi.svg" alt="網路更新、單機操作" class="imgStyle" />
+                <div class="advantageTxt">
+                    <h4>網路更新、單機操作</h4>
+                    <p>除了數據同步更新(上傳/下載)外，所有功能皆可單機操作，能廣泛應用在工廠任何環境。</p>
+                </div>
+            </li>
+            <li class="clearfix">
+                <img src="images/smartFactory/mobile/icon_advantage_maintain.svg" alt="維護成本低" class="imgStyle" />
+                <div class="advantageTxt">
+                    <h4>維護成本低</h4>
+                    <p>系統開發的應用邏輯與ERP採用相同的程式語言，大幅降低開發與維護成本！</p>
+                </div>
+            </li>
+            <li class="clearfix">
+                <img src="images/smartFactory/mobile/icon_advantage_perfect.svg" alt="無第三方軟體風險" class="imgStyle" />
+                <div class="advantageTxt">
+                    <h4>無第三方軟體風險</h4>
+                    <p>內建ERP邏輯運作相容性高，不用擔心安裝第三方軟體的風險及開發成本。</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="videoCase" class="section">
+    <div class="content">
+        <h3>走進智能場景展示現場，聽聽他們怎麼說！</h3>
+        <div class="videoContainer clearfix">
+            <div class="videoTxt">
+                <a href="https://www.youtube.com/watch?v=mZ88-xUsF0E" target="_blank">
+                    <img class="imgStyle" src="images/smartFactory/video04.jpg" alt="智慧製造 應用大公開！ 到底這套葫蘆裡賣什麼藥 專家報給你知" />
+                    <p>智慧製造 應用大公開！<br />到底這套葫蘆裡賣什麼藥 專家報給你知</p>
+                </a>
+            </div>
+            <div class="videoTxt">
+                <a href="https://www.youtube.com/watch?v=JmjYn9JvR60" target="_blank">
+                    <img class="imgStyle" src="images/smartFactory/video01.jpg" alt="實現智慧製造的最佳利器 從進貨、入庫到發貨 流程更快速、更有效率" />
+                    <p>實現智慧製造的最佳利器<br>從進貨、入庫到發貨<br>流程更快速、更有效率</p>
+                </a>
+            </div>
+            <div class="videoTxt">
+                <a href="https://www.youtube.com/watch?v=-yzLYx5HjJc&feature=youtu.be" target="_blank">
+                    <img class="imgStyle" src="images/smartFactory/video02.jpg" alt="智能展示現場 客製訂單的智能旅程 透視廠內物流價值環" />
+                    <p>智能展示現場<br />客製訂單的智能旅程 透視廠內物流價值環</p>
+                </a>
+            </div>
+            <div class="videoTxt end">
+                <a href="https://www.youtube.com/watch?v=KN1B97RwOIg&feature=youtu.be&list=PLnM2u73L15DCMhlGlwfsw1NiXLm0D3mn9" target="_blank">
+                    <img class="imgStyle" src="images/smartFactory/video03.jpg" alt="好執行的好方案 看得見的智慧製造，從產線踏出轉型第一步" />
+                    <p>好執行的好方案<br />看得見的智慧製造，從產線踏出轉型第一步</p>
+                </a>
+            </div>
+        </div>
+        <ul class="order clearfix">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+</div>
+
+<div id="solution" class="section">
+    <div class="content">
+        <h3>鼎新智慧工廠<span class="lineBreak"></span>資訊架構藍圖</h3>
+        <p class="sectionNote">鼎新將企業在不同發展階段的策略重點、管理情境對應「工業4.0」理念中不同驅動類型，提供您所需要的解決方案。建議企業必須首先準確定位自身所處發展階段的關鍵策略(<a href="diagnosis.htm">前往成熟度評量</a>)，再找到與「工業4.0」的對接點，才能借用對應的解決方案，準確跨入「工業4.0」的追逐戰中。</p>
+        <h4>管理流程 方案規劃</h4>
+        <p class="paragraphNote">周詳的方案資訊結構規劃，有效貫穿生產指令的發佈承接，各項資源的查核，並進行與生產、檢測、搬運等設備的資訊交換與收集，為自動化、智慧化建立簡易有效的資訊交換平台。</p>
+        <img class="imgStyle" src="images/smartFactory/mobile/fig_solution.svg" alt="鼎新智慧工廠解決方案" />
+        <h4>鼎新智慧製造 流程規劃</h4>
+        <p class="paragraphNote">智慧製造建構程序，為企業從成熟度評估，提供一個知己知彼的起點，在策略訪談及規劃中揚長補短，建立邁向工業4.0的明確方向。</p>
+        <img class="imgStyle" src="images/smartFactory/mobile/fig_service.svg" alt="鼎新智慧製造 流程規劃" />
+    </div>
+</div>
+    </main><!-- loading -->
+<div id="loading">
+<p><i></i>資料提交中，請稍後</p>
+</div>
+<!-- thx page -->
+<div id="thx">
+<div id="thxContent">
+<div class="close">X</div>
+<p class="title">資料己送出</p>
+<p class="thxparg"></p>
+<p class="suprtCall">
+<span>如需要立即的支援與服務，</span>
+<span>請直撥免付費專線 0800-888-162，謝謝！</span>
+</p>
+<p class="thxSourLoad1">
+<a id="SourLoadLink" href="" target="_blank">資料下載</a>
+</p>
+<p id="goIndex">
+<a href="javascript:;">繼續瀏覽網站</a>
+</p>
+</div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+/* #region 諮詢表單元件 */
+#thx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: map-get($z-index, thx);
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    color: #fff;
+    text-align: center;
+    &:before {
+        display: inline-block;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        line-height: 1.5;
+    }
+    .suprtCall span {
+        display: block;
+    }
+    #thxContent {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 50px;
+        max-width: 500px;
+        width: 50%;
+        border-radius: 5px;
+        background-color: #3798e4;
+        vertical-align: middle;
+        text-align: center;
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 0 5px 0 5px;
+            background-color: #1c7fcc;
+            font-size: 24px;
+            line-height: 50px;
+            cursor: pointer;
+            -webkit-transition: .5s;
+                    transition: .5s;
+        }
+        .close:hover {
+            background-color: #16639f;
+        }
+        .title {
+            margin-bottom: 15px;
+            padding-top: 0; /* override */
+            text-align: center;
+            font-size: 30px;
+        }
+        .thxSourLoad1 {
+            display: none;
+            margin: 30px auto 0;
+            width: 200px;
+            height: 45px;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            background-color: #ff7e00;
+            line-height: 45px;
+        }
+        .thxSourLoad1 a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+        .thxSourLoad2 {
+            display: inline-block;
+            width: 150px;
+            height: 45px;
+        }
+    }
+    #goIndex {
+        margin: 25px auto 0;
+        max-width: 200px;
+        width: 82%;
+        height: 50px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        background-color: #0f4773;
+        line-height: 50px;
+        -webkit-transition: .5s;
+                transition: .5s;
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        &:hover {
+            background-color: #092b46;
+        }
+    }
+}
+.xcConfirm .popBox {
+    .ttBox {
+        height: 50px;
+    }
+    .txtBox {
+        .bigIcon {
+            display: none;
+        }
+        p {
+            height: auto;
+            text-align: center;
+        }
+    }
+    .sgBtn {
+        border-radius: 3px;
+        font-weight: normal;
+        -webkit-transition: .5s;
+                transition: .5s;
+        &:hover {
+            background-color: #0f4773;
+        }
+    }
+}
+@media (max-width: $max-width) {
+    #thx #thxContent {
+        padding: 50px 20px;
+        max-width: 90%;
+        width: 90%;
+    }
+}
+/* #endregion 諮詢表單元件 */
+
+/* #region loading */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: map-get($z-index, loading);
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    color: #fff;
+    text-align: center;
+    &:before {
+        display: inline-block;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+    }
+    p {
+        display: inline-block;
+        margin: 0 auto;
+        width: 90%;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 21px;
+    }
+    p i {
+        display: block;
+        margin-bottom: 15px;
+        height: 24px;
+        background: url('/tw/dsc/images/Eform/loading.gif') no-repeat center center;
+    }
+}
+/* #endregion loading */

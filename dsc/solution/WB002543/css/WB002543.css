@@ -1,0 +1,176 @@
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main.WB00254301 {
+    /*banner style*/
+    /*problems&otherMedical style*/
+    /*arrowRight*/
+    /*solution style*/
+    /*issue style*/
+    /*case style*/
+}
+
+main.WB00254301 #banner {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/bannerBg.jpg) no-repeat center top;
+}
+
+main.WB00254301 #banner.section {
+    padding: 0;
+}
+
+main.WB00254301 #problems {
+    margin-top: 75px;
+}
+
+main.WB00254301 #problems .circle {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/problemsIcon.png) no-repeat left top #4fcc6a;
+}
+
+main.WB00254301 #otherMedical .circle {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/otherMedicalIcon.png) no-repeat left top #4fcc6a;
+}
+
+main.WB00254301 #problems .circle:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 145%;
+    z-index: -1;
+    margin-top: -10px;
+    border-left: 20px solid #777777;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    content: "";
+}
+
+main.WB00254301 #problems li:nth-of-type(4) .circle:before {
+    display: none;
+}
+
+main.WB00254301 #problems li:hover .circle,
+main.WB00254301 #otherMedical li:hover .circle {
+    background-color: #ffb400;
+    cursor: pointer;
+}
+
+main.WB00254301 #problems li:hover h4,
+main.WB00254301 #otherMedical li:hover h4 {
+    color: #ffb400;
+    cursor: pointer;
+}
+
+main.WB00254301 #problems li:nth-of-type(1) .circle,
+main.WB00254301 #otherMedical li:nth-of-type(1) .circle {
+    background-position: 0 top;
+}
+
+main.WB00254301 #problems li:nth-of-type(2) .circle,
+main.WB00254301 #otherMedical li:nth-of-type(2) .circle {
+    background-position: -125px top;
+}
+
+main.WB00254301 #problems li:nth-of-type(3) .circle,
+main.WB00254301 #otherMedical li:nth-of-type(3) .circle {
+    background-position: -250px top;
+}
+
+main.WB00254301 #problems li:nth-of-type(4) .circle {
+    background-position: -375px top;
+}
+
+main.WB00254301 #problems p,
+main.WB00254301 #otherMedical p {
+    padding: 0 25px;
+}
+
+main.WB00254301 #issue {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/bgImg.jpg) no-repeat center center fixed;
+}
+
+main.WB00254301 #issue p.sectionNote {
+    margin-top: -25px;
+}
+
+main.WB00254301 #issue p.contactBtn {
+    width: 400px;
+    line-height: 60px;
+    margin: 50px auto 0;
+    border: 1px solid #ffffff;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00254301 #issue p.contactBtn:hover {
+    background-color: #ff7e00;
+}
+
+main.WB00254301 .healthFood {
+    margin: 70px 0 0;
+    padding: 50px 30px 50px 310px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002543/images/img_healthFood.png) no-repeat 60px center;
+}
+
+main.WB00254301 .healthFood h4 {
+    line-height: 1.2;
+    font-size: 30px;
+    text-align: left;
+}
+
+main.WB00254301 .healthFood a {
+    font-size: 20px;
+    float: right;
+}
+
+main.WB00254301 .healthFood a:hover {
+    color: #ff7e00;
+}
+
+main.WB00254301 #caseTxt {
+    height: 690px;
+}
+
+main.WB00254301 #caseTxt li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 230px;
+    height: 220px;
+    margin: 0 10px 10px 0;
+}
+
+main.WB00254301 #caseTxt #moreCase {
+    width: 470px;
+}
+
+main.WB00254301 #caseTxt li .caseDes {
+    position: absolute;
+    top: 187px;
+    width: 219px;
+    height: 80px;
+    padding: 7px 7px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #000 \9;
+    color: #fff;
+}
+
+main.WB00254301 #caseTxt li h4 {
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+main.WB00254301 #caseTxt li p {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+main.WB00254301 #caseTxt .end {
+    margin-right: 0;
+}

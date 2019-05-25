@@ -1,0 +1,111 @@
+/* #region top */
+#top {
+    height: 35px;
+    background-color: #f4f4f4;
+    .content {
+        position: relative;
+        margin: 0 auto;
+        padding-right: 0;
+        padding-left: 0;
+        width: 1200px;
+        height: inherit;
+    }
+    .logo {
+        position: absolute;
+        top: 3px;
+    }
+    a {
+        display: block;
+        width: 90px;
+        height: inherit;
+    }
+}
+html.mobile #top {
+    height: 50px;
+    .content {
+        padding: 0 5%;
+        width: 100%;
+    }
+    .logo {
+        top: 10px;
+    }
+}
+/* #endregion top */
+
+/* #region footer */
+#dgwFooter {
+    padding: 13px 0 17px;
+    width: 100%;
+    border-top: 1px solid #fff;
+    background-color: #d9d9d9;
+    color: #595757;
+    text-align: center;
+    font-size: 13px;
+    .link01 a {
+        display: inline-block;
+        padding: 0 3px 0 0x;
+        color: #595757;
+        text-align: center;
+        text-decoration: none;
+        font-size: 13px;
+        a:hover {
+            display: inline-block;
+            padding: 0 3px 0 0;
+            text-align: center;
+            text-decoration: underline;
+        }
+        span {
+            display: inline-block;
+            text-align: center;
+            font-size: 9px;
+        }
+    }
+    .link02 {
+        margin: 14px 0 8px 0;
+        text-align: center;
+        ul li {
+            a {
+                display: inline-block;
+                padding: 0 4px 0 1px;
+                text-align: center;
+                text-decoration: none;
+                &:hover {
+                    display: inline-block;
+                    padding: 0 4px 0 1px;
+                    text-align: center;
+                    text-decoration: underline;
+                }
+            }
+            span {
+                display: inline-block;
+                text-align: center;
+            }
+        }
+    }
+    p {
+        clear: both;
+        margin: 0;
+        text-align: center;
+        font-size: 13px;
+    }
+    img {
+        vertical-align: middle;
+    }
+}
+html.mobile #dgwFooter {
+    background-color: #333;
+    color: #fff;
+    .link01,
+    .link02 {
+        display: none;
+    }
+    p {
+        clear: both;
+        margin: 0;
+        padding: 0 20px;
+        color: #ccc;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+}
+/* #endregion footer */

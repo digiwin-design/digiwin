@@ -1,0 +1,194 @@
+@import 'common/variable';
+@import 'common/helpers';
+@import 'common/family';
+@import 'common/all';
+@import 'components/player';
+@import 'components/hoverBox';
+
+main {
+    /* ====================================================================== */
+    /* common 開始 */
+    /* ====================================================================== */
+    .container {
+        padding: 0 20px;
+        @media (min-width: $content-width) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .sectionTitle {
+        margin-bottom: 1em;
+        padding-top: 50px;
+        text-align: center;
+        font-size: 30px;
+        @media (min-width: $tablet-width + 1) {
+            font-size: 40px;
+        }
+    }
+    .sectionDesc {
+        margin: 0 auto 2em;
+        @media (min-width: $tablet-width + 1) {
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+    /* ====================================================================== */
+    /* common 結束 */
+    /* ====================================================================== */
+    .header {
+        @include headerBg('1902/header-bg.jpg', '1902/header-bg-s.jpg');
+        .container {
+            padding-top: 80px;
+            justify-content: flex-start;
+            @media (min-width: $tablet-width + 1) {
+                padding-top: 70px;
+            }
+        }
+        hgroup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #760202;
+            letter-spacing: .04em;
+            font-weight: bold;
+            font-size: 42px;
+            line-height: 1.2;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 55px;
+            }
+        }
+        h2 {
+            margin-top: 1em;
+            text-align: left;
+            font-size: 20px;
+            line-height: 1.3;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 22px;
+            }
+        }
+    }
+    .section1 {
+        padding-bottom: 60px;
+        .sectionDesc {
+            max-width: 370px;
+            @media (min-width: $tablet-width + 1) {
+                max-width: none;
+            }
+        }
+        &-boxs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .section2 {
+        padding-bottom: 60px;
+        background-color: #f3e9e7;
+        .sectionDesc {
+            max-width: 620px;
+            @media (min-width: $tablet-width + 1) {
+                max-width: none;
+            }
+        }
+        &-cols {
+            display: flex;
+            flex-wrap: wrap;
+            @media (min-width: $tablet-width + 1) {
+                margin: 0 auto;
+                width: 597px;
+            }
+            @media (min-width: $content-width) {
+                width: auto;
+            }
+        }
+        &-col {
+            width: 100%;
+            cursor: pointer;
+            @media (min-width: $tablet-width + 1) {
+                width: calc((100% - 14px) / 2);
+                text-align: center;
+            }
+            @media (min-width: $content-width) {
+                width: calc((100% - 21px) / 4);
+            }
+            @media (min-width: $tablet-width + 1) and (max-width: $content-width - 1) {
+                &:nth-of-type(2n+2) {
+                    margin-left: 7px;
+                }
+            }
+            & + .section2-col {
+                margin-top: 2px;
+                @media (min-width: $tablet-width + 1) {
+                    margin-top: 0;
+                }
+                @media (min-width: $content-width) {
+                    margin-left: 7px;
+                }
+            }
+            h2 {
+                position: relative;
+                display: flex;
+                height: 60px;
+                background-color: #ffa200;
+                color: #fff;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 60px;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    content: '';
+                    @at-root {
+                        @for $i from 1 through 4 {
+                            main .section2-col:nth-of-type(#{$i}) h2::before {
+                                @include imgBg('1902/section2-illust#{$i}-s.jpg');
+                            }
+                        }
+                    }
+                }
+                &::after {
+                    @include imgBg('1902/plus-icon.png');
+                    position: absolute;
+                    top: 50%;
+                    right: 14px;
+                    content: '';
+                    transform: translateY(-50%);
+                    @at-root {
+                        main .section2-col h2.active::after {
+                            background-image: image-url('1902/minus-icon.png');
+                        }
+                    }
+                }
+                & + div {
+                    display: none;
+                    background-color: #fc0;
+                    p {
+                        padding: 1.5em;
+                    }
+                }
+            }
+            figure,
+            figure::before,
+            figcaption {
+                background-color: #fc0;
+            }
+            figcaption {
+                padding-top: 50px;
+                color: #000;
+                text-align: left;
+            }
+        }
+    }
+    .bottom {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        a {
+            display: block;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://www.digiwin.com/static/css/public.css">
+    <style>
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 19891015;
+            min-width: 290px;
+            width: calc(100% - 30px);
+            color: #000;
+            font-size: 100%;
+            font-family: Helvetica, Arial, 'Heiti TC', 'Microsoft JhengHei', sans-serif;
+            line-height: initial;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (min-width: 481px) {
+            .popup {
+                width: 450px;
+            }
+        }
+
+        .popup-wrapper {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 19891014;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .popup-title {
+            position: absolute;
+            top: -32px;
+            left: calc(50% - 32px);
+            display: flex;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #4792e0;
+            color: #fff;
+            font-size: 16px;
+            line-height: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (min-width: 481px) {
+            .popup-title {
+                top: -45px;
+                left: calc(50% - 45px);
+                width: 90px;
+                height: 90px;
+                font-size: 22px;
+                line-height: 29px;
+            }
+        }
+
+        .popup-content {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .popup-text {
+            padding-top: 59px;
+            height: 169px;
+            background-color: #fff;
+            text-align: center;
+            letter-spacing: 0.02em;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        @media (min-width: 481px) {
+            .popup-text {
+                padding-top: 81px;
+                height: 209px;
+                font-size: 26px;
+                line-height: 36px;
+            }
+        }
+
+        .popup-btns {
+            display: flex;
+        }
+
+        .popup-btns a {
+            border-top: 1px solid #b5b5b5;
+            font-size: 18px;
+        }
+
+        @media (min-width: 481px) {
+            .popup-btns a {
+                font-size: 24px;
+            }
+        }
+
+        .popup-btns a:first-of-type {
+            display: block;
+            height: 60px;
+            border-radius: 0;
+            background-color: #eee;
+            color: #000;
+            text-align: center;
+            line-height: 60px;
+            width: 50%;
+            border-right: 1px solid #b5b5b5;
+        }
+
+        @media (min-width: 481px) {
+            .popup-btns a:first-of-type {
+                height: 70px;
+                line-height: 70px;
+            }
+        }
+
+        .popup-btns a:last-of-type {
+            display: block;
+            height: 60px;
+            border-radius: 0;
+            background-color: #4792e0;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            width: 50%;
+        }
+
+        @media (min-width: 481px) {
+            .popup-btns a:last-of-type {
+                height: 70px;
+                line-height: 70px;
+            }
+        }
+
+        .popup-btns a:last-of-type:hover {
+            background-color: #66acf4;
+        }
+
+        .popup-close {
+            height: 30px;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABrElEQVRIicWXMU7DMBSGv4Jg6RKWHoAhUscOXMASsJS5vUMXLlCpHCALrTrlCt0LrGTiDsxNqARDl8Jghto0pHVtpzT80i9FsfO+xPZznmu46QS4Bi6BC+AcCFTbB/AKvABPwAPw5RjXqAAYABkgHf2mngk2ojmqC8w8gEXPVAxnHQPjPYBFj1VMK3Tyh1DtiQ0+PABUe2SCdg4I1e4UoQGQVgBOFYsjBb4FGqahCMMQIYSpeUM7+jYUC4BTLHkaRZGUUso4jq1flSSJTNNUCiFMfTLFpG0LBsg4jq1wB6h2G+DeBWyDe0Alq+zh2RWch/f7/bJQCSTY5tcEXywWstfr/br2iJEBLH3BeXgJqASWOp281Ww2AajX67RarVIxvIc6P6d6zqMo8h7qpCxU3ysxzwl4pNOu1esJH4LjBuKSMtPp1BV+A6vta74vNN/XAv/ZMmFVIxmDCSFkGIbO68DSf0BOVf0WM7YUgVUUAsbib3RAqLH0gX8s9jS88vI2ry77LbgUz4I+rwC4w5LnBc/VMzuPMDXHF9CHtivWh7Yz1fbO+tD2qPxpC/gNyTINL8ADU3cAAAAASUVORK5CYII=');
+            width: 30px;
+            position: absolute;
+            top: -7px;
+            right: -7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-wrapper">
+        <div class="popup">
+            <div class="popup-title">溫馨<br>提醒</div>
+            <div class="popup-content">
+                <div class="popup-text">您正在造訪簡體版網站，<br>是否要導引至繁體版呢？</div>
+                <div class="popup-btns">
+                    <a href="javascript:;">不，瀏覽簡體版</a>
+                    <a href="javascript:;">是，前往繁體版</a>
+                </div>
+                <a href="javascript:;" class="popup-close"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

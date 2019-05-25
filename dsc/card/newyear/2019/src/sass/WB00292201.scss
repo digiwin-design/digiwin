@@ -1,0 +1,284 @@
+@import 'common/reset';
+@import 'common/helpers';
+$tablet-width: 768px;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes bounce {
+    0% {
+        width: 50px;
+        height: 50px;
+    }
+    50% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+    }
+}
+@keyframes bounceSmall {
+    0% {
+        width: 30px;
+        height: 30px;
+    }
+    50% {
+        width: 50px;
+        height: 50px;
+    }
+    100% {
+        width: 30px;
+        height: 30px;
+    }
+}
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+                animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+                transform: scale3d(.3, .3, .3);
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+                transform: scale3d(.9, .9, .9);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+                transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+                transform: scale3d(.97, .97, .97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+body {
+    background-color: #000;
+    &:not(.active) .angle1 {
+        cursor: pointer;
+    }
+    &.animated {
+        .angle {
+            animation: bounce 3s alternate infinite linear;
+            @media (max-width: 1200px) {
+                animation-name: bounceSmall;
+                animation-duration: 2s;
+            }
+        }
+    }
+    &.active {
+        .wrapper::before {
+            animation: fadeOut 0s .5s forwards;
+        }
+        .angle {
+            width: 200vw;
+            height: 200vh;
+        }
+        .angle1::before {
+            display: none;
+        }
+        .angle2 {
+            animation: fadeOut 0s .5s forwards;
+        }
+        .text,
+        .bottom {
+            animation: fadeIn 1s .2s forwards;
+        }
+        @each $nth, $bgNo, $top, $left in (1, 1, -100px, -97px), (2, 7, 148px, -227px), (3, 6, 428px, 23px), (4, 5, 415px, 471px), (5, 4, 294px, 683px), (6, 3, 0, 700px), (7, 2, -154px, 337px), (8, 8, 310px, -27px) {
+            .text li:nth-child(#{$nth}) {
+                @include imgBg('WB00292201/2019txt_0#{$bgNo}.png');
+                position: absolute;
+                top: $top;
+                left: $left;
+                background-position: 50%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0;
+                animation-duration: 1s;
+                animation-delay: #{($nth/2)}s;
+                animation-fill-mode: forwards;
+                @if ($nth == 8) {
+                    animation-name: bounceIn;
+                }
+                @else {
+                    animation-name: zoomIn;
+                }
+            }
+        }
+        @media (max-width: $tablet-width) {
+            @each $nth, $bgNo, $top, $left, $width, $height in (1, 1, -35px, -12px, 66px, 14px), (2, 6, 215px, -4px, 77px, 34px), (3, 3, 272px, 96px, 51px, 13px), (4, 4, 248px, 194px, 66px, 14px), (5, 5, 199px, 263px, 85px, 34px), (6, 7, -33px, 235px, 80px, 14px), (7, 2, -79px, 121px, 66px, 13px), (8, 8, 150px, -15px, 348px, 46px) {
+                .text li:nth-child(#{$nth}) {
+                    @include imgBg('WB00292201/2019txt_0#{$bgNo}.png');
+                    top: $top;
+                    left: $left;
+                    width: $width;
+                    height: $height;
+                }
+            }
+        }
+    }
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: -100px;
+        left: 0;
+        background-image: image-url('WB00292201/before-bg.jpg');
+        background-position: 50% 0;
+        background-size: cover;
+        content: '';
+        @media (max-width: $tablet-width) {
+            background-image: image-url('WB00292201/before-bg-s.jpg');
+        }
+        @media (min-width: $tablet-width + 1) {
+            bottom: 100px;
+        }
+    }
+}
+.angle {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    transition: width .3s linear, height .3s linear;
+    @media (max-width: $tablet-width) {
+        width: 54px;
+        height: 54px;
+    }
+    @media (min-width: 737px) {
+        top: 35px;
+    }
+}
+.angle1 {
+    z-index: 1;
+    background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,.5) 49%, #bebebe 50%, white 75%, #bebebe 100%);
+    box-shadow: -3px 3px 5px rgba(0,0,0,.75);
+    &::before {
+        @include imgBg('WB00292201/arrow.png', true);
+        position: absolute;
+        right: -210px;
+        bottom: -90px;
+        background-position: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: '';
+        @media (max-width: 1200px) {
+            right: -110px;
+            bottom: -47px;
+            width: 95px;
+            height: 40px;
+        }
+    }
+    &::after {
+        position: absolute;
+        width: 310px;
+        height: 190px;
+        content: '';
+        @media (max-width: $tablet-width) {
+            width: 162px;
+            height: 100px;
+        }
+    }
+}
+.angle2 {
+    background-color: #000;
+}
+.text {
+    @include imgBg('WB00292201/2019.png');
+    position: absolute;
+    top: calc((255/1000)*100%);
+    left: 50%;
+    z-index: 1;
+    background-size: cover;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-40px) scale(0.66);
+    @media (max-width: $tablet-width) {
+        width: 330px;
+        height: 155px;
+        transform: translateX(-50%);
+    }
+}
+.bottom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 54px;
+    left: 0;
+    background-image: image-url('WB00292201/2019bg.png');
+    background-position: 50% calc(100% + 60px);
+    background-repeat: no-repeat;
+    opacity: 0;
+    @media (max-width: $tablet-width) {
+        // @include bg('2019bg-s.jpg');
+        background-position: 50% 100%;
+    }
+    @media (min-width: 737px) {
+        bottom: 100px;
+    }
+}
+#TOP-MENU {
+    z-index: 1;
+}
+#dgwFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
