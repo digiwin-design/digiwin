@@ -18,7 +18,6 @@
     "animate.css": "^3.7.0",
     "lodash": "^4.17.10",
     "swiper": "^4.5.0",
-    "jquery-touchswipe": "^1.6.19",
-    "wow": "wow.js#^1.1.2"
+    "jquery-touchswipe": "^1.6.19"
   }
 }
