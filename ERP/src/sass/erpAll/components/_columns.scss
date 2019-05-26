@@ -5,14 +5,14 @@ main {
         justify-content: space-between;
     }
     .col {
-        width: calc((150 / 320) * 100%);
+        width: percentage(150 / 320);
         @media (max-width: $tablet-width) {
             @include first(2) {
                 margin-bottom: 1.5em;
             };
         }
         @media (min-width: $tablet-width + 1) {
-            width: calc((210 / 1200) * 100%);
+            width: percentage(210 / 1200);
         }
         a {
             display: flex;

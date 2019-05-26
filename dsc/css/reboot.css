@@ -40,7 +40,7 @@ main .slider-content {
     position: static;
 }
 main, main input, main textarea, main select, main button {
-    font-family: Helvetica, Arial, "PingFang TC", "LiHei Pro", "Microsoft JhengHei", sans-serif;
+    font-family: -apple-system, Roboto, Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
 }
 main a {
     transition: none;
