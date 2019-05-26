@@ -1,13 +1,6 @@
-$color: (
-    red: #fb6148,
-    blue: #0656a0
-);
-@import '../common/variable';
-@import '../common/helpers';
-@import '../common/family';
-@import '../common/all';
-@import 'components/hoverBox';
-@import 'components/case';
+@import 'all';
+@import 'common';
+@import 'components';
 
 main {
     .header {

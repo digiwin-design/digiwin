@@ -1,24 +1,8 @@
-$btn-hover-color: #8cf2fb;
-@import '../common/variable';
-@import '../common/helpers';
-@import '../common/family';
-@import '../common/all';
-@import 'components/columns';
-@import 'components/banner';
-@import 'components/hoverBoxs';
-@import 'components/hoverBox';
-@import 'components/map';
-@import 'components/accordion';
+@import 'all';
+@import 'common';
+@import 'components';
 
 main {
-    .btn {
-        transition: background-color .15s ease-in-out;
-        @at-root {
-            html.no-mobile main .btn:hover {
-                background-color: $btn-hover-color;
-            }
-        }
-    }
     .header {
         @include headerBg('erpAll/header-bg.jpg', 'erpAll/header-bg-s.jpg');
         background-size: cover;
