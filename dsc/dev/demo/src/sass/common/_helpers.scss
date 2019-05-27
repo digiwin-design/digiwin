@@ -60,7 +60,7 @@
     @else {
         width: $width;
     }
-    @content
+    @include linkColor($color);
 }
 
 // 增加點擊範圍
@@ -193,12 +193,12 @@
     @content;
 }
 
-@mixin headerBg($img, $imgS: $img, $pos: 50% 0, $cache: true) {
-    background-image: image-url($imgS, false, $cache);
+@mixin headerBg($img, $imgS: $img, $pos: 50% 0) {
+    background-image: image-url($imgS);
     background-position: $pos;
     background-repeat: no-repeat;
     @media (min-width: $tablet-width + 1) {
-        background-image: image-url($img, false, $cache);
+        background-image: image-url($img);
     }
     .container {
         position: relative;
@@ -209,6 +209,14 @@
         @media (min-width: $tablet-width + 1) {
             height: image-height($img);
         }
+    }
+}
+
+@mixin linkColor($color) {
+    color: $color;
+    &:link,
+    &:visited {
+        color: $color;
     }
 }
 /* #endregion mixin */

@@ -9,17 +9,39 @@
 //         }
 //     ];
 
-//     // 比對網址
+//     // 比對網址成功後進行轉址
 //     let result = urlMaps.find(function (item) {
 //         let regex = new RegExp(item.before + '$');
 //         return currentUrl.search(regex) !== -1;
 //     });
-
-//     // 如比對成功進行轉址
 //     if (result) {
 //         location.replace(result.after);
 //     }
 // }());
+
+// 文章登入前隱藏功能
+(function () {
+    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
+
+    let urlMaps = [
+        '/tw/dsc/dev/demo/line_member',
+    ];
+
+    // 比對網址成功後載入css與JS
+    let result = urlMaps.find(function (item) {
+        item = item.replace(/(.html|.htm)$/, '');
+        let regex = new RegExp(item + '$');
+        return currentUrl.search(regex) !== -1;
+    });
+    if (result) {
+        let head = document.querySelector('head');
+        let style = document.createElement('link'); 
+        style.href = '/tw/dsc/dev/demo/css/lineMember.css'; 
+        style.rel = 'stylesheet';
+        head.appendChild(style);
+        $.getScript('/tw/dsc/dev/demo/js/lineMember.min.js');
+    }
+}());
 
 // 電腦/手機版轉址
 (function () {

@@ -9,9 +9,17 @@ main {
     @media (min-width: $tablet-width + 1) {
         padding-top: 0;
     }
+    @media (min-width: 1025px) {
+        padding-top: 38px;
+    }
     .container {
         margin: 0 auto;
+        padding: 0 20px;
         max-width: $content-width;
+        @media (min-width: $content-width) {
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
     .mainTitle {
         font-weight: bold;

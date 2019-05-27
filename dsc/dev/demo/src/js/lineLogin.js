@@ -93,7 +93,7 @@ new Vue({
                 <img :src="pictureUrl" class="picture" alt="">
             </template>
             <a href v-else @click.prevent="login">
-                <img src="loginBtn.png" class="loginBtn" alt="">
+                <img src="images/lineLogin/loginBtn.png" class="loginBtn" alt="">
             </a>
             <button v-if="accessToken" @click="logout">登出</button>
         </div>
