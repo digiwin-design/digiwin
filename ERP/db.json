@@ -109,7 +109,11 @@
         "section2": {
             "banner": {
                 "title": "<i>打通各作業流程&nbsp;</i><i>提高部門/職能管理效率</i>",
-                "desc": "ERP系統，以實現企業利潤較大化為目標，<br>提升和改善各部門管理效率"
+                "desc": "ERP系統，以實現企業利潤較大化為目標，<br>提升和改善各部門管理效率",
+                "link": {
+                    "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index",
+                    "target": "_blank"
+                }
             },
             "hoverBoxs": [
                 {
@@ -153,7 +157,7 @@
                     "title": "銷售管理",
                     "hoverText": "提供職能模版及使用導航，快速複製同業或類似職能的應用場景，經由服務自動化的完整服務流程，達成滿意服務及主動追蹤，協助企業洞察供應鏈及顧客為中心的運作，為業務工作加值。服務機制的建立及維修管理，隨時提供有效率的服務，協助服務人員查詢完整的產品履歷。",
                     "link": {
-                        "url": "javascript:;",
+                        "url": "https://www.digiwin.com/tw/software/708.html",
                         "target": "_self"
                     }
                 },
@@ -171,7 +175,11 @@
         "section3": {
             "banner": {
                 "title": "<i>關注企業管理難題與挑戰&nbsp;</i><i>改善經營能力</i>",
-                "desc": "企業導入ERP，不只是讓作業流程電子化，<br>更是回歸管理本質，確保運營績效達成"
+                "desc": "企業導入ERP，不只是讓作業流程電子化，<br>更是回歸管理本質，確保運營績效達成",
+                "link": {
+                    "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index",
+                    "target": "_blank"
+                }
             },
             "hoverBoxs": [
                 {
@@ -235,7 +243,7 @@
                 "title": "<i>智慧化、數位化轉型趨勢&nbsp;</i><i>助力轉型升級</i>",
                 "desc": "以創造數據價值驅動智慧工廠與新零售發展，<br>實現降本增效提質減存。",
                 "link": {
-                    "url": "http://industry4.digiwin.com",
+                    "url": "https://www.digiwin.com/tw/dsc/marketing/WB002838/WB00283808.htm",
                     "target": "_blank"
                 }
             }
@@ -243,7 +251,11 @@
         "section5": {
             "banner": {
                 "title": "<i>全方位解決方案&nbsp;</i><i>支撐企業成長所需</i>",
-                "desc": "因應企業成長各個階段管理範疇與複雜度<br>提高資訊化管理需求"
+                "desc": "因應企業成長各個階段管理範疇與複雜度<br>提高資訊化管理需求",
+                "link": {
+                    "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index",
+                    "target": "_blank"
+                }
             },
             "accordion": [
                 {

@@ -6,7 +6,7 @@
             class="accordion-col js-accordion-col"
             onclick
         >
-            <h2 v-on:click="slideToggle">
+            <h2 v-on:click="slideToggle" v-bind:class="{active:idx===0}">
                 <i>{{item.title}}</i>
             </h2>
             <div v-bind:style="{display:displayHandler(idx)}">
