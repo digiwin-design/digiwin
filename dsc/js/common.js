@@ -1,45 +1,22 @@
 // 轉址
-// (function () {
-//     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
-
-//     let urlMaps = [
-//         {
-//             before: '/tw/dsc/marketing/WB002838/WB00283805',
-//             after: '/tw/dsc/marketing/WB002838/web/05/'
-//         }
-//     ];
-
-//     // 比對網址成功後進行轉址
-//     let result = urlMaps.find(function (item) {
-//         let regex = new RegExp(item.before + '$');
-//         return currentUrl.search(regex) !== -1;
-//     });
-//     if (result) {
-//         location.replace(result.after);
-//     }
-// }());
-
-// 文章登入前隱藏功能
 (function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
 
     let urlMaps = [
-        '/tw/dsc/dev/demo/line_member',
+        {
+            before: '/tw/list.html',
+            after: '/tw/ERP/erp-all.html'
+        }
     ];
 
-    // 比對網址成功後載入css與JS
+    // 比對網址成功後進行轉址
     let result = urlMaps.find(function (item) {
-        item = item.replace(/(.html|.htm)$/, '');
+        item = item.before.replace(/(.html|.htm)$/, '');
         let regex = new RegExp(item + '$');
         return currentUrl.search(regex) !== -1;
     });
     if (result) {
-        let head = document.querySelector('head');
-        let style = document.createElement('link'); 
-        style.href = '/tw/dsc/dev/demo/css/lineMember.css'; 
-        style.rel = 'stylesheet';
-        head.appendChild(style);
-        $.getScript('/tw/dsc/dev/demo/js/lineMember.min.js');
+        location.replace(result.after);
     }
 }());
 
@@ -121,6 +98,37 @@
     }
     else if (result && device === 'mobile') {
         location.replace(result.desktop);
+    }
+}());
+
+// 文章登入前隱藏功能
+(function () {
+    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
+
+    let urlMaps = [
+        '/tw/dsc/dev/demo/line_member',
+    ];
+
+    // 比對網址成功後載入外部連結
+    let result = urlMaps.find(function (item) {
+        item = item.replace(/(.html|.htm)$/, '');
+        let regex = new RegExp(item + '$');
+        return currentUrl.search(regex) !== -1;
+    });
+    if (result) {
+        let head = document.querySelector('head');
+        let style = document.createElement('link'); 
+        style.href = '/tw/dsc/dev/demo/css/lineMember.css'; 
+        style.rel = 'stylesheet';
+        head.appendChild(style);
+
+        let preload = document.createElement('link'); 
+        preload.href = '/tw/dsc/dev/demo/images/lineMember/btn-h.png'; 
+        preload.rel = 'preload';
+        preload.as = 'image';
+        head.appendChild(preload);
+        
+        $.getScript('/tw/dsc/dev/demo/js/lineMember.min.js');
     }
 }());
 
