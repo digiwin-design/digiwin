@@ -8,14 +8,14 @@ new Vue({
         channelID() {
             return '1563584152';
         },
-        callbackUrl() {
-            return location.origin + location.pathname;
-        },
-        state() {
-            return 'abcde';
-        },
         channelSecret() {
             return '784af891734ae5e34c4b8ea5c382410c';
+        },
+        state() {
+            return 'abcde'; // 自訂驗證碼
+        },
+        callbackUrl() {
+            return location.origin + location.pathname;
         },
     },
     methods: {
@@ -35,18 +35,14 @@ new Vue({
             url += `&redirect_uri=${this.callbackUrl}`;
             url += `&state=${this.state}`;
             url += '&scope=openid%20email%20profile';
-            location.href = url;
+            location.href = url; // 前往登入畫面
         },
         logout() {
             localStorage.removeItem('lineToken');
             location.reload();
         },
         checkLogin() {
-            let token = localStorage.getItem('lineToken');
-            if (token) {
-                this.getProfile(token);
-                return true;
-            }
+            return localStorage.getItem('lineToken');
         },
         getCode() {
             let code = this.getParameterByName('code', location.href);
@@ -66,34 +62,27 @@ new Vue({
             params.append('redirect_uri', this.callbackUrl);
             params.append('client_id', this.channelID);
             params.append('client_secret', this.channelSecret);
-            axios.post('https://api.line.me/oauth2/v2.1/token', params).then(res => {
-                if (res.status === 200) {
+            axios.post('https://api.line.me/oauth2/v2.1/token', params)
+                .then(res => {
+                    if (res.status !== 200) return this.showCover();
                     this.accessToken = res.data.access_token;
                     localStorage.setItem('lineToken', this.accessToken);
                     this.getProfile(this.accessToken);
-                    return;
-                }
-                this.showCover();
-            })
-                .catch(error => {
-                    this.showCover();
-                });
+
+                })
+                .catch(error => this.showCover());
         },
         getProfile(token) {
             axios.get('https://api.line.me/v2/profile', {
                 headers: { 'Authorization': `Bearer ${token}` }
-            }).then(res => {
-                if (res.status === 200) {
+            })
+                .then(res => {
+                    if (res.status !== 200) return this.showCover();
                     this.displayName = res.data.displayName;
                     this.pictureUrl = res.data.pictureUrl;
                     console.log('login..');
-                    return;
-                }
-                this.showCover();
-            })
-                .catch(error => {
-                    this.showCover();
-                });
+                })
+                .catch(error => this.showCover());
         },
         showCover() {
             // 設定文章高度
@@ -104,20 +93,26 @@ new Vue({
             this.$el.classList.add('no-login');
             console.log('no login..');
         },
-        appendCover() {
+        addCover() {
             $('.list-case-show').append(
                 `<div class="articleCover">
-                    <button @click="login">登入看更多</button>
+                    <a href @click.prevent="login">登入看更多</a>
                 </div>`
             );
             $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
         },
     },
     created() {
-        this.appendCover();
+        this.addCover();
     },
     mounted() {
-        if (this.checkLogin()) return;
+        // 已登入時取得用戶資料
+        let token = this.checkLogin();
+        if (token) {
+            this.getProfile(token);
+            return;
+        }
+        // 未登入狀態或從登入畫面導回時執行
         this.getCode();
     },
 });
