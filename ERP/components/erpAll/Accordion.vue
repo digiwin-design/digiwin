@@ -12,10 +12,7 @@
             <div v-bind:style="{display:displayHandler(idx)}">
                 <div class="accordion-content">
                     <p>{{item.detail}}</p>
-                    <a v-bind:href="item.link.url" v-bind:target="item.link.target">
-                        了解
-                        <br>更多
-                    </a>
+                    <a v-bind:href="item.link.url" v-bind:target="item.link.target">了解<br>更多</a>
                 </div>
             </div>
         </div>
