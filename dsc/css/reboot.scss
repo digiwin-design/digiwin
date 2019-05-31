@@ -1,0 +1,55 @@
+main,
+.popup_content {
+    display: block;
+    color: #000;
+    word-wrap: break-word;
+    font-size: 100%;
+    line-height: 1;
+    font-family: -apple-system, Roboto, Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    input, textarea, select, button {
+        font-family: -apple-system, Roboto, Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+    .container {
+        padding: 0;
+        width: auto;
+    }
+    h1, h2, h4, h5 {
+        padding: 0;
+        color: inherit;
+        font-weight: normal;
+        font-size: 100%;
+        line-height: inherit;
+    }
+    i {
+        font-style: normal;
+    }
+    table {
+        width: auto;
+        border-spacing: 0;
+    }
+    .slider-content {
+        position: static;
+    }
+    a {
+        transition: none;
+    }
+    textarea {
+        color: initial;
+    }
+    input {
+        &[type=email], &[type=date], &[type=password], &[type=text] {
+            color: initial;
+        }
+    }
+    .banner {
+        overflow: visible;
+    }
+}
+main {
+    @media (min-width: 1025px) {
+        padding-top: 38px !important;
+    }
+    @media (min-width: 1211px) {
+        padding-top: 0 !important;
+    }
+}
