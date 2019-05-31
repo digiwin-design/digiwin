@@ -7,17 +7,23 @@ const del = require('del');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const args = require('yargs').argv;
+const exists = require('path-exists').sync;
+const sass = require('gulp-sass');
+sass.compile = require('node-sass');
+const assetFunctions = require('node-sass-asset-functions');
 
 // 編譯sass並加入css prefix
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return gulp.src('src/sass/**/*.scss')
         .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
-        .pipe($.compass({
-            config_file: 'config.rb',
-            sass: 'src/sass',
-            css: 'css'
+        .pipe($.sourcemaps.init())
+        .pipe(sass({
+            outputStyle: 'compressed',
+            functions: assetFunctions({
+                images_path: 'images', // image-url 的圖檔位置,
+                http_images_path: '../../images' // image-url 的輸出路徑
+            })
         }))
-        .pipe($.sourcemaps.init({ loadMaps: true }))
         .pipe($.postcss([autoprefixer({
             browsers: ['last 2 version'],
             grid: true
@@ -27,13 +33,13 @@ gulp.task('sass', function() {
 });
 
 // sass編譯完畢後reload
-gulp.task('sass-watch', ['sass'], function(done) {
+gulp.task('sass-watch', ['sass'], function (done) {
     browserSync.reload();
     done();
 });
 
 // js轉換es5
-gulp.task('babel', function() {
+gulp.task('babel', function () {
     gulp.src('src/js/**/*.js')
         .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
         .pipe($.sourcemaps.init())
@@ -46,7 +52,7 @@ gulp.task('babel', function() {
 });
 
 // js模組化
-gulp.task('browserify', function() {
+gulp.task('browserify', function () {
     return browserify(`src/js/${args.p}.js`, { paths: ['.'], debug: true })
         .transform('babelify', { presets: ['@babel/preset-env'], compact: true })
         .bundle()
@@ -56,7 +62,7 @@ gulp.task('browserify', function() {
 });
 
 // server
-gulp.task('server', function() {
+gulp.task('server', function () {
     browserSync.init({
         server: '.',
         // 將<script>標籤插入至</head>前方
@@ -72,18 +78,24 @@ gulp.task('server', function() {
 });
 
 // 取出套件主要檔案
-gulp.task('bower', function() {
-    return gulp.src(mainBowerFiles({
+gulp.task('bower', function () {
+    let option = {
         'overrides': {
-            'jquery': {
-                'main': 'dist/jquery.min.js'
-            }
+            'lodash': {
+                'main': 'dist/lodash.min.js'
+            },
         }
-    })).pipe(gulp.dest('assets'));
+    };
+    // Replace files by their minified version when possible
+    let bowerWithMin = mainBowerFiles(option).map(function (path, index, arr) {
+        let newPath = path.replace(/.([^.]+)$/g, '.min.$1');
+        return exists(newPath) ? newPath : path;
+    });
+    return gulp.src(bowerWithMin).pipe(gulp.dest('assets'));
 });
 
 // 編譯pug
-gulp.task('pug', function() {
+gulp.task('pug', function () {
     return gulp.src('src/pug/partial/**/*.pug')
         .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
         .pipe($.pug({ pretty: true }))
@@ -92,23 +104,23 @@ gulp.task('pug', function() {
 });
 
 // 刪除已編譯檔案
-gulp.task('del', function() {
+gulp.task('del', function () {
     return del(['css/**', 'js/**']);
 });
 
 // 編譯全部檔案
-gulp.task('compile', function() {
+gulp.task('compile', function () {
     gulp.start('sass', 'babel', 'pug', 'bower');
 });
 
-gulp.task('bs', ['server'], function() {
+gulp.task('bs', ['server'], function () {
     gulp.watch('src/sass/**/*.scss', ['sass-watch']);
     gulp.watch('src/js/**/*.js', ['babel']);
     gulp.watch('src/pug/**/*', ['pug']);
     $.watch('**/*.@(html|htm)', browserSync.reload);
 });
 
-gulp.task('default', function() {
+gulp.task('default', function () {
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/js/**/*.js', ['babel']);
     gulp.watch('src/pug/**/*', ['pug']);

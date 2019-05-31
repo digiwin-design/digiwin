@@ -1,10 +1,16 @@
+httpVueLoader.register(Vue, 'components/Contact.vue');
+
 const store = new Vuex.Store({
     state: {
         isMobile: false,
+        result: null,
     },
     mutations: {
         updateDevice(state, payload) {
             state.isMobile = payload;
+        },
+        setData(state, payload) {
+            state.result = payload;
         },
     }
 });
@@ -14,7 +20,10 @@ new Vue({
     computed: {
         isMobile() {
             return store.state.isMobile;
-        }
+        },
+        result() {
+            return store.state.result;
+        },
     },
     methods: {
         mediaSensor: _.throttle(function () {
@@ -26,6 +35,14 @@ new Vue({
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);
         },
+        getData() {
+            axios.get('db.json').then(res => {
+                store.commit('setData', res.data);
+            });
+        },
+    },
+    created() {
+        this.getData();
     },
     mounted() {
         window.addEventListener('resize', this.mediaSensor);

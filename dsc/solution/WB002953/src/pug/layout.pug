@@ -40,10 +40,8 @@ html(lang='zh-Hant-TW')
         .header-box
             header
 
-        // 以下為後台上稿內容
+        // 後台上稿內容開始
         //- form
-        link(rel='stylesheet', href='/tw/dsc/css/Eform/form-rwd.css')
-        script(src='/tw/dsc/js/Eform/form.js', defer)
         link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
         script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
 
@@ -51,13 +49,18 @@ html(lang='zh-Hant-TW')
         link(rel='stylesheet', href='../../assets/submenu/submenu.css')
         script(src='../../assets/submenu/submenu.min.js')
 
-        //- 共用
+        //- swiper
+        //- link(rel="stylesheet", href="assets/swiper.min.css")
+        //- script(src="assets/swiper.min.js", defer)
+        //- script(src="assets/vue-awesome-swiper.js", defer)
+
+        //- link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        script(src="assets/lodash.min.js", defer)
         link(rel='stylesheet', href='/tw/dsc/css/reboot.css')
+        script(src='js/common.min.js', defer)
         
         block includes
         
-        main
+        main(v-cloak, v-if="result")
             block content
-            
-        include partial/contact_v2.html
-        include ../../../../template/form_component
+        // 後台上稿內容結束

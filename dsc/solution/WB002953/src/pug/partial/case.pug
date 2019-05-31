@@ -1,0 +1,14 @@
+extends ../layout.pug
+
+block includes
+    link(rel="preload", href="images/case/header-bg.jpg" as="image")
+    link(rel="preload", href="images/case/header-bg-s.jpg" as="image")
+    link(rel='stylesheet', href='css/case/style.css')
+    link(rel='stylesheet', href='assets/swiper.min.css')
+    script(src="assets/swiper.min.js", defer)
+    script(src="assets/jquery.popupoverlay.js", defer)
+    script(src="assets/smartScroll.js", defer)
+    script(src='js/case.min.js', defer)
+
+block content
+    include case.html
