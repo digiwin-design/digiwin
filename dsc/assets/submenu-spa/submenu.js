@@ -21,18 +21,27 @@
                 activeIndex: 0,
                 isActive: false
             },
+            computed: {
+                submenu() {
+                    return document.querySelector('.page-submenu');
+                }
+            },
+            beforeDestroy() {
+                window.removeEventListener('scroll', this.scrollHandler);
+            },
             methods: {
                 // 取得選單內容
                 getData() {
                     fetch(`${dir}submenu.json`)
                         .then(res => res.json())
                         .then(res => {
-                            this.results = res.filter(
-                                value => value.id === id
-                            );
-                            if (this.results.length) {
-                                this.setActiveIndex();
-                                this.isActive = true;
+                            this.results = res.filter(value => value.id === id);
+                            if (!this.results.length) return;
+                            this.setActiveIndex();
+                            this.isActive = true;
+                            // 設定錨點樣式
+                            if (this.results[0].anchors) {
+                                window.addEventListener('scroll', this.scrollHandler);
                             }
                         });
                 },
@@ -67,6 +76,25 @@
                     return this.currentPage
                         ? `${value} / ${this.currentPage}`
                         : value;
+                },
+                getScrollPos(el, offset, callback) {
+                    if (!$(el).length) return;
+                    let scrollTop = $(window).scrollTop();
+                    let target = $(el).offset().top - offset;
+                    if (scrollTop >= target) {
+                        callback();
+                    }
+                },
+                scrollHandler() {
+                    let anchors = this.results[0].anchors;
+                    let offset = this.submenu.offsetHeight;
+                    anchors.forEach(item => {
+                        this.getScrollPos(item.url, offset, () => {
+                            $(this.submenu).addClass('active')
+                                .find('.page-submenu-list > li').removeClass('active')
+                                .eq(item.index).addClass('active');
+                        });
+                    });
                 },
                 // 判斷連結開啟方式
                 linkTo({ url, target, anchor }) {

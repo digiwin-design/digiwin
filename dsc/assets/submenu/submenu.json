@@ -1272,23 +1272,59 @@
         "menus": [
             {
                 "text": "回首頁",
-                "url": "WB00295301"
+                "url": "WB00295301#banner"
             },
             {
-                "text": "管理痛點",
-                "url": "#perplex"
+                "text": "管理挑戰",
+                "url": "WB00295301#perplex"
             },
             {
                 "text": "解決方案",
-                "url": "#plan"
+                "url": "WB00295301#plan"
             },
             {
                 "text": "導入效益",
-                "url": "#benefit"
+                "url": "WB00295301#benefit"
+            },
+            {
+                "text": "輔導案例",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "力肯實業",
+                        "url": "case"
+                    }
+                ]
             },
             {
                 "text": "聯絡我們",
                 "url": "#contact"
+            }
+        ],
+        "anchors": [
+            {
+                "url": "#banner",
+                "index": 0
+            },
+            {
+                "url": "#perplex",
+                "index": 1
+            },
+            {
+                "url": "#plan",
+                "index": 2
+            },
+            {
+                "url": "#benefit",
+                "index": 3
+            },
+            {
+                "url": "#header",
+                "index": 4
+            },
+            {
+                "url": "#contact",
+                "index": 5
             }
         ]
     }

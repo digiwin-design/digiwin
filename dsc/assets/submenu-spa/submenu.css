@@ -50,6 +50,9 @@ html.no-mobile .page-submenu-dropdown a:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
+.page-submenu-list a {
+    transition: none;
+}
 .page-submenu-list > li {
     position: relative;
     -ms-flex-negative: 0;
