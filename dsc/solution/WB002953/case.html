@@ -45,6 +45,12 @@
     <script src="js/common.min.js" defer></script>
     <link rel="preload" href="images/case/header-bg.jpg" as="image">
     <link rel="preload" href="images/case/header-bg-s.jpg" as="image">
+    <link rel="preload" href="images/case/section3-nav-1.jpg" as="image">
+    <link rel="preload" href="images/case/section3-nav-2.jpg" as="image">
+    <link rel="preload" href="images/case/section3-nav-3.jpg" as="image">
+    <link rel="preload" href="images/case/section3-nav-4.jpg" as="image">
+    <link rel="preload" href="images/case/section3-nav-5.jpg" as="image">
+    <link rel="preload" href="images/case/section3-nav-6.jpg" as="image">
     <link rel="stylesheet" href="css/case/style.css">
     <link rel="stylesheet" href="assets/swiper.min.css">
     <script src="assets/swiper.min.js" defer></script>
@@ -103,20 +109,20 @@
 
 <article class="section3">
     <h1 class="sectionTitle">如何提升廠內物流價值程序</h1>
-    <accordion v-if="isSmallScreen" v-bind:accordion="result.section2.accordion"></accordion>
+    <accordion v-if="isLargeDevice" v-bind:accordion="result.section3"></accordion>
     <template v-else>
         <div class="section3-nav">
             <img v-bind:src="'images/case/section3-nav-'+(processId+1)+'.jpg'" usemap="#image-map">
         </div>
         <map name="image-map">
-            <area v-on:click.prevent="processId=0" target="" alt="" title="" href="" coords="37,0,190,227" shape="rect">
-            <area v-on:click.prevent="processId=1" target="" alt="" title="" href="" coords="229,0,383,227" shape="rect">
-            <area v-on:click.prevent="processId=2" target="" alt="" title="" href="" coords="422,0,575,227" shape="rect">
-            <area v-on:click.prevent="processId=3" target="" alt="" title="" href="" coords="617,0,770,227" shape="rect">
-            <area v-on:click.prevent="processId=4" target="" alt="" title="" href="" coords="811,1,963,227" shape="rect">
-            <area v-on:click.prevent="processId=5" target="" alt="" title="" href="" coords="1002,1,1155,227" shape="rect">
+            <area v-on:click.prevent="setProcess" href coords="37,0,190,227" shape="rect">
+            <area v-on:click.prevent="setProcess" href coords="229,0,383,227" shape="rect">
+            <area v-on:click.prevent="setProcess" href coords="422,0,575,227" shape="rect">
+            <area v-on:click.prevent="setProcess" href coords="617,0,770,227" shape="rect">
+            <area v-on:click.prevent="setProcess" href coords="811,1,963,227" shape="rect">
+            <area v-on:click.prevent="setProcess" href coords="1002,1,1155,227" shape="rect">
         </map>
-        <process v-bind:process="result.section2.accordion[processId].process"></process>
+        <process v-bind:process="result.section3[processId].process" v-bind:id="processId"></process>
     </template>
     <video-section type="typeA" v-bind:title="result.videoSection.section3.title" v-bind:video-src="result.videoSection.section3.videoSrc"></video-section>
 </article>

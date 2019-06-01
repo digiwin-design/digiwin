@@ -9,7 +9,7 @@ httpVueLoader.register(Vue, 'components/Process.vue');
 const store = new Vuex.Store({
     state: {
         isMobile: false,
-        isSmallScreen: false,
+        isLargeDevice: false,
         result: null,
         slideIdx: 0,
     },
@@ -17,8 +17,8 @@ const store = new Vuex.Store({
         updateDevice(state, payload) {
             state.isMobile = payload;
         },
-        updateSmallDevice(state, payload) {
-            state.isSmallScreen = payload;
+        updateLargeDevice(state, payload) {
+            state.isLargeDevice = payload;
         },
         setData(state, payload) {
             state.result = payload;
@@ -40,8 +40,8 @@ new Vue({
         isMobile() {
             return store.state.isMobile;
         },
-        isSmallScreen() {
-            return store.state.isSmallScreen;
+        isLargeDevice() {
+            return store.state.isLargeDevice;
         },
         result() {
             return store.state.result;
@@ -50,21 +50,19 @@ new Vue({
     methods: {
         mediaSensor: _.throttle(function () {
             let mm = window.matchMedia('(min-width: 769px)');
+            let mmL = window.matchMedia('(min-width: 1200px)');
             mm.addListener(this.resizeWidth);
+            mmL.addListener(this.resizeLargeWidth);
             this.resizeWidth(mm);
+            this.resizeLargeWidth(mmL);
         }, 100),
         resizeWidth(pMatchMedia) {
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);
         },
-        mediaSensorBySmall: _.throttle(function () {
-            let mm = window.matchMedia('(min-width: 1200px)');
-            mm.addListener(this.resizeWidthBySmall);
-            this.resizeWidthBySmall(mm);
-        }, 100),
-        resizeWidthBySmall(pMatchMedia) {
-            let isSmallScreen = pMatchMedia.matches ? false : true;
-            store.commit('updateSmallDevice', isSmallScreen);
+        resizeLargeWidth(pMatchMedia) {
+            let isLargeDevice = pMatchMedia.matches ? false : true;
+            store.commit('updateLargeDevice', isLargeDevice);
         },
         getData() {
             axios.get('db.json').then(res => {
@@ -76,6 +74,9 @@ new Vue({
             $('#popup').popup('show');
             $.smartScroll($('#popup_wrapper'), $('#popup')); // 阻止body滾動
         },
+        setProcess(event) {
+            this.processId = $(event.target).index();
+        }
     },
     created() {
         this.getData();
@@ -83,11 +84,8 @@ new Vue({
     mounted() {
         window.addEventListener('resize', this.mediaSensor);
         this.mediaSensor();
-        window.addEventListener('resize', this.mediaSensorBySmall);
-        this.mediaSensorBySmall();
     },
     beforeDestroy() {
         window.removeEventListener('resize', this.mediaSensor);
-        window.removeEventListener('resize', this.mediaSensorBySmall);
     }
 });
