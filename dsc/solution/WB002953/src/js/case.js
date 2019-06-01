@@ -26,6 +26,13 @@ const store = new Vuex.Store({
         setSlideIdx(state, payload) {
             state.slideIdx = payload;
         },
+    },
+    actions: {
+        getData(context) {
+            axios.get('db.json').then(res => {
+                context.commit('setData', res.data);
+            });
+        },
     }
 });
 
@@ -64,11 +71,6 @@ new Vue({
             let isLargeDevice = pMatchMedia.matches ? false : true;
             store.commit('updateLargeDevice', isLargeDevice);
         },
-        getData() {
-            axios.get('db.json').then(res => {
-                store.commit('setData', res.data);
-            });
-        },
         showPopup(idx) {
             store.commit('setSlideIdx', idx);
             $('#popup').popup('show');
@@ -79,7 +81,7 @@ new Vue({
         }
     },
     created() {
-        this.getData();
+        store.dispatch('getData');
     },
     mounted() {
         window.addEventListener('resize', this.mediaSensor);
