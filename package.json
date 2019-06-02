@@ -1,10 +1,10 @@
 {
-  "name": "dingxin",
+  "name": "digiwin",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel dsc/assets/submenu/submenu.js -o dsc/assets/submenu/submenu.min.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,8 +13,10 @@
     "@babel/preset-env": "^7.0.0",
     "@types/jquery": "^3.3.4",
     "autoprefixer": "^8.6.5",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.0",
     "babelify": "^10.0.0",
     "browser-sync": "^2.24.4",
     "browserify": "^16.2.2",
