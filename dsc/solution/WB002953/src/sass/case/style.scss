@@ -179,12 +179,12 @@ main {
             }
         }
         &-separate {
-            margin-top: 9px;
+            margin-top: 14px;
             padding-right: 5px;
             padding-left: 5px;
             width: percentage(27 / 320);
             @media (min-width: $tablet-width+1) {
-                margin-top: 15px;
+                margin-top: 20px;
                 width: percentage(84 / 916);
             }
         }

@@ -29,6 +29,8 @@
             },
             created() {
                 header.insertAdjacentHTML('beforeend', '<div id="submenu"></div>');
+            },
+            mounted() {
                 this.getData();
             },
             beforeDestroy() {
@@ -44,7 +46,12 @@
                             if (!this.results.length) return;
                             this.setActiveIndex();
                             this.isActive = true;
-                            // 設定錨點樣式
+                            
+                            // 依據選單高度設定main上方間距
+                            window.addEventListener('load', this.resizeHandler);
+                            window.addEventListener('resize', this.resizeHandler);
+                            
+                            // 設定頁面捲動時的錨點樣式
                             if (this.results[0].anchors) {
                                 window.addEventListener('scroll', this.scrollHandler);
                             }
@@ -113,6 +120,12 @@
                                 .eq(item.index).addClass('active');
                         });
                     });
+                },
+                resizeHandler() {
+                    let menuHeight = this.submenu.offsetHeight;
+                    let main = document.querySelector('main');
+                    if (main === null) return;
+                    main.style.paddingTop = menuHeight > 50 ? '50px' : 0;
                 }
             },
             template: `

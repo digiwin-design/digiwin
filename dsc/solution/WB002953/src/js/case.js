@@ -49,9 +49,6 @@ new Vue({
         isLargeDevice() {
             return store.state.isLargeDevice;
         },
-        isIE() {
-            return detectIE();
-        },
         result() {
             return store.state.result;
         },
