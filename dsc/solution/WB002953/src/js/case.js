@@ -1,9 +1,9 @@
-httpVueLoader.register(Vue, 'components/HoverBox.vue');
-httpVueLoader.register(Vue, 'components/Contact.vue');
-httpVueLoader.register(Vue, 'components/VideoSection.vue');
-httpVueLoader.register(Vue, 'components/Popup.vue');
-httpVueLoader.register(Vue, 'components/Accordion.vue');
-httpVueLoader.register(Vue, 'components/Process.vue');
+httpVueLoader.register(Vue, 'components/case/HoverBox.vue');
+httpVueLoader.register(Vue, 'components/case/Contact.vue');
+httpVueLoader.register(Vue, 'components/case/VideoSection.vue');
+httpVueLoader.register(Vue, 'components/case/Popup.vue');
+httpVueLoader.register(Vue, 'components/case/Accordion.vue');
+httpVueLoader.register(Vue, 'components/case/Process.vue');
 
 const store = new Vuex.Store({
     state: {
