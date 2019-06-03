@@ -16,40 +16,7 @@
             "videoSrc": "https://www.youtube.com/embed/I4PEbVrDVUA"
         }
     },
-    "section2": {
-        "nav": [
-            {
-                "title": "倉儲運作",
-                "imgSrc": "images/case/section2-icon1.png"
-            },
-            {
-                "title": "派工備料",
-                "imgSrc": "images/case/section2-icon2.png"
-            },
-            {
-                "title": "現場報工",
-                "imgSrc": "images/case/section2-icon3.png"
-            }
-        ],
-        "popup": [
-            {
-                "title": "透明化",
-                "desc": "倉儲作業透過條碼行動化達到料帳一致",
-                "imgSrc": "images/case/popup-illust1.png"
-            },
-            {
-                "title": "可視化",
-                "desc": "透過電子看板達到管裡可視化",
-                "imgSrc": "images/case/popup-illust2.png"
-            },
-            {
-                "title": "即時化",
-                "desc": "透過智能報工即時掌控現場不遺漏",
-                "imgSrc": "images/case/popup-illust3.png"
-            }
-        ]
-    },
-    "section3": [
+    "processes": [
         {
             "title": "供應商平台",
             "process": [
@@ -100,5 +67,88 @@
                 "數位化鏈結由上而下<br>順利達成客戶期望"
             ]
         }
-    ]
+    ],
+    "hoverBoxs": [
+        {
+            "title": "倉管",
+            "hoverText": [
+                "更簡單",
+                "更即時",
+                "更快速"
+            ]
+        },
+        {
+            "title": "採購",
+            "hoverText": [
+                "交貨及時報",
+                "進度好追蹤",
+                "供料按計劃"
+            ]
+        },
+        {
+            "title": "品管",
+            "hoverText": [
+                "用料緊急度",
+                "預計工作量",
+                "工作好交接"
+            ]
+        },
+        {
+            "title": "生管",
+            "hoverText": [
+                "進度好追蹤",
+                "異常控影響",
+                "急料不掉棒"
+            ]
+        },
+        {
+            "title": "製造",
+            "hoverText": [
+                "用料即時供",
+                "齊料好安排",
+                "變故消息快"
+            ]
+        },
+        {
+            "title": "經管",
+            "hoverText": [
+                "帳目有條理",
+                "週轉有抓緊",
+                "進出有效率"
+            ]
+        }
+    ],
+    "section2": {
+        "nav": [
+            {
+                "title": "倉儲運作",
+                "imgSrc": "images/case/section2-icon1.png"
+            },
+            {
+                "title": "派工備料",
+                "imgSrc": "images/case/section2-icon2.png"
+            },
+            {
+                "title": "現場報工",
+                "imgSrc": "images/case/section2-icon3.png"
+            }
+        ],
+        "popup": [
+            {
+                "title": "透明化",
+                "desc": "倉儲作業透過條碼行動化達到料帳一致",
+                "imgSrc": "images/case/popup-illust1.png"
+            },
+            {
+                "title": "可視化",
+                "desc": "透過電子看板達到管裡可視化",
+                "imgSrc": "images/case/popup-illust2.png"
+            },
+            {
+                "title": "即時化",
+                "desc": "透過智能報工即時掌控現場不遺漏",
+                "imgSrc": "images/case/popup-illust3.png"
+            }
+        ]
+    }
 }

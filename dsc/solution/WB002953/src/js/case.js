@@ -1,5 +1,4 @@
-// Vue.use(VueAwesomeSwiper);
-// httpVueLoader.register(Vue, 'components/HoverBox.vue');
+httpVueLoader.register(Vue, 'components/HoverBox.vue');
 httpVueLoader.register(Vue, 'components/Contact.vue');
 httpVueLoader.register(Vue, 'components/VideoSection.vue');
 httpVueLoader.register(Vue, 'components/Popup.vue');
@@ -49,6 +48,9 @@ new Vue({
         },
         isLargeDevice() {
             return store.state.isLargeDevice;
+        },
+        isIE() {
+            return detectIE();
         },
         result() {
             return store.state.result;
