@@ -4,7 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "babel": "babel dsc/assets/submenu/submenu.js -o dsc/assets/submenu/submenu.min.js"
+    "babel": "babel dsc/assets/submenu/submenu.js -o dsc/assets/submenu/submenu.min.js",
+    "sass": "node-sass --output-style compressed dsc/css/reboot.scss dsc/css/reboot.css"
   },
   "author": "",
   "license": "ISC",

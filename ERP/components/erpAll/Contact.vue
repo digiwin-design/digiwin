@@ -86,7 +86,7 @@
 module.exports = {
     props: ['multiple', 'source'],
     mounted: function () {
-        $.getScript('/tw/dsc/js/Eform/form.js');
+        $.getScript('/tw/dsc/js/Eform/form.js').done(function(){createCode()});
     },
 }
 </script>
