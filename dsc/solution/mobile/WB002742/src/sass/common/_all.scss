@@ -1,15 +1,10 @@
 main {
-    padding-top: 50px;
     margin: 0 auto;
-    padding-top: 48px;
     min-width: 360px;
     max-width: 768px;
     color: #3b3a3a;
     font-size: 18px;
     line-height: 1.5;
-    @media (min-width: $tablet-width + 1) {
-        padding-top: 0;
-    }
     .container {
         padding-right: 10px;
         padding-left: 10px;
