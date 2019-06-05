@@ -43,12 +43,21 @@ main,
     }
     .banner {
         overflow: visible;
+        span {
+            display: inline;
+            position: static;
+            &::after {
+                display: none;
+            }
+        }
     }
     img {
         vertical-align: middle;
     }
 }
-main {
+
+// 二級選單下方間距
+html.production main {
     @media (min-width: 1025px) {
         padding-top: 38px !important;
     }

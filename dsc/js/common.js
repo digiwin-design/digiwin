@@ -132,6 +132,12 @@
     }
 }());
 
+(function(){
+    if (location.hostname === 'www.digiwin.com') {
+        document.querySelector('html').classList.add('production');
+    }
+}());
+
 $(document).ready(function () {
     // 修改手機版電話號碼(與後台電腦版連動)
     let target = document.querySelector('#toolbar .p-2');
