@@ -1,0 +1,122 @@
+@import '../common';
+@import 'components';
+
+main {
+    .btn {
+        &.primary {
+            background-color: #ea3e27;
+        }
+        &.secondary {
+            background-color: #3a9494;
+        }
+    }
+    .section1 {
+        padding-bottom: 60px;
+        &-hoverBoxs {
+            display: flex;
+            flex-wrap: wrap;
+            .hoverBox {
+                $bgColor: #e7534c, #c28d26, #3a9494;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 224px;
+                color: #fff;
+                justify-content: center;
+                @media (min-width: $tablet-width) {
+                    width: calc((100% - 80px) / 3 - .01px);
+                }
+                & + .hoverBox {
+                    margin-top: 20px;
+                    @media (min-width: $tablet-width) {
+                        margin-top: 0;
+                        margin-left: 40px;
+                    }
+                }
+                &::before {
+                    display: block;
+                    margin: 0 auto 1em;
+                    width: 150px;
+                    height: 120px;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    content: '';
+                }
+                &-title {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 1;
+                }
+                &-hover {
+                    display: flex;
+                    padding: 0 percentage(70 / 370);
+                    color: #fff;
+                    text-align: justify;
+                    letter-spacing: getLetterSpacing(100);
+                    line-height: 36px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @for $nth from 1 through 3 {
+                    &:nth-child(#{$nth}) {
+                        background-color: nth($bgColor, $nth);
+                        &::before {
+                            background-image: image-url('case/hoverBox-icon#{$nth}.png');
+                        }
+                        .hoverBox-hover {
+                            background-color: rgba(darken(nth($bgColor, $nth), 20%), .95);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section2 {
+        @include bg('index/section1-bg-s.jpg');
+        height: image-height('index/section1-bg-s.jpg');
+        @media (min-width: $tablet-width + 1) {
+            @include bg('index/section1-bg.jpg');
+            height: image-height('index/section1-bg.jpg');
+        }
+        .container {
+            position: relative;
+            height: 100%;
+        }
+        .sectionTitle {
+            @media (min-width: $tablet-width + 1) {
+                padding-top: 70px;
+            }
+        }
+        .svgContainer {
+            display: none;
+            @media (min-width: $tablet-width + 1) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .section3 {
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .section4 {
+        background-color: #dec8c8;
+        .slider-leftIllust {
+            margin: 0 auto;
+            max-width: 1037px;
+            width: 100%;
+        }
+        .svgContainer {
+            position: relative;
+            margin-bottom: 50px;
+            padding-top: percentage(660 / 1034);
+            width: 100%;
+            height: 0;
+        }
+    }
+}

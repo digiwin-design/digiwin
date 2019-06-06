@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/tw/static/css/public.css">
+    <link rel="stylesheet" href="/tw/static/css/style.css">
+    <script src="/tw/static/js/jquery-1.11.3.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find&amp;flags=gated"></script>
+    <script src="/tw/dsc/assets/modernizr-custom.js"></script>
+    <script src="/tw/dsc/assets/mobile-detect.js"></script>
+    <script src="/tw/dsc/assets/mobile-detect-modernizr.js" defer=""></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js" defer=""></script>
+    <script src="https://unpkg.com/vuex" defer=""></script>
+    <script src="https://unpkg.com/http-vue-loader" defer=""></script>
+    <script src="/tw/dsc/js/common.min.js"></script>
+  </head>
+  <body>
+    <!-- 後台上稿內容開始-->
+    <link rel="stylesheet" href="/tw/dsc/css/Eform/xcConfirm.css">
+    <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
+    <link rel="stylesheet" href="/tw/dsc/assets/submenu/submenu.css">
+    <script src="/tw/dsc/assets/submenu/submenu.min.js"></script>
+    <link rel="stylesheet" href="assets/swiper.min.css">
+    <script src="assets/swiper.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/lodash.min.js" defer></script>
+    <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
+    <script src="js/all.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js" defer></script>
+    <link rel="stylesheet" href="css/index/style.css">
+    <script src="js/index.min.js" defer></script>
+    <main v-cloak v-if="result"><slider-banner-s v-if="isMobile" v-bind:slides="result.banner.index" device="mobile"></slider-banner-s>
+<slider-banner v-else v-bind:slides="result.banner.index" device="desktop"></slider-banner>
+
+<article class="section1">
+    <div class="container">
+        <h1 class="sectionTitle">消費模式的改變<br>消費者在想什麼，你知道嗎？</h1>
+        <div class="section1-hoverBoxs">
+            <hover-box v-for="item in result.hoverBoxs">
+                <template slot="content">
+                    <p class="hoverBox-title">{{item.title}}</p>
+                </template>
+                <template slot="hover">
+                    <p>{{item.hoverText}}</p>
+                </template>
+            </hover-box>
+        </div>
+    </div>
+</article>
+
+<article class="section2">
+    <div class="container">
+        <h1 class="sectionTitle">面對消費者思考模式的改變<br>您是不是也面對到這些挑戰？</h1>
+        <svg1></svg1>
+    </div>
+</article>
+
+<article class="section3">
+    <div class="container">
+        <h1 class="sectionTitle">零售業面對的內憂與外患</h1>
+        <picture>
+            <source srcset="images/index/section3-illust.png" media="(min-width:769px)"></source>
+            <img src="images/index/section3-illust-s.png" alt="">
+        </picture>
+    </div>
+</article>
+
+<article class="section4">
+    <slider>
+        <template slot="left">
+            <slider-title>
+                <template slot="title">消費者可選擇的通路越來越多</template>
+                <template slot="desc">除了門店與網站，消費者可以選擇的渠道還有很多，<br>是不是都要配合，不配合是不是少了一些機會？</template>
+            </slider-title>
+            <div class="slider-leftIllust">
+                <svg2></svg2>
+            </div>
+            <label for="slider-toggle" class="btn primary">你需要的是？</label>
+        </template>
+        <template slot="right">
+            <h1 class="sectionTitle">多渠道銷售</h1>
+            <p class="sectionDesc">多渠道拓展銷售點，才能吸引更多消費者</p>
+            <img src="images/index/section4-illust2.png" class="slider-rightIllust" alt="">
+            <div class="slider-btns">
+                <label for="slider-toggle" class="btn primary arrow-l">挑戰 1</label>
+                <a href class="btn secondary arrow-d">了解解決方案</a>
+            </div>
+        </template>
+    </slider>
+</article>
+
+<contact v-bind:multiple="false" source=""></contact>
+    </main>
+    <!-- 後台上稿內容結束-->
+  </body>
+</html>

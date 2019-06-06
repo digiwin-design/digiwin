@@ -1,0 +1,13 @@
+@import '../common';
+@import 'components';
+
+main {
+    .btn {
+        &.primary {
+            background-color: #ff7200;
+        }
+        &.secondary {
+            background-color: #008092;
+        }
+    }
+}

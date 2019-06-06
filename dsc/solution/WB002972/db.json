@@ -1,0 +1,62 @@
+{
+    "banner": {
+        "index": [
+            {
+                "title": "消費者利多的時代來臨<br><strong>你準備好了嗎?</strong>",
+                "desc": "<strong>門市、網購平台、物流、金流、客戶服務樣樣都要具備，缺一不可<br></strong>你如果慢了! 那我選別家也可以~<br>因為消費者只要輕輕滑動一下手指，整個商機就會從消費者指尖落到競爭者的手中",
+                "imgSrc": {
+                    "desktop": "images/index/banner1.jpg",
+                    "mobile": "images/index/banner1-s.jpg"
+                }
+            },
+            {
+                "title": "零售業的趨勢與機會<br>傳統零售的突破與轉型",
+                "desc": "<strong>消費者習慣變了！你感覺到了嗎？<br></strong>現在的顧客消費行為已比傳統零售複雜很多<br>是危機也是轉機，因為趨勢會為您帶來了商機",
+                "imgSrc": {
+                    "desktop": "images/index/banner2.jpg",
+                    "mobile": "images/index/banner2-s.jpg"
+                }
+            },
+            {
+                "title": "80%的獲利<br>來自20%忠誠顧客",
+                "desc": "唯有忠誠度才能增加購買率，帶來持續的獲利<br>如何才能深化忠誠顧客購買力，鞏固核心獲利",
+                "imgSrc": {
+                    "desktop": "images/index/banner3.jpg",
+                    "mobile": "images/index/banner3-s.jpg"
+                }
+            }
+        ],
+        "case": [
+            {
+                "title": "新零售開創零售業新價值<br>鼎新新零售方案完整支持",
+                "desc": "全渠道整合、會員管理、精準行銷、優化顧客體驗、提昇企業營收",
+                "imgSrc": {
+                    "desktop": "images/case/banner1.jpg",
+                    "mobile": "images/case/banner1-s.jpg"
+                }
+            },
+            {
+                "title": "新零售提升零售業競爭力<br>實體轉型零售O2O的全渠道佈局",
+                "desc": "借助會員管理大數據<br>實現零售業的精準行銷",
+                "imgSrc": {
+                    "desktop": "images/case/banner2.jpg",
+                    "mobile": "images/case/banner2-s.jpg"
+                }
+            }
+        ]
+    },
+    "hoverBoxs": [
+        {
+            "title": "30世代小資女",
+            "hoverText": "我10/20訂了2盒鳳梨酥，現在都11/3怎麼還沒收到呢?"
+        },
+        {
+            "title": "40世代新好爸爸",
+            "hoverText": "我明明是訂10盒魚酥，怎麼來10盒蝦酥?"
+        },
+        {
+            "title": "20世代有為青年",
+            "hoverText": "昨天收到10罐蛤蠣醬，今天又收到10罐蛤蠣醬，是買一送一的活動嗎?"
+        }
+    ]
+}
