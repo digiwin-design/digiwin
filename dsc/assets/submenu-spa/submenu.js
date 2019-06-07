@@ -27,7 +27,15 @@
                 return document.querySelector('.page-submenu');
             }
         },
+        created() {
+            header.insertAdjacentHTML('beforeend', '<div id="submenu"></div>');
+            this.getData();
+        },
+        mounted() {
+            document.querySelector('body').addEventListener('touchstart', (event) => this.closeDropdownHandler(event));
+        },
         beforeDestroy() {
+            document.querySelector('body').removeEventListener('touchstart');
             window.removeEventListener('scroll', this.scrollHandler);
         },
         methods: {
@@ -145,16 +153,6 @@
                 if (main === null) return;
                 main.style.paddingTop = menuHeight > 50 ? '50px' : 0;
             }
-        },
-        created() {
-            header.insertAdjacentHTML('beforeend', '<div id="submenu"></div>');
-            this.getData();
-        },
-        mounted() {
-            document.querySelector('body').addEventListener('touchstart', (event) => this.closeDropdownHandler(event));
-        },
-        beforeDestroy() {
-            document.querySelector('body').removeEventListener('touchstart');
         },
         template: `
             <div class="page-submenubox" :class="{active:isActive}">

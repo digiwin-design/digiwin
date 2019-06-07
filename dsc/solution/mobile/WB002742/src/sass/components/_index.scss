@@ -1,6 +1,6 @@
 main > .index {
     .header {
-        @include headerBg('index/header-bg.jpg', 'index/header-bg.jpg', 50% 100%, false);
+        @include headerBg('index/header-bg.jpg', 'index/header-bg.jpg', 50% 100%);
         &-list {
             font-size: 20px;
         }

@@ -18,7 +18,10 @@ main > .solution {
         }
     }
     .header {
-        @include headerBg('solution/header-bg.jpg', 'solution/header-bg.jpg', 0 100%, false);
+        @include headerBg('solution/header-bg.jpg', 'solution/header-bg.jpg', 0 100%);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-size: cover;
         .container {
             height: 536px;
         }
@@ -29,7 +32,7 @@ main > .solution {
     .region2,
     .region4,
     .section6 {
-        background-image: linear-gradient(#96ceea, #E5F3FB);
+        background-image: linear-gradient(#96ceea, #e5f3fb);
     }
     article {
         padding-top: 50px;

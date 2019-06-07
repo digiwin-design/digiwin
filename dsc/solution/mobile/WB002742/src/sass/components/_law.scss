@@ -11,7 +11,7 @@ main > .law {
         font-size: 16px;
     }
     .header {
-        @include headerBg('law/header-bg.jpg', 'law/header-bg.jpg', 50% 100%, false);
+        @include headerBg('law/header-bg.jpg', 'law/header-bg.jpg', 50% 100%);
         &-list {
             font-size: 20px;
         }
