@@ -1,6 +1,10 @@
 [v-cloak] {
     display: none;
 }
+// dat.GUI
+.dg.ac {
+    z-index: 99;
+}
 main {
     min-width: 414px;
     font-size: 18px;
@@ -71,10 +75,5 @@ main {
                 content: '';
             }
         }
-    }
-    .svgContainer svg {
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 }

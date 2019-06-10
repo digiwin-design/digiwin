@@ -23,7 +23,7 @@ module.exports = {
 }
 </script>
 
-<style scoped>
+<style>
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -37,15 +37,15 @@ module.exports = {
         transform: translate(-50%, 100%);
     }
 }
-.hoverBox {
+main .hoverBox {
     position: relative;
     overflow-y: hidden;
     cursor: pointer;
 }
-.hoverBox:hover [class$=-hover] {
+main .hoverBox:hover [class$=-hover] {
     top: 0;
 }
-.hoverBox [class$=-hover] {
+main .hoverBox [class$=-hover] {
     position: absolute;
     top: 100%;
     left: 0;
@@ -54,20 +54,10 @@ module.exports = {
     height: inherit;
     transition: top .4s;
 }
-.hoverBox.fadeIn [class$=-hover] * {
+main .hoverBox.fadeIn [class$=-hover] * {
     opacity: 0;
 }
-.hoverBox.fadeIn:hover [class$=-hover] * {
+main .hoverBox.fadeIn:hover [class$=-hover] * {
     animation: fadeIn 1s .4s forwards;
-}
-.hoverBox.arrow::after {
-    position: absolute;
-    top: calc(100% - 24px);
-    left: 50%;
-    color: #fff;
-    content: '\f106';
-    font: normal normal normal 24px/1 FontAwesome;
-    transform: translate(-50%, 0);
-    animation: arrow 1.5s infinite ease-out;
 }
 </style>

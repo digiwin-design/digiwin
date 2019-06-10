@@ -8,13 +8,13 @@
         </p>
         <div class="sliderTitle-icon">
             <p>挑戰</p>
-            <i>1</i>
+            <i>{{id}}</i>
         </div>
     </div>
 </template>
 
 <script>
 module.exports = {
-
+    props: ['id']
 }
 </script>

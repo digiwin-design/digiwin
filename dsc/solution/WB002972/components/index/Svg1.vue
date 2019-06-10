@@ -26,7 +26,7 @@ module.exports = {
         getSvg: function () {
             fetchFile('images/index/section1-illust.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
-                this.initGUI();
+                // this.initGUI();
                 this.initAn();
                 this.scrollHandler();
                 window.addEventListener('scroll', this.scrollHandler);
@@ -82,8 +82,15 @@ module.exports = {
 }
 </script>
 
-<style>
-.dg.ac {
-    z-index: 99;
+<style scoped>
+main .svgContainer {
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+main .svgContainer svg {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 </style>

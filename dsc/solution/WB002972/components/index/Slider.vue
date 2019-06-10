@@ -1,6 +1,6 @@
 <template>
     <div class="slider">
-        <input type="checkbox" id="slider-toggle">
+        <input type="checkbox" v-bind:id="'slider-toggle' + id">
         <div class="slider-slides">
             <div class="slider-slide">
                 <div class="container">
@@ -18,6 +18,6 @@
 
 <script>
 module.exports = {
-
+    props: ['id']
 }
 </script>

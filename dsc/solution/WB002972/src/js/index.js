@@ -6,6 +6,7 @@ httpVueLoader.register(Vue, 'components/index/SliderBannerS.vue');
 httpVueLoader.register(Vue, 'components/index/Slider.vue');
 httpVueLoader.register(Vue, 'components/index/Svg1.vue');
 httpVueLoader.register(Vue, 'components/index/Svg2.vue');
+httpVueLoader.register(Vue, 'components/index/Svg3.vue');
 httpVueLoader.register(Vue, 'components/index/SliderTitle.vue');
 
 const store = new Vuex.Store({
@@ -30,7 +31,7 @@ const store = new Vuex.Store({
     }
 });
 
-let app =  new Vue({
+new Vue({
     el: 'main',
     computed: {
         isMobile() {

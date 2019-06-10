@@ -22,8 +22,11 @@ main .slider {
         width: 100%;
         flex-shrink: 0;
     }
+    &-leftIllust,
     &-rightIllust {
-        margin-bottom: 50px;
+        margin: 0 auto 50px;
+        width: 100%;
+        text-align: center;
     }
     &-btns {
         display: flex;

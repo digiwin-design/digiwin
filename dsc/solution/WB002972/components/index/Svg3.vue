@@ -12,7 +12,7 @@ module.exports = {
     },
     methods: {
         getSvg: function () {
-            fetchFile('images/index/section4-illust.svg').then(function (res) {
+            fetchFile('images/index/section6-illust.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
                 // this.initGUI();
                 this.initAn();
@@ -38,12 +38,21 @@ module.exports = {
         },
         initAn: function () {
             this.target = $(this.$refs.svg).find('.js-group');
+            this.timeline.set('#group1', {
+                transformOrigin: '50% 50%',
+                scale: .3,
+                opacity: 0
+            });
             this.timeline.set(this.target, {
                 transformOrigin: '50% 50%',
                 scale: .3,
                 opacity: 0
             });
             this.timeline.pause(0);
+            this.timeline.to('#group1', .5, {
+                scale: 1,
+                opacity: 1
+            }, 0.5);
             this.timeline.staggerTo(this.target, .5, {
                 scale: 1,
                 opacity: 1

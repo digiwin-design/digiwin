@@ -28,9 +28,9 @@ module.exports = {
         initSwiper: function () {
             new Swiper('#banner', {
                 loop: true,
-                // autoplay: {
-                //     disableOnInteraction: false
-                // },
+                autoplay: {
+                    disableOnInteraction: false
+                },
                 pagination: {
                     el: '.banner-pagination',
                     clickable: true,
