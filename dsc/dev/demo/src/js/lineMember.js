@@ -96,13 +96,17 @@ new Vue({
             console.log('no login..');
         },
         addCover() {
+            // 登出按鈕，測試用
+            $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
+
+            // 表單
+            $('.list-case-show').append('<subscribe-form></subscribe-form>');
+
             $('.list-case-show').append(
-                `<subscribe-form></subscribe-form>
-                <div class="articleCover">
+                `<div class="articleCover">
                     <a href @click.prevent="login">登入看更多</a>
                 </div>`
             );
-            $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
         },
         addProfile() {
             console.log(this.userId, this.displayName);
