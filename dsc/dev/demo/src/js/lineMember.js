@@ -1,15 +1,17 @@
+httpVueLoader.register(Vue, 'components/SubscribeForm.vue');
+
 new Vue({
     el: '.list-case-show',
     data: {
+        userId: '',
         displayName: '',
-        pictureUrl: '',
     },
     computed: {
         channelID() {
-            return '1563584152';
+            return '1570741188';
         },
         channelSecret() {
-            return '784af891734ae5e34c4b8ea5c382410c';
+            return '8082e9d4b345e1b3768f160ddd76a6ee';
         },
         state() {
             return 'abcde'; // 自訂驗證碼
@@ -68,7 +70,6 @@ new Vue({
                     this.accessToken = res.data.access_token;
                     localStorage.setItem('lineToken', this.accessToken);
                     this.getProfile(this.accessToken);
-
                 })
                 .catch(error => this.showCover());
         },
@@ -78,9 +79,10 @@ new Vue({
             })
                 .then(res => {
                     if (res.status !== 200) return this.showCover();
-                    this.displayName = res.data.displayName;
-                    this.pictureUrl = res.data.pictureUrl;
                     console.log('login..');
+                    this.userId = res.data.userId;
+                    this.displayName = res.data.displayName;
+                    this.addProfile(); // 存入資料庫
                 })
                 .catch(error => this.showCover());
         },
@@ -95,11 +97,41 @@ new Vue({
         },
         addCover() {
             $('.list-case-show').append(
-                `<div class="articleCover">
+                `<subscribe-form></subscribe-form>
+                <div class="articleCover">
                     <a href @click.prevent="login">登入看更多</a>
                 </div>`
             );
             $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
+        },
+        addProfile() {
+            console.log(this.userId, this.displayName);
+            // let data = {
+            //     doc_no: 'WB002838',
+            //     source: document.title,
+            //     page_dir: location.href,
+            //     company: 'test',
+            //     telephone: 'test',
+            //     extension: '',
+            //     address: '',
+            //     contact_person: 'test',
+            //     email: 'test@digiwin.com',
+            //     mobile: '',
+            //     department: 'test',
+            //     job_title: 'test',
+            //     req_sys: '',
+            //     dm_ask: '',
+            //     get_file: '',
+            //     query: '',
+            //     other: '',
+            //     country: ''
+            // };
+            // const params = new URLSearchParams();
+            // params.append('data', JSON.stringify(data));
+            // axios.post('https://misws.digiwin.com/WebPageDataTest/Service.asmx/SaveData', params)
+            //     .then(res => {
+            //         console.log(res);
+            //     });
         },
     },
     created() {

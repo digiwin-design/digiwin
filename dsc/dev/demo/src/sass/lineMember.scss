@@ -1,3 +1,4 @@
+@import 'bootstrap/custom';
 @import 'common';
 
 .list-case-show {
@@ -10,7 +11,7 @@
     bottom: 0;
     left: 0;
     display: none;
-    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0) 30%, #fff 40%, #fff 0);
+    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0) 25%, #fff 35%, #fff 0);
     pointer-events: none;
     @at-root {
         .list-case-show.no-login .articleCover {
@@ -20,7 +21,7 @@
     a {
         @extend %hide-text;
         position: absolute;
-        top: calc(40% + 2em);
+        top: calc(35% + 2em);
         left: calc(50% - 107.5px);
         width: 215px;
         height: 44px;
@@ -31,5 +32,32 @@
                 background-image: image-url('lineMember/btn-h.png');
             }
         }
+    }
+}
+.subscribe {
+    margin-top: 2em;
+    width: 50%;
+
+    /* override */
+    textarea,
+    input[type='email'],
+    input[type='date'],
+    input[type='password'],
+    input[type='text'] {
+        padding: .375rem .75rem;
+        color: #495057;
+    }
+
+    fieldset {
+        padding: .5em 1.4em 1.4em 1.4em !important;
+        border: 1px solid #ced4da !important;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+    legend {
+        padding: 0 10px;
+        width: auto;
+        border-bottom: none;
+        text-align: left !important;
+        font-size: 1.2em !important;
     }
 }
