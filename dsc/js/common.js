@@ -117,18 +117,18 @@
     });
     if (result) {
         let head = document.querySelector('head');
-        let style = document.createElement('link'); 
-        style.href = '/tw/dsc/dev/demo/css/lineMember.css'; 
+        let style = document.createElement('link');
+        style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
         style.rel = 'stylesheet';
         head.appendChild(style);
 
-        let preload = document.createElement('link'); 
-        preload.href = '/tw/dsc/dev/demo/images/lineMember/btn-h.png'; 
+        let preload = document.createElement('link');
+        preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
         preload.rel = 'preload';
         preload.as = 'image';
         head.appendChild(preload);
         
-        $.getScript('/tw/dsc/dev/demo/js/lineMember.min.js');
+        $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
     }
 }());
 
