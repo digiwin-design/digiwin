@@ -2,7 +2,7 @@
     <div>
         <form class="subscribe" @submit.prevent="submit">
             <fieldset>
-                <legend>工業 3.5 專題訂閱</legend>
+                <legend>{{title}}</legend>
                 <div class="form-group">
                     <label for="subscribe-name">姓名</label>
                     <input
@@ -37,6 +37,7 @@
 <script>
 module.exports = {
     name: 'SubscribeForm',
+    props: ['title'],
     data: function () {
         return {
             name: '',
@@ -100,9 +101,9 @@ module.exports = {
                         console.error(res.data.msg);
                         return;
                     }
+                    alert('訂閱成功');
                     this.name = '';
                     this.email = '';
-                    alert('訂閱成功');
                 }.bind(this));
         }
     },

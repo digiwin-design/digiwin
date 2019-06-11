@@ -2,10 +2,10 @@ httpVueLoader.register(Vue, '/tw/dsc/assets/lineMember/components/SubscribeForm.
 
 new Vue({
     el: '.list-case-show',
-    data: {
-        userId: '',
-    },
     computed: {
+        userId() {
+            return localStorage.getItem('lineUserId');
+        },
         channelID() {
             return '1570741188';
         },
@@ -34,6 +34,12 @@ new Vue({
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         },
+        cleanLS() {
+            localStorage.removeItem('lineToken');
+            localStorage.removeItem('lineUserId');
+            localStorage.removeItem('lineDisplayName');
+            localStorage.removeItem('lineExp');
+        },
         login() {
             let url = 'https://access.line.me/oauth2/v2.1/authorize?';
             url += 'response_type=code';
@@ -41,28 +47,20 @@ new Vue({
             url += `&redirect_uri=${this.callbackUrl}`;
             url += `&state=${this.state}`;
             url += '&scope=openid%20email%20profile';
-            location.href = url; // 前往登入畫面
+            location.href = url; // 前往line登入畫面
         },
         logout() {
-            localStorage.removeItem('lineExp');
-            localStorage.removeItem('lineToken');
-            localStorage.removeItem('lineUserId');
-            localStorage.removeItem('lineDisplayName');
+            this.cleanLS();
             location.reload();
         },
         checkLogin() {
             let today = new Date();
-            let exp = localStorage.getItem('lineExp') && parseInt(localStorage.getItem('lineExp'), 10);
-            if (today.getTime() > exp) {
-                localStorage.removeItem('lineExp');
-                localStorage.removeItem('lineToken');
-                localStorage.removeItem('lineUserId');
-                localStorage.removeItem('lineDisplayName');
+            let exp = parseInt(localStorage.getItem('lineExp'), 10);
+            if (!exp || today.getTime() > exp) {
+                this.cleanLS();
                 return false;
             }
-            else {
-                return true;
-            }
+            return true;
         },
         getCode() {
             let code = this.getParameterByName('code', location.href);
@@ -97,13 +95,15 @@ new Vue({
             })
                 .then(res => {
                     if (res.status !== 200) return this.showCover();
-                    this.userId = res.data.userId;
+                    localStorage.setItem('lineUserId', res.data.userId);
+                    localStorage.setItem('lineDisplayName', res.data.displayName);
+
+                    // 設置登入到期時間
                     let today = new Date();
                     let lastDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 3);
                     localStorage.setItem('lineExp', lastDay.getTime());
-                    localStorage.setItem('lineUserId', res.data.userId);
-                    localStorage.setItem('lineDisplayName', res.data.displayName);
-                    this.addProfile(); // 存入資料庫
+
+                    this.saveData();
                 })
                 .catch(error => this.showCover());
         },
@@ -123,7 +123,7 @@ new Vue({
                 return currentUrl.search(regex) !== -1;
             });
             if (result) {
-                $('.list-case-show').append('<subscribe-form></subscribe-form>');
+                $('.list-case-show').append('<subscribe-form title="工業 3.5 專題訂閱"></subscribe-form>');
             }
         },
         addCover() {
@@ -132,7 +132,7 @@ new Vue({
             // 登出按鈕，測試用
             $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
         },
-        addProfile() {
+        saveData() {
             let data = {
                 lineId: this.userId,
                 source: location.href
