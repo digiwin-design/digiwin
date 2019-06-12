@@ -1,0 +1,27 @@
+@import '../common';
+@import 'components';
+
+main {
+    .header {
+        @include headerBg('intro/header-bg.jpg', 'intro/header-bg-s.jpg', 100% 0);
+        @media (min-width: $tablet-width + 1) {
+            background-position: 50% 0;
+        }
+        p {
+            font-size: 30px;
+            line-height: 1.3;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 36px;
+            }
+            & + p {
+                margin-top: 1em;
+                font-weight: bold;
+            }
+        }
+        strong {
+            @media (min-width: $tablet-width + 1) {
+                font-size: 48px;
+            }
+        }
+    }
+}
