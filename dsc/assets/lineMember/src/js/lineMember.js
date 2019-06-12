@@ -18,21 +18,19 @@ new Vue({
         callbackUrl() {
             return location.origin + location.pathname;
         },
-        formUrl() {
-            return [
-                '/tw/dsc/dev/demo/line_member'
-            ];
+        formMap() {
+            return {
+                '/tw/dsc/dev/demo/line_member': '工業 3.5 專題訂閱',
+            };
         }
     },
     methods: {
-        getParameterByName(name, url) {
-            if (!url) url = location.href;
-            name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        getParameterByName(name) {
+            let url = new URL(location.href);
+            let params = url.searchParams;
+            for (let pair of params) {
+                if (pair[0] === name) return pair[1];
+            }
         },
         cleanLS() {
             localStorage.removeItem('lineToken');
@@ -63,8 +61,8 @@ new Vue({
             return true;
         },
         getCode() {
-            let code = this.getParameterByName('code', location.href);
-            let state = this.getParameterByName('state', location.href);
+            let code = this.getParameterByName('code');
+            let state = this.getParameterByName('state');
             if (code && state === this.state) {
                 let pageName = this.callbackUrl.split('/').pop();
                 history.replaceState({}, '', pageName);
@@ -98,7 +96,7 @@ new Vue({
                     localStorage.setItem('lineUserId', res.data.userId);
                     localStorage.setItem('lineDisplayName', res.data.displayName);
 
-                    // 設置登入到期時間
+                    // 設置登入到期時間(第3天結束後到期)
                     let today = new Date();
                     let lastDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 3);
                     localStorage.setItem('lineExp', lastDay.getTime());
@@ -117,13 +115,14 @@ new Vue({
         },
         addForm() {
             let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
-            let result = this.formUrl.find(function (item) {
-                item = item.replace(/(.html|.htm)$/, '');
-                let regex = new RegExp(item + '$');
-                return currentUrl.search(regex) !== -1;
-            });
-            if (result) {
-                $('.list-case-show').append('<subscribe-form title="工業 3.5 專題訂閱"></subscribe-form>');
+            for (const key in this.formMap) {
+                if (this.formMap.hasOwnProperty(key)) {
+                    let url = key.replace(/(.html|.htm)$/, '');
+                    if (url === currentUrl) {
+                        let title = this.formMap[key];
+                        $('.list-case-show').append(`<subscribe-form title="${title}"></subscribe-form>`);
+                    }
+                }
             }
         },
         addCover() {

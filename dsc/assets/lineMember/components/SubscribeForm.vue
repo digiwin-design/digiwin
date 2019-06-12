@@ -63,10 +63,6 @@ module.exports = {
         checkEmail: function () {
             return /^.+@.+$/.test(this.email);
         },
-        getSource: function () {
-            let result = /WB\d{6}/.exec(location.pathname);
-            return result && result[0] ? result[0] : '';
-        },
         submit: function () {
             this.checkForm();
             if (this.nameErr || this.emailErr) return;
@@ -84,7 +80,7 @@ module.exports = {
                 acpCusNo: '',
                 memEDM: [
                     {
-                        orderEDM: this.getSource(),
+                        orderEDM: this.title,
                         source: location.href
                     }
                 ],
