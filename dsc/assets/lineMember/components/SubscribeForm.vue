@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <form class="subscribe" @submit.prevent="submit">
+    <div class="subscribe">
+        <form @submit.prevent="submit">
             <fieldset>
                 <legend>{{title}}</legend>
                 <div class="form-group">
@@ -49,10 +49,10 @@ module.exports = {
     },
     computed: {
         userId: function () {
-            return localStorage.getItem('lineUserId');
+            return localStorage.getItem('lineUserId') || '';
         },
         displayName: function () {
-            return localStorage.getItem('lineDisplayName');
+            return localStorage.getItem('lineDisplayName') || '';
         }
     },
     methods: {

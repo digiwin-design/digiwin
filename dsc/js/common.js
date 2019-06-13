@@ -117,12 +117,15 @@ $(function () {
         }
     })();
 
-    // 文章登入前隱藏功能
+    // 設置文章閱讀權限及插入訂閱表單
     (function () {
         let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
 
+        // 加入閱讀權限的文章
         let urlMaps = [
             '/tw/dsc/dev/demo/line_member',
+            '/tw/blog/3/index/1897.html',
+            '/tw/blog/3/index/1899.html'
         ];
 
         // 比對網址成功後載入外部連結
@@ -144,7 +147,37 @@ $(function () {
             preload.as = 'image';
             head.appendChild(preload);
 
-            $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
+            $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js'); // 此JS中設置插入表單網址
+        }
+    })();
+    
+    // 文章插入訂閱表單
+    (function () {
+        let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
+
+        // 插入表單網址
+        let urlMaps = [
+            '/tw/blog/3/index/1836.html',
+            '/tw/blog/3/index/1837.html',
+            '/tw/blog/3/index/1850.html',
+            '/tw/blog/3/index/1856.html',
+            '/tw/blog/3/index/1860.html',
+        ];
+
+        // 比對網址成功後載入外部連結
+        let result = urlMaps.find(function (item) {
+            item = item.replace(/(.html|.htm)$/, '');
+            let regex = new RegExp(item + '$');
+            return currentUrl.search(regex) !== -1;
+        });
+        if (result) {
+            let head = document.querySelector('head');
+            let style = document.createElement('link');
+            style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
+            style.rel = 'stylesheet';
+            head.appendChild(style);
+
+            $.getScript('/tw/dsc/assets/lineMember/js/subscribeForm.min.js');
         }
     })();
 });

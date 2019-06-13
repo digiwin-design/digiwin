@@ -18,9 +18,12 @@ new Vue({
         callbackUrl() {
             return location.origin + location.pathname;
         },
+        // 插入表單網址
         formMap() {
             return {
                 '/tw/dsc/dev/demo/line_member': '工業 3.5 專題訂閱',
+                '/tw/blog/3/index/1897.html': '曹永誠專欄訂閱',
+                '/tw/blog/3/index/1899.html': '曹永誠專欄訂閱',
             };
         }
     },
@@ -129,7 +132,7 @@ new Vue({
             $('.list-case-show').append('<div class="articleCover"><a href @click.prevent="login">登入看更多</a></div>');
 
             // 登出按鈕，測試用
-            $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
+            // $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
         },
         saveData() {
             let data = {
