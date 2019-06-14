@@ -28,7 +28,7 @@
                 <div class="subscribe-submit" v-bind:class="{'is-loading':isLoading}">
                     <input type="submit" class="btn btn-primary" value="訂閱" />
                 </div>
-                <a href class="subscribe-line">社群訂閱</a>
+                <a href="javascript:;" class="subscribe-line">社群訂閱</a>
             </fieldset>
         </form>
     </div>
@@ -97,6 +97,7 @@ module.exports = {
                         console.error(res.data.msg);
                         return;
                     }
+                    console.log(data);
                     alert('訂閱成功');
                     this.name = '';
                     this.email = '';

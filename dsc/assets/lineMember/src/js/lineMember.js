@@ -145,7 +145,9 @@ new Vue({
                 .then(res => {
                     if (!(res.data && res.data.result)) {
                         console.error(res.data.msg);
+                        return;
                     }
+                    console.log(data);
                 });
         },
     },
