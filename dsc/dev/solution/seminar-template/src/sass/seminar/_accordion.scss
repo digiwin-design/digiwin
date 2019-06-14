@@ -127,10 +127,9 @@ main .accordion {
         width: 100%;
         text-align: center;
         @media (min-width: $tablet-width + 1) {
-            text-align: left;
+            width: 320px;
         }
         img {
-            width: 320px;
             border: 1px solid #dadada;
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <article :class="section">
+    <article class="articleComponent" :class="section">
         <div class="container">
             <h1 class="sectionTitle">
                 <slot name="title"></slot>
@@ -26,31 +26,3 @@ module.exports = {
     },
 }
 </script>
-
-<style>
-main article {
-    padding-bottom: 72px;
-}
-main article:nth-of-type(even) {
-    background-color: #dcdcdc;
-}
-main article .articleDesc {
-    margin-bottom: 2em;
-    text-align: center;
-}
-main article img {
-    display: block;
-    margin: 0 auto;
-}
-main article strong {
-    font-weight: bold;
-}
-main article .highlight {
-    color: #ff6c00;
-}
-@media (min-width: 769px) {
-    main article .mark {
-        font-size: 22px;
-    }
-}
-</style>

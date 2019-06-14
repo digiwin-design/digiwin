@@ -3,6 +3,9 @@ httpVueLoader.register(Vue, 'components/Contact.vue');
 // httpVueLoader.register(Vue, 'components/case/HoverBox.vue');
 httpVueLoader.register(Vue, 'components/case/SliderBanner.vue');
 httpVueLoader.register(Vue, 'components/case/SliderBannerS.vue');
+httpVueLoader.register(Vue, 'components/case/Slider.vue');
+httpVueLoader.register(Vue, 'components/case/ArticleComponent.vue');
+httpVueLoader.register(Vue, 'components/case/HoverBox.vue');
 
 const store = new Vuex.Store({
     state: {

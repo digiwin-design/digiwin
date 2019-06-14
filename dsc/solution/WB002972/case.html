@@ -28,12 +28,96 @@
     <script src="assets/swiper.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="assets/lodash.min.js" defer></script>
+    <link rel="stylesheet" href="assets/animate.min.css">
     <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
     <script src="js/all.min.js" defer></script>
     <link rel="stylesheet" href="css/case/style.css">
     <script src="js/case.min.js" defer></script>
     <main v-cloak v-if="result"><slider-banner-s v-if="isMobile" v-bind:slides="result.banner.case" device="mobile"></slider-banner-s>
 <slider-banner v-else v-bind:slides="result.banner.case" device="desktop"></slider-banner>
+
+<article class="section1">
+    <slider id="1">
+        <template slot="left">
+            <h1 class="sectionTitle">企業現況</h1>
+            <p class="sectionDesc">全渠道會員管理、線上、線下、物流金流到消費者歷程<br>從片段零散的企業管理現況</p>
+            <div class="slider-leftIllust">
+                <img src="images/case/section1-illust.png" alt="">
+            </div>
+            <label for="slider-toggle1" class="btn primary">這樣做更好</label>
+        </template>
+        <template slot="right">
+            <h1 class="sectionTitle">新零售優化方案</h1>
+            <p class="sectionDesc">有效整合<br>全渠道會員管理、線上、線下、物流金流到消費者歷程</p>
+            <div class="slider-rightIllust">
+                <img src="images/case/section1-illust2.png" alt="">
+            </div>
+            <a href="#contact" class="btn secondary arrow-d js-nav">了解解決方案</a>
+        </template>
+    </slider>
+</article>
+
+<article-component section="section2">
+    <template slot="title">新零售方案架構</template>
+    <template slot="content">
+        <picture>
+            <source srcset="images/case/section2-illust.png" media="(min-width:769px)">
+            <img src="images/case/section2-illust-s.png" alt="">
+        </picture>
+        <a href="#contact" class="btn secondary arrow-d js-nav">了解詳細架構</a>
+    </template>
+</article-component>
+
+<article-component section="section3" v-bind:desc="true">
+    <template slot="title">新零售提昇三大價值</template>
+    <template slot="desc-s">看如何提昇效率、促進成交進而提昇營收</template>
+    <template slot="desc">看如何提昇效率、促進成交進而提昇營收</template>
+    <template slot="content">
+        <div class="section3-boxs">
+            <hover-box>
+                <template slot="content">
+                    <img src="images/case/hoverBox-arrow.svg" class="animated infinite bounce" alt="">
+                    <p>提升<br>效率</p>
+                </template>
+                <template slot="hover">
+                    <img src="images/case/hoverBox1-h.png" alt="">
+                </template>
+            </hover-box>
+            <hover-box>
+                <template slot="content">
+                    <img src="images/case/hoverBox-arrow.svg" class="animated infinite bounce" alt="">
+                    <p>促進<br>成交</p>
+                </template>
+                <template slot="hover">
+                    <img src="images/case/hoverBox2-h.png" alt="">
+                </template>
+            </hover-box>
+            <hover-box>
+                <template slot="content">
+                    <img src="images/case/hoverBox-arrow.svg" class="animated infinite bounce" alt="">
+                    <p>增加<br>營收</p>
+                </template>
+                <template slot="hover">
+                    <img src="images/case/hoverBox3-h.png" alt="">
+                </template>
+            </hover-box>
+        </div>
+        <a href="#contact" class="btn secondary arrow-d js-nav">了解更多</a>
+    </template>
+</article-component>
+
+<article-component section="section4" v-bind:desc="true">
+    <template slot="title">新零售方案應用行業</template>
+    <template slot="desc-s">支持多業態/多法人/多品牌經營模式發展</template>
+    <template slot="desc">支持多業態/多法人/多品牌經營模式發展</template>
+    <template slot="content">
+        <picture>
+            <source :srcset="'images/case/section4-illust.png'" media="(min-width:769px)">
+            <img :src="'images/case/section4-illust-s.png'" alt="">
+        </picture>
+        <a href="#contact" class="btn secondary arrow-d js-nav">了解更多行業解決方案</a>
+    </template>
+</article-component>
 
 <contact v-bind:multiple="false" source=""></contact>
     </main>

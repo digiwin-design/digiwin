@@ -5,7 +5,7 @@
     <div class="container">
         <h1 class="sectionTitle">消費模式的改變<br>消費者在想什麼，你知道嗎？</h1>
         <div class="section1-hoverBoxs">
-            <hover-box v-for="item in result.hoverBoxs">
+            <hover-box v-for="item in result.hoverBoxs.index">
                 <template slot="content">
                     <p class="hoverBox-title">{{item.title}}</p>
                 </template>
