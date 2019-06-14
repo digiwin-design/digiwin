@@ -118,4 +118,7 @@
 // 表單上方間距
 .list-case {
     margin-bottom: 170px;
+    @media (max-width: 414px) {
+        margin-bottom: 275px;
+    }
 }
