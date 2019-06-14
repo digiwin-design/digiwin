@@ -20,7 +20,7 @@
 module.exports = {
     props: ['section', 'desc'],
     computed: {
-        isMobile() {
+        isMobile: function () {
             return store.state.isMobile;
         }
     },
