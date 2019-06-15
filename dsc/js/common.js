@@ -118,45 +118,19 @@ $(function () {
     })();
 
     // 設置文章閱讀權限及插入訂閱表單
+    // 表單標題清單：/tw/dsc/assets/lineMember/formTitle.json
     (function () {
         let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
 
         // 加入閱讀權限的文章
-        let urlMaps = [
+        let loginUrls = [
             '/tw/dsc/dev/demo/line_member',
             '/tw/blog/3/index/1897.html',
-            '/tw/blog/3/index/1899.html'
+            '/tw/blog/3/index/1899.html',
         ];
 
-        // 比對網址成功後載入外部連結
-        let result = urlMaps.find(function (item) {
-            item = item.replace(/(.html|.htm)$/, '');
-            let regex = new RegExp(item + '$');
-            return currentUrl.search(regex) !== -1;
-        });
-        if (result) {
-            let head = document.querySelector('head');
-            let style = document.createElement('link');
-            style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
-            style.rel = 'stylesheet';
-            head.appendChild(style);
-
-            let preload = document.createElement('link');
-            preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
-            preload.rel = 'preload';
-            preload.as = 'image';
-            head.appendChild(preload);
-
-            $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js'); // 此JS中設置插入表單網址
-        }
-    })();
-    
-    // 文章插入訂閱表單
-    (function () {
-        let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
-
-        // 插入表單網址
-        let urlMaps = [
+        // 未設定權限僅插入表單的文章
+        let formUrls = [
             '/tw/blog/3/index/1836.html',
             '/tw/blog/3/index/1837.html',
             '/tw/blog/3/index/1850.html',
@@ -164,19 +138,36 @@ $(function () {
             '/tw/blog/3/index/1860.html',
         ];
 
-        // 比對網址成功後載入外部連結
-        let result = urlMaps.find(function (item) {
+        // 比對網址成功後載入對應的外部連結
+        let loginResult = loginUrls.find(function (item) {
             item = item.replace(/(.html|.htm)$/, '');
             let regex = new RegExp(item + '$');
             return currentUrl.search(regex) !== -1;
         });
-        if (result) {
-            let head = document.querySelector('head');
-            let style = document.createElement('link');
-            style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
-            style.rel = 'stylesheet';
-            head.appendChild(style);
+        let formResult = formUrls.find(function (item) {
+            item = item.replace(/(.html|.htm)$/, '');
+            let regex = new RegExp(item + '$');
+            return currentUrl.search(regex) !== -1;
+        });
 
+        if (!loginResult && !formResult) return;
+
+        let head = document.querySelector('head');
+        let style = document.createElement('link');
+        style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
+        style.rel = 'stylesheet';
+        head.appendChild(style);
+
+        if (loginResult) {
+            let preload = document.createElement('link');
+            preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
+            preload.rel = 'preload';
+            preload.as = 'image';
+            head.appendChild(preload);
+
+            $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
+        }
+        else {
             $.getScript('/tw/dsc/assets/lineMember/js/subscribeForm.min.js');
         }
     })();

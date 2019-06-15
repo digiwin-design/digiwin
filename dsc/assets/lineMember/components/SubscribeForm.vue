@@ -28,7 +28,7 @@
                 <div class="subscribe-submit" v-bind:class="{'is-loading':isLoading}">
                     <input type="submit" class="btn btn-primary" value="訂閱" />
                 </div>
-                <a href="javascript:;" class="subscribe-line">社群訂閱</a>
+                <a href="https://acho.tw/acho/f/LCOU0" class="subscribe-line" target="_blank">社群訂閱</a>
             </fieldset>
         </form>
     </div>
