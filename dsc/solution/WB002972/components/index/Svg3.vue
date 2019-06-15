@@ -60,8 +60,7 @@ module.exports = {
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.svg;
-            let offset = el.offsetHeight / 2;
-            getScrollPos(el, offset, function () {
+            getScrollPos(el, 0, function () {
                 this.timeline.play();
                 window.removeEventListener('scroll', this.scrollHandler);
             }.bind(this));

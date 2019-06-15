@@ -1,31 +1,31 @@
-<svg id="section1-illust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1192" height="881" viewBox="0 -200 1192 881">
+<svg class="section2-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1192" height="881" viewBox="0 -200 1192 881">
   <defs>
     <style>
-      #section1-illust .cls-1, .cls-2 {
+      .section2-svg .cls-1, .cls-2 {
         fill: #f8840f;
       }
 
-      #section1-illust .cls-11, .cls-2, .cls-3, .cls-5, .cls-7, .cls-9 {
+      .section2-svg .cls-11, .cls-2, .cls-3, .cls-5, .cls-7, .cls-9 {
         fill-rule: evenodd;
       }
 
-      #section1-illust .cls-3, .cls-4 {
+      .section2-svg .cls-3, .cls-4 {
         fill: #e75e4c;
       }
 
-      #section1-illust .cls-5, .cls-6 {
+      .section2-svg .cls-5, .cls-6 {
         fill: #d35a25;
       }
 
-      #section1-illust .cls-7, .cls-8 {
+      .section2-svg .cls-7, .cls-8 {
         fill: #c28d26;
       }
 
-      #section1-illust .cls-10, .cls-9 {
+      .section2-svg .cls-10, .cls-9 {
         fill: #de9246;
       }
 
-      #section1-illust .cls-11, .cls-12 {
+      .section2-svg .cls-11, .cls-12 {
         fill: #e59735;
       }
     </style>
