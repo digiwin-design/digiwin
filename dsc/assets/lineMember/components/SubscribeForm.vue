@@ -2,7 +2,7 @@
     <div class="subscribe">
         <form @submit.prevent="submit">
             <fieldset>
-                <legend>{{title}}</legend>
+                <legend>{{title}}訂閱</legend>
                 <div class="form-group">
                     <label for="subscribe-name">姓名</label>
                     <input
