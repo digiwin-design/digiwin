@@ -8,6 +8,7 @@ httpVueLoader.register(Vue, 'components/index/Svg1.vue');
 httpVueLoader.register(Vue, 'components/index/Svg2.vue');
 httpVueLoader.register(Vue, 'components/index/Svg3.vue');
 httpVueLoader.register(Vue, 'components/index/SliderTitle.vue');
+httpVueLoader.register(Vue, 'components/index/RwdImageMaps.vue');
 
 const store = new Vuex.Store({
     state: {

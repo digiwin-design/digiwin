@@ -44,10 +44,10 @@ module.exports = {
                 opacity: 0
             });
             this.timeline.pause(0);
-            this.timeline.staggerTo(this.target, .5, {
+            this.timeline.staggerTo(this.target, .8, {
                 scale: 1,
                 opacity: 1
-            }, 0.5);
+            }, .4);
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.svg;

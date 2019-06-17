@@ -60,4 +60,14 @@ main .hoverBox.fadeIn [class$=-hover] * {
 main .hoverBox.fadeIn:hover [class$=-hover] * {
     animation: fadeIn 1s .4s forwards;
 }
+main .hoverBox.arrow::after {
+    position: absolute;
+    top: calc(100% - 24px);
+    left: 50%;
+    color: #fff;
+    content: '\f106';
+    font: normal normal normal 24px/1 FontAwesome;
+    transform: translate(-50%, 0);
+    animation: arrow 1.5s infinite ease-out;
+}
 </style>
