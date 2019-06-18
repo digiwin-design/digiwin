@@ -16,12 +16,12 @@ main {
                 height: 224px;
                 color: #fff;
                 justify-content: center;
-                @media (min-width: $tablet-width) {
+                @media (min-width: 1024px) {
                     width: calc((100% - 80px) / 3 - .01px);
                 }
                 & + .hoverBox {
                     margin-top: 20px;
-                    @media (min-width: $tablet-width) {
+                    @media (min-width: 1024px) {
                         margin-top: 0;
                         margin-left: 40px;
                     }

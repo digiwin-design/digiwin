@@ -3,32 +3,36 @@
         <form @submit.prevent="submit">
             <fieldset>
                 <legend>{{title}}訂閱</legend>
-                <div class="form-group">
-                    <label for="subscribe-name">姓名</label>
-                    <input
-                        type="text"
-                        v-model.trim="name"
-                        class="form-control"
-                        id="subscribe-name"
-                        required
-                    >
-                    <div v-show="nameErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
+                <div class="subscribe-fields">
+                    <div class="subscribe-field">
+                        <label for="subscribe-name">姓名</label>
+                        <input
+                            type="text"
+                            v-model.trim="name"
+                            class="form-control"
+                            id="subscribe-name"
+                            required
+                        >
+                        <div v-show="nameErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
+                    </div>
+                    <div class="subscribe-field">
+                        <label for="subscribe-email">電子信箱</label>
+                        <input
+                            type="email"
+                            v-model.trim="email"
+                            class="form-control"
+                            id="subscribe-email"
+                            required
+                        >
+                        <div v-show="emailErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
+                    </div>
+                    <div class="subscribe-btns">
+                        <div class="subscribe-submit" v-bind:class="{'is-loading':isLoading}">
+                            <input type="submit" class="btn btn-primary" value="訂閱" />
+                        </div>
+                        <a href="https://acho.tw/acho/f/LCOU0" class="subscribe-line" target="_blank">社群訂閱</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="subscribe-email">電子信箱</label>
-                    <input
-                        type="email"
-                        v-model.trim="email"
-                        class="form-control"
-                        id="subscribe-email"
-                        required
-                    >
-                    <div v-show="emailErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
-                </div>
-                <div class="subscribe-submit" v-bind:class="{'is-loading':isLoading}">
-                    <input type="submit" class="btn btn-primary" value="訂閱" />
-                </div>
-                <a href="https://acho.tw/acho/f/LCOU0" class="subscribe-line" target="_blank">社群訂閱</a>
             </fieldset>
         </form>
     </div>
