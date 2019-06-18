@@ -14,7 +14,7 @@ module.exports = {
         getSvg: function () {
             fetchFile('images/index/section4-illust.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
-                this.initGUI();
+                // this.initGUI();
                 this.initAn();
                 this.scrollHandler();
                 window.addEventListener('scroll', this.scrollHandler);
@@ -43,17 +43,12 @@ module.exports = {
                 opacity: 0
             });
             this.timeline.pause(0);
-
-            // this.timeline.staggerTo(this.target, .8, {
-            //     scale: 1,
-            //     opacity: 1
-            // }, .4);
-
             for (let i = 1; i <= 9; i++) {
-                this.timeline.to($(this.$refs.svg).find('.js-group' + i), .5, {
+                let offset = i === 1 ? '0' : '-=.4';
+                this.timeline.to($(this.$refs.svg).find('.js-group' + i), .8, {
                     scale: 1,
                     opacity: 1
-                });
+                }, offset);
             }
         },
         scrollHandler: _.throttle(function () {
