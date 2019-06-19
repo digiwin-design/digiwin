@@ -4,9 +4,11 @@ httpVueLoader.register(Vue, 'components/index/HoverBox.vue');
 httpVueLoader.register(Vue, 'components/index/SliderBanner.vue');
 httpVueLoader.register(Vue, 'components/index/SliderBannerS.vue');
 httpVueLoader.register(Vue, 'components/index/Slider.vue');
-httpVueLoader.register(Vue, 'components/index/Svg1.vue');
-httpVueLoader.register(Vue, 'components/index/Svg2.vue');
-httpVueLoader.register(Vue, 'components/index/Svg3.vue');
+httpVueLoader.register(Vue, 'components/index/svg/section2-svg.vue');
+httpVueLoader.register(Vue, 'components/index/svg/section3-svg.vue');
+httpVueLoader.register(Vue, 'components/index/svg/section4-svg.vue');
+httpVueLoader.register(Vue, 'components/index/svg/section5-svg.vue');
+httpVueLoader.register(Vue, 'components/index/svg/section6-svg.vue');
 httpVueLoader.register(Vue, 'components/index/SliderTitle.vue');
 httpVueLoader.register(Vue, 'components/index/RwdImageMaps.vue');
 

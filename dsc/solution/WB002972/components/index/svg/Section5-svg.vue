@@ -12,7 +12,7 @@ module.exports = {
     },
     methods: {
         getSvg: function () {
-            fetchFile('images/index/section6-illust.svg').then(function (res) {
+            fetchFile('images/index/svg/section5.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
                 // this.initGUI();
                 this.initAn();
@@ -37,28 +37,21 @@ module.exports = {
             gui.add(controls, 'pause');
         },
         initAn: function () {
-            this.target = $(this.$refs.svg).find('.js-group');
-            this.timeline.set('#group1', {
-                transformOrigin: '50% 50%',
-                scale: .3,
-                opacity: 0
-            });
-            this.timeline.set(this.target, {
+            this.timeline.set($(this.$refs.svg).find('.js-group'), {
                 transformOrigin: '50% 50%',
                 scale: .3,
                 opacity: 0
             });
             this.timeline.pause(0);
-            this.timeline.to('#group1', .8, {
-                scale: 1,
-                opacity: 1
-            });
-            let group1 = TweenMax.staggerTo(
-                this.target, .8, {
-                scale: 1,
-                opacity: 1
-            }, .4);
-            this.timeline.add(group1, .4);
+
+            let arr = this.getNoRepeatRandomNum(13);
+            for (let i = 0, total = arr.length; i < total; i++) {
+                let offset = i === 0 ? '0' : '-=.4';
+                this.timeline.to($(this.$refs.svg).find('.js-group' + arr[i]), .8, {
+                    scale: 1,
+                    opacity: 1
+                }, offset);
+            }
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.svg;
@@ -67,6 +60,21 @@ module.exports = {
                 window.removeEventListener('scroll', this.scrollHandler);
             }.bind(this));
         }, 100),
+        getNoRepeatRandomNum: function (max) {
+            if (!max) return;
+            // 原始陣列
+            let arr = [];
+            for (let i = 1; i <= max; i++) {
+                arr.push(i);
+            }
+            // 新陣列
+            let result = [];
+            for (let i = 0, total = arr.length; i < total; i++) {
+                let ran = Math.floor(Math.random() * arr.length);
+                result.push(arr.splice(ran, 1)[0]);
+            }
+            return result;
+        }
     },
     mounted: function () {
         this.getSvg();

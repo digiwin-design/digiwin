@@ -24,7 +24,7 @@ module.exports = {
     },
     methods: {
         getSvg: function () {
-            fetchFile('images/index/section1-illust.svg').then(function (res) {
+            fetchFile('images/index/svg/section3.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
                 // this.initGUI();
                 this.initAn();
@@ -49,18 +49,31 @@ module.exports = {
             gui.add(controls, 'pause');
         },
         initAn: function () {
-            this.timeline.set($(this.$refs.svg).find('.js-group'), {
-                transformOrigin: '50% 50%',
-                scale: .3,
-                opacity: 0
-            });
             this.timeline.pause(0);
-            for (let i = 1; i <= 5; i++) {
-                this.timeline.to($(this.$refs.svg).find('.js-group' + i), .5, {
-                    scale: 1,
-                    opacity: 1
-                });
-            }
+
+            // 水波紋
+            this.timeline.to('.js-bg', 1, {
+                scale: 1.5,
+                opacity: 0,
+                repeat: -1,
+                transformOrigin: '50% 50%',
+            });
+
+            // 箭頭
+            let arrowUp = TweenMax.to($(this.$refs.svg).find('.js-arrow-up'), 1, {
+                y: -20,
+                repeat: -1,
+                ease: Linear.easeNone,
+                yoyo: true,
+            });
+            this.timeline.add(arrowUp, 0);
+            let arrowDown = TweenMax.to($(this.$refs.svg).find('.js-arrow-down'), 1, {
+                y: 20,
+                repeat: -1,
+                ease: Linear.easeNone,
+                yoyo: true,
+            });
+            this.timeline.add(arrowDown, 0);
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.svg;

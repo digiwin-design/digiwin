@@ -98,8 +98,13 @@ main {
         }
     }
     .section3 {
-        padding-bottom: 50px;
-        text-align: center;
+        &-illust {
+            margin: 0 auto 74px;
+            max-width: 1120px;
+        }
+        .svgContainer {
+            padding-top: percentage(619 / 1120);
+        }
     }
     .section4 {
         .slider-leftIllust {
@@ -107,6 +112,14 @@ main {
         }
         .svgContainer {
             padding-top: percentage(660 / 1034);
+        }
+    }
+    .section5 {
+        .slider-leftIllust {
+            max-width: 990px;
+        }
+        .svgContainer {
+            padding-top: percentage(675 / 990);
         }
     }
     .section6 {
