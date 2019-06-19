@@ -129,28 +129,14 @@ $(function () {
             '/tw/blog/3/index/1899.html',
         ];
 
-        // 未設定權限僅插入表單的文章
-        let formUrls = [
-            '/tw/blog/3/index/1836.html',
-            '/tw/blog/3/index/1837.html',
-            '/tw/blog/3/index/1850.html',
-            '/tw/blog/3/index/1856.html',
-            '/tw/blog/3/index/1860.html',
-        ];
-
         // 比對網址成功後載入對應的外部連結
         let loginResult = loginUrls.find(function (item) {
             item = item.replace(/(.html|.htm)$/, '');
             let regex = new RegExp(item + '$');
             return currentUrl.search(regex) !== -1;
         });
-        let formResult = formUrls.find(function (item) {
-            item = item.replace(/(.html|.htm)$/, '');
-            let regex = new RegExp(item + '$');
-            return currentUrl.search(regex) !== -1;
-        });
 
-        if (!loginResult && !formResult) return;
+        if (!loginResult) return;
 
         let head = document.querySelector('head');
         let style = document.createElement('link');
@@ -158,17 +144,12 @@ $(function () {
         style.rel = 'stylesheet';
         head.appendChild(style);
 
-        if (loginResult) {
-            let preload = document.createElement('link');
-            preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
-            preload.rel = 'preload';
-            preload.as = 'image';
-            head.appendChild(preload);
+        let preload = document.createElement('link');
+        preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
+        preload.rel = 'preload';
+        preload.as = 'image';
+        head.appendChild(preload);
 
-            $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
-        }
-        else {
-            $.getScript('/tw/dsc/assets/lineMember/js/subscribeForm.min.js');
-        }
+        $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
     })();
 });

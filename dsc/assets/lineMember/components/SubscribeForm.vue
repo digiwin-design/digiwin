@@ -96,12 +96,12 @@ module.exports = {
             axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/member/Save', params)
                 .then(function (res) {
                     this.isLoading = false;
+                    console.log(data);
                     if (!(res.data && res.data.result)) {
                         alert('系統忙碌中，請稍後再試！');
                         console.error(res.data.msg);
                         return;
                     }
-                    console.log(data);
                     alert('訂閱成功');
                     this.name = '';
                     this.email = '';

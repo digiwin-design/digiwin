@@ -20,14 +20,6 @@ axios.get('/tw/dsc/assets/lineMember/formTitle.json')
                 callbackUrl() {
                     return location.origin + location.pathname;
                 },
-                // 插入表單網址
-                formMap() {
-                    return {
-                        '/tw/dsc/dev/demo/line_member': '工業 3.5 專題訂閱',
-                        '/tw/blog/3/index/1897.html': '曹永誠專欄訂閱',
-                        '/tw/blog/3/index/1899.html': '曹永誠專欄訂閱',
-                    };
-                }
             },
             methods: {
                 getParameterByName(name) {
@@ -145,11 +137,11 @@ axios.get('/tw/dsc/assets/lineMember/formTitle.json')
                     params.append('', JSON.stringify(data));
                     axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save', params)
                         .then(res => {
+                            console.log(data);
                             if (!(res.data && res.data.result)) {
                                 console.error(res.data.msg);
                                 return;
                             }
-                            console.log(data);
                         });
                 },
             },
