@@ -6,6 +6,10 @@
         {
             before: '/tw/list.html',
             after: '/tw/ERP/erp-all.html'
+        },
+        {
+            before: '/tw/dsc/marketing/WB002838/WB00283803.htm',
+            after: '/tw/dsc/marketing/WB002838/web/03/'
         }
     ];
 
@@ -127,6 +131,7 @@ $(function () {
             '/tw/dsc/dev/demo/line_member',
             '/tw/blog/3/index/1897.html',
             '/tw/blog/3/index/1899.html',
+            '/tw/blog/3/index/1911.htm',
         ];
 
         // 比對網址成功後載入對應的外部連結
