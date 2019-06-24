@@ -1,8 +1,6 @@
-// Vue.use(VueAwesomeSwiper);
-// httpVueLoader.register(Vue, 'components/intro/HoverBox.vue');
-httpVueLoader.register(Vue, 'components/intro/MainHeader.vue');
-httpVueLoader.register(Vue, 'components/intro/ArticleComponent.vue');
-httpVueLoader.register(Vue, 'components/Contact.vue');
+httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/intro/main-header.vue');
+httpVueLoader.register(Vue, 'components/intro/article-component.vue');
 
 const store = new Vuex.Store({
     state: {

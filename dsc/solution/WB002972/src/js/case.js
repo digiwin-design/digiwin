@@ -1,11 +1,9 @@
-// Vue.use(VueAwesomeSwiper);
-httpVueLoader.register(Vue, 'components/Contact.vue');
-// httpVueLoader.register(Vue, 'components/case/HoverBox.vue');
-httpVueLoader.register(Vue, 'components/case/SliderBanner.vue');
-httpVueLoader.register(Vue, 'components/case/SliderBannerS.vue');
-httpVueLoader.register(Vue, 'components/case/Slider.vue');
-httpVueLoader.register(Vue, 'components/case/ArticleComponent.vue');
-httpVueLoader.register(Vue, 'components/case/HoverBox.vue');
+httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/case/hover-box.vue');
+httpVueLoader.register(Vue, 'components/case/slider-banner.vue');
+httpVueLoader.register(Vue, 'components/case/slider-banner-s.vue');
+httpVueLoader.register(Vue, 'components/case/slider.vue');
+httpVueLoader.register(Vue, 'components/case/article-component.vue');
 
 const store = new Vuex.Store({
     state: {
