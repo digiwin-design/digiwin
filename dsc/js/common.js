@@ -124,7 +124,7 @@ $(function () {
     // 設置文章閱讀權限及插入訂閱表單
     // 表單標題清單：/tw/dsc/assets/lineMember/formTitle.json
     (function () {
-        let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
+        let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
         // 加入閱讀權限的文章
         let loginUrls = [
@@ -132,6 +132,8 @@ $(function () {
             '/tw/blog/3/index/1897.html',
             '/tw/blog/3/index/1899.html',
             '/tw/blog/3/index/1911.htm',
+            '/tw/blog/3/index/1913.htm',
+            '/tw/blog/3/index/1914.htm',
         ];
 
         // 比對網址成功後載入對應的外部連結

@@ -2,7 +2,7 @@
     <div class="subscribe">
         <form @submit.prevent="submit">
             <fieldset>
-                <legend>{{title}}訂閱</legend>
+                <legend>{{title}}專欄訂閱</legend>
                 <div class="subscribe-fields">
                     <div class="subscribe-field">
                         <label for="subscribe-name">姓名</label>
@@ -27,10 +27,14 @@
                         <div v-show="emailErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
                     </div>
                     <div class="subscribe-btns">
-                        <div class="subscribe-submit" v-bind:class="{'is-loading':isLoading}">
-                            <input type="submit" class="btn btn-primary" value="訂閱" />
+                        <div class="subscribe-submit" :class="{'is-loading':isLoading}">
+                            <input type="submit" class="btn btn-primary" value="訂閱">
                         </div>
-                        <a href="https://acho.tw/acho/f/LCOU0" class="subscribe-line" target="_blank">社群訂閱</a>
+                        <a
+                            :href="lineUrl"
+                            class="subscribe-line"
+                            target="_blank"
+                        >社群訂閱</a>
                     </div>
                 </div>
             </fieldset>
@@ -41,7 +45,7 @@
 <script>
 module.exports = {
     name: 'SubscribeForm',
-    props: ['title'],
+    props: ['title', 'lineUrl'],
     data: function () {
         return {
             name: '',
@@ -106,7 +110,20 @@ module.exports = {
                     this.name = '';
                     this.email = '';
                 }.bind(this));
-        }
+        },
+        setFormAnchor: function () {
+            let targetPos = $(this.$el).offset().top;
+            document.querySelector('.list-case-show').querySelectorAll('a').forEach(function (el) {
+                if (el.hash !== '#subscribe') return;
+                el.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    $('html, body').animate({ scrollTop: targetPos });
+                });
+            });
+        },
+    },
+    mounted: function () {
+        this.setFormAnchor();
     },
 }
 </script>
