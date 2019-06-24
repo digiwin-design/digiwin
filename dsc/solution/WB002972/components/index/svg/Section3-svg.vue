@@ -10,9 +10,21 @@ module.exports = {
             target: null
         }
     },
+    computed: {
+        isMobile: function () {
+            return store.state.isMobile;
+        },
+    },
+    watch: {
+        isMobile: function (value) {
+            if (!value && $(this.$refs.svg).is(':empty')) {
+                this.getSvg();
+            }
+        }
+    },
     methods: {
         getSvg: function () {
-            fetchFile('images/index/section4-illust.svg').then(function (res) {
+            fetchFile('images/index/svg/section3.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
                 // this.initGUI();
                 this.initAn();
@@ -37,17 +49,31 @@ module.exports = {
             gui.add(controls, 'pause');
         },
         initAn: function () {
-            this.target = $(this.$refs.svg).find('.js-group');
-            this.timeline.set(this.target, {
-                transformOrigin: '50% 50%',
-                scale: .3,
-                opacity: 0
-            });
             this.timeline.pause(0);
-            this.timeline.staggerTo(this.target, .8, {
-                scale: 1,
-                opacity: 1
-            }, .4);
+
+            // 水波紋
+            this.timeline.to('.js-bg', 1, {
+                scale: 1.5,
+                opacity: 0,
+                repeat: -1,
+                transformOrigin: '50% 50%',
+            });
+
+            // 箭頭
+            let arrowUp = TweenMax.to($(this.$refs.svg).find('.js-arrow-up'), 1, {
+                y: -20,
+                repeat: -1,
+                ease: Linear.easeNone,
+                yoyo: true,
+            });
+            this.timeline.add(arrowUp, 0);
+            let arrowDown = TweenMax.to($(this.$refs.svg).find('.js-arrow-down'), 1, {
+                y: 20,
+                repeat: -1,
+                ease: Linear.easeNone,
+                yoyo: true,
+            });
+            this.timeline.add(arrowDown, 0);
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.svg;
@@ -58,7 +84,9 @@ module.exports = {
         }, 100),
     },
     mounted: function () {
-        this.getSvg();
+        if (!this.isMobile) {
+            this.getSvg();
+        }
     },
     beforeDestroy: function () {
         window.removeEventListener('scroll', this.scrollHandler);

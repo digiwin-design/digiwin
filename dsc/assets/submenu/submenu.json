@@ -264,6 +264,22 @@
                 ]
             },
             {
+                "text": "其它方案",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "清真認證",
+                        "url": "/tw/dsc/event/WB002841/WB00284101.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "食品追蹤追溯",
+                        "url": "/tw/dsc/solution/WB002574/WB00257401.htm",
+                        "target": "_blank"
+                    }
+                ]
+            },
+            {
                 "text": "成功案例",
                 "url": "WB00255301_case"
             },
@@ -439,16 +455,6 @@
                     {
                         "text": "網購接單",
                         "url": "online"
-                    },
-                    {
-                        "text": "清真認證",
-                        "url": "/tw/dsc/event/WB002841/WB00284101.htm",
-                        "target": "_blank"
-                    },
-                    {
-                        "text": "食品追蹤追溯",
-                        "url": "/tw/dsc/solution/WB002574/WB00257401.htm",
-                        "target": "_blank"
                     },
                     {
                         "text": "電子發票",

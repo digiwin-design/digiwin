@@ -10,21 +10,9 @@ module.exports = {
             target: null
         }
     },
-    computed: {
-        isMobile: function () {
-            return store.state.isMobile;
-        },
-    },
-    watch: {
-        isMobile: function (value) {
-            if (!value && $(this.$refs.svg).is(':empty')) {
-                this.getSvg();
-            }
-        }
-    },
     methods: {
         getSvg: function () {
-            fetchFile('images/index/section1-illust.svg').then(function (res) {
+            fetchFile('images/index/svg/section6.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
                 // this.initGUI();
                 this.initAn();
@@ -55,11 +43,12 @@ module.exports = {
                 opacity: 0
             });
             this.timeline.pause(0);
-            for (let i = 1; i <= 5; i++) {
-                this.timeline.to($(this.$refs.svg).find('.js-group' + i), .5, {
+            for (let i = 1; i <= 9; i++) {
+                let offset = i === 1 ? '+=0' : '-=.4';
+                this.timeline.to($(this.$refs.svg).find('.js-group' + i), .8, {
                     scale: 1,
                     opacity: 1
-                });
+                }, offset);
             }
         },
         scrollHandler: _.throttle(function () {
@@ -71,9 +60,7 @@ module.exports = {
         }, 100),
     },
     mounted: function () {
-        if (!this.isMobile) {
-            this.getSvg();
-        }
+        this.getSvg();
     },
     beforeDestroy: function () {
         window.removeEventListener('scroll', this.scrollHandler);

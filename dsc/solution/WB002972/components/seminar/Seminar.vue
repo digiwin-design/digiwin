@@ -121,7 +121,7 @@
 module.exports = {
     props: ['content'],
     components: {
-        'progressBars': httpVueLoader('components/seminar/progressBars/ProgressBars.vue'),
+        'progress-bars': httpVueLoader('components/seminar/progressBars/progress-bars.vue'),
     },
     computed: {
         isMobile: function () {

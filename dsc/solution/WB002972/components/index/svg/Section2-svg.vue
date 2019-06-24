@@ -10,9 +10,21 @@ module.exports = {
             target: null
         }
     },
+    computed: {
+        isMobile: function () {
+            return store.state.isMobile;
+        },
+    },
+    watch: {
+        isMobile: function (value) {
+            if (!value && $(this.$refs.svg).is(':empty')) {
+                this.getSvg();
+            }
+        }
+    },
     methods: {
         getSvg: function () {
-            fetchFile('images/index/section6-illust.svg').then(function (res) {
+            fetchFile('images/index/svg/section2.svg').then(function (res) {
                 this.$refs.svg.innerHTML = res;
                 // this.initGUI();
                 this.initAn();
@@ -37,28 +49,18 @@ module.exports = {
             gui.add(controls, 'pause');
         },
         initAn: function () {
-            this.target = $(this.$refs.svg).find('.js-group');
-            this.timeline.set('#group1', {
-                transformOrigin: '50% 50%',
-                scale: .3,
-                opacity: 0
-            });
-            this.timeline.set(this.target, {
+            this.timeline.set($(this.$refs.svg).find('.js-group'), {
                 transformOrigin: '50% 50%',
                 scale: .3,
                 opacity: 0
             });
             this.timeline.pause(0);
-            this.timeline.to('#group1', .8, {
-                scale: 1,
-                opacity: 1
-            });
-            let group1 = TweenMax.staggerTo(
-                this.target, .8, {
-                scale: 1,
-                opacity: 1
-            }, .4);
-            this.timeline.add(group1, .4);
+            for (let i = 1; i <= 5; i++) {
+                this.timeline.to($(this.$refs.svg).find('.js-group' + i), .5, {
+                    scale: 1,
+                    opacity: 1
+                });
+            }
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.svg;
@@ -69,7 +71,9 @@ module.exports = {
         }, 100),
     },
     mounted: function () {
-        this.getSvg();
+        if (!this.isMobile) {
+            this.getSvg();
+        }
     },
     beforeDestroy: function () {
         window.removeEventListener('scroll', this.scrollHandler);

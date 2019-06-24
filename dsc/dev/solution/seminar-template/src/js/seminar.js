@@ -1,4 +1,4 @@
-httpVueLoader.register(Vue, 'components/Contact.vue');
+httpVueLoader.register(Vue, 'components/contact.vue');
 
 const store = new Vuex.Store({
     state: {
@@ -25,7 +25,7 @@ const store = new Vuex.Store({
 new Vue({
     el: 'main',
     components: {
-        'seminar': httpVueLoader('components/seminar/Seminar.vue'),
+        'seminar': httpVueLoader('components/seminar/seminar.vue'),
     },
     computed: {
         result() {

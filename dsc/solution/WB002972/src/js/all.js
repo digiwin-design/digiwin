@@ -126,7 +126,7 @@ function getScrollPos(el, offset, callback) {
 $(document).on('click', '.js-nav', function (event) {
     event.preventDefault();
     let delay = $(this).data('delay') ? $(this).data('delay') : 0;
-    let target = $(this).attr('href') || $(this).data('target');
+    let target = $(this).attr('href') || $(this).attr('xlink:href') || $(this).data('target');
     setTimeout(() => {
         let offset = $('.page-submenu').outerHeight();
         let targetPos = $(target).offset().top;
