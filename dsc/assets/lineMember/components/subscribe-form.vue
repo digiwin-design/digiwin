@@ -113,7 +113,7 @@ module.exports = {
         },
         setFormAnchor: function () {
             let targetPos = $(this.$el).offset().top;
-            document.querySelector('.list-case-show').querySelectorAll('a').forEach(function (el) {
+            document.querySelectorAll('.list-case-show a').forEach(function (el) {
                 if (el.hash !== '#subscribe') return;
                 el.addEventListener('click', function (event) {
                     event.preventDefault();
