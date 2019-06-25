@@ -100,10 +100,10 @@ main {
     .section3 {
         &-illust {
             margin: 0 auto 74px;
-            max-width: 1120px;
-        }
-        .svgContainer {
-            padding-top: percentage(619 / 1120);
+            max-width: 392px;
+            @media (min-width: $tablet-width + 1) {
+                max-width: 1120px;
+            }
         }
     }
     .section4 {

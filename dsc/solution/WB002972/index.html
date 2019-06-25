@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/tw/static/css/public.css">
     <link rel="stylesheet" href="/tw/static/css/style.css">
     <script src="/tw/static/js/jquery-1.11.3.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find&amp;flags=gated"></script>
+    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&amp;flags=gated"></script>
     <script src="/tw/dsc/assets/modernizr-custom.js"></script>
     <script src="/tw/dsc/assets/mobile-detect.js"></script>
     <script src="/tw/dsc/assets/mobile-detect-modernizr.js" defer=""></script>
@@ -66,7 +66,11 @@
     <div class="container">
         <h1 class="sectionTitle">零售業面對的內憂與外患</h1>
         <div class="section3-illust">
-            <section3-svg></section3-svg>
+            <!-- <section3-svg></section3-svg> -->
+            <picture>
+                <source srcset="images/index/section3-illust.png" media="(min-width:769px)">
+                <img src="images/index/section3-illust-s.png" alt="">
+            </picture>
         </div>
     </div>
 </article>
