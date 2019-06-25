@@ -34,6 +34,8 @@ module.exports = {
     },
     computed: {
         percentages: function () {
+            if (!this.content.progressBars) return null;
+
             // 排序各組數值以取得最大值
             let percentages = [];
             this.content.progressBars.forEach(function (progressBar) {
