@@ -1,6 +1,6 @@
-httpVueLoader.register(Vue, '/tw/dsc/assets/lineMember/components/SubscribeForm.vue');
+httpVueLoader.register(Vue, '/tw/dsc/assets/lineMember/components/subscribe-form.vue');
 
-axios.get('/tw/dsc/assets/lineMember/formTitle.json')
+axios.get('/tw/dsc/assets/lineMember/form.json')
     .then(res => {
         new Vue({
             el: '.list-case-show',
@@ -112,15 +112,14 @@ axios.get('/tw/dsc/assets/lineMember/formTitle.json')
                 },
                 addForm(formMap) {
                     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
-                    for (const key in formMap) {
-                        if (formMap.hasOwnProperty(key)) {
-                            let url = key.replace(/(.html|.htm)$/, '');
-                            if (url === currentUrl) {
-                                let title = formMap[key];
-                                $('.list-case-show').append(`<subscribe-form title="${title}"></subscribe-form>`);
-                            }
+                    formMap.forEach(el => {
+                        let url = el.url.replace(/(.html|.htm)$/, '');
+                        if (url === currentUrl) {
+                            let title = el.title;
+                            let lineUrl = el.lineUrl;
+                            $('.list-case-show').append(`<subscribe-form title="${title}" line-url="${lineUrl}"></subscribe-form>`);
                         }
-                    }
+                    });
                 },
                 addCover() {
                     $('.list-case-show').append('<div class="articleCover"><a href @click.prevent="login">登入看更多</a></div>');
@@ -146,7 +145,7 @@ axios.get('/tw/dsc/assets/lineMember/formTitle.json')
                 },
             },
             created() {
-                this.addForm(res.data);
+                this.addForm(res.data.form);
                 this.addCover();
             },
             mounted() {
