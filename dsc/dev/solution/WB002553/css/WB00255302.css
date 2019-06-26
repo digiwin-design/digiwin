@@ -25,7 +25,7 @@ a:hover{ color:#F00;}
 
 
 /*---------------#BLOCK1--------------------------*/
-#BLOCK1{ width:900px; margin: 0 auto; padding: 10px 0 10px 0; position: relative; overflow:hidden; background-image:url(../images/boxbg_01.png); background-color:#e94609; background-repeat:no-repeat;}
+#BLOCK1{ width:900px; margin: 0 auto; padding: 10px 0 10px 0; position: relative; overflow:hidden; background-image:url(../images/02/boxbg_01.png); background-color:#e94609; background-repeat:no-repeat;}
 #BLOCK1 #LL1{ width:800px; float:left; display:block; margin-top:60px; margin-left:60px; cursor: pointer;}
 
 #BLOCK1 #LL1 h2{ font-weight:bold;font-size:35px;line-height:1.2;font-family:"微軟正黑體", Arial, Helvetica, sans-serif; width:430px; text-align:left; color:#f9a004;}
@@ -43,7 +43,7 @@ a:hover{ color:#F00;}
 /*---------------#BLOCK2--------------------------*/
 #BLOCK2{width:900px; height:510px;
 	background-color:#FAFAFA;
-	background-image:url(../images/boxbg_02s.png);
+	background-image:url(../images/02/boxbg_02s.png);
 	background-repeat:no-repeat;clear:both;
 	background-position:center top;  overflow:hidden;background-color:#fee647; }
 	
@@ -134,9 +134,9 @@ a:hover{ color:#F00;}
 #contactTxt h2 {width: 100%; font-size: 36px; line-height: 36px; color: #fff; margin: 0 0 15px; padding-top: 40px; text-align: left;}
 #contactTxt ul {margin-top: 15px;}
 #contactTxt ul li {padding-left: 30px; line-height: 25px; margin-bottom: 10px;}
-#contactTxt .tel {background: url(../images/icons.png) no-repeat left top;}
-#contactTxt .mail {background: url(../images/icons.png) no-repeat left -25px;}
-#contactTxt .fb {background: url(../images/icons.png) no-repeat left -50px;}
+#contactTxt .tel {background: url(../images/02/icons.png) no-repeat left top;}
+#contactTxt .mail {background: url(../images/02/icons.png) no-repeat left -25px;}
+#contactTxt .fb {background: url(../images/02/icons.png) no-repeat left -50px;}
 #contactTxt #iframeForm { width: 410px; float:left; }
 iframe { width: 100%; margin: 0 0 -10px;}
 
@@ -166,7 +166,7 @@ iframe { width: 100%; margin: 0 0 -10px;}
 
 
 /*----手機------#BLOCK1--------------------------*/
-#BLOCK1{ width:100%; height:auto; margin: 0 auto; padding:2% 8%; position: relative; overflow:hidden; background-image:url(../images/boxbg_01s.png);display:block; float:left; clear:both;background-color:#e94609; background-repeat:no-repeat; }
+#BLOCK1{ width:100%; height:auto; margin: 0 auto; padding:2% 8%; position: relative; overflow:hidden; background-image:url(../images/02/boxbg_01s.png);display:block; float:left; clear:both;background-color:#e94609; background-repeat:no-repeat; }
 
 #BLOCK1 #LL1{ width:100%; float:left; display:block; margin-top:30px; margin-left:0px;}
 
@@ -189,7 +189,7 @@ iframe { width: 100%; margin: 0 0 -10px;}
 /*----手機-------#BLOCK2--------------------------*/
 #BLOCK2{width:100%; height:auto;
 	background-color:#FAFAFA;
-	background-image:url(../images/boxbg_02s.png);
+	background-image:url(../images/02/boxbg_02s.png);
 	background-repeat:no-repeat;clear:both;
 	background-position: left bottom; overflow:hidden; background-color:#fee647; }
 	
@@ -284,9 +284,9 @@ text-align:center;
 width: 100%; font-size: 30px; line-height: 36px; color: #fff; margin: 0 0 15px; padding-top: 40px; text-align: left;}
 #contactTxt ul {margin-top: 15px;}
 #contactTxt ul li {padding-left: 30px; line-height: 25px; margin-bottom: 10px;}
-#contactTxt .tel {background: url(../images/icons.png) no-repeat left top;}
-#contactTxt .mail {background: url(../images/icons.png) no-repeat left -25px;}
-#contactTxt .fb {background: url(../images/icons.png) no-repeat left -50px;}
+#contactTxt .tel {background: url(../images/02/icons.png) no-repeat left top;}
+#contactTxt .mail {background: url(../images/02/icons.png) no-repeat left -25px;}
+#contactTxt .fb {background: url(../images/02/icons.png) no-repeat left -50px;}
 #contactTxt #iframeForm { width:100%; float:left; margin :0% 0%}
 iframe { width: 100%; margin:0% 0%; }
 }
