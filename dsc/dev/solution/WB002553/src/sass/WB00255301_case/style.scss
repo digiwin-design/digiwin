@@ -1,0 +1,20 @@
+@import '../common';
+@import '../case';
+@import 'components';
+
+main {
+    .header {
+        @include headerBg('WB00255301_case/header-bg.jpg');
+    }
+    .section1 {
+        padding-bottom: 93px;
+        .sectionTitle {
+            margin-bottom: calc(1.5em - 15px);
+        }
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

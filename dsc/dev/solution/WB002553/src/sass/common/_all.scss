@@ -38,4 +38,18 @@ main {
         margin-bottom: 2em;
         line-height: 26px;
     }
+    .header {
+        h1 {
+            color: #f0fe11;
+            line-height: 40px;
+            @media (min-width: $tablet-width + 1) {
+                line-height: 55px;
+            }
+        }
+        p {
+            margin-top: .5em;
+            color: #fff;
+            line-height: 26px;
+        }
+    }
 }

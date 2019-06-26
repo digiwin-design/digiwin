@@ -4,7 +4,7 @@
         <div class="case-content">
             <h2>{{content.company}}</h2>
             <h3>{{content.category}}</h3>
-            <vue-text-dot :msg="content.desc"></vue-text-dot>
+            <dot>{{content.description}}</dot>
             <a :href="content.url" target="_blank">繼續閱讀</a>
         </div>
     </div>
@@ -19,7 +19,7 @@ module.exports = {
         },
         content: function () {
             return this.cases.filter(function (val) {
-                return val.id === this.id;
+                return val.id == this.id;
             }.bind(this))[0];
         }
     },

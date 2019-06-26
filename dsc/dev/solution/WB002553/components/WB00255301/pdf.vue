@@ -10,15 +10,22 @@
                 <span id="page_count"></span>
             </span>
         </div>
-
-        <canvas id="the-canvas"></canvas>
+        <canvas v-show="loaded" id="the-canvas"></canvas>
+        <img v-show="!loaded" src="images/WB00255301/loading.svg" class="loading" alt="">
     </div>
 </template>
 
 <script>
 module.exports = {
+    data: function () {
+        return {
+            loaded: false
+        };
+    },
     methods: {
         initPdf: function () {
+            let _this = this;
+
             // If absolute URL from the remote server is provided, configure the CORS
             // header on that server.
             var url = 'decree.pdf';
@@ -55,6 +62,7 @@ module.exports = {
 
                     // Wait for rendering to finish
                     renderTask.promise.then(function () {
+                        _this.loaded = true;
                         pageRendering = false;
                         if (pageNumPending !== null) {
                             // New page rendering is pending
@@ -127,5 +135,8 @@ module.exports = {
     margin-bottom: 1em;
     text-align: center;
 }
+.loading {
+    display: block;
+    margin: 0 auto;
+}
 </style>
-
