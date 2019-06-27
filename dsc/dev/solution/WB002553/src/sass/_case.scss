@@ -1,6 +1,7 @@
 main .case {
     margin: 15px;
     width: 270px;
+    border: 1px solid #ccc;
     &-illust {
         height: 170px;
         background-size: cover;
@@ -10,8 +11,6 @@ main .case {
         position: relative;
         padding: 1em;
         height: 297px;
-        border: 1px solid #ccc;
-        border-top: none;
         background-color: #fff;
     }
     h2 {
