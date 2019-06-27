@@ -8,14 +8,14 @@
 
         <section id="section1">
             <h1 class="sectionTitle">配方管理</h1>
-            <slider id="s1" :nav="nav">
+            <slider id="t1" :nav="nav">
                 <!-- 常見困擾 -->
-                <template slot="s1-0-t">
+                <template slot="t1-0-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【研產銷一致化管理】配方管理</h2>
                     </div>
                 </template>
-                <template slot="s1-0">
+                <template slot="t1-0">
                     <hover-box custom-class="orange icon3">
                         <template slot="content">
                             <p class="hoverBox-title">苦腦的研發</p>
@@ -30,12 +30,12 @@
                 </template >
 
                 <!-- 解決方案 -->
-                <template slot="s1-1-t">
+                <template slot="t1-1-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【研產銷一致化管理】配方管理-其實可以這樣做到…</h2>
                     </div> 
                 </template>
-                <template slot="s1-1">
+                <template slot="t1-1">
                     <div class="slider-illust">
                         <img src="images/WB00255301_produce/slide-illust1.png" alt="">
                     </div>
@@ -46,14 +46,14 @@
 
         <section id="section2">
             <h1 class="sectionTitle">生產管理</h1>
-            <slider id="s2" :nav="nav">
+            <slider id="t2" :nav="nav">
                 <!-- 常見困擾 -->
-                <template slot="s2-0-t">
+                <template slot="t2-0-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【研產銷一致化管理】生產管理</h2>
                     </div>
                 </template>
-                <template slot="s2-0">
+                <template slot="t2-0">
                     <div class="slider-boxs">
                         <div class="slider-box fg1">
                             <hover-box custom-class="pink icon4">
@@ -84,12 +84,12 @@
                 </template >
 
                 <!-- 解決方案 -->
-                <template slot="s2-1-t">
+                <template slot="t2-1-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【研產銷一致化管理】生產管理-其實可以這樣做到…</h2>
                     </div> 
                 </template>
-                <template slot="s2-1">
+                <template slot="t2-1">
                     <div class="slider-illust">
                         <img src="images/WB00255301_produce/slide-illust2.png" alt="">
                     </div>
@@ -100,14 +100,14 @@
 
         <section id="section3">
             <h1 class="sectionTitle">品質管理</h1>
-            <slider id="s3" :nav="nav">
+            <slider id="t3" :nav="nav">
                 <!-- 常見困擾 -->
-                <template slot="s3-0-t">
+                <template slot="t3-0-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【研產銷一致化管理】品質管理</h2>
                     </div>
                 </template>
-                <template slot="s3-0">
+                <template slot="t3-0">
                     <hover-box custom-class="coffee icon6">
                         <template slot="content">
                             <p class="hoverBox-title">品管</p>
@@ -123,12 +123,12 @@
                 </template >
 
                 <!-- 解決方案 -->
-                <template slot="s3-1-t">
+                <template slot="t3-1-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【研產銷一致化管理】品質管理-其實可以這樣做到…</h2>
                     </div> 
                 </template>
-                <template slot="s3-1">
+                <template slot="t3-1">
                     <div class="slider-illust">
                         <img src="images/WB00255301_produce/slide-illust3.png" alt="">
                     </div>

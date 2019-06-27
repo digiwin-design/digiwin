@@ -33,7 +33,9 @@
                         </div>
                     </template>
                     <template slot="t1-1">
-                        <img src="images/WB00255301_period/slide-illust1.png" alt="">
+                        <div class="slider-illust">
+                            <img src="images/WB00255301_period/slide-illust1.png" alt="">
+                        </div>
                         <a href="#contact" class="slider-more js-nav">還有更多效期控管方案說明</a>
                     </template>
                 </tabs>
@@ -77,7 +79,9 @@
                         </div>
                     </template>
                     <template slot="t2-1">
-                        <img src="images/WB00255301_period/slide-illust2.png" alt="">
+                        <div class="slider-illust">
+                            <img src="images/WB00255301_period/slide-illust2.png" alt="">
+                        </div>
                         <a href="#contact" class="slider-more js-nav">還有更多存貨政策方案說明</a>
                     </template>
                 </tabs>
@@ -112,7 +116,9 @@
                         </div>
                     </template>
                     <template slot="t3-1">
-                        <img src="images/WB00255301_period/slide-illust3.png" alt="">
+                        <div class="slider-illust">
+                            <img src="images/WB00255301_period/slide-illust3.png" alt="">
+                        </div>
                         <a href="#contact" class="slider-more js-nav">還有更多應變能力方案說明</a>
                     </template>
                 </tabs>

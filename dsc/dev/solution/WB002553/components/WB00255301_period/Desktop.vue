@@ -8,14 +8,14 @@
 
         <section id="section1">
             <h1 class="sectionTitle">效期控管</h1>
-            <slider id="s1" :nav="nav">
+            <slider id="t1" :nav="nav">
                 <!-- 常見困擾 -->
-                <template slot="s1-0-t">
+                <template slot="t1-0-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【降低報廢】效期控管</h2>
                     </div>
                 </template>
-                <template slot="s1-0">
+                <template slot="t1-0">
                     <hover-box custom-class="main icon1">
                         <template slot="content">
                             <p class="hoverBox-title">生氣的老闆</p>
@@ -32,12 +32,12 @@
                 </template >
 
                 <!-- 解決方案 -->
-                <template slot="s1-1-t">
+                <template slot="t1-1-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【降低報廢】效期控管-其實可以這樣做到…</h2>
                     </div> 
                 </template>
-                <template slot="s1-1">
+                <template slot="t1-1">
                     <div class="slider-illust">
                         <img src="images/WB00255301_period/slide-illust1.png" alt="">
                     </div>
@@ -48,14 +48,14 @@
 
         <section id="section2">
             <h1 class="sectionTitle">存貨政策</h1>
-            <slider id="s2" :nav="nav">
+            <slider id="t2" :nav="nav">
                 <!-- 常見困擾 -->
-                <template slot="s2-0-t">
+                <template slot="t2-0-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【降低報廢】存貨政策</h2>
                     </div>
                 </template>
-                <template slot="s2-0">
+                <template slot="t2-0">
                     <hover-box custom-class="yellow icon2">
                         <template slot="content">
                             <p class="hoverBox-title">崩潰的倉管</p>
@@ -78,12 +78,12 @@
                 </template >
 
                 <!-- 解決方案 -->
-                <template slot="s2-1-t">
+                <template slot="t2-1-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【降低報廢】存貨政策-其實可以這樣做到…</h2>
                     </div> 
                 </template>
-                <template slot="s2-1">
+                <template slot="t2-1">
                     <div class="slider-illust">
                         <img src="images/WB00255301_period/slide-illust2.png" alt="">
                     </div>
@@ -94,14 +94,14 @@
 
         <section id="section3">
             <h1 class="sectionTitle">應變能力</h1>
-            <slider id="s3" :nav="nav">
+            <slider id="t3" :nav="nav">
                 <!-- 常見困擾 -->
-                <template slot="s3-0-t">
+                <template slot="t3-0-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【降低報廢】應變能力</h2>
                     </div>
                 </template>
-                <template slot="s3-0">
+                <template slot="t3-0">
                     <hover-box custom-class="main icon1">
                         <template slot="content">
                             <p class="hoverBox-title">生氣的老闆</p>
@@ -115,12 +115,12 @@
                 </template >
 
                 <!-- 解決方案 -->
-                <template slot="s3-1-t">
+                <template slot="t3-1-t">
                     <div class="slider-desc">
                         <h2 class="slider-desc-title">【降低報廢】應變能力-其實可以這樣做到…</h2>
                     </div> 
                 </template>
-                <template slot="s3-1">
+                <template slot="t3-1">
                     <div class="slider-illust">
                         <img src="images/WB00255301_period/slide-illust3.png" alt="">
                     </div>
