@@ -131,6 +131,14 @@ module.exports = {
 </script>
 
 <style scoped>
+@keyframes animate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 .btn {
     margin-bottom: 1em;
     text-align: center;
@@ -138,5 +146,7 @@ module.exports = {
 .loading {
     display: block;
     margin: 0 auto;
+    transform-origin: 50% 50%;
+    animation: 1s animate infinite linear;
 }
 </style>
