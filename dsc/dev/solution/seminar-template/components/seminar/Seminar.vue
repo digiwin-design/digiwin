@@ -29,7 +29,7 @@
 module.exports = {
     props: ['content'],
     components: {
-        'accordion': httpVueLoader('components/seminar/accordion/accordion.vue'),
+        'accordion': httpVueLoader('components/seminar/accordion.vue'),
         'progress-bars': httpVueLoader('components/seminar/progressBars/progress-bars.vue'),
     },
     computed: {

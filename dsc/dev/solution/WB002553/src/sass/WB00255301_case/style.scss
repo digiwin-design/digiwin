@@ -13,8 +13,17 @@ main {
         }
         &-content {
             display: flex;
+            margin: 0 auto;
             flex-wrap: wrap;
-            justify-content: center;
+            @media (max-width: $content-width + 20) {
+                width: 900px;
+            }
+            @media (max-width: 960px) {
+                width: 600px;
+            }
+            @media (max-width: $tablet-width) {
+                width: 300px;
+            }
         }
     }
 }

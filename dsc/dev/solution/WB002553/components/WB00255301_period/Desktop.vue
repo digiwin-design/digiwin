@@ -1,6 +1,6 @@
 <template>
     <div class="desktop">
-        <ul class="desktop-nav container">
+        <ul class="desktop-nav">
             <li><a href="#section1" class="js-nav icon1" data-text="效期控管"></a></li>
             <li><a href="#section2" class="js-nav icon2" data-text="存貨政策"></a></li>
             <li><a href="#section3" class="js-nav icon3" data-text="應變能力"></a></li>

@@ -1,19 +1,14 @@
 <template>
-    <div class="dot">
+    <div class="dot" :style="{ height: height + 'px' }">
         <slot></slot>
     </div>
 </template>
 
 <script>
 module.exports = {
+    props: ['height'],
     mounted: function () {
         $(this.$el).dotdotdot({ truncate: 'letter' });
     },
 }
 </script>
-
-<style scoped>
-.dot {
-    height: 150px;
-}
-</style>

@@ -2,8 +2,8 @@
     <div ref="accordion" class="accordion">
         <template v-for="(item, idx) in accordion">
             <h2 v-on:click="slideToggle" :key="item.title">
-                {{item.title}}
-                <span>
+                <span class="accordion-title" v-html="item.title"></span>
+                <span class="accordion-more">
                     <i>more</i>
                 </span>
             </h2>
@@ -36,4 +36,53 @@
     </div>
 </template>
 
-<script src="components/seminar/accordion/accordion.min.js"></script>
+<script>
+module.exports = {
+    props: ['accordion'],
+    computed: {
+        isMobile: function () {
+            return store.state.isMobile;
+        }
+    },
+    watch: {
+        isMobile: function (val) {
+            if (val) {
+                this.destroyAccordion();
+            }
+            else {
+                this.initAccordion();
+            }
+        }
+    },
+    methods: {
+        btnClass: function (href) {
+            return href === '#contact';
+        },
+        slideToggle: function (event) {
+            if (this.isMobile) {
+                let target = event.target.tagName === 'H2' ? event.target : $(event.target).parents('h2');
+                $(target).toggleClass('active').next().slideToggle();
+            }
+        },
+        initAccordion: function () {
+            $(this.$refs.accordion).find('h2').removeClass('active');
+            $(this.$refs.accordion).accordion({
+                collapsible: true,
+                heightStyle: 'content',
+            });
+        },
+        destroyAccordion: function () {
+            $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+            $(this.$refs.accordion).accordion('destroy');
+        },
+    },
+    mounted: function () {
+        if (!this.isMobile) {
+            this.initAccordion();
+        }
+        else {
+            $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+        }
+    },
+};
+</script>

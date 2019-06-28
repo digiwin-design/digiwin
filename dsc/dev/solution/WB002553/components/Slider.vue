@@ -9,7 +9,7 @@
             :checked="idx === 0"
         >
 
-        <div class="slider-nav">
+        <div v-if="nav" class="slider-nav">
             <label v-for="(item, idx) in nav" :key="item" :for="id + '-' + idx">{{item}}</label>
         </div>
 
@@ -19,6 +19,12 @@
                     <div class="container">
                         <slot :name="id + '-' + idx + '-t'"></slot>
                         <slot :name="id + '-' + idx"></slot>
+                    </div>
+                </div>
+                <div v-if="!nav" class="slider-slide js-slider-slide">
+                    <div class="container">
+                        <slot :name="id + '-0-t'"></slot>
+                        <slot :name="id + '-0'"></slot>
                     </div>
                 </div>
             </div>

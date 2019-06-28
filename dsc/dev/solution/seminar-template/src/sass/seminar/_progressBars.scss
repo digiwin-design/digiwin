@@ -50,7 +50,7 @@ main .progressBars {
     .bar {
         overflow: hidden;
         width: 0;
-        background-color: #b9b9b9;
+        background-color: map-get($seminar-color, gray);
         color: #fff;
         text-align: right;
         white-space: nowrap;

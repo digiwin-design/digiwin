@@ -51,7 +51,7 @@
                         </div>
                     </template>
                     <template slot="t2-0">
-                        <hover-box custom-class="yellow icon2">
+                        <hover-box custom-class="yellow icon2" :height="300">
                             <template slot="content">
                                 <p class="hoverBox-title">崩潰的倉管</p>
                             </template>

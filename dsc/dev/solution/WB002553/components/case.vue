@@ -4,7 +4,7 @@
         <div class="case-content">
             <h2>{{content.company}}</h2>
             <h3>{{content.category}}</h3>
-            <dot>{{content.description}}</dot>
+            <dot :height="id === 18 ? 120 : 150">{{content.description}}</dot>
             <a :href="content.url" target="_blank">繼續閱讀</a>
         </div>
     </div>

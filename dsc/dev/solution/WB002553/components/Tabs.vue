@@ -1,5 +1,5 @@
 <template>
-    <div ref="tabs" class="tabs">
+    <div ref="tabs" class="tabs" :class="{'padding':nav}">
         <ul class="tabs-tablist">
             <li v-for="(item, idx) in nav" :key="item">
                 <a :href="'#' + id + '-' + idx">{{item}}</a>
@@ -11,6 +11,12 @@
                 <slot :name="id + '-' + idx"></slot>
             </div>
         </div>
+        <div v-if="!nav" class="tabs-tabpanel">
+            <div class="tabs-content">
+                <slot :name="id + '-0-t'"></slot>
+                <slot :name="id + '-0'"></slot>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -20,14 +26,14 @@ module.exports = {
     mounted: function () {
         $(this.$refs.tabs).tabs();
     },
-    beforeDestroy: function() {
+    beforeDestroy: function () {
         $(this.$refs.tabs).tabs('destroy');
     },
 }
 </script>
 
 <style>
-.tabs {
+.tabs.padding {
     padding-top: 30px;
     padding-bottom: 30px;
 }

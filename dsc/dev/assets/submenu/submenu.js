@@ -122,6 +122,14 @@
                     });
                 });
             },
+            openDropdown(event) {
+                $(event.target).parents('li').addClass('is-open').siblings().removeClass('is-open');
+            },
+            closeDropdownHandler(event) {
+                if ($(event.target).parents('.page-submenubox').length !== 1) {
+                    $('.page-submenu-list > li').removeClass('is-open');
+                }
+            },
             resizeHandler() {
                 let menuHeight = this.submenu.offsetHeight;
                 let main = document.querySelector('main');
@@ -138,7 +146,7 @@
                             <ul class="page-submenu-list">
                                 <li v-for="(menu, index) in result.menus">
                                     <span :class="{active:index===activeIndex}">
-                                        <a :href="menu.url" @click.prevent="linkTo(menu.url, menu.target)">{{menu.text}}</a>
+                                        <a :href="menu.url" @click.prevent="linkTo(menu.url, menu.target)" @touchstart="openDropdown">{{menu.text}}</a>
                                     </span>
                                     <ul v-if="menu.dropdowns" class="page-submenu-dropdown">
                                         <li v-for="dropdown in menu.dropdowns">

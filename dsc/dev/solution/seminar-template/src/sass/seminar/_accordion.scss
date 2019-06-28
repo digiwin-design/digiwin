@@ -32,23 +32,23 @@ main .accordion {
                 }
             }
         }
-        span {
+    }
+    &-more {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        width: 71px;
+        height: 71px;
+        pointer-events: none;
+        &::before {
             position: absolute;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            width: 71px;
-            height: 71px;
-            pointer-events: none;
-            &::before {
-                position: absolute;
-                width: 0;
-                height: 0;
-                border-width: 0 0 71px 71px;
-                border-style: solid;
-                border-color: transparent transparent map-get($seminar-color, secondary) transparent;
-                content: '';
-            }
+            width: 0;
+            height: 0;
+            border-width: 0 0 71px 71px;
+            border-style: solid;
+            border-color: transparent transparent map-get($seminar-color, secondary) transparent;
+            content: '';
         }
         i {
             position: absolute;

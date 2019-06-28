@@ -251,8 +251,12 @@
             },
             {
                 "text": "食品安全管理",
-                "url": "WB00255301_5",
+                "url": "javascript:;",
                 "dropdowns": [
+                    {
+                        "text": "食安困擾",
+                        "url": "WB00255301_5"
+                    },
                     {
                         "text": "食安因應",
                         "url": "WB00255301_3"
@@ -260,6 +264,22 @@
                     {
                         "text": "食安研討會",
                         "url": "WB00255301_4"
+                    }
+                ]
+            },
+            {
+                "text": "其它方案",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "清真認證",
+                        "url": "/tw/dsc/event/WB002841/WB00284101.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "食品追蹤追溯",
+                        "url": "/tw/dsc/solution/WB002574/WB00257401.htm",
+                        "target": "_blank"
                     }
                 ]
             },
@@ -439,16 +459,6 @@
                     {
                         "text": "網購接單",
                         "url": "online"
-                    },
-                    {
-                        "text": "清真認證",
-                        "url": "/tw/dsc/event/WB002841/WB00284101.htm",
-                        "target": "_blank"
-                    },
-                    {
-                        "text": "食品追蹤追溯",
-                        "url": "/tw/dsc/solution/WB002574/WB00257401.htm",
-                        "target": "_blank"
                     },
                     {
                         "text": "電子發票",
