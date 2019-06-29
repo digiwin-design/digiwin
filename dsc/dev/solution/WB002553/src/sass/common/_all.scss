@@ -196,7 +196,7 @@ main {
                 list-style-type: disc;
             }
             & > * {
-                width: 100%;
+                max-width: 100%;
             }
         }
         &-more {
