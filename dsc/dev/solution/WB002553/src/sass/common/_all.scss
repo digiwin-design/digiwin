@@ -195,6 +195,9 @@ main {
                 padding-left: 1em;
                 list-style-type: disc;
             }
+            & > * {
+                width: 100%;
+            }
         }
         &-more {
             @include btn(100%, 40px, #fff, $main-color, 0);
