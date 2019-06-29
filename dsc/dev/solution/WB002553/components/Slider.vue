@@ -1,5 +1,5 @@
 <template>
-    <div class="slider">
+    <div class="slider" :style={opacity:opacity}>
         <input
             type="radio"
             v-for="(item, idx) in nav"
@@ -38,12 +38,14 @@ module.exports = {
     data: function () {
         return {
             index: 0,
+            opacity: 1,
         };
     },
     methods: {
         initHeight: function () {
             let _height = this.getHeight(0);
             this.$refs.slides.style.height = _height + 'px';
+            this.opacity = 1;
         },
         changeHandler: function () {
             let _this = this;
@@ -55,19 +57,20 @@ module.exports = {
                 });
             });
         },
-        resizeHandler: _.throttle(function () {
+        resizeHandler: function () {
             if (!this.$refs.slides) return;
             let _height = this.getHeight(this.index);
             this.$refs.slides.style.height = _height + 'px';
-        }, 100),
+            this.opacity = 1;
+        },
         getHeight: function (index) {
             return $(this.$el).find('.js-slider-slide').eq(index).find('.container').outerHeight();
         },
     },
     mounted: function () {
-        this.initHeight();
-        this.changeHandler();
         window.addEventListener('resize', this.resizeHandler);
+        window.addEventListener('load', this.initHeight);
+        this.changeHandler();
     },
     beforeDestroy: function () {
         window.removeEventListener('resize', this.resizeHandler);
