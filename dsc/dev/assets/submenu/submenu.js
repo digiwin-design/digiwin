@@ -33,8 +33,10 @@
         },
         mounted() {
             this.getData();
+            document.querySelector('body').addEventListener('touchstart', (event) => this.closeDropdownHandler(event));
         },
         beforeDestroy() {
+            document.querySelector('body').removeEventListener('touchstart');
             window.removeEventListener('scroll', this.scrollHandler);
         },
         methods: {
