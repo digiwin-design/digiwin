@@ -1,3 +1,7 @@
+$tablet-width: 768px;
+@function getLetterSpacing($num) {
+    @return ($num / 1000) + em;
+}
 main {
     min-width: 360px;
     .section {
@@ -229,10 +233,11 @@ main {
 /*width: 398px;*/
             /*height: 325px;*/
             margin-right: 3px;
+
             &:last-child {
                 margin-right: 0;
             }
-             > div {
+            > div {
                 position: relative;
             }
             .fadeout {
@@ -248,7 +253,7 @@ main {
                     letter-spacing: 10px;
                     font-size: 42px;
                 }
-                 > img {
+                > img {
                     margin-bottom: 30px;
                 }
                 .xtr {
@@ -286,7 +291,7 @@ main {
                 height: 325px;
                 background: #0065a5;
                 text-align: center;
-                 > p {
+                > p {
                     padding: 62px 68px 2.5em;
                     text-align: justify;
                 }
@@ -296,6 +301,7 @@ main {
     #SW-think {
         position: relative;
         height: 981px;
+        border-top: 2px solid #08a1f0;
         background: url('../images/thk-bg.png') no-repeat center center;
         color: #fff;
         h2 {
@@ -508,6 +514,241 @@ main {
         justify-content: center;
         align-items: center;
     }
+    // 製造業
+    .manufacturing {
+        margin: 0 auto;
+        padding-bottom: 113px;
+        @media (max-width: $tablet-width) {
+            padding-bottom: 0;
+            .container {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+        &-title {
+            padding-top: 60px;
+            padding-bottom: 15px;
+            color: #000;
+            text-align: center;
+            line-height: 1.2;
+            @media (max-width: $tablet-width) {
+                font-size: 30px;
+            }
+        }
+        &-desc {
+            margin-bottom: 2em;
+            color: #464646;
+            text-align: center;
+            line-height: 1.75;
+            strong {
+                color: #ff7800;
+            }
+            br {
+                &:nth-of-type(odd) {
+                    display: none;
+                    @media (max-width: $tablet-width) {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &-evolution {
+            margin-bottom: 15px;
+            @media (max-width: $tablet-width) {
+                margin-bottom: 33px;
+            }
+            @at-root {
+                main .manufacturing-evolution .pc {
+                    .manufacturing-evolution-top {
+                        display: flex;
+                        height: 107px;
+                        background-image: linear-gradient(to right, #015a9e, #02d8d5);
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .manufacturing-evolution-bottom {
+                        margin-top: 15px;
+                        .container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        &-content {
+                            display: flex;
+                            padding-top: 15px;
+                            width: 470px;
+                            height: 98px;
+                            letter-spacing: getLetterSpacing(100);
+                            font-weight: bold;
+                            line-height: 24px;
+                            justify-content: center;
+                            align-items: center;
+                            &:first-child {
+                                background: image-url('evolution-content1-bg.png') no-repeat;
+                                color: #02c2cc;
+                            }
+                            &:last-child {
+                                background: image-url('evolution-content2-bg.png') no-repeat;
+                                color: #0175aa;
+                            }
+                        }
+                    }
+                    .manufacturing-evolution-arrow {
+                        margin-right: 20px;
+                        margin-left: 20px;
+                    }
+                }
+                main .manufacturing-evolution .mobile {
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        color: #fff;
+                        align-items: center;
+                        &:nth-of-type(1) {
+                            padding: 1em;
+                            background-color: #02d8d5;
+                        }
+                        &:nth-of-type(2) {
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                        }
+                        &:nth-of-type(3) {
+                            padding: 1em;
+                            background-color: #015c9f;
+                        }
+                        p {
+                            letter-spacing: getLetterSpacing(100);
+                            img {
+                                max-width: 139px;
+                            }
+                            & + p {
+                                margin-top: .5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-main {
+            background: image-url('manufacturing-main-bg.jpg') no-repeat 50% 0;
+            @media (max-width: $tablet-width) {
+                background-image: image-url('manufacturing-main-bg-s.jpg');
+            }
+            .container {
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: $tablet-width) {
+                    flex-direction: column;
+                }
+            }
+            &-col {
+                display: flex;
+                flex-direction: column;
+                width: 470px;
+                height: image-height('manufacturing-main-bg.jpg');
+                color: #fff;
+                justify-content: space-around;
+                @media (max-width: $tablet-width) {
+                    width: 100%;
+                    height: 366.5px;
+                }
+                &::before,
+                &::after {
+                    content: '';
+                }
+            }
+            &-title {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                padding-left: 20px;
+                height: 69px;
+                letter-spacing: getLetterSpacing(100);
+                justify-content: center;
+                @media (max-width: $tablet-width) {
+                    height: 55px;
+                }
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 12px;
+                    height: 69px;
+                    background-color: #fff;
+                    content: '';
+                    @media (max-width: $tablet-width) {
+                        height: 55px;
+                    }
+                }
+                h2 {
+                    margin-bottom: 5px;
+                    font-size: 18px;
+                    line-height: 1;
+                    @media (max-width: $tablet-width) {
+                        font-size: 14px;
+                    }
+                }
+                h1 {
+                    font-size: 36px;
+                    line-height: 1;
+                    @media (max-width: $tablet-width) {
+                        font-size: 29px;
+                    }
+                }
+            }
+            &-body {
+                text-align: center;
+                text-shadow: 2px 0px 16.38px rgba(0, 0, 0, .45);
+                letter-spacing: getLetterSpacing(100);
+                line-height: 24px;
+                p {
+                    font-weight: bold;
+                    font-size: 24px;
+                    @media (max-width: $tablet-width) {
+                        font-size: 19px;
+                    }
+                }
+                li {
+                    font-size: 18px;
+                    @media (max-width: $tablet-width) {
+                        font-size: 14px;
+                    }
+                }
+                strong {
+                    color: #9cf9ff;
+                    font-weight: normal;
+                }
+            }
+            &-btn {
+                display: flex;
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    height: 76px;
+                    background-color: #e94609;
+                    color: #fff;
+                    font-size: 20px;
+                    line-height: 24px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    @media (max-width: $tablet-width) {
+                        height: 61px;
+                        font-size: 16px;
+                    }
+                    &.online {
+                        background-color: #08a1f0;
+                    }
+                    & + a {
+                        margin-left: 12px;
+                    }
+                }
+                strong {
+                    color: #fff000;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -683,7 +924,7 @@ main {
                 &:last-child {
                     margin-right: 0;
                 }
-                 > div {
+                > div {
                     position: relative;
                 }
                 .fadeout {
@@ -695,7 +936,7 @@ main {
                         letter-spacing: 10px;
                         font-size: 42px;
                     }
-                     > img {
+                    > img {
                         margin-bottom: 30px;
                     }
                     .xtr {
@@ -732,7 +973,7 @@ main {
                     width: 100%;
                     background: #0065a5;
                     text-align: center;
-                     > p {
+                    > p {
                         padding: 62px 68px 1.5em;
                         text-align: justify;
                     }
@@ -757,6 +998,7 @@ main {
 
 /*border-bottom: 2px solid #08a1f0;*/
                 text-align: center;
+
                 ul {
                     position: relative;
                     overflow: hidden;
@@ -765,7 +1007,7 @@ main {
                     li {
                         float: left;
                         margin-left: 10%;
-                         >  {
+                        >  {
                             img {
                                 margin: 8% 40% 0 10%;
                             }
@@ -989,6 +1231,7 @@ main {
     height: 0;
     background-color: #000;
     pointer-events: auto;
+
     iframe {
         position: absolute;
         top: 0;
