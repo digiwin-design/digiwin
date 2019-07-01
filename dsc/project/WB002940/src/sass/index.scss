@@ -304,6 +304,9 @@ main {
         border-top: 2px solid #08a1f0;
         background: url('../images/thk-bg.png') no-repeat center center;
         color: #fff;
+        @media (max-width: $tablet-width) {
+            border-top: none;
+        }
         h2 {
             padding-top: 60px;
             padding-bottom: 15px;
