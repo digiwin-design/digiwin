@@ -98,11 +98,18 @@ main {
         }
     }
     .section3 {
+        padding-bottom: 74px;
         &-illust {
-            margin: 0 auto 74px;
-            max-width: 392px;
-            @media (min-width: $tablet-width + 1) {
-                max-width: 1120px;
+            margin: 0 auto;
+            max-width: 1094px;
+            @media (max-width: $tablet-width) {
+                max-width: 392px;
+            }
+        }
+        .svgContainer {
+            padding-top: percentage(619 / 1094);
+            @media (max-width: $tablet-width) {
+                padding-top: percentage(402 / 392);
             }
         }
     }

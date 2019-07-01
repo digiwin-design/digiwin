@@ -66,8 +66,8 @@
     <div class="container">
         <h1 class="sectionTitle">零售業面對的內憂與外患</h1>
         <div class="section3-illust">
-            <!-- <section3-svg></section3-svg> -->
-            <rwd-image-maps></rwd-image-maps>
+            <section3-svg-s v-if="isMobile"></section3-svg-s>
+            <section3-svg v-else></section3-svg>
         </div>
     </div>
 </article>

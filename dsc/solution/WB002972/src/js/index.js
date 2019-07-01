@@ -5,12 +5,12 @@ httpVueLoader.register(Vue, 'components/index/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/index/slider.vue');
 httpVueLoader.register(Vue, 'components/index/svg/section2-svg.vue');
 httpVueLoader.register(Vue, 'components/index/svg/section3-svg.vue');
+httpVueLoader.register(Vue, 'components/index/svg/section3-svg-s.vue');
 httpVueLoader.register(Vue, 'components/index/svg/section4-svg.vue');
 httpVueLoader.register(Vue, 'components/index/svg/section5-svg.vue');
 httpVueLoader.register(Vue, 'components/index/svg/section6-svg.vue');
 httpVueLoader.register(Vue, 'components/index/svg/section7-svg.vue');
 httpVueLoader.register(Vue, 'components/index/slider-title.vue');
-httpVueLoader.register(Vue, 'components/index/rwd-image-maps.vue');
 
 const store = new Vuex.Store({
     state: {
