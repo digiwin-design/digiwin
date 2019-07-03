@@ -6,6 +6,7 @@
             <li><a href="#section3" class="js-nav icon9" data-text="門市專櫃"></a></li>
             <li><a href="#section4" class="js-nav icon10" data-text="網購生意"></a></li>
             <li><a href="#section5" class="js-nav icon11" data-text="觀光工廠"></a></li>
+            <li><a href="/tw/dsc/solution/WB002972/index.html" class="icon15" data-text="新零售" target="_blank"></a></li>
         </ul>
 
         <section id="section1">

@@ -22,7 +22,7 @@ main .desktop {
                 font-size: 20px;
                 line-height: 1;
             }
-            @for $nth from 1 through 14 {
+            @for $nth from 1 through 15 {
                 &.icon#{$nth} {
                     background-image: image-url('nav-icons/icon#{$nth}.png');
                     background-position: 50%;
