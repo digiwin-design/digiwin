@@ -20,4 +20,13 @@ main {
             }
         }
     }
+    .section1 {
+        .illust {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .svgContainer {
+            padding-top: percentage(484 / 1200);
+        }
+    }
 }

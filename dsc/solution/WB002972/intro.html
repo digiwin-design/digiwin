@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="assets/animate.min.css">
     <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
     <script src="js/all.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js" defer></script>
     <link rel="stylesheet" href="css/intro/style.css">
     <script src="js/intro.min.js" defer></script>
     <main v-cloak v-if="result"><main-header>
@@ -39,12 +42,21 @@
 
 <article-component section="section1">
     <template slot="title">零售業的演變</template>
+    <template slot="svg">
+        <section1-svg></section1-svg>
+    </template>
 </article-component>
 
 <article-component section="section2" v-bind:desc="true">
     <template slot="title">零售業的進化</template>
     <template slot="desc-s">零售進化到新零售，已經突破傳統門市消費到網路購物，消費者更在乎的是速度、方便、資訊安全、縮小地域限制、24小時客戶服務及可提供更多服務</template>
     <template slot="desc">零售進化到新零售，已經突破傳統門市消費到網路購物，<br>消費者更在乎的是速度、方便、資訊安全、縮小地域限制、24小時客戶服務及可提供更多服務</template>
+    <template slot="picture">
+        <picture>
+            <source srcset="images/intro/section2-illust.png" media="(min-width:769px)">
+            <img src="images/intro/section2-illust-s.png" alt="">
+        </picture>
+    </template>
 </article-component>
 
 <article-component section="section3" v-bind:desc="true">
@@ -69,18 +81,36 @@
             以人為主就是以消費者體驗為中心<br>
             以心為本就是掌握數據（人心）就是掌握消費者需求
     </template>
+    <template slot="picture">
+        <picture>
+            <source srcset="images/intro/section3-illust.png" media="(min-width:769px)">
+            <img src="images/intro/section3-illust-s.png" alt="">
+        </picture>
+    </template>
 </article-component>
 
 <article-component section="section4" v-bind:desc="true">
     <template slot="title">新零售帶來的挑戰</template>
     <template slot="desc-s">零售進化到新零售，已經突破傳統門市消費到網路購物，消費者更在乎的是速度、方便、資訊安全、縮小地域限制、24小時客戶服務及可提供更多服務</template>
     <template slot="desc">零售進化到新零售，已經突破傳統門市消費到網路購物，<br>消費者更在乎的是速度、方便、資訊安全、縮小地域限制、24小時客戶服務及可提供更多服務</template>
+    <template slot="picture">
+        <picture>
+            <source srcset="images/intro/section4-illust.png" media="(min-width:769px)">
+            <img src="images/intro/section4-illust-s.png" alt="">
+        </picture>
+    </template>
 </article-component>
 
 <article-component section="section5" v-bind:desc="true">
     <template slot="title">面對新挑戰，該如何因應</template>
     <template slot="desc-s">零售進化到新零售，已經突破傳統門市消費到網路購物，消費者更在乎的是速度、方便、資訊安全、縮小地域限制、24小時客戶服務及可提供更多服務</template>
     <template slot="desc">零售進化到新零售，已經突破傳統門市消費到網路購物，<br>消費者更在乎的是速度、方便、資訊安全、縮小地域限制、24小時客戶服務及可提供更多服務</template>
+    <template slot="picture">
+        <picture>
+            <source srcset="images/intro/section5-illust.png" media="(min-width:769px)">
+            <img src="images/intro/section5-illust-s.png" alt="">
+        </picture>
+    </template>
 </article-component>
 
 <contact v-bind:multiple="false" source=""></contact>

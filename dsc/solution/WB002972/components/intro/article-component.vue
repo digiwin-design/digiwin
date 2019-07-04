@@ -8,10 +8,12 @@
                 <slot v-if="isMobile" name="desc-s"></slot>
                 <slot v-else name="desc"></slot>
             </div>
-            <picture>
-                <source :srcset="'images/intro/' + section + '-illust.png'" media="(min-width:769px)">
-                <img :src="'images/intro/' + section + '-illust-s.png'" alt="">
-            </picture>
+            <div class="illust">
+                <slot name="svg"></slot>
+            </div>
+
+            <!-- 靜態圖片待移除 -->
+            <slot name="picture"></slot>
         </div>
     </article>
 </template>

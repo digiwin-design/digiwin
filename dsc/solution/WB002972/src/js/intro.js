@@ -1,6 +1,7 @@
 httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/intro/main-header.vue');
 httpVueLoader.register(Vue, 'components/intro/article-component.vue');
+httpVueLoader.register(Vue, 'components/intro/svg/section1-svg.vue');
 
 const store = new Vuex.Store({
     state: {
