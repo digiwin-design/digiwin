@@ -104,5 +104,168 @@
                 "anchor": "#contact"
             }
         ]
+    },
+    {
+        "id": "WB002783",
+        "title": "製造業",
+        "menus": [
+            {
+                "text": "回首頁",
+                "url": "#/"
+            },
+            {
+                "text": "工廠管理",
+                "url": "#/factoryManage",
+                "dropdowns": [
+                    {
+                        "text": "帳料合一",
+                        "url": "#/factoryLogistics"
+                    },
+                    {
+                        "text": "電子看板",
+                        "url": "#/factoryManage",
+                        "anchor": "#ekb"
+                    },
+                    {
+                        "text": "現場報工",
+                        "url": "#/factoryManage",
+                        "anchor": "#replyWork"
+                    },
+                    {
+                        "text": "電子化SOP",
+                        "url": "#/factoryManage",
+                        "anchor": "#esop"
+                    },
+                    {
+                        "text": "稼動管理",
+                        "url": "#/factoryManage",
+                        "anchor": "#availability"
+                    },
+                    {
+                        "text": "機台整合",
+                        "url": "#/factoryManage",
+                        "anchor": "#machineIntegration"
+                    },
+                    {
+                        "text": "生產排程",
+                        "url": "#/factoryManage",
+                        "anchor": "#productionSchedule"
+                    },
+                    {
+                        "text": "產品回溯",
+                        "url": "#/factoryManage",
+                        "anchor": "#productRecall"
+                    },
+                    {
+                        "text": "外包管理",
+                        "url": "#/factoryManage",
+                        "anchor": "#outsourcing"
+                    }
+                ]
+            },
+            {
+                "text": "製造業議題",
+                "url": "#/",
+                "anchor": "#issue",
+                "dropdowns": [
+                    {
+                        "text": "接單：少量多樣",
+                        "url": "#/customized"
+                    },
+                    {
+                        "text": "因應：急單插單",
+                        "url": "#/order"
+                    },
+                    {
+                        "text": "法令：勞基法新修法",
+                        "url": "/tw/dsc/solution/WB002741/WB00274101",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "法令：電子發票",
+                        "url": "/tw/dsc/solution/WB002742/WB00274201",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "市場：通路佈局",
+                        "url": "#/channelArrange"
+                    }
+                ]
+            },
+            {
+                "text": "輔導案例",
+                "url": "#/case"
+            },
+            {
+                "text": "解決方案",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "APS",
+                        "url": "#/solution",
+                        "anchor": "#APS"
+                    },
+                    {
+                        "text": "MES",
+                        "url": "#/solution",
+                        "anchor": "#MES"
+                    },
+                    {
+                        "text": "SFT",
+                        "url": "#/solution",
+                        "anchor": "#SFT"
+                    },
+                    {
+                        "text": "廠內物流",
+                        "url": "#/factoryLogistics"
+                    },
+                    {
+                        "text": "通路佈局",
+                        "url": "#/channelArrange"
+                    }
+                ]
+            },
+            {
+                "text": "前往各行業",
+                "url": "#otherIndustry",
+                "dropdowns": [
+                    {
+                        "text": "電子",
+                        "url": "/tw/dsc/solution/WB002513/WB00251301",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "機械",
+                        "url": "/tw/dsc/solution/WB002476/WB00247601",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "生技",
+                        "url": "/tw/dsc/solution/WB002543/WB00254301",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "醫材",
+                        "url": "/tw/dsc/solution/WB002785/WB00278501",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "金屬",
+                        "url": "/tw/solution/ListDetail5964",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "塑膠",
+                        "url": "/tw/dsc/solution/WB002554/WB00255401",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "買賣流通業",
+                        "url": "/tw/dsc/solution/WB002675/WB00267501",
+                        "target": "_blank"
+                    }
+                ]
+            }
+        ]
     }
 ]

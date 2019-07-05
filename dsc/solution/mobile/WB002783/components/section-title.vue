@@ -1,13 +1,13 @@
 <template>
-    <div class="sectionTitle">
+    <div class="sectionTitle" :style="style">
         <h1>{{title}}</h1>
-        <p v-show="desc">{{desc}}</p>
+        <p v-show="desc" v-html="desc"></p>
     </div>
 </template>
 
 <script>
 module.exports = {
-    props: ['title', 'desc']
+    props: ['title', 'desc', 'style']
 }
 </script>
 
