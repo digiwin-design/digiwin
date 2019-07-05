@@ -1,0 +1,50 @@
+main > .index {
+    .header {
+        @include headerBg('index/header-bg.jpg', 'index/header-bg.jpg', 100% 0);
+        background-color: #03537c;
+        h1 {
+            color: #ffde00;
+        }
+    }
+    .section1 {
+        padding-bottom: 60px;
+        background-color: #006da0;
+        color: #fff;
+        section {
+            font-weight: bold;
+            h1 {
+                display: inline-block;
+                padding-right: 10px;
+                padding-left: 10px;
+                height: 31px;
+                border-radius: 10px 10px 0 0;
+                text-align: center;
+                line-height: 31px;
+                transform: translateY(1px);
+                &.blue {
+                    background-color: #00a8ff;
+                }
+                &.green {
+                    background-color: #00c0d1;
+                }
+                &.cyan {
+                    background-color: #00c2eb;
+                }
+            }
+            p {
+                padding: 1em;
+                border: 1px solid #fff;
+                border-radius: 0 5px 5px 5px;
+                line-height: 24px;
+            }
+            & + section {
+                margin-top: 20px;
+            }
+        }
+    }
+    .section2 {
+        section {
+            
+        }
+    }
+}
