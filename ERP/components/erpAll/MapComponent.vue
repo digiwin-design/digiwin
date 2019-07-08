@@ -82,6 +82,10 @@ module.exports = {
                     y: '+=20',
                     opacity: 0,
                 })
+                .from('.js-map1-5', .5, {
+                    y: '-=20',
+                    opacity: 0,
+                })
                 .to('.js-bg', 1, {
                     scale: 1.5,
                     opacity: 0,
