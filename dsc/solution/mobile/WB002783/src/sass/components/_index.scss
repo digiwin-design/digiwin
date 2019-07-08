@@ -1,7 +1,6 @@
-main > .index {
+main .index {
     .header {
         @include headerBg('index/header-bg.jpg', 'index/header-bg.jpg', 100% 0);
-        background-color: #03537c;
         h1 {
             color: #ffde00;
         }

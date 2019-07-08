@@ -115,8 +115,12 @@
             },
             {
                 "text": "工廠管理",
-                "url": "#/factoryManage",
+                "url": "javascript:;",
                 "dropdowns": [
+                    {
+                        "text": "工廠管理",
+                        "url": "#/factoryManage"
+                    },
                     {
                         "text": "帳料合一",
                         "url": "#/factoryLogistics"
@@ -165,8 +169,7 @@
             },
             {
                 "text": "製造業議題",
-                "url": "#/",
-                "anchor": "#issue",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "接單：少量多樣",
@@ -227,7 +230,7 @@
             },
             {
                 "text": "前往各行業",
-                "url": "#otherIndustry",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "電子",

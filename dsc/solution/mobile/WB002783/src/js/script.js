@@ -2,6 +2,8 @@ httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, '/tw/dsc/assets/industry-list/industry.vue');
+httpVueLoader.register(Vue, 'components/case/accordion.vue');
+httpVueLoader.register(Vue, 'components/case/case.vue');
 // httpVueLoader.register(Vue, 'components/hover-box.vue');
 // Vue.use(VueAwesomeSwiper);
 
@@ -29,11 +31,15 @@ const router = new VueRouter({
     routes: [
         {
             path: '/factoryManage/:tab?',
-            component: httpVueLoader('components/factoryManage.vue')
+            component: httpVueLoader('pages/factoryManage.vue')
+        },
+        {
+            path: '/case/:tab?',
+            component: httpVueLoader('pages/case.vue')
         },
         {
             path: '/:tab?',
-            component: httpVueLoader('components/index.vue')
+            component: httpVueLoader('pages/index.vue')
         },
     ],
     scrollBehavior(to, from, savedPosition) {
