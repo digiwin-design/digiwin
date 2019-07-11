@@ -22,6 +22,7 @@
                     :key="item.title"
                     :title="item.title"
                     :desc="item.desc"
+                    :url="item.url"
                 ></customized-case>
             </div>
         </article>

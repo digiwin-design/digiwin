@@ -123,6 +123,7 @@
                     let targetPos = $(anchor).offset().top;
                     let offset = $('.page-submenu').outerHeight();
                     $('html, body').animate({ scrollTop: targetPos - offset });
+                    this.closeDropdownHandler();
                 }
                 else if (url && anchor) {
                     window.open(`${url}`, '_self');
@@ -130,12 +131,14 @@
                         let targetPos = $(anchor).offset().top;
                         let offset = $('.page-submenu').outerHeight();
                         $('html, body').animate({ scrollTop: targetPos - offset });
+                        this.closeDropdownHandler();
                     }, 100);
                     this.setPageInfo(url);
                 }
             },
             // 設定頁面資訊
             setPageInfo(url) {
+                if (url === 'javascript:;') return;
                 page = url;
                 this.setActiveIndex();
             },
@@ -143,9 +146,8 @@
                 $(event.target).parents('li').addClass('is-open').siblings().removeClass('is-open');
             },
             closeDropdownHandler(event) {
-                if ($(event.target).parents('.page-submenubox').length !== 1) {
-                    $('.page-submenu-list > li').removeClass('is-open');
-                }
+                if (event && $(event.target).parents('.page-submenubox').length === 1) return;
+                $('.page-submenu-list > li').removeClass('is-open');
             },
             resizeHandler() {
                 let menuHeight = this.submenu.offsetHeight;

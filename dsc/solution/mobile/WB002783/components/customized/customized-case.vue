@@ -1,5 +1,5 @@
 <template>
-    <a href="" class="case">
+    <a :href="url" class="case" target="_blank">
         <section>
             <h1 v-html="title"></h1>
             <p>{{desc}}</p>
@@ -9,7 +9,7 @@
 
 <script>
 module.exports = {
-    props: ['title', 'desc']
+    props: ['title', 'desc', 'url']
 }
 </script>
 
@@ -17,14 +17,14 @@ module.exports = {
     a {
         display: block;
         margin: 0 auto;
-        width: 320px;
         min-height: 162px;
+        width: 320px;
     }
     section {
         position: relative;
         display: flex;
         padding: 1em 2em 1em 1em;
-        height: 100%;
+        min-height: inherit;
     }
     section h1 {
         margin-right: .5em;

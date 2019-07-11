@@ -50,7 +50,7 @@
             </div>
         </article>
 
-        <article class="section4">
+        <article id="productionSchedule" class="section4">
             <div class="container">
                 <section-title
                     title="生產排程"
@@ -62,7 +62,7 @@
             </div>
         </article>
 
-        <article class="section5">
+        <article id="esop" class="section5">
             <div class="container">
                 <section-title
                     title="電子作業指導書(eSOP)"
@@ -94,7 +94,7 @@
             </div>
         </article>
 
-        <article class="section6">
+        <article id="ekb" class="section6">
             <div class="container">
                 <section-title
                     title="電子看板"
@@ -131,7 +131,7 @@
             </div>
         </article>
 
-        <article class="section7">
+        <article id="replyWork" class="section7">
             <div class="container">
                 <section-title
                     title="現場報工"
@@ -142,7 +142,7 @@
             </div>
         </article>
 
-        <article class="section8">
+        <article id="outsourcing" class="section8">
             <div class="container">
                 <section-title
                     title="外包商管理"
@@ -158,7 +158,7 @@
             </div>
         </article>
 
-        <article class="section9">
+        <article id="availability" class="section9">
             <div class="container">
                 <section-title
                     title="稼動管理"
@@ -177,7 +177,7 @@
             </div>
         </article>
 
-        <article class="section10">
+        <article id="machineIntegration" class="section10">
             <div class="container">
                 <section-title
                     title="機台整合"
@@ -195,7 +195,7 @@
             </div>
         </article>
 
-        <article class="section11">
+        <article id="productRecall" class="section11">
             <div class="container">
                 <section-title
                     title="產品回溯"
@@ -204,6 +204,16 @@
                 <p class="section9-desc">「有能力回溯」<br>將是廠商接單基本條件</p>
                 <p class="section9-desc">退貨與客訴是企業最不願意面對的現實，退貨發生當下，除了追出有瑕疵的半成品或成品？來自於哪幾個批號？進一步聚焦產品來源以及賣給了哪些對象？最重要是避免客訴問題再度發生，與減少賠償風險降低損失。近年來客戶稽核的需求愈來愈高，「有能力回溯」已經是廠商接單基本條件之一，產品溯源及品質監控將是提升客戶滿意度，建立品牌競爭力的最佳途徑。</p>
                 <img src="images/factoryManage/section11-illust.png" alt="">
+            </div>
+        </article>
+
+        <article class="section12">
+            <div class="container">
+                <section-title
+                    title="工廠管理案例介紹"
+                    desc="從精密鑄造、粉末治金、手工具、機械業......等，各行各業都有成功案例！"
+                ></section-title>
+                <router-link to="/case/4">立即前往</router-link>
             </div>
         </article>
     </div>

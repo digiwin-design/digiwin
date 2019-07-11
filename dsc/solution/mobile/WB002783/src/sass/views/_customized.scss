@@ -9,12 +9,12 @@ main .customized {
         padding-bottom: 60px;
         .case {
             background-size: cover;
-            @for $i from 1 through 8 {
+            @for $i from 1 through 9 {
                 &:nth-of-type(#{$i}) {
                     background-image: image-url('customized/case-bg#{$i}.jpg');
                 }
             }
-            &:nth-of-type(6) h1 {
+            &:nth-of-type(7) h1 {
                 width: 3.5em;
             }
             & + .case {

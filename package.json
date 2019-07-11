@@ -4,10 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "babel:common": "babel dsc/js/common.js -o dsc/js/common.min.js",
-    "babel:submenu": "babel dsc/assets/submenu/submenu.js -o dsc/assets/submenu/submenu.min.js",
-    "babel:submenu-spa": "babel dsc/assets/submenu-spa/submenu.js -o dsc/assets/submenu-spa/submenu.min.js",
-    "sass:reboot": "node-sass --output-style compressed dsc/css/reboot.scss dsc/css/reboot.css"
+    "babel:common": "babel -w dsc/js/common.js -o dsc/js/common.min.js",
+    "babel:submenu": "babel -w dsc/assets/submenu/submenu.js -o dsc/assets/submenu/submenu.min.js",
+    "babel:submenu-spa": "babel -w dsc/assets/submenu-spa/submenu.js -o dsc/assets/submenu-spa/submenu.min.js",
+    "sass:reboot": "node-sass -w --output-style compressed dsc/css/reboot.scss dsc/css/reboot.css"
   },
   "author": "",
   "license": "ISC",
