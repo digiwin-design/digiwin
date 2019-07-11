@@ -1,13 +1,13 @@
 <template>
-    <div class="sectionTitle" :style="customStyle">
-        <h1>{{title}}</h1>
+    <div class="sectionTitle" :style="{'padding-bottom':padding}">
+        <h1 v-html="title"></h1>
         <p v-show="desc" v-html="desc"></p>
     </div>
 </template>
 
 <script>
 module.exports = {
-    props: ['title', 'desc', 'customStyle']
+    props: ['title', 'desc', 'padding']
 }
 </script>
 

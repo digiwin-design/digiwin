@@ -3,9 +3,12 @@ httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, '/tw/dsc/assets/industry-list/industry.vue');
 httpVueLoader.register(Vue, 'components/case/accordion.vue');
-httpVueLoader.register(Vue, 'components/case/case.vue');
+httpVueLoader.register(Vue, 'components/case.vue');
+httpVueLoader.register(Vue, 'components/customized/customized-case.vue');
+httpVueLoader.register(Vue, 'components/customized/customized-swiper.vue');
+httpVueLoader.register(Vue, 'components/solution/solution-section.vue');
 // httpVueLoader.register(Vue, 'components/hover-box.vue');
-// Vue.use(VueAwesomeSwiper);
+Vue.use(VueAwesomeSwiper);
 
 NProgress.configure({ showSpinner: false });
 
@@ -30,16 +33,36 @@ const store = new Vuex.Store({
 const router = new VueRouter({
     routes: [
         {
+            path: '/solution/:tab?',
+            component: httpVueLoader('views/solution.vue')
+        },
+        {
+            path: '/order/:tab?',
+            component: httpVueLoader('views/order.vue')
+        },
+        {
             path: '/factoryManage/:tab?',
-            component: httpVueLoader('pages/factoryManage.vue')
+            component: httpVueLoader('views/factoryManage.vue')
+        },
+        {
+            path: '/factoryLogistics/:tab?',
+            component: httpVueLoader('views/factoryLogistics.vue')
+        },
+        {
+            path: '/customized/:tab?',
+            component: httpVueLoader('views/customized.vue')
+        },
+        {
+            path: '/channelArrange/:tab?',
+            component: httpVueLoader('views/channelArrange.vue')
         },
         {
             path: '/case/:tab?',
-            component: httpVueLoader('pages/case.vue')
+            component: httpVueLoader('views/case.vue')
         },
         {
             path: '/:tab?',
-            component: httpVueLoader('pages/index.vue')
+            component: httpVueLoader('views/index.vue')
         },
     ],
     scrollBehavior(to, from, savedPosition) {
@@ -61,6 +84,7 @@ router.afterEach((to, from) => {
     }
     if (to.path !== '/seminar') {
         NProgress.done();
+        $('.page-submenu-list > li').removeClass('is-open');
     }
 });
 

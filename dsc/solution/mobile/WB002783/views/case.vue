@@ -31,8 +31,8 @@ module.exports = {
             let offset = document.querySelector('.page-submenu').offsetHeight;
             let targetPos = $(target).offset().top;
             let finalPos = offset ? targetPos - offset : targetPos;
-            $('html, body').animate({ scrollTop: finalPos });
             this.slideDown(target);
+            $('html, body').animate({ scrollTop: finalPos });
         },
         slideDown: function (target) {
             $(target).addClass('active').next().slideDown();

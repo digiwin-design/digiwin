@@ -22,16 +22,12 @@ module.exports = {
         font-size: 20px;
     }
     .desc {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
         line-height: 27px;
     }
     a {
         display: block;
-        height: 40px;
         text-align: center;
         font-weight: bold;
         font-size: 15px;
-        line-height: 40px;
     }
 </style>

@@ -79,6 +79,9 @@ html.no-mobile .page-submenu-dropdown a:hover {
     font-size: 1em;
     line-height: 1.4;
 }
+.page-submenu-dropdown a:hover {
+    color: #333;
+}
 @media (max-width: 1100px) {
     .page-submenu span {
         padding: 0 5px;

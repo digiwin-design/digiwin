@@ -63,9 +63,15 @@ main > .case {
             strong {
                 color: #005d81;
             }
+            .desc {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
             a {
+                height: 40px;
                 background-color: #02568b;
                 color: #fff;
+                line-height: 40px;
             }
         }
     }

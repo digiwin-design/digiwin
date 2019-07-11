@@ -434,10 +434,20 @@ html(lang='zh-Hant-TW')
         link(rel='stylesheet', href='/tw/dsc/assets/submenu-spa/submenu.css')
         script(src='/tw/dsc/assets/submenu-spa/submenu.min.js')
 
+        //- preload
+        link(rel="preload", href="images/case/header-bg.jpg", as="image")
+        link(rel="preload", href="images/channelArrange/header-bg.jpg", as="image")
+        link(rel="preload", href="images/customized/header-bg.jpg", as="image")
+        link(rel="preload", href="images/factoryLogistics/header-bg.jpg", as="image")
+        link(rel="preload", href="images/factoryManage/header-bg.jpg", as="image")
+        link(rel="preload", href="images/index/header-bg.jpg", as="image")
+        link(rel="preload", href="images/order/header-bg.jpg", as="image")
+        link(rel="preload", href="images/solution/header-bg.jpg", as="image")
+        
         //- swiper
-        //- link(rel="stylesheet", href="assets/swiper.css")
-        //- script(src="assets/swiper.js", defer)
-        //- script(src="assets/vue-awesome-swiper.js", defer)
+        link(rel="stylesheet", href="assets/swiper.min.css")
+        script(src="assets/swiper.min.js", defer)
+        script(src="assets/vue-awesome-swiper.js", defer)
 
         //- NProgress
         link(rel="stylesheet", href="assets/nprogress.css")

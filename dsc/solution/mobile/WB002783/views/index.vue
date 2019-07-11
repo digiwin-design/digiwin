@@ -44,10 +44,10 @@
             <div class="container">
                 <section-title
                     title="少量多樣已是市場趨勢，要改變的絕不只是接單模式"
-                    custom-style="padding-bottom:1em"
+                    padding="1em"
                 ></section-title>
                 <p>客戶的下單習慣已轉向少量多樣、生產週期要求更短，需求變動也愈趨頻繁研發速度、庫存備料、訂單進度、生產效率、換線換模、交期承諾、品質要求，要調整可不只是這些，企業的挑戰這時正要開始......</p>
-                <a href="/tw/dsc/solution/WB002783/WB00278301_customized.html"><span>了解因應客製化議題之精簡化<i>與高速化的管理模式</i></span></a>
+                <router-link to="/customized/3"><span>了解因應客製化議題之精簡化<i>與高速化的管理模式</i></span></router-link>
             </div>
         </article>
 
@@ -55,11 +55,11 @@
             <div class="container">
                 <section-title
                     title="工廠管理從串連起每一個重要環節開始！"
-                    custom-style="padding-bottom:1em"
+                    padding="1em"
                 ></section-title>
                 <p>工廠管理除了最基本的生產進度與品質管控，生產現場資訊能否即時回饋？生產現場是否有異常監控？正因為即時反應的速度關係到事後改善的成效，過去只能透過電話或親赴現場詢問狀況的作法已經過時，未來您可以透過系統提供的製程變更、線上派工、電子看板及機台查詢等功能，快速的更新資料，即時調整生產狀況。從接單、投料、製造、外包、至完工入庫，全程掌握生產資訊一點都不難！</p>
                 <img src="images/index/section4-illust.png" alt="">
-                <a href="/tw/dsc/solution/WB002783/WB00278301_factoryManage.html">了解更多</a>
+                <router-link to="/factoryManage/2">了解更多</router-link>
             </div>
         </article>
 

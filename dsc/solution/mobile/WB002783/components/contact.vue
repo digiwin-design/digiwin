@@ -38,7 +38,7 @@
                         <label for="contact-demand08"><input name="contact-demand" class="contact-demand" id="contact-demand08" type="checkbox" value="其他" /> 其他</label>
                     </div>
                     <div v-else class="inforCheck">
-                        <label for="dm_ask"> <input name="information" class="information" id="dm_ask" type="checkbox" value="資料索取">索取相關資料</label> 
+                         <label for="dm_ask"> <input name="information" class="information" id="dm_ask" type="checkbox" value="資料索取">索取製造業相關資料</label> 
                     </div>
                     <hr>
                     <div class="verifica">
