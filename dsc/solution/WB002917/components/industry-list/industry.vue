@@ -9,7 +9,7 @@
 <script>
 module.exports = {
     computed: {
-        list: function () {
+        list: function() {
             return [
                 {
                     "text": "製造業",
@@ -80,6 +80,14 @@ module.exports = {
                     "link": "/tw/solution/ListDetail5967.html"
                 },
                 {
+                    "text": "接案管理",
+                    "link": "/tw/dsc/solution/WB002752/WB00275201.html"
+                },
+                {
+                    "text": "電子發票",
+                    "link": "/tw/dsc/solution/WB002742/WB00274201.html"
+                },
+                {
                     "text": "工程業",
                     "link": "/tw/dsc/solution/WB002899/WB00289901.html"
                 }
@@ -89,4 +97,4 @@ module.exports = {
 };
 </script>
 
-<style src="/tw/dsc/assets/industry-list/industry.css"></style>
+<style src="components/industry-list/industry.css"></style>
