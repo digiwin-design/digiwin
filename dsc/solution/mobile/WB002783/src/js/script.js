@@ -1,13 +1,12 @@
 httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
-httpVueLoader.register(Vue, '/tw/dsc/assets/industry-list/industry.vue');
+httpVueLoader.register(Vue, '/tw/dsc/assets/industry-list-v2/industry.vue');
 httpVueLoader.register(Vue, 'components/case/accordion.vue');
 httpVueLoader.register(Vue, 'components/case.vue');
 httpVueLoader.register(Vue, 'components/customized/customized-case.vue');
 httpVueLoader.register(Vue, 'components/customized/customized-swiper.vue');
 httpVueLoader.register(Vue, 'components/solution/solution-section.vue');
-// httpVueLoader.register(Vue, 'components/hover-box.vue');
 Vue.use(VueAwesomeSwiper);
 
 NProgress.configure({ showSpinner: false });

@@ -66,7 +66,7 @@
         <article class="section5">
             <div class="container">
                 <section-title
-                    title="各行各業，獨到專精"
+                    title="每個產業，我們都是專家"
                     desc="<p>累積30多年產業輔導經驗，50,000 多家企業成功案例<br>轉化成行業解決方案，提供您最佳服務與支援</p>"
                 ></section-title>
                 <industry></industry>
