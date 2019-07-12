@@ -76,10 +76,11 @@
                         this.setCurrentPage(menu.text);
                         return true;
                     } else if (menu.dropdowns) {
-                        menu.dropdowns.forEach(dropdown => {
+                        return menu.dropdowns.some(dropdown => {
                             if (dropdown.url === page) {
                                 this.activeIndex = index;
                                 this.setCurrentPage(dropdown.text);
+                                return true;
                             }
                         });
                     }

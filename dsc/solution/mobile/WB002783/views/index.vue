@@ -2,11 +2,13 @@
     <div class="index">
         <main-header>
             <template slot="content">
-                <h1>
-                    廠長的一天就從
-                    <br />晨會與巡廠開始嗎?
-                </h1>
-                <p>晨會午會一個接一個，每天巡5s缺失改善一直提，還有業務、採購、生產開不完的協調會，為什麼還是有處理不完的狀況？</p>
+                <router-link to="/factoryManage/2">
+                    <h1>
+                        廠長的一天就從
+                        <br />晨會與巡廠開始嗎?
+                    </h1>
+                    <p>晨會午會一個接一個，每天巡5s缺失改善一直提，還有業務、採購、生產開不完的協調會，為什麼還是有處理不完的狀況？</p>
+                </router-link>
             </template>
         </main-header>
 
@@ -64,6 +66,22 @@
         </article>
 
         <article class="section5">
+            <div class="container">
+                <section-title title="研討會資訊"></section-title>
+                <div class="section5-content">
+                    <div class="section5-illust">
+                        <img src="images/index/section5-illust.jpg" alt="">
+                    </div>
+                    <div class="section5-text">
+                        <h2>打造透明高效智能化工廠，提高存貨管理力-智能製造方案應用暨智物流成功案例分享</h2>
+                        <p>企業轉型智慧製造成為近幾年最重要的議題之一，轉型的關鍵在於新技術及新應用的實踐與效益，鼎新電腦四月起於台中、桃園、高雄、台北接連舉辦《打造透明高效智能化工廠，提升存貨管理力》研討會，由鼎新電腦智能中心 蘇景峯專家、朱昭熹顧問經理、李訓仁總監分享企業轉型智慧製造的路徑，以及鼎新如何透過全程服務為製造產業規劃軟硬整合一體化的智能製造解決方案，從管理診斷到構建智能製造方案的實施路徑，協助企業提升營運核心的各項競爭能力。</p>
+                        <a href="/tw/dsc/activity/WB002844/WB00284403.htm" target="_blank">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="section6">
             <div class="container">
                 <section-title
                     title="每個產業，我們都是專家"

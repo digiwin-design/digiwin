@@ -16,8 +16,12 @@
                 <p>B2B、B2C或是B2B2C的通路銷售模式，不同的通路銷售型態支持的管理與作業方式亦有所差異，經銷通路、連鎖賣場通路、電視購物、自有門市、百貨設櫃、網購電商勝或近年興起的觀光工廠的銷售通路管理，如何有效聚焦在「通路、商品、庫存、促銷」的銷售決策考量上，才是面對市場取得營收的重點所在！</p>
                 <dl>
                     <template v-for="item in result.channelArrange.section1">
-                        <dt :key="item.term">{{item.term}}</dt>
-                        <dd :key="item.desc">{{item.desc}}</dd>
+                        <dt :key="item.term">
+                            <a :href="item.url" target="_blank">{{item.term}}</a>
+                        </dt>
+                        <dd :key="item.desc">
+                            <a :href="item.url" target="_blank">{{item.desc}}</a>
+                        </dd>
                     </template>
                 </dl>
             </div>

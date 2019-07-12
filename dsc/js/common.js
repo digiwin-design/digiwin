@@ -83,6 +83,39 @@
             desktop: '/tw/dsc/solution/WB002742/WB00274201_solution',
             mobile: '/tw/dsc/solution/mobile/WB002742/index#/solution'
         },
+        // 製造業
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/'
+        },
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301_factoryManage',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/factoryManage'
+        },
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301_factoryLogistics',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/factoryLogistics'
+        },
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301_customized',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/customized'
+        },
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301_order',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/order'
+        },
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301_channelArrange',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/channelArrange'
+        },
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301_case',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/case'
+        },
+        {
+            desktop: '/tw/dsc/solution/WB002783/WB00278301_solution',
+            mobile: '/tw/dsc/solution/mobile/WB002783/index#/solution'
+        },
     ];
 
     // 判斷目的裝置

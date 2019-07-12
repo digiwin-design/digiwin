@@ -10,12 +10,17 @@ main .channelArrange {
         dl {
             margin-top: 1em;
         }
-        dt {
+        dt a {
             color: #ee5f47;
             font-weight: bold;
         }
-        dd + dt {
-            margin-top: 1em;
+        dd {
+            a:hover {
+                color: #333;
+            }
+            & + dt {
+                margin-top: 1em;
+            }
         }
     }
     .section2 {
