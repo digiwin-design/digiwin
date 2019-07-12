@@ -121,7 +121,7 @@
 <script>
 module.exports = {
     components: {
-        'IndustryList': httpVueLoader('../../../../assets/industry-list/industry.vue'),
+        'IndustryList': httpVueLoader('../../../../assets/industry-list-v2/industry.vue'),
         LocalSwiper: VueAwesomeSwiper.swiper,
         LocalSlide: VueAwesomeSwiper.swiperSlide,
     },

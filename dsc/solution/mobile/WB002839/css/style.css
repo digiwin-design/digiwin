@@ -80,7 +80,6 @@ main .header h2 {
 }
 main .moreBtn {
   display: block;
-  height: 50px;
   border-radius: 0;
   background-color: transparent;
   color: #00b0bd;
@@ -340,21 +339,19 @@ main > .WB00283901 .section5 .swiper-pagination-bullet-active {
   background-color: #00b0bd;
 }
 main > .WB00283901 .section6 {
-  background-color: #00b0bd;
-  color: #fff;
+  background-color: #f3f3f3;
 }
 main > .WB00283901 .section6 .container {
   padding-bottom: 40px;
 }
 main > .WB00283901 .section6 h1 {
   margin-bottom: 14px;
-  font-size: 36px;
+  color: #0e7aa7;
+  font-size: 30px;
 }
 main > .WB00283901 .section6 p {
   margin-bottom: 40px;
   text-align: center;
-  font-size: 20px;
-  line-height: 30px;
 }
 
 main > .manufacture .header {
@@ -462,7 +459,7 @@ main > .manufacture .section3 h2::after {
   content: '';
 }
 main > .manufacture .section3 h2.ui-accordion-header-collapsed::after {
-  background-image: url('../images/accordion-open-icon.png?1539921961');
+  background-image: url('../images/accordion-open-icon.png?1558758749');
 }
 main > .manufacture .section3 h2:focus {
   outline: none;
@@ -671,7 +668,7 @@ main > .merchandise .section2 h2::after {
   content: '';
 }
 main > .merchandise .section2 h2.ui-accordion-header-collapsed::after {
-  background-image: url('../images/accordion-open-icon.png?1539921961');
+  background-image: url('../images/accordion-open-icon.png?1558758749');
 }
 main > .merchandise .section2 h2:focus {
   outline: none;
@@ -978,7 +975,6 @@ main > .case .nav input[type=radio]:checked + label {
 }
 main > .case .nav label {
   display: block;
-  height: 50px;
   border-radius: 25px;
   background-color: transparent;
   color: #00b0bd;
@@ -1354,7 +1350,6 @@ main > .inventory .section3 {
 }
 main > .inventory .section3-btn {
   display: block;
-  height: 65px;
   border-radius: 0;
   background-color: #f37f0e;
   color: #fff;
@@ -1445,7 +1440,7 @@ main > .inventory .section4 a + a {
 }
 main > .inventory .section4 a::after {
   height: 29px;
-  background-image: url('../images/../images/inventory/section4-icon.png?1552550105');
+  background-image: url('../images/../images/inventory/section4-icon.png?1558758749');
   width: 29px;
   position: absolute;
   top: 50%;
