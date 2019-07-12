@@ -15,13 +15,6 @@ module.exports = {
             return store.state.isMobile;
         },
     },
-    watch: {
-        isMobile: function (value) {
-            if (!value && $(this.$refs.svg).is(':empty')) {
-                this.getSvg();
-            }
-        }
-    },
     methods: {
         getSvg: function () {
             fetchFile('images/intro/svg/section1.svg').then(function (res) {
@@ -72,9 +65,7 @@ module.exports = {
         }, 100),
     },
     mounted: function () {
-        if (!this.isMobile) {
-            this.getSvg();
-        }
+        this.getSvg();
     },
     beforeDestroy: function () {
         window.removeEventListener('scroll', this.scrollHandler);
