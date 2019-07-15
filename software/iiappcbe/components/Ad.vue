@@ -67,7 +67,7 @@ module.exports = {
 <style>
 .ad {
   position: fixed;
-  right: 20px;
+  right: 110px;
   bottom: 0;
   z-index: 10;
 }
