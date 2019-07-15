@@ -409,7 +409,7 @@ p {
 #loading p i {
   display: block;
   height: 24px;
-  background: url("/tw/eform/images/loading.gif") no-repeat center center;
+  background: url("http://www.digiwin.com/images/Eform/loading.gif") no-repeat center center;
   margin-bottom: 15px;
 }
 
@@ -440,13 +440,15 @@ a.NOWTAB:hover{ color:#ffffff; background:#0d8fcb ;height:60px; position:absolut
 
 .BOXS{ clear:both; width:100%; /* [disabled]height:600px; */ overflow:auto; padding:40px; position:relative; background-repeat:no-repeat; background-color:#FFF; border-radius:5px; border:1px solid #0d8fcb; }
 
+.contentA{overflow: hidden; display:block; float: left; width: 100%; height: auto;clear: both;}
+	
+.contentB{overflow: hidden; display:block; float: left; width: 100%; height: auto;clear: both;margin-top: 0px; border-top:#ffffff 0px solid; padding-top: 0px; }
 
 
+#TAB1, #TAB2, #TAB3, #TAB4{border:1px solid #0d8fcb;}
 
-#TAB1, #TAB2{border:1px solid #0d8fcb;}
 
-
-#TAB3, #TAB4, #TAB5, #TAB6, #TAB7, #TAB8{background:#e8e8e8 ;border:1px solid #afafaf;color:#afafaf;}
+#TAB5, #TAB6, #TAB7, #TAB8{background:#e8e8e8 ;border:1px solid #afafaf;color:#afafaf;}
 
 .tabMenu::before {
   display: table;
@@ -461,21 +463,29 @@ a.NOWTAB:hover{ color:#ffffff; background:#0d8fcb ;height:60px; position:absolut
 
 /*自主應用，智享服務--------------------------------------------*/
 
-.title{ font-size: 28px; padding: 10px 0;}
+.title{ font-size: 30px; padding: 10px 30px;}
 .blocks h4{font-weight: bold}
 .blocks{width: 100% ; height: auto; float: left; display: block;overflow: hidden;  }
-.blocks_line{background: url("../images/web/bg.png") no-repeat center center;} 
-.block{ width: 30% ;height: auto; overflow: hidden; float: left; display: block;}
-.block_left{margin-right:50px; padding: 0px 10px 0px 10px; }
-.block_right{ padding-left: 10px;}
+.blocks_line{background: url("../images/web/bg.png") no-repeat top center;} 
+.block{ width: 100% ;height: auto; overflow: hidden; float: left; display: block;}
+.block50{ width: 48% ;height: auto; overflow: hidden; float: left; display: block;}
 
-.block h4{ font-size: 20px;color:#0d8fcb; padding-bottom: 10px; }
+.block60{ width: 50% ;height: auto; overflow: hidden; float: left; display: block;}
+.block_left{margin-right:0px; padding: 0px 10px 0px 60px; }
+.block_left60{margin-right:0px; padding: 0px 0px 0px 60px; }
+.block_right{ padding-left: 0px;}
 
-.block p{ font-size: 18px; }
+.block h4, .block50 h4, .block60 h4{ font-size: 24px;color:#0d8fcb; padding-bottom: 10px;margin-top: 20px; }
 
-.block img{ margin-bottom: 40px; max-width: 100%;}
+.block p, .block50 p, .block60 p{ font-size: 18px; }
+
+
+
+.block img{ margin-bottom: 40px; max-width: 100%; margin-right: 60px;}
+.block60 img{ margin-bottom: 40px; max-width: 100%; margin-right: 0px;}
+.block50 img { margin-bottom: 40px; max-width: 100%; margin-right: 10px;}
 .fontbold {font-weight: bold}
-
+.fontbold2 {font-weight: bold;font-size: 15px;}
 .block .link2{
 	max-width: 310px; border-radius: 5px; line-height: 60px; text-align: center; 
 }
@@ -574,7 +584,18 @@ a.NOWTAB:hover{ color:#ffffff; background:#0d8fcb ;height:60px; position:absolut
 
 
 @media (max-width:1024px) {
-.blocks_line{background: url("../images/web/bgspace.jpg") repeat;} }
+.blocks_line{background: url("../images/web/bgspace.jpg") repeat;} 
+
+.block50{ width: 100% ;height: auto; overflow: hidden; float: left; display: block;}
+.block p, .block50 p{ font-size: 18px; }
+.block50 img { margin-bottom: 40px; max-width: 100%; margin-right: 10px;}	
+.block h4, .block50 h4{ font-size: 22px;color:#0d8fcb; padding-bottom: 10px; }
+.block img{ margin-bottom: 40px; max-width: 100%; margin-right: 60px;}
+
+.block60{ width: 100% ;height: auto; overflow: hidden; float: left; display: block;}
+}
+.block60 img{ margin-bottom: 40px; max-width: 100%; margin-right: 0px;}
+.block_left60{margin-right:0px; padding: 0px 0px 0px 60px; }
 
 
 @media (max-width: 480px) {
@@ -728,27 +749,25 @@ a.NOWTAB:hover{ color:#ffffff; background:#0d8fcb ;height:60px; position:absolut
 
 
 
-#TAB1, #TAB2{border:1px solid #0d8fcb;}
+#TAB1, #TAB2, #TAB3, #TAB4 {border:1px solid #0d8fcb;}
 
 
-#TAB3, #TAB4, #TAB5, #TAB6, #TAB7, #TAB8{background:#e8e8e8 ;border:1px solid #afafaf;color:#afafaf;}
+#TAB5, #TAB6, #TAB7, #TAB8{background:#e8e8e8 ;border:1px solid #afafaf;color:#afafaf;}
 
 
-.title{ font-size: 28px; padding: 10px 0;}
+.title{ font-size: 28px; padding: 10px 0px;}
 .blocks{width: 100% ; height: auto; float: left; display: block;overflow: hidden;}
 .blocks_line{background: url("../images/web/bgspace.jpg") repeat;} 
 .block{ width: 100% ;height: auto; overflow: hidden; float: left; display: block;}
 	
-.block_left{margin-right: 30px;}
-.block_right{ margin-right: 0px; }
-
-.block h4{ font-size: 22px;color:#0d8fcb; padding-bottom: 10px; }
-
-.block p{ font-size: 18px; }
-
+.block_left{margin-right: 30px; padding: 0px 0px 0px 0px; }
+.block_right{ margin-right: 0px; padding-left:0px; }
+		
+.block50{ width: 100% ;height: auto; overflow: hidden; float: left; display: block;}
+.block p, .block50 p{ font-size: 18px; }
+.block50 img { margin-bottom: 40px; max-width: 100%; margin-right: 10px;}	
+.block h4, .block50 h4{ font-size: 22px;color:#0d8fcb; padding-bottom: 10px; }
 .block img{ margin-bottom: 40px;}
-
-
 .block .link2{
 	border-radius: 5px; line-height: 60px; text-align: center; 
 }
@@ -759,5 +778,6 @@ a.NOWTAB:hover{ color:#ffffff; background:#0d8fcb ;height:60px; position:absolut
 }
 
 @media (max-width: 360px) {
-  /* ==================== banner ==================== */
+
+	
 }

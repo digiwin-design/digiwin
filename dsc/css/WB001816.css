@@ -1,5 +1,6 @@
 @charset "big5";
-img { border:0;}
+img {border:0;}
+img {vertical-align:bottom;}
 body {
 	font-family: "微軟正黑體","新細明體",Arial, Helvetica, sans-serif;
 	font-size: 13px;
