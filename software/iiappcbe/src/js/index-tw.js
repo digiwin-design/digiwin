@@ -1,5 +1,26 @@
 httpVueLoader.register(Vue, 'components/HoverBox.vue');
+httpVueLoader.register(Vue, 'components/Ad.vue');
+httpVueLoader.register(Vue, 'components/MenuMask.vue');
 Vue.use(VueAwesomeSwiper);
+
+const store = new Vuex.Store({
+    state: {
+        isMobile: false,
+        showMask: true,
+        showAd: true,
+    },
+    mutations: {
+        updateDevice(state, payload) {
+            state.isMobile = payload;
+        },
+        toggleMask(state, payload) {
+            state.showMask = payload;
+        },
+        toggleAd(state, payload) {
+            state.showAd = payload;
+        },
+    }
+});
 
 new Vue({
     el: '#section1-app',
@@ -121,4 +142,29 @@ new Vue({
             <span class="section5-caption">{{caption}}</span>
         </div>
     `
+});
+
+new Vue({
+    el: '#ad',
+    methods: {
+        mediaSensor: _.throttle(function () {
+            let mm = window.matchMedia('(min-width: 769px)');
+            mm.addListener(this.resizeWidth);
+            this.resizeWidth(mm);
+        }, 100),
+        resizeWidth(pMatchMedia) {
+            let isMobile = pMatchMedia.matches ? false : true;
+            store.commit('updateDevice', isMobile);
+            if (!isMobile) {
+                store.commit('toggleMask', false);
+            }
+        },
+    },
+    mounted() {
+        window.addEventListener('resize', this.mediaSensor);
+        this.mediaSensor();
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.mediaSensor);
+    }
 });
