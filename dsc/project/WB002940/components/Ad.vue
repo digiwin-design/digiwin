@@ -42,14 +42,19 @@ module.exports = {
             store.commit('toggleMask', false);
             store.commit('toggleAd', false);
         },
-        adController() {
+        checkTime() {
             let showAd = dayjs().isBetween('2019-07-15', '2019-07-24');
             store.commit('toggleAd', showAd);
+            
+            let beforeEnd = dayjs().isBefore(dayjs('2019-07-24'));
+            if (!beforeEnd) return;
+            
+            setTimeout(this.checkTime, 1000);
         }
     },
     created() {
         dayjs.extend(dayjs_plugin_isBetween);
-        this.adController();
+        this.checkTime();
     },
 }
 </script>
