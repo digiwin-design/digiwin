@@ -1,7 +1,7 @@
-$tablet-width: 768px;
-@function getLetterSpacing($num) {
-    @return ($num / 1000) + em;
-}
+@import 'common/variable';
+@import 'common/helpers';
+@import 'common/all';
+
 main {
     min-width: 360px;
     .section {
@@ -63,9 +63,10 @@ main {
             margin-top: 110px;
         }
         h3 {
-            padding-top: 36px;
+            padding-top: 24px;
             padding-bottom: 14px;
             letter-spacing: 1.8px;
+            line-height: 1;
         }
         .SW-Case {
             display: block;
@@ -78,7 +79,21 @@ main {
             line-height: 55px;
         }
         a {
-            display: inline-block;
+            @include btn(340px, 55px, #fff, #ff6000);
+            display: flex;
+            margin: 0 auto;
+            padding-right: 10px;
+            padding-left: 18px;
+            justify-content: space-between;
+            align-items: center;
+            &::after {
+                @include imgBg('play-icon.png', true);
+                content: '';
+            }
+        }
+        i:first-of-type {
+            font-weight: bold;
+            font-size: 24px;
         }
     }
     #SW-thought {
@@ -207,10 +222,13 @@ main {
             h3 {
                 padding-top: 73px;
                 padding-left: 73px;
+                font-size: 36px;
+                letter-spacing: getLetterSpacing(200);
             }
             p {
                 padding-left: 73px;
                 font-size: 20px;
+                letter-spacing: getLetterSpacing(300);
             }
         }
         a {

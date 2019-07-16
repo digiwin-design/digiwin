@@ -10,15 +10,12 @@
     <link rel="stylesheet" href="https://www.digiwin.com/tw/static/css/public.css">
     <link rel="stylesheet" href="https://www.digiwin.com/tw/static/css/style.css">
     <script src="https://www.digiwin.com/tw/static/js/jquery-1.11.3.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&amp;flags=gated"></script>
-    <script src="/tw/dsc/assets/fetch-polyfill.js"></script>
-    <script src="/tw/dsc/assets/modernizr-custom.js" defer></script>
+    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&amp;flags=gated"></script>
+    <script src="/tw/dsc/assets/modernizr-custom.js"></script>
     <script src="/tw/dsc/assets/mobile-detect.js"></script>
-    <script src="/tw/dsc/assets/mobile-detect-modernizr.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js" defer></script>
-    <script src="https://unpkg.com/vuex" defer></script>
-    <script src="https://unpkg.com/http-vue-loader" defer></script>
+    <script src="/tw/dsc/assets/mobile-detect-modernizr.js" defer=""></script>
+    <script src="/tw/dsc/assets/axios.min.js"></script>
+    <script src="/tw/dsc/assets/vuejs/vue-all.js"></script>
     <script src="/tw/dsc/js/common.min.js"></script>
   </head>
   <body>
@@ -27,6 +24,7 @@
     <script src="/tw/dsc/js/Eform/form.js" defer></script>
     <link rel="stylesheet" href="/tw/dsc/css/Eform/xcConfirm.css">
     <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
+    <link rel="preload" href="images/ad.jpg" as="image">
     <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/public.css">
@@ -34,11 +32,17 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/swiper.min.js" defer></script>
     <script src="js/jquery.popupoverlay.js" defer></script>
-    <script src="js/index.js" defer></script>
+    <script src="js/lodash.min.js" defer></script>
+    <script src="https://unpkg.com/dayjs" defer></script>
+    <script src="https://unpkg.com/dayjs/plugin/isBetween" defer></script>
+    <script src="js/index.min.js" defer></script>
     <main><div id="SW-banner" class="section">
     <div class="container">
         <img src="images/banner-txt.png" alt="" class="banner-txt">
-        <h3>累積智慧與數據資產<br>釋放數據價值</h3>
+        <h3>累積智慧及數據資產釋放數據價值</h3>
+        <a href="http://bit.ly/2LpigmC" target="_blank">
+            <i>7/23</i><i>數位化轉型捷徑</i><strong>線上直播預約</strong>
+        </a>
     </div>
 </div>
 
@@ -134,9 +138,9 @@
             數位化轉型皆是邁向智能新時代的關鍵路徑</h2>
         <ul class="twoBox pc">
             <li>
-                <a href v-on:click.prevent="clickHandler(6)">
-                    <h3>線上觀看</h3>
-                    <p>精彩回顧 2019鼎新企業高峰年會</p>
+                <a href="http://bit.ly/2LpigmC" target="_blank">
+                    <h3>線上直播預約</h3>
+                    <p>7/23 數位化轉型捷徑</p>
                 </a>
             </li>
             <li>
@@ -255,7 +259,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="manufacturing-main">
         <div class="container">
             <section class="manufacturing-main-col">
@@ -272,13 +276,9 @@
                     </ul>
                 </div>
                 <div class="manufacturing-main-btn">
-                    <a href="https://www.digiwin.com/tw/dsc/activity/MFT/WB002958/web/" target="_blank">
-                        工業3.5智造轉型<br>
-                        <strong>7/23台北 立即報名</strong>
-                    </a>
-                    <a href="#contact" class="js-nav">
-                        工業3.5專家導讀<br>
-                        <strong>預約觀看</strong>
+                    <a href="/tw/zlsq.html?id=1937" target="_blank">
+                        《工業3.5》專家導讀會<br>
+                        <strong>線上觀看</strong>
                     </a>
                 </div>
             </section>
@@ -366,7 +366,7 @@
                                 制定戰略藍圖
                             </p>
                             <p class="Ptxt1">
-                                驅動數位化轉型的核心是戰略而非技術。數位化轉型的策略規劃，應站在企業戰略的制高點，思考企業商業模式與數位化技術如何深度融合。                                
+                                驅動數位化轉型的核心是戰略而非技術。數位化轉型的策略規劃，應站在企業戰略的制高點，思考企業商業模式與數位化技術如何深度融合。
                             </p>
                         </li>
                         <li>
@@ -406,7 +406,7 @@
                                 <a href="https://www.digiwin.com/tw/dsc/marketing/WB002860/WB00286002.htm" target="_blank">CEBIT價值服務諮詢</a>
                             </h3>
                             <p class="Pst">
-                                「效益為導向」的價值服務，為企業夥伴客製化聚焦管理能力的提升計劃，企業營運所面對的關鍵能力有感提升。                                
+                                「效益為導向」的價值服務，為企業夥伴客製化聚焦管理能力的提升計劃，企業營運所面對的關鍵能力有感提升。
                             </p>
                         </li>
                     </ul>
@@ -722,12 +722,17 @@
     </div>
 </div>
 
+<ad></ad>
+<menu-mask></menu-mask>
     </main><div id="contact">
     <div id="contactTxt" class="clearfix">
         <h2>資料索取與諮詢</h2>
         <div id="info">
             <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，謝謝！</p>
             <ul>
+                <li class="line">
+                    <a href="https://acho.tw/acho/f/aB6q9" target="_blank"></a>
+                </li>
                 <li class="mail">
                     <a href="mailto:marketing01@digiwin.com"></a>
                 </li>

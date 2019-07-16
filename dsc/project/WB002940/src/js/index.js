@@ -1,3 +1,5 @@
+httpVueLoader.register(Vue, 'components/Ad.vue');
+httpVueLoader.register(Vue, 'components/MenuMask.vue');
 
 //3图上弹出
 $(function () {
@@ -30,10 +32,29 @@ $(function () {
     });
 });
 
+const store = new Vuex.Store({
+    state: {
+        isMobile: false,
+        showMask: true,
+        showAd: true,
+    },
+    mutations: {
+        updateDevice(state, payload) {
+            state.isMobile = payload;
+        },
+        toggleMask(state, payload) {
+            state.showMask = payload;
+        },
+        toggleAd(state, payload) {
+            state.showAd = payload;
+        },
+    }
+});
+
 (function () {
     new Vue({
         el: 'main',
-        data: function () {
+        data() {
             return {
                 activeIndex: 0,
                 loaded: false,
@@ -41,7 +62,7 @@ $(function () {
             };
         },
         computed: {
-            url: function () {
+            url() {
                 return [
                     'https://www.youtube.com/embed/_w2VpMY3p0I',
                     'https://www.youtube.com/embed/1CR80-fK6RY',
@@ -54,18 +75,33 @@ $(function () {
             }
         },
         methods: {
-            clickHandler: function (idx) {
+            mediaSensor: _.throttle(function () {
+                let mm = window.matchMedia('(min-width: 769px)');
+                mm.addListener(this.resizeWidth);
+                this.resizeWidth(mm);
+            }, 100),
+            resizeWidth(pMatchMedia) {
+                let isMobile = pMatchMedia.matches ? false : true;
+                store.commit('updateDevice', isMobile);
+                if (!isMobile) {
+                    store.commit('toggleMask', false);
+                }
+            },
+            clickHandler(idx) {
                 if (idx) {
                     this.activeIndex = idx;
                 }
                 $('#case_popup').popup('show');
             },
-            onLoaded: function () {
+            onLoaded() {
                 this.loaded = true;
-            }
+            },
         },
-        mounted: function () {
+        mounted() {
             var _this = this;
+            
+            window.addEventListener('resize', _this.mediaSensor);
+            _this.mediaSensor();
 
             new Swiper('#swiper1', {
                 centeredSlides: true,
@@ -124,6 +160,9 @@ $(function () {
                 }
             });
         },
+        beforeDestroy() {
+            window.removeEventListener('resize', this.mediaSensor);
+        }
     });
 }());
 
