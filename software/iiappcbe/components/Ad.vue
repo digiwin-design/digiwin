@@ -29,12 +29,6 @@ module.exports = {
         imgSrc() {
             return 'images/tw/ad.jpg';
         },
-        showTime() {
-            return {
-                start: dayjs('2019-07-15').valueOf(),
-                end: dayjs('2019-07-18').valueOf()
-            }
-        },
     },
     watch: {
         isMobile(value) {
@@ -49,16 +43,12 @@ module.exports = {
             store.commit('toggleAd', false);
         },
         adController() {
-            let today = dayjs().valueOf();
-            if (today >= this.showTime.start && today < this.showTime.end) {
-                store.commit('toggleAd', true);
-            }
-            else {
-                store.commit('toggleAd', false);
-            }
+            let showAd = dayjs().isBetween('2019-07-15', '2019-07-18');
+            store.commit('toggleAd', showAd);
         }
     },
     created() {
+        dayjs.extend(dayjs_plugin_isBetween);
         this.adController();
     },
 }

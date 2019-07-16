@@ -32,9 +32,10 @@
     <link rel="preload" href="images/tw/ad.jpg" as="image">
     <script src="assets/lodash.min.js" defer></script>
     <script src="https://unpkg.com/dayjs" defer></script>
+    <script src="https://unpkg.com/dayjs/plugin/isBetween" defer></script>
     <link rel="stylesheet" href="css/index-tw.css">
     <script src="js/index-tw.min.js" defer></script>
-    <main><div class="header">
+    <main v-cloak><div class="header">
     <div class="container tw">
         <p class="header-tag">工業APP</p>
         <hgroup>
@@ -42,13 +43,47 @@
             <h2>賦能企業精實製造</h2>
         </hgroup>
         <p class="header-text">實現設備數位化管理，精確掌握運行狀態<br>精準反應機台利用率，提高設備OEE水準</p>
-        <a href="http://bit.ly/30wnJvp" target="_blank">7/17工業互聯網APP<br>線上直播預約</a>
+        <template v-if="!eventEnd">
+            <a href="http://bit.ly/30wnJvp" target="_blank">7/17工業互聯網APP<br>線上直播預約</a>
+        </template>
+        <template v-else>
+            <a href="/tw/zlsq.html?id=1939" target="_blank">觀看工業互聯網APP<br>線上研討會</a>
+        </template>
     </div>
 </div>
 
 <article class="section1">
     <h1 class="sectionTitle container"><i>中小微製造企業</i><br><i>工廠智慧化困擾</i></h1>
-    <div id="section1-app"></div>
+    <div class="hoverBoxs">
+        <div class="container">
+            <hover-box custom-class="hoverBox1">
+                <template slot="content">
+                    <p class="hoverBox-title">老闆</p>
+                </template>
+                <template slot="hover">
+                    <ul>
+                        <li>每天到處跑客戶，生產狀況究竟怎樣？</li>
+                        <li>到底機台幫我賺了多少錢？</li>
+                        <li>機台的利用率是如何？</li>
+                        <li>成本預算不足怎麼辦？</li>
+                    </ul>
+                </template>
+            </hover-box>
+            <hover-box custom-class="hoverBox2">
+                <template slot="content">
+                    <p class="hoverBox-title">廠長/現場主管</p>
+                </template>
+                <template slot="hover">
+                    <ul>
+                        <li>訂單遲遲交不上來，機台運作狀況？</li>
+                        <li>到底機台在作什麼訂單呀？</li>
+                        <li>機台每天生產多少什麼產品呀？</li>
+                        <li>是否可即時反映機台異常？</li>
+                    </ul>
+                </template>
+            </hover-box>
+        </div>
+    </div>
 </article>
 
 <div class="section2">
@@ -129,7 +164,16 @@
                 </dd>
             </div>
         </div>
-        <div id="section5-app"></div>
+        <div class="section5-carousel">
+            <div class="section5-slider">
+                <local-swiper ref="awesomeSwiperB" v-bind:options="swiperOptionB" v-on:slide-change="onSlideChange">
+                    <local-slide v-for="slide in slides" v-bind:key="slide.imgSrc">
+                        <img v-bind:src="slideImg(slide.imgSrc)" alt="">
+                    </local-slide>
+                </local-swiper>
+            </div>
+            <span class="section5-caption">{{caption}}</span>
+        </div>
     </div>
 </article>
 
@@ -153,11 +197,8 @@
     </div>
 </article>
 
-<div id="ad">
-    <ad></ad>
-    <menu-mask></menu-mask>
-</div>
-
+<ad></ad>
+<menu-mask></menu-mask>
     </main><div id="contact">
     <div id="contactTxt" class="clearfix">
         <h2>資料索取與諮詢</h2>
