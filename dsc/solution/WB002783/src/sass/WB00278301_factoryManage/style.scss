@@ -2,11 +2,10 @@
 @import '../WB002783_subPage';
 
 main {
-    background: url('/tw/dsc/solution/WB002783/images/bg_manufacture.jpg') no-repeat center center fixed;
     .section {
-        color: #fff;
+        background-color: #fff;
+        color: #333;
         h2 {
-            color: #fff;
             text-align: center;
         }
         h3 {
@@ -16,8 +15,8 @@ main {
         }
     }
     .sectionLight {
-        background: url('/tw/dsc/solution/WB002783/images/bg_gray2.jpg') no-repeat center center fixed;
-        color: #333;
+        background: url('../../images/bg_manufacture.jpg') no-repeat center center;
+        color: #fff;
     }
     .otherLink {
         display: block;
@@ -35,9 +34,16 @@ main {
             color: #fff;
         }
     }
+    .header {
+        @include headerBg('bg_factoryManageBanner.jpg');
+        p {
+            width: 592px;
+        }
+    }
     #transparency {
+        padding-top: 40px;
         padding-bottom: 0;
-        background: url('/tw/dsc/solution/WB002783/images/factoryManage/bg_factoryManage.jpg') no-repeat center center;
+        background: url('../../images/bg_transparency.jpg') no-repeat center center;
         color: #fff;
         h1 {
             color: #fff;
@@ -51,10 +57,15 @@ main {
             color: #ff0;
         }
     }
+    #customerCase {
+        h2 {
+            font-weight: bold;
+        }
+    }
     #transTxt {
         position: relative;
         height: 458px;
-        background: url('/tw/dsc/solution/WB002783/images/factoryManage/bg_worker.png') no-repeat center center;
+        background: url('../../images/factoryManage/bg_worker.png') no-repeat center center;
         .imgStyle {
             position: absolute;
         }
@@ -110,6 +121,14 @@ main {
             margin: -25px auto 0;
         }
     }
+    #productionSchedule {
+        h2 {
+            text-align: left;
+        }
+        .sectionNote {
+            padding-left: 0;
+        }
+    }
     #esop {
         li {
             position: relative;
@@ -152,7 +171,6 @@ main {
             }
         }
         .part02 {
-            margin-top: 30px;
             .floatRight {
                 position: relative;
                 margin: 50px 0 0 -25px;
@@ -163,7 +181,7 @@ main {
                     position: absolute;
                     width: 34px;
                     height: 30px;
-                    background: url('/tw/dsc/solution/WB002783/images/icon_quote_white.png') no-repeat left top;
+                    background: url('../../images/icon_quote_white.png') no-repeat left top;
                     content: '';
                 }
                 &:before {
@@ -179,6 +197,9 @@ main {
                     color: #ff0;
                 }
             }
+        }
+        p {
+            margin-bottom: 2em;
         }
     }
     #ekb {
@@ -249,7 +270,7 @@ main {
     }
     #factoryCase {
         padding-bottom: 120px;
-        background: url('/tw/dsc/solution/WB002783/images/bg_boxs.jpg') no-repeat center center;
+        background: url('../../images/bg_boxs.jpg') no-repeat center center;
         color: #fff;
         h2 {
             color: #fff;

@@ -2,16 +2,12 @@
 @import '../WB002783_subPage';
 
 main {
-    background: url('/tw/dsc/solution/WB002783/images/bg_gray.jpg') no-repeat center center fixed;
+    background: url('../../images/bg_gray.jpg') no-repeat center center fixed;
     .section h2 {
         text-align: left;
     }
     #pageTitle {
-        background: url('/tw/dsc/solution/WB002783/images/bg_warehouse.jpg') no-repeat center center;
-        color: #fff;
-        strong {
-            color: #ff0;
-        }
+        @include headerBg('bg_warehouse.jpg');
     }
     .section img {
         display: block;
@@ -25,8 +21,12 @@ main {
             font-weight: normal;
         }
     }
+    #block02,
+    #block04 {
+        background-color: #fff;
+    }
     #block06 {
-        background: url('/tw/dsc/solution/WB002783/images/bg_boxs.jpg') no-repeat center center;
+        background: url('../../images/bg_boxs.jpg') no-repeat center center;
         text-align: center;
         ul {
             display: inline-block;

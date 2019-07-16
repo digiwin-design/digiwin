@@ -1,4 +1,5 @@
 httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/main-header.vue');
 
 const store = new Vuex.Store({
     state: {
@@ -57,7 +58,7 @@ new Vue({
             var _navLinkH = $('#navLink').outerHeight(true);
 
             /*奇數區塊新增class*/
-            $('.section:nth-of-type(even)').addClass('sectionLight');
+            // $('.section:nth-of-type(odd)').addClass('sectionLight');
 
             /*錨點滾動*/
             var hash = window.location.hash;

@@ -1,4 +1,5 @@
 httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/main-header.vue');
 
 const store = new Vuex.Store({
     state: {

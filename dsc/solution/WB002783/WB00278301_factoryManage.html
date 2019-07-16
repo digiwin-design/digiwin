@@ -30,14 +30,19 @@
     <script src="js/all.min.js" defer></script>
     <link rel="stylesheet" href="css/WB00278301_factoryManage/style.css">
     <script src="js/WB00278301_factoryManage.min.js" defer></script>
-    <main v-cloak><div id="transparency" class="section">
+    <main v-cloak><div id="pageTitle" class="header section">
+    <main-header>
+        <template slot="content">
+            <h1>工廠管理的第一步：<strong>現場透明化</strong></h1>
+            <p>工廠每天都有突發狀況要處理，就算到現場也解決不了問題，唯有讓<strong>全貌呈現</strong>才能看出問題。</p>
+        </template>
+    </main-header>
+</div>
+
+<div id="transparency" class="section">
     <div class="content">
-        <h1>工廠管理的第一步：現場透明化</h1>
-        <p class="sectionNote">工廠每天都有突發狀況要處理，就算到現場也解決不了問題，唯有讓<strong>全貌呈現</strong>才能看出問題。</p>
         <div id="transTxt">
-            <img class="imgStyle word01 wow fadeIn" data-wow-duration="1.5s" src="/tw/dsc/solution/WB002783/images/factoryManage/img_word01.png" alt="下班前人員需花半小時輸入報工資料，花時間且容易錯誤......" /> <img class="imgStyle word02 wow fadeIn" data-wow-duration="1.5s" src="/tw/dsc/solution/WB002783/images/factoryManage/img_word02.png" alt="看到的機台稼動率都是100%，但機台幫我賺錢的時間實際到底有多少？" /> <img class="imgStyle word03 wow fadeIn" data-wow-duration="1.5s" src="/tw/dsc/solution/WB002783/images/factoryManage/img_word03.png" alt="客戶反應產品有問題，這下怎麼找出有問題的原物料/零組件批號與製程？其它出貨或半成品有沒有用到這些瑕疵件？" />
-            <img class="imgStyle word04 wow fadeIn" data-wow-duration="1.5s" src="/tw/dsc/solution/WB002783/images/factoryManage/img_word04.png" alt="各製程的生產狀態如何？是否有缺料？完全不清楚......" /> <img class="imgStyle word05 wow fadeIn" data-wow-duration="1.5s" src="/tw/dsc/solution/WB002783/images/factoryManage/img_word05.png" alt="外包的生產進度到那裡了？品質會不會出包？" /> <img class="imgStyle word06 wow fadeIn" data-wow-duration="1.5s" src="/tw/dsc/solution/WB002783/images/factoryManage/img_word06.png" alt="蒐集現場的回報資訊只能利用中午跟下班時間？發現問題也常常太晚了......" />
-            <img class="imgStyle word07 wow fadeIn" data-wow-duration="1.5s" src="/tw/dsc/solution/WB002783/images/factoryManage/img_word07.png" alt="小批量訂單與特殊品帶來換線增加，稼動率下降，如何找出稼動時間浪費在那裡？等待時間？待料時間？故障時間？" />
+            <img class="imgStyle word01 wow fadeIn" data-wow-duration="1.5s" src="https://www.digiwin.com/tw/dsc/solution/WB002783/images/factoryManage/img_word01.png" alt="下班前人員需花半小時輸入報工資料，花時間且容易錯誤......" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"><img class="imgStyle word02 wow fadeIn" data-wow-duration="1.5s" src="https://www.digiwin.com/tw/dsc/solution/WB002783/images/factoryManage/img_word02.png" alt="看到的機台稼動率都是100%，但機台幫我賺錢的時間實際到底有多少？" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"><img class="imgStyle word03 wow fadeIn" data-wow-duration="1.5s" src="https://www.digiwin.com/tw/dsc/solution/WB002783/images/factoryManage/img_word03.png" alt="客戶反應產品有問題，這下怎麼找出有問題的原物料/零組件批號與製程？其它出貨或半成品有沒有用到這些瑕疵件？" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"><img class="imgStyle word04 wow fadeIn" data-wow-duration="1.5s" src="https://www.digiwin.com/tw/dsc/solution/WB002783/images/factoryManage/img_word04.png" alt="各製程的生產狀態如何？是否有缺料？完全不清楚......" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"><img class="imgStyle word05 wow fadeIn" data-wow-duration="1.5s" src="https://www.digiwin.com/tw/dsc/solution/WB002783/images/factoryManage/img_word05.png" alt="外包的生產進度到那裡了？品質會不會出包？" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"><img class="imgStyle word06 wow fadeIn" data-wow-duration="1.5s" src="https://www.digiwin.com/tw/dsc/solution/WB002783/images/factoryManage/img_word06.png" alt="蒐集現場的回報資訊只能利用中午跟下班時間？發現問題也常常太晚了......" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;"><img class="imgStyle word07 wow fadeIn" data-wow-duration="1.5s" src="https://www.digiwin.com/tw/dsc/solution/WB002783/images/factoryManage/img_word07.png" alt="小批量訂單與特殊品帶來換線增加，稼動率下降，如何找出稼動時間浪費在那裡？等待時間？待料時間？故障時間？" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
         </div>
     </div>
 </div>
@@ -64,7 +69,7 @@
     </div>
 </div>
 
-<div id="system" class="section">
+<div id="system" class="section sectionLight">
     <div class="content">
         <h2>工廠管理有法寶</h2>
         <h3>您再也不需要把巡視工廠當作健身運動</h3>
@@ -80,7 +85,7 @@
     </div>
 </div>
 
-<div id="esop" class="section">
+<div id="esop" class="section sectionLight">
     <div class="content">
         <h2>電子作業指導書(eSOP)</h2>
         <p>▶ eSOP可解決以下問題</p>
@@ -153,7 +158,7 @@
     </div>
 </div>
 
-<div id="replyWork" class="section">
+<div id="replyWork" class="section sectionLight">
     <div class="content">
         <h2>現場報工</h2>
         <p class="sectionNote">報工的成功關鍵就在「操作簡便」，讓外藉勞工與資深老員工也能輕鬆上手，更可以結合RFID，同時完成掃描(報工)作業，讓資料準確度變高並減少輸入作業時間，達到生產進度與工時透明化。</p>
@@ -176,7 +181,7 @@
     </div>
 </div>
 
-<div id="availability" class="section">
+<div id="availability" class="section sectionLight">
     <div class="content">
         <h2>稼動管理</h2>
         <h3>稼動率顯示產能已經滿載，但真的不能再提升了嗎？</h3>
@@ -204,7 +209,7 @@
     </div>
 </div>
 
-<div id="productRecall" class="section">
+<div id="productRecall" class="section sectionLight">
     <div class="content">
         <h2>產品回溯</h2>
         <h3>「有能力回溯」將是廠商接單基本條件</h3>

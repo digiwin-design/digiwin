@@ -3,17 +3,16 @@
 
 main {
     #pageTitle {
-        padding: 0;
-        background: url('/tw/dsc/solution/WB002783/images/order/bg_order.jpg') no-repeat center center;
-        h1 {
-            line-height: 0;
+        @include headerBg('bg_order.jpg');
+        p strong {
+            font-size: 30px;
         }
     }
     #order {
         position: relative;
         overflow: hidden;
         padding: 0;
-        background: url('/tw/dsc/solution/WB002783/images/order/bg_action.jpg') no-repeat center center;
+        background: url('../../images/order/bg_action.jpg') no-repeat center center;
         &.section {
             min-width: 1366px;
             .beforeBlock,
@@ -170,7 +169,7 @@ main {
                     margin: 0 auto;
                     width: 48px;
                     height: 46px;
-                    background: url('/tw/dsc/solution/WB002783/images/order/icon_click.png') no-repeat center bottom;
+                    background: url('../../images/order/icon_click.png') no-repeat center bottom;
                 }
             }
             .action {
@@ -235,7 +234,7 @@ main {
                             left: 0;
                             width: 32px;
                             height: 32px;
-                            background: url('/tw/dsc/solution/WB002783/images/icon_quote_blue.png') no-repeat left top;
+                            background: url('../../images/icon_quote_blue.png') no-repeat left top;
                             content: '';
                         }
                         &:after {
@@ -244,7 +243,7 @@ main {
                             bottom: -5px;
                             width: 32px;
                             height: 32px;
-                            background: url('/tw/dsc/solution/WB002783/images/icon_quote_blue.png') no-repeat right top;
+                            background: url('../../images/icon_quote_blue.png') no-repeat right top;
                             content: '';
                         }
                         h4 {
@@ -260,7 +259,7 @@ main {
                 .part02 {
                     padding-left: 210px;
                     height: 400px;
-                    background: url('/tw/dsc/solution/WB002783/images/order/img_system.png') no-repeat left top;
+                    background: url('../../images/order/img_system.png') no-repeat left top;
                     strong {
                         font-size: 20px;
                     }
@@ -310,6 +309,9 @@ main {
                     }
                 }
             }
+        }
+        h3 {
+            line-height: 1.6;
         }
     }
 }

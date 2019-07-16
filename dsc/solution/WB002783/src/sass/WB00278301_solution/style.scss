@@ -2,7 +2,7 @@
 @import '../WB002783_subPage';
 
 main {
-    background: url('/tw/dsc/solution/WB002783/images/bg_solution.jpg') no-repeat center center fixed;
+    background: url('../../images/bg_solution.jpg') no-repeat center center/cover fixed;
     .section {
         color: #fff;
         h2 {
@@ -32,8 +32,11 @@ main {
             }
         }
     }
+    .header {
+        @include headerBg('bg_solutionBanner.jpg');
+    }
     #MES {
-        background-color: rgba(0, 192, 209, .5);
+        background-color: rgba(0, 192, 209, .7);
         li .imgStyle {
             background-color: #00c0d1;
         }
@@ -53,5 +56,13 @@ main {
     #MES li:hover h3,
     #SFT li:hover h3 {
         color: #ff0;
+    }
+    #APS,
+    #SFT {
+        h2,
+        h3,
+        p {
+            color: #03537c;
+        }
     }
 }

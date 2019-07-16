@@ -102,4 +102,11 @@ main {
         width: 100%;
         background-color: #f7f7f7;
     }
+    #pageTitle {
+        padding-top: 0;
+        padding-bottom: 0;
+        h1 {
+            text-align: left;
+        }
+    }
 }
