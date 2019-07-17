@@ -39,12 +39,13 @@ module.exports = {
     },
     methods: {
         closeAd() {
-            store.commit('toggleMask', false);
             store.commit('toggleAd', false);
+            store.commit('toggleMask', false);
         },
         checkTime() {
             let showAd = dayjs().isBetween('2019-07-15', '2019-07-18');
-            store.commit('toggleAd', showAd);
+            store.commit('toggleAd', showAd && this.active);
+            store.commit('toggleMask', showAd && this.active && this.isMobile);
             
             let beforeEnd = dayjs().isBefore(dayjs('2019-07-18'));
             if (!beforeEnd) return;
