@@ -1,0 +1,16 @@
+main {
+    min-width: 360px;
+    font-size: 18px;
+    line-height: 1.6;
+    .container {
+        margin: 0 auto;
+        max-width: $content-width;
+    }
+    .mainTitle {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .sectionTitle {
+        font-size: 26px;
+    }
+}

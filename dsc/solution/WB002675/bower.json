@@ -1,5 +1,5 @@
 {
-  "name": "WB00267501_15",
+  "name": "WB00267501",
   "authors": [
     "Kenge <pgkusn@gmail.com>"
   ],
@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "animate.css": "^3.7.0",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "swiper": "^4.5.0"
   }
 }

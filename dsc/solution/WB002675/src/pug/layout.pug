@@ -18,36 +18,28 @@ html(lang='zh-Hant-TW')
         script(src="/tw/dsc/assets/axios.min.js")
         script(src="/tw/dsc/assets/vuejs/vue-all-dev.js")
         script(src='/tw/dsc/js/common.min.js')
-
-        //- submenu
-        style.
-            .header-box {
-                height: auto;
-            }
-            .page-submenu {
-                position: fixed;
-                z-index: 28;
-                width: 100%;
-            }
     body
-        .header-box
-            header
-
-        // 以下為後台內容
+        // 後台上稿內容開始
         //- form
-        link(rel='stylesheet', href='css/form-rwd.css')
-        script(src='/tw/dsc/js/Eform/form.js', defer)
         link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
         script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
 
         //- submenu
-        link(rel='stylesheet', href='../../assets/submenu/submenu.css')
-        script(src='../../assets/submenu/submenu.min.js')
+        link(rel='stylesheet', href='/tw/dsc/assets/submenu/submenu.css')
+        script(src='/tw/dsc/assets/submenu/submenu.min.js')
 
+        //- swiper
+        //- link(rel="stylesheet", href="assets/swiper.min.css")
+        //- script(src="assets/swiper.min.js", defer)
+        //- script(src="assets/vue-awesome-swiper.js", defer)
+
+        //- link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        script(src="assets/lodash.min.js", defer)
+        link(rel='stylesheet', href='/tw/dsc/css/reboot.css')
+        script(src='js/all.min.js', defer)
+        
         block includes
         
-        main
+        main(v-cloak, v-if="result")
             block content
-            
-        include partial/contact.html
-        include ../../../../template/form_component
+        // 後台上稿內容結束

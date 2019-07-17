@@ -3,6 +3,10 @@
     @return ($px / 16) + rem;
 }
 
+@function em($px) {
+    @return ($px / 16) + em;
+}
+
 @function lineHeight($px, $fz: 16) {
     @return $px / $fz;
 }
@@ -60,7 +64,7 @@
     @else {
         width: $width;
     }
-    @content
+    @include linkColor($color);
 }
 
 // 增加點擊範圍
@@ -191,6 +195,33 @@
         height: 100%;
     }
     @content;
+}
+
+@mixin headerBg($img, $imgS: $img, $pos: 50% 0) {
+    background-image: image-url($imgS);
+    background-position: $pos;
+    background-repeat: no-repeat;
+    @media (min-width: $tablet-width + 1) {
+        background-image: image-url($img);
+    }
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: image-height($imgS);
+        justify-content: center;
+        @media (min-width: $tablet-width + 1) {
+            height: image-height($img);
+        }
+    }
+}
+
+@mixin linkColor($color) {
+    color: $color;
+    &:link,
+    &:visited {
+        color: $color;
+    }
 }
 /* #endregion mixin */
 
