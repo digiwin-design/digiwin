@@ -1,4 +1,6 @@
 httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/main-header.vue');
+httpVueLoader.register(Vue, 'components/section-title.vue');
 // httpVueLoader.register(Vue, 'components/WB00267501_14/hover-box.vue');
 // Vue.use(VueAwesomeSwiper);
 
