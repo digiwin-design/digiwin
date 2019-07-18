@@ -23,6 +23,7 @@ new Vue({
     data: {
         swiperOptionA: {
             loop: true,
+            autoHeight: true,
             autoplay: {
                 delay: 5000,
             },

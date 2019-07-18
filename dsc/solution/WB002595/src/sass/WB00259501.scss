@@ -109,6 +109,7 @@ main {
                     right: 0;
                     bottom: -50px;
                     content: '';
+                    transform: rotate(180deg);
                 }
             }
         }
