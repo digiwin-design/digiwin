@@ -1,8 +1,5 @@
 httpVueLoader.register(Vue, 'components/contact.vue');
-httpVueLoader.register(Vue, 'components/main-header.vue');
-httpVueLoader.register(Vue, 'components/section-title.vue');
-httpVueLoader.register(Vue, 'components/WB00267501/slider-banner.vue');
-// httpVueLoader.register(Vue, 'components/WB00267501/hover-box.vue');
+// httpVueLoader.register(Vue, 'components/WB00267501_14/hover-box.vue');
 // Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({
@@ -29,34 +26,12 @@ const store = new Vuex.Store({
 
 new Vue({
     el: 'main',
-    components: {
-        LocalSwiper: VueAwesomeSwiper.swiper,
-        LocalSlide: VueAwesomeSwiper.swiperSlide,
-    },
-    data() {
-        return {
-            swiperOptionA: {
-                loop: true,
-                autoHeight: true,
-                autoplay: {
-                    delay: 5000,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                }
-            },
-        };
-    },
     computed: {
         isMobile() {
             return store.state.isMobile;
         },
         result() {
             return store.state.result;
-        },
-        swiperA() {
-            return this.$refs.awesomeSwiperA.swiper;
         },
     },
     methods: {

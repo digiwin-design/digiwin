@@ -35,8 +35,12 @@ main {
             padding-left: 0;
         }
     }
-    .mainTitle {
-        font-weight: bold;
-        font-size: 30px;
+    .btn {
+        transition: all .15s ease-in-out;
+    }
+    a:link,
+    a:visited,
+    a:hover {
+        color: inherit; /* override */
     }
 }

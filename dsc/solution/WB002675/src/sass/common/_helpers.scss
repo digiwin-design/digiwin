@@ -15,6 +15,10 @@
 @function getLetterSpacing($num) {
     @return ($num / 1000) + em;
 }
+
+@function columnWidth($margin, $cols) {
+    @return calc((100% - #{$margin} * #{$cols} * 2) / #{$cols});
+}
 /* #endregion function */
 
 /* #region mixin */
@@ -221,6 +225,26 @@
     &:link,
     &:visited {
         color: $color;
+    }
+}
+
+@mixin quoteBlock($img) {
+    position: relative;
+    padding: image-height($img) image-width($img);
+    &::before,
+    &::after {
+        @include imgBg($img, true);
+        position: absolute;
+        content: '';
+    }
+    &::before {
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        right: 0;
+        bottom: 0;
+        transform: rotate(180deg);
     }
 }
 /* #endregion mixin */
