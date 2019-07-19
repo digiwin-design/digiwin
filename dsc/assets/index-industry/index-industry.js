@@ -106,8 +106,8 @@ $(function () {
                             <ul :id="'tab0' + (index + 1)" :class="'tab container clearfix tab0' + (index + 1)">
                                 <li v-for="(items, itemIdx) in result" :class="{active: setActive(index, itemIdx)}">
                                     <div class="picbox">
-                                        <figure class="pic pic01"><img :src="'https://www.digiwin.com/tw/dsc/images/index/home-icon' + items.id + '.png'" class="vcenter" /></figure>
-                                        <figure class="pic pic02"><img :src="'https://www.digiwin.com/tw/dsc/images/index/home-icon' + items.id + 'h.png'" class="vcenter" /></figure>
+                                        <figure class="pic pic01"><img :src="'/tw/dsc/images/index/home-icon' + items.id + '.png'" class="vcenter" /></figure>
+                                        <figure class="pic pic02"><img :src="'/tw/dsc/images/index/home-icon' + items.id + 'h.png'" class="vcenter" /></figure>
                                     </div>
                                     <div class="title">{{ items.title }}</div>
                                 </li>
@@ -183,7 +183,7 @@ $(function () {
                 template: `
                     <ul>
                         <li v-for="(result, index) in results" :class="setClass(index)" :style="setStyle(index)">
-                            <span class="title"><img :src="'https://www.digiwin.com/tw/dsc/images/index/home-icon' + result.id + '.png'" /> {{ result.title }}</span>
+                            <span class="title"><img :src="'/tw/dsc/images/index/home-icon' + result.id + '.png'" /> {{ result.title }}</span>
                             <div class="box">
                                 <h4>
                                     <a :href="result.contents.main.url">{{ result.contents.main.title }}</a>

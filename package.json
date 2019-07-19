@@ -7,6 +7,8 @@
     "babel:common": "babel -w dsc/js/common.js -o dsc/js/common.min.js",
     "babel:submenu": "babel -w dsc/assets/submenu/submenu.js -o dsc/assets/submenu/submenu.min.js",
     "babel:submenu-spa": "babel -w dsc/assets/submenu-spa/submenu.js -o dsc/assets/submenu-spa/submenu.min.js",
+    "babel:index-industry": "babel -w dsc/assets/index-industry/index-industry.js -o dsc/assets/index-industry/index-industry.min.js",
+    "sass:industry-list-v2": "node-sass -w --output-style compressed dsc/assets/industry-list-v2/industry.scss dsc/assets/industry-list-v2/industry.css",
     "sass:reboot": "node-sass -w --output-style compressed dsc/css/reboot.scss dsc/css/reboot.css"
   },
   "author": "",
