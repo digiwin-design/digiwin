@@ -128,12 +128,19 @@
                 }
                 else if (url && anchor) {
                     window.open(`${url}`, '_self');
-                    setTimeout(() => {
-                        let targetPos = $(anchor).offset().top;
-                        let offset = $('.page-submenu').outerHeight();
-                        $('html, body').animate({ scrollTop: targetPos - offset });
-                        this.closeDropdownHandler();
-                    }, 100);
+                    
+                    let getAnchor = () => {
+                        if ($(anchor).length) {
+                            let targetPos = $(anchor).offset().top;
+                            let offset = $('.page-submenu').outerHeight();
+                            $('html, body').animate({ scrollTop: targetPos - offset });
+                            this.closeDropdownHandler();
+                            return;
+                        }
+                        setTimeout(getAnchor, 10);
+                    };
+                    getAnchor();
+
                     this.setPageInfo(url);
                 }
             },
