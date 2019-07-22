@@ -38,6 +38,7 @@
         beforeDestroy() {
             document.querySelector('body').removeEventListener('touchstart');
             window.removeEventListener('scroll', this.scrollHandler);
+            window.removeEventListener('resize', this.resizeHandler);
         },
         methods: {
             // 取得選單內容

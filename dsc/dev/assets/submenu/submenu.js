@@ -38,6 +38,7 @@
         beforeDestroy() {
             document.querySelector('body').removeEventListener('touchstart');
             window.removeEventListener('scroll', this.scrollHandler);
+            window.removeEventListener('resize', this.resizeHandler);
         },
         methods: {
             // 取得選單內容
@@ -73,10 +74,11 @@
                         this.activeIndex = index;
                         this.setCurrentPage(menu.text);
                     } else if (menu.dropdowns) {
-                        menu.dropdowns.forEach(dropdown => {
+                        return menu.dropdowns.some(dropdown => {
                             if (dropdown.url === page + hash) {
                                 this.activeIndex = index;
                                 this.setCurrentPage(dropdown.text);
+                                return true;
                             }
                         });
                     }
