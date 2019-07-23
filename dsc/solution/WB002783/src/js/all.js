@@ -128,7 +128,7 @@ $(document).on('click', '.js-nav', function (event) {
     let delay = $(this).data('delay') ? $(this).data('delay') : 0;
     let target = $(this).attr('href') || $(this).attr('xlink:href') || $(this).data('target');
     setTimeout(() => {
-        let offset = document.querySelector('.page-submenu').offsetHeight;
+        let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
         let targetPos = $(target).offset().top;
         let finalPos = offset ? targetPos - offset : targetPos;
         $('html, body').animate({ scrollTop: finalPos });
