@@ -21,7 +21,7 @@ gulp.task('sass', function () {
             outputStyle: 'compressed',
             functions: assetFunctions({
                 images_path: 'images', // image-url 的圖檔位置,
-                http_images_path: '../../images' // image-url 的輸出路徑
+                http_images_path: '../images' // image-url 的輸出路徑
             })
         }))
         .pipe($.postcss([autoprefixer({

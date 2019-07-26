@@ -38,45 +38,49 @@
 
 <script>
 module.exports = {
-    props: ['content'],
-    components: {
-        'accordion': httpVueLoader('components/seminar/accordion.vue'),
-        'progress-bars': httpVueLoader('components/seminar/progressBars/progress-bars.vue'),
-    },
+    props: ['accordion'],
     computed: {
-        percentages: function () {
-            if (!this.content.progressBars) return null;
-
-            // 排序各組數值以取得最大值
-            let percentages = [];
-            this.content.progressBars.forEach(function (progressBar) {
-                let percentage = [];
-                progressBar.items.forEach(function (item) {
-                    percentage.push(item.percentage);
-                });
-                percentage.sort(function (a, b) { return b - a; });
-                percentages.push(percentage);
-            });
-            return percentages;
+        isMobile: function () {
+            return store.state.isMobile;
+        }
+    },
+    watch: {
+        isMobile: function (val) {
+            if (val) {
+                this.destroyAccordion();
+            }
+            else {
+                this.initAccordion();
+            }
+        }
+    },
+    methods: {
+        btnClass: function (href) {
+            return href === '#contact';
         },
-        progressBars: function () {
-            if (!this.content.progressBars) return null;
-
-            // 取得各組最大值
-            this.content.progressBars.forEach(function (progressBar, idx) {
-                progressBar.items.forEach(function (item) {
-                    if (item.percentage === this.percentages[idx][0]) {
-                        item['highest'] = true;
-                    }
-                }.bind(this));
-            }.bind(this));
-
-            return this.content.progressBars;
+        slideToggle: function (event) {
+            if (this.isMobile) {
+                $(event.target).toggleClass('active').next().slideToggle();
+            }
+        },
+        initAccordion: function () {
+            $(this.$refs.accordion).find('h2').removeClass('active');
+            $(this.$refs.accordion).accordion({
+                collapsible: true,
+                heightStyle: 'content',
+            });
+        },
+        destroyAccordion: function () {
+            $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+            $(this.$refs.accordion).accordion('destroy');
         },
     },
     mounted: function () {
-        if (typeof (NProgress) !== 'undefined') {
-            NProgress.done();
+        if (!this.isMobile) {
+            this.initAccordion();
+        }
+        else {
+            $(this.$refs.accordion).find('h2').eq(0).addClass('active');
         }
     },
 };

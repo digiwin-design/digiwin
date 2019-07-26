@@ -857,7 +857,7 @@
             },
             {
                 "text": "批發生意",
-                "url": "WB00267501#liutong",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "經銷代理",
@@ -871,7 +871,7 @@
             },
             {
                 "text": "零售生意",
-                "url": "WB00267501#liutong",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "門市專櫃",
@@ -885,16 +885,26 @@
                 ]
             },
             {
-                "text": "觀光工廠",
-                "url": "WB00267501_4"
-            },
-            {
-                "text": "行動經銷",
-                "url": "WB00267501_15"
+                "text": "其它方案",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "觀光工廠",
+                        "url": "WB00267501_4"
+                    },
+                    {
+                        "text": "行動經銷",
+                        "url": "/tw/dsc/solution/WB002675/WB00267501_15"
+                    },
+                    {
+                        "text": "條碼方案",
+                        "url": "barcode"
+                    }
+                ]
             },
             {
                 "text": "其它流通業",
-                "url": "WB00267501#otherSection",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "食品業",
@@ -943,7 +953,7 @@
             },
             {
                 "text": "研討會",
-                "url": "WB00267501_5"
+                "url": "/tw/dsc/solution/WB002675/WB00267501_5"
             },
             {
                 "text": "聯絡我們",

@@ -3,10 +3,6 @@
     @return ($px / 16) + rem;
 }
 
-@function em($px) {
-    @return ($px / 16) + em;
-}
-
 @function lineHeight($px, $fz: 16) {
     @return $px / $fz;
 }
@@ -14,10 +10,6 @@
 // Converting Photoshop Letter Spacing to CSS
 @function getLetterSpacing($num) {
     @return ($num / 1000) + em;
-}
-
-@function columnWidth($margin, $cols) {
-    @return calc((100% - #{$margin} * #{$cols} * 2) / #{$cols});
 }
 /* #endregion function */
 
@@ -68,7 +60,7 @@
     @else {
         width: $width;
     }
-    @include linkColor($color);
+    @content
 }
 
 // 增加點擊範圍
@@ -199,53 +191,6 @@
         height: 100%;
     }
     @content;
-}
-
-@mixin headerBg($img, $imgS: $img, $pos: 50% 0) {
-    background-image: image-url($imgS);
-    background-position: $pos;
-    background-repeat: no-repeat;
-    @media (min-width: $tablet-width + 1) {
-        background-image: image-url($img);
-    }
-    .container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        height: image-height($imgS);
-        justify-content: center;
-        @media (min-width: $tablet-width + 1) {
-            height: image-height($img);
-        }
-    }
-}
-
-@mixin linkColor($color) {
-    color: $color;
-    &:link,
-    &:visited {
-        color: $color;
-    }
-}
-
-@mixin quoteBlock($img) {
-    position: relative;
-    padding: image-height($img) image-width($img);
-    &::before,
-    &::after {
-        @include imgBg($img, true);
-        position: absolute;
-        content: '';
-    }
-    &::before {
-        top: 0;
-        left: 0;
-    }
-    &::after {
-        right: 0;
-        bottom: 0;
-        transform: rotate(180deg);
-    }
 }
 /* #endregion mixin */
 
