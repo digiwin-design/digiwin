@@ -30,7 +30,7 @@ module.exports = {
     props: ['content'],
     components: {
         'accordion': httpVueLoader('components/seminar/accordion.vue'),
-        'progress-bars': httpVueLoader('components/seminar/progressBars/progress-bars.vue'),
+        'progress-bars': httpVueLoader('components/seminar/progress-bars.vue'),
     },
     computed: {
         percentages: function () {

@@ -1,13 +1,13 @@
 <template>
     <div class="mobile">
         <div ref="accordion" class="accordion">
-            <h2 v-on:click="slideToggle">效期控管</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">效期控管</div>
             <div class="accordion-content">
                 <tabs id="t1" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t1-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">中壢與青埔的客戶銷售量跟規模都有差異…這價格要怎麼訂阿</h3>
+                            <h2 class="slider-desc-title">中壢與青埔的客戶銷售量跟規模都有差異…這價格要怎麼訂阿</h2>
                             <div>大連假又到了，中壢的銷量一直很不錯，這次支援作促銷，要作買一送一還有不定期的小驚喜活動，但青埔那邊的客戶說他們也要一樣的折扣...</div>
                         </div>
                     </template>
@@ -43,7 +43,7 @@
                     <!-- 解決方案 -->
                     <template slot="t1-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h2>
                             <div>
                                 <strong>通路合約控管好、加快結帳與對帳</strong>
                                 <ul>
@@ -63,13 +63,13 @@
                 </tabs>
             </div>
 
-            <h2 v-on:click="slideToggle">應收帳款</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">應收帳款</div>
             <div class="accordion-content">
                 <tabs id="t2" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t2-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">收完款就可以領獎金了...ya...但A客戶還有多少錢要收阿?又有一家客戶要列呆帳了...</h3>
+                            <h2 class="slider-desc-title">收完款就可以領獎金了...ya...但A客戶還有多少錢要收阿?又有一家客戶要列呆帳了...</h2>
                             <div>客戶這麼多，常搞不清楚那家該收款了，要收多少？還有多少沒收？今年要提列多少呆帳？提列多少比例？用帳齡分析法還是銷貨百分比法？</div>
                         </div>
                     </template>
@@ -113,7 +113,7 @@
                     <!-- 解決方案 -->
                     <template slot="t2-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h2>
                             <div>
                                 <strong>未收帳款系統出、發票電子化正流行</strong>
                                 <ul>
@@ -132,13 +132,13 @@
                 </tabs>
             </div>
             
-            <h2 v-on:click="slideToggle">信用額度</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">信用額度</div>
             <div class="accordion-content">
                 <tabs id="t3" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t3-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">有家客戶應收帳款掛一堆，又來叫貨了，而且要的量很大，到底要不要出貨阿...</h3>
+                            <h2 class="slider-desc-title">有家客戶應收帳款掛一堆，又來叫貨了，而且要的量很大，到底要不要出貨阿...</h2>
                             <div>上個月叫很多貨的客戶居然退票了...這下怎麼跟老闆交代?</div>
                         </div>
                     </template>
@@ -173,7 +173,7 @@
                     <!-- 解決方案 -->
                     <template slot="t3-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h2>
                             <div>
                                 <strong>信用額度管控好，老闆收款沒煩惱</strong>
                                 <ul>
@@ -194,13 +194,13 @@
                 </tabs>
             </div>
             
-            <h2 v-on:click="slideToggle">業務巡補</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">業務巡補</div>
             <div class="accordion-content">
                 <tabs id="t4" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t4-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">客戶說架上快沒貨了，最近又在作促銷，賣得很不錯，叫我趕快補貨...</h3>
+                            <h2 class="slider-desc-title">客戶說架上快沒貨了，最近又在作促銷，賣得很不錯，叫我趕快補貨...</h2>
                             <div>公司居然沒庫存貨可以出了...產線就算加班也趕不及明天出貨...</div>
                         </div>
                     </template>
@@ -233,7 +233,7 @@
                     <!-- 解決方案 -->
                     <template slot="t4-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h2>
                             <div>
                                 <strong>業務巡補任務須注意：業績、競品管理要兼顧</strong>
                                 <ul>
@@ -272,7 +272,7 @@ module.exports = {
         }
     },
     mounted: function () {
-        $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+        $(this.$refs.accordion).find('.js-title').eq(0).addClass('active');
     },
 };
 </script>

@@ -68,7 +68,7 @@
 module.exports = {
     props: ['content'],
     components: {
-        'progress-bars': httpVueLoader('components/seminar/progressBars/progress-bars.vue'),
+        'progress-bars': httpVueLoader('components/seminar/progress-bars.vue'),
     },
     computed: {
         isMobile() {

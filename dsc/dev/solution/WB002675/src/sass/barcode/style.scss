@@ -27,13 +27,11 @@ main {
         position: relative;
         background-image: image-url('barcode/section1-bg.jpg');
         background-position: 50% 0, 50% -10px;
-        background-size: cover;
         background-repeat: no-repeat;
         @media (min-width: $content-width) {
             height: 820px;
             background-image: image-url('barcode/section1.png'), image-url('barcode/section1-bg.jpg');
             background-position: 50% 0, 50% 0;
-            background-size: auto, cover;
         }
         h1.sectionTitle {
             display: flex;

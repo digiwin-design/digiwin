@@ -2,7 +2,7 @@ main .mobile {
     .accordion {
         &-content {
             background-color: #c9c9c9;
-            &:not(:first-of-type) {
+            &:not(:nth-of-type(2)) {
                 display: none;
             }
         }
@@ -10,7 +10,7 @@ main .mobile {
             padding-top: 1.5em;
             padding-bottom: 1.5em;
         }
-        h2 {
+        &-title {
             display: flex;
             padding-right: 20px;
             padding-left: 20px;
@@ -22,7 +22,7 @@ main .mobile {
             cursor: pointer;
             justify-content: space-between;
             align-items: center;
-            &:not(:last-of-type) {
+            &:not(:nth-last-of-type(2)) {
                 border-bottom: 1px solid #e8e8e8;
             }
             &:focus {

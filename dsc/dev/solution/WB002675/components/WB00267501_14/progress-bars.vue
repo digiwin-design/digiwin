@@ -59,8 +59,8 @@ module.exports = {
                     })
                     .style('width', function (d) {
                         let percentage;
-                        if (this.isMobile && d.percentage < 23) {
-                            percentage = 23; // 最小寬度
+                        if (this.isMobile && d.percentage < 30) {
+                            percentage = 30; // 最小寬度
                         }
                         else if (d.percentage < 14) {
                             percentage = 14; // 最小寬度
@@ -69,7 +69,7 @@ module.exports = {
                             percentage = d.percentage;
                         }
                         return percentage + '%';
-                    });
+                    }.bind(this));
             }.bind(this));
         },
     },

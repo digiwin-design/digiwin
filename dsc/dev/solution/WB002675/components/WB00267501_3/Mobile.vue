@@ -1,13 +1,13 @@
 <template>
     <div class="mobile">
         <div ref="accordion" class="accordion">
-            <h2 v-on:click="slideToggle">促銷活動</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">促銷活動</div>
             <div class="accordion-content">
                 <tabs id="t1" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t1-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">總公司通知門市要作促銷...草莓蛋糕買一送一...手工餅乾加一元多一件...生乳捲第二件打七折...</h3>
+                            <h2 class="slider-desc-title">總公司通知門市要作促銷...草莓蛋糕買一送一...手工餅乾加一元多一件...生乳捲第二件打七折...</h2>
                             <div>今天結帳又要自己賠錢了...每次作促銷，最怕的就是記錯折扣結錯帳...每件商品的促銷折扣都不一樣...常常算錯...<br>客人一直問多少錢?都要查過才能告訴他...有人因此不耐煩不買了...算錯錢也常常被客訴...</div>
                         </div>
                     </template>
@@ -20,7 +20,7 @@
                                 <div class="hoverBox-hoverText">
                                     <p>
                                         促銷活動也太多了！<br>
-                                        每個檔期都不一 樣，<br>
+                                        每個檔期都不一樣，<br>
                                         要怎麼記得住？<br>
                                         售價要怎麼算才能又快又正確？
                                     </p>
@@ -50,7 +50,7 @@
                     <!-- 解決方案 -->
                     <template slot="t1-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h2>
                             <div>
                                 <strong>結帳零錯誤、消費免糾紛</strong>
                                 <ul>
@@ -70,13 +70,13 @@
                 </tabs>
             </div>
             
-            <h2 v-on:click="slideToggle">滿額活動</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">滿額活動</div>
             <div class="accordion-content">
                 <tabs id="t2" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t2-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">週年慶又到了...今年是滿2000送200...促銷的商品不能列入滿額贈...新品與買一送一的也不能列入...</h3>
+                            <h2 class="slider-desc-title">週年慶又到了...今年是滿2000送200...促銷的商品不能列入滿額贈...新品與買一送一的也不能列入...</h2>
                             <div>有位常客買了一堆，因為沒幫客人算好滿額贈的金額...才差一點點就達到...但客戶生氣全部不買了...</div>
                         </div>
                     </template>
@@ -119,7 +119,7 @@
                     <!-- 解決方案 -->
                     <template slot="t2-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h2>
                             <div>
                                 <strong>人潮提昇有難度、提昇客單價勢在必行</strong>
                                 <ul>
@@ -139,13 +139,13 @@
                 </tabs>
             </div>
             
-            <h2 v-on:click="slideToggle">會員專屬</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">會員專屬</div>
             <div class="accordion-content">
                 <tabs id="t3" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t3-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">一位白金卡會員要用點數抵消費...但他買了新品還有促銷商品...剛好他生日月又點數加倍...買5000可以再換贈品...</h3>
+                            <h2 class="slider-desc-title">一位白金卡會員要用點數抵消費...但他買了新品還有促銷商品...剛好他生日月又點數加倍...買5000可以再換贈品...</h2>
                             <div>上想要舉辦會員活動促銷，會員商品組合價、紅利積點、會員來店禮、會員生日禮、點數兌換...，但這無法人工做。<br>自己都記不住規則了，如何叫客人再多累積一點...</div>
                         </div>
                     </template>
@@ -181,7 +181,7 @@
                     <!-- 解決方案 -->
                     <template slot="t3-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h2>
                             <div>
                                 <strong>VIP會員擁專屬禮、自然常來增營收</strong>
                                 <ul>
@@ -200,13 +200,13 @@
                 </tabs>
             </div>
             
-            <h2 v-on:click="slideToggle">預購活動</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">預購活動</div>
             <div class="accordion-content">
                 <tabs id="t4" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t4-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">門市要推預購的促銷活動了...預購原味牛軋糖就送布丁一個...預購滿5盒打9折...滿10盒打8折...滿15盒打8.5折</h3>
+                            <h2 class="slider-desc-title">門市要推預購的促銷活動了...預購原味牛軋糖就送布丁一個...預購滿5盒打9折...滿10盒打8折...滿15盒打8.5折</h2>
                             <div>公客戶又打來說要換焦糖口味的，而且再加5盒堅果口味與5盒鳳梨酥，可是之前訂金只收5盒的錢...<br>扣掉訂金與折扣後，這樣總共還要收多少錢?</div>
                         </div>
                     </template>
@@ -244,7 +244,7 @@
                     <!-- 解決方案 -->
                     <template slot="t4-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h2>
                             <div>
                                 <strong>預購活動用心做、檔期營收穩達標</strong>
                                 <ul>
@@ -263,13 +263,13 @@
                 </tabs>
             </div>
             
-            <h2 v-on:click="slideToggle">門市要貨</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">門市要貨</div>
             <div class="accordion-content">
                 <tabs id="t5" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t5-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">最近草莓千層賣的特別好...架上常常被拿光...明天要不要跟總店多叫一點?但又怕賣不完要報廢...</h3>
+                            <h2 class="slider-desc-title">最近草莓千層賣的特別好...架上常常被拿光...明天要不要跟總店多叫一點?但又怕賣不完要報廢...</h2>
                             <div>幫王小姐調貨的千層怎麼還沒送來？客人等下就要過來拿了，她好幾次沒買到，已經不高興了...一直要我們多備點現貨...</div>
                         </div>
                     </template>
@@ -312,7 +312,7 @@
                     <!-- 解決方案 -->
                     <template slot="t5-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">經營門市專櫃其實您可以這樣管</h2>
                             <div>
                                 <strong>要貨補貨靠數據、架上永遠不缺貨</strong>
                                 <ul>
@@ -349,7 +349,7 @@ module.exports = {
         }
     },
     mounted: function () {
-        $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+        $(this.$refs.accordion).find('.js-title').eq(0).addClass('active');
     },
 };
 </script>

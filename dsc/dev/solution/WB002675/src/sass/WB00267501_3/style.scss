@@ -18,7 +18,7 @@ main {
         }
     }
     .desktop-nav a,
-    .mobile .accordion h2 {
+    .mobile .accordion .accordion-title {
         background-color: #f66f15;
     }
     .hoverBox {
@@ -39,7 +39,6 @@ main {
             align-items: center;
             &-title {
                 margin-bottom: 1em;
-                text-align: center;
                 font-weight: bold;
                 font-size: 24px;
             }

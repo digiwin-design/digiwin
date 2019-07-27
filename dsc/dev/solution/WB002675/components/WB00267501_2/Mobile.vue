@@ -1,13 +1,13 @@
 <template>
     <div class="mobile">
         <div ref="accordion" class="accordion">
-            <h2 v-on:click="slideToggle">通路合約</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">通路合約</div>
             <div class="accordion-content">
                 <tabs id="t1" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t1-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">今天要出貨到家樂福xx分店三十箱、大潤發要請款了還沒出對帳單、全家跟7-11的電子發票還沒上傳…</h3>
+                            <h2 class="slider-desc-title">今天要出貨到家樂福xx分店三十箱、大潤發要請款了還沒出對帳單、全家跟7-11的電子發票還沒上傳…</h2>
                             <div>公司產品鋪貨到各個通路販售，合約內容費用都不同，每月只要遇到請款對帳結帳就想離職...老闆說我是今年第八個找進來的會計了...</div>
                         </div>
                     </template>
@@ -47,7 +47,7 @@
                     <!-- 解決方案 -->
                     <template slot="t1-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">作經銷批發生意，其實您可以這樣管</h2>
                             <div>
                                 <strong>通路合約控管好、加快結帳與對帳</strong>
                                 <ul>
@@ -67,13 +67,13 @@
                 </tabs>
             </div>
 
-            <h2 v-on:click="slideToggle">促銷管理</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">促銷管理</div>
             <div class="accordion-content">
                 <tabs id="t2" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t2-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">配合家樂福促銷的組合品庫存還有多少?...COSTCO的促銷組合還沒包裝...條碼要怎麼印?...</h3>
+                            <h2 class="slider-desc-title">配合家樂福促銷的組合品庫存還有多少?...COSTCO的促銷組合還沒包裝...條碼要怎麼印?...</h2>
                             <div>商品種類多，怎麼搭配組合才能增加營收、降低庫存？每個通路多個檔期同時進行，常常搞錯價格！我不想被扣獎金阿...</div>
                         </div>
                     </template>
@@ -124,7 +124,7 @@
                     <!-- 解決方案 -->
                     <template slot="t2-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">作連鎖通路生意，其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">作連鎖通路生意，其實您可以這樣管</h2>
                             <div>
                                 <strong>促銷很複雜? 數據幫助你</strong>
                                 <ul>
@@ -146,13 +146,13 @@
                 </tabs>
             </div>
 
-            <h2 v-on:click="slideToggle">允收．效期</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">允收．效期</div>
             <div class="accordion-content">
                 <tabs id="t3" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t3-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">COSTCO說這批貨過了允收期，不收了...家福樂也不要這批貨...</h3>
+                            <h2 class="slider-desc-title">COSTCO說這批貨過了允收期，不收了...家福樂也不要這批貨...</h2>
                             <div>商每家量販店效期規範都不同，這批貨到底要出給誰阿...<br>每天一直出貨都沒有注意到哪些快過期，報廢傷利潤，還得賠錢耶！</div>
                         </div>
                     </template>
@@ -185,7 +185,7 @@
                     <!-- 解決方案 -->
                     <template slot="t3-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">作連鎖通路KA生意，其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">作連鎖通路KA生意，其實您可以這樣管</h2>
                             <div>
                                 <strong>善用批號管理、進而降低報廢成本</strong>
                                 <ul>
@@ -225,7 +225,7 @@ module.exports = {
         }
     },
     mounted: function () {
-        $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+        $(this.$refs.accordion).find('.js-title').eq(0).addClass('active');
     },
 };
 </script>

@@ -82,6 +82,7 @@ main {
         }
         li {
             @media (max-width: $content-width) {
+                margin-bottom: 1em;
                 width: calc(#{$content-width} / 6);
             }
             &::before {

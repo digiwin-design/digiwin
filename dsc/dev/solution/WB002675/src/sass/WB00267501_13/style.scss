@@ -82,6 +82,7 @@ main {
             }
         }
         li {
+            margin-bottom: 1em;
             width: calc(#{$content-width} / 6);
             &::before {
                 content: '．';

@@ -1,7 +1,16 @@
+<template>
+    <div ref="progressBars" class="progressBars">
+        <template v-for="bar in progressBars">
+            <ul class="js-barGroup" :key="bar.items[0].text"></ul>
+        </template>
+    </div>
+</template>
+
+<script>
 module.exports = {
     props: ['progressBars'],
     computed: {
-        isMobile() {
+        isMobile: function () {
             return store.state.isMobile;
         }
     },
@@ -15,8 +24,8 @@ module.exports = {
                 window.removeEventListener('scroll', this.scrollHandler);
             }
         }, 100),
-        initComponent() {
-            $('.js-barGroup').each((idx, el) => {
+        initComponent: function () {
+            $('.js-barGroup').each(function (idx, el) {
                 let li = d3
                     .select(el)
                     .selectAll('li')
@@ -32,7 +41,9 @@ module.exports = {
                     .append('div')
                     .classed('text', true)
                     .append('p')
-                    .text(d => d.text);
+                    .text(function (d) {
+                        return d.text;
+                    });
                 li
                     .append('div')
                     .classed('value', true)
@@ -40,16 +51,16 @@ module.exports = {
                     .classed('bar', true)
                     .transition()
                     .duration(2000)
-                    .tween('text', d => { // 文字動畫
-                        var i = d3.interpolateRound(0, d.percentage);
+                    .tween('text', function (d) { // 文字動畫
+                        var i = d3.interpolateNumber(0, d.percentage);
                         return function (t) {
-                            this.textContent = `${i(t)}%`;
+                            this.textContent = i(t).toFixed(1) + '%';
                         };
                     })
-                    .style('width', d => {
+                    .style('width', function (d) {
                         let percentage;
-                        if (this.isMobile && d.percentage < 23) {
-                            percentage = 23; // 最小寬度
+                        if (this.isMobile && d.percentage < 30) {
+                            percentage = 30; // 最小寬度
                         }
                         else if (d.percentage < 14) {
                             percentage = 14; // 最小寬度
@@ -57,16 +68,17 @@ module.exports = {
                         else {
                             percentage = d.percentage;
                         }
-                        return `${percentage}%`;
-                    });
-            });
+                        return percentage + '%';
+                    }.bind(this));
+            }.bind(this));
         },
     },
-    mounted() {
+    mounted: function () {
         this.scrollHandler();
         window.addEventListener('scroll', this.scrollHandler);
     },
-    beforeDestroy() {
+    beforeDestroy: function () {
         window.removeEventListener('scroll', this.scrollHandler);
     },
 };
+</script>

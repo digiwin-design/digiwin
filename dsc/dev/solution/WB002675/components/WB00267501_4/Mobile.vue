@@ -1,13 +1,13 @@
 <template>
     <div class="mobile">
         <div ref="accordion" class="accordion">
-            <h2 v-on:click="slideToggle">接團前</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">接團前</div>
             <div class="accordion-content">
                 <tabs id="t1" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t1-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">控團沒做好影響有多大</h3>
+                            <h2 class="slider-desc-title">控團沒做好影響有多大</h2>
                             <div>
                                 哪一團什麼時候進來，不容易掌握，花時間做聯繫，需要做臨時應變。
                                 <br />團控沒控好，引起團和團碰撞，造成館內壅擠，客人參觀意願降低。
@@ -28,7 +28,7 @@
                     <!-- 解決方案 -->
                     <template slot="t1-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">觀光工廠其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">觀光工廠其實您可以這樣管</h2>
                             <div>
                                 <strong>資源有限，事先安排不忙亂</strong>
                                 <ul>
@@ -47,13 +47,13 @@
                 </tabs>
             </div>
 
-            <h2 v-on:click="slideToggle">接團中</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">接團中</div>
             <div class="accordion-content">
                 <tabs id="t2" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t2-0-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">導購人流沒控好影響有多大</h3>
+                            <h2 class="slider-desc-title">導購人流沒控好影響有多大</h2>
                             <div>
                                 導遊完全不清楚客人買多少了？如何能再叫客人多買一點?？
                                 <br />客人急，時間不夠了，結帳看起來還要很久，不如不買了...
@@ -74,7 +74,7 @@
                     <!-- 解決方案 -->
                     <template slot="t2-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">觀光工廠其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">觀光工廠其實您可以這樣管</h2>
                             <div>
                                 <strong>結帳快又順、秩序不混亂！</strong>
                                 <ul>
@@ -94,15 +94,15 @@
                 </tabs>
             </div>
 
-            <h2 v-on:click="slideToggle">接團後</h2>
+            <div class="accordion-title js-title" v-on:click="slideToggle">接團後</div>
             <div class="accordion-content">
                 <tabs id="t3" :nav="nav">
                     <!-- 常見困擾 -->
                     <template slot="t3-0-t">
                         <div class="slider-desc">
-                            <h3
+                            <h2
                                 class="slider-desc-title"
-                            >摳咪雄〞沒算好影響有多大</h3>
+                            >摳咪雄〞沒算好影響有多大</h2>
                             <div>因為佣金結算速度慢或出錯，造成領隊不高興。</div>
                         </div>
                     </template>
@@ -147,7 +147,7 @@
                     <!-- 解決方案 -->
                     <template slot="t3-1-t">
                         <div class="slider-desc">
-                            <h3 class="slider-desc-title">觀光工廠其實您可以這樣管</h3>
+                            <h2 class="slider-desc-title">觀光工廠其實您可以這樣管</h2>
                             <div>
                                 <strong>退佣速度快又正確，別讓導遊不開心！</strong>
                                 <ul>
@@ -187,7 +187,7 @@ module.exports = {
         }
     },
     mounted: function () {
-        $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+        $(this.$refs.accordion).find('.js-title').eq(0).addClass('active');
     },
 };
 </script>

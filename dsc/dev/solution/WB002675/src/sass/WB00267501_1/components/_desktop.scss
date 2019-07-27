@@ -1,11 +1,12 @@
 main .desktop {
+    @function getWidth($itemNum, $itemWidth: 120px, $margin: 85px) {
+        @return calc(#{$itemWidth} * #{$itemNum} + #{$margin} * #{$itemNum - 1});
+    }
     &-nav {
         display: flex;
         margin: 60px auto 100px;
-        justify-content: center;
-        li + li {
-            margin-left: 85px;
-        }
+        justify-content: space-between;
+        max-width: getWidth(4);
         a {
             position: relative;
             display: block;
