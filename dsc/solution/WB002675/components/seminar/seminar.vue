@@ -47,11 +47,8 @@ module.exports = {
         'accordion': httpVueLoader('components/seminar/accordion.vue'),
     },
     methods: {
-        clickHandler(event) {
-            let delay = $(event.target).data('delay');
-            this.scrollHandler(event, delay);
-        },
-        scrollHandler: function (event, delay = 0) {
+        clickHandler: function (event) {
+            let delay = $(event.target).data('delay') || 0;
             // 展開/收合
             let $accordion = $(event.target.hash).next();
             if (!$accordion.find('h2').next().is(':visible')) {
@@ -68,7 +65,7 @@ module.exports = {
                 let finalPos = offset ? targetPos - offset : targetPos;
                 $('html, body').animate({ scrollTop: finalPos });
             }, delay);
-        }
+        },
     },
 };
 </script>
