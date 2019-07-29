@@ -2,12 +2,11 @@ extends ../layout.pug
 
 block includes
     link(rel='preload', href='images/WB00267501_15/section1-after-s.png', as='image')
-    link(rel='stylesheet', href='assets/animate.css')
-    link(rel='stylesheet', href=`css/WB00267501_15.css?v=${Math.random()}`)
-    script(src='assets/lodash.js', defer)
+    link(rel='stylesheet', href='assets/animate.min.css')
+    link(rel='stylesheet', href='css/WB00267501_15/style.css')
+    script(src='assets/lodash.min.js', defer)
     script(src='assets/wow.min.js', defer)
-    script(src=`js/common.min.js?v=${Math.random()}`, defer)
-    script(src=`js/WB00267501_15.min.js?v=${Math.random()}`, defer)
+    script(src='js/WB00267501_15.min.js', defer)
 
 block content
     include WB00267501_15.html

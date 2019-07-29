@@ -1,24 +1,40 @@
+httpVueLoader.register(Vue, 'components/contact.vue');
+
 const store = new Vuex.Store({
     state: {
-        isMobile: true,
+        isMobile: false,
+        result: null,
     },
     mutations: {
         updateDevice(state, payload) {
             state.isMobile = payload;
         },
+        setData(state, payload) {
+            state.result = payload;
+        },
+    },
+    actions: {
+        getData(context) {
+            axios.get('db.json').then(res => {
+                context.commit('setData', res.data);
+            });
+        },
     }
 });
 
 new Vue({
-    el: '#section1-app',
+    el: 'main',
     components: {
-        'Mobile': httpVueLoader('components/Section1-mobile.vue'),
-        'Desktop': httpVueLoader('components/Section1-desktop.vue'),
+        'Mobile': httpVueLoader('components/WB00267501_15/Section1-mobile.vue'),
+        'Desktop': httpVueLoader('components/WB00267501_15/Section1-desktop.vue'),
     },
     computed: {
         isMobile() {
             return store.state.isMobile;
-        }
+        },
+        result() {
+            return store.state.result;
+        },
     },
     methods: {
         mediaSensor: _.throttle(function () {
@@ -31,6 +47,9 @@ new Vue({
             store.commit('updateDevice', isMobile);
         },
     },
+    created() {
+        store.dispatch('getData');
+    },
     mounted() {
         window.addEventListener('resize', this.mediaSensor);
         this.mediaSensor();
@@ -38,11 +57,5 @@ new Vue({
     },
     beforeDestroy() {
         window.removeEventListener('resize', this.mediaSensor);
-    },
-    template: `
-        <div>
-            <Mobile v-if="isMobile"></Mobile>
-            <Desktop v-if="!isMobile"></Desktop>
-        </div>
-    `,
+    }
 });

@@ -16,7 +16,8 @@
 
 <article class="section1">
     <h1 class="sectionTitle container">傳統商品銷售的方式花費了多少等待時間？我們到底在等什麼？<br>經銷商/加盟主與總部的溝通是不是可以更順暢！</h1>
-    <div id="section1-app"></div>
+    <Mobile v-if="isMobile"></Mobile>
+    <Desktop v-if="!isMobile"></Desktop>
 </article>
 
 <article class="section2">
@@ -86,3 +87,5 @@
         </div>
     </div>
 </article>
+
+<contact v-bind:multiple="false" source=""></contact>

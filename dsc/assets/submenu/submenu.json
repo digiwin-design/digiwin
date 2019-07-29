@@ -857,7 +857,7 @@
             },
             {
                 "text": "批發生意",
-                "url": "WB00267501#liutong",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "經銷代理",
@@ -871,7 +871,7 @@
             },
             {
                 "text": "零售生意",
-                "url": "WB00267501#liutong",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "門市專櫃",
@@ -885,16 +885,26 @@
                 ]
             },
             {
-                "text": "觀光工廠",
-                "url": "WB00267501_4"
-            },
-            {
-                "text": "行動經銷",
-                "url": "WB00267501_15"
+                "text": "其它方案",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "觀光工廠",
+                        "url": "WB00267501_4"
+                    },
+                    {
+                        "text": "行動經銷",
+                        "url": "WB00267501_15"
+                    },
+                    {
+                        "text": "條碼方案",
+                        "url": "barcode"
+                    }
+                ]
             },
             {
                 "text": "其它流通業",
-                "url": "WB00267501#otherSection",
+                "url": "javascript:;",
                 "dropdowns": [
                     {
                         "text": "食品業",
@@ -1361,46 +1371,6 @@
             {
                 "text": "聯絡我們",
                 "url": "#contact"
-            }
-        ]
-    },
-    {
-        "id": "ERP",
-        "title": "ERP全方案-企業轉型，從創造數位價值開始",
-        "menus": [
-            {
-                "text": "職能管理",
-                "url": "#section2"
-            },
-            {
-                "text": "經營能力",
-                "url": "#section3"
-            },
-            {
-                "text": "產業趨勢",
-                "url": "#section4"
-            },
-            {
-                "text": "企業規模",
-                "url": "#section5"
-            }
-        ],
-        "anchors": [
-            {
-                "url": "#section2",
-                "index": 0
-            },
-            {
-                "url": "#section3",
-                "index": 1
-            },
-            {
-                "url": "#section4",
-                "index": 2
-            },
-            {
-                "url": "#section5",
-                "index": 3
             }
         ]
     }
