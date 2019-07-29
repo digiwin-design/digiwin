@@ -1,4 +1,7 @@
 main .accordion {
+    & + .accordion {
+        margin-top: 0.5em;
+    }
     h2 {
         position: relative;
         display: flex;
@@ -14,6 +17,12 @@ main .accordion {
         @at-root {
             html.flexboxtweener main .accordion h2 {
                 align-items: center;
+            }
+            $titleColor: #e87670 #e47b1e #e74067 #a7d348 #60b6fa #c864bd;
+            @for $i from 1 through 6 {
+                main .accordion.section#{$i} h2 {
+                    background-color: nth($titleColor, $i);
+                }
             }
         }
         &::before {
@@ -32,6 +41,9 @@ main .accordion {
                 }
             }
         }
+    }
+    &-category {
+        font-size: 20px;
     }
     &-more {
         position: absolute;
@@ -145,16 +157,16 @@ main .accordion {
         a {
             letter-spacing: getLetterSpacing(25);
             &:nth-of-type(1) {
-                @include btn(100%, 40px, map-get($seminar-color, orange), #fff, 0, true);
+                @include btn(100%, 40px, map-get($seminar-color, btn), #fff, 0, true);
                 margin-bottom: 20px;
-                border: 1px solid map-get($seminar-color, orange);
+                border: 1px solid map-get($seminar-color, btn);
                 @media (min-width: $tablet-width + 1) {
                     margin-left: 10px;
                     width: 300px;
                 }
             }
             &:nth-of-type(2) {
-                @include btn(100%, 40px, #fff, map-get($seminar-color, orange), 0, true);
+                @include btn(100%, 40px, #fff, map-get($seminar-color, btn), 0, true);
                 @media (min-width: $tablet-width + 1) {
                     margin-left: 10px;
                     width: 300px;

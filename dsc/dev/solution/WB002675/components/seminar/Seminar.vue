@@ -7,10 +7,16 @@
             </template>
         </main-header>
 
-        <article class="section1">
-            <h1>{{content.section1Title}}</h1>
-            <p class="container">鼎新深耕流通買賣業多年，期許藉著各種不同議題的研討會，與流通業朋友們一同精進成長，也體會忙碌的工作讓您無法親自前來上課聽取新知，我們特別提供各場研討會講義資料索取，如您對任何一場有興趣了解，都可以點選[索取資料]，我們將盡快將資料送達您手中。知識就是力量，我們願意與您分享更多成功者的思考面向與成功密訣！</p>
-            <accordion v-for="(accordion,index) in content.accordions" :accordion="accordion" :index="index" :key="accordion.title"></accordion>
+        <article>
+            <div class="container">
+                <h1>{{content.section1Title}}</h1>
+                <p>鼎新深耕流通買賣業多年，期許藉著各種不同議題的研討會，與流通業朋友們一同精進成長，也體會忙碌的工作讓您無法親自前來上課聽取新知，我們特別提供各場研討會講義資料索取，如您對任何一場有興趣了解，都可以點選[索取資料]，我們將盡快將資料送達您手中。知識就是力量，我們願意與您分享更多成功者的思考面向與成功密訣！</p>
+                
+                <ul class="nav">
+                    <li v-for="text in content.nav" :key="text"><a href>{{text}}</a></li>
+                </ul>
+            </div>
+            <accordion v-for="(accordion,index) in content.accordions" :accordion="accordion" :index="index+1" :key="accordion.title"></accordion>
         </article>
 
         <contact v-bind:multiple="false" source></contact>

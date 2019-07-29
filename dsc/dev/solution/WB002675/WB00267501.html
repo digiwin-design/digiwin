@@ -45,7 +45,7 @@
         <section-title title="批發、零售生意管理" padding=".5em"></section-title>
         <p>做四方的生意、賺八方的錢財，多元化的通路經營是關鍵！連鎖賣場KA的合約管理、出貨允收效期…電商網購訂單越多越好但衍生的接單、對帳等的困擾也倍增…門市與百貨專櫃都是設點銷售但背後的管理方式差異甚大…觀光工廠從散客與團客控管、館務到結帳甚至退稅服務等作業要在一小時內緊密銜接…</p>
         <div class="section1-links">
-            <a v-for="link in result.index.section1" :href="link.url" :target="[link.target ? link.target : '_self']">經銷代理</a>
+            <a v-for="link in result.index.section1" :href="link.url" :target="[link.target ? link.target : '_self']">{{link.text}}</a>
         </div>
     </div>
 </article>

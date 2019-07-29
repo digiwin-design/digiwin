@@ -1,8 +1,7 @@
 $seminar-color: (
     primary: #e52847,
-    secondary: #f37086,
-    orange: #ff8111,
-    gray: #b9b9b9,
+    secondary: #543e3e,
+    btn: #eb1a4a
 );
 @import '../common/variable';
 @import '../common/helpers';
@@ -46,7 +45,7 @@ main {
         }
         h1 {
             margin-top: 1.5em;
-            margin-bottom: 0.5em;
+            margin-bottom: .5em;
             text-align: center;
             font-weight: bold;
             font-size: 26px;
@@ -55,18 +54,33 @@ main {
             }
         }
     }
-    .section2 {
-        padding-bottom: 60px;
-        h1 {
-            margin-bottom: 1em;
+    .nav {
+        display: flex;
+        margin: 2em auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: $content-width) {
+            justify-content: center;
         }
-        &-desc {
-            margin: 0 auto;
-            margin-bottom: 2em;
-            max-width: 1000px;
+        li {
+            width: 112px;
+            @media (max-width: $content-width) {
+                margin: 20px;
+            }
         }
-        .progressBars ul + h2 {
-            margin-top: 2em;
+        a {
+            display: block;
+            padding-left: 40px;
+            background-repeat: no-repeat;
+            color: #000;
+            line-height: 36px;
+            @at-root {
+                @for $i from 1 through 6 {
+                    main .nav li:nth-child(#{$i}) a {
+                        background-image: image-url('seminar/nav/icon#{$i}.png');
+                    }
+                }
+            }
         }
     }
 }

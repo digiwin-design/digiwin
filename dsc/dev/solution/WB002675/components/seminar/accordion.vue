@@ -1,6 +1,6 @@
 <template>
-    <div class="accordion">
-        <p class="container">{{accordion.category}}：</p>
+    <div class="accordion" :class="['section'+index]">
+        <p class="accordion-category container">{{accordion.category}}：</p>
         <div ref="accordion">
             <h2 v-on:click="slideToggle">
                 <span class="accordion-title" v-html="accordion.title"></span>
@@ -12,7 +12,7 @@
                 <div class="container">
                     <div class="accordion-col">
                         <div class="accordion-illust">
-                            <img :src="'images/seminar/accordion/illust'+(index+1)+'.jpg'" alt>
+                            <img :src="'images/seminar/accordion/illust'+index+'.jpg'" alt>
                         </div>
                         <div class="accordion-btns">
                             <a
@@ -24,7 +24,7 @@
                             >{{link.text}}</a>
                         </div>
                     </div>
-                    <div class="accordion-col" :class="'text'+(index+1)">
+                    <div class="accordion-col" :class="'text'+index">
                         <template v-for="content in accordion.contents">
                             <h3 v-if="content.title" :key="content.title">{{content.title}}</h3>
                             <h4 v-if="content.subtitle" :key="content.subtitle">{{content.subtitle}}</h4>
@@ -69,6 +69,7 @@ module.exports = {
             $(this.$refs.accordion).accordion({
                 collapsible: true,
                 heightStyle: 'content',
+                active: this.index === 1 ? 0 : false // 第一區塊預設展開
             });
         },
         destroyAccordion: function () {
