@@ -26,9 +26,10 @@ main {
         &-boxs {
             display: flex;
             margin: 0 auto;
-            width: 350px;
+            max-width: 350px;
             flex-wrap: wrap;
             @media (min-width: $breakpoint) {
+                max-width: none;
                 width: 100%;
             }
             .hoverBox {
@@ -84,8 +85,7 @@ main {
     }
     .section2 {
         $breakpoint: 900px;
-
-@include bg('WB00267501_14/section2-bg.jpg');
+        @include bg('WB00267501_14/section2-bg.jpg');
         padding-bottom: 60px;
         min-height: image-height('WB00267501_14/section2-bg.jpg');
         background-size: cover;
