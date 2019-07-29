@@ -1,7 +1,4 @@
 main .accordion {
-    & + .accordion {
-        margin-top: 0.5em;
-    }
     h2 {
         position: relative;
         display: flex;
@@ -41,9 +38,6 @@ main .accordion {
                 }
             }
         }
-    }
-    &-category {
-        font-size: 20px;
     }
     &-more {
         position: absolute;
@@ -93,10 +87,12 @@ main .accordion {
     &-content {
         margin: 0 auto;
         max-width: 1110px;
-        &:not(:first-of-type) {
+        @media (max-width: $tablet-width) {
             display: none;
-            @media (min-width: $tablet-width + 1) {
-                display: block;
+            @at-root {
+                main .accordion:nth-of-type(2) .accordion-content:first-of-type {
+                    display: block;
+                }
             }
         }
         .container {

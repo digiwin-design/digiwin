@@ -20,7 +20,7 @@ main {
     line-height: 1.6;
     .container {
         margin: 0 auto;
-        padding: 0 5px;
+        padding: 0 10px;
         max-width: $content-width;
         @media (min-width: 361px) {
             padding-right: percentage(20 / 414);

@@ -10,18 +10,8 @@ $seminar-color: (
 @import 'progressBars';
 
 main {
-    .container {
-        padding: 0 20px;
-    }
     .header {
-        @include headerBg('seminar/header-bg.jpg', 'seminar/header-bg.jpg', 50% 100%);
-        .container {
-            height: 340px;
-            @media (min-width: $tablet-width + 1) {
-                padding-left: 85px;
-                height: image-height('seminar/header-bg.jpg');
-            }
-        }
+        @include headerBg('seminar/header-bg.jpg');
         h1 {
             color: #f0fe11;
             font-size: 30px;
@@ -43,6 +33,10 @@ main {
         &:last-of-type {
             padding-bottom: 60px;
         }
+        .container {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
         h1 {
             margin-top: 1.5em;
             margin-bottom: .5em;
@@ -63,7 +57,7 @@ main {
             justify-content: center;
         }
         li {
-            width: 112px;
+            width: 115px;
             @media (max-width: $content-width) {
                 margin: 20px;
             }
@@ -82,5 +76,9 @@ main {
                 }
             }
         }
+    }
+    .accordion + .category {
+        margin-top: .5em;
+        font-size: 20px;
     }
 }

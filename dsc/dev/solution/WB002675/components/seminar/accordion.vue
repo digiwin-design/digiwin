@@ -1,38 +1,39 @@
 <template>
     <div class="accordion" :class="['section'+index]">
-        <p class="accordion-category container">{{accordion.category}}：</p>
         <div ref="accordion">
-            <h2 v-on:click="slideToggle">
-                <span class="accordion-title" v-html="accordion.title"></span>
-                <span class="accordion-more">
-                    <i>more</i>
-                </span>
-            </h2>
-            <div class="accordion-content">
-                <div class="container">
-                    <div class="accordion-col">
-                        <div class="accordion-illust">
-                            <img :src="'images/seminar/accordion/illust'+index+'.jpg'" alt>
+            <template v-for="section in accordion">
+                <h2 v-on:click="slideToggle" :key="section.title">
+                    <span class="accordion-title" v-html="section.title"></span>
+                    <span class="accordion-more">
+                        <i>more</i>
+                    </span>
+                </h2>
+                <div class="accordion-content" :key="section.links[0].href">
+                    <div class="container">
+                        <div class="accordion-col">
+                            <div class="accordion-illust">
+                                <img :src="'images/seminar/accordion/illust'+section.id+'.jpg'" alt>
+                            </div>
+                            <div class="accordion-btns">
+                                <a
+                                    v-for="link in section.links"
+                                    :href="link.href"
+                                    :class="{'js-nav':btnClass(link.href)}"
+                                    :key="link.href"
+                                    target="_blank"
+                                >{{link.text}}</a>
+                            </div>
                         </div>
-                        <div class="accordion-btns">
-                            <a
-                                v-for="link in accordion.links"
-                                :href="link.href"
-                                :class="{'js-nav':btnClass(link.href)}"
-                                :key="link.href"
-                                target="_blank"
-                            >{{link.text}}</a>
+                        <div class="accordion-col">
+                            <template v-for="content in section.contents">
+                                <h3 v-if="content.title" :key="content.title">{{content.title}}</h3>
+                                <h4 v-if="content.subtitle" :key="content.subtitle">{{content.subtitle}}</h4>
+                                <div v-html="content.html" class="accordion-detail" :key="content.html"></div>
+                            </template>
                         </div>
-                    </div>
-                    <div class="accordion-col" :class="'text'+index">
-                        <template v-for="content in accordion.contents">
-                            <h3 v-if="content.title" :key="content.title">{{content.title}}</h3>
-                            <h4 v-if="content.subtitle" :key="content.subtitle">{{content.subtitle}}</h4>
-                            <div v-html="content.html" class="accordion-detail" :key="content.html"></div>
-                        </template>
                     </div>
                 </div>
-            </div>
+            </template>
         </div>
     </div>
 </template>
@@ -61,7 +62,7 @@ module.exports = {
         },
         slideToggle: function (event) {
             if (this.isMobile) {
-                $(event.target).toggleClass('active').next().slideToggle();
+                $(event.currentTarget).toggleClass('active').next().slideToggle();
             }
         },
         initAccordion: function () {
@@ -73,7 +74,9 @@ module.exports = {
             });
         },
         destroyAccordion: function () {
-            $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+            if (this.index === 1) {
+                $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+            }
             $(this.$refs.accordion).accordion('destroy');
         },
     },
@@ -82,7 +85,9 @@ module.exports = {
             this.initAccordion();
         }
         else {
-            $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+            if (this.index === 1) {
+                $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+            }
         }
     },
 };
