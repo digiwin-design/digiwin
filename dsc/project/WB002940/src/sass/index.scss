@@ -79,8 +79,8 @@ main {
             line-height: 55px;
         }
         a {
-            @include btn(340px, 55px, #fff, #ff6000);
-            display: flex;
+            @include btn(auto, 55px, #fff, #ff6000);
+            display: inline-flex;
             margin: 0 auto;
             padding-right: 10px;
             padding-left: 18px;
@@ -88,6 +88,7 @@ main {
             align-items: center;
             &::after {
                 @include imgBg('play-icon.png', true);
+                margin-left: 10px;
                 content: '';
             }
         }
@@ -222,13 +223,13 @@ main {
             h3 {
                 padding-top: 73px;
                 padding-left: 73px;
-                font-size: 36px;
                 letter-spacing: getLetterSpacing(200);
+                font-size: 36px;
             }
             p {
                 padding-left: 73px;
-                font-size: 20px;
                 letter-spacing: getLetterSpacing(300);
+                font-size: 20px;
             }
         }
         a {
