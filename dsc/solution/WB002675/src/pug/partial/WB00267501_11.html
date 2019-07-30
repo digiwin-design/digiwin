@@ -22,7 +22,9 @@
     <div class="container">
         <section-title title="案例客戶"></section-title>
         <ul>
-            <li v-for="item in result.others.equipment.section2">{{item}}</li>
+            <li v-for="item in result.others.book.section2">
+                <a v-bind:href="item.url" target="_blank">{{item.text}}</a>
+            </li>
         </ul>
     </div>
 </article>
