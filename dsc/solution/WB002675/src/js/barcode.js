@@ -100,11 +100,11 @@ new Vue({
         },
     },
     methods: {
-        mediaSensor: _.throttle(function () {
+        mediaSensor() {
             let mm = window.matchMedia('(min-width: 1200px)');
             mm.addListener(this.resizeWidth);
             this.resizeWidth(mm);
-        }, 100),
+        },
         resizeWidth(pMatchMedia) {
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);
@@ -114,11 +114,7 @@ new Vue({
         store.dispatch('getData');
     },
     mounted() {
-        window.addEventListener('resize', this.mediaSensor);
         this.mediaSensor();
         new WOW().init();
     },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.mediaSensor);
-    }
 });

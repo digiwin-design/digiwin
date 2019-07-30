@@ -54,14 +54,14 @@ new Vue({
         },
     },
     methods: {
-        mediaSensor: _.throttle(function () {
+        mediaSensor() {
             let mm = window.matchMedia('(min-width: 769px)');
             let mmL = window.matchMedia('(min-width: 1200px)');
             mm.addListener(this.resizeWidth);
             mmL.addListener(this.resizeLargeWidth);
             this.resizeWidth(mm);
             this.resizeLargeWidth(mmL);
-        }, 100),
+        },
         resizeWidth(pMatchMedia) {
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);
@@ -83,10 +83,6 @@ new Vue({
         store.dispatch('getData');
     },
     mounted() {
-        window.addEventListener('resize', this.mediaSensor);
         this.mediaSensor();
     },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.mediaSensor);
-    }
 });
