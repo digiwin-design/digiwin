@@ -68,18 +68,13 @@ html.no-mobile {
         }
         &::before {
             display: block;
-            margin-bottom: 8px;
+            margin: 0 auto 8px;
             width: 84px;
             height: 84px;
             background-position: 50%;
             background-size: contain;
             background-repeat: no-repeat;
             content: '';
-            @media (min-width: $content-width) {
-                margin-bottom: 17px;
-                width: 126px;
-                height: 126px;
-            }
         }
         @for $var from 1 through 21 {
             @if $var < 10 {
