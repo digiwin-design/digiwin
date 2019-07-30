@@ -7,12 +7,12 @@ main {
     .col {
         width: percentage(150 / 320);
         @media (max-width: $tablet-width) {
-            @include first(2) {
+            &:not(:last-child) {
                 margin-bottom: 1.5em;
             };
         }
         @media (min-width: $tablet-width + 1) {
-            width: percentage(210 / 1200);
+            width: percentage(200 / 1200);
         }
         a {
             display: flex;

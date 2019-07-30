@@ -12,6 +12,7 @@
 </template>
 
 <script>
+let images = [];
 module.exports = {
     data: function () {
         return {
@@ -35,8 +36,14 @@ module.exports = {
         getData: function () {
             axios.get('/tw/dsc/assets/index-industry/index-industry.json').then(function (res) {
                 this.result = res.data;
+                // preload image                
+                for (let i = 1; i <= res.data.length; i++) {
+                    let num = i < 10 ? '0' + i : i;
+                    images[i] = new Image();
+                    images[i].src = '/tw/dsc/images/index/home-icon'+ num + 'h.png';
+                }
             }.bind(this));
-        }
+        },
     },
     created: function () {
         this.getData();

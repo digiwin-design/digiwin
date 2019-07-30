@@ -1373,5 +1373,53 @@
                 "url": "#contact"
             }
         ]
+    },
+    {
+        "id": "ERP",
+        "title": "ERP全方案-企業轉型，從創造數位價值開始",
+        "menus": [
+            {
+                "text": "產業趨勢",
+                "url": "#section4"
+            },
+            {
+                "text": "職能管理",
+                "url": "#section2"
+            },
+            {
+                "text": "經營能力",
+                "url": "#section3"
+            },
+            {
+                "text": "行業分類",
+                "url": "#section6"
+            },
+            {
+                "text": "企業規模",
+                "url": "#section5"
+            }
+        ],
+        "anchors": [
+            {
+                "url": "#section4",
+                "index": 1
+            },
+            {
+                "url": "#section2",
+                "index": 2
+            },
+            {
+                "url": "#section3",
+                "index": 3
+            },
+            {
+                "url": "#section6",
+                "index": 4
+            },
+            {
+                "url": "#section5",
+                "index": 5
+            }
+        ]
     }
 ]

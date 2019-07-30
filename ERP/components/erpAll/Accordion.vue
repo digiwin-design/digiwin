@@ -37,11 +37,11 @@ module.exports = {
         }
     },
     methods: {
-        mediaSensor: _.throttle(function () {
+        mediaSensor: function () {
             let mm = window.matchMedia('(min-width: 1210px)');
             mm.addListener(this.resizeWidth);
             this.resizeWidth(mm);
-        }, 100),
+        },
         resizeWidth: function (pMatchMedia) {
             this.isMobile = pMatchMedia.matches ? false : true;
         },
@@ -87,7 +87,6 @@ module.exports = {
         }, 100),
     },
     mounted: function () {
-        window.addEventListener('resize', this.mediaSensor);
         this.mediaSensor();
         if (!this.isMobile) {
             window.addEventListener('scroll', this.scrollHandler);
@@ -96,7 +95,6 @@ module.exports = {
         }
     },
     beforeDestroy: function () {
-        window.removeEventListener('resize', this.mediaSensor);
         window.removeEventListener('scroll', this.scrollHandler);
     }
 }

@@ -5,6 +5,7 @@ httpVueLoader.register(Vue, 'components/erpAll/Banner.vue');
 httpVueLoader.register(Vue, 'components/erpAll/HoverBoxs.vue');
 httpVueLoader.register(Vue, 'components/erpAll/Accordion.vue');
 httpVueLoader.register(Vue, 'components/erpAll/MapComponent.vue');
+httpVueLoader.register(Vue, '/tw/dsc/assets/industry-list-v2/industry.vue');
 
 const store = new Vuex.Store({
     state: {
@@ -54,11 +55,11 @@ new Vue({
         },
     },
     methods: {
-        mediaSensor: _.throttle(function () {
+        mediaSensor() {
             let mm = window.matchMedia('(min-width: 769px)');
             mm.addListener(this.resizeWidth);
             this.resizeWidth(mm);
-        }, 100),
+        },
         resizeWidth(pMatchMedia) {
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);
@@ -70,11 +71,7 @@ new Vue({
         },
     },
     mounted() {
-        window.addEventListener('resize', this.mediaSensor);
         this.mediaSensor();
         this.getData();
     },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.mediaSensor);
-    }
 });

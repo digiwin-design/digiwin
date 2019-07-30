@@ -3,19 +3,21 @@ main .banner {
     2: #7265ed,
     3: #3987f9,
     4: #c0cd56,
-    5: #e1ba20
+    5: #e1ba20,
+    6: #f9a139,
     );
     $margin-bottom: (
     2: 70px,
     3: 70px,
     4: 70px,
     5: 95px,
+    6: 70px,
     );
     position: relative;
     background-repeat: no-repeat;
     color: #fff;
     // color
-    @for $i from 2 through 5 {
+    @for $i from 2 through 6 {
         @at-root {
             main .section#{$i} .banner {
                 margin-bottom: map-get($margin-bottom, $i);

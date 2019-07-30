@@ -98,7 +98,22 @@ module.exports = {
                 y: '-=20',
                 opacity: 0,
             });
+            let map2_2 = TweenMax.from('.js-map2-2', .5, {
+                y: '-=20',
+                opacity: 0,
+            });
+            let map2_3 = TweenMax.from('.js-map2-3', .5, {
+                y: '-=20',
+                opacity: 0,
+            });
+            let map2_4 = TweenMax.from('.js-map2-4', .5, {
+                y: '-=20',
+                opacity: 0,
+            });
             this.timeline.add(map2_1, 0);
+            this.timeline.add(map2_2, .5);
+            this.timeline.add(map2_3, 1);
+            this.timeline.add(map2_4, 1.5);
         },
         scrollHandler: _.throttle(function () {
             let el = this.isMobile ? this.elements.mapS1 : this.elements.map;

@@ -78,6 +78,13 @@
     "erpAll": {
         "section1": [
             {
+                "url": "#section4",
+                "title": "產業趨勢因應",
+                "content": "隨著雲端、大數據、人工智慧等技術應用與發展，驅使製造業與流通零售業快速朝往數位化轉型。",
+                "imgSrc": "images/erpAll/section1-icon3.png",
+                "hoverImgSrc": "images/erpAll/section1-icon3-h.png"
+            },
+            {
                 "url": "#section2",
                 "title": "職能管理效率",
                 "content": "讓e化取代傳統人工Excel作業，解決料帳不一、成本計算、薪資結算等賦能產銷人發財！",
@@ -92,11 +99,11 @@
                 "hoverImgSrc": "images/erpAll/section1-icon2-h.png"
             },
             {
-                "url": "#section4",
-                "title": "產業趨勢因應",
-                "content": "隨著雲端、大數據、人工智慧等技術應用與發展，驅使製造業與流通零售業快速朝往數位化轉型。",
-                "imgSrc": "images/erpAll/section1-icon3.png",
-                "hoverImgSrc": "images/erpAll/section1-icon3-h.png"
+                "url": "#section6",
+                "title": "行業精實管理",
+                "content": "即時因應政府法規，依各行業產業特性及經營需求，提供適合的ERP系統解決方案，協助企業精實生產、數位化管理。",
+                "imgSrc": "images/erpAll/section1-icon5.png",
+                "hoverImgSrc": "images/erpAll/section1-icon5-h.png"
             },
             {
                 "url": "#section5",
@@ -184,10 +191,10 @@
             "hoverBoxs": [
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon7.png",
-                    "title": "電子發票",
-                    "hoverText": "多種的發票平台開立和交付形式，如果開錯、漏開、漏傳將可能面對法規罰則與客戶抱怨。鼎新協助企業從開立每張電子發票到上傳、請款、對帳所有的困擾，用最短時程、最少人力、最自動化的監控。",
+                    "title": "編列預算",
+                    "hoverText": "編列年度預算對企業來說，是很重要的一件事！為何要事先編列預算？是為了促使明年度相關計畫與業務可以順利推動，預估需要建置的軟硬體支出而事先籌備。而不同職能，都面臨不同的挑戰與困擾，系統的需求也有所不同，預算編列將是企業有效落實計畫，進而實現目標的第一步。",
                     "link": {
-                        "url": "/tw/dsc/solution/WB002742/WB00274201.html",
+                        "url": "/tw/dsc/solution/WB002917/WB00291701.html",
                         "target": "_self"
                     }
                 },
@@ -308,7 +315,17 @@
                 }
             ]
         },
-        "section6": [
+        "section6": {
+            "banner": {
+                "title": "每個產業 我們都是專家",
+                "desc": "累積30多年產業輔導經驗，<br>50,000 多家企業成功案例",
+                "link": {
+                    "url": "/tw/dsc/solution/WB002783/WB00278301.html",
+                    "target": "_blank"
+                }
+            }
+        },
+        "section7": [
             {
                 "url": "",
                 "title": "懂你的行業",

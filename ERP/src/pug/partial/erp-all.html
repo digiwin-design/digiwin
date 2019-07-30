@@ -22,6 +22,13 @@
     </div>
 </article>
 
+<article id="section4" class="section4">
+    <banner v-bind:banner="result.section4.banner"></banner>
+    <div class="container">
+        <map-component></map-component>
+    </div>
+</article>
+
 <article id="section2" class="section2">
     <banner v-bind:banner="result.section2.banner"></banner>
     <hover-boxs v-bind:boxs="result.section2.hoverBoxs"></hover-boxs>
@@ -32,11 +39,9 @@
     <hover-boxs v-bind:boxs="result.section3.hoverBoxs"></hover-boxs>
 </article>
 
-<article id="section4" class="section4">
-    <banner v-bind:banner="result.section4.banner"></banner>
-    <div class="container">
-        <map-component></map-component>
-    </div>
+<article id="section6" class="section6">
+    <banner v-bind:banner="result.section6.banner"></banner>
+    <industry></industry>
 </article>
 
 <article id="section5" class="section5">
@@ -46,14 +51,14 @@
     </div>
 </article>
 
-<article class="section6">
+<article class="section7">
     <div class="container">
-        <div class="section6-header">
+        <div class="section7-header">
             <h1>我們的專業保障</h1>
-            <p class="section6-desc">從專業出發，為您實現數字價值</p>
+            <p class="section7-desc">從專業出發，為您實現數字價值</p>
         </div>
-        <columns v-bind:columns="result.section6" v-bind:is-link="false"></columns>
-        <a href="#contact" class="section6-btn btn js-nav">立即諮詢服務</a>
+        <columns v-bind:columns="result.section7" v-bind:is-link="false"></columns>
+        <a href="#contact" class="section7-btn btn js-nav">立即諮詢服務</a>
     </div>
 </article>
 

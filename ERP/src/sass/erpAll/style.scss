@@ -86,6 +86,7 @@ main {
         }
     }
     .section4 {
+        overflow: hidden;
         padding-bottom: 50px;
         @media (min-width: $tablet-width + 1) {
             padding-bottom: 120px;
@@ -98,7 +99,10 @@ main {
         }
     }
     .section6 {
-        @include bg('erpAll/section6-bg.jpg');
+        padding-bottom: 15px;
+    }
+    .section7 {
+        @include bg('erpAll/section7-bg.jpg');
         padding-top: 50px;
         padding-bottom: 50px;
         &-header {
