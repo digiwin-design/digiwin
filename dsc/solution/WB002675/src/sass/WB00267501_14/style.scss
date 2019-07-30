@@ -8,6 +8,7 @@ main {
             color: #f0fe11;
         }
         p {
+            max-width: 650px;
             color: #fff;
             font-size: 20px;
             @media (max-width: $tablet-width) {
