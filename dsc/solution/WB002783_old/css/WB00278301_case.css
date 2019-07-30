@@ -1,0 +1,157 @@
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main.WB002783_case {
+  /* ==================== common style ==================== */
+  /* ==================== pageTitle style ==================== */
+}
+main.WB002783_case .caseBlock {
+  display: table-row;
+}
+main.WB002783_case .caseBlock .name,
+main.WB002783_case .caseBlock .caseDes,
+main.WB002783_case .caseBlock .moreTxt {
+  display: table-cell;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px dashed #0092b1;
+  vertical-align: middle;
+}
+main.WB002783_case .caseBlock .name {
+  position: relative;
+  width: 150px;
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+main.WB002783_case .caseBlock .name:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  background-color: #ccc;
+}
+main.WB002783_case .caseBlock .name .type {
+  display: block;
+  color: #005d81;
+  font-size: 16px;
+}
+main.WB002783_case .caseBlock .caseDes {
+  width: 710px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 18px;
+}
+main.WB002783_case .caseBlock .moreTxt {
+  position: relative;
+  width: 80px;
+  padding-right: 5px;
+  border-bottom: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: bottom;
+}
+main.WB002783_case .caseBlock .moreTxt:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 65px solid transparent;
+  border-right: 80px solid #005d81;
+}
+main.WB002783_case .caseBlock .moreTxt:after {
+  content: "more";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 5px;
+}
+main.WB002783_case .caseBlock .moreTxt:hover:before {
+  border-right-color: #ff7000;
+}
+main.WB002783_case .sectionDark {
+  background: url("https://www.digiwin.com/tw/dsc/solution/WB002783/images/bg_greenGradient.jpg") no-repeat center center;
+  color: #fff;
+}
+main.WB002783_case .sectionDark .caseBlock .name,
+main.WB002783_case .sectionDark .caseBlock .caseDes,
+main.WB002783_case .sectionDark .caseBlock .moreTxt {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+main.WB002783_case .sectionDark .caseBlock .name {
+  color: #fde876;
+}
+main.WB002783_case .sectionDark .caseBlock .name .type {
+  color: #fff;
+}
+main.WB002783_case .sectionDark .caseBlock .moreTxt:hover {
+  color: #005d81;
+}
+main.WB002783_case .sectionDark .caseBlock .moreTxt:hover:before {
+  border-right-color: #fde876;
+}
+main.WB002783_case .sectionDark .otherLink {
+  border-color: #fff;
+  color: #fff;
+}
+main.WB002783_case .sectionDark .otherLink:hover {
+  background-color: #005d81;
+}
+main.WB002783_case #pageTitle {
+  background: url("https://www.digiwin.com/tw/dsc/solution/WB002783/images/bg_case.jpg") no-repeat center center;
+}
+main.WB002783_case #pageTitle ul {
+  margin-top: 30px;
+}
+main.WB002783_case #pageTitle li {
+  float: left;
+  width: 220px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0 40px 20px 0;
+  background: url("https://www.digiwin.com/tw/dsc/solution/WB002783/images/icon_industry.png") no-repeat left top #00cfe8;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+main.WB002783_case #pageTitle li:hover {
+  background-color: #0194aa;
+}
+main.WB002783_case #pageTitle .electronic {
+  background-position-y: -75px;
+}
+main.WB002783_case #pageTitle .machinery {
+  background-position-y: -150px;
+}
+main.WB002783_case #pageTitle .biotech {
+  margin-right: 0;
+  background-position-y: -225px;
+}
+main.WB002783_case #pageTitle .medical {
+  background-position-y: -300px;
+}
+main.WB002783_case #pageTitle .food {
+  background-position-y: -375px;
+}
+main.WB002783_case #pageTitle .traffic {
+  background-position-y: -450px;
+}
+main.WB002783_case #pageTitle .plastic {
+  margin-right: 0;
+  background-position-y: -525px;
+}
+main.WB002783_case #moreIndustry {
+  padding-bottom: 120px;
+}

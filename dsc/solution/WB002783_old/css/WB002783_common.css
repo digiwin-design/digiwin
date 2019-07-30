@@ -1,0 +1,96 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main {
+  /*common css-tags*/
+  /*common css-section/column*/
+  /*common css-navLink*/
+}
+main .section h2 {
+  margin-bottom: 5px;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: normal;
+  text-align: center;
+}
+main .section p {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  text-align: justify;
+}
+main .section {
+  width: 100%;
+  min-width: 1000px;
+  padding: 70px 0;
+  color: #444444;
+  font-family: Arial, "微軟正黑體";
+  font-size: 18px;
+}
+main .content {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+main .circle {
+  margin: 0 auto;
+  border-radius: 50%;
+}
+main .floatLeft {
+  float: left;
+}
+main .floatRight {
+  float: right;
+}
+main p.imgNote {
+  font-size: 19px;
+  font-weight: bold;
+  text-align: center;
+}
+main p.sectionNote {
+  margin: 0 auto 30px;
+  padding: 0 50px;
+}
+main p.pageBtn {
+  width: 400px;
+  line-height: 60px;
+  margin: 50px auto 0;
+  border: 1px solid #ffffff;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+main p.contactBtn {
+  position: relative;
+  z-index: 2;
+  width: 400px;
+  line-height: 55px;
+  margin: -30px auto 0;
+  font-size: 21px;
+  text-align: center;
+  cursor: pointer;
+}
+main p.contactBtn:hover {
+  background-color: #ffb400;
+}
+main #navLink {
+  width: 100%;
+  min-width: 1020px;
+  height: 80px;
+  padding: 10px 0;
+  background-color: #ffffff;
+  font-family: Arial, "微軟正黑體";
+  text-align: center;
+}
+main .navLink {
+  position: absolute;
+  z-index: 999;
+  top: 602px;
+}
+main .fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #f7f7f7;
+}

@@ -1,0 +1,110 @@
+<link rel="stylesheet" type="text/css" href="https://www.digiwin.com/tw/dsc/css/Eform/xcConfirm.css">
+<link rel="stylesheet" type="text/css" href="https://www.digiwin.com/tw/dsc/css/Eform/form.css">
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/solution/WB002675/css/WB00267501_other.css" />
+
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/js/Eform/xcConfirm.js"></script>
+<script type="text/javascript">
+  $(function() {
+  var f7Top=$('#contact').offset().top-50;
+
+   $('.navLi8').click(function(event) {
+    $('html,body').stop().animate({'scrollTop':f7Top+50-125}, 500,function(){
+      });
+   });
+ 
+});
+</script>
+
+<!-- submenu -->
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/assets/submenu/submenu.css">
+<script src="https://www.digiwin.com/tw/dsc/assets/submenu/submenu.min.js"></script>
+
+<main class="WB00267501_other">	
+
+<div id="other">
+  <h1>圖書業</h1>
+<div id="keypoints">
+  <h2><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/other_icon1.png" width="45" height="51" align="absmiddle" />管理要點</h2>
+  <div class="txtbox1">
+    <h3>商品管理</h3>
+    <p>特有的寄銷結帳方式，導致月底月初時出現大量的退貨與出貨狀態，圖書的進出管理若能結合條碼作商品書條管理，即能協助快速退貨、檢貨與出貨的作業處理。</p>
+  </div><!--txtbox1 end-->
+  <div class="txtbox1">
+    <h3>訂閱與發行</h3>
+    <p>新書發行時，若能提供過往銷售數據產生自動配銷依據再進行人為判斷調整，對於書籍的銷量提升將大有助益；期刊部分則派送時剩餘期數與續訂戶的控管視為提升銷售的重要環節。</p>
+  </div><!--txtbox1 end-->  
+<div class="txtbox1">
+    <h3>檔期活動</h3>
+    <p>通路檔期或是年度書展活動常會因主題銷售上會給予特殊的折扣配合，隨著活動時間亦有出現不同搭贈組合促銷，若有系統能協助支撐對於作業的處理上將大為便捷。</p>
+  </div><!--txtbox1 end-->
+  <div class="txtbox1">
+    <h3>財務管理</h3>
+    <p>因書籍類別與對象別給予的折扣均不同，搭配檔期活動配合時亦有差異，因此結帳時若能依前端銷售扣方式產出結帳金額，大幅提升作業效能；另對出版社版稅管理條件處理亦是財務管控上的另一重點。</p>
+  </div><!--txtbox1 end-->  
+
+<div class="solutionpic">
+<h4>圖書生意作業流程示意圖</h4>
+<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/solution_pic7a.jpg" width="780" height="550" />
+<p>&nbsp;</p>
+</div>
+</div><!--keypoints end-->
+</div><!--other end-->
+</main>
+<div id="contact">
+    <div id="contactTxt" class="clearfix">
+        <h2>資料索取與諮詢</h2>
+        <div id="info">
+            <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，謝謝！</p>
+            <ul>
+              <li class="mail"><a href="mailto:marketing01@digiwin.com"></a></li>
+              <li class="fb"><a href="https://www.facebook.com/DSCmain" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div id="formBlock" class="form">
+            <a id="fromSource" href="javascript:;">WB002675</a>
+            <div id="contactInput" class="clearfix">
+                <span class="hideLabel ">*公司名稱：</span><input type="text" placeholder="*公司名稱" name="contact-company" id="contact-company" class="contact required"><span class="hideLabel perLabel">*姓名：</span><input type="text" placeholder="*姓名" name="contact_person" id="contact_person" class="contact required"><span class="hideLabel evenLable">*聯絡電話：</span><input type="text" placeholder="*聯絡電話" name="telephone" id="telephone" class="contact required end"><span class="hideLabel evenLable">*E-mail：</span><input type="text" placeholder="*E-mail" name="contact-email" id="contact-email" class="contact required"><span class="hideLabel">*部門：</span><input type="text" placeholder="*部門" name="contact-dept" id="contact-dept" class="contact required"><span class="hideLabel">*職稱：</span><input type="text" placeholder="*職稱" name="contact-job" id="contact-job" class="contact required end">
+            </div>
+            <div class="consult-cont">
+                <p class="hideLabel">請在這裡描述您的需求：</p>
+                <textarea id="contact-query" cols="40" placeholder="請在這裡描述您的需求(500字以內)：" rows="4" class="" maxlength="500"></textarea>
+            </div>
+            <div class="inforCheck">
+                <label for="dm_ask" >
+                    <input name="information" class="information" id="dm_ask" type="checkbox" value="資料索取" /> 索取流通業相關資料
+                </label>
+            </div>
+            <hr>
+            <div class="verifica">
+                <span class="veriSpan">＊請輸入驗證碼：</span>
+                <span class="veriSpan-m">驗證碼:</span>
+                <input type="text" name="" id="identCode" class="identCode" onblur= "validate()">
+                <input type = "button" id="vericodePic" />
+                <span class="renovCode" onclick="createCode()"></span>
+                <span id = "codeSuces"></span>
+            </div>  
+            <input type="button" id="submit" value="送　　出">
+            <label for="agree" class="checAgree"><input type="checkbox" name="agree" value="" id="agree" checked=""> 我同意接受鼎新電腦<a href="/tw/portal/page/index/id/1202.html" target="_blank">隱私權聲明</a></label>
+        </div>
+    </div> 
+</div>
+
+<!-- loading -->
+<div id="loading"><p><i></i>資料處理中，請稍後...</p></div>
+
+<!-- thx page -->
+<div id="thx">
+    <div id="thxContent">
+        <div class="close">X</div>
+        <h3>資料己送出</h3>
+        <p class="thxparg"></p>
+        <p class="suprtCall">
+            <span>如需要立即的支援與服務，</span>
+            <span>請直撥免付費專線0800-888-162，謝謝！</span>
+        </p>
+        <p class="thxSourLoad1"><a id="SourLoadLink"  href="" target="_blank">資料下載</a></p>
+        <p id="goIndex"><a href="javascript:;">繼續瀏覽網站</a></p>
+    </div>
+</div>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/js/Eform/form.js"></script>

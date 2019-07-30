@@ -1,0 +1,49 @@
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main.WB00278301_factoryLogistics {
+  /* ==================== common style ==================== */
+  /* ==================== pageTitle style ==================== */
+}
+main.WB00278301_factoryLogistics {
+  background: url("https://www.digiwin.com/tw/dsc/solution/WB002783/images/bg_gray.jpg") no-repeat center center fixed;
+}
+main.WB00278301_factoryLogistics .section h2 {
+  text-align: left;
+}
+main.WB00278301_factoryLogistics #pageTitle {
+  background: url("https://www.digiwin.com/tw/dsc/solution/WB002783/images/bg_warehouse.jpg") no-repeat center center;
+  color: #fff;
+}
+main.WB00278301_factoryLogistics #pageTitle strong {
+  color: #ffff00;
+}
+main.WB00278301_factoryLogistics .section img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+main.WB00278301_factoryLogistics #block01 h2,
+main.WB00278301_factoryLogistics #block01 h3 {
+  text-align: center;
+  font-weight: normal;
+}
+main.WB00278301_factoryLogistics #block06 {
+  background: url("https://www.digiwin.com/tw/dsc/solution/WB002783/images/bg_boxs.jpg") no-repeat center center;
+  text-align: center;
+}
+main.WB00278301_factoryLogistics #block06 ul {
+  display: inline-block;
+  text-align: left;
+}
+main.WB00278301_factoryLogistics #block06 li {
+  font-size: 22px;
+  line-height: 40px;
+  color: #fff;
+}
+main.WB00278301_factoryLogistics #block06 .otherLink {
+  width: 400px;
+  margin: 30px auto 30px;
+  color: #ffff00;
+  border-color: #ffff00;
+}

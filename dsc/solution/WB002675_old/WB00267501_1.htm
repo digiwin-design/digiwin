@@ -1,0 +1,492 @@
+<link rel="stylesheet" type="text/css" href="https://www.digiwin.com/tw/dsc/css/Eform/xcConfirm.css">
+<link rel="stylesheet" type="text/css" href="https://www.digiwin.com/tw/dsc/css/Eform/form.css">
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/solution/WB002675/css/WB00267501_1.css" />
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/solution/WB002675/css/animate.css">
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/js/Eform/xcConfirm.js"></script>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/change.js"></script>
+<script type="text/javascript">
+$(function() {
+	var f1Top=$('.section2').offset().top-50;
+	var f2Top=$('.section3').offset().top-50;
+	var f3Top=$('.section4').offset().top-50;
+	var f4Top=$('.section5').offset().top-50;
+	var f7Top=$('#contact').offset().top-600;
+	
+	var jianCe=function(){
+
+		var windowScrollTop=$(window).scrollTop();
+		if(windowScrollTop >=f7Top) {
+
+			$('.listNavUl').show();
+			$('.listNavUl li').addClass('active2');
+		}else if(windowScrollTop>=f4Top-100){
+
+		
+			$('.listNavUl').show();
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl li').eq(3).addClass('active').siblings('li').removeClass('active');
+
+		}else if(windowScrollTop>=f3Top-100){
+
+			
+			$('.listNavUl').show();
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl li').eq(2).addClass('active').siblings('li').removeClass('active');
+
+		}else if(windowScrollTop>=f2Top-100){
+
+		
+			$('.listNavUl').show();
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl li').eq(1).addClass('active').siblings('li').removeClass('active');
+
+		}else if(windowScrollTop>=f1Top-100){
+
+
+			$('.listNavUl').show();
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl li').eq(0).addClass('active').siblings('li').removeClass('active');
+
+		}else{
+			$('.listNavUl li').removeClass('active2');
+			$('.listNavUl').hide();
+
+		}
+
+	}
+
+	//当浏览器滚动时，电梯做相应的操作
+	$(window).scroll(jianCe);
+	$('.move').click(function(event) {
+		$('html,body').stop().animate({'scrollTop':f1Top+50-125}, 500,function(){
+					$(window).scroll(jianCe);
+				});
+	});
+	$('.navLi8').click(function(event) {
+		$('html,body').stop().animate({'scrollTop':f7Top+600-125}, 500,function(){
+					$(window).scroll(jianCe);
+				});
+	});
+	$('.listNavUl li,.banUl li').click(function(event) {
+
+
+		$('.listNavUl li').removeClass('active2');
+		
+		$(this).addClass('active').siblings('li').removeClass('active');
+
+		
+		var i=$(this).index()+1;
+		if(i==4){
+
+			$('html,body').stop().animate({'scrollTop':f4Top+50-125}, 500,function(){
+				$(window).scroll(jianCe);
+			});
+
+
+		}else if(i==3){
+
+			$('html,body').stop().animate({'scrollTop':f3Top+50-125}, 500,function(){
+				$(window).scroll(jianCe);
+			});
+
+
+		}else if(i==2){
+
+			$('html,body').stop().animate({'scrollTop':f2Top+50-125}, 500,function(){
+				$(window).scroll(jianCe);
+			});
+
+		}else if(i==1){
+
+			$('html,body').stop().animate({'scrollTop':f1Top+50-125}, 500,function(){
+				$(window).scroll(jianCe);
+			});
+
+		}
+		
+	});
+});
+	</script>
+
+<!-- submenu -->
+<link rel="stylesheet" href="https://www.digiwin.com/tw/dsc/assets/submenu/submenu.css">
+<script src="https://www.digiwin.com/tw/dsc/assets/submenu/submenu.min.js"></script>
+
+<main class="WB00267501_1">
+<div class="section section1">	
+		<div class="banner">
+			<div class="content mt125">
+				<p class="phead">作經銷批發生意，您也是這樣嗎?</p>
+				<ul class="banUl">
+					<li class="banLi banLi1 clearfix"><span></span><p>通路管理</p></li>
+					<li class="banLi banLi2 clearfix"><span></span><p>應收帳款</p></li>
+					<li class="banLi banLi3 clearfix"><span></span><p>信用額度</p></li>
+					<li class="banLi banLi4 clearfix"><span></span><p>業務巡補</p></li>
+				</ul>
+				<div class="move">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section section0 section2">
+		<div class="label"><span>通路管理</span></div>
+		<div class="content">
+			<div class="contentCon">
+				<ul class="changeDiv">
+					<li class="nowli painli" style="display:block; ">
+						<div class="pain">
+							<h3>中壢與青埔的客戶銷售量跟規模都有差異…<br />這價格要怎麼訂阿?</h3>
+							<p class="sec2_p1">
+								大連假又到了，中壢的銷量一直很不錯，這次支援作促銷，要作買一送一還有不定期的小驚喜活動<br/>但青埔那邊的客戶說他們也要一樣的折扣...
+							</p>
+							<div class="dialog">
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_a1.png" class="dialog1 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_a2.png" class="dialog2 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1s" alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_a3.png" class="dialog3 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="2s" alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_a4.png" class="dialog4 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="3s" alt="" />
+								<span class="people_a1"></span>
+								<span class="people_a2"></span>
+							</div>
+							<div class="hope">
+								<p>有工具可以幫忙管理經銷商合約條件與各種折扣項目，<br />並記錄經銷商的進貨資訊，分析貢獻度。</p>
+							</div>
+							<span class="tip"></span>
+						</div>	
+					</li>
+					<li class="soluli">
+						<div class="solution">
+							<h3>作經銷批發生意，其實您可以這樣管</h3>							
+							<div class="rightp">
+								<h4>通路合約控管好、加快結帳與對帳</h4>
+								<ul>
+									<li><p>系統建立各通路商談定的合約費用計算方式與條件記錄，並自動產出費用金額與通路合約費用明細表，可指定日期產出銷/ 退單據。</p></li>
+									<li><p>通路合約費用可依金額自動拋轉產生應付憑單，依贈品產生訂單。</p></li>
+									<li><p>自動依採購合約條件設定滾算採購費用，可指定資料日期，篩選進/退貨單單據。</p></li>
+								</ul>					
+							</div>
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1solution_a.png"  alt="" />
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ol class="button clearfix">
+				<li class="buttonLi1 current">常見困擾</li>
+				<li class="buttonLi2">解決方案</li>			
+			</ol>
+        </div>
+	</div>
+	</div>
+	<div class="section section0 section3">
+		<div class="label"><span>應收帳款</span></div>
+		<div class="content">
+				<div class="contentCon">
+					<ul class="changeDiv">
+						<li class="chli painli acitve">
+							<div class="pain">
+								<h3>收完款就可以領獎金了...ya...<br/>但A客戶還有多少錢要收阿?又有一家客戶要列呆帳了...</h3>
+								<p class="sec2_p1">客戶這麼多，常搞不清楚那家該收款了，要收多少？還有多少沒收？<br />今年要提列多少呆帳？提列多少比例？用帳齡分析法還是銷貨百分比法？
+							</p>
+								<div class="dialog">
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_b1.png" class="dialog1 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_b2.png" class="dialog2 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1.5s"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_b3.png" class="dialog3 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="3s"  alt="" />
+								<span class="people_b1"></span>
+								<span class="people_b2"></span>
+								<span class="people_b3"></span> 
+								</div>
+								<div class="hope">
+									<p>可以一目瞭然清楚知道各個客戶的帳款收回狀況，並提醒我哪些客戶必須用力催一下。<br/>可以自動計算應收帳款餘額有多少、已經逾期幾天了。</p>
+								</div>
+							</div>
+						</li>
+						<li class="chli soluli">
+							<div class="solution">
+								<h3>作經銷批發生意，其實您可以這樣管</h3>
+								<div class="rightp">
+									<h4>未收帳款系統出、發票電子化正流行</h4>
+									<ul>
+										<li><p>後續由系統自動推算應收帳款的「預計收款日期」或是票據的「預計兌現日期」。</p></li>
+										<li><p>可設定「提前付款」或是「縮短票期」可以取得多少折扣。</p></li>
+									</ul>					
+								</div>
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1solution_b.png"  alt="" />
+							</div>
+						</li>
+					</ul>
+				</div>					
+				<ul class="button clearfix">
+					<li class="buttonLi1 current">常見困擾</li>
+					<li class="buttonLi2">解決方案</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="section section0 section4">
+		<div class="label"><span>信用額度</span></div>
+		<div class="content">
+			<div class="contentCon">
+				<ul class="changeDiv">
+					<li class="chli painli acitve">
+						<div class="pain">
+							<h3>有家客戶應收帳款掛一堆，又來叫貨了，<br/>而且要的量很大，到底要不要出貨阿...</h3>
+							<p class="sec2_p1">上個月叫很多貨的客戶居然退票了...<br />這下怎麼跟老闆交代?</p>
+							<div class="dialog">
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_c1.png" class="dialog1 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_c2.png" class="dialog2 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1.5s"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_c3.png" class="dialog3 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="3s"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_c4.png" class="dialog4 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80"  data-wow-delay="4.5s" alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_c5.png" class="dialog5 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="6s"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_c6.png" class="dialog6 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="7.5s"  alt="" />
+								<span class="people_b1"></span>
+								<span class="people_b2"></span>
+							
+							</div>
+							<div class="hope">
+								<p>下單或出貨時，有工具可以告訴我這個客戶的信用額度還剩多少，主動提醒我該不該出貨。<br />信用額度可以管控好，避免倒帳風險。</p>
+							</div>
+						</div>
+					</li>
+					<li class="chli soluli">
+						<div class="solution">
+							<h3>作經銷批發生意，其實您可以這樣管</h3>	
+							<div class="rightp">
+								<h4>信用額度管控好，老闆收款沒煩惱</h4>
+								<ul>
+									<li><p>總公司信用額度自動納入分公司耗用的信用額度</p></li>
+									<li><p>系統可參數設定如交易金額超過信用額度，提供警告功能。</p></li>
+									<li><p>可依客戶別各自設定信用額度與允許超出信用額度比率，避免人工記憶引起的失誤。</p></li>
+									<li><p>系統提供查詢客戶信用額度的餘額，依訂單/銷貨單查核比率控管相關項目金額。</p></li>
+								</ul>					
+							</div>
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1solution_c.png"  alt="" />
+						</div>
+					</li>
+				</ul>
+			</div>						
+			<ul class="button clearfix">
+				<li class="buttonLi1 current">常見困擾</li>
+				<li class="buttonLi2">解決方案</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section section0 section5">
+		<div class="label"><span>業務巡補</span></div>
+		<div class="content">
+			<div class="contentCon">
+				<ul class="changeDiv">
+					<li class="chli painli acitve">
+						<div class="pain">
+							<h3>客戶說架上快沒貨了，最近又在作促銷，<br/>賣得很不錯，叫我趕快補貨...</h3>
+							<p class="sec2_p1">公司居然沒庫存貨可以出了...<br />產線就算加班也趕不及明天出貨...</p>
+							<div class="dialog">
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_d1.png" class="dialog1 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_d2.png" class="dialog2 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="1.5s"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_d3.png" class="dialog3 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="3s"  alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_d4.png" class="dialog4 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80"  data-wow-delay="4.5s" alt="" />
+								<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1txt_d5.png" class="dialog5 wow zoomIn animated" data-wow-duration="2s" data-wow-offset="80" data-wow-delay="6s"  alt="" />
+								<span class="people_b1"></span>
+								<span class="people_b2"></span>
+							
+							</div>
+							<div class="hope">
+								<p>可以隨時隨地查詢商品的庫存量、客戶已訂貨數量、 配送中數量、促銷活動、<br />未收款。還可以隨時隨地下單、回傳收款記錄。</p>
+							</div>
+						</div>
+					</li>
+					<li class="chli soluli">
+						<div class="solution">
+							<h3>作經銷批發生意，其實您可以這樣管</h3>	
+							<div class="rightp">
+								<h4>業務巡補任務須注意：業績、競品管理要兼顧</h4>
+								<ul>
+									<li><p>業務人員在外直接透過手機平版，即時幫客戶查庫存、報價、打訂單傳回公司。</p></li>
+									<li><p>運用路順管理，協助業務人員快速擬出拜訪路線。</p></li>
+									<li><p>將拜訪客戶的時程連結至行事曆並將客戶地址連結google map規劃出路線，方便業務人員掌控拜訪路線與停留時間。</p></li>
+								</ul>					
+							</div>
+							<img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/1solution_d.png"  alt="" />
+						</div>
+					</li>
+				</ul>
+			</div>						
+			<ul class="button clearfix">
+				<li class="buttonLi1 current">常見困擾</li>
+				<li class="buttonLi2">解決方案</li>
+			</ul>
+		</div>
+	</div>
+
+<div id="section_case">
+<div id="content">
+<h3>輔導案例</h3>
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_05.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>家鄉事業</h4>
+    <p>管理部謝經理：「希望能縮短製作文件的時間，讓大家可以花更多的時間在有價值的事情上」，同時呈現產品毛利、販促費、商標權利金、廣告費等資訊，讓決策者能了解營業利益。</p>
+    <div id="button_R">
+     <div class="btnR"><a href="https://www.digiwin.com/tw/case/1519.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>民國六十六年成立以「堅持最好，創造名飲」為企業使命，產品除了全球知名的香吉士果汁系列，也生產茶飲系列、純水系列、碳酸飲料系列與其他飲品。在台擁有完整的經銷商網路。</p>
+</div>
+</div><!--end txtbox -->
+
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_06.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>喬光股份</h4>
+    <p>過去人工紀錄控管寄倉數量的問題，經常造成商品超賣，商品缺貨時需以其他替代商品出給客戶，造成公司庫存管理上的困擾。　　　　　　　　　　　　　　</p>
+    <div id="button_R">
+     <div class="btnR"><a href="http://www.digiwin.com/caseListDetail_7150.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>喬光股份有限公司成立於民國71年，為國際知名品牌eni潤滑油、Muxx潤滑油台灣市場及亞太地區唯一代理商，銷售通路除原有的各保修廠及機車行外，也增加了各區域的經銷伙伴。</p>
+</div>
+</div><!--end txtbox -->
+
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_07.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>國柱橡膠</h4>
+    <p>光看營業報表就得花掉同仁各四天以上的工作天，以人工的方法彙總資料，不但耗時且可能有錯誤，造成溝通延宕或是反應緩慢。」管理部張經理回憶起當時的困境</p>
+    <div id="button_R">
+     <div class="btnR"><a href="https://www.digiwin.com/tw/case/963.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>國住橡膠代理DUNLOP輪胎品牌的獨家代理外，另也延伸代理包含高爾夫用具（XXIO系列， Srixon系列等）、DUNLOP網球系列用品。</p>
+</div>
+</div><!--end txtbox -->
+
+<div class="txtbox">
+<div class="txtbox_L"><img src="https://www.digiwin.com/tw/dsc/solution/WB002675/images/casepic_08.jpg" width="200" height="190"></div>
+<div class="txtbox_R">
+  <h4>聯米企業</h4>
+    <p>管理處王智賦主任說：「以前管理部每天至少要花很多時間用EXCEL整理營業統計分析報表再寄送給各營業所主管；且每逢結算薪水或有重要任務時，就會延誤報表的寄送時間。</p>
+    <div id="button_R">
+      <div class="btnR"><a href="https://www.digiwin.com/tw/case/1526.html" target="_blank">了解更多</a></div>
+</div>
+</div>
+<div class="profile">
+<h5>[公司簡介]</h5>
+<p>在台灣擁有百年經營米食經驗歷史的稻香世家－聯米企業，與稻米結下的淵源，可推溯至西元1905年起，設立的『中興穀堡－稻米博物館』，作為中興米成長歷史與傳遞稻米文化的展場。</p>
+</div>
+</div><!--end txtbox -->
+
+</div><!-- End content-->
+</div><!-- End section_case-->
+
+<div class="listNav">
+	<ul class="listNavUl">
+		<li class="listNavUlLi2"><span>通路管理</span><i></i></li>
+		<li class="listNavUlLi3"><span>應收帳款</span><i></i></li>
+		<li class="listNavUlLi4"><span>信用額度</span><i></i></li>
+		<li class="listNavUlLi4"><span>業務巡補</span><i></i></li>
+	</ul>
+</div>
+</main>
+<!--資料索取-->
+<div id="contact">
+    <div id="contactTxt" class="clearfix">
+        <h2>資料索取與諮詢</h2>
+        <div id="info">
+            <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，謝謝！</p>
+            <ul>
+              <li class="mail"><a href="mailto:marketing01@digiwin.com"></a></li>
+              <li class="fb"><a href="https://www.facebook.com/DSCmain" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div id="formBlock" class="form">
+            <a id="fromSource" href="javascript:;">WB002675</a>
+            <div id="contactInput" class="clearfix">
+                <span class="hideLabel ">*公司名稱：</span><input type="text" placeholder="*公司名稱" name="contact-company" id="contact-company" class="contact required"><span class="hideLabel perLabel">*姓名：</span><input type="text" placeholder="*姓名" name="contact_person" id="contact_person" class="contact required"><span class="hideLabel evenLable">*聯絡電話：</span><input type="text" placeholder="*聯絡電話" name="telephone" id="telephone" class="contact required end"><span class="hideLabel evenLable">*E-mail：</span><input type="text" placeholder="*E-mail" name="contact-email" id="contact-email" class="contact required"><span class="hideLabel">*部門：</span><input type="text" placeholder="*部門" name="contact-dept" id="contact-dept" class="contact required"><span class="hideLabel">*職稱：</span><input type="text" placeholder="*職稱" name="contact-job" id="contact-job" class="contact required end">
+            </div>
+            <div class="consult-cont">
+				<p class="hideLabel">請在這裡描述您的需求：</p>
+				<textarea id="contact-query" cols="40" placeholder="請在這裡描述您的需求(500字以內)：" rows="4" class="" maxlength="500"></textarea>
+			</div>
+            <div class="demandCheck clearfix">
+                <p>請勾選貴司想要改善的項目：</p>
+                <div class="demandGroup clearfix">
+                    <p>• 多通路管理：</p>
+                    <div class="demandGroupList">
+                        <label for="contact-demand01"><input name="contact-demand" class="contact-demand" id="contact-demand01" type="checkbox" value="經銷批發" /> 經銷批發</label>
+                        <label for="contact-demand02"><input name="contact-demand" class="contact-demand" id="contact-demand02" type="checkbox" value="連鎖賣場KA" /> 連鎖賣場KA</label>
+                        <label for="contact-demand03"><input name="contact-demand" class="contact-demand" id="contact-demand03" type="checkbox" value="門市專櫃" /> 門市專櫃</label>
+                        <label for="contact-demand04"> <input name="contact-demand" class="contact-demand" id="contact-demand04" type="checkbox" value="網購" /> 網購</label>       
+                        <label for="contact-demand05"><input name="contact-demand" class="contact-demand" id="contact-demand05" type="checkbox" value="觀光工廠" /> 觀光工廠</label>          
+						<label for="contact-demand06"><input name="contact-demand" class="contact-demand" id="contact-demand06" type="checkbox" value="進出口貿易" /> 進出口貿易</label>
+						<label for="contact-demand07"><input name="contact-demand" class="contact-demand" id="contact-demand07" type="checkbox" value="行動經銷" /> 行動經銷</label>
+                    </div>
+                </div>
+                <div class="demandGroup even clearfix">
+                    <p>• 其　　　他：</p>
+                    <div class="demandGroupList">
+                        <label for="contact-demand07"><input name="contact-demand" class="contact-demand" id="contact-demand07" type="checkbox" value="生產、委外發包" />  生產、委外發包</label>           
+                        <label for="contact-demand08"><input name="contact-demand" class="contact-demand" id="contact-demand08" type="checkbox" value="庫存數量、成本計算" /> 庫存數量、成本計算</label>
+                        <label for="contact-demand09"><input name="contact-demand" class="contact-demand" id="contact-demand09" type="checkbox" value="IPO上市櫃規劃" /> IPO上市櫃規劃</label>  
+                        <label for="contact-demand10"><input name="contact-demand" class="contact-demand" id="contact-demand10" type="checkbox" value="電子發票" /> 電子發票</label>   
+                    </div>    
+                </div>
+            </div>
+            <hr>
+            <div class="verifica">
+                <span class="veriSpan">＊請輸入驗證碼：</span>
+                <span class="veriSpan-m">驗證碼:</span>
+                <input type="text" name="" id="identCode" class="identCode" onblur= "validate()">
+                <input type = "button" id="vericodePic" />
+                <span class="renovCode" onclick="createCode()"></span>
+                <span id = "codeSuces"></span>
+            </div>  
+            <input type="button" id="submit" value="送　　出">
+            <label for="agree" class="checAgree"><input type="checkbox" name="agree" value="" id="agree" checked=""> 我同意接受鼎新電腦<a href="/tw/portal/page/index/id/1202.html" target="_blank">隱私權聲明</a></label>
+        </div>
+    </div> 
+</div>
+ 
+<!-- loading -->
+<div id="loading"><p><i></i>資料處理中，請稍後...</p></div>
+
+<!-- thx page -->
+<div id="thx">
+    <div id="thxContent">
+        <div class="close">X</div>
+        <h3>資料己送出</h3>
+        <p class="thxparg"></p>
+        <p class="suprtCall">
+            <span>如需要立即的支援與服務，</span>
+            <span>請直撥免付費專線0800-888-162，謝謝！</span>
+        </p>
+        <p class="thxSourLoad1"><a id="SourLoadLink" href="" target="_blank">資料下載</a></p>
+        <p id="goIndex"><a href="javascript:;">繼續瀏覽網站</a></p>
+    </div>
+</div>
+<script>				
+	var $windowHig = $(window).height();
+	console.log($windowHig)
+	if ($windowHig<600){
+		$('.phead').css('margin-top',30+'px')
+		$('.move span').css('margin-top',100+'px')
+	}else if($windowHig>601&&$windowHig<800){
+		$('.phead').css('margin-top',50+'px')
+		$('.move span').css('margin-top',100+'px')
+	}else if($windowHig>801){
+		$('.phead').css('margin-top',180+'px')
+	}
+</script>
+<script type="text/javascript" src="https://www.digiwin.com/tw/dsc/js/Eform/form.js"></script>
+<script src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/wow.min.js"></script>
+<script src="https://www.digiwin.com/tw/dsc/solution/WB002675/js/top.js"></script>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>

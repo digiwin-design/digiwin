@@ -1,0 +1,556 @@
+/*
+======================================================================
+深底表單
+for 行業解決方案網頁/議題型網頁/......
+======================================================================
+*/
+
+/*必写：资料来源的样式开始*/
+
+#fromSource {
+    height: 0;
+    font-size: 0;
+}
+
+/*资料来源的样式结束*/
+
+.form {
+    input,
+    textarea {
+        border: none;
+        font-size: 19px;
+        font-family: Arial, '微軟正黑體', '新細明體';
+    }
+}
+
+/* ========================= topInfo style ========================= */
+
+#contact {
+    padding: 70px 0;
+    min-width: 1000px;
+    width: 100%;
+    background-color: #444;
+    color: #fff;
+    font-size: 19px;
+    font-family: Arial, '微軟正黑體', '新細明體';
+    line-height: 30px;
+    a {
+        color: #fff;
+        &:hover {
+            color: #fe0;
+        }
+    }
+    #contactTxt {
+        margin: 0 auto;
+        width: 1000px;
+    }
+    h2 {
+        position: relative;
+        margin: 0;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        color: #fff;
+        text-align: left;
+        font-size: 36px;
+        line-height: 36px;
+        &:before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            width: 44px;
+            height: 3px;
+            background-color: #fff;
+            content: '';
+        }
+    }
+    p {
+        color: #fff;
+    }
+    hr {
+        margin: 20px 0 0 0;
+        border: none;
+        border-top: 1px solid #666;
+    }
+    #info {
+        p {
+            display: inline-block;
+            width: 900px;
+        }
+        .highLight {
+            color: #ff0;
+        }
+        ul {
+            display: inline-block;
+            float: right;
+            margin-top: 15px;
+            li {
+                display: inline-block;
+                margin-right: 3px;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: #222;
+                &:hover {
+                    background-color: #ff9c00;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .mail {
+        background: url('/tw/dsc/images/icon_contact.png') no-repeat left -36px;
+    }
+    .fb {
+        background: url('/tw/dsc/images/icon_contact.png') no-repeat left -72px;
+    }
+}
+
+/*========================= info style =========================*/
+
+/* ========================= form style ========================= */
+
+/*公司名称、联系方式。。。。样式结束*/
+
+.form {
+    width: 100%;
+}
+
+#contactInput input {
+    position: relative;
+    float: left;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 20px 20px 0;
+    padding-left: 10px;
+    width: 320px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-left-width: 7px;
+    background-color: #666;
+    color: #fff;
+    &.end {
+        margin-right: 0;
+    }
+}
+
+.hideLabel {
+    display: none;
+}
+
+::placeholder {
+    color: #dadada !important;
+}
+
+/*公司名称、联系方式。。。。样式结束*/
+
+/*========== demandCheck style ==========*/
+
+.demandTitle {
+    padding-top: 5px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.demandCheck {
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 0 10px 15px 20px;
+    flex-wrap: wrap;
+    p {
+        margin: 0;
+        font-weight: bold;
+    }
+    label {
+        box-sizing: border-box;
+        width: 33%;
+        font-size: 17px;
+        line-height: 32px;
+        &.padding {
+            padding-left: 20px;
+        }
+    }
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        & + .row {
+            margin-top: 15px;
+        }
+    }
+    .col {
+        display: flex;
+        flex-wrap: wrap;
+        &:first-child {
+            width: 14%;
+            @media (max-width: 1030px) {
+                width: 100%;
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+        &:last-child {
+            width: 86%;
+            @media (max-width: 1030px) {
+                width: 100%;
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* ================== inforCheck style ================= */
+
+.form {
+    .inforCheck {
+        margin-bottom: 30px;
+        padding-left: 17px;
+        width: 100%;
+        font-size: 21px;
+        label {
+            cursor: pointer;
+        }
+    }
+    #contact-query {
+        display: block;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 100%;
+        height: 100px;
+        border: 1px solid #fff;
+        border-left-width: 7px;
+        background-color: #666;
+        color: #fff;
+    }
+}
+
+/*咨询内容样式开始*/
+
+/*咨询内容样式结束*/
+
+/*验证码样式开始*/
+
+.verifica {
+    margin: 70px 0 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+}
+
+.veriSpan {
+    display: inline-block;
+    zoom: 1;
+}
+
+.veriSpan-m {
+    display: none;
+}
+
+#identCode {
+    padding: 0 0 0 10px;
+    width: 100px;
+    height: 36px;
+    color: #000;
+}
+
+#vericodePic {
+    position: relative;
+    margin-left: 8px;
+    padding: 0;
+    width: 120px;
+    height: 38px;
+    background: url('/tw/dsc/images/Eform/identCode.jpg') no-repeat center;
+    color: #555;
+    vertical-align: middle;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.renovCode {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background: url('/tw/dsc/images/Eform/reload.png') no-repeat;
+    vertical-align: middle;
+    cursor: pointer;
+    zoom: 1;
+}
+
+#codeSuces {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    font-size: 0;
+}
+
+/*验证码样式结束*/
+
+label.checAgree {
+    display: block;
+    margin: 5px auto 0;
+    text-align: center;
+    font-size: 16px;
+    a {
+        text-decoration: underline;
+    }
+}
+
+/*送出样式开始*/
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    height: 50px;
+    background-color: #ffc426;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    &:hover {
+        background-color: #ff7200;
+    }
+}
+
+/*送出样式结束*/
+
+.form #contactInput input.noInput {
+    border-color: #ff0;
+    background-color: #333;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    background-color: #000 \9;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, '微軟正黑體', '新細明體';
+    &:before {
+        display: inline-block;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+    }
+    p {
+        display: inline-block;
+        margin: 0 auto;
+        width: 90%;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 21px;
+        i {
+            display: block;
+            margin-bottom: 15px;
+            height: 24px;
+            background: url('/tw/eform/images/loading.gif') no-repeat center center;
+        }
+    }
+}
+
+/*thx page*/
+
+#thx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    background-color: #000 \9;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    font-family: Arial, '微軟正黑體', '新細明體';
+    line-height: 27px;
+    &:before {
+        display: inline-block;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+#thxContent {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 500px;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #5a9bc6;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#thxparg span,
+.suprtCall span {
+    display: block;
+}
+
+#thxContent {
+    h3 {
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .thxSourLoad1 {
+        display: none;
+        display: inline-block;
+        margin: 30px auto 0;
+        width: 200px;
+        height: 45px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        background-color: #ff7e00;
+        line-height: 45px;
+        zoom: 1;
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    .thxSourLoad2 {
+        display: inline-block;
+        width: 150px;
+        height: 45px;
+        zoom: 1;
+    }
+}
+
+#goIndex {
+    margin: 25px auto 0;
+    max-width: 200px;
+    width: 82%;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: #ff7e00;
+    line-height: 45px;
+    a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: -20px -20px 0 0;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    background-color: #000;
+    font-weight: bold;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 1030px) {
+    /* ========================= topInfo style ========================= */
+    #contact {
+        padding: 70px 10px;
+        min-width: 320px;
+        width: 100%;
+        #contactTxt {
+            width: 100%;
+        }
+        h2 {
+            padding-bottom: 0;
+            &:before {
+                display: none;
+            }
+        }
+        #info {
+            p {
+                display: inline-block;
+                width: 100%;
+            }
+            ul {
+                display: none;
+            }
+        }
+    }
+    /*========================= info style =========================*/
+    /* ========================= form style ========================= */
+    /*公司名称、联系方式。。。。样式结束*/
+    .form {
+        width: 100%;
+    }
+    #contactInput input {
+        float: none;
+        margin: 0 0 20px;
+        width: 100%;
+        height: 50px;
+    }
+    /*公司名称、联系方式。。。。样式结束*/
+    .form .inforCheck {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ================== inforCheck style ================= */
+    .form .inforCheck {
+        text-align: center;
+    }
+    /*验证码样式开始*/
+    .verifica {
+        margin: 40px 0 30px;
+    }
+    .veriSpan {
+        display: block;
+        text-align: left;
+    }
+    #identCode {
+        width: calc(100% - 180px);
+    }
+    /*验证码样式结束*/
+    /*送出样式开始*/
+    #submit {
+        width: 100%;
+    }
+    /*送出样式结束*/
+    .form #contactInput input.noInput {
+        border-color: #ff0;
+        background-color: #333;
+    }
+    /*thx page*/
+    #thxContent {
+        margin: 0 auto;
+        max-width: 85%;
+        width: 85%;
+    }
+    .demandCheck label {
+        width: 100%;
+    }
+}

@@ -1,0 +1,627 @@
+@charset "UTF-8";
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main.WB00255301_channel *, main.WB00255301_channel *:before, main.WB00255301_channel *:after {
+    box-sizing: content-box;
+}
+main.WB00255301_channel .subPage {
+    margin-top: 25px;
+}
+
+main.WB00255301_channel .subPage .picsProblem-title,
+main.WB00255301_channel .subPage h3 {
+    /*margin: 0 0 15px;*/
+    font-size: 30px;
+    text-align: left;
+}
+
+main.WB00255301_channel .subPage .textLeft {
+    text-align: left;
+}
+
+main.WB00255301_channel .subPage .textCenter {
+    text-align: center;
+}
+
+main.WB00255301_channel .otherLink {
+    display: inline-block;
+    padding: 5px 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+main.WB00255301_channel #otherLink.section {
+    padding-top: 0;
+}
+
+main.WB00255301_channel #otherLink .content {
+    border-bottom: 1px solid #bbb;
+}
+
+main.WB00255301_channel #otherLink i {
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 10px;
+    font-size: 17px;
+}
+
+main.WB00255301_channel #otherLink a {
+    font-size: 17px;
+}
+
+main.WB00255301_channel #otherLink a:hover, main.WB00255301_channel #otherLink a:hover i {
+    color: #ffb400;
+}
+
+main.WB00255301_channel .subPage .quotaOrange,
+main.WB00255301_channel .subPage .quotaYellow {
+    position: relative;
+    margin: 50px auto;
+    padding: 25px 45px;
+    border-radius: 7px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+main.WB00255301_channel .subPage .quotaOrange:before,
+main.WB00255301_channel .subPage .quotaYellow:before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    width: 49px;
+    height: 49px;
+}
+
+main.WB00255301_channel .subPage .quotaOrange:after,
+main.WB00255301_channel .subPage .quotaYellow:after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    right: 20px;
+    width: 49px;
+    height: 49px;
+}
+
+main.WB00255301_channel .picsPage:nth-of-type(even) {
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002553/images/channel/bg_channel.jpg) no-repeat center center fixed;
+}
+
+main.WB00255301_channel html, main.WB00255301_channel body {
+    height: 100%;
+}
+
+main.WB00255301_channel .MBtn {
+    display: block;
+    width: 500px;
+    line-height: 60px;
+    margin: 20px auto;
+    font-size: 24px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e94609;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+main.WB00255301_channel .MBtn a {
+    display: block;
+    color: #e94609;
+}
+
+main.WB00255301_channel .MBtn a:hover {
+    display: block;
+    width: 500px;
+    line-height: 60px;
+    margin: 0px auto;
+    font-size: 24px;
+    text-align: center;
+    background-color: #e94609;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+main.WB00255301_channel #picsTop {
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 23px;
+}
+
+main.WB00255301_channel #picsTop:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+main.WB00255301_channel #picsTop .content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main.WB00255301_channel #picsTop.subPage h2 {
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+
+main.WB00255301_channel #picsTop.subPage p {
+    margin-bottom: 104px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+main.WB00255301_channel #picsTop .circle {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002553/images/channel/channelIcon01.png) no-repeat left top #ec1949;
+}
+
+main.WB00255301_channel #picsTop .circle:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -12px;
+    /*border-top: 20px solid #00afe9;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;*/
+}
+
+main.WB00255301_channel #picsTop li:nth-of-type(5) .circle:before {
+    display: none;
+}
+
+main.WB00255301_channel #picsTop li h4 {
+    width: 65%;
+    margin: 20px auto 0;
+    /*	padding: 3px 0;
+	border-radius: 7px;*/
+}
+
+main.WB00255301_channel #picsTop li:hover .circle {
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+main.WB00255301_channel #picsTop li:nth-of-type(1) .circle {
+    background-position: 0 top;
+}
+
+main.WB00255301_channel #picsTop li:nth-of-type(2) .circle {
+    background-position: -125px top;
+}
+
+main.WB00255301_channel #picsTop li:nth-of-type(3) .circle {
+    background-position: -250px top;
+}
+
+main.WB00255301_channel #picsTop li:nth-of-type(4) .circle {
+    background-position: -375px top;
+}
+
+main.WB00255301_channel .picsDetail .content {
+    overflow: hidden;
+}
+
+main.WB00255301_channel .picsContent {
+    position: relative;
+    width: 2000px;
+}
+
+main.WB00255301_channel .picsProblem, main.WB00255301_channel .picsSolition {
+    width: 1000px;
+    float: left;
+}
+
+main.WB00255301_channel .rightList {
+    display: none;
+    position: fixed;
+    top: 30%;
+    right: 20px;
+    z-index: 99;
+    margin: -100px 0 0;
+    font-size: 18px;
+    font-family: Arial, "微軟正黑體";
+    text-align: right;
+}
+
+main.WB00255301_channel .rightLink {
+    line-height: 50px;
+}
+
+main.WB00255301_channel .rightLink a:hover, main.WB00255301_channel .rightLink.selected a {
+    color: #e94609;
+}
+
+main.WB00255301_channel .picsProblem-title,
+main.WB00255301_channel .picsSolition h3 {
+    position: relative;
+    height: 145px;
+    padding-left: 30px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002553/images/channel/picsTitle.png) no-repeat left top;
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+
+main.WB00255301_channel .picsProblem-title > p {
+    display: block;
+    position: relative;
+    height: 55px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002553/images/channel/picsTitle_i.png) no-repeat left top;
+}
+
+main.WB00255301_channel .picsProblem p > b {
+    display: block;
+    left: 30px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 55px;
+}
+
+main.WB00255301_channel .picsProblem p b > i {
+    font-style: normal;
+    font-size: 24px;
+    color: #fff114;
+}
+
+main.WB00255301_channel #Block02 .picsProblem-title,
+main.WB00255301_channel #Block02 .picsSolition h3 {
+    /*padding-left: 250px;*/
+    background-position: left -145px;
+}
+
+main.WB00255301_channel #Block03 .picsProblem-title,
+main.WB00255301_channel #Block03 .picsSolition h3 {
+    background-position: left -290px;
+    /*font-size:21px;*/
+}
+
+main.WB00255301_channel #Block04 .picsProblem-title,
+main.WB00255301_channel #Block04 .picsSolition h3 {
+    background-position: left -435px;
+    /*font-size:21px;*/
+}
+
+main.WB00255301_channel #Block05 .picsProblem-title,
+main.WB00255301_channel #Block05 .picsSolition h3 {
+    background-position: left -580px;
+    /*font-size:21px;*/
+}
+
+main.WB00255301_channel #Block03 .picsProblem img {
+    padding-top: 26px;
+}
+
+main.WB00255301_channel #Block03 .picsProblem h4 {
+    padding-top: 35px;
+}
+
+main.WB00255301_channel #Block04 .picsProblem h4 {
+    padding-top: 25px;
+}
+
+main.WB00255301_channel #Block05 .picsProblem h4 {
+    padding-top: 25px;
+}
+
+main.WB00255301_channel .picsProblem span {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    color: #e90909;
+    padding-left: 165px;
+    top: 20px;
+}
+
+main.WB00255301_channel .picsSolition span {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    color: #e90909;
+    padding-left: 348px;
+    top: 30px;
+}
+
+main.WB00255301_channel .picsProblem-title > u {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #222121;
+    padding-left: 165px;
+    top: 25px;
+}
+
+main.WB00255301_channel .picsSolition h3 > b {
+    display: block;
+    position: relative;
+    font-size: 22px;
+    top: 60px;
+    padding-left: 175px;
+}
+
+main.WB00255301_channel .picsSolition h3 > i {
+    display: block;
+    position: relative;
+    font-style: normal;
+    font-size: 16px;
+    top: 60px;
+    padding-left: 180px;
+}
+
+main.WB00255301_channel .picsSolition img {
+    padding-top: 70px;
+    padding-left: 154px;
+}
+
+main.WB00255301_channel .picsProblem h4 {
+    display: block;
+    position: relative;
+    height: 95px;
+    padding-left: 335px;
+    font-size: 16px;
+    padding-top: 12px;
+    background: url(https://www.digiwin.com/tw/dsc/solution/WB002553/images/channel/hope.png) no-repeat 210px top;
+}
+
+main.WB00255301_channel #Block02 .picsSolition span {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    color: #e90909;
+    padding-left: 348px;
+    top: 60px;
+}
+
+main.WB00255301_channel #Block02 .picsSolition img {
+    display: block;
+    position: relative;
+    float: left;
+    padding-left: 0px;
+    margin-right: 50px;
+    padding-top: 0px;
+}
+
+main.WB00255301_channel #Block02 .picsSolition p {
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+main.WB00255301_channel #Block02 .picsSolition p > b {
+    display: block;
+    position: relative;
+    font-size: 22px;
+    left: -20px;
+}
+
+main.WB00255301_channel #Block02 .picsSolition p > i {
+    display: block;
+    position: relative;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 32px;
+    left: 10px;
+}
+
+main.WB00255301_channel #Block02 .picsProblem h4 {
+    padding-left: 235px;
+    padding-top: 24px;
+    background-position: 130px top;
+}
+
+main.WB00255301_channel .rightp ul li {
+    list-style: disc;
+    margin-bottom: 10px;
+}
+
+main.WB00255301_channel .rightp ul li p {
+    font-size: 16px;
+    color: #222121;
+    line-height: 25px;
+}
+
+main.WB00255301_channel #Block03 .picsSolition span {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    color: #e90909;
+    padding-left: 295px;
+    top: 30px;
+}
+
+main.WB00255301_channel #Block03 .picsSolition h3 > b {
+    display: block;
+    position: relative;
+    font-size: 22px;
+    top: 40px;
+    padding-left: 295px;
+}
+
+main.WB00255301_channel #Block03 .picsSolition h3 > i {
+    display: block;
+    position: relative;
+    font-style: normal;
+    font-size: 16px;
+    top: 40px;
+    padding-left: 295px;
+}
+
+main.WB00255301_channel #Block03 .picsSolition img {
+    display: block;
+    position: relative;
+    float: left;
+    padding-left: 85px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+main.WB00255301_channel #Block04 .picsSolition img {
+    display: block;
+    position: relative;
+    float: left;
+    padding-left: 60px;
+    padding-top: 0px;
+    padding-bottom: 35px;
+}
+
+main.WB00255301_channel #Block05 .picsSolition span {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    color: #e90909;
+    padding-left: 320px;
+    top: 30px;
+}
+
+main.WB00255301_channel #Block05 .picsSolition h3 > b {
+    display: block;
+    position: relative;
+    font-size: 22px;
+    top: 40px;
+    padding-left: 320px;
+}
+
+main.WB00255301_channel #Block05 .picsSolition h3 > i {
+    display: block;
+    position: relative;
+    font-style: normal;
+    font-size: 16px;
+    top: 40px;
+    padding-left: 320px;
+}
+
+main.WB00255301_channel #Block05 .picsSolition img {
+    display: block;
+    position: relative;
+    float: left;
+    padding-top: 40px;
+    /*padding-bottom: 5px;*/
+}
+
+main.WB00255301_channel .picsDetail {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+main.WB00255301_channel .picsPage:nth-of-type(odd).subPage .quotaOrange:before {
+    background: url(../images/quota.png) no-repeat center -196px;
+}
+
+main.WB00255301_channel .picsPage:nth-of-type(odd).subPage .quotaOrange:after {
+    background: url(../images/quota.png) no-repeat center -245px;
+}
+
+main.WB00255301_channel .picsPage .quota {
+    width: 720px;
+    padding: 25px 0 25px 15px;
+    margin: 0 auto 50px;
+    font-size: 19px;
+    border: 1px solid #ff8d00;
+}
+
+main.WB00255301_channel .picsPage .quota h4 {
+    margin: 0;
+    padding-left: 15px;
+    color: #ff8d00;
+    font-size: 21px;
+    text-align: right;
+}
+
+main.WB00255301_channel .picsPage .quota ul {
+    width: 550px;
+    margin: 0 0 0 25px;
+    list-style: disc outside;
+}
+
+main.WB00255301_channel .picsPage .quota li {
+    width: 45%;
+    margin: 0 0 0 15px;
+    line-height: 30px;
+}
+
+main.WB00255301_channel #Block01, main.WB00255301_channel #Block03, main.WB00255301_channel #Block05 {
+    background-color: #faf7f1;
+}
+
+main.WB00255301_channel #Block01.picsPage .quota h4 {
+    margin: 10px 0 0;
+}
+
+main.WB00255301_channel #Block01.picsPage .quota ul {
+    width: 530px;
+}
+
+main.WB00255301_channel #Block02.picsPage .quota h4 {
+    font-size: 21px;
+}
+
+main.WB00255301_channel #Block02.picsPage .quota ul {
+    width: 550px;
+    list-style: disc outside;
+}
+
+main.WB00255301_channel #Block02.picsPage .quota li:nth-of-type(odd) {
+    width: 60%;
+    margin: 0 0 0 10px;
+}
+
+main.WB00255301_channel #Block02.picsPage .quota li:nth-of-type(even) {
+    width: 35%;
+    margin: 0 0 0 10px;
+}
+
+main.WB00255301_channel #Block03.picsPage .quota li:nth-of-type(1),
+main.WB00255301_channel #produce.picsPage .quota li:nth-of-type(1) {
+    width: 90%;
+}
+
+main.WB00255301_channel .picsPage .btnGroup {
+    width: 374px;
+    margin: 0 auto;
+}
+
+main.WB00255301_channel .picsPage .btn {
+    width: 187px;
+    line-height: 46px;
+    background-color: #949494;
+    color: #ffffff;
+    font-size: 21px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main.WB00255301_channel .picsPage .btn:hover {
+    background-color: #f99260;
+}
+
+main.WB00255301_channel .picsPage .btn.now {
+    background-color: #e90909;
+}
+
+main.WB00255301_channel .picsPage .btn.now:hover {
+    background-color: #f99260;
+}
+
+main.WB00255301_channel .picsProblem .quotaOrange {
+    width: 630px;
+    margin-top: 0;
+    border: 2px solid #ff8d00;
+    font-size: 21px;
+}
+
+main.WB00255301_channel #picsCourse.subPage {
+    padding-top: 20px;
+}
+
+main.WB00255301_channel .picsProblem-title {
+    font-weight: bold;
+}
