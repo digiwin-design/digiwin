@@ -444,6 +444,7 @@
     overflow: hidden;
     padding-top: 70px;
     padding-bottom: 160px;
+    background-color: #eee;
 }
 
 #WB002839.WB002839_index #law img {
@@ -527,12 +528,11 @@
 }
 
 #WB002839.WB002839_index #industry {
-    background-color: #00b0bd;
-    color: #fff;
+    background-color: #fff;
 }
 
 #WB002839.WB002839_index #industry h2 {
-    color: #fff;
+    color: #0e7aa7;
 }
 
 #WB002839.WB002839_index #industryTxt {
