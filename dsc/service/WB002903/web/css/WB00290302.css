@@ -777,7 +777,19 @@ a.NOWTAB:hover{ color:#ffffff; background:#0d8fcb ;height:60px; position:absolut
 /*自主應用，智享服務--------------------------------------------*/
 }
 
-@media (max-width: 360px) {
-
-	
+.bottom {
+  text-align: center;
+  padding: 0 50px;
+  clear: both;
+}
+.bottom a {
+  display: block;
+}
+.bottom img {
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .bottom {
+    padding: 0;
+  }
 }
