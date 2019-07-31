@@ -1,3 +1,4 @@
+// 一頁式
 main,
 .popup_content {
     display: block;
@@ -57,12 +58,29 @@ main,
     }
 }
 
-// 二級選單下方間距
+// 一頁式二級選單下方間距
 html.production main {
     @media (min-width: 1025px) {
         padding-top: 38px !important;
     }
     @media (min-width: 1211px) {
         padding-top: 0 !important;
+    }
+}
+
+// 文章
+.list-case-show {
+    .font32,
+    .tag {
+        display: none;
+    }
+    main.top {
+        position: relative;
+        z-index: 99;
+    }
+}
+html.no-production {
+    body {
+        padding-top: 47px;
     }
 }

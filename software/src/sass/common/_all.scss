@@ -1,0 +1,28 @@
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+[v-cloak] {
+    display: none;
+}
+// dat.GUI
+.dg.ac {
+    z-index: 99;
+}
+main {
+    font-size: 18px;
+    line-height: 1.6;
+    .btn {
+        transition: all .15s ease-in-out;
+    }
+    a:link,
+    a:visited,
+    a:hover {
+        color: inherit; /* override */
+    }
+}
