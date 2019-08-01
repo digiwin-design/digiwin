@@ -28,18 +28,18 @@ module.exports = {
 </script>
 
 <style>
-.nav {
+main .nav {
     display: flex;
     overflow-x: auto;
     margin-bottom: 50px;
     justify-content: flex-end;
 }
-.nav-links {
+main .nav-links {
     position: relative;
     display: flex;
     align-items: center;
 }
-.nav a {
+main .nav a {
     border-bottom: 3px solid transparent;
     color: #555;
     font-weight: bold;
@@ -47,15 +47,19 @@ module.exports = {
     line-height: 2;
     flex-shrink: 0;
 }
+@media (min-width: 769px) {
+    main .nav a {
+        font-size: 16px;
+    }
+}
 html.no-mobile main .nav a:hover {
     border-bottom-color: #f85820;
 }
-
-.nav a + a {
+main .nav a + a {
     margin-left: 0.5em;
 }
 @media (min-width: 769px) {
-    .nav a + a {
+    main .nav a + a {
         margin-left: 25px;
     }
 }
