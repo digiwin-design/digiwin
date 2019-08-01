@@ -1,4 +1,5 @@
-httpVueLoader.register(Vue, 'components/1961/article-content.vue');
+httpVueLoader.register(Vue, 'components/1961/main-content.vue');
+httpVueLoader.register(Vue, 'components/1961/main-nav.vue');
 httpVueLoader.register(Vue, 'components/1961/hover-box.vue');
 // Vue.use(VueAwesomeSwiper);
 

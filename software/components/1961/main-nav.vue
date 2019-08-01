@@ -1,0 +1,62 @@
+<template>
+    <div class="nav">
+        <div class="nav-links">
+            <a
+                v-for="(link,idx) in result.nav['1961']"
+                :key="link"
+                :href="'#section'+(idx+1)"
+                @click.prevent="anchorController"
+            >{{link}}</a>
+        </div>
+    </div>
+</template>
+
+<script>
+module.exports = {
+    computed: {
+        result: function () {
+            return store.state.result;
+        },
+    },
+    methods: {
+        anchorController: function (e) {
+            let target = e.currentTarget.getAttribute('href');
+            document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+        },
+    },
+}
+</script>
+
+<style>
+.nav {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 50px;
+    justify-content: flex-end;
+}
+.nav-links {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.nav a {
+    border-bottom: 3px solid transparent;
+    color: #555;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 2;
+    flex-shrink: 0;
+}
+html.no-mobile main .nav a:hover {
+    border-bottom-color: #f85820;
+}
+
+.nav a + a {
+    margin-left: 0.5em;
+}
+@media (min-width: 769px) {
+    .nav a + a {
+        margin-left: 25px;
+    }
+}
+</style>
