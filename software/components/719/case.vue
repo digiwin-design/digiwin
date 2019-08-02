@@ -16,7 +16,7 @@
                         <div class="case-content-text">
                             <template v-for="content in item.contents">
                                 <p class="case-content-text-title" :key="content.title">{{content.title}}</p>
-                                <p :key="content.text">{{content.text}}</p>
+                                <p v-html="content.text" :key="content.text"></p>
                             </template>
                         </div>
                     </div>

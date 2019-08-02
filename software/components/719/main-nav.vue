@@ -31,6 +31,7 @@ module.exports = {
 main .nav {
     display: flex;
     overflow-x: auto;
+    margin-top: 1em;
     margin-bottom: 40px;
     justify-content: flex-end;
 }
@@ -56,11 +57,12 @@ html.no-mobile main .nav a:hover {
     border-bottom-color: #f85820;
 }
 main .nav a + a {
-    margin-left: 0.5em;
+    margin-left: .5em;
 }
 @media (min-width: 769px) {
     main .nav a + a {
         margin-left: 25px;
     }
 }
+
 </style>

@@ -1,5 +1,7 @@
 <template>
     <div>
+        <img src="images/719/HR Solution.jpg" alt="">
+        
         <main-nav></main-nav>
 
         <article id="section1" class="section1">
@@ -147,6 +149,7 @@ module.exports = {
         return {
             swiperOptionA: {
                 loop: true,
+                autoHeight: true,
                 autoplay: {
                     delay: 5000,
                 },
