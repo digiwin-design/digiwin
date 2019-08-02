@@ -1,7 +1,7 @@
-httpVueLoader.register(Vue, 'components/1961/main-content.vue');
-httpVueLoader.register(Vue, 'components/1961/main-nav.vue');
-httpVueLoader.register(Vue, 'components/1961/hover-box.vue');
-httpVueLoader.register(Vue, 'components/1961/case.vue');
+httpVueLoader.register(Vue, 'components/719/main-content.vue');
+httpVueLoader.register(Vue, 'components/719/main-nav.vue');
+httpVueLoader.register(Vue, 'components/719/hover-box.vue');
+httpVueLoader.register(Vue, 'components/719/case.vue');
 Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({

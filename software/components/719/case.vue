@@ -1,6 +1,6 @@
 <template>
     <ul class="case">
-        <li v-for="(item,idx) in result['1961'].case" :key="item.title">
+        <li v-for="(item,idx) in result['719'].case" :key="item.title">
             <section>
                 <div class="case-header js-case-header" :class="{ active: idx === 0 }">
                     <hgroup>
@@ -11,7 +11,7 @@
                 <div class="case-content js-case-content">
                     <div>
                         <div class="case-content-img">
-                            <img :src="'images/1961/case/case'+(idx+1)+'.png'" alt />
+                            <img :src="'images/719/case/case'+(idx+1)+'.png'" alt />
                         </div>
                         <div class="case-content-text">
                             <template v-for="content in item.contents">

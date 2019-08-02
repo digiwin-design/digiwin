@@ -2,7 +2,7 @@
     <div class="nav">
         <div class="nav-links">
             <a
-                v-for="(link,idx) in result.nav['1961']"
+                v-for="(link,idx) in result.nav['719']"
                 :key="link"
                 :href="'#section'+(idx+1)"
                 @click.prevent="anchorController"

@@ -46,11 +46,11 @@ main {
                 height: inherit;
             }
             &-button-prev {
-                background-image: inline-image('1961/slide-prev.png');
+                background-image: inline-image('719/slide-prev.png');
                 transform: translateY(-50px);
             }
             &-button-next {
-                background-image: inline-image('1961/slide-next.png');
+                background-image: inline-image('719/slide-next.png');
                 transform: translateY(-50px);
             }
             &-pagination-bullet {
@@ -204,7 +204,7 @@ main {
             font-weight: bold;
             font-size: 15px;
             &::after {
-                @include imgBg('1961/btn-icon.png', true);
+                @include imgBg('719/btn-icon.png', true);
                 position: absolute;
                 top: 50%;
                 right: 17px;
