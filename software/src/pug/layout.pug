@@ -14,7 +14,8 @@ html(lang='zh-Hant-TW')
         script(src='https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&flags=gated')
         script(src='/tw/dsc/assets/modernizr-custom.js')
         script(src='/tw/dsc/assets/mobile-detect.js')
-        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer='')
+        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer)
+        script(src="/tw/dsc/assets/smoothscroll.js", defer)
         script(src="/tw/dsc/assets/axios.min.js")
         script(src="/tw/dsc/assets/vuejs/vue-all-dev.js")
         script(src='/tw/dsc/js/common.min.js')
@@ -46,7 +47,7 @@ html(lang='zh-Hant-TW')
                         main(v-cloak, v-if="result", v-bind:class="{top:!fixedHeader}")
                             block content
                         // 後台上稿內容結束
-                        
+
                 aside.rightbox
                     div(style='background:#fff;padding-bottom:10px;')
                         p.pic
