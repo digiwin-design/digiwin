@@ -31,7 +31,7 @@ module.exports = {
 main .nav {
     display: flex;
     overflow-x: auto;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     justify-content: flex-end;
 }
 main .nav-links {
