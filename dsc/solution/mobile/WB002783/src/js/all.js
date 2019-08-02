@@ -115,5 +115,5 @@ $(document).on('click', '.js-nav', function(event) {
     let offset = $('.page-submenu').outerHeight();
     let targetPos = $(target).offset().top;
     let finalPos = offset ? targetPos - offset : targetPos;
-    $('html, body').animate({ scrollTop: finalPos });
+    window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
 });

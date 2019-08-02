@@ -131,6 +131,6 @@ $(document).on('click', '.js-nav', function (event) {
         let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
         let targetPos = $(target).offset().top;
         let finalPos = offset ? targetPos - offset : targetPos;
-        $('html, body').animate({ scrollTop: finalPos });
+        window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
     }, delay);
 });
