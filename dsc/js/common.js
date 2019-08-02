@@ -214,3 +214,10 @@ $(function () {
     document.querySelector('#qcTopNavSheetWrapper').addEventListener('mouseenter', mouseenterHandler);
     document.querySelector('#qcTopNavSheetWrapper').addEventListener('mouseleave', mouseleaveHandler);
 });
+
+// 解決文章右側定位問題
+$(function () {
+    window.addEventListener('scroll', () => {
+        document.querySelector('aside.rightbox').classList.remove('asideFixed', 'topscorll', 'asideBottom');
+    });
+});
