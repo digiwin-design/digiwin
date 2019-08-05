@@ -36,11 +36,11 @@ export default {
         }
     },
     methods: {
-        mediaSensor: _.throttle(function () {
+        mediaSensor() {
             let mm = window.matchMedia("(min-width: 769px)");
             mm.addListener(this.resizeWidth);
             this.resizeWidth(mm);
-        }, 100),
+        },
         resizeWidth(pMatchMedia) {
             let isMobile = pMatchMedia.matches ? false : true;
             this.$store.commit('updateDevice', isMobile);
@@ -50,12 +50,8 @@ export default {
         },
     },
     mounted() {
-        window.addEventListener('resize', this.mediaSensor);
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
         this.mediaSensor();
     },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.mediaSensor);
-    }
 };
 </script>
