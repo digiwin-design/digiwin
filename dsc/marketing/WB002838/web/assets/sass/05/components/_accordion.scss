@@ -1,0 +1,86 @@
+.accordion {
+    font-size: rem(22);
+    line-height: 1.3;
+    @media (max-width: $tablet-width) {
+        font-size: rem(18);
+    }
+    &-title {
+        display: flex;
+        cursor: pointer;
+        .col {
+            padding: 1em 2em;
+            &:first-child {
+                background-color: #215e8b;
+                flex-grow: 1;
+                @media (max-width: $tablet-width) {
+                    padding-right: 1em;
+                    padding-left: 1em;
+                }
+                p {
+                    &:first-child {
+                        margin-bottom: 7px;
+                        color: #fed635;
+                        font-weight: bold;
+                    }
+                    &:last-child {
+                        color: #fff;
+                    }
+                }
+            }
+            &:last-child {
+                display: flex;
+                background-color: #feb935;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                @media (max-width: $tablet-width) {
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+                &::after {
+                    @include imgBg('~assets/images/05/accordion-icon.png');
+                    display: block;
+                    margin-left: 14px;
+                    width: 24px;
+                    height: 24px;
+                    content: '';
+                    transition: transform .4s;
+                    transform: rotate(-90deg);
+                    @media (max-width: $tablet-width) {
+                        margin-left: 10px;
+                    }
+                    @at-root {
+                        .accordion-title.active .col:last-child::after {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+                br {
+                    display: none;
+                    @media (max-width: $tablet-width) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &-content {
+        background-color: #fff;
+        @at-root {
+            // 預設展開第一項(其餘隱藏)
+            .accordion-title:not(:first-of-type) + .accordion-content {
+                display: none;
+            }
+        }
+        & + .accordion-title {
+            margin-top: 2px;
+        }
+        p {
+            padding: 1em 2em;
+            @media (max-width: $tablet-width) {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+h1 {
+    position: relative;
+    display: flex;
+    color: #ef064e;
+    text-align: center;
+    letter-spacing: getLetterSpacing(100);
+    font-size: 40px;
+    line-height: 1;
+    align-items: center;
+    &::before,
+    &::after {
+        height: 1px;
+        background-color: #ef064e;
+        content: '';
+        flex-grow: 1;
+    }
+    span {
+        padding-right: 30px;
+        padding-left: 30px;
+        line-height: 1.2;
+    }
+    br {
+        display: none;
+        @media (max-width: $tablet-width) {
+            display: block;
+        }
+    }
+    &.bottom {
+        @media (max-width: $tablet-width) {
+            color: #fff;
+            font-size: 32px;
+        }
+        @media (max-width: 359px) {
+            letter-spacing: normal;
+        }
+        &::before,
+        &::after {
+            @media (max-width: $tablet-width) {
+                background-color: #fff;
+            }
+            @media (max-width: $mobile-width) {
+                opacity: 0;
+            }
+        }
+    }
+}

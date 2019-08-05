@@ -1,0 +1,40 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+.headerNav {
+    position: absolute;
+    bottom: 68px;
+    left: 50%;
+    display: flex;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1101px;
+    width: 100%;
+    transform: translateX(-50%);
+    @media (max-width: $tablet-width) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+a {
+    @media (max-width: 530px) {
+        max-width: calc((345 / 530) * 100%);
+    }
+    & + a {
+        margin-left: 25px;
+        @media (max-width: $tablet-width) {
+            margin-top: 25px;
+            margin-left: 0;
+        }
+        @media (max-width: 530px) {
+            margin-top: 15px;
+        }
+    }
+    &.is-disabled {
+        pointer-events: none;
+    }
+}
+img {
+    display: block;
+}

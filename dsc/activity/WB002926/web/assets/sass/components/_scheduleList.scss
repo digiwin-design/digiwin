@@ -1,0 +1,102 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+.scheduleList {
+    display: flex;
+    color: #fff;
+    letter-spacing: getLetterSpacing(10);
+    font-size: 26px;
+    line-height: 35px;
+    flex-wrap: wrap;
+    dt:not(:last-of-type),
+    dd:not(:last-of-type) {
+        padding-bottom: 28px;
+    }
+    dt {
+        position: relative;
+        padding-right: 14px;
+        @media (max-width: $tablet-width) {
+            padding-right: 0;
+            width: 1px;
+            .time {
+                display: none;
+            }
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: 1;
+            background-color: #ef064e;
+            content: '';
+        }
+        &::before {
+            top: 10px;
+            right: -15px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+        &::after {
+            top: 0;
+            right: -8px;
+            width: 1px;
+            height: 100%;
+        }
+        &:first-of-type::after {
+            top: -5px;
+            height: calc(100% + 5px);
+        }
+        &:last-of-type::after {
+            height: calc(100% + 5px);
+        }
+    }
+    dd {
+        padding-left: 7px;
+        width: calc(100% - 184px);
+        @media (max-width: $tablet-width) {
+            width: calc(100% - 1px);
+        }
+        .time {
+            display: none;
+            @media (max-width: $tablet-width) {
+                display: block;
+                padding-left: 28px;
+            }
+        }
+    }
+    .tag {
+        position: relative;
+        display: inline-block;
+        margin-bottom: .2em;
+        padding-right: 18px;
+        padding-left: 28px;
+        height: 35px;
+        background-color: #ea68a2;
+        color: #fff;
+        font-weight: bold;
+        font-weight: bold;
+        line-height: 35px;
+        &::after {
+            position: absolute;
+            top: 0;
+            right: -22px;
+            width: 0;
+            height: 0;
+            border-width: 35px 0 0 22px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ea68a2;
+            content: '';
+        }
+        & + .content {
+            line-height: 36.4px;
+        }
+    }
+    .content {
+        padding-left: 28px;
+        i {
+            color: #ffe730;
+            font-weight: bold;
+        }
+    }
+}

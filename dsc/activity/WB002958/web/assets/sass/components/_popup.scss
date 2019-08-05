@@ -1,0 +1,35 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+.cast_popup {
+    position: absolute !important;
+    top: 16px;
+    right: 0;
+    bottom: 16px;
+    left: 0;
+    margin: auto;
+    max-width: 950px;
+    max-height: 550px;
+    width: 90%;
+    opacity: 0;
+    height: auto;
+    &_close {
+        position: absolute;
+        top: -16px; 
+        right: -16px;
+        z-index: 1;
+        width: 42px;
+        height: 42px;
+        border: none;
+        background-color: transparent;
+        background-image: url('~assets/images/popup-close.svg');
+        background-position: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+}

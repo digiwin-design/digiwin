@@ -1,0 +1,67 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+html.no-mobile {
+    .county-icon:hover {
+        background-image: url('~assets/images/calendar-h.png');
+    }
+}
+.year,
+.date,
+.county {
+    color: #ff714d;
+    font-weight: bold;
+}
+.date,
+.county {
+    font-size: 60px;
+    line-height: 1.2;
+}
+.location,
+.addr {
+    color: #fff;
+    letter-spacing: getLetterSpacing(50);
+    font-size: 20px;
+    line-height: 1;
+    @media (max-width: 470px) {
+        font-size: 16px;
+    }
+    @media (max-width: 359px) {
+        letter-spacing: normal;
+    }
+}
+.year {
+    line-height: 1;
+}
+.day {
+    font-size: 20px;
+}
+.county {
+    margin-bottom: .3em;
+    &-icon {
+        display: inline-block;
+        width: 39px;
+        height: 39px;
+        background-image: url('~assets/images/calendar.png');
+    }
+}
+.location {
+    position: relative;
+    &::after {
+        position: absolute;
+        right: -37px;
+        bottom: 0;
+        width: 27px;
+        height: 43px;
+        background-image: url('~assets/images/location.png');
+        content: '';
+    }
+}
+a {
+    display: inline-block;
+}
+.isFull {
+    color: #ffe730;
+    font-size: 22px;
+}

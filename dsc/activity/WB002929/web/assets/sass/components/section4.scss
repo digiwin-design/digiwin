@@ -1,0 +1,76 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+.section {
+    @include bg('~assets/images/section4-bg.jpg', 50%);
+    background-size: cover;
+}
+h1 {
+    color: #fff;
+}
+.content {
+    position: absolute;
+    top: getResponsePos(174, 900);
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: $tablet-width) {
+        position: relative;
+    }
+}
+img {
+    display: block;
+    margin: 0 auto 15px;
+    @media (max-width: $tablet-width) {
+        margin-bottom: 5px;
+        width: 200px;
+        height: 200px;
+    }
+}
+.text {
+    color: #fff;
+    letter-spacing: getLetterSpacing(10);
+}
+.listTitle {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 36px;
+}
+.lists {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    @media (max-height: $tablet-width) and (min-width: $tablet-width + 1) {
+        flex-direction: row;
+        width: 760px;
+        align-items: flex-start;
+    }
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style-type: disc;
+    font-size: 20px;
+    @media (max-width: $tablet-width) {
+        max-width: 365px;
+    }
+    @media (max-height: $tablet-width) and (min-width: $tablet-width + 1) {
+        width: 50%;
+    }
+    li {
+        display: inline-flex;
+        align-items: baseline;
+        &::before {
+            margin-right: 7px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: #fff;
+            content: '';
+            transform: translateY(-3px);
+        }
+    }
+}

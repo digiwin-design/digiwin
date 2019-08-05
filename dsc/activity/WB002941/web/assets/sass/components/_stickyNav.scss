@@ -1,0 +1,126 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+$color: (
+    main: #0096ff,
+    active: #f6a9ba,
+    bg: #fff
+);
+html.no-mobile {
+    nav a:hover {
+        background-color: map-get($color, active);
+    }
+    nav .no-sticky a:nth-child(2) {
+        background-color: map-get($color, main);
+    }
+}
+nav {
+    @include stickyNav(5, 70px, 22px, map-get($color, bg), map-get($color, active), #929292, #000);
+    opacity: 0;
+    transition: opacity .4s;
+    pointer-events: none;
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &.no-mobile {
+        top: 35px;
+        &.active {
+            top: 0;
+        }
+        a {
+            &::before {
+                margin-right: 8px;
+                width: 35px;
+                height: 35px;
+                background-position: 50%;
+                background-repeat: no-repeat;
+                content: '';
+                flex-shrink: 0;
+            }
+            @media (max-width: 900px) {
+                font-size: 18px;
+            }
+        }
+        .no-sticky a {
+            width: calc(100% / 3);
+        }
+    }
+    &.is-mobile {
+        position: fixed;
+        bottom: 0;
+        .no-sticky a {
+            &:last-child::before {
+                width: 35px;
+                height: 35px;
+                background-image: url('~assets/images/nav-icon2-3.png');
+                background-position: 50%;
+                background-repeat: no-repeat;
+                content: '';
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                width: 36.5%;
+            }
+            &:nth-child(3) {
+                width: 27%;
+            }
+        }
+    }
+    a.is-disabled {
+        color: #a9a9a9;
+        pointer-events: none;
+    }
+}
+.is-sticky {
+    display: flex;
+    width: 40%;
+    a {
+        width: calc(100% / 3);
+        @for $nth from 1 through 3 {
+            &:nth-child(#{$nth})::before {
+                background-image: url('~assets/images/nav-icon1-#{$nth}.png');
+            }
+        }
+        & + a::after {
+            position: absolute;
+            top: 5px;
+            bottom: 5px;
+            left: 0;
+            width: 1px;
+            background-color: #929292;
+            content: '';
+        }
+    }
+}
+.no-sticky {
+    display: flex;
+    width: 60%;
+    a {
+        &:nth-child(1)::before {
+            background-image: url('~assets/images/nav-icon2-1.png');
+        }
+        &.is-disabled:nth-child(1)::before {
+            background-image: url('~assets/images/nav-icon2-1-d.png');
+        }
+        @for $nth from 2 through 3 {
+            &:nth-child(#{$nth})::before {
+                background-image: url('~assets/images/nav-icon2-#{$nth}.png');
+            }
+        }
+        &:nth-child(1)::after {
+            position: absolute;
+            top: 5px;
+            bottom: 5px;
+            left: 0;
+            width: 1px;
+            background-color: #929292;
+            content: '';
+        }
+        &:nth-child(2) {
+            background-color: map-get($color, main);
+            color: #fff;
+        }
+    }
+}

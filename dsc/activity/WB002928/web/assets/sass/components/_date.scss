@@ -1,0 +1,81 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+html.no-mobile {
+    .day:hover {
+        border-color: #fff;
+        color: #fff;
+    }
+    .map:hover {
+        color: #fff;
+    }
+}
+.wrapper {
+    display: flex;
+    font-size: 16px;
+    @media (max-width: 440px) {
+        font-size: 13.5px;
+    }
+}
+.county {
+    padding-top: 10px;
+    width: 1.15em;
+    color: #ff00a2;
+    letter-spacing: getLetterSpacing(100);
+    font-weight: bold;
+    font-size: em(64);
+    writing-mode: vertical-rl;
+    /deep/ .font + .font {
+        margin-top: 2px;
+    }
+}
+.date {
+    color: #fff;
+    letter-spacing: getLetterSpacing(200);
+    font-size: em(81);
+    line-height: 1.1;
+}
+.day,
+.map {
+    color: $theme-color;
+    transition: color .4s, border-color .4s;
+}
+.day {
+    display: inline-block;
+    padding-right: 7px;
+    padding-left: 7px;
+    border: 1px solid $theme-color;
+    letter-spacing: getLetterSpacing(300);
+    font-size: em(20);
+    line-height: 41px;
+}
+.location {
+    display: flex;
+    li {
+        &:first-child {
+            font-size: em(40);
+        }
+        &:last-child {
+            font-size: em(16);
+            line-height: 23px;
+        }
+    }
+}
+.addr {
+    position: relative;
+    font-size: em(20);
+    line-height: 1;
+    &::after {
+        position: absolute;
+        right: -29px;
+        bottom: 0;
+        width: 28px;
+        height: 42px;
+        background-image: url('~assets/images/location.png');
+        content: '';
+        @media (max-width: 374px) {
+            display: none;
+        }
+    }
+}

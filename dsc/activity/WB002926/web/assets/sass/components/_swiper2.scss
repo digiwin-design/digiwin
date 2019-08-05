@@ -1,0 +1,33 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+img {
+    display: block;
+}
+figcaption {
+    color: #fff;
+    text-align: center;
+}
+.swiper {
+    &-button-prev,
+    &-button-next {
+        margin-top: -18.5px;
+        transform: translateY(-14px);
+        &.swiper-button-disabled {
+            opacity: 0;
+        }
+    }
+    &-button-prev {
+        left: 2px;
+        width: 23px;
+        height: 37px;
+        background-image: url('~assets/images/review-arrow-l.png');
+    }
+    &-button-next {
+        right: 2px;
+        width: 23px;
+        height: 37px;
+        background-image: url('~assets/images/review-arrow-r.png');
+    }
+}

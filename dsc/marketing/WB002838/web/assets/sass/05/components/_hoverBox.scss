@@ -1,0 +1,93 @@
+.hoverBox {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-bottom: 8.75px;
+    width: 233px;
+    height: 360px;
+    &-title {
+        display: flex;
+        height: 58px;
+        background-color: #9c8575;
+        color: #ff0;
+        text-align: center;
+        letter-spacing: getLetterSpacing(75);
+        font-weight: bold;
+        font-size: rem(20);
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    &-content {
+        padding: 60px 10px;
+        background-color: #5c4739;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        p {
+            text-align: center;
+            &:first-of-type {
+                margin-bottom: .5em;
+                color: #e4c8b5;
+                font-weight: bold;
+                font-size: rem(20);
+                line-height: 1.35;
+            }
+            &:last-of-type {
+                color: #fff;
+                line-height: 1.5;
+                i {
+                    color: #ffe400;
+                }
+            }
+        }
+    }
+    &-bottom {
+        position: absolute;
+        top: calc(100% - 60px);
+        left: 50%;
+        width: 150%;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #fa5800;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        font-size: rem(20);
+        line-height: 1;
+        transition: top .4s;
+        transform: translateX(-50%);
+        @at-root {
+            .hoverBox:hover .hoverBox-bottom {
+                top: 100%;
+            }
+        }
+        i {
+            line-height: 60px;
+        }
+    }
+    &-hover {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(#89705f, .95);
+        color: #fff;
+        &-title {
+            height: 58px;
+            background-color: #fa5800;
+            text-align: center;
+            font-weight: bold;
+            line-height: 58px;
+        }
+        &-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            p {
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,398 @@
+@import '../common';
+@import 'components';
+
+.sectionTitle {
+    margin-bottom: .5em;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 26px;
+    @media (min-width: $tablet-width + 1) {
+        font-size: 36px;
+    }
+}
+.sectionDesc {
+    margin-bottom: 1em;
+    text-align: center;
+    @media (min-width: $tablet-width + 1) {
+        font-size: 20px;
+    }
+}
+header {
+    @include headerBg('~assets/images/03/header-bg-m.jpg', '~assets/images/03/header-bg-s.jpg');
+    background-size: cover;
+    @media (min-width: 1025px) {
+        background-image: url('~assets/images/03/header-bg.jpg');
+        background-size: auto;
+    }
+    .container {
+        padding-bottom: 35px;
+        height: 495px;
+        justify-content: flex-end;
+        @media (min-width: 1025px) {
+            padding-bottom: 0;
+            justify-content: center;
+        }
+    }
+    .header-btns {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+        @media (min-width: 620px) {
+            flex-direction: row;
+        }
+        a {
+            display: flex;
+            width: 280px;
+            height: 50px;
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            &:nth-child(1) {
+                background-color: #f9972b;
+                font-size: 22px;
+            }
+            &:nth-child(2) {
+                margin-top: 15px;
+                background-color: #d73c06;
+                line-height: 21px;
+                @media (min-width: 620px) {
+                    margin-top: 0;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+.section1 {
+    $breakpoint: 1024px;
+
+@include bg('~assets/images/03/section1-bg-s.jpg', 50% 100%);
+    background-color: #dbedfd;
+
+    @media (min-width: $breakpoint) {
+        background-image: url('~assets/images/03/section1-bg.jpg');
+    }
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 70px;
+        align-items: center;
+        @media (min-width: $breakpoint) {
+            flex-direction: row;
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 455px;
+            justify-content: space-around;
+        }
+        &::before,
+        &::after {
+            content: '';
+        }
+    }
+    &-flag {
+        @include imgBg('~assets/images/03/section1-flag-s.png');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 191px;
+        height: 88px;
+        content: '';
+        @media (min-width: $breakpoint) {
+            @include imgBg('~assets/images/03/section1-flag.png');
+            width: 245px;
+            height: 113px;
+        }
+    }
+    &-illust {
+        margin-bottom: 15px;
+        width: 146px;
+        @media (min-width: $breakpoint) {
+            margin-bottom: 0;
+            width: 220px;
+        }
+    }
+    &-content {
+        max-width: 530px;
+    }
+    h1 {
+        margin: 0 auto 10px;
+        width: 220px;
+        @media (min-width: $breakpoint) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    p {
+        &:first-of-type {
+            font-size: 26px;
+            @media (min-width: $breakpoint) {
+                font-size: 34px;
+            }
+        }
+        &:last-of-type {
+            @media (min-width: $breakpoint) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+.section2 {
+    padding-bottom: 45px;
+    &-cols {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $tablet-width + 1) {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        &::before,
+        &::after {
+            content: '';
+        }
+    }
+    &-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $tablet-width + 1) {
+            width: calc((316 / 1200) * 100%);
+        }
+        p {
+            width: 100%;
+        }
+        & + .section2-col {
+            margin-top: 2em;
+            @media (min-width: $tablet-width + 1) {
+                margin-top: 0;
+            }
+        }
+    }
+    h2 {
+        margin-top: .8em;
+        margin-bottom: .3em;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 1;
+        @media (min-width: $tablet-width + 1) {
+            font-size: 30px;
+        }
+    }
+}
+.section3 {
+    padding-bottom: 65px;
+    background-color: #0656a0;
+    .sectionTitle,
+    .sectionDesc {
+        color: #fff;
+    }
+    &-content {
+        display: flex;
+        margin: 0 auto;
+        width: 260px;
+        flex-wrap: wrap;
+        @media (min-width: $tablet-width + 1) {
+            width: 560px;
+        }
+        @media (min-width: $content-width + 1) {
+            width: 1120px;
+        }
+    }
+    .hoverBox {
+        margin: 10px;
+        width: 260px;
+        height: 327px;
+        &-title {
+            display: flex;
+            height: 83px;
+            background-color: #e0e8f3;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        &-content {
+            position: relative;
+            height: 194px;
+            background-color: #94d8f5;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 30px;
+                width: 0;
+                height: 0;
+                border-width: 8px 9px 0 9px;
+                border-style: solid;
+                border-color: #14546f transparent transparent transparent;
+                content: '';
+            }
+            p {
+                position: relative;
+                padding-right: 30px;
+                padding-left: 30px;
+                &:first-of-type {
+                    margin-bottom: 15px;
+                    padding-top: 24px;
+                    padding-bottom: 12px;
+                    color: #14546f;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 1;
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 30px;
+                        width: 20px;
+                        height: 2px;
+                        background-color: rgba(#fff, .5);
+                        content: '';
+                    }
+                }
+            }
+        }
+        &-bottom {
+            display: flex;
+            height: 50px;
+            background-color: #fa9513;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                @include imgBg('~assets/images/03/hover-bottom-icon.png');
+                margin-right: 7px;
+                width: 15px;
+                height: 15px;
+                content: '';
+            }
+        }
+        &-hover {
+            .hoverBox-content {
+                background-color: #eed5a3;
+            }
+            .hoverBox-bottom::before {
+                display: none;
+            }
+        }
+        & + .hoverBox {
+            margin-top: 10px;
+        }
+    }
+}
+.section4 {
+    $breakpoint: 1024px;
+    padding-bottom: 65px;
+    background-color: #fcf7e8;
+    &-case {
+        position: relative;
+        padding-bottom: 15px;
+        background-color: #f0efef;
+        letter-spacing: getLetterSpacing(60);
+        @media (min-width: $breakpoint) {
+            height: 285px;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 477px;
+                height: 285px;
+                background-image: url(~assets/images/03/section4-case-illust.png);
+                background-repeat: no-repeat;
+                content: '';
+            }
+        }
+        &-title {
+            margin-bottom: 22px;
+            width: 100%;
+            height: 47px;
+            background-color: #bb7314;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 47px;
+            @media (min-width: $breakpoint) {
+                padding-right: 50px;
+                text-align: right;
+            }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media (min-width: $breakpoint) {
+                padding-right: 30px;
+                padding-left: 500px;
+                align-items: flex-start;
+            }
+        }
+        img {
+            margin-bottom: 10px;
+            @media (min-width: $breakpoint) {
+                display: none;
+            }
+        }
+        p {
+            width: 100%;
+            &:nth-of-type(1) {
+                color: #6e421c;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                @media (min-width: $tablet-width + 1) {
+                    text-align: left;
+                    font-size: 24px;
+                }
+            }
+            &:nth-of-type(2) {
+                color: #6e421c;
+                text-align: center;
+                font-size: 20px;
+                @media (min-width: $tablet-width + 1) {
+                    text-align: left;
+                    font-size: 24px;
+                }
+            }
+            &:nth-of-type(3) {
+                @media (min-width: $tablet-width + 1) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &-benefits {
+        display: flex;
+        margin: 0 auto;
+        width: 300px;
+        flex-wrap: wrap;
+        @media (min-width: $tablet-width + 1) {
+            width: 600px;
+        }
+        @media (min-width: $content-width + 20) {
+            width: 100%;
+        }
+    }
+    &-benefit {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 280px;
+        height: 200px;
+        border: 1px solid #d69a31;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-around;
+        &::before,
+        &::after {
+            content: '';
+        }
+    }
+    h2 {
+        padding-top: 40px;
+    }
+}

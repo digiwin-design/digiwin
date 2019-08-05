@@ -1,0 +1,26 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+h1 {
+    padding-top: .63em;
+    padding-bottom: .63em;
+    border-top: 1px solid $theme-color;
+    border-bottom: 1px solid $theme-color;
+    color: $theme-color;
+    text-align: center;
+    letter-spacing: getLetterSpacing(100);
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.2;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $content-width;
+}
+br {
+    display: none;
+    @media (max-width: $tablet-width) {
+        display: block;
+    }
+}

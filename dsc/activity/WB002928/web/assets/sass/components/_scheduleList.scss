@@ -1,0 +1,165 @@
+@import '../common/variable';
+@import '../common/helpers';
+@import '../common/family';
+
+.scheduleList {
+    margin: 0 auto;
+}
+.container {
+    max-width: 814px;
+}
+.thead {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #818d90;
+    &-col {
+        &:first-child {
+            width: 165px;
+            @media (max-width: $tablet-width) {
+                display: none;
+            }
+        }
+        &:last-child {
+            display: flex;
+            padding-left: 46px;
+            width: calc(100% - 165px);
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: $tablet-width) {
+                padding-left: 0;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    }
+    &-title {
+        color: #fff;
+        letter-spacing: getLetterSpacing(100);
+        font-size: 30px;
+        line-height: 1;
+        @media (max-width: $tablet-width) {
+            display: none;
+        }
+    }
+    &-open {
+        color: $theme-color;
+        letter-spacing: getLetterSpacing(200);
+        font-size: 18px;
+    }
+}
+.list {
+    display: flex;
+    color: #fff;
+    letter-spacing: getLetterSpacing(10);
+    font-size: 24px;
+    flex-wrap: wrap;
+    &-title:not(:last-of-type),
+    &-detail:not(:last-of-type) {
+        padding-bottom: 28px;
+    }
+    &-title {
+        position: relative;
+        padding-right: 25px;
+        @media (max-width: $tablet-width) {
+            padding-right: 0;
+            width: 1px;
+            .list-time {
+                display: none;
+            }
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            top: 8px;
+            content: '';
+        }
+        &::before {
+            right: -20px;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $theme-color;
+        }
+        &::after {
+            right: -11px;
+            width: 2px;
+            height: 100%;
+            background-color: #818d90;
+        }
+        &:last-of-type::after {
+            display: none;
+        }
+    }
+    &-detail {
+        padding-left: 11px;
+        width: calc(100% - 165px);
+        @media (max-width: $tablet-width) {
+            width: calc(100% - 1px);
+        }
+        &:nth-of-type(3) .list-content {
+            display: flex;
+            @media (max-width: $tablet-width) {
+                flex-direction: column;
+            }
+             /deep/  {
+                p:last-child {
+                    flex-shrink: 0;
+                    strong {
+                        @media (max-width: $mobile-width - 1) {
+                            display: block;
+                        }
+                    }
+                    i {
+                        &:first-of-type {
+                            background-color: #2389a9;
+                        }
+                        &:last-of-type {
+                            background-color: #0a998a;
+                        }
+                    }
+                }
+                i {
+                    display: inline-block;
+                    margin-left: 15px;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    border-radius: 11.5px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 23px;
+                    @media (max-width: $mobile-width - 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .list-time {
+            display: none;
+            @media (max-width: $tablet-width) {
+                display: block;
+                padding-left: 35px;
+            }
+        }
+    }
+    &-topic,
+    &-content {
+        padding-left: 35px;
+    }
+    &-topic {
+        color: $theme-color;
+    }
+    &-content {
+        &.inter {
+            color: #bbb;
+        }
+         /deep/  {
+            strong {
+                display: inline-block;
+                font-weight: bold;
+            }
+        }
+    }
+}

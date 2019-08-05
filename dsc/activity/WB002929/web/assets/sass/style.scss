@@ -1,0 +1,116 @@
+@import 'common/variable';
+@import 'common/reset';
+@import 'common/helpers';
+@import 'common/family';
+
+.no-mobile {
+    nav a:hover::before {
+        opacity: 1;
+    }
+}
+body {
+    min-width: 360px;
+    line-height: 1.6;
+    @media (min-width: 1300px) {
+        &:not(.fp-viewing-firstPage) nav {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+.container {
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: $content-width;
+    height: 100%;
+    @media (max-width: $tablet-width) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        min-height: inherit;
+    }
+}
+nav {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .2s;
+    pointer-events: none;
+    align-items: flex-end;
+    a {
+        position: relative;
+        display: block;
+        color: #000;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        &.active {
+            color: #e42601;
+            &::after {
+                background-color: #e42601;
+            }
+        }
+        &::before {
+            position: absolute;
+            top: calc(50% - 8px);
+            left: -110px;
+            width: 100px;
+            content: attr(data-text);
+            text-align: right;
+            opacity: 0;
+            transition: opacity .2s;
+            pointer-events: none;
+        }
+        &::after {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #000;
+            content: '';
+        }
+    }
+}
+.section {
+    position: relative;
+    overflow-x: hidden;
+}
+main {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+.title {
+    position: absolute;
+    top: getResponsePos(80, 900);
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    letter-spacing: getLetterSpacing(100);
+    font-size: rem(60);
+    line-height: 1.2;
+    transform: translateX(-50%);
+    @media (max-height: 768px) {
+        top: getResponsePos(60, 900);
+    }
+    @media (max-width: $tablet-width) {
+        position: relative;
+        margin-bottom: 30px;
+    }
+}
+.subtitle {
+    position: absolute;
+    top: getResponsePos(170, 900);
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    letter-spacing: getLetterSpacing(10);
+    font-size: rem(30);
+    transform: translateX(-50%);
+    @media (max-width: $tablet-width) {
+        position: relative;
+        margin-bottom: 30px;
+    }
+}
