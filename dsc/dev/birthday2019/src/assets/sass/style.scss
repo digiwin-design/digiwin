@@ -1,0 +1,14 @@
+@import 'common';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main {
+    position: relative;
+    min-width: 320px;
+    font-size: 18px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
