@@ -12,7 +12,7 @@
                 <slot name="svg"></slot>
             </div>
 
-            <!-- 靜態圖片待移除 -->
+            <!-- 靜態圖片區塊待動畫完成後移除 -->
             <slot name="picture"></slot>
         </div>
     </article>

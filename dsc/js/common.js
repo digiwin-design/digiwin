@@ -218,6 +218,6 @@ $(function () {
 // 解決文章右側定位問題
 $(function () {
     window.addEventListener('scroll', () => {
-        document.querySelector('aside.rightbox').classList.remove('asideFixed', 'topscorll', 'asideBottom');
+        document.querySelector('aside.rightbox') && document.querySelector('aside.rightbox').classList.remove('asideFixed', 'topscorll', 'asideBottom');
     });
 });

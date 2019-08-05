@@ -29,4 +29,13 @@ main {
             padding-top: percentage(484 / 1200);
         }
     }
+    .section2 {
+        .illust {
+            margin: 0 auto;
+            max-width: 1181px;
+        }
+        .svgContainer {
+            padding-top: percentage(532 / 1181);
+        }
+    }
 }
