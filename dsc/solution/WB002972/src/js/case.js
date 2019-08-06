@@ -4,6 +4,9 @@ httpVueLoader.register(Vue, 'components/case/slider-banner.vue');
 httpVueLoader.register(Vue, 'components/case/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/case/slider.vue');
 httpVueLoader.register(Vue, 'components/case/article-component.vue');
+httpVueLoader.register(Vue, 'components/case/svg/section1-1-svg.vue');
+httpVueLoader.register(Vue, 'components/case/svg/section1-2-svg.vue');
+httpVueLoader.register(Vue, 'components/case/svg/section2-svg.vue');
 
 const store = new Vuex.Store({
     state: {
@@ -29,6 +32,11 @@ const store = new Vuex.Store({
 
 new Vue({
     el: 'main',
+    data() {
+        return {
+            runAn: false, // run section1-2.svg animation
+        };
+    },
     computed: {
         isMobile() {
             return store.state.isMobile;

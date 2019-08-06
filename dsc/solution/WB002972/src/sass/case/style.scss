@@ -15,20 +15,28 @@ main {
             background-color: #eaeaea;
         }
     }
-    .section2 {
+    .section1 {
         .slider-leftIllust {
+            max-width: 1118px;
+            .svgContainer {
+                padding-top: percentage(610 / 1118);
+            }
+        }
+    }
+    .section1 {
+        .slider-rightIllust {
+            max-width: 1203px;
+            .svgContainer {
+                padding-top: percentage(437 / 1203);
+            }
+        }
+    }
+    .section2 {
+        .illust {
             max-width: 1174px;
         }
         .svgContainer {
-            position: relative;
             padding-top: percentage(652 / 1174);
-            width: 100%;
-            height: 0;
-            svg {
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
         }
     }
     .section3 {
@@ -79,6 +87,13 @@ main {
                     }
                 }
             }
+        }
+    }
+    .section4 {
+        picture {
+            display: block;
+            margin: 0 auto 50px;
+            text-align: center;
         }
     }
 }
