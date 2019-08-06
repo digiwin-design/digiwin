@@ -79,7 +79,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/sass/_common.scss';
+@import '@/assets/sass/common.scss';
 .desk {
     margin: auto;
     .cards {

@@ -32,4 +32,19 @@ export default {
 }
 </script>
 
-<style lang="scss" src="@/assets/sass/style.scss"></style>
+<style lang="scss">
+@import '@/assets/sass/common.scss';
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main {
+    position: relative;
+    display: flex;
+    min-width: 320px;
+    font-size: 18px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+</style>
