@@ -11,8 +11,6 @@
             <div class="illust">
                 <slot name="svg"></slot>
             </div>
-
-            <!-- 靜態圖片區塊待動畫完成後移除 -->
             <slot name="picture"></slot>
         </div>
     </article>

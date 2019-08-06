@@ -38,4 +38,31 @@ main {
             padding-top: percentage(532 / 1181);
         }
     }
+    .section3 {
+        .illust {
+            margin: 0 auto;
+            max-width: 1169px;
+        }
+        .svgContainer {
+            padding-top: percentage(534 / 1169);
+        }
+    }
+    .section4 {
+        .illust {
+            margin: 0 auto;
+            max-width: 1122px;
+        }
+        .svgContainer {
+            padding-top: percentage(457 / 1122);
+        }
+    }
+    .section5 {
+        .illust {
+            margin: 0 auto;
+            max-width: 1213px;
+        }
+        .svgContainer {
+            padding-top: percentage(482 / 1213);
+        }
+    }
 }
