@@ -13,8 +13,6 @@
 import './assets/js/modernizr-custom';
 import './assets/js/mobile-detect';
 import './assets/js/mobile-detect-modernizr';
-import 'jquery-popup-overlay';
-
 import Header from './components/Header.vue';
 import MenuMask from './components/MenuMask.vue';
 import Footer from './components/Footer.vue';
