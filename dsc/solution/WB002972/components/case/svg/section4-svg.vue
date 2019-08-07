@@ -4,27 +4,20 @@
 
 <script>
 module.exports = {
-    props: ['runAn'],
     data: function () {
         return {
             timeline: new TimelineMax(),
             target: null
         }
     },
-    watch: {
-        runAn: function (val) {
-            if (val) {
+    methods: {
+        getSvg: function () {
+            fetchFile('images/case/svg/section4.svg').then(function (res) {
+                this.$refs.svg.innerHTML = res;
+                // this.initGUI();
                 this.initAn();
                 this.scrollHandler();
                 window.addEventListener('scroll', this.scrollHandler);
-            }
-        }
-    },
-    methods: {
-        getSvg: function () {
-            fetchFile('images/case/svg/section1-2.svg').then(function (res) {
-                this.$refs.svg.innerHTML = res;
-                // this.initGUI();
             }.bind(this));
         },
         initGUI: function () {
@@ -45,16 +38,19 @@ module.exports = {
         },
         initAn: function () {
             this.timeline.set(this.$refs.svg.querySelectorAll('g'), {
-                transformOrigin: '50% 50%'
+                transformOrigin: '50% 50%',
             });
+
             this.timeline.pause(0);
-            for (let i = 1; i <= 6; i++) {
-                let pos = i === 1 ? '0' : '-=.4';
-                this.timeline.from(this.$refs.svg.querySelector('[data-name=group' + i + ']'), .8, {
-                    scale: .3,
-                    opacity: 0
-                }, pos);
-            }
+            
+            this.timeline.from(this.$refs.svg.querySelector('[data-name=group1]'), .8, {
+                scale: .3,
+                opacity: 0
+            });
+            this.timeline.from(this.$refs.svg.querySelector('[data-name=group2]'), .8, {
+                y: '+=40',
+                opacity: 0
+            }, '-=.4');
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.svg;

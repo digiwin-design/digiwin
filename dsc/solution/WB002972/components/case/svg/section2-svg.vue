@@ -38,13 +38,12 @@ module.exports = {
         },
         initAn: function () {
             this.timeline.set(this.$refs.svg.querySelectorAll('g'), {
-                transformOrigin: '50% 50%',
-                scale: .3,
+                transformOrigin: '50% 50%'
             });
             this.timeline.pause(0);
-            this.timeline.to(this.$refs.svg.querySelectorAll('g'), 1, {
-                scale: 1,
-                ease: Bounce.easeOut,
+            this.timeline.from(this.$refs.svg.querySelectorAll('g'), 1, {
+                scale: .3,
+                ease: Bounce.easeOut
             });
         },
         scrollHandler: _.throttle(function () {

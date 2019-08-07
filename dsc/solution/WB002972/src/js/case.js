@@ -7,6 +7,7 @@ httpVueLoader.register(Vue, 'components/case/article-component.vue');
 httpVueLoader.register(Vue, 'components/case/svg/section1-1-svg.vue');
 httpVueLoader.register(Vue, 'components/case/svg/section1-2-svg.vue');
 httpVueLoader.register(Vue, 'components/case/svg/section2-svg.vue');
+httpVueLoader.register(Vue, 'components/case/svg/section4-svg.vue');
 
 const store = new Vuex.Store({
     state: {

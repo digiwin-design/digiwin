@@ -38,16 +38,14 @@ module.exports = {
         },
         initAn: function () {
             this.timeline.set(this.$refs.svg.querySelectorAll('g'), {
-                transformOrigin: '50% 50%',
-                scale: .3,
-                opacity: 0
+                transformOrigin: '50% 50%'
             });
             this.timeline.pause(0);
             for (let i = 1; i <= 9; i++) {
                 let pos = i === 1 ? '0' : '-=.4';
-                this.timeline.to(this.$refs.svg.querySelector('[data-name=group' + i + ']'), .8, {
-                    scale: 1,
-                    opacity: 1
+                this.timeline.from(this.$refs.svg.querySelector('[data-name=group' + i + ']'), .8, {
+                    scale: .3,
+                    opacity: 0
                 }, pos);
             }
         },

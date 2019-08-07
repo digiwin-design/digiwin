@@ -33,6 +33,7 @@ main {
     }
     .section2 {
         .illust {
+            margin-bottom: 50px;
             max-width: 1174px;
         }
         .svgContainer {
@@ -90,10 +91,11 @@ main {
         }
     }
     .section4 {
-        picture {
-            display: block;
-            margin: 0 auto 50px;
-            text-align: center;
+        .illust {
+            max-width: 853px;
+        }
+        .svgContainer {
+            padding-top: percentage(732 / 853);
         }
     }
 }
