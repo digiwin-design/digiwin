@@ -155,7 +155,7 @@ $(document).ready(function () {
         var mobileCont = $('#contact-mobile').val() || '';
         var departCont = $('#contact-dept').val() || '';
         var jobTitCont = $('#contact-job').val() || '';
-        var queryCont = $('#contact-query').val().replace(/"/g, '\'') || '';
+        var queryCont = $('#contact-query').length && $('#contact-query').val().replace(/"/g, '\'') || '';
         var otherCont = $('#contact-other').val() || '';
 
         var tJSON = '{"doc_no": "' + thisName + '",' +
@@ -339,6 +339,7 @@ $(document).ready(function () {
 
         // 确认咨询内容是否必填
         function fnConsult() {
+            if (document.querySelector('#contact-query') === null) return;
             var Consulting = $('#contact-query').val().replace(/"/g, '\'');
             var requiredConsu = $('#contact-query').hasClass('requiredConsu');
             if (Consulting == '' && requiredConsu == true) {
