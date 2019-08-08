@@ -1,0 +1,22 @@
+body {
+    min-width: 360px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex-grow: 1;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: $content-width;
+    @media (min-width: $content-width) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,30 @@
+@import '../common';
+@import 'components';
+
+nav {
+    @include stickyNav(5, 60px, 20px, #42bef9, #2f368e);
+    a {
+        @media (min-width: $tablet-width + 1) {
+            font-size: 22px;
+        }
+        @at-root {
+            html.no-mobile .nav a:hover {
+                background-color: #2f368e;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// demo
+header {
+    height: 300px;
+    background-color: #333;
+}
+article {
+    height: 100vh;
+    font-size: 30px;
+    &:nth-of-type(even) {
+        background-color: #ccc;
+    }
+}
