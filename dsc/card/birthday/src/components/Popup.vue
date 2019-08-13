@@ -1,7 +1,9 @@
 <template>
     <div id="popup" class="popup" :class="`popup${id+1}`">
         <slot></slot>
-        <button class="popup_close"></button>
+        <button class="popup_close">
+            <i class="material-icons">close</i>
+        </button>
     </div>
 </template>
 
@@ -51,17 +53,21 @@ export default {
         top: -16px;
         right: -16px;
         z-index: 1;
+        display: flex;
         width: 42px;
         height: 42px;
-        border: none;
-        background-color: transparent;
-        background-image: url("~@/assets/images/popup-close.png");
-        background-position: 50%;
-        background-size: contain;
-        background-repeat: no-repeat;
+        border: 3px solid rgba(#fdecd1, .9);
+        border-radius: 50%;
+        background-color: rgba(#363330, .9);
+        color: rgba(#fdecd1, .9);
         cursor: pointer;
+        justify-content: center;
+        align-items: center;
         &:focus {
             outline: none;
+        }
+        i {
+            font-weight: bold;
         }
     }
 }

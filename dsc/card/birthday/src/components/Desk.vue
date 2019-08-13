@@ -102,6 +102,7 @@ export default {
 }
 [class^='imghvr-'],
 [class^='imghvr-'] figcaption {
+    padding: 0;
     background-color: transparent;
 }
 img,

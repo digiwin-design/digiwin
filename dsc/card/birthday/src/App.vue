@@ -35,6 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/sass/reset.scss';
 @import '@/assets/sass/common.scss';
 .wrapper {
     display: flex;
