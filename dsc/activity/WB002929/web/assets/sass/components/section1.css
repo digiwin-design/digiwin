@@ -1,0 +1,58 @@
+/* #region function */
+/* #endregion function */
+/* #region mixin */
+/* #endregion mixin */
+/* #region extend */
+/* #endregion extend */
+.section {
+  padding-top: 35px;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 768px) {
+    .section {
+      padding-top: 50px;
+      min-height: 714px; } }
+  .section::before, .section::after {
+    position: absolute;
+    bottom: 0;
+    width: 960px;
+    height: 124px;
+    background-size: cover;
+    content: ''; }
+  .section::before {
+    right: 50%; }
+  .section::after {
+    left: 50%; }
+
+img {
+  display: block; }
+
+h1, .signup {
+  position: absolute;
+  left: 50%; }
+
+h1 {
+  top: calc((216 / 900) * 100%);
+  max-width: 627px;
+  width: calc(100% - 40px);
+  transform: translateX(-50%); }
+  @media (max-width: 768px) {
+    h1 {
+      max-width: 443px; } }
+
+.signup {
+  display: block;
+  height: 52px;
+  border-radius: 0;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  line-height: 52px;
+  width: 290px;
+  top: calc((686 / 900) * 100%);
+  box-sizing: content-box;
+  border: 4px solid #fff;
+  letter-spacing: 0.1em;
+  font-size: 2.5rem;
+  transform: translateX(-50%); }

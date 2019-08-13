@@ -1,0 +1,43 @@
+/* #region function */
+/* #endregion function */
+/* #region mixin */
+/* #endregion mixin */
+/* #region extend */
+/* #endregion extend */
+.section {
+  padding-bottom: 100px; }
+
+.container {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+h1,
+h2 {
+  color: #05225c; }
+
+.subtitle {
+  top: calc((190 / 900) * 100%);
+  font-size: 28px;
+  line-height: 1.3; }
+  @media (max-width: 720px) {
+    .subtitle br {
+      display: none; } }
+
+.form {
+  position: absolute;
+  top: calc((200 / 900) * 100%);
+  left: 50%;
+  max-width: 640px;
+  width: 100%;
+  transform: translateX(-50%); }
+  @media (max-width: 768px) {
+    .form {
+      position: relative; } }
+
+iframe {
+  width: 100%;
+  height: 380px; }
+  @media (max-width: 768px) {
+    iframe {
+      height: 550px; } }
