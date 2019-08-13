@@ -15,6 +15,8 @@ import './assets/js/mobile-detect';
 import './assets/js/mobile-detect-modernizr';
 import Desk from './components/Desk.vue';
 
+let images = [];
+
 export default {
     name: 'app',
     components: {
@@ -22,6 +24,12 @@ export default {
     },
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
+
+        // preload image                
+        for (let i = 1; i <= 6; i++) {
+            images[i] = new Image();
+            images[i].src = 'images/popup-card'+ i + '.png';
+        }
     },
 }
 </script>

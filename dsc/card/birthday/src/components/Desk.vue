@@ -20,7 +20,7 @@
                     <div class="popup-cols" v-if="popupContents">
                         <div class="popup-col">
                             <img
-                                :src="require(`@/assets/images/popup-card${popupContent.id}.png`)"
+                                :src="`images/popup-card${popupContent.id}.png`"
                                 alt
                             />
                         </div>
