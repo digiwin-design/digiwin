@@ -4,9 +4,21 @@ html(lang='zh-Hant-TW')
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         meta(http-equiv='X-UA-Compatible', content='ie=edge')
-        link(rel='stylesheet', href='css/reset.css')
-        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-        script(src='https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js', defer)
+        
+        //- 全站共用
+        link(rel='stylesheet', href='/tw/static/css/public.css')
+        link(rel='stylesheet', href='/tw/static/css/style.css')
+        script(src='/tw/static/js/jquery-1.11.3.min.js')
+
+        //- 全站共用(自定義)
+        script(src='https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&flags=gated')
+        script(src='/tw/dsc/assets/modernizr-custom.js')
+        script(src='/tw/dsc/assets/mobile-detect.js')
+        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer)
+        script(src="/tw/dsc/assets/smoothscroll.js", defer)
+        script(src="/tw/dsc/assets/axios.min.js")
+        script(src="/tw/dsc/assets/vuejs/vue-all-dev.js")
+        script(src='/tw/dsc/js/common.min.js')
     body
         header
 
@@ -16,6 +28,10 @@ html(lang='zh-Hant-TW')
         script(src='/tw/dsc/js/Eform/form.js', defer)
         link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
         script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
+
+        //- day.js
+        script(src="https://unpkg.com/dayjs", defer)
+        script(src="https://unpkg.com/dayjs/plugin/isBetween", defer)
 
         block includes
         
