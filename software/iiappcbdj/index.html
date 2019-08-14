@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/tw/static/css/public.css">
+    <link rel="stylesheet" href="/tw/static/css/style.css">
+    <script src="/tw/static/js/jquery-1.11.3.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&amp;flags=gated"></script>
+    <script src="/tw/dsc/assets/modernizr-custom.js"></script>
+    <script src="/tw/dsc/assets/mobile-detect.js"></script>
+    <script src="/tw/dsc/assets/mobile-detect-modernizr.js" defer></script>
+    <script src="/tw/dsc/assets/smoothscroll.js" defer></script>
+    <script src="/tw/dsc/assets/axios.min.js"></script>
+    <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
+    <script src="/tw/dsc/js/common.min.js"></script>
+  </head>
+  <body>
+    <!-- 後台上稿內容開始-->
+    <link rel="stylesheet" href="/tw/dsc/css/Eform/xcConfirm.css">
+    <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
+    <link rel="stylesheet" href="assets/swiper.min.css">
+    <script src="assets/swiper.min.js" defer></script>
+    <script src="assets/vue-awesome-swiper.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/color-converter.js" defer></script>
+    <script src="assets/lodash.min.js" defer></script>
+    <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
+    <script src="js/all.min.js" defer></script>
+    <link rel="preload" href="images/header-bg.jpg" as="image">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="assets/lazysizes.min.js" defer></script>
+    <script src="js/index.min.js" defer></script>
+    <main v-cloak v-if="result"><main-header>
+    <template slot="content">
+        <p class="header-tag">工业APP</p>
+        <hgroup>
+            <h1>设备点检</h1>
+            <h2>赋能企业精实制造</h2>
+        </hgroup>
+        <p class="header-text">
+            有效提高设备点检针对性与精准性，<br>
+            赋能企业设备精细化管理，<br>
+            提高生产过程品质管控能力。
+        </p>
+    </template>
+</main-header>
+
+<article class="section1">
+    <div class="container">
+        <section-title title="设备点检APP 提高赢单胜率 成为优秀供应商"></section-title>
+        <div class="section1-content">
+            <div class="col">
+                <ul>
+                    <li>满足客户对供应商具备质量保证体系要求，针对设备关键指标，需要具备长期监控与趋势分析。</li>
+                    <li>流线型产线，异常停线会引起较大损失，日常持续设备点检可减少设备异常发生机率，提升产线稳定性。</li>
+                    <li>生产过程设备关键参数需要及时监控以确保生产顺利进行与产品质量稳定。</li>
+                </ul>
+            </div>
+            <div class="col">
+                <img src="images/section1-illust.png" alt="">
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="section2">
+    <div class="container">
+        <section-title title="设备管理困扰始终影响生产效率"></section-title>
+        <div class="section2-boxs">
+            <div class="col">
+                <h2>异常频发<br>影响良率</h2>
+                <hover-box color="#0173b6">
+                    <template slot="content">
+                        <p class="hoverBox-title">操作员</p>
+                    </template>
+                    <template slot="hover">
+                        <p>设备状况掌握度低，影响生产过程中质量</p>
+                    </template>
+                </hover-box>
+            </div>
+            <div class="col">
+                <h2>点检执<br>行不佳</h2>
+                <hover-box color="#0889d4">
+                    <template slot="content">
+                        <p class="hoverBox-title">点检员</p>
+                    </template>
+                    <template slot="hover">
+                        <p>缺少严谨的点检机制，流于表单形式</p>
+                    </template>
+                </hover-box>
+            </div>
+            <div class="col">
+                <h2>维修保<br>养盲目</h2>
+                <hover-box color="#65bdf0">
+                    <template slot="content">
+                        <p class="hoverBox-title">技术员</p>
+                    </template>
+                    <template slot="hover">
+                        <p>保养维修无针对性，不清处真正问题</p>
+                    </template>
+                </hover-box>
+            </div>
+            <div class="col">
+                <h2>修复期长<br>稼动不佳</h2>
+                <hover-box color="#06c7d5">
+                    <template slot="content">
+                        <p class="hoverBox-title">生产主管</p>
+                    </template>
+                    <template slot="hover">
+                        <p>无法做到提前预警与预防，稼动率不佳</p>
+                    </template>
+                </hover-box>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="section3">
+    <div class="container">
+        <div class="section3-content">
+            <section-title title="设备点检ＡＰＰ 控管运维成本"></section-title>
+            <section3-items :items="result.section3"></section3-items>
+        </div>
+        <img data-src="images/section3-illust.jpg" class="section3-bg lazyload" alt="">
+    </div>
+</article>
+
+<article class="section4 showcase">
+    <div class="container">
+        <div class="showcase-content">
+            <section-title
+                title="减少生产与人力浪费"
+                desc="透过远程集中监控与预警，以及设备参数异常监控，可立即处理设备异常问宜和减少因事后检查所造成的损失。"
+            ></section-title>
+            <img data-src="images/section4-illust.png" class="lazyload" alt="">
+        </div>
+        <carousel v-bind:slides="result.slides.section4"></carousel>
+    </div>
+</article>
+
+<article class="section5 showcase">
+    <div class="container">
+        <div class="showcase-content">
+            <section-title
+                title="精准保养、快速定位异常"
+                desc="透过设备运行履历，人员可精准进行维修与保养，以及快速判断设备问题，由设备点检与监控履历查询，可掌握人员点检状况，找到关键问题分析与排除。"
+            ></section-title>
+            <img data-src="images/section5-illust.png" class="lazyload" alt="">
+        </div>
+        <carousel v-bind:slides="result.slides.section5"></carousel>
+    </div>
+</article>
+
+<article class="section6 showcase">
+    <div class="container">
+        <div class="showcase-content">
+            <section-title
+                title="快速叫修，减少沟通等待"
+                desc="透过设置设备参数运行履历，当发生设备异常自动呼叫人员进行维修，减少人员往返确认与沟通时间，降低维修成本与浪费。"
+            ></section-title>
+            <img data-src="images/section6-illust.png" class="lazyload" alt="">
+        </div>
+        <carousel v-bind:slides="result.slides.section6"></carousel>
+    </div>
+</article>
+
+<article class="section7 showcase">
+    <div class="container">
+        <div class="showcase-content">
+            <section-title
+                title="降低点检门槛，确保精准执行"
+                desc="依照设备型号规划设备点检方案，给予人员向导式指引点检任务，提高人员工作效率，并且强化控管与绩效管理。"
+            ></section-title>
+            <img data-src="images/section7-illust.png" class="lazyload" alt="">
+        </div>
+        <carousel v-bind:slides="result.slides.section7"></carousel>
+    </div>
+</article>
+
+<contact v-bind:multiple="false" source="WB00298701"></contact>
+    </main>
+    <!-- 後台上稿內容結束-->
+  </body>
+</html>

@@ -1,0 +1,73 @@
+{
+    "slides": {
+        "section4": [
+            {
+                "imgSrc": "section4-slide1.jpg",
+                "captions": ["特定设备整体参数监控", "特定参数全厂设备监控"]
+            }
+        ],
+        "section5": [
+            {
+                "imgSrc": "section5-slide1.jpg",
+                "captions": ["设备点检与监控履历查阅"]
+            },
+            {
+                "imgSrc": "section5-slide2.jpg",
+                "captions": ["相关参数图表分析"]
+            }
+        ],
+        "section6": [
+            {
+                "imgSrc": "section6-slide1.jpg",
+                "captions": ["为自动叫修提供设备生产履历"]
+            },
+            {
+                "imgSrc": "section6-slide2.jpg",
+                "captions": ["为自动叫修提供设备生产履历"]
+            }
+        ],
+        "section7": [
+            {
+                "imgSrc": "section7-slide1.jpg"
+            },
+            {
+                "imgSrc": "section7-slide2.jpg"
+            },
+            {
+                "imgSrc": "section7-slide3.jpg"
+            },
+            {
+                "imgSrc": "section7-slide4.jpg"
+            },
+            {
+                "imgSrc": "section7-slide5.jpg"
+            }
+        ]
+    },
+    "section3": [
+        {
+            "text1": "设备改造/新问题点检跟进",
+            "text2": "掌握设备实际状况"
+        },
+        {
+            "text1": "根据不同设备类型、型号、厂商，规划设备点检方案",
+            "text2": "设备点检精准执行"
+        },
+        {
+            "text1": "按设备参数运行履历进行精准点检",
+            "text2": "完整设备运行履历"
+        },
+        {
+            "text1": "关键点与异常关系识别；关键点记录与趋势分析",
+            "text2": "点检状况预警分析"
+        },
+        {
+            "text1": "按规范精准点检；点检工具适用性与精准度",
+            "text2": "设备点检针对性"
+        },
+        {
+            "text1": "点检结果可视化，抽查机制建立",
+            "text2": "设备点检管理考核"
+        }
+    ]
+}
