@@ -9,9 +9,9 @@ module.exports = {
                 $: 'jquery',
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery',
-              })
+            })
         ]
-      },
-
-    publicPath: '/tw/dsc/card/birthday/'
+    },
+    publicPath: '/tw/dsc/card/birthday/',
+    productionSourceMap: false
 }
