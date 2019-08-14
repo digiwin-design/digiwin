@@ -2,5 +2,25 @@
 new Swiper('.swiper-container',{loop:!0,autoplay:{disableOnInteraction:!1,delay:5e3},pagination:{el:'.case-pagination',clickable:!0,bulletClass:'case-pagination-bullet',bulletActiveClass:'case-pagination-bullet-active'}}),$('.solFigure01, .solFigure02').fancybox({openEffect:'fade',closeEffect:'fade',helpers:{overlay:{locked:!1}}});// =============================================================================
 // vue
 // =============================================================================
-var store=new Vuex.Store({state:{isMobile:!1,showMask:!0,showAd:!0},mutations:{updateDevice:function c(a,b){a.isMobile=b},toggleMask:function c(a,b){a.showMask=b},toggleAd:function c(a,b){a.showAd=b}}});new Vue({el:'#ad',components:{ad:httpVueLoader('components/Ad.vue'),"menu-mask":httpVueLoader('components/MenuMask.vue')},methods:{mediaSensor:function b(){var a=window.matchMedia('(min-width: 769px)');a.addListener(this.resizeWidth),this.resizeWidth(a)},resizeWidth:function c(a){var b=!a.matches;store.commit('updateDevice',b)}},mounted:function a(){this.mediaSensor()}});
+var store=new Vuex.Store({state:{isMobile:!1,showMask:!0,showAd:!0},mutations:{updateDevice:function c(a,b){a.isMobile=b},toggleMask:function c(a,b){a.showMask=b},toggleAd:function c(a,b){a.showAd=b}}});// new Vue({
+//     el: '#ad',
+//     components: {
+//         'ad': httpVueLoader('components/Ad.vue'),
+//         'menu-mask': httpVueLoader('components/MenuMask.vue'),
+//     },
+//     methods: {
+//         mediaSensor() {
+//             let mm = window.matchMedia('(min-width: 769px)');
+//             mm.addListener(this.resizeWidth);
+//             this.resizeWidth(mm);
+//         }, 
+//         resizeWidth(pMatchMedia) {
+//             let isMobile = pMatchMedia.matches ? false : true;
+//             store.commit('updateDevice', isMobile);
+//         },
+//     },
+//     mounted() {
+//         this.mediaSensor();
+//     },
+// });
 //# sourceMappingURL=smartFactory.js.map
