@@ -1,11 +1,14 @@
 <template>
     <div class="wrapper">
+        <Header></Header>
+        <MenuMask></MenuMask>
         <div class="main">
             <div class="container">
                 <h1>請憑直覺抽出一張卡，看您的生日幸運星降落在何處！</h1>
                 <Desk></Desk>
             </div>
         </div>
+        <Footer></Footer>
     </div>
 </template>
 
@@ -13,6 +16,9 @@
 import './assets/js/modernizr-custom';
 import './assets/js/mobile-detect';
 import './assets/js/mobile-detect-modernizr';
+import Header from './components/Header.vue';
+import MenuMask from './components/MenuMask.vue';
+import Footer from './components/Footer.vue';
 import Desk from './components/Desk.vue';
 
 let images = [];
@@ -20,6 +26,9 @@ let images = [];
 export default {
     name: 'app',
     components: {
+        Header,
+        MenuMask,
+        Footer,
         Desk,
     },
     mounted() {
@@ -48,6 +57,7 @@ export default {
     min-width: 320px;
     letter-spacing: getLetterSpacing(25);
     flex-grow: 1;
+    background: url('~@/assets/images/bg.jpg') no-repeat 50%/cover;
 }
 .container {
     margin: auto;

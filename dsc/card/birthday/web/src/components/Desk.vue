@@ -85,15 +85,16 @@ export default {
     margin: auto;
 }
 .cards {
+    $card-width: 256px;
     display: flex;
     margin: 0 auto;
-    max-width: 269px * 3;
+    max-width: $card-width * 3;
     flex-wrap: wrap;
     @media (max-width: 960px) {
-        max-width: 269px * 2;
+        max-width: $card-width * 2;
     }
     @media (max-width: 640px) {
-        max-width: 269px;
+        max-width: $card-width;
     }
 }
 .card {

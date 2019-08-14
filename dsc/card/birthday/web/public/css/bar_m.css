@@ -82,7 +82,7 @@
 }
 /*-------------------------------*/
 #dgwFooter {
-    padding-top: 13px;
+    padding-top: 17px;
     padding-bottom: 17px;
     width: 100%;
     border-top: 1px solid #fff;
@@ -118,7 +118,7 @@
 }
 
 #dgwFooter .link02 {
-    margin: 14px 0 8px 0;
+    margin-bottom: 8px;
     text-align: center;
 }
 
