@@ -62,7 +62,6 @@ export default {
 .container {
     margin: auto;
     padding: 36px 15px 15px;
-    transform: translateX(6px);
 }
 h1 {
     margin-bottom: .5em;
