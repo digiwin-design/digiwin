@@ -12,6 +12,6 @@ module.exports = {
             })
         ]
     },
-    publicPath: '/tw/dsc/card/birthday/',
+    publicPath: '/tw/dsc/card/birthday/web/',
     productionSourceMap: false
 }
