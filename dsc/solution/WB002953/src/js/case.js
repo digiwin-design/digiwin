@@ -1,5 +1,5 @@
 httpVueLoader.register(Vue, 'components/case/HoverBox.vue');
-httpVueLoader.register(Vue, 'components/case/Contact.vue');
+httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/case/VideoSection.vue');
 httpVueLoader.register(Vue, 'components/case/Popup.vue');
 httpVueLoader.register(Vue, 'components/case/Accordion.vue');

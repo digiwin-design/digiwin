@@ -219,6 +219,26 @@
         color: $color;
     }
 }
+
+@mixin quoteBlock($img) {
+    position: relative;
+    padding: image-height($img) + 5px image-width($img) + 5px;
+    &::before,
+    &::after {
+        @include imgBg($img, true);
+        position: absolute;
+        content: '';
+    }
+    &::before {
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        right: 0;
+        bottom: 0;
+        transform: rotate(180deg);
+    }
+}
 /* #endregion mixin */
 
 /* #region extend */

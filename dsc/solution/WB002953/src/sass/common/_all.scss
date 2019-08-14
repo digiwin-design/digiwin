@@ -22,7 +22,7 @@ main {
         padding-top: 50px;
         text-align: center;
         font-size: 26px;
-        @media (min-width: $tablet-width+1) {
+        @media (min-width: $tablet-width + 1) {
             font-size: 36px;
         }
     }

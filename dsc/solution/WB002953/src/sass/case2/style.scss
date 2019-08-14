@@ -1,0 +1,70 @@
+@import '../common';
+@import 'components';
+
+main {
+    line-height: 1;
+    .sectionTitle {
+        line-height: 36px;
+        @media (min-width: $tablet-width + 1) {
+            line-height: 48px;
+        }
+    }
+    .header {
+        @include headerBg('case2/header-bg.jpg', 'case2/header-bg-s.jpg', 0 0);
+        @media (min-width: $tablet-width+1) {
+            background-position: 50% 0;
+        }
+        h1 {
+            color: #c38508;
+            line-height: 1.2;
+        }
+        h2 {
+            margin-bottom: .3em;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 40px;
+                line-height: 50px;
+                br:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+        p {
+            display: flex;
+            width: 200px;
+            font-size: 17px;
+            line-height: 25px;
+            flex-wrap: wrap;
+            @media (min-width: $tablet-width + 1) {
+                width: 450px;
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+    }
+    .section1 {
+        &-quote {
+            @include quoteBlock('case2/quote.png');
+            h1 {
+                letter-spacing: getLetterSpacing(75);
+                font-weight: bold;
+                font-size: 27px;
+            }
+            h2 {
+                margin: 1em 0;
+                color: #0b4fa4;
+                letter-spacing: getLetterSpacing(75);
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 22px;
+            }
+            p {
+                color: #555;
+                letter-spacing: getLetterSpacing(-10);
+                line-height: 24px;
+            }
+        }
+    }
+}
