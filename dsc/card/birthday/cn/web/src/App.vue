@@ -4,7 +4,7 @@
         <MenuMask></MenuMask>
         <div class="main">
             <div class="container">
-                <h1>請憑直覺抽出一張卡，看您的生日幸運星降落在何處！</h1>
+                <h1>请凭直觉抽出一张卡，看您的生日幸运星降落在何处！</h1>
                 <Desk></Desk>
             </div>
         </div>
