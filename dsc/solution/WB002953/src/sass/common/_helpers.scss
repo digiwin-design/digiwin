@@ -220,9 +220,9 @@
     }
 }
 
-@mixin quoteBlock($img) {
+@mixin quoteBlock($img, $offset: 0) {
     position: relative;
-    padding: image-height($img) + 5px image-width($img) + 5px;
+    padding: image-height($img) + $offset image-width($img) + $offset;
     &::before,
     &::after {
         @include imgBg($img, true);

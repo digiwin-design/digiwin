@@ -1313,6 +1313,10 @@
                     {
                         "text": "力肯實業",
                         "url": "case"
+                    },
+                    {
+                        "text": "安得烈",
+                        "url": "case2"
                     }
                 ]
             },
@@ -1341,10 +1345,6 @@
             {
                 "url": "#header",
                 "index": 4
-            },
-            {
-                "url": "#contact",
-                "index": 5
             }
         ]
     },

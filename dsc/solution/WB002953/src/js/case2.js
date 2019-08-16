@@ -1,8 +1,10 @@
 httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
-// httpVueLoader.register(Vue, 'components/case2/hover-box.vue');
-// Vue.use(VueAwesomeSwiper);
+httpVueLoader.register(Vue, 'components/case2/hover-box.vue');
+httpVueLoader.register(Vue, 'components/case2/slider.vue');
+httpVueLoader.register(Vue, 'components/case2/section5-svg.vue');
+httpVueLoader.register(Vue, 'components/case2/section6-svg.vue');
 
 const store = new Vuex.Store({
     state: {
