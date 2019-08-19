@@ -1,6 +1,9 @@
 $(function () {
+    let isDev = location.pathname.includes('debug.html');
+    
     document.querySelector('#home-industry-content').insertAdjacentHTML('afterbegin', '<div id="home-industry-app"></div>');
     document.querySelector('#phone-industry-content').insertAdjacentHTML('afterbegin', '<div id="phone-industry-app"></div>');
+    
     fetch('/tw/dsc/assets/index-industry/index-industry.json')
         .then(res => res.json())
         .then(all => {
@@ -19,14 +22,15 @@ $(function () {
                 },
                 methods: {
                     setClass(index) {
-                        return index >= this.limit ? { 'home-hiddle': true } : {};
+                        return isDev ? {} : index >= this.limit ? { 'home-hiddle': true } : {};
                     },
                     setStyle(index) {
-                        return index >= this.limit ? { display: 'none' } : {};
+                        return isDev ? {} : index >= this.limit ? { display: 'none' } : {};
                     },
                     setActive(index, itemIdx) {
                         return index === 0 && itemIdx === 0;
                     },
+                    // 列數改變時須改寫此處
                     initComponents() {
                         $('#tab01 li').hover(function () {
                             $('#tabbg01 .content')
@@ -97,6 +101,25 @@ $(function () {
                             $('#tab02 li').removeClass('active');
                             $('#tab03 li').removeClass('active');
                         });
+                        $('#tab05 li').hover(function () {
+                            $('#tabbg05 .content')
+                                .eq($(this).index())
+                                .show()
+                                .siblings()
+                                .hide();
+                            $(this)
+                                .addClass('active')
+                                .siblings()
+                                .removeClass('active');
+                            $('#tabbg01 .content').hide();
+                            $('#tabbg02 .content').hide();
+                            $('#tabbg03 .content').hide();
+                            $('#tabbg04 .content').hide();
+                            $('#tab01 li').removeClass('active');
+                            $('#tab02 li').removeClass('active');
+                            $('#tab03 li').removeClass('active');
+                            $('#tab04 li').removeClass('active');
+                        });
                     }
                 },
                 template: `
@@ -140,6 +163,7 @@ $(function () {
                     </div>
                 `
             });
+
             new Vue({
                 el: '#phone-industry-app',
                 data: {
@@ -155,10 +179,10 @@ $(function () {
                 },
                 methods: {
                     setClass(index) {
-                        return index >= this.limit ? { 'phone-hiddle': true } : {};
+                        return isDev ? {} : index >= this.limit ? { 'phone-hiddle': true } : {};
                     },
                     setStyle(index) {
-                        return index >= this.limit ? { display: 'none' } : {};
+                        return isDev ? {} : index >= this.limit ? { display: 'none' } : {};
                     },
                     initComponents() {
                         $('.phone-industry li .title').click(function () {
