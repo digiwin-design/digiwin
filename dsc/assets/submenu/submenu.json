@@ -1421,5 +1421,23 @@
                 "index": 4
             }
         ]
+    },
+    {
+        "id": "semiconductor",
+        "title": "半導體產業",
+        "menus": [
+            {
+                "text": "半導體產業首頁",
+                "url": "semiconductor"
+            },
+            {
+                "text": "外延與芯片製造",
+                "url": "semiconductorMF"
+            },
+            {
+                "text": "封裝與測試",
+                "url": "semiconductorBT"
+            }
+        ]
     }
 ]

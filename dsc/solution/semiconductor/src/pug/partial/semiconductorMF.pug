@@ -1,0 +1,9 @@
+extends ../layout.pug
+
+block includes
+    link(rel="preload", href="images/semiconductorMF/header-bg.jpg", as="image")
+    link(rel='stylesheet', href='css/semiconductorMF/style.css')
+    script(src='js/semiconductorMF.min.js', defer)
+
+block content
+    include semiconductorMF.html
