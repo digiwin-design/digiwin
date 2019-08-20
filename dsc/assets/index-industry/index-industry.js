@@ -45,10 +45,11 @@ $(function () {
                             $('#tabbg02 .content').hide();
                             $('#tabbg03 .content').hide();
                             $('#tabbg04 .content').hide();
-
+                            $('#tabbg05 .content').hide();
                             $('#tab02 li').removeClass('active');
                             $('#tab03 li').removeClass('active');
                             $('#tab04 li').removeClass('active');
+                            $('#tab05 li').removeClass('active');
                         });
                         $('#tab02 li').hover(function () {
                             $('#tabbg02 .content')
@@ -63,9 +64,11 @@ $(function () {
                             $('#tabbg01 .content').hide();
                             $('#tabbg03 .content').hide();
                             $('#tabbg04 .content').hide();
+                            $('#tabbg05 .content').hide();
                             $('#tab01 li').removeClass('active');
                             $('#tab03 li').removeClass('active');
                             $('#tab04 li').removeClass('active');
+                            $('#tab05 li').removeClass('active');
                         });
                         $('#tab03 li').hover(function () {
                             $('#tabbg03 .content')
@@ -80,9 +83,11 @@ $(function () {
                             $('#tabbg01 .content').hide();
                             $('#tabbg02 .content').hide();
                             $('#tabbg04 .content').hide();
+                            $('#tabbg05 .content').hide();
                             $('#tab01 li').removeClass('active');
                             $('#tab02 li').removeClass('active');
                             $('#tab04 li').removeClass('active');
+                            $('#tab05 li').removeClass('active');
                         });
                         $('#tab04 li').hover(function () {
                             $('#tabbg04 .content')
@@ -97,9 +102,11 @@ $(function () {
                             $('#tabbg01 .content').hide();
                             $('#tabbg02 .content').hide();
                             $('#tabbg03 .content').hide();
+                            $('#tabbg05 .content').hide();
                             $('#tab01 li').removeClass('active');
                             $('#tab02 li').removeClass('active');
                             $('#tab03 li').removeClass('active');
+                            $('#tab05 li').removeClass('active');
                         });
                         $('#tab05 li').hover(function () {
                             $('#tabbg05 .content')
