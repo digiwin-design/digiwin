@@ -21,12 +21,13 @@ const store = new Vuex.Store({
         getData(context) {
             axios.get('db.json').then(res => {
                 context.commit('setData', res.data);
+                app.init();
             });
         },
     }
 });
 
-new Vue({
+let app = new Vue({
     el: 'main',
     computed: {
         isMobile() {
@@ -46,6 +47,25 @@ new Vue({
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);
         },
+        init() {
+            (function () {
+                $('#scheme ul li').hover(function () {
+                    $(this).find('.fadein').stop().animate({ 'top': '0' });
+                    $(this).find('.fadeout');
+                }, function () {
+                    $(this).find('.fadein').stop().animate({ 'top': '130%' });
+                    $(this).find('.fadeout');
+                });
+            })();
+
+            (function () {
+                $('.LIom').on('click', function () {
+                    $(this).addClass('current').next('.LIdo').slideToggle(300)
+                        .siblings('.LIdo').slideUp();
+                    $(this).siblings().removeClass('current');
+                });
+            })();
+        }
     },
     created() {
         store.dispatch('getData');
