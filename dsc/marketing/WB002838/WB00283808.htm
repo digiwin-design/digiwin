@@ -17,6 +17,8 @@
     <script src="/tw/dsc/js/Eform/form.js" defer></script>
     <script src="/tw/dsc/js/contact.js" defer></script>
     <script src="/tw/dsc/assets/vuejs/vue-all.js"></script>
+    <script src="https://unpkg.com/dayjs" defer></script>
+    <script src="https://unpkg.com/dayjs/plugin/isBetween" defer></script>
     <!-- Google Tag Manager-->
     <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -413,7 +415,11 @@
     </div>
 </div>
 
-    <div id="toolbar"></div><!-- loading -->
+    <div id="toolbar"></div>
+    <div id="ad">
+      <ad></ad>
+      <menu-mask></menu-mask>
+    </div><!-- loading -->
 <div id="loading">
 <p><i></i>資料提交中，請稍後</p>
 </div>
