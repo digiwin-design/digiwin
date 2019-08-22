@@ -6,7 +6,7 @@ html.no-mobile {
         &:hover {
             color: #3798e4;
         }
-        @for $var from 1 through 30 {
+        @for $var from 1 through 50 {
             @if $var < 10 {
                 &.item0#{$var}:hover::before {
                     background-image: url('/tw/dsc/images/index/home-icon0#{$var}h.png');
@@ -76,7 +76,7 @@ html.no-mobile {
             background-repeat: no-repeat;
             content: '';
         }
-        @for $var from 1 through 21 {
+        @for $var from 1 through 50 {
             @if $var < 10 {
                 &.item0#{$var}::before {
                     background-image: url('/tw/dsc/images/index/home-icon0#{$var}.png');
