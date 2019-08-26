@@ -18,7 +18,7 @@
                     </ul>
                 </div>
                 <div id="formBlock" class="form">
-                    <a id="fromSource" href="javascript:;"></a>
+                    <a id="fromSource" href="javascript:;">{{$source}}</a>
                     <div id="contactInput" class="clearfix">
                         <span class="hideLabel ">*公司名稱：</span><input type="text" placeholder="*完整公司名稱" name="contact-company" id="contact-company" class="contact required"><span class="hideLabel perLabel">*姓名：</span><input type="text" placeholder="*姓名" name="contact_person" id="contact_person" class="contact required"><span class="hideLabel evenLable">*聯絡電話：</span><input type="text" placeholder="*聯絡電話" name="telephone" id="telephone" class="contact required end"><span class="hideLabel evenLable">*E-mail：</span>
                         <input type="text" placeholder="*E-mail" name="contact-email" id="contact-email" class="contact required"><span class="hideLabel">*部門：</span><input type="text" placeholder="*部門" name="contact-dept" id="contact-dept" class="contact required"><span class="hideLabel">*職稱：</span><input type="text" placeholder="*職稱" name="contact-job" id="contact-job" class="contact required end">
