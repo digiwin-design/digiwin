@@ -1,7 +1,7 @@
-httpVueLoader.register(Vue, 'components/719/main-content.vue');
-httpVueLoader.register(Vue, 'components/719/main-nav.vue');
-httpVueLoader.register(Vue, 'components/719/hover-box.vue');
-httpVueLoader.register(Vue, 'components/719/case.vue');
+httpVueLoader.register(Vue, '/tw/article/components/719/main-content.vue');
+httpVueLoader.register(Vue, '/tw/article/components/719/main-nav.vue');
+httpVueLoader.register(Vue, '/tw/article/components/719/hover-box.vue');
+httpVueLoader.register(Vue, '/tw/article/components/719/case.vue');
 Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({
@@ -19,7 +19,7 @@ const store = new Vuex.Store({
     },
     actions: {
         getData(context) {
-            axios.get('db.json').then(res => {
+            axios.get('/tw/article/db.json').then(res => {
                 context.commit('setData', res.data);
             });
         },

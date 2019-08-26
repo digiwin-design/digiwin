@@ -31,8 +31,8 @@ module.exports = {
 main .nav {
     display: flex;
     overflow-x: auto;
-    margin-top: 1em;
-    margin-bottom: 40px;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 50px;
     justify-content: flex-end;
 }
 main .nav-links {
@@ -45,12 +45,13 @@ main .nav a {
     color: #555;
     font-weight: bold;
     font-size: 15px;
-    line-height: 2;
+    line-height: 3;
     flex-shrink: 0;
 }
 @media (min-width: 769px) {
     main .nav a {
         font-size: 16px;
+        line-height: 2;
     }
 }
 html.no-mobile main .nav a:hover {

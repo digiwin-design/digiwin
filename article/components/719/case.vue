@@ -11,7 +11,7 @@
                 <div class="case-content js-case-content">
                     <div>
                         <div class="case-content-img">
-                            <img :src="'images/719/case/case'+(idx+1)+'.png'" alt />
+                            <img :src="'/tw/article/images/719/case/case'+(idx+1)+'.png'" alt />
                         </div>
                         <div class="case-content-text">
                             <template v-for="content in item.contents">

@@ -31,6 +31,7 @@ module.exports = {
 main .nav {
     display: flex;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin-bottom: 50px;
     justify-content: flex-end;
 }
@@ -44,23 +45,25 @@ main .nav a {
     color: #555;
     font-weight: bold;
     font-size: 15px;
-    line-height: 2;
+    line-height: 3;
     flex-shrink: 0;
 }
 @media (min-width: 769px) {
     main .nav a {
         font-size: 16px;
+        line-height: 2;
     }
 }
 html.no-mobile main .nav a:hover {
     border-bottom-color: #f85820;
 }
 main .nav a + a {
-    margin-left: 0.5em;
+    margin-left: .5em;
 }
 @media (min-width: 769px) {
     main .nav a + a {
         margin-left: 25px;
     }
 }
+
 </style>

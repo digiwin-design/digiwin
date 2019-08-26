@@ -1,5 +1,5 @@
-httpVueLoader.register(Vue, 'components/aboutdsc/main-content.vue');
-httpVueLoader.register(Vue, 'components/aboutdsc/main-nav.vue');
+httpVueLoader.register(Vue, '/tw/article/components/aboutdsc/main-content.vue');
+httpVueLoader.register(Vue, '/tw/article/components/aboutdsc/main-nav.vue');
 // httpVueLoader.register(Vue, 'components/aboutdsc/hover-box.vue');
 // Vue.use(VueAwesomeSwiper);
 
@@ -18,7 +18,7 @@ const store = new Vuex.Store({
     },
     actions: {
         getData(context) {
-            axios.get('db.json').then(res => {
+            axios.get('/tw/article/db.json').then(res => {
                 context.commit('setData', res.data);
             });
         },

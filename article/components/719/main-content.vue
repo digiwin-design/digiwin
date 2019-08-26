@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="images/719/HR Solution.jpg" alt="">
+        <img src="/tw/article/images/719/HR Solution.jpg" alt="">
         
         <main-nav></main-nav>
 
@@ -54,31 +54,31 @@
                 <!-- slides -->
                 <swiper-slide>
                     <figure>
-                        <img src="images/719/section3-slide1.png" />
+                        <img src="/tw/article/images/719/section3-slide1.png" />
                         <figcaption>鼎新HRM，提供企業多樣化功能服務</figcaption>
                     </figure>
                 </swiper-slide>
                 <swiper-slide>
                     <figure>
-                        <img src="images/719/section3-slide2.png" />
+                        <img src="/tw/article/images/719/section3-slide2.png" />
                         <figcaption>正確因應各項政策法規</figcaption>
                     </figure>
                 </swiper-slide>
                 <swiper-slide>
                     <figure>
-                        <img src="images/719/section3-slide3.png" />
+                        <img src="/tw/article/images/719/section3-slide3.png" />
                         <figcaption>基礎ＨＲＭ＋應用ＨＲＤ＋便利行動人資＋價值決策分析</figcaption>
                     </figure>
                 </swiper-slide>
                 <swiper-slide>
                     <figure>
-                        <img src="images/719/section3-slide4.png" />
+                        <img src="/tw/article/images/719/section3-slide4.png" />
                         <figcaption>加班管理處理流程</figcaption>
                     </figure>
                 </swiper-slide>
                 <swiper-slide>
                     <figure>
-                        <img src="images/719/section3-slide5.png" />
+                        <img src="/tw/article/images/719/section3-slide5.png" />
                         <figcaption>系統支援不同類型的招募流程</figcaption>
                     </figure>
                 </swiper-slide>
@@ -89,7 +89,7 @@
             </swiper>
 
             <a href="http://bit.ly/2SGafcq" class="section2-banner" target="_blank">
-                <img src="images/719/section2-illust.jpg" alt />
+                <img src="/tw/article/images/719/section2-illust.jpg" alt />
             </a>
         </article>
 
@@ -106,12 +106,12 @@
                 <br />經理員工自助表單可與工作流程管理系統(BPM)做流程整合，讓日常事務與流程管理緊密結合，操作更加便捷。
                 <br />系統也提供財務整合功能，讓薪資資料可直接拋轉至ERP中，減少人工作業造成的失誤。透過完整流程設計與細緻權限管理，增強跨系統資料拋轉的內稽內控，實現電子化稽核。
             </p>
-            <img src="images/719/section3-illust1.png" class="mb-2" alt />
+            <img src="/tw/article/images/719/section3-illust1.png" class="mb-2" alt />
             <h2>顧問輔導與服務體系</h2>
             <p
                 class="mb-2"
             >推行價值實施方法論，從『效益導向、議題引領、流程支撐、指標衡量』4個思維，拓展整個實施步驟，並貫穿5個階段『梳理管理議題、確定議題、上線指標、規劃並落地關鍵業務流程、衡量關鍵效益指標』，有效保障管理議題的執行。完善的客服中心、e-Service服務平台與數位學習平台，鼎新助力企業全面因應，做為人力資源部門提升價值的最佳戰略伙伴。</p>
-            <img src="images/719/section3-illust2.png" alt />
+            <img src="/tw/article/images/719/section3-illust2.png" alt />
         </article>
 
         <article id="section4" class="section4">
