@@ -1,3 +1,12 @@
+// 取得網址參數
+function getParameterByName(name) {
+    let url = new URL(location.href);
+    let params = url.searchParams;
+    for (let pair of params) {
+        if (pair[0] === name) return pair[1];
+    }
+}
+
 // 轉址
 (function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
@@ -220,4 +229,13 @@ $(function () {
     window.addEventListener('scroll', () => {
         document.querySelector('aside.rightbox') && document.querySelector('aside.rightbox').classList.remove('asideFixed', 'topscorll', 'asideBottom');
     });
+});
+
+// 將活動介紹頁網址中的 userId 加至"立即報名"連結上
+$(function () {
+    let userId = getParameterByName('userId');
+    let btn = document.querySelector('.list-cc .button a');
+    if (userId && btn) {
+        btn.href += `&userId=${userId}`;
+    }
 });
