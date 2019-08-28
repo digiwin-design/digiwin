@@ -25,9 +25,10 @@ main {
                 font-size: 45px;
             }
         }
-        p {
+        h3 {
             margin-bottom: 40px;
             color: #fff;
+            font-weight: normal;
             font-size: 20px;
             line-height: 1.4;
             @media (min-width: $tablet-width + 1) {

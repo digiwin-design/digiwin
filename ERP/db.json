@@ -125,7 +125,7 @@
             "hoverBoxs": [
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon1.png",
-                    "title": "財務管理",
+                    "title": "財務/會計 管理",
                     "hoverText": "有效管控成本及資金流動，建構良好的內稽內控，針對不同規模企業，從應收到帳款、應付帳號、成本計算、薪資處理，到會計總帳，結算財務帳、現金流量、預算成本控制、嚴謹的內稽內控、利潤中心模式運作，皆能提供適用的財務管理系統與規劃服務。",
                     "link": {
                         "url": "/tw/ERP/financial.html",
