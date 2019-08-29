@@ -234,8 +234,10 @@ $(function () {
 // 將活動介紹頁網址中的 userId 加至"立即報名"連結上
 $(function () {
     let userId = getParameterByName('userId');
-    let btn = document.querySelector('.list-cc .button a');
-    if (userId && btn) {
-        btn.href += `&userId=${userId}`;
+    let btn1 = document.querySelector('.list-cc .button a');
+    let btn2 = document.querySelector('.list-case-show .abutton a');
+    if (userId && btn1 && btn2) {
+        btn1.href += `&userId=${userId}`;
+        btn2.href += `&userId=${userId}`;
     }
 });
