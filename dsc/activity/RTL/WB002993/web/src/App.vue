@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div v-if="result && imgLoaded" class="wrapper">
+        <div v-if="isReady" class="wrapper">
             <Header></Header>
             <MenuMask></MenuMask>
 
@@ -12,18 +12,18 @@
                     <header>
                         <h1>
                             <picture>
-                                <source
-                                    srcset="images/header-bg-s.png"
-                                    media="(max-width:768px)"
-                                />
+                                <source srcset="images/header-bg-s.png" media="(max-width:768px)" />
                                 <img src="images/header-bg.png" alt="鼎新新零售發佈會-開啟新零售，實現全域營銷" />
                             </picture>
                         </h1>
+                        <a href @click.prevent="scrollToAnchor('#speaker')">
+                            <i class="material-icons">keyboard_arrow_down</i>
+                        </a>
                     </header>
 
                     <article id="speaker" class="speaker">
                         <div class="container">
-                            <SectionTitle title="∙ 講師陣容 ∙" paddingBottom="1em"></SectionTitle>
+                            <SectionTitle title="∙ 講師陣容 ∙"></SectionTitle>
                             <div class="speaker-casts">
                                 <Cast
                                     v-for="(cast,idx) in result.casts"
@@ -41,7 +41,10 @@
                                     <i class="material-icons">close</i>
                                 </span>
                                 <span>
-                                    跨界攜手推進<strong><i class="highlight">新零售</i></strong>
+                                    跨界攜手推進
+                                    <strong>
+                                        <i class="highlight">新零售</i>
+                                    </strong>
                                 </span>
                             </h2>
                             <div class="speaker-features">
@@ -52,8 +55,21 @@
                                 ></Feature>
                             </div>
                             <div class="speaker-detail">
-                                <p>新零售翻轉產業生態<br />面對<strong>消費者思考模式的改變</strong><br />跨平台、多通路、多支付、碎片數據？</p>
-                                <p>鼎新結合各領域產官學專家齊聚<br /><strong>串聯金流、物流、資訊流一體化</strong><br />實現<strong>全域營銷</strong>，打造更高效的<strong>新零售模式</strong><br />提升流通管理新價值！</p>
+                                <p>
+                                    新零售翻轉產業生態
+                                    <br />面對
+                                    <strong>消費者思考模式的改變</strong>
+                                    <br />跨平台、多通路、多支付、碎片數據？
+                                </p>
+                                <p>
+                                    鼎新結合各領域產官學專家齊聚
+                                    <br />
+                                    <strong>串聯金流、物流、資訊流一體化</strong>
+                                    <br />實現
+                                    <strong>全域營銷</strong>，打造更高效的
+                                    <strong>新零售模式</strong>
+                                    <br />提升流通管理新價值！
+                                </p>
                             </div>
                         </div>
                     </article>
@@ -123,7 +139,10 @@
                                 target="_blank"
                             >
                                 <picture>
-                                    <source srcset="@/assets/images/ad-s.jpg" media="(max-width:768px)" />
+                                    <source
+                                        srcset="@/assets/images/ad-s.jpg"
+                                        media="(max-width:768px)"
+                                    />
                                     <img src="@/assets/images/ad.jpg" alt />
                                 </picture>
                             </a>
@@ -198,8 +217,8 @@ export default {
     data() {
         return {
             currentPopup: 0,
-            imgLoaded: false,
             publicPath: process.env.BASE_URL,
+            isReady: false,
         }
     },
     computed: {
@@ -209,6 +228,14 @@ export default {
         result() {
             return this.$store.state.result;
         },
+    },
+    watch: {
+        result() {
+            this.preloadImg();
+        },
+        isReady() {
+            this.$nextTick(() => this.scrollToAnchor(location.hash, false));
+        }
     },
     methods: {
         mediaSensor() {
@@ -240,15 +267,27 @@ export default {
                 image.onload = () => {
                     loaded++;
                     if (loaded === images.length) {
-                        this.imgLoaded = true;
+                        this.isReady = true;
                     }
                 };
                 image.src = img;
             });
-        }
+        },
+        scrollToAnchor(targetId, behavior = 'smooth') {
+            if (targetId) {
+                let targetPos = document.querySelector(targetId).offsetTop;
+                let navHeight = document.querySelector('#mainNav') && document.querySelector('#mainNav').offsetHeight;
+                let finalPos = navHeight ? targetPos - navHeight : targetPos;
+                if (behavior) {
+                    window.scroll({ top: finalPos, left: 0, behavior });
+                }
+                else {
+                    window.scroll({ top: finalPos, left: 0 });
+                }
+            }
+        },
     },
     created() {
-        this.preloadImg();
         this.$store.dispatch('getData');
     },
     mounted() {
@@ -293,7 +332,8 @@ export default {
 }
 .main {
     min-width: 360px;
-    background-image: url('~@/assets/images/bg1.png'), url('~@/assets/images/bg2.jpg');
+    background-image: url('~@/assets/images/bg1.png'),
+    url('~@/assets/images/bg2.jpg');
     background-position: 50% 0;
     background-repeat: no-repeat, repeat-y;
     flex-grow: 1;
@@ -318,8 +358,31 @@ export default {
         padding-left: 10px;
     }
 }
-header h1 {
-    text-align: center;
+header {
+    position: relative;
+    display: flex;
+    height: calc(100vh - 35px);
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $tablet-width) {
+        height: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    a {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        color: #f05a28;
+        transform: translateX(-50%);
+        @media (max-width: $tablet-width) {
+            bottom: -50px;
+        }
+    }
+    .material-icons {
+        font-size: 6em;
+    }
 }
 .sectionTitle {
     display: flex;
@@ -336,12 +399,6 @@ header h1 {
     }
 }
 .speaker {
-    padding-bottom: 3.5em;
-    .sectionTitle {
-        @media (min-width: $tablet-width + 1) {
-            padding-top: 28px;
-        }
-    }
     &-casts {
         display: flex;
         flex-wrap: wrap;
@@ -355,7 +412,7 @@ header h1 {
         flex-direction: row;
         color: #004b60;
         font-weight: bold;
-        font-size: 38px;
+        font-size: 34px;
         align-items: center;
         justify-content: center;
         @media (max-width: $tablet-width) {

@@ -56,6 +56,12 @@ export default {
     img {
         width: 241px;
         height: 222px;
+        transition: transform .4s;
+    }
+    @at-root {
+        html.no-mobile .cast:hover img {
+            transform: scale(1.1);
+        }
     }
 }
 figcaption {

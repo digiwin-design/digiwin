@@ -25,7 +25,7 @@ export default {
 }
 .sectionTitle h1 {
     max-width: 100%;
-    font-size: 38px;
+    font-size: 34px;
     @media (max-width: $tablet-width) {
         font-size: 35px;
     }
