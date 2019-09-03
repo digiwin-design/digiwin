@@ -1,4 +1,3 @@
-httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/case/hover-box.vue');
 httpVueLoader.register(Vue, 'components/case/slider-banner.vue');
 httpVueLoader.register(Vue, 'components/case/slider-banner-s.vue');
@@ -8,28 +7,6 @@ httpVueLoader.register(Vue, 'components/case/svg/section1-1-svg.vue');
 httpVueLoader.register(Vue, 'components/case/svg/section1-2-svg.vue');
 httpVueLoader.register(Vue, 'components/case/svg/section2-svg.vue');
 httpVueLoader.register(Vue, 'components/case/svg/section4-svg.vue');
-
-const store = new Vuex.Store({
-    state: {
-        isMobile: false,
-        result: null,
-    },
-    mutations: {
-        updateDevice(state, payload) {
-            state.isMobile = payload;
-        },
-        setData(state, payload) {
-            state.result = payload;
-        },
-    },
-    actions: {
-        getData(context) {
-            axios.get('db.json').then(res => {
-                context.commit('setData', res.data);
-            });
-        },
-    }
-});
 
 new Vue({
     el: 'main',

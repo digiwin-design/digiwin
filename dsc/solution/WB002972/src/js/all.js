@@ -134,3 +134,40 @@ $(document).on('click', '.js-nav', function (event) {
         window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
     }, delay);
 });
+
+// =============================================================================
+// vue
+// =============================================================================
+httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/Ad.vue');
+httpVueLoader.register(Vue, 'components/MenuMask.vue');
+
+const store = new Vuex.Store({
+    state: {
+        isMobile: false,
+        result: null,
+        showMask: true,
+        showAd: true,
+    },
+    mutations: {
+        updateDevice(state, payload) {
+            state.isMobile = payload;
+        },
+        setData(state, payload) {
+            state.result = payload;
+        },
+        toggleMask(state, payload) {
+            state.showMask = payload;
+        },
+        toggleAd(state, payload) {
+            state.showAd = payload;
+        },
+    },
+    actions: {
+        getData(context) {
+            axios.get('db.json').then(res => {
+                context.commit('setData', res.data);
+            });
+        },
+    }
+});
