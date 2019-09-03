@@ -284,6 +284,10 @@ export default {
                 else {
                     window.scroll({ top: finalPos, left: 0 });
                 }
+                // fix navScroll active
+                var event = document.createEvent('HTMLEvents');
+                event.initEvent('scroll', true, false);
+                window.dispatchEvent(event);
             }
         },
     },
