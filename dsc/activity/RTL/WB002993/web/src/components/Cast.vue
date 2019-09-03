@@ -56,7 +56,7 @@ export default {
     img {
         width: 241px;
         height: 222px;
-        transition: transform .4s;
+        transition: transform .4s, opacity 1s;
     }
     @at-root {
         html.no-mobile .cast:hover img {
