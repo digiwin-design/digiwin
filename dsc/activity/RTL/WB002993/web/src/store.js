@@ -11,6 +11,7 @@ export default new Vuex.Store({
         showMask: false,
         showPopup: false,
         result: null,
+        loading: false,
     },
     mutations: {
         setDevice(state, payload) {
@@ -27,6 +28,9 @@ export default new Vuex.Store({
         },
         togglePopup(state, payload) {
             state.showPopup = payload;
+        },
+        updateLoadingState(state, payload) {
+            state.loading = payload;
         },
     },
     actions: {

@@ -1,185 +1,185 @@
 <template>
-    <transition name="fade">
-        <div v-if="isReady" class="wrapper">
-            <Header></Header>
-            <MenuMask></MenuMask>
+    <div>
+        <transition name="fade">
+            <div v-if="isReady" class="wrapper">
+                <Header></Header>
+                <MenuMask></MenuMask>
+                <div class="main">
+                    <StickyNav v-if="!isMobile" :links="result.links"></StickyNav>
+                    <StickyNavS v-if="isMobile" :links="result.links"></StickyNavS>
 
-            <div class="main">
-                <StickyNav v-if="!isMobile" :links="result.links"></StickyNav>
-                <StickyNavS v-if="isMobile" :links="result.links"></StickyNavS>
-
-                <div class="main-content">
-                    <header>
-                        <h1>
-                            <picture>
-                                <source srcset="images/header-bg-s.png" media="(max-width:768px)" />
-                                <img src="images/header-bg.png" alt="鼎新新零售發佈會-開啟新零售，實現全域營銷" />
-                            </picture>
-                        </h1>
-                        <a href @click.prevent="scrollToAnchor('#speaker')">
-                            <i class="material-icons">keyboard_arrow_down</i>
-                        </a>
-                    </header>
-
-                    <article id="speaker" class="speaker">
-                        <div class="container">
-                            <SectionTitle title="∙ 講師陣容 ∙"></SectionTitle>
-                            <div class="speaker-casts">
-                                <Cast
-                                    v-for="(cast,idx) in result.casts"
-                                    :key="cast.id"
-                                    :cast="cast"
-                                    @click.native="popupShow(idx)"
-                                ></Cast>
-                            </div>
-
-                            <h2 class="sectionTitle">
-                                <span>
-                                    <i class="highlight">產官學</i>新觀點
-                                </span>
-                                <span>
-                                    <i class="material-icons">close</i>
-                                </span>
-                                <span>
-                                    跨界攜手推進
-                                    <strong>
-                                        <i class="highlight">新零售</i>
-                                    </strong>
-                                </span>
-                            </h2>
-                            <div class="speaker-features">
-                                <Feature
-                                    v-for="feature in result.features"
-                                    :key="feature.title"
-                                    :feature="feature"
-                                ></Feature>
-                            </div>
-                            <div class="speaker-detail">
-                                <p>
-                                    新零售翻轉產業生態
-                                    <br />面對
-                                    <strong>消費者思考模式的改變</strong>
-                                    <br />跨平台、多通路、多支付、碎片數據？
-                                </p>
-                                <p>
-                                    鼎新結合各領域產官學專家齊聚
-                                    <br />
-                                    <strong>串聯金流、物流、資訊流一體化</strong>
-                                    <br />實現
-                                    <strong>全域營銷</strong>，打造更高效的
-                                    <strong>新零售模式</strong>
-                                    <br />提升流通管理新價值！
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article id="schedule" class="schedule">
-                        <div class="container">
-                            <SectionTitle title="∙ 活動場次 ∙"></SectionTitle>
-                            <div class="schedule-events">
-                                <Event
-                                    v-for="event in result.events"
-                                    :key="event.country"
-                                    :event="event"
-                                ></Event>
-                            </div>
-                            <dl>
-                                <dt>活動時間</dt>
-                                <dd>13:30-17:00 (13:00開放入場)</dd>
-                                <dt>適合參加對象</dt>
-                                <dd>流通業之企業主、高階決策層，率領各部中階主管報名</dd>
-                            </dl>
-                            <a
-                                href="http://acpms.digiwin.com/WebRegACT/index.html?gNo=2019080007"
-                                class="schedule-signup"
-                                target="_blank"
-                            >
-                                立即報名
-                                <i class="material-icons">keyboard_arrow_right</i>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article id="session" class="session">
-                        <div class="container">
-                            <SectionTitle title="∙ 精彩議程 ∙"></SectionTitle>
-                            <Tab :schedules="result.schedules"></Tab>
-                            <p class="session-statement">主辦單位保留報名、講師及議程修改之權利</p>
-                            <div class="session-social">
-                                <a
-                                    href="mailto:?subject=鼎新新零售發佈會-開啟新零售，實現全域營銷&body=我想要分享一個很棒且免費的研討會訊息給你！%0d%0a《鼎新新零售發佈會-開啟新零售，實現全域營銷》活動%0d%0a詳細議程：https://www.digiwin.com/tw/dsc/activity/RTL/WB002993/web/"
-                                    target="_blank"
-                                >
-                                    <img src="~@/assets/images/icon_mail.png" alt />
-                                </a>
-                                <a
-                                    href="javascript:void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href))))"
-                                >
-                                    <img src="~@/assets/images/icon_FB.png" alt />
-                                </a>
-                                <a
-                                    href="http://line.naver.jp/R/msg/text/?歡迎蒞臨《鼎新新零售發佈會-開啟新零售，實現全域營銷》%0D%0A09/18台中場、09/24台北場。詳細議程：https://www.digiwin.com/tw/dsc/activity/RTL/WB002993/web/"
-                                    target="_blank"
-                                >
-                                    <img src="~@/assets/images/icon_LINE.png" alt />
-                                </a>
-                                <a href="https://www.youtube.com/user/DSCTCE00" target="_blank">
-                                    <img src="~@/assets/images/icon_YT.png" alt />
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <div class="ad">
-                        <div class="container">
-                            <SectionTitle title="新零售時代<br> 如何面面俱到"></SectionTitle>
-                            <a
-                                href="https://www.digiwin.com/tw/dsc/solution/WB002972/index.html"
-                                target="_blank"
-                            >
+                    <div class="main-content">
+                        <header>
+                            <h1>
                                 <picture>
-                                    <source
-                                        srcset="@/assets/images/ad-s.jpg"
-                                        media="(max-width:768px)"
-                                    />
-                                    <img src="@/assets/images/ad.jpg" alt />
+                                    <source srcset="images/header-bg-s.png" media="(max-width:768px)" />
+                                    <img src="images/header-bg.png" alt="鼎新新零售發佈會-開啟新零售，實現全域營銷" />
                                 </picture>
+                            </h1>
+                            <a href @click.prevent="scrollToAnchor('#speaker')">
+                                <i class="material-icons">keyboard_arrow_down</i>
                             </a>
-                        </div>
-                    </div>
+                        </header>
 
-                    <div class="organizer">
-                        <div class="container">
-                            <ul>
-                                <li>主辦單位</li>
-                                <li>
-                                    <img
-                                        src="https://www.digiwin.com/tw/dsc/Library/images/DSClogo.png"
-                                        width="107"
-                                        alt
-                                    />
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>協辦單位</li>
-                                <li>
-                                    <img src="@/assets/images/co-organiser1.png" alt />
-                                </li>
-                                <li>
-                                    <img src="@/assets/images/co-organiser2.png" alt />
-                                </li>
-                            </ul>
+                        <article id="speaker" class="speaker">
+                            <div class="container">
+                                <SectionTitle title="∙ 講師陣容 ∙"></SectionTitle>
+                                <div class="speaker-casts">
+                                    <Cast
+                                        v-for="(cast,idx) in result.casts"
+                                        :key="cast.id"
+                                        :cast="cast"
+                                        @click.native="popupShow(idx)"
+                                    ></Cast>
+                                </div>
+
+                                <h2 class="sectionTitle">
+                                    <span>
+                                        <i class="highlight">產官學</i>新觀點
+                                    </span>
+                                    <span>
+                                        <i class="material-icons">close</i>
+                                    </span>
+                                    <span>
+                                        跨界攜手推進
+                                        <strong>
+                                            <i class="highlight">新零售</i>
+                                        </strong>
+                                    </span>
+                                </h2>
+                                <div class="speaker-features">
+                                    <Feature
+                                        v-for="feature in result.features"
+                                        :key="feature.title"
+                                        :feature="feature"
+                                    ></Feature>
+                                </div>
+                                <div class="speaker-detail">
+                                    <p>
+                                        新零售翻轉產業生態
+                                        <br />面對
+                                        <strong>消費者思考模式的改變</strong>
+                                        <br />跨平台、多通路、多支付、碎片數據？
+                                    </p>
+                                    <p>
+                                        鼎新結合各領域產官學專家齊聚
+                                        <br />
+                                        <strong>串聯金流、物流、資訊流一體化</strong>
+                                        <br />實現
+                                        <strong>全域營銷</strong>，打造更高效的
+                                        <strong>新零售模式</strong>
+                                        <br />提升流通管理新價值！
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="schedule" class="schedule">
+                            <div class="container">
+                                <SectionTitle title="∙ 活動場次 ∙"></SectionTitle>
+                                <div class="schedule-events">
+                                    <Event
+                                        v-for="event in result.events"
+                                        :key="event.country"
+                                        :event="event"
+                                    ></Event>
+                                </div>
+                                <dl>
+                                    <dt>活動時間</dt>
+                                    <dd>13:30-17:00 (13:00開放入場)</dd>
+                                    <dt>適合參加對象</dt>
+                                    <dd>流通業之企業主、高階決策層，率領各部中階主管報名</dd>
+                                </dl>
+                                <a
+                                    href="http://acpms.digiwin.com/WebRegACT/index.html?gNo=2019080007"
+                                    class="schedule-signup"
+                                    target="_blank"
+                                >
+                                    立即報名
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article id="session" class="session">
+                            <div class="container">
+                                <SectionTitle title="∙ 精彩議程 ∙"></SectionTitle>
+                                <Tab :schedules="result.schedules"></Tab>
+                                <p class="session-statement">主辦單位保留報名、講師及議程修改之權利</p>
+                                <div class="session-social">
+                                    <a
+                                        href="mailto:?subject=鼎新新零售發佈會-開啟新零售，實現全域營銷&body=我想要分享一個很棒且免費的研討會訊息給你！%0d%0a《鼎新新零售發佈會-開啟新零售，實現全域營銷》活動%0d%0a詳細議程：https://www.digiwin.com/tw/dsc/activity/RTL/WB002993/web/"
+                                        target="_blank"
+                                    >
+                                        <img src="~@/assets/images/icon_mail.png" alt />
+                                    </a>
+                                    <a
+                                        href="javascript:void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href))))"
+                                    >
+                                        <img src="~@/assets/images/icon_FB.png" alt />
+                                    </a>
+                                    <a
+                                        href="http://line.naver.jp/R/msg/text/?歡迎蒞臨《鼎新新零售發佈會-開啟新零售，實現全域營銷》%0D%0A09/18台中場、09/24台北場。詳細議程：https://www.digiwin.com/tw/dsc/activity/RTL/WB002993/web/"
+                                        target="_blank"
+                                    >
+                                        <img src="~@/assets/images/icon_LINE.png" alt />
+                                    </a>
+                                    <a href="https://www.youtube.com/user/DSCTCE00" target="_blank">
+                                        <img src="~@/assets/images/icon_YT.png" alt />
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <div class="ad">
+                            <div class="container">
+                                <SectionTitle title="新零售時代<br> 如何面面俱到"></SectionTitle>
+                                <a
+                                    href="https://www.digiwin.com/tw/dsc/solution/WB002972/index.html"
+                                    target="_blank"
+                                >
+                                    <picture>
+                                        <source
+                                            srcset="@/assets/images/ad-s.jpg"
+                                            media="(max-width:768px)"
+                                        />
+                                        <img src="@/assets/images/ad.jpg" alt />
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="organizer">
+                            <div class="container">
+                                <ul>
+                                    <li>主辦單位</li>
+                                    <li>
+                                        <img
+                                            src="https://www.digiwin.com/tw/dsc/Library/images/DSClogo.png"
+                                            width="107"
+                                            alt
+                                        />
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>協辦單位</li>
+                                    <li>
+                                        <img src="@/assets/images/co-organiser1.png" alt />
+                                    </li>
+                                    <li>
+                                        <img src="@/assets/images/co-organiser2.png" alt />
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <Footer></Footer>
+                <Popup :id="currentPopup"></Popup>
             </div>
-
-            <Footer></Footer>
-
-            <Popup :id="currentPopup"></Popup>
-        </div>
-    </transition>
+        </transition>
+        <loading></loading>
+    </div>
 </template>
 
 <script>
@@ -198,6 +198,7 @@ import Popup from '@/components/Popup.vue';
 import Feature from '@/components/Feature.vue';
 import Event from '@/components/Event.vue';
 import Tab from '@/components/Tab.vue';
+import Loading from '@/components/Loading.vue';
 
 export default {
     name: 'app',
@@ -213,6 +214,7 @@ export default {
         Feature,
         Event,
         Tab,
+        Loading,
     },
     data() {
         return {
@@ -267,7 +269,10 @@ export default {
                 image.onload = () => {
                     loaded++;
                     if (loaded === images.length) {
-                        this.isReady = true;
+                        setTimeout(() => {
+                            this.isReady = true;
+                            this.$store.commit('updateLoadingState', false);
+                        }, 500);
                     }
                 };
                 image.src = img;
@@ -292,6 +297,9 @@ export default {
         },
     },
     created() {
+        if (document.querySelector('html').classList.contains('smil')) {
+            this.$store.commit('updateLoadingState', true);
+        }
         this.$store.dispatch('getData');
     },
     mounted() {
@@ -308,7 +316,7 @@ export default {
 // transition
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity .3s;
+    transition: opacity 1s;
 }
 .fade-enter,
 .fade-leave-to {
