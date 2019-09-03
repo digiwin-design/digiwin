@@ -1375,16 +1375,16 @@
         "title": "ERP全方案-企業轉型，從創造數位價值開始",
         "menus": [
             {
-                "text": "產業趨勢",
-                "url": "#section4"
-            },
-            {
                 "text": "職能管理",
                 "url": "#section2"
             },
             {
                 "text": "經營能力",
                 "url": "#section3"
+            },
+            {
+                "text": "產業趨勢",
+                "url": "#section4"
             },
             {
                 "text": "行業分類",
@@ -1397,15 +1397,15 @@
         ],
         "anchors": [
             {
-                "url": "#section4",
+                "url": "#section2",
                 "index": 0
             },
             {
-                "url": "#section2",
+                "url": "#section3",
                 "index": 1
             },
             {
-                "url": "#section3",
+                "url": "#section4",
                 "index": 2
             },
             {
