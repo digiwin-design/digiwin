@@ -205,8 +205,8 @@ html.no-mobile .section4 {
     }
     .inforCheck .outline {
         position: relative;
-        float: left;
         margin: 10px 5px 5px 0;
+        width: 100%;
         text-align: left;
         line-height: 30px;
     }
@@ -221,8 +221,6 @@ html.no-mobile .section4 {
     }
     .inforCheck label {
         display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
         color: #ff0;
         font-size: 20px;
     }
@@ -408,6 +406,32 @@ html.no-mobile .section4 {
             left: 32px;
             color: #fe5757;
             font-size: 14px;
+        }
+    }
+    .demand {
+        display: flex;
+        margin: 10px 0;
+        @at-root {
+            html.mobile #form .demand {
+                flex-direction: column;
+            }
+        }
+        &-title {
+            margin-right: 5px;
+            flex-shrink: 0;
+            @at-root {
+                html.mobile #form .demand-title {
+                    margin-right: 0;
+                }
+            }
+        }
+        &-items {
+            display: flex;
+            margin: 0 -5px;
+            flex-wrap: wrap;
+        }
+        &-item {
+            margin: 0 5px;
         }
     }
 }

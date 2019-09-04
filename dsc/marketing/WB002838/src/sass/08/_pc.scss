@@ -196,13 +196,22 @@ html.no-mobile {
                 margin-bottom: 60px;
             }
         }
-        &-2 ul {
-            margin-top: 120px;
-            padding-left: 1.5em;
-            color: #595757;
-            list-style-type: disc;
-            font-size: 18px;
-            line-height: 30px;
+        &-1 .learnMore {
+            margin-top: 20px;
+            margin-left: auto;
+        }
+        &-2 {
+            ul {
+                margin-top: 60px;
+                padding-left: 1.5em;
+                color: #595757;
+                list-style-type: disc;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            .learnMore {
+                margin-top: 20px;
+            }
         }
         &-4 {
             p {
@@ -210,6 +219,11 @@ html.no-mobile {
             }
             &-illust {
                 margin-bottom: 17px;
+            }
+        }
+        &-5 {
+            .learnMore {
+                margin-left: auto;
             }
         }
         &-6 {
