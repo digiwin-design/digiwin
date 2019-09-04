@@ -139,15 +139,11 @@ $(document).on('click', '.js-nav', function (event) {
 // vue
 // =============================================================================
 httpVueLoader.register(Vue, 'components/contact.vue');
-httpVueLoader.register(Vue, 'components/Ad.vue');
-httpVueLoader.register(Vue, 'components/MenuMask.vue');
 
 const store = new Vuex.Store({
     state: {
         isMobile: false,
         result: null,
-        showMask: true,
-        showAd: true,
     },
     mutations: {
         updateDevice(state, payload) {
@@ -155,12 +151,6 @@ const store = new Vuex.Store({
         },
         setData(state, payload) {
             state.result = payload;
-        },
-        toggleMask(state, payload) {
-            state.showMask = payload;
-        },
-        toggleAd(state, payload) {
-            state.showAd = payload;
         },
     },
     actions: {
