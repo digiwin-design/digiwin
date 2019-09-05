@@ -247,7 +247,7 @@ $(function () {
     if (typeof dayjs === 'function') return;
     $.when($.ajax('/tw/dsc/assets/ad/db.json'), $.getScript('/tw/dsc/assets/ad/dayjs/dayjs.min.js'), $.getScript('/tw/dsc/assets/ad/dayjs/isBetween.js'))
         .done(res => {
-            let result = res[0].filter(value => location.pathname === value.url);
+            let result = res[0].filter(value => location.pathname.replace(/(.html|.htm)$/, '') === value.url);
             if (!result.length) return;
 
             let div = document.createElement('div');
