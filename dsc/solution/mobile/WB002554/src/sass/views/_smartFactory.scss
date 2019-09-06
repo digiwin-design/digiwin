@@ -1,0 +1,5 @@
+main .smartFactory {
+    .header {
+        @include headerBg('smartFactory/header-bg.jpg', 'smartFactory/header-bg.jpg', 100% 0);
+    }
+}

@@ -1,0 +1,5 @@
+main .demand {
+    .header {
+        @include headerBg('demand/header-bg.jpg', 'demand/header-bg.jpg', 100% 0);
+    }
+}

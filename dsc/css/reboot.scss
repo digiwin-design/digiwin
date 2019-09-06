@@ -76,7 +76,7 @@ html.production main {
     }
 }
 html.no-production {
-    body {
-        padding-top: 47px;
+    .header-box {
+        height: auto !important;
     }
 }
