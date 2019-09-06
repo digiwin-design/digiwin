@@ -21,7 +21,7 @@ module.exports = {
             type: Array
         }
     },
-    data() {
+    data: function () {
         return {
             swiperOptionA: {
                 pagination: {
@@ -32,7 +32,7 @@ module.exports = {
         }
     },
     computed: {
-        swiperA() {
+        swiperA: function () {
             return this.$refs.awesomeSwiperA.swiper;
         }
     },

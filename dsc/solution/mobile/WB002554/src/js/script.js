@@ -2,8 +2,9 @@ httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/vue-text-dot.vue');
-httpVueLoader.register(Vue, 'components/index/carousel.vue');
 httpVueLoader.register(Vue, 'components/hover-box.vue');
+httpVueLoader.register(Vue, 'components/index/carousel.vue');
+httpVueLoader.register(Vue, 'components/demand/progress-bars.vue');
 Vue.use(VueAwesomeSwiper);
 
 NProgress.configure({ showSpinner: false });
