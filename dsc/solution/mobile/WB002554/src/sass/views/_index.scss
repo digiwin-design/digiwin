@@ -11,9 +11,6 @@ main .index {
             strong {
                 color: #fc5f00;
             }
-            p {
-                color: #555;
-            }
         }
         &-list {
             display: flex;
@@ -26,7 +23,6 @@ main .index {
             }
             li {
                 display: flex;
-                color: #555;
                 letter-spacing: getLetterSpacing(50);
                 line-height: 30px;
                 &::before {

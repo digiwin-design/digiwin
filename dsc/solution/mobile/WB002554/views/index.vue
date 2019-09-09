@@ -20,7 +20,7 @@
                     padding-bottom="1em"
                 ></section-title>
             </div>
-            
+
             <carousel :slides="index.slides"></carousel>
 
             <div class="container">
@@ -44,16 +44,11 @@
                     title="副總的訂單要先做才是對的?"
                     desc="一家塑膠老客的生管人員告訴鼎新:副總的訂單他就會優先安排，年資越淺的業務他就會排越後面，造成交期永遠都會逾期，產銷會議時大家總是抱怨連連...........生管真難為?業務與生管之  間還有那些美麗與哀愁?"
                 ></section-title>
-
-                <hover-box :color="box.color" v-for="box in index.hoverBoxs" :key="box.title">
-                    <template slot="content">
-                        <img :src="box.imgSrc" alt="">
-                        <p class="hoverBox-title">{{box.title}}</p>
-                    </template>
-                    <template slot="hover">
-                        <p v-html="box.hoverText"></p>
-                    </template>
-                </hover-box>
+                <pain
+                    v-for="pain in index.pains"
+                    :key="pain.title"
+                    :content="pain"
+                ></pain>
             </div>
         </article>
 
@@ -64,7 +59,7 @@
                     desc="鼎新累積30多年塑膠產業輔導經驗，<strong>品茂塑膠、上溢精密、集泉塑膠、嘉碁科技、成綸企業、愛子美實業、金上吉塑膠</strong>等多家企業成功案例，提供您最佳服務與支援！"
                     padding-bottom="1em"
                 ></section-title>
-                <img src="images/index/section3-illust.png" alt="">
+                <img src="images/index/section3-illust.png" alt />
             </div>
         </article>
 
@@ -75,7 +70,7 @@
                     desc="鼎新電腦提供塑膠產業一套完整符合並能掌握生產環節的管理模式，也因應工業4.0之發展趨勢，開發出<strong>新型整合設備，整合傳a統三色燈及機台生產資訊</strong>，並與<strong>模具系統及自動排程系統深度整合</strong>，引領塑膠業以<strong>現場生產管理</strong>為主軸，打造通往智能生產、智慧工廠的生產環境。"
                     padding-bottom="1em"
                 ></section-title>
-                <img src="images/index/section4-illust.png" alt="">
+                <img src="images/index/section4-illust.png" alt />
                 <a href="/tw/dsc/solution/WB002554/WB00255401_control.html">
                     <i class="material-icons">arrow_forward</i>
                     因應複雜多變的產業環境，您可以這樣作!
@@ -85,11 +80,8 @@
 
         <article class="section5">
             <div class="container">
-                <section-title
-                    title="塑膠產業完整解決方案"
-                    padding-bottom="1em"
-                ></section-title>
-                <img src="images/index/section5-illust.png" alt="">
+                <section-title title="塑膠產業完整解決方案" padding-bottom="1em"></section-title>
+                <img src="images/index/section5-illust.png" alt />
             </div>
         </article>
     </div>

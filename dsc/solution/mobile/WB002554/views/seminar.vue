@@ -14,6 +14,3 @@ module.exports = {
     name: 'seminar',
 }
 </script>
-
-<style>
-</style>

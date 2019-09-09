@@ -2,9 +2,10 @@ httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/vue-text-dot.vue');
-httpVueLoader.register(Vue, 'components/hover-box.vue');
+httpVueLoader.register(Vue, 'components/pain.vue');
 httpVueLoader.register(Vue, 'components/index/carousel.vue');
 httpVueLoader.register(Vue, 'components/demand/progress-bars.vue');
+httpVueLoader.register(Vue, 'components/demand/collapse.vue');
 Vue.use(VueAwesomeSwiper);
 
 NProgress.configure({ showSpinner: false });
@@ -31,42 +32,52 @@ const router = new VueRouter({
     routes: [
         {
             path: '/demand/:tab?',
+            name: 'demand',
             component: httpVueLoader('views/demand.vue')
         },
         {
             path: '/issue/:tab?',
+            name: 'issue',
             component: httpVueLoader('views/issue.vue')
         },
         {
             path: '/orders/:tab?',
+            name: 'orders',
             component: httpVueLoader('views/orders.vue')
         },
         {
             path: '/cost/:tab?',
+            name: 'cost',
             component: httpVueLoader('views/cost.vue')
         },
         {
             path: '/quality/:tab?',
+            name: 'quality',
             component: httpVueLoader('views/quality.vue')
         },
         {
             path: '/smartFactory/:tab?',
+            name: 'smartFactory',
             component: httpVueLoader('views/smartFactory.vue')
         },
         {
             path: '/seminar/:tab?',
+            name: 'seminar',
             component: httpVueLoader('views/seminar.vue')
         },
         {
             path: '/case/:tab?',
+            name: 'case',
             component: httpVueLoader('views/case.vue')
         },
         {
             path: '/control/:tab?',
+            name: 'control',
             component: httpVueLoader('views/control.vue')
         },
         {
             path: '/:tab?',
+            name: 'index',
             component: httpVueLoader('views/index.vue')
         },
     ],

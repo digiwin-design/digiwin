@@ -49,11 +49,11 @@
                         if (!this.results.length) return;
                         this.setActiveIndex();
                         this.isActive = true;
-                        
+
                         // 依據選單高度設定main上方間距
                         window.addEventListener('load', this.resizeHandler);
                         window.addEventListener('resize', this.resizeHandler);
-                        
+
                         // 設定頁面捲動時的錨點樣式
                         if (this.results[0].anchors) {
                             window.addEventListener('scroll', this.scrollHandler);
@@ -129,18 +129,14 @@
                 }
                 else if (url && anchor) {
                     window.open(`${url}`, '_self');
-                    
-                    let getAnchor = () => {
-                        if ($(anchor).length) {
-                            let targetPos = $(anchor).offset().top;
-                            let offset = $('.page-submenu').outerHeight();
-                            $('html, body').animate({ scrollTop: targetPos - offset });
-                            this.closeDropdownHandler();
-                            return;
-                        }
-                        setTimeout(getAnchor, 10);
-                    };
-                    getAnchor();
+
+                    // 切換頁面後延遲兩秒移動至錨點
+                    setTimeout(() => {
+                        let targetPos = $(anchor).offset().top;
+                        let offset = $('.page-submenu').outerHeight();
+                        $('html, body').animate({ scrollTop: targetPos - offset });
+                        this.closeDropdownHandler();
+                    }, 2000);
 
                     this.setPageInfo(url);
                 }

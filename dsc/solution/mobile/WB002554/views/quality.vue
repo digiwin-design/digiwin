@@ -14,6 +14,3 @@ module.exports = {
     name: 'quality',
 }
 </script>
-
-<style>
-</style>

@@ -14,6 +14,3 @@ module.exports = {
     name: 'orders',
 }
 </script>
-
-<style>
-</style>

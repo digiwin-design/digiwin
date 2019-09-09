@@ -5,9 +5,10 @@
         :style="{'background-color': bgColor}"
         onclick
     >
-        <slot name="content"></slot>
+        <img :src="content.imgSrc" alt="">
+        <p class="hoverBox-title">{{content.title}}</p>
         <div class="hoverBox-hover" :style="{ 'background-color': hoverBgColor }">
-            <slot name="hover"></slot>
+            <p v-html="content.hoverText"></p>
         </div>
     </div>
 </template>
@@ -24,8 +25,8 @@ module.exports = {
             type: Boolean,
             default: true
         },
-        color: {
-            type: String,
+        content: {
+            type: Object,
             required: true
         }
     },
@@ -40,7 +41,7 @@ module.exports = {
             return 'hsla(' + this.hsl[0] + ',' + this.hsl[1] + '%,' + (this.hsl[2] - 20) + '%' + ',.95)';
         },
         hsl: function () {
-            return w3color(this.color).toHslArray();
+            return w3color(this.content.color).toHslArray();
         }
     },
 }

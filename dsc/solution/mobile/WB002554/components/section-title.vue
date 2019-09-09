@@ -21,7 +21,9 @@ module.exports = {
 }
 h1 {
     max-width: 100%;
+    letter-spacing: 0.075em;
     font-size: 26px;
+    line-height: 36px;
 }
 p {
     margin-top: 0.5em;

@@ -240,9 +240,9 @@
     }
 }
 
-@mixin iconLink($bgColor, $color, $fontSize) {
+@mixin iconLink($bgColor, $color, $fontSize, $padding: 1.5em) {
     display: inline-flex;
-    padding: 1.5em;
+    padding: $padding;
     background-color: $bgColor;
     color: $color;
     font-size: $fontSize;
