@@ -11,6 +11,7 @@
     <script src="/tw/dsc/assets/modernizr-custom.js"></script>
     <script src="/tw/dsc/assets/mobile-detect.js"></script>
     <script src="/tw/dsc/assets/mobile-detect-modernizr.js" defer=""></script>
+    <script src="/tw/dsc/assets/smoothscroll.js" defer></script>
     <script src="/tw/dsc/assets/axios.min.js"></script>
     <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
     <script src="/tw/dsc/js/common.min.js"></script>
@@ -306,27 +307,12 @@
     <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
     <link rel="stylesheet" href="/tw/dsc/assets/submenu-spa/submenu.css">
     <script src="/tw/dsc/assets/submenu-spa/submenu.min.js"></script>
+    <link rel="preload" href="images/loading.svg" as="image">
     <link rel="preload" href="images/case/header-bg.jpg" as="image">
     <link rel="preload" href="images/channelArrange/header-bg.jpg" as="image">
     <link rel="preload" href="images/customized/header-bg.jpg" as="image">
     <link rel="preload" href="images/factoryLogistics/header-bg.jpg" as="image">
     <link rel="preload" href="images/factoryManage/header-bg.jpg" as="image">
-    <link rel="preload" href="images/factoryManage/section1-illust.png" as="image">
-    <link rel="preload" href="images/factoryManage/section2-illust.jpg" as="image">
-    <link rel="preload" href="images/factoryManage/section3-illust.png" as="image">
-    <link rel="preload" href="images/factoryManage/section4-illust.png" as="image">
-    <link rel="preload" href="images/factoryManage/section5-illust.png" as="image">
-    <link rel="preload" href="images/factoryManage/section5-no1.png" as="image">
-    <link rel="preload" href="images/factoryManage/section5-no2.png" as="image">
-    <link rel="preload" href="images/factoryManage/section5-no3.png" as="image">
-    <link rel="preload" href="images/factoryManage/section6-illust.jpg" as="image">
-    <link rel="preload" href="images/factoryManage/section7-illust.png" as="image">
-    <link rel="preload" href="images/factoryManage/section8-illust.jpg" as="image">
-    <link rel="preload" href="images/factoryManage/section9-illust1.jpg" as="image">
-    <link rel="preload" href="images/factoryManage/section9-illust2.jpg" as="image">
-    <link rel="preload" href="images/factoryManage/section10-illust1.png" as="image">
-    <link rel="preload" href="images/factoryManage/section10-illust2.png" as="image">
-    <link rel="preload" href="images/factoryManage/section11-illust.png" as="image">
     <link rel="preload" href="images/index/header-bg.jpg" as="image">
     <link rel="preload" href="images/order/header-bg.jpg" as="image">
     <link rel="preload" href="images/solution/header-bg.jpg" as="image">
@@ -342,6 +328,7 @@
     <script src="js/script.min.js" defer></script>
     <main v-cloak v-if="result">
       <router-view></router-view>
+      <loading></loading>
       <contact v-bind:multiple="false" source=""></contact>
     </main>
     <!-- 後台上稿內容結束-->

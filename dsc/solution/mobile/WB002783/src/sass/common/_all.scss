@@ -1,10 +1,22 @@
 [v-cloak] {
     display: none;
 }
+
+// transition
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
 // dat.GUI
 .dg.ac {
     z-index: 99;
 }
+
 main {
     margin: 0 auto;
     min-width: 360px;

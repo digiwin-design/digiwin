@@ -127,43 +127,35 @@
                     },
                     {
                         "text": "電子看板",
-                        "url": "#/factoryManage",
-                        "anchor": "#ekb"
+                        "url": "#/factoryManage#ekb"
                     },
                     {
                         "text": "現場報工",
-                        "url": "#/factoryManage",
-                        "anchor": "#replyWork"
+                        "url": "#/factoryManage#replyWork"
                     },
                     {
                         "text": "電子化SOP",
-                        "url": "#/factoryManage",
-                        "anchor": "#esop"
+                        "url": "#/factoryManage#esop"
                     },
                     {
                         "text": "稼動管理",
-                        "url": "#/factoryManage",
-                        "anchor": "#availability"
+                        "url": "#/factoryManage#availability"
                     },
                     {
                         "text": "機台整合",
-                        "url": "#/factoryManage",
-                        "anchor": "#machineIntegration"
+                        "url": "#/factoryManage#machineIntegration"
                     },
                     {
                         "text": "生產排程",
-                        "url": "#/factoryManage",
-                        "anchor": "#productionSchedule"
+                        "url": "#/factoryManage#productionSchedule"
                     },
                     {
                         "text": "產品回溯",
-                        "url": "#/factoryManage",
-                        "anchor": "#productRecall"
+                        "url": "#/factoryManage#productRecall"
                     },
                     {
                         "text": "外包管理",
-                        "url": "#/factoryManage",
-                        "anchor": "#outsourcing"
+                        "url": "#/factoryManage#outsourcing"
                     }
                 ]
             },
