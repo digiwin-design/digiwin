@@ -7,10 +7,7 @@ $seminar-color: (
 @import 'accordion';
 @import 'progressBars';
 
-main {
-    .container {
-        padding: 0 20px;
-    }
+main .seminar {
     .header {
         @include headerBg('seminar/header-bg.jpg', 'seminar/header-bg.jpg', 100% 0);
         h1 {

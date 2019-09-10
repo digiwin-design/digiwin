@@ -203,5 +203,199 @@
                 ]
             }
         ]
-    }
+    },
+    "orders": [
+        {
+            "title": "估報價",
+            "troubled": {
+                "desc": "新品估價要靠經驗,舊品報價都要四處找資料,但賺多賺少要等財務成本結算後才能知道!",
+                "pains": [
+                    {
+                        "title": "業務",
+                        "hoverText": "找資料用Excel報價已經讓我疲於奔命還未完成，新的報價又來了，難道沒有更好工具嗎?",
+                        "color": "#49bcc3",
+                        "imgSrc": "images/orders/hoverBox-icon1.png"
+                    },
+                    {
+                        "title": "業務主管",
+                        "hoverText": "我如何確保每張報出去訂單有賺錢,看著有一些沒有賺錢的訂單,我要如何跟老闆解釋?",
+                        "color": "#88b9b0",
+                        "imgSrc": "images/orders/hoverBox-icon2.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "企業賺了營收,但却賠了獲利! 如果系統能提供成本資料給報價參考, 那就太好了!",
+                        "color": "#ef8570",
+                        "imgSrc": "images/orders/hoverBox-icon3.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作估報價生意，其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "solution1-1.jpg",
+                        "figcaption": "標準途程資料設定"
+                    },
+                    {
+                        "fileName": "solution1-2.jpg",
+                        "figcaption": "工資率及分攤率設定"
+                    }
+                ],
+                "linkText": "還有更多估報價方案說明"
+            }
+        },
+        {
+            "title": "模具開發",
+            "troubled": {
+                "desc": "客戶需求一變再變,圖面版本那麼多,到底哪一張才是對的",
+                "pains": [
+                    {
+                        "title": "研發",
+                        "hoverText": "沒有做好版本控管,圖面文件散落各處,模具開發進度未落實回饋",
+                        "color": "#a37799",
+                        "imgSrc": "images/orders/hoverBox-icon4.png"
+                    },
+                    {
+                        "title": "業務",
+                        "hoverText": "試產進度又要延遲了嗎…?",
+                        "color": "#49bcc3",
+                        "imgSrc": "images/orders/hoverBox-icon5.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "模具開發進度未落實回饋,無法監控專案進度,導致有問題無法提前預警...",
+                        "color": "#ef8570",
+                        "imgSrc": "images/orders/hoverBox-icon6.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作模具開發生意，其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "solution2-1.jpg",
+                        "figcaption": "解決方案圖"
+                    }
+                ],
+                "linkText": "還有更多模具開發方案說明"
+            }
+        },
+        {
+            "title": "專案管理",
+            "troubled": {
+                "desc": "傳統的專案管理方式，不易管控產出的文件或資訊，每個人被指派的工作也不易追蹤管理",
+                "pains": [
+                    {
+                        "title": "研發主管",
+                        "hoverText": "到底有多少專案正在進行? 進度如何? 專案人力及績效，還有專案各階段的工作項目產出好難控管?",
+                        "color": "#8e5080",
+                        "imgSrc": "images/orders/hoverBox-icon7.png"
+                    },
+                    {
+                        "title": "研發",
+                        "hoverText": "資料、工程文件、圖檔散落各處，卻不知道那份才是正確?文件申請、審核、發行…作業,版本容易錯亂，造成生產廢料",
+                        "color": "#a37799",
+                        "imgSrc": "images/orders/hoverBox-icon8.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "專案進度延遲,管理成本增加,若能監控專案進度,有問題提前預警,就讓損失降到最低了....",
+                        "color": "#ef8570",
+                        "imgSrc": "images/orders/hoverBox-icon9.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作專案管理，其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "solution3-1.jpg",
+                        "figcaption": "解決方案圖"
+                    },
+                    {
+                        "fileName": "solution3-2.jpg",
+                        "figcaption": "解決方案圖"
+                    }
+                ],
+                "linkText": "還有更多專案管理方案說明"
+            }
+        },
+        {
+            "title": "送樣打樣",
+            "troubled": {
+                "desc": "樣品一修再修,客戶怎樣才會滿意願意收，都要試樣了，都還不知道模具的狀況,只能到處追問，時間都延誤了",
+                "pains": [
+                    {
+                        "title": "現場",
+                        "hoverText": "跟客戶及內部溝通記錄不落實,模具圖樣一再修改，造成模具完成時程一再延遲",
+                        "color": "#15769a",
+                        "imgSrc": "images/orders/hoverBox-icon10.png"
+                    },
+                    {
+                        "title": "業務",
+                        "hoverText": "資料、工程文件、圖檔散落各處，卻不知道那份才是正確?文件申請、審核、發行…作業,版本容易錯亂，造成生產廢料",
+                        "color": "#49bcc3",
+                        "imgSrc": "images/orders/hoverBox-icon11.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "送樣時程過長，客戶滿意度不佳，以後接單就難，也影響上機量產時間，管理成本增加!!",
+                        "color": "#ef8570",
+                        "imgSrc": "images/orders/hoverBox-icon12.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作送樣打樣，其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "solution4-1.jpg",
+                        "figcaption": "樣品承認\\模具進度查詢"
+                    },
+                    {
+                        "fileName": "solution4-2.jpg",
+                        "figcaption": "送樣進度規劃"
+                    }
+                ],
+                "linkText": "還有更多送樣打樣說明"
+            }
+        },
+        {
+            "title": "急單插單",
+            "troubled": {
+                "desc": "大客戶急單進來，老闆說這急單非接不可，問業務會不會影響其它重要客戶，業務說要問生管",
+                "pains": [
+                    {
+                        "title": "生管",
+                        "hoverText": "現場產能已滿載了，用excel排時程，東擠西塞，結果滿足這家害了別家，根本無法知道排擠到誰的單?",
+                        "color": "#6c9655",
+                        "imgSrc": "images/orders/hoverBox-icon13.png"
+                    },
+                    {
+                        "title": "業務",
+                        "hoverText": "插單一直進來，先交A客戶的貨，可是B客戶也一直打電話來催貨…",
+                        "color": "#49bcc3",
+                        "imgSrc": "images/orders/hoverBox-icon14.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "急插單要先交，已排定生產交期客戶又要延後，客戶常因訂單遲交來客訴,客戶都跑了，營收不妙了!",
+                        "color": "#ef8570",
+                        "imgSrc": "images/orders/hoverBox-icon15.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作急單插單，其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "solution5-1.jpg",
+                        "figcaption": "模擬抽插單圖"
+                    }
+                ],
+                "linkText": "還有更多急單插單說明"
+            }
+        }
+    ]
 }
