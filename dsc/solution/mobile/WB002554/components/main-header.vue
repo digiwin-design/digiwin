@@ -9,9 +9,6 @@
 </template>
 
 <style scoped>
-.header {
-    line-height: 1.3;
-}
 h1 {
     color: #fff;
     font-weight: bold;

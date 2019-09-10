@@ -13,10 +13,14 @@ NProgress.configure({ showSpinner: false });
 const store = new Vuex.Store({
     state: {
         result: null,
+        isMobile: false,
     },
     mutations: {
         setData(state, payload) {
             state.result = payload;
+        },
+        updateDevice(state, payload) {
+            state.isMobile = payload;
         },
     },
     actions: {
@@ -111,7 +115,21 @@ new Vue({
             return store.state.result;
         }
     },
+    methods: {
+        mediaSensor() {
+            let mm = window.matchMedia('(min-width: 769px)');
+            mm.addListener(this.resizeWidth);
+            this.resizeWidth(mm);
+        },
+        resizeWidth(pMatchMedia) {
+            let isMobile = pMatchMedia.matches ? false : true;
+            store.commit('updateDevice', isMobile);
+        },
+    },
     created() {
         store.dispatch('getData');
+    },
+    mounted() {
+        this.mediaSensor();
     },
 });

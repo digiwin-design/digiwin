@@ -112,7 +112,7 @@ function fetchFile(file) {
 $(document).on('click', '.js-nav', function(event) {
     event.preventDefault();
     let target = $(this).attr('href') || $(this).attr('xlink:href') || $(this).data('target');
-    let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+    let offset = document.querySelector('html').classList.contains('production') && document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
     let targetPos = $(target).offset().top;
     let finalPos = offset ? targetPos - offset : targetPos;
     window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
