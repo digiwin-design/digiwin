@@ -123,11 +123,12 @@
                 }
                 else if (!url && anchor) {
                     let targetPos = $(anchor).offset().top;
-                    let offset = $('.page-submenu').outerHeight();
-                    $('html, body').animate({ scrollTop: targetPos - offset });
+                    let offset = document.querySelector('html').classList.contains('production') && $('.page-submenu').outerHeight();
+                    let finalPos = offset ? targetPos - offset : targetPos;
+                    $('html, body').animate({ scrollTop: finalPos });
                     this.closeDropdownHandler();
                 }
-                else if (url && anchor) {
+                else if (url && anchor) { // 已棄用，應使用各頁面的 router.beforeEach 處理 (如製造業)
                     window.open(`${url}`, '_self');
 
                     // 切換頁面後延遲兩秒移動至錨點

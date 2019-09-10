@@ -262,5 +262,63 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "WB002554",
+        "title": "塑膠業",
+        "menus": [
+            {
+                "text": "塑膠首頁",
+                "url": "#/"
+            },
+            {
+                "text": "同業需求",
+                "url": "#/demand"
+            },
+            {
+                "text": "少量多樣接單",
+                "url": "#/issue"
+            },
+            {
+                "text": "接單與結成本",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "接單管理",
+                        "url": "#/orders"
+                    },
+                    {
+                        "text": "成本精算",
+                        "url": "#/cost"
+                    }
+                ]
+            },
+            {
+                "text": "品質與現場管理",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "品質控管",
+                        "url": "#/quality"
+                    },
+                    {
+                        "text": "智慧現場管理",
+                        "url": "#/smartFactory"
+                    }
+                ]
+            },
+            {
+                "text": "研討會",
+                "url": "#/seminar"
+            },
+            {
+                "text": "案例客戶",
+                "url": "#/case"
+            },
+            {
+                "text": "聯絡我們",
+                "anchor": "#contact"
+            }
+        ]
     }
 ]

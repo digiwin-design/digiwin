@@ -80,53 +80,55 @@ router.beforeEach((to, from, next) => {
 
     // 當切換的頁面中有錨點時，待圖片載入完成後再捲動至該處
     store.commit('updateLoadingState', true);
-    let loaded = 0;
-    let images = [];
-    switch (to.hash) {
-        case '#ekb':
-        case '#replyWork':
-        case '#esop':
-        case '#availability':
-        case '#machineIntegration':
-        case '#productionSchedule':
-        case '#productRecall':
-        case '#outsourcing':
-            images = [
-                'images/factoryManage/section1-illust.png',
-                'images/factoryManage/section2-illust.jpg',
-                'images/factoryManage/section3-illust.png',
-                'images/factoryManage/section4-illust.png',
-                'images/factoryManage/section5-illust.png',
-                'images/factoryManage/section5-no1.png',
-                'images/factoryManage/section5-no2.png',
-                'images/factoryManage/section5-no3.png',
-                'images/factoryManage/section6-illust.jpg',
-                'images/factoryManage/section7-illust.png',
-                'images/factoryManage/section8-illust.jpg',
-                'images/factoryManage/section9-illust1.jpg',
-                'images/factoryManage/section9-illust2.jpg',
-                'images/factoryManage/section10-illust1.png',
-                'images/factoryManage/section10-illust2.png',
-                'images/factoryManage/section11-illust.png',
-            ];
-            break;
-        default:
-            break;
-    }
-    images.forEach(img => {
-        let image = document.createElement('IMG');
-        image.onload = () => {
-            loaded++;
-            if (loaded === images.length) {
-                store.commit('updateLoadingState', false);
-                let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
-                let targetPos = document.querySelector(to.hash).offsetTop;
-                let finalPos = offset ? targetPos - offset : targetPos;
-                window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
-            }
-        };
-        image.src = img;
-    });
+    setTimeout(() => {
+        let loaded = 0;
+        let images = [];
+        switch (to.hash) {
+            case '#ekb':
+            case '#replyWork':
+            case '#esop':
+            case '#availability':
+            case '#machineIntegration':
+            case '#productionSchedule':
+            case '#productRecall':
+            case '#outsourcing':
+                images = [
+                    'images/factoryManage/section1-illust.png',
+                    'images/factoryManage/section2-illust.jpg',
+                    'images/factoryManage/section3-illust.png',
+                    'images/factoryManage/section4-illust.png',
+                    'images/factoryManage/section5-illust.png',
+                    'images/factoryManage/section5-no1.png',
+                    'images/factoryManage/section5-no2.png',
+                    'images/factoryManage/section5-no3.png',
+                    'images/factoryManage/section6-illust.jpg',
+                    'images/factoryManage/section7-illust.png',
+                    'images/factoryManage/section8-illust.jpg',
+                    'images/factoryManage/section9-illust1.jpg',
+                    'images/factoryManage/section9-illust2.jpg',
+                    'images/factoryManage/section10-illust1.png',
+                    'images/factoryManage/section10-illust2.png',
+                    'images/factoryManage/section11-illust.png',
+                ];
+                break;
+            default:
+                break;
+        }
+        images.forEach(img => {
+            let image = document.createElement('IMG');
+            image.onload = () => {
+                loaded++;
+                if (loaded === images.length) {
+                    store.commit('updateLoadingState', false);
+                    let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+                    let targetPos = document.querySelector(to.hash).offsetTop;
+                    let finalPos = offset ? targetPos - offset : targetPos;
+                    window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
+                }
+            };
+            image.src = img;
+        });
+    }, 1000); // delay for ios
 });
 router.afterEach((to, from) => {
     let submenu = document.querySelector('.page-submenu');
