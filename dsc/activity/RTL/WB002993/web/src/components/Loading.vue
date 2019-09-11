@@ -26,9 +26,7 @@ export default {
     z-index: 1000000; // override Header
     display: flex;
     flex-direction: column;
-    background-color: rgba(#000, .9);
-    color: #fff;
-    font-size: 20px;
+    background-color: #fff;
     justify-content: center;
     align-items: center;
 }

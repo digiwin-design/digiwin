@@ -1,6 +1,6 @@
 <template>
     <figure class="cast" :class="className">
-        <img :data-src="require(`@/assets/images/cast${cast.id}.png`)" data-expand="-20" class="lazyload" alt="">
+        <img :data-src="`images/cast/cast${cast.id}.png`" data-expand="-20" class="lazyload" alt="">
         <figcaption v-if="cast.id<3">
             <p class="place">{{cast.place}}</p>
             <p class="company">{{cast.company}}</p>

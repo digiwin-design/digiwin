@@ -261,6 +261,16 @@ export default {
             let images = [
                 'images/header-bg.png',
                 'images/header-bg-s.png',
+                'images/cast/cast1.png',
+                'images/cast/cast2.png',
+                'images/cast/cast3.png',
+                'images/cast/cast4.png',
+                'images/cast/cast5.png',
+                'images/cast/cast6.png',
+                'images/cast/cast7.png',
+                'images/cast/cast8.png',
+                'images/cast/cast9.png',
+                'images/cast/cast10.png',
                 'img/bg1-s.5271e82c.png',
                 'img/bg1.6a72b339.png',
             ];
@@ -411,6 +421,9 @@ header {
     }
 }
 .speaker {
+    @media (max-width: $tablet-width) {
+        padding-bottom: 50px;
+    }
     &-casts {
         display: flex;
         flex-wrap: wrap;
