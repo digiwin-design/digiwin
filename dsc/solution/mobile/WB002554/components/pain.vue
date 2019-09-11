@@ -15,6 +15,7 @@
 
 <script>
 module.exports = {
+    name: 'Pain',
     props: {
         customClass: String,
         fadeIn: {

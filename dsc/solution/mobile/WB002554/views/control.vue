@@ -14,6 +14,3 @@ module.exports = {
     name: 'control',
 }
 </script>
-
-<style>
-</style>

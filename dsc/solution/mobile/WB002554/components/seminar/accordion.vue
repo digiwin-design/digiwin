@@ -38,6 +38,7 @@
 
 <script>
 module.exports = {
+    name: 'Accordion',
     props: ['accordion'],
     computed: {
         isMobile: function () {

@@ -28,6 +28,7 @@
 
 <script>
 module.exports = {
+    name: 'Collapse',
     props: {
         items: {
             type: Array,

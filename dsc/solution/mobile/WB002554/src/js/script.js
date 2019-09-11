@@ -8,6 +8,7 @@ httpVueLoader.register(Vue, 'components/tabs.vue');
 httpVueLoader.register(Vue, 'components/index/carousel.vue');
 httpVueLoader.register(Vue, 'components/demand/progress-bars.vue');
 httpVueLoader.register(Vue, 'components/demand/collapse.vue');
+httpVueLoader.register(Vue, 'components/case/case-item.vue');
 Vue.use(VueAwesomeSwiper);
 
 NProgress.configure({ showSpinner: false });

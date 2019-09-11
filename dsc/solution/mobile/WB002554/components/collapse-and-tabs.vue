@@ -37,6 +37,7 @@
 
 <script>
 module.exports = {
+    name: 'CollapseAndTabs',
     computed: {
         nav: function () {
             return ['常見困擾', '解決方案'];

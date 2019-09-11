@@ -84,6 +84,7 @@
 
 <script>
 module.exports = {
+    name: 'Contact',
     props: ['multiple', 'source'],
     mounted: function () {
         $.getScript('/tw/dsc/js/Eform/form.js').done(function(){createCode()});

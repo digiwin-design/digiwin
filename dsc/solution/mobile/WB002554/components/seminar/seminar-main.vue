@@ -27,6 +27,7 @@
 
 <script>
 module.exports = {
+    name: 'SeminarMain',
     props: ['content'],
     components: {
         'accordion': httpVueLoader('components/seminar/accordion.vue'),

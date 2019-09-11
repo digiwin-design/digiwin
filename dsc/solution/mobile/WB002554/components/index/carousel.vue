@@ -15,7 +15,7 @@
 
 <script>
 module.exports = {
-    name: 'carousel',
+    name: 'Carousel',
     props: {
         slides: {
             type: Array

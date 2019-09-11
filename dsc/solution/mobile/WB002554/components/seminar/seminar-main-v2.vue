@@ -66,6 +66,7 @@
 
 <script>
 module.exports = {
+    name: 'SeminarMain',
     props: ['content'],
     components: {
         'progress-bars': httpVueLoader('components/seminar/progress-bars.vue'),

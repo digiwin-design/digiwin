@@ -7,6 +7,7 @@
 
 <script>
 module.exports = {
+    name: 'SectionTitle',
     props: ['title', 'desc', 'paddingTop', 'paddingBottom']
 }
 </script>

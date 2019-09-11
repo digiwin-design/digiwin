@@ -15,6 +15,7 @@
 
 <script>
 module.exports = {
+    name: 'Tabs',
     props: ['id', 'nav'],
     mounted: function () {
         $(this.$refs.tabs).tabs();

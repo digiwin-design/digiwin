@@ -8,6 +8,7 @@
 
 <script>
 module.exports = {
+    name: 'ProgressBars',
     props: {
         progressBars: {
             type: Array
