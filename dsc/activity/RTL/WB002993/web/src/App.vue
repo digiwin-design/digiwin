@@ -271,6 +271,8 @@ export default {
                 'images/cast/cast8.png',
                 'images/cast/cast9.png',
                 'images/cast/cast10.png',
+                'images/cast/cast11.png',
+                'images/cast/cast12.png',
                 'img/bg1-s.5271e82c.png',
                 'img/bg1.6a72b339.png',
             ];
@@ -427,10 +429,7 @@ header {
     &-casts {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        @media (max-width: $content-width) {
-            justify-content: center;
-        }
+        justify-content: center;
     }
     h2 {
         display: flex;

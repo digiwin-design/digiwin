@@ -4,7 +4,7 @@
             <div v-for="cast in result.casts" :key="cast.id" class="swiper-slide cast-slide">
                 <div class="cast-content js-cast-content">
                     <div class="cast-col">
-                        <img :src="require(`@/assets/images/cast${cast.id}.png`)" alt />
+                        <img :src="`images/cast/cast${cast.id}.png`" alt />
                     </div>
                     <div class="cast-col">
                         <h2 class="cast-company">{{cast.company}}</h2>

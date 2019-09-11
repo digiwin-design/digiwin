@@ -42,7 +42,7 @@
         {
             "id": 1,
             "place": "台北場",
-            "company": "餐飲連鎖教父",
+            "company": "連鎖餐飲教父",
             "name": "王品集團創辦人<br> 戴勝益",
             "desc": "來自傳統製帽廠家族，1993年創立王品集團，歷年推出西堤、陶板屋、聚火鍋等十餘個差異化餐飲品牌，透過作業流程標準化且嚴謹的管理哲學，創造顧客獨特的消費經驗，王品集團在戴勝益的帶領下，成功立足競爭激烈的餐飲市場，成為台灣最大規模的餐飲王國。<br>2015年退休後投入書屋志業，積極推廣閱讀習慣亦為益品書屋創辦人。"
         },
@@ -60,6 +60,12 @@
             "desc": "致力於金融相關領域超過20年，業務涵蓋投資銀行、企業金融、財富管理、風險控管等。曾擔任國泰世華金控副總、悠遊卡公司董事長、巴克萊銀行台北分行董事總經理、桃園捷運公司董事長、LINE BIZ PLUS北亞金融董事總經理。<br>2018年11月接任「將來商業銀行籌備處  執行長」，以客戶角度出發，將創意與巧思融合於金融服務與數位生活中，滿足多樣化的市場需求、推動臺灣純網銀的發展、開創更多友善積極的金融環境與創新服務。"
         },
         {
+            "id": 11,
+            "company": "將來商業銀行籌備處",
+            "name": "吳建頤 策略長",
+            "desc": ""
+        },
+        {
             "id": 4,
             "company": "商業發展研究院",
             "name": "朱浩 副所長",
@@ -70,6 +76,12 @@
             "company": "工業技術研究院",
             "name": "陳慧娟 組長",
             "desc": "國立清華大學工業工程與工程管理研究所 碩士畢業，專長領域包括產業運籌服務模式與供應鏈管理、零售物流服務模式與智動化設計、企業績效管理、物流系統整合工程、運輸電子化與行動化(e/M)系統技術、國際物流知識領域研究分析等。<br>擔任經濟部多項物流專案計畫主持人，輔導近百家企業提升轉型，具有豐富的企業實戰經驗。"
+        },
+        {
+            "id": 12,
+            "company": "工業技術研究院",
+            "name": "洪筠緯 專案副組長",
+            "desc": ""
         },
         {
             "id": 6,
@@ -170,7 +182,7 @@
                 },
                 {
                     "content": "<strong>《高峰對談》<br>產官學 × 新零售 多方觀點帶動無限發展</strong>",
-                    "cast": "主持人：<br><i class=\"company\">鼎新電腦 / </i>蘇明慧 總經理<br>與談人：<br><i class=\"company\">鼎新電腦 / </i>張進聰 資深副總裁<br><i class=\"company\">商業發展研究院 / </i>朱浩 副所長<br><i class=\"company\">工業技術研究院 / </i>陳慧娟 組長<br><i class=\"company\">將來商業銀行籌備處 / </i>劉奕成 執行長<br><i class=\"company\">Lalamove / </i>賴根汎 行銷經理<br><i class=\"company\">拍檔科技 / </i>吳道凱 資深處長"
+                    "cast": "主持人：<br><i class=\"company\">鼎新電腦 / </i>蘇明慧 總經理<br>與談人：<br><i class=\"company\">鼎新電腦 / </i>張進聰 資深副總裁<br><i class=\"company\">商業發展研究院 / </i>朱浩 副所長<br><i class=\"company\">工業技術研究院 / </i>洪筠緯 專案副組長<br><i class=\"company\">將來商業銀行籌備處 / </i>劉奕成 執行長<br><i class=\"company\">Lalamove / </i>賴根汎 行銷經理<br><i class=\"company\">拍檔科技 / </i>吳道凱 資深處長"
                 },
                 {
                     "content": "<strong>Q&A 交流</strong>",
@@ -203,7 +215,7 @@
                 },
                 {
                     "content": "<strong>將來 × 新零售 多元跨界啟動無限可能</strong>",
-                    "cast": "<i class=\"company\">將來商業銀行籌備處 / </i>劉奕成 執行長"
+                    "cast": "<i class=\"company\">將來商業銀行籌備處 / </i>吳建頤 策略長"
                 },
                 {
                     "content": "<strong>鼎新 × 新零售 虛實融合滾動無限商機</strong>",
@@ -211,7 +223,7 @@
                 },
                 {
                     "content": "<strong>《高峰對談》<br>產官學 × 新零售 多方觀點帶動無限發展</strong>",
-                    "cast": "主持人：<br><i class=\"company\">鼎新電腦 / </i>蘇明慧 總經理<br>與談人：<br><i class=\"company\">鼎新電腦 / </i>張進聰 資深副總裁<br><i class=\"company\">商業發展研究院 / </i>朱浩 副所長<br><i class=\"company\">台北市電腦公會 / </i>張雅婷 總監<br><i class=\"company\">工業技術研究院 / </i>陳慧娟 組長<br><i class=\"company\">將來商業銀行籌備處 / </i>劉奕成 執行長<br><i class=\"company\">Lalamove / </i>賴根汎 行銷經理<br><i class=\"company\">拍檔科技 / </i>吳道凱 資深處長"
+                    "cast": "主持人：<br><i class=\"company\">鼎新電腦 / </i>蘇明慧 總經理<br>與談人：<br><i class=\"company\">鼎新電腦 / </i>張進聰 資深副總裁<br><i class=\"company\">商業發展研究院 / </i>朱浩 副所長<br><i class=\"company\">台北市電腦公會 / </i>張雅婷 總監<br><i class=\"company\">工業技術研究院 / </i>陳慧娟 組長<br><i class=\"company\">將來商業銀行籌備處 / </i>吳建頤 策略長<br><i class=\"company\">Lalamove / </i>賴根汎 行銷經理<br><i class=\"company\">拍檔科技 / </i>吳道凱 資深處長"
                 },
                 {
                     "content": "<strong>Q&A 交流</strong>",

@@ -33,7 +33,7 @@ export default {
 @import '@/assets/sass/common.scss';
 .cast {
     display: flex;
-    padding: 8px 11px;
+    padding: 8px 17px;
     cursor: pointer;
     align-items: center;
     @at-root {
