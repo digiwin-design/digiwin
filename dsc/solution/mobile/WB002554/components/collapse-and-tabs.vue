@@ -1,7 +1,7 @@
 <template>
     <div class="collapse-and-tabs">
         <div ref="accordion" class="accordion">
-            <template v-for="(order, idx) in orders">
+            <template v-for="(order, idx) in content">
                 <h2 v-on:click="slideToggle" :key="order.title">{{order.title}}</h2>
                 <div class="accordion-content" :key="order.troubled.desc">
                     <tabs :id="`t${idx+1}`" :nav="nav">
@@ -38,13 +38,15 @@
 <script>
 module.exports = {
     name: 'CollapseAndTabs',
+    props: {
+        content: {
+            type: Array
+        }
+    },
     computed: {
         nav: function () {
             return ['常見困擾', '解決方案'];
         },
-        orders: function () {
-            return store.state.result.orders;
-        }
     },
     methods: {
         slideToggle: function (event) {

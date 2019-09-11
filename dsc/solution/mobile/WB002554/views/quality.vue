@@ -11,6 +11,6 @@
 
 <script>
 module.exports = {
-    name: 'quality',
+    name: 'Quality',
 }
 </script>

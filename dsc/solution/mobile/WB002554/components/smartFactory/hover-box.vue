@@ -1,13 +1,14 @@
 <template>
     <div
-        class="pain"
+        class="hoverBox"
         :class="[customClass, {'fadeIn': fadeIn}, {'arrow': arrow}]"
         :style="{'background-color': bgColor}"
         onclick
     >
         <img :src="content.imgSrc" alt="">
-        <p class="pain-title">{{content.title}}</p>
-        <div class="pain-hover" :style="{ 'background-color': hoverBgColor }">
+        <p class="hoverBox-title">{{content.title}}</p>
+        <p class="hoverBox-subtitle" v-html="content.subtitle"></p>
+        <div class="hoverBox-hover" :style="{ 'background-color': hoverBgColor }">
             <p v-html="content.hoverText"></p>
         </div>
     </div>
@@ -15,7 +16,7 @@
 
 <script>
 module.exports = {
-    name: 'Pain',
+    name: 'HoverBox',
     props: {
         customClass: String,
         fadeIn: {
@@ -62,15 +63,15 @@ module.exports = {
         transform: translate(-50%, 100%);
     }
 }
-main .pain {
+main .hoverBox {
     position: relative;
     overflow-y: hidden;
     cursor: pointer;
 }
-main .pain:hover [class$="-hover"] {
+main .hoverBox:hover [class$="-hover"] {
     top: 0;
 }
-main .pain [class$="-hover"] {
+main .hoverBox [class$="-hover"] {
     position: absolute;
     top: 100%;
     left: 0;
@@ -79,13 +80,13 @@ main .pain [class$="-hover"] {
     height: inherit;
     transition: top 0.4s;
 }
-main .pain.fadeIn [class$="-hover"] * {
+main .hoverBox.fadeIn [class$="-hover"] * {
     opacity: 0;
 }
-main .pain.fadeIn:hover [class$="-hover"] * {
+main .hoverBox.fadeIn:hover [class$="-hover"] * {
     animation: fadeIn 1s 0.4s forwards;
 }
-main .pain.arrow::after {
+main .hoverBox.arrow::after {
     position: absolute;
     top: calc(100% - 24px);
     left: 50%;

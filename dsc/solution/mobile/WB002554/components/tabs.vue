@@ -36,7 +36,7 @@ module.exports = {
     justify-content: center;
 }
 .tabs-tablist li {
-    width: 112px;
+    min-width: 112px;
 }
 .tabs-tablist li.ui-tabs-active a {
     background-color: #fff;
@@ -45,6 +45,7 @@ module.exports = {
 }
 .tabs-tablist a {
     display: block;
+    padding: 0 5px;
     height: 56px;
     border: 1px solid #fff;
     color: #fff;
@@ -61,4 +62,6 @@ module.exports = {
     background-color: #fff;
     justify-content: center;
 }
+
+
 </style>

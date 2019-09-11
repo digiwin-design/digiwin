@@ -7,12 +7,20 @@
             </template>
         </main-header>
 
-        <collapse-and-tabs></collapse-and-tabs>
+        <collapse-and-tabs :content="orders"></collapse-and-tabs>
     </div>
 </template>
 
 <script>
 module.exports = {
-    name: 'orders',
+    name: 'Orders',
+    components: {
+        'collapse-and-tabs': httpVueLoader('components/collapse-and-tabs.vue'),
+    },
+    computed: {
+        orders: function () {
+            return store.state.result.orders;
+        }
+    },
 }
 </script>

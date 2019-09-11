@@ -11,6 +11,6 @@
 
 <script>
 module.exports = {
-    name: 'cost',
+    name: 'Cost',
 }
 </script>

@@ -89,7 +89,7 @@
 
 <script>
 module.exports = {
-    name: 'index',
+    name: 'Index',
     computed: {
         index() {
             return store.state.result.index;

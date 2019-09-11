@@ -3,12 +3,12 @@ httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/vue-text-dot.vue');
 httpVueLoader.register(Vue, 'components/pain.vue');
-httpVueLoader.register(Vue, 'components/collapse-and-tabs.vue');
 httpVueLoader.register(Vue, 'components/tabs.vue');
 httpVueLoader.register(Vue, 'components/index/carousel.vue');
 httpVueLoader.register(Vue, 'components/demand/progress-bars.vue');
 httpVueLoader.register(Vue, 'components/demand/collapse.vue');
 httpVueLoader.register(Vue, 'components/case/case-item.vue');
+httpVueLoader.register(Vue, 'components/smartFactory/anchor.vue');
 Vue.use(VueAwesomeSwiper);
 
 NProgress.configure({ showSpinner: false });

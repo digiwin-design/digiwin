@@ -11,6 +11,6 @@
 
 <script>
 module.exports = {
-    name: 'control',
+    name: 'Control',
 }
 </script>

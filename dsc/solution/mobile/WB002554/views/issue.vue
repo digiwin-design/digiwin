@@ -101,7 +101,7 @@
 
 <script>
 module.exports = {
-    name: 'issue',
+    name: 'Issue',
     computed: {
         issue() {
             return store.state.result.issue;

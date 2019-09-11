@@ -1,5 +1,5 @@
 main {
-    .collapse-and-tabs {
+    .smartFactory-collapse-and-tabs {
         .accordion {
             &-content {
                 background-color: #c9c9c9;
@@ -7,14 +7,20 @@ main {
                     display: none;
                 }
             }
-            &-troubled {
+            &-tab1 {
+                h3 {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 22px;
+                    line-height: 1;
+                }
                 &-desc {
-                    margin-bottom: 1em;
+                    margin: 1em 0;
                     font-size: 16px;
                     line-height: 24px;
                 }
             }
-            &-solution {
+            &-tab2 {
                 &-desc {
                     margin-bottom: 1em;
                     letter-spacing: getLetterSpacing(75);

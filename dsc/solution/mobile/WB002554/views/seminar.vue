@@ -6,7 +6,7 @@
 
 <script>
 module.exports = {
-    name: 'seminar',
+    name: 'Seminar',
     components: {
         'seminar-main': httpVueLoader('components/seminar/seminar-main.vue'),
     },

@@ -37,7 +37,7 @@
 
 <script>
 module.exports = {
-    name: 'demand',
+    name: 'Demand',
     computed: {
         demand() {
             return store.state.result.demand;
