@@ -18,7 +18,7 @@ module.exports = {
         'collapse-and-tabs': httpVueLoader('components/collapse-and-tabs.vue'),
     },
     computed: {
-        orders: function () {
+        orders() {
             return store.state.result.orders;
         }
     },

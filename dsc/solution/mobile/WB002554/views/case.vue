@@ -19,8 +19,11 @@
 <script>
 module.exports = {
     name: 'Case',
+    components: {
+        'case-item': httpVueLoader('components/case/case-item.vue')
+    },
     computed: {
-        cases: function () {
+        cases() {
             return store.state.result.case;
         }
     },

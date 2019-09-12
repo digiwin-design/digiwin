@@ -13,16 +13,27 @@
         <div class="section1">
             <div class="container">
                 <anchor
-                    v-for="anchor in smartFactory.anchors"
+                    v-for="(anchor, idx) in smartFactory.anchors"
                     :key="anchor.fileName"
                     :content="anchor"
+                    :index="idx"
+                    @click.native="scrollHandler(idx)"
                 ></anchor>
-                <a href class="section1-link" @click.prevent="showImg(0)">了解完整流程</a>
-                <vue-easy-lightbox :visible="visible" :imgs="imgs" @hide="handleHide"></vue-easy-lightbox>
+                <light-box></light-box>
             </div>
         </div>
 
-        <collapse-and-tabs :content="smartFactory.content"></collapse-and-tabs>
+        <collapse-and-tabs :content="smartFactory.content" :anchor-idx="anchorIdx"></collapse-and-tabs>
+
+        <div class="smartFactory-link container">
+            <router-link :to="{ name: 'control' }">
+                <span>
+                    除了智慧現場管理
+                    <br />還可以
+                    <strong>了解更多生產現場管理</strong>
+                </span>
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -31,13 +42,13 @@ module.exports = {
     name: 'SmartFactory',
     data() {
         return {
-            index: 0,
-            visible: false,
-            imgs: ['images/smartFactory/section1-illust.jpg']
+            anchorIdx: 0,
         }
     },
     components: {
         'collapse-and-tabs': httpVueLoader('components/smartFactory/collapse-and-tabs.vue'),
+        'anchor': httpVueLoader('components/smartFactory/anchor.vue'),
+        'light-box': httpVueLoader('components/smartFactory/light-box.vue'),
     },
     computed: {
         smartFactory() {
@@ -45,13 +56,9 @@ module.exports = {
         }
     },
     methods: {
-        showImg(index) {
-            this.index = index;
-            this.visible = true;
+        scrollHandler(index) {
+            $(`#anchor${index}`).addClass('active').next().slideDown();
         },
-        handleHide() {
-            this.visible = false;
-        }
     }
 }
 </script>

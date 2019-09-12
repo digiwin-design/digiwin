@@ -90,6 +90,9 @@
 <script>
 module.exports = {
     name: 'Index',
+    components: {
+        'carousel': httpVueLoader('components/index/carousel.vue'),
+    },
     computed: {
         index() {
             return store.state.result.index;

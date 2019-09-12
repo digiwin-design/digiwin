@@ -35,7 +35,7 @@ module.exports = {
             required: true
         }
     },
-    data() {
+    data: function () {
         return {
             activeNames: ['1']
         };

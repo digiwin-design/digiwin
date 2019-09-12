@@ -2,13 +2,13 @@
     <div class="smartFactory-collapse-and-tabs">
         <div ref="accordion" class="accordion">
             <template v-for="(item, idx) in content">
-                <h2 v-on:click="slideToggle" :key="item.title">{{item.title}}</h2>
-                <div class="accordion-content" :key="item.tab1.desc">
-                    <tabs :id="`t${idx+1}`" :nav="nav">
+                <h2 @click="slideToggle" :key="item.title" :id="`anchor${idx}`">{{item.title}}</h2>
+                <div class="accordion-content" :key="idx">
+                    <tabs v-if="item.tab1" :id="`t${idx+1}`" :nav="nav">
                         <template :slot="`t${idx+1}-0`">
                             <div class="accordion-tab1">
                                 <h3>{{item.tab1.subtitle}}</h3>
-                                <p class="accordion-tab1-desc">{{item.tab1.desc}}</p>
+                                <p class="accordion-desc">{{item.tab1.desc}}</p>
                                 <hover-box
                                     :content="pain"
                                     v-for="pain in item.tab1.pains"
@@ -22,6 +22,26 @@
                             </div>
                         </template>
                     </tabs>
+
+                    <template v-else>
+                        <div class="accordion-content-detail">
+                            <div>
+                                <h3>{{item.subtitle}}</h3>
+                                <p class="accordion-desc">{{item.desc}}</p>
+                                <figure>
+                                    <figcaption>{{item.figcaption}}</figcaption>
+                                    <img :src="`images/smartFactory/${item.fileName}`" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </template>
+
+                    <div class="accordion-nav container">
+                        <a href="#contact" class="js-nav">
+                            <i class="material-icons">arrow_downward</i>
+                            了解更多方案說明
+                        </a>
+                    </div>
                 </div>
             </template>
         </div>
@@ -37,6 +57,9 @@ module.exports = {
     props: {
         content: {
             type: Array
+        },
+        anchorIdx: {
+            type: Number
         }
     },
     computed: {
@@ -48,9 +71,6 @@ module.exports = {
         slideToggle: function (event) {
             $(event.target).toggleClass('active').next().slideToggle();
         },
-        scrollHandler: function (event) {
-            $(event.target.hash).addClass('active').next().slideDown();
-        }
     },
     mounted: function () {
         $(this.$refs.accordion).find('h2').eq(0).addClass('active');

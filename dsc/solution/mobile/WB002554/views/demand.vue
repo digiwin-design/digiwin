@@ -38,6 +38,10 @@
 <script>
 module.exports = {
     name: 'Demand',
+    components: {
+        'progress-bars': httpVueLoader('components/demand/progress-bars.vue'),
+        'collapse': httpVueLoader('components/demand/collapse.vue'),
+    },
     computed: {
         demand() {
             return store.state.result.demand;

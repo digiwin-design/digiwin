@@ -4,11 +4,6 @@ httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/vue-text-dot.vue');
 httpVueLoader.register(Vue, 'components/pain.vue');
 httpVueLoader.register(Vue, 'components/tabs.vue');
-httpVueLoader.register(Vue, 'components/index/carousel.vue');
-httpVueLoader.register(Vue, 'components/demand/progress-bars.vue');
-httpVueLoader.register(Vue, 'components/demand/collapse.vue');
-httpVueLoader.register(Vue, 'components/case/case-item.vue');
-httpVueLoader.register(Vue, 'components/smartFactory/anchor.vue');
 Vue.use(VueAwesomeSwiper);
 
 NProgress.configure({ showSpinner: false });
@@ -30,6 +25,11 @@ const store = new Vuex.Store({
         getData(context) {
             axios.get('db.json').then(res => {
                 context.commit('setData', res.data);
+                app.$nextTick(() => {
+                    // 依據選單高度設定main上方間距
+                    let menuHeight = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+                    document.querySelector('main').style.paddingTop = menuHeight > 50 ? '50px' : 0;
+                });
             });
         },
     },
@@ -110,7 +110,7 @@ router.afterEach((to, from) => {
     }
 });
 
-new Vue({
+let app = new Vue({
     el: 'main',
     router,
     computed: {

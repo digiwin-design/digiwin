@@ -6,45 +6,21 @@ main {
                 &:not(:first-of-type) {
                     display: none;
                 }
-            }
-            &-tab1 {
-                h3 {
-                    text-align: center;
-                    font-weight: bold;
-                    font-size: 22px;
-                    line-height: 1;
+                &-detail {
+                    padding: 30px 0;
+                    & > div {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 55px 25px;
+                        background-color: #fff;
+                        justify-content: center;
+                    }
+                    figcaption {
+                        @include btn(264px, 37px, #fff, #5aacd8, 18.5px);
+                        margin: 0 auto 20px;
+                        font-size: 20px;
+                    }
                 }
-                &-desc {
-                    margin: 1em 0;
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-            }
-            &-tab2 {
-                &-desc {
-                    margin-bottom: 1em;
-                    letter-spacing: getLetterSpacing(75);
-                    font-weight: bold;
-                    font-size: 28px;
-                    line-height: 36px;
-                }
-                figure + figure {
-                    margin-top: 1.5em;
-                }
-                figcaption {
-                    margin-top: .5em;
-                }
-                a {
-                    @include iconLink(#fff, #5aacd8, 20px, 1em) {
-                        width: 100%;
-                        border: 1px solid #5aacd8;
-                    };
-                    margin-top: 1.5em;
-                }
-            }
-            .container {
-                padding-top: 1.5em;
-                padding-bottom: 1.5em;
             }
             h2 {
                 display: flex;
@@ -74,6 +50,28 @@ main {
                     @include imgBg('minus-icon.png');
                     content: '';
                     transform: rotate(90deg);
+                }
+            }
+            h3 {
+                text-align: center;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 1;
+            }
+            &-desc {
+                margin-top: 1em;
+                margin-bottom: 1.5em;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            &-nav {
+                padding-bottom: 30px;
+                text-align: center;
+                a {
+                    @include iconLink(#fff, #5aacd8, 20px, 1em);
+                    width: 100%;
+                    border: 1px solid #5aacd8;
+                    font-weight: bold;
                 }
             }
         }

@@ -62,6 +62,4 @@ module.exports = {
     background-color: #fff;
     justify-content: center;
 }
-
-
 </style>

@@ -72,7 +72,7 @@ module.exports = {
         'progress-bars': httpVueLoader('components/seminar/progress-bars.vue'),
     },
     computed: {
-        isMobile() {
+        isMobile: function () {
             return store.state.isMobile;
         },
         percentages: function () {
@@ -104,7 +104,7 @@ module.exports = {
         },
     },
     watch: {
-        isMobile(value) {
+        isMobile: function (value) {
             // mobile->desktop時預設展開第一項
             if (!value) {
                 $(this.$refs.accordion).find('h2').eq(0).addClass('active').next().slideDown()
@@ -119,7 +119,7 @@ module.exports = {
         $(this.$refs.accordion).find('h2').eq(0).addClass('active');
     },
     methods: {
-        slideToggle(event) {
+        slideToggle: function (event) {
             let $target = event.target.nodeName === 'H2' ? $(event.target) : $(event.target).parents('h2');
             $target.toggleClass('active').next().slideToggle();
             if (!this.isMobile) {

@@ -1,5 +1,5 @@
 <template>
-    <a href class="anchor">
+    <a :href="`#anchor${index}`" class="anchor js-nav">
         <section :data-icon="`../images/smartFactory/${content.fileName}`">
             <span :style="{ 'background-image': `url(images/smartFactory/${content.fileName})` }"></span>
             <h1>{{content.title}}</h1>
@@ -14,6 +14,9 @@ module.exports = {
     props: {
         content: {
             type: Object
+        },
+        index: {
+            type: Number
         }
     }
 }
