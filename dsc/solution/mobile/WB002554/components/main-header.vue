@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header" @click="linkTo(url)">
         <div class="container">
             <div>
                 <slot name="content"></slot>
@@ -7,6 +7,21 @@
         </div>
     </div>
 </template>
+
+<script>
+module.exports = {
+    props: {
+        url: {
+            type: String
+        }
+    },
+    methods: {
+        linkTo(url) {
+            if (url) window.open(url);
+        }
+    },
+}
+</script>
 
 <style scoped>
 h1 {

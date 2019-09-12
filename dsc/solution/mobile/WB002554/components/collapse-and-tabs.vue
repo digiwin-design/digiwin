@@ -1,30 +1,30 @@
 <template>
     <div class="collapse-and-tabs">
         <div ref="accordion" class="accordion">
-            <template v-for="(order, idx) in content">
-                <h2 v-on:click="slideToggle" :key="order.title">{{order.title}}</h2>
-                <div class="accordion-content" :key="order.troubled.desc">
+            <template v-for="(item, idx) in content">
+                <h2 v-on:click="slideToggle" :key="item.title">{{item.title}}</h2>
+                <div class="accordion-content" :key="item.troubled.desc">
                     <tabs :id="`t${idx+1}`" :nav="nav">
                         <template :slot="`t${idx+1}-0`">
                             <div class="accordion-troubled">
-                                <p class="accordion-troubled-desc">{{order.troubled.desc}}</p>
+                                <p class="accordion-troubled-desc" v-html="item.troubled.desc"></p>
                                 <pain
                                     :content="pain"
-                                    v-for="pain in order.troubled.pains"
+                                    v-for="pain in item.troubled.pains"
                                     :key="pain.title"
                                 ></pain>
                             </div>
                         </template>
                         <template :slot="`t${idx+1}-1`">
                             <div class="accordion-solution">
-                                <p class="accordion-solution-desc">{{order.solution.desc}}</p>
-                                <figure v-for="figure in order.solution.figures" :key="figure.imgSrc">
-                                    <img :src="`images/orders/${figure.fileName}`" alt />
+                                <p class="accordion-solution-desc" v-html="item.solution.desc"></p>
+                                <figure v-for="figure in item.solution.figures" :key="figure.imgSrc">
+                                    <img :src="figure.fileName" alt />
                                     <figcaption>▲ {{figure.figcaption}}</figcaption>
                                 </figure>
                                 <a href="#contact" class="js-nav">
                                     <i class="material-icons">arrow_forward</i>
-                                    {{order.solution.linkText}}
+                                    {{item.solution.linkText}}
                                 </a>
                             </div>
                         </template>

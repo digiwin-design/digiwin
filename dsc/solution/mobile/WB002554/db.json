@@ -231,14 +231,14 @@
                 ]
             },
             "solution": {
-                "desc": "作估報價生意，其實您可以這樣管",
+                "desc": "作估報價生意，<br>其實您可以這樣管",
                 "figures": [
                     {
-                        "fileName": "solution1-1.jpg",
+                        "fileName": "images/orders/solution1-1.jpg",
                         "figcaption": "標準途程資料設定"
                     },
                     {
-                        "fileName": "solution1-2.jpg",
+                        "fileName": "images/orders/solution1-2.jpg",
                         "figcaption": "工資率及分攤率設定"
                     }
                 ],
@@ -271,10 +271,10 @@
                 ]
             },
             "solution": {
-                "desc": "作模具開發生意，其實您可以這樣管",
+                "desc": "作模具開發生意，<br>其實您可以這樣管",
                 "figures": [
                     {
-                        "fileName": "solution2-1.jpg",
+                        "fileName": "images/orders/solution2-1.jpg",
                         "figcaption": "解決方案圖"
                     }
                 ],
@@ -307,14 +307,14 @@
                 ]
             },
             "solution": {
-                "desc": "作專案管理，其實您可以這樣管",
+                "desc": "作專案管理，<br>其實您可以這樣管",
                 "figures": [
                     {
-                        "fileName": "solution3-1.jpg",
+                        "fileName": "images/orders/solution3-1.jpg",
                         "figcaption": "解決方案圖"
                     },
                     {
-                        "fileName": "solution3-2.jpg",
+                        "fileName": "images/orders/solution3-2.jpg",
                         "figcaption": "解決方案圖"
                     }
                 ],
@@ -347,14 +347,14 @@
                 ]
             },
             "solution": {
-                "desc": "作送樣打樣，其實您可以這樣管",
+                "desc": "作送樣打樣，<br>其實您可以這樣管",
                 "figures": [
                     {
-                        "fileName": "solution4-1.jpg",
+                        "fileName": "images/orders/solution4-1.jpg",
                         "figcaption": "樣品承認\\模具進度查詢"
                     },
                     {
-                        "fileName": "solution4-2.jpg",
+                        "fileName": "images/orders/solution4-2.jpg",
                         "figcaption": "送樣進度規劃"
                     }
                 ],
@@ -387,10 +387,10 @@
                 ]
             },
             "solution": {
-                "desc": "作急單插單，其實您可以這樣管",
+                "desc": "作急單插單，<br>其實您可以這樣管",
                 "figures": [
                     {
-                        "fileName": "solution5-1.jpg",
+                        "fileName": "images/orders/solution5-1.jpg",
                         "figcaption": "模擬抽插單圖"
                     }
                 ],
@@ -484,5 +484,347 @@
                 "fileName": "content-illust3.jpg"
             }
         ]
-    }
+    },
+    "cost": [
+        {
+            "title": "次料成本",
+            "troubled": {
+                "desc": "每月底盤點時盤差量都很大，該如何處理才合理",
+                "pains": [
+                    {
+                        "title": "倉管",
+                        "hoverText": "塑料與次料由現場人員彈性使用，扣料依準標用量，與實際用量不符，導致庫存不準...",
+                        "color": "#cdbc5d",
+                        "imgSrc": "images/cost/hoverBox-icon1.png"
+                    },
+                    {
+                        "title": "成會",
+                        "hoverText": "生產領料成本扭曲，導致材料成本忽高忽低，財報及利潤分析一堆問號...",
+                        "color": "#7ccdc4",
+                        "imgSrc": "images/cost/hoverBox-icon2.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "生產用料成本失準，影響成本分析與決策營運分析...",
+                        "color": "#ef8570",
+                        "imgSrc": "images/cost/hoverBox-icon3.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作次料成本，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/cost/solution1-1.jpg",
+                        "figcaption": "現場管理(次料)可以怎麼做"
+                    },
+                    {
+                        "fileName": "images/cost/solution1-2.jpg",
+                        "figcaption": "現場管理(次料)可以怎麼做"
+                    }
+                ],
+                "linkText": "還有更多次料成本說明"
+            }
+        },
+        {
+            "title": "工時成本",
+            "troubled": {
+                "desc": "生產又要記錄花多少時間，有時一忙忘記了，只好下班時依記憶寫..",
+                "pains": [
+                    {
+                        "title": "現場主管",
+                        "hoverText": "現場沒有能自動收集或即時回饋工時的工具，所以工時無法在第一時間被正確的收集，月底時財務都一直催.....",
+                        "color": "#15769a",
+                        "imgSrc": "images/cost/hoverBox-icon4.png"
+                    },
+                    {
+                        "title": "財會",
+                        "hoverText": "報工工時每個月資料給的慢而且資料加總工時與出勤時數不一致...工時給不準，成本如何準?",
+                        "color": "#49bcc3",
+                        "imgSrc": "images/cost/hoverBox-icon5.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作工時成本，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/cost/solution2-1.jpg",
+                        "figcaption": "現場採取採人機報工+設備整合"
+                    },
+                    {
+                        "fileName": "images/cost/solution2-2.jpg",
+                        "figcaption": "SFT+設備整合-現場管理自動化"
+                    }
+                ],
+                "linkText": "還有更多工時成本方案說明"
+            }
+        },
+        {
+            "title": "成本控制",
+            "troubled": {
+                "desc": "出庫單據輸入資料複雜(品號/序號/批號/有效日期), 一不小心就容易紀錄錯誤, 查廠時被抓到就不妙了!<br>若是不能應用條碼來簡化進出貨及盤點的效率及正確性, 可能會影響客戶對出貨品質的滿意度",
+                "pains": [
+                    {
+                        "title": "現場主管",
+                        "hoverText": "目前人工排產作業無法滿足多重連批(模具、機台及顏色等)複雜條件，造成模具切換頻繁，人工閒置與待機，無法充分利用產能,有效稼動率低",
+                        "color": "#15769a",
+                        "imgSrc": "images/cost/hoverBox-icon6.png"
+                    },
+                    {
+                        "title": "生管",
+                        "hoverText": "沒有一個有效排程方法，無法將人力資源做最佳化安排，導致最後組裝塞車",
+                        "color": "#6c9655",
+                        "imgSrc": "images/cost/hoverBox-icon7.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作成本控制，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/cost/solution3-1.jpg",
+                        "figcaption": "比較投入之實際與標準成本之差異"
+                    },
+                    {
+                        "fileName": "images/cost/solution3-2.jpg",
+                        "figcaption": "成本明細一目瞭然"
+                    }
+                ],
+                "linkText": "還有更多成本控制方案說明"
+            }
+        }
+    ],
+    "quality": [
+        {
+            "title": "模具妥善",
+            "troubled": {
+                "desc": "生產過程中，發現品質異常，檢查才知道模具有問題，臨時只能用塞穴來解決..",
+                "pains": [
+                    {
+                        "title": "製造",
+                        "hoverText": "模具沒有使用記錄，不知何時該保養，有什麼方法可以改善？",
+                        "color": "#bd973c",
+                        "imgSrc": "images/quality/hoverBox-icon1.png"
+                    },
+                    {
+                        "title": "生管",
+                        "hoverText": "模具一發生異常，造成產量不足，只好再投入人力成本，用加班生產來解決..",
+                        "color": "#6c9655",
+                        "imgSrc": "images/quality/hoverBox-icon2.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "如果有個工具，可以協助記錄模具使用次數，及事前預防保養提醒，那該有多好....",
+                        "color": "#ef8570",
+                        "imgSrc": "images/quality/hoverBox-icon3.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作模具妥善，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/quality/solution1-1.jpg",
+                        "figcaption": "生產入庫回寫模式"
+                    },
+                    {
+                        "fileName": "images/quality/solution1-2.jpg",
+                        "figcaption": "模具停用單"
+                    }
+                ],
+                "linkText": "還有更多模具妥善說明"
+            }
+        },
+        {
+            "title": "用料管理",
+            "troubled": {
+                "desc": "要生產又要記錄花多少時間，有時一忙忘記了，只好下班時依記憶寫..",
+                "pains": [
+                    {
+                        "title": "品保",
+                        "hoverText": "次料的使用，由現場依經驗自主調配，沒有留下次料使用記錄次料到底用多少？",
+                        "color": "#c1b392",
+                        "imgSrc": "images/quality/hoverBox-icon4.png"
+                    },
+                    {
+                        "title": "業務",
+                        "hoverText": "已經不知道怎麼跟客戶解釋產品品質的不穩定",
+                        "color": "#49bcc3",
+                        "imgSrc": "images/quality/hoverBox-icon5.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "出貨老是被客訴品質問題，快沒商譽可言",
+                        "color": "#ef8570",
+                        "imgSrc": "images/quality/hoverBox-icon6.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作用料管理，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/quality/solution2-1.jpg",
+                        "figcaption": "基本資料管理-品號資料"
+                    },
+                    {
+                        "fileName": "images/quality/solution2-2.jpg",
+                        "figcaption": "基本資料管理－取替代件"
+                    }
+                ],
+                "linkText": "還有更多用料管理方案說明"
+            }
+        },
+        {
+            "title": "產品履歷",
+            "troubled": {
+                "desc": "又被客訴！產品被退貨..",
+                "pains": [
+                    {
+                        "title": "製造",
+                        "hoverText": "各項生產記錄（機台參數：模溫、溫度、溼度、射壓、射速…等、模具、用料)，人工記載不完整。",
+                        "color": "#bf9b42",
+                        "imgSrc": "images/quality/hoverBox-icon7.png"
+                    },
+                    {
+                        "title": "品保",
+                        "hoverText": "翻箱倒櫃還不一定找得到資料，就算找到了，資料也不齊全，無法分析找出產品不良的真正原因",
+                        "color": "#c1b392",
+                        "imgSrc": "images/quality/hoverBox-icon8.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作用料管理，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/quality/solution3-1.jpg",
+                        "figcaption": "包含品質計畫的檢驗流程"
+                    },
+                    {
+                        "fileName": "images/quality/solution3-2.jpg",
+                        "figcaption": "品質異常警示，異常清單追蹤"
+                    }
+                ],
+                "linkText": "還有更多產品履歷方案說明"
+            }
+        }
+    ],
+    "control": [
+        {
+            "title": "排程管理",
+            "troubled": {
+                "desc": "不管怎麼排,產能利用率總是無法達到老闆的期望..",
+                "pains": [
+                    {
+                        "title": "生管",
+                        "hoverText": "人工排產無法滿足多重連批(品號、模具、機台及顏色…等)複雜條件，難道excel +人工是我唯一的選擇嗎？",
+                        "color": "#6c9655",
+                        "imgSrc": "images/control/hoverBox-icon1.png"
+                    },
+                    {
+                        "title": "廠長",
+                        "hoverText": "排程未達最佳化，導致現場有些製程塞車有些製程閒置，難怪利用率不佳",
+                        "color": "#8d6433",
+                        "imgSrc": "images/control/hoverBox-icon2.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "明明產能未滿載，但訂單還是排不進去，這樣要如何能接更多的訂單...",
+                        "color": "#ef8570",
+                        "imgSrc": "images/control/hoverBox-icon3.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作排程管理，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/control/solution1-1.jpg",
+                        "figcaption": "認近期是否有訂單可能延遲出貨，分析延遲原因即提出行動方案"
+                    },
+                    {
+                        "fileName": "images/control/solution1-2.jpg",
+                        "figcaption": "設備負荷"
+                    }
+                ],
+                "linkText": "還有更多排程管理說明"
+            }
+        },
+        {
+            "title": "生產進度",
+            "troubled": {
+                "desc": "明明生產排程都已有規劃，但客戶詢問訂單是否可以如期交貨卻總是說不準...",
+                "pains": [
+                    {
+                        "title": "現場",
+                        "hoverText": "廠內生產進度現場會填報工單，隔天才由助理輸入，根本不夠即時，外包進度更是難以掌握",
+                        "color": "#15769a",
+                        "imgSrc": "images/control/hoverBox-icon4.png"
+                    },
+                    {
+                        "title": "生管",
+                        "hoverText": "生產進度無法掌握,不但會影響排程的精準度, 也無法掌握每張訂單正確的交期",
+                        "color": "#6c9655",
+                        "imgSrc": "images/control/hoverBox-icon5.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "客戶說再不給交期，下次不給單了....",
+                        "color": "#ef8570",
+                        "imgSrc": "images/control/hoverBox-icon6.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作生產進度，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/control/solution2-1.jpg",
+                        "figcaption": "訂單規劃總表"
+                    },
+                    {
+                        "fileName": "images/control/solution2-2.jpg",
+                        "figcaption": "插單模擬結果分析"
+                    }
+                ],
+                "linkText": "還有更多生產進度方案說明"
+            }
+        },
+        {
+            "title": "機台參數監控",
+            "troubled": {
+                "desc": "機台運作正常，但品質不良率很高，重工重做問題嚴重",
+                "pains": [
+                    {
+                        "title": "現場",
+                        "hoverText": "設備生產參數(模溫、溫度、溼度、射壓、射速…等)未有核對與如實記錄，常做出品質不良的產品。 產品不同，參數設定也不同，如果在作業前能有系統提示或警示就好了",
+                        "color": "#15769a",
+                        "imgSrc": "images/control/hoverBox-icon6.png"
+                    },
+                    {
+                        "title": "總經理",
+                        "hoverText": "增加加班工時、材料浪費，成本增加，造成報價提高是要怎麼競爭?",
+                        "color": "#ef8570",
+                        "imgSrc": "images/control/hoverBox-icon7.png"
+                    }
+                ]
+            },
+            "solution": {
+                "desc": "作機台參數監控，<br>其實您可以這樣管",
+                "figures": [
+                    {
+                        "fileName": "images/control/solution3-1.jpg",
+                        "figcaption": "異常監控－可以怎麼做？"
+                    },
+                    {
+                        "fileName": "images/control/solution3-2.jpg",
+                        "figcaption": "圖形化不良原因分類"
+                    }
+                ],
+                "linkText": "更多機台參數監控說明"
+            }
+        }
+    ]
 }

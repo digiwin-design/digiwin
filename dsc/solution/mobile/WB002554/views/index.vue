@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <main-header>
+        <main-header url="https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=2968">
             <template slot="content">
                 <h1>別讓回收料拖垮品質及企業信譽</h1>
                 <p>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="header">
+        <div class="header" @click="linkTo('https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=2968')">
             <div class="container">
                 <div>
                     <h1>{{content.title}}</h1>
@@ -63,6 +63,11 @@ module.exports = {
 
             return this.content.progressBars;
         },
+    },
+    methods: {
+        linkTo: function (url) {
+            window.open(url);
+        }
     },
     mounted: function () {
         if (typeof (NProgress) !== 'undefined') {

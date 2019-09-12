@@ -1,5 +1,5 @@
 <template>
-    <div class="sectionTitle" :style="{'padding-top':paddingTop, 'padding-bottom':paddingBottom}">
+    <div class="sectionTitle" :style="{ 'padding-top': paddingTop, 'padding-bottom': paddingBottom }">
         <h1 v-html="title"></h1>
         <p v-show="desc" v-html="desc"></p>
     </div>

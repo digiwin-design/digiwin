@@ -1,6 +1,6 @@
 <template>
     <div class="demand">
-        <main-header>
+        <main-header url="https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=2968">
             <template slot="content">
                 <h1>同業需求</h1>
             </template>
