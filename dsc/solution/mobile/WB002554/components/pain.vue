@@ -1,12 +1,12 @@
 <template>
     <div
         class="pain"
-        :class="[customClass, {'fadeIn': fadeIn}, {'arrow': arrow}]"
-        :style="{'background-color': bgColor}"
+        :class="[customClass, { 'fadeIn': fadeIn }, { 'arrow': arrow }]"
+        :style="{ 'background-color': bgColor, height: height }"
         onclick
     >
         <img :src="content.imgSrc" alt="">
-        <p class="pain-title">{{content.title}}</p>
+        <p class="pain-title">{{ content.title }}</p>
         <div class="pain-hover" :style="{ 'background-color': hoverBgColor }">
             <p v-html="content.hoverText"></p>
         </div>
@@ -29,6 +29,10 @@ module.exports = {
         content: {
             type: Object,
             required: true
+        },
+        height: {
+            type: String,
+            default: '224px'
         }
     },
     computed: {

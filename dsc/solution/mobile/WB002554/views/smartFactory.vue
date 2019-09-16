@@ -26,7 +26,7 @@
         <collapse-and-tabs :content="smartFactory.content" :anchor-idx="anchorIdx"></collapse-and-tabs>
 
         <div class="smartFactory-link container">
-            <router-link :to="{ name: 'control' }">
+            <router-link :to="{ name: 'control', params: { tab: 5 } }">
                 <span>
                     除了智慧現場管理
                     <br />還可以

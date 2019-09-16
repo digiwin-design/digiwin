@@ -14,7 +14,7 @@
                     desc="面對少量多樣市場 ,只要調整接單模式就好嗎? 偏偏,接單模式調整後 問題仍持續在發生.."
                     padding-bottom="1em"
                 ></section-title>
-                <pain :content="issue.pain"></pain>
+                <pain :content="issue.pain" height="490px"></pain>
             </div>
         </article>
 
@@ -56,7 +56,7 @@
                     <img src="images/issue/section2-illust3.png" alt="">
                     <figcaption>▲ 方案圖</figcaption>
                 </figure>
-                <router-link to="cost" class="more">
+                <router-link :to="{ name: 'cost', params: { tab: 4 } }" class="more">
                     <span>還有更多<strong>塑膠自動排程與<br>少量多樣因應相關資訊</strong></span>
                 </router-link>
             </div>
@@ -82,7 +82,7 @@
                     <p>為了因應客戶<strong>少量多樣</strong>需求，從原先OEM代工模式轉向ODM協同設計，掌握DFM(Design for Manafacturing)原則，提供客戶從設計圖面到產品製造的完整方案.....</p>
                 </section>
             </div>
-            <router-link to="case">還有更多<strong>成功案例</strong></router-link>
+            <router-link :to="{ name: 'case', params: { tab: 7 } }">還有更多<strong>成功案例</strong></router-link>
         </article>
 
         <article class="section4">

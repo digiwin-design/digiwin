@@ -17,7 +17,7 @@
                     <img :src="`images/demand/collapse-illust${idx+1}.jpg`" alt />
                     <figcaption>▲ 解決方案圖</figcaption>
                 </figure>
-                <router-link :to="{ name: item.linkUrl }">
+                <router-link :to="{ name: item.linkUrl, params: { tab: item.tab } }">
                     <i class="material-icons">arrow_forward</i>
                     {{item.linkText}}
                 </router-link>

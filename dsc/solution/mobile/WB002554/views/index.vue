@@ -30,10 +30,10 @@
                         <li>少量多樣接單，塑膠產業同業們怎麼做?</li>
                         <li>少量多樣接單，內部作業流程與生產製造如何運作?</li>
                     </ul>
-                    <a href="/tw/dsc/solution/WB002554/WB00255401_control.html">
+                    <router-link :to="{ name: 'control', params: { tab: 5 } }">
                         <i class="material-icons">arrow_forward</i>
                         因應複雜多變的產業環境，您可以這樣作!
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </article>
@@ -71,10 +71,10 @@
                     padding-bottom="1em"
                 ></section-title>
                 <img src="images/index/section4-illust.png" alt />
-                <a href="/tw/dsc/solution/WB002554/WB00255401_control.html">
+                <router-link :to="{ name: 'control', params: { tab: 5 } }">
                     <i class="material-icons">arrow_forward</i>
                     因應複雜多變的產業環境，您可以這樣作!
-                </a>
+                </router-link>
             </div>
         </article>
 
