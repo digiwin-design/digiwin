@@ -47,10 +47,11 @@ function getParameterByName(name) {
         .then(res => res.json())
         .then(res => {
             let result = res.list.find(function (item) {
+                item[device] = item[device].replace(/(.html|.htm)/, '');
                 let regex = new RegExp(item[device] + '$');
-                return currentUrl.search(regex) !== -1;
+                return regex.test(currentUrl);
             });
-        
+
             // 如比對成功進行轉址
             if (result && device === 'desktop') {
                 location.replace(result.mobile);
