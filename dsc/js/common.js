@@ -43,7 +43,7 @@ function getParameterByName(name) {
     document.querySelector('html').classList.add(md.os());
 
     // 比對網址
-    fetch('/tw/dsc/assets/deviceRedirect.json')
+    fetch('/tw/dsc/assets/awd-list.json')
         .then(res => res.json())
         .then(res => {
             let result = res.list.find(function (item) {
