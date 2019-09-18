@@ -52,7 +52,7 @@
                         this.isActive = true;
                         
                         // 依據選單高度設定main上方間距
-                        window.addEventListener('load', this.resizeHandler);
+                        window.addEventListener('load', this.resizeHandler); // 此行保留以相容舊寫法，應在各頁main顯示後(資料取得後)處理
                         window.addEventListener('resize', this.resizeHandler);
                         
                         // 設定頁面捲動時的錨點樣式

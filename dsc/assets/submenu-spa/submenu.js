@@ -51,7 +51,7 @@
                         this.isActive = true;
 
                         // 依據選單高度設定main上方間距
-                        window.addEventListener('load', this.resizeHandler);
+                        window.addEventListener('load', this.resizeHandler); // 此行保留以相容舊寫法，應在各頁main顯示後(資料取得後)處理
                         window.addEventListener('resize', this.resizeHandler);
 
                         // 設定頁面捲動時的錨點樣式
@@ -128,7 +128,7 @@
                     $('html, body').animate({ scrollTop: finalPos });
                     this.closeDropdownHandler();
                 }
-                else if (url && anchor) { // 已棄用，應使用各頁面的 router.beforeEach 處理 (如製造業)
+                else if (url && anchor) { // 已棄用，應使用各頁面的router.beforeEach處理(如製造業)
                     window.open(`${url}`, '_self');
 
                     // 切換頁面後延遲兩秒移動至錨點
