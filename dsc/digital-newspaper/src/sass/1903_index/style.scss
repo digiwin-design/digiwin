@@ -182,6 +182,9 @@ main {
         @include bg('1903_index/section2-bg.jpg', 50% 100%);
         padding-bottom: 25px;
         background-color: #fbeeed;
+        @media (max-width: $content-width) {
+            background-image: none;
+        }
         .boxs {
             margin-top: 37px;
             margin-bottom: 57px;
@@ -214,17 +217,29 @@ main {
                 }
             }
         }
-        .video {
-            max-width: percentage(800/1200);
-        }
         section:last-of-type {
+            .content {
+                max-width: percentage(800/1200);
+                @media (max-width: $content-width) {
+                    max-width: none;
+                }
+            }
             p {
                 margin: 1em 0;
-                max-width: 800px;
+                @media (max-width: $content-width) {
+                    @include bg('1903_index/section2-bg-s.png', 100% 100%);
+                    margin-bottom: 0;
+                    padding-bottom: 300px;
+                }
+                @media (max-width: 604px) {
+                    padding-bottom: percentage(300/604);
+                    background-size: contain;
+                }
             }
             a {
+                position: relative;
                 display: flex;
-                margin-top: 25px;
+                margin: 25px auto 0;
                 max-width: 590px;
                 height: 70px;
                 background-color: #910619;
@@ -233,6 +248,20 @@ main {
                 font-size: 30px;
                 justify-content: center;
                 align-items: center;
+                @media (max-width: $tablet-width) {
+                    font-size: 24px;
+                }
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    height: 0;
+                    border-width: 0 0 70px 23px;
+                    border-style: solid;
+                    border-color: transparent transparent #fbeeed transparent;
+                    content: '';
+                }
             }
             i {
                 font-size: 1.8em;
