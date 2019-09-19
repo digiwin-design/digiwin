@@ -14,31 +14,14 @@ html(lang='zh-Hant-TW')
         script(src='https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&flags=gated')
         script(src='/tw/dsc/assets/modernizr-custom.js')
         script(src='/tw/dsc/assets/mobile-detect.js')
-        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer='')
+        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer)
         script(src="/tw/dsc/assets/smoothscroll.js", defer)
         script(src="/tw/dsc/assets/axios.min.js")
         script(src="/tw/dsc/assets/vuejs/vue-all-dev.js")
         script(src='/tw/dsc/js/common.min.js')
-
-        //- submenu
-        style.
-            .header-box {
-                height: auto;
-            }
-            .page-submenu {
-                position: fixed;
-                z-index: 28;
-                width: 100%;
-            }
     body
-        //- submenu
-        .header-box
-            header
-
-        // 以下為後台上稿內容
+        // 後台上稿內容開始
         //- form
-        link(rel='stylesheet', href='/tw/dsc/css/Eform/form-rwd.css')
-        script(src='/tw/dsc/js/Eform/form.js', defer)
         link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
         script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
 
@@ -51,14 +34,14 @@ html(lang='zh-Hant-TW')
         script(src="assets/swiper.js", defer)
         script(src="assets/vue-awesome-swiper.js", defer)
 
-        script(src="assets/lodash.min.js", defer)
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
         link(rel='stylesheet', href='/tw/dsc/css/reboot.css')
-        script(src='js/common.min.js', defer)
+        script(src="assets/color-converter.js", defer)
+        script(src="assets/lodash.min.js", defer)
+        script(src='js/all.min.js', defer)
         
         block includes
         
         main(v-cloak, v-if='result')
             block content
-            
-        include partial/contact.html
-        include ../../../template/form_component
+        // 後台上稿內容結束

@@ -204,10 +204,10 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        height: image-height($imgS);
+        min-height: image-height($imgS);
         justify-content: center;
         @media (min-width: $tablet-width + 1) {
-            height: image-height($img);
+            min-height: image-height($img);
         }
     }
 }

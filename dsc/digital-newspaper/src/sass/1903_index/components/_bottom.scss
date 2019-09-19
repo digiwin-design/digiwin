@@ -1,0 +1,37 @@
+main .bottom {
+    $breakpoint: 900px;
+    @include bg('1903_index/top-bg.jpg');
+    height: 150px;
+    border-top: 5px solid #42a5d0;
+    @media (max-width: $breakpoint) {
+        padding: 1em 0;
+        height: auto;
+        background-image: image-url('1903_index/top-bg-s.jpg');
+        background-position: 0 0;
+        background-size: cover;
+    }
+    .container {
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        @media (max-width: $tablet-width) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    article {
+        font-size: 18px;
+        line-height: 26px;
+        @media (max-width: $breakpoint) {
+            padding-right: 350px;
+        }
+        @media (max-width: $tablet-width) {
+            margin-bottom: 1em;
+            padding-right: 0;
+        }
+    }
+    h1 {
+        margin-bottom: 10px;
+    }
+}

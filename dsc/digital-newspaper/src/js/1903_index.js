@@ -1,28 +1,40 @@
-Vue.use(VueAwesomeSwiper);
-httpVueLoader.register(Vue, 'components/1902/Player.vue');
-httpVueLoader.register(Vue, 'components/1902/HoverBox.vue');
-httpVueLoader.register(Vue, 'components/1902/contact.vue');
+httpVueLoader.register(Vue, 'components/top.vue');
+httpVueLoader.register(Vue, 'components/bottom.vue');
+httpVueLoader.register(Vue, 'components/sub-links.vue');
+httpVueLoader.register(Vue, 'components/1903_index/share-links.vue');
+httpVueLoader.register(Vue, 'components/1903_index/hover-box.vue');
 
 const store = new Vuex.Store({
     state: {
         isMobile: false,
+        result: null,
     },
     mutations: {
         updateDevice(state, payload) {
             state.isMobile = payload;
+        },
+        setData(state, payload) {
+            state.result = payload;
+        },
+    },
+    actions: {
+        getData(context) {
+            axios.get('db.json').then(res => {
+                context.commit('setData', res.data);
+            });
         },
     }
 });
 
 new Vue({
     el: 'main',
-    data: {
-        result: null,
-    },
     computed: {
         isMobile() {
             return store.state.isMobile;
-        }
+        },
+        result() {
+            return store.state.result;
+        },
     },
     methods: {
         mediaSensor() {
@@ -34,17 +46,9 @@ new Vue({
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);
         },
-        getData() {
-            axios.get('db.json').then(res => {
-                this.result = res.data['1902'];
-            });
-        },
-        slideToggle(evt) {
-            $(evt.target).toggleClass('active').next().slideToggle();
-        }
     },
     created() {
-        this.getData();
+        store.dispatch('getData');
     },
     mounted() {
         this.mediaSensor();

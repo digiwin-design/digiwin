@@ -1,0 +1,250 @@
+@import '../common';
+@import 'components';
+
+main {
+    font-size: 22px;
+    line-height: 36px;
+    .shareLinks1 {
+        padding-top: 24px;
+        @media (max-width: $tablet-width) {
+            display: none;
+        }
+        .shareLinks {
+            justify-content: flex-end;
+        }
+    }
+    .shareLinks2 {
+        padding: 30px 0;
+        .shareLinks {
+            justify-content: center;
+        }
+    }
+    .section-title {
+        position: relative;
+        margin-bottom: .5em;
+        text-align: center;
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            height: 4px;
+            background-color: #000;
+            content: '';
+            transform: translateY(-50%);
+        }
+        p {
+            position: relative;
+            display: inline-flex;
+            padding: 0 15px;
+            height: 75px;
+            background-color: #000;
+            color: #fff;
+            letter-spacing: getLetterSpacing(25);
+            font-weight: bold;
+            font-size: 46px;
+            justify-content: center;
+            align-items: center;
+        }
+        strong {
+            color: #fff45c;
+        }
+    }
+    .section-subtitle {
+        margin-top: .8em;
+        margin-bottom: .3em;
+        color: #910619;
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 1.3;
+    }
+    .section-desc {
+        margin-bottom: 1.5em;
+        text-align: center;
+        @media (max-width: $tablet-width) {
+            br {
+                display: none;
+            }
+        }
+    }
+    section > h1 {
+        display: flex;
+        padding: 5px 0;
+        min-height: 63px;
+        border-width: 3px 2px 2px 2px;
+        border-style: solid;
+        border-color: #910619;
+        color: #910619;
+        text-align: center;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 1.3;
+        justify-content: center;
+        align-items: center;
+    }
+    .boxs {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $content-width) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .header {
+        @include headerBg('1903_index/header-bg.jpg', '1903_index/header-bg-s.jpg');
+        @media (max-width: $tablet-width) {
+            background-size: cover;
+        }
+        .container {
+            align-items: flex-start;
+            @media (max-width: $tablet-width) {
+                padding-top: 2em;
+                padding-bottom: 1.5em;
+            }
+        }
+        h2 {
+            line-height: 94px;
+            @media (max-width: $tablet-width) {
+                line-height: 70px;
+            }
+            mark {
+                display: inline-block;
+                padding: 0 16px;
+                height: 85px;
+                background-color: #000;
+                color: #fff;
+                font-weight: bold;
+                font-size: 60px;
+                line-height: 85px;
+                @media (max-width: $tablet-width) {
+                    display: inline;
+                    padding-right: 0;
+                    padding-left: 0;
+                    height: 64px;
+                    font-size: 45px;
+                    line-height: 64px;
+                }
+            }
+        }
+        h3 {
+            display: inline-block;
+            margin-bottom: .7em;
+            border-bottom: 4px solid #fff45c;
+            color: #fff45c;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 1.5;
+        }
+        p {
+            color: #fff;
+            font-weight: bold;
+            @media (max-width: $tablet-width) {
+                margin-top: auto;
+                font-size: 28px;
+                line-height: 42px;
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+    & > article {
+        padding: 55px 0;
+    }
+    .section1 {
+        padding-top: 17px;
+        @media (max-width: $tablet-width) {
+            padding-top: 55px;
+        }
+        .section-title {
+            margin-bottom: 50px;
+        }
+        .hoverBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: $content-width) {
+                & + .hoverBox {
+                    margin-top: 15px;
+                }
+            }
+            &-hover {
+                padding: 1.5em;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 38px;
+            }
+        }
+    }
+    .section2 {
+        @include bg('1903_index/section2-bg.jpg', 50% 100%);
+        padding-bottom: 25px;
+        background-color: #fbeeed;
+        .boxs {
+            margin-top: 37px;
+            margin-bottom: 57px;
+        }
+        .hoverBox + .hoverBox {
+            @media (max-width: $content-width) {
+                margin-top: 15px;
+            }
+        }
+        .hoverBox-hover {
+            padding: 2.5em 1.5em;
+            p {
+                font-weight: bold;
+                &:nth-child(1) {
+                    margin-bottom: 13px;
+                    font-size: 36px;
+                    line-height: 1;
+                    &::after {
+                        display: block;
+                        margin-top: 16px;
+                        width: 90px;
+                        height: 2px;
+                        background-color: #fff;
+                        content: '';
+                    }
+                }
+                &:nth-child(2) {
+                    font-size: 24px;
+                    line-height: 38px;
+                }
+            }
+        }
+        .video {
+            max-width: percentage(800/1200);
+        }
+        section:last-of-type {
+            p {
+                margin: 1em 0;
+                max-width: 800px;
+            }
+            a {
+                display: flex;
+                margin-top: 25px;
+                max-width: 590px;
+                height: 70px;
+                background-color: #910619;
+                color: #fff45c;
+                font-weight: bold;
+                font-size: 30px;
+                justify-content: center;
+                align-items: center;
+            }
+            i {
+                font-size: 1.8em;
+            }
+        }
+    }
+    .section4 {
+        border-bottom: 2px solid #dcdcdc;
+        .section-title p::before {
+            @include imgBg('1903_index/digiwinTV.png', true);
+            margin-right: 7px;
+            content: '';
+        }
+    }
+}

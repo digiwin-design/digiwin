@@ -1,0 +1,11 @@
+<template>
+    <div class="bottom">
+        <div class="container">
+            <article>
+                <h1><img src="images/1903_index/logo-bottom.png" alt="數位轉型專題報"></h1>
+                <p>企業數位化轉型就像一場馬拉松，《數位轉型專題報》作為途中補給站，<br>只給您必要的養分，不只是議題報導的彙總，更是融合歸納的重點與觀點！</p>
+            </article>
+            <sub-links></sub-links>
+        </div>
+    </div>
+</template>
