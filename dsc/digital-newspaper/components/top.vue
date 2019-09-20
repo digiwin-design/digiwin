@@ -14,3 +14,9 @@
         </div>
     </div>
 </template>
+
+<script>
+module.exports = {
+    name: 'Top'
+}
+</script>

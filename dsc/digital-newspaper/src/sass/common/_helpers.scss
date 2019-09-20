@@ -207,7 +207,7 @@
         min-height: image-height($imgS);
         justify-content: center;
         @media (min-width: $tablet-width + 1) {
-            min-height: image-height($img);
+            height: image-height($img);
         }
     }
 }

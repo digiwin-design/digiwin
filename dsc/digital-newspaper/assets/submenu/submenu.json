@@ -18,5 +18,15 @@
                 "url": "https://www.digiwin.com/tw/enewspaper.html"
             }
         ]
+    },
+    {
+        "id": "1903_index",
+        "title": "數位轉型專題報 / 二代接班",
+        "menus": [
+            {
+                "text": "訂閱",
+                "url": "https://www.digiwin.com/tw/enewspaper.html"
+            }
+        ]
     }
 ]

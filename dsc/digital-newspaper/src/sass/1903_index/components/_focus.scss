@@ -1,0 +1,47 @@
+main .focus {
+    position: relative;
+    padding: 0 20px;
+    width: 290px;
+    height: 330px;
+    background-color: #fff;
+    @media (max-width: $tablet-width) {
+        height: 370px;
+    }
+    h1 {
+        width: 175px;
+        height: 60px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 60px;
+        transform: translate(-20px, -15px);
+    }
+    p {
+        @media (max-width: $tablet-width) {
+            font-size: 27px;
+            line-height: 42px;
+        }
+    }
+    a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        padding-left: 20px;
+        padding-right: 10px;
+        width: 100%;
+        height: 80px;
+        background-color: #910619;
+        color: #fff45c;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 28px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    i {
+        font-size: 1.5em;
+    }
+}

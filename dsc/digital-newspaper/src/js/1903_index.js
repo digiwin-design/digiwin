@@ -3,6 +3,7 @@ httpVueLoader.register(Vue, 'components/bottom.vue');
 httpVueLoader.register(Vue, 'components/sub-links.vue');
 httpVueLoader.register(Vue, 'components/1903_index/share-links.vue');
 httpVueLoader.register(Vue, 'components/1903_index/hover-box.vue');
+httpVueLoader.register(Vue, 'components/1903_index/focus.vue');
 
 const store = new Vuex.Store({
     state: {
@@ -33,7 +34,7 @@ new Vue({
             return store.state.isMobile;
         },
         result() {
-            return store.state.result;
+            return store.state.result && store.state.result['1903'];
         },
     },
     methods: {
