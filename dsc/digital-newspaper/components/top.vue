@@ -4,11 +4,11 @@
             <div class="top-title">
                 <h1>
                     <picture>
-                        <source srcset="images/1903_index/logo-s.png" media="(max-width:900px)">
-                        <img src="images/1903_index/logo.png" alt="數位轉型專題報">
+                        <source srcset="images/logo-s-beta.png" media="(max-width:900px)">
+                        <img src="images/logo-beta.png" alt="數位轉型專題報">
                     </picture>
                 </h1>
-                <p>2019.09</p>
+                <p>{{date}}</p>
             </div>
             <sub-links></sub-links>
         </div>
@@ -17,6 +17,12 @@
 
 <script>
 module.exports = {
-    name: 'Top'
+    name: 'Top',
+    props: {
+        date: {
+            type: String,
+            required: true
+        }
+    }
 }
 </script>

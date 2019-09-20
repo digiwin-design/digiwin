@@ -21,7 +21,7 @@ module.exports = {
     computed: {
         lineText: function () {
             // %0d%0a 為換行字元
-            return '分享專題報，讓知識因共享更深化《美中貿易戰搶商機! 產線回流關鍵解析》';
+            return '分享專題報，讓知識因共享更深化《美中貿易戰搶商機! 產線回流關鍵解析》%0d%0a訂閱傳送門：(網址待定)';
         },
         mailSubject: function () {
             return '分享專題報，讓知識因共享更深化《美中貿易戰搶商機! 產線回流關鍵解析》';

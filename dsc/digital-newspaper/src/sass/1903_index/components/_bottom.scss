@@ -1,12 +1,12 @@
 main .bottom {
     $breakpoint: 900px;
-    @include bg('1903_index/top-bg.jpg');
+    @include bg('top-bg.jpg');
     height: 150px;
     border-top: 5px solid #42a5d0;
     @media (max-width: $breakpoint) {
         padding: 1em 0;
         height: auto;
-        background-image: image-url('1903_index/top-bg-s.jpg');
+        background-image: image-url('top-bg-s.jpg');
         background-position: 0 0;
         background-size: cover;
     }
