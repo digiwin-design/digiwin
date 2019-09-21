@@ -25,9 +25,7 @@ axios.get('/tw/dsc/assets/lineMember/form.json')
                 getParameterByName(name) {
                     let url = new URL(location.href);
                     let params = url.searchParams;
-                    for (let pair of params) {
-                        if (pair[0] === name) return pair[1];
-                    }
+                    return params.get(name);
                 },
                 cleanLS() {
                     localStorage.removeItem('lineToken');
@@ -125,7 +123,7 @@ axios.get('/tw/dsc/assets/lineMember/form.json')
                     $('.list-case-show').append('<div class="articleCover"><a href @click.prevent="login">登入看更多</a></div>');
         
                     // 登出按鈕，測試用
-                    // $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
+                    $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
                 },
                 saveData() {
                     let data = {
@@ -134,6 +132,8 @@ axios.get('/tw/dsc/assets/lineMember/form.json')
                     };
                     const params = new URLSearchParams();
                     params.append('', JSON.stringify(data));
+                    console.log(params);
+                    console.log(data);
                     axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save', params)
                         .then(res => {
                             console.log(data);

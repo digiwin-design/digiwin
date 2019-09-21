@@ -2,9 +2,7 @@
 function getParameterByName(name) {
     let url = new URL(location.href);
     let params = url.searchParams;
-    for (let pair of params) {
-        if (pair[0] === name) return pair[1];
-    }
+    return params.get(name);
 }
 
 // 轉址
