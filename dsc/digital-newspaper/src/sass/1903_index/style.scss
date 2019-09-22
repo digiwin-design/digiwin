@@ -371,16 +371,19 @@ main {
             }
         }
         &-illust {
-            @include imgBg('1903_index/section4-illust.jpg', false, true);
-            background-position: 50%;
-            background-size: contain;
-            background-repeat: no-repeat;
-            box-shadow: 20px -15px #ecd9d9;
-            @media (max-width: $tablet-width) {
-                margin: 0 auto 1em;
-            }
-            @media (max-width: 480px) {
-                box-shadow: none;
+            position: relative;
+            margin: 0 auto 1em;
+            max-width: 378px;
+            &::before {
+                position: absolute;
+                top: -15px;
+                right: -20px;
+                z-index: -1;
+                padding-top: percentage(256/378);
+                width: 100%;
+                height: 0;
+                background-color: #ecd9d9;
+                content: '';
             }
         }
     }
