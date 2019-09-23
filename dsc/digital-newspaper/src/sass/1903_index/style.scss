@@ -93,8 +93,6 @@ main {
         margin-bottom: 1.5em;
         text-align: center;
         @media (max-width: $tablet-width) {
-            font-size: 28px;
-            line-height: 42px;
             br {
                 display: none;
             }
@@ -283,10 +281,6 @@ main {
                     margin-bottom: 0;
                     padding-bottom: 300px;
                 }
-                @media (max-width: $tablet-width) {
-                    font-size: 28px;
-                    line-height: 42px;
-                }
                 @media (max-width: 604px) {
                     padding-bottom: percentage(300/604);
                     background-size: contain;
@@ -361,13 +355,6 @@ main {
                 width: calc(100% - 440px);
                 @media (max-width: $tablet-width) {
                     width: 100%;
-                }
-                p {
-                    font-size: 22px;
-                    line-height: 42px;
-                    @media (max-width: $tablet-width) {
-                        font-size: 28px;
-                    }
                 }
                 a {
                     @include bigBtn(#fff);
