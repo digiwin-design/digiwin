@@ -157,12 +157,16 @@
 - Method：POST
 - Request Sample
 ```js
-{
-    '': {
-        lineId: 'U807f121a6ca7f7b808a96e23d5517b8c', // LINE ID
-        source: 'https://www.digiwin.com/tw/dsc/dev/demo/line_member' // 觀看來源網頁位址
-    } 
-}
+let data = {
+    lineId: 'U807f121a6ca7f7b808a96e23d5517b8c', // LINE ID
+    source: 'https://www.digiwin.com/tw/dsc/dev/demo/line_member' // 觀看來源網頁位址
+};
+const params = new URLSearchParams();
+params.append('', JSON.stringify(data));
+axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save', params)
+    .then(res => {
+        // get result
+    });
 ```
 - Response Sample
 ```json
@@ -176,34 +180,38 @@
 - Method：POST
 - Request Sample
 ```js
-{
-    '': {
-        lineId: "aabbcc123", // LINE ID
-        lineName: "UserName", // LINE 名稱
-        realName: "TheReal", // 真實姓名
-        eMail: "aaa@gmail.com", // EMail
-        mobile: "0912345678", // 行動電話
-        fbId: "", // Facebook ID
-        fbName: "", // Facebook 名稱
-        companyCode: "28682266", // 統一編號
-        companyName: "鼎新", // 公司名稱
-        job: "", // 職稱
-        acpCusNo: "999999999", // 潛客代號
-        memEDM: [ // 訂閱EDM
-            {
-                orderEDM: "企業數位化轉型", // EDM代號
-                source: "https:// www.digiwin.com/tw" // 訂閱來源網頁位址
-            }
-        ],
-        memEvent: [ // 活動報名
-            {
-                eventDate: "2019/06/06", // 活動日期
-                eventCode: "28682266", // 活動代號
-                eventName: "特別活動" // 活動名稱
-            }
-        ]
-    }
-}
+let data = {
+    lineId: "aabbcc123", // LINE ID
+    lineName: "UserName", // LINE 名稱
+    realName: "TheReal", // 真實姓名
+    eMail: "aaa@gmail.com", // EMail
+    mobile: "0912345678", // 行動電話
+    fbId: "", // Facebook ID
+    fbName: "", // Facebook 名稱
+    companyCode: "28682266", // 統一編號
+    companyName: "鼎新", // 公司名稱
+    job: "", // 職稱
+    acpCusNo: "999999999", // 潛客代號
+    memEDM: [ // 訂閱EDM
+        {
+            orderEDM: "企業數位化轉型", // EDM代號
+            source: "https:// www.digiwin.com/tw" // 訂閱來源網頁位址
+        }
+    ],
+    memEvent: [ // 活動報名
+        {
+            eventDate: "2019/06/06", // 活動日期
+            eventCode: "28682266", // 活動代號
+            eventName: "特別活動" // 活動名稱
+        }
+    ]
+};
+const params = new URLSearchParams();
+params.append('', JSON.stringify(data));
+axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/member/Save', params)
+    .then(function (res) {
+        // get result
+    });
 ```
 - Response Sample
 ```json
