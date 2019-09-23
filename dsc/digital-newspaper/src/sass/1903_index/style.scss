@@ -86,7 +86,7 @@ main {
         color: #910619;
         text-align: center;
         font-weight: bold;
-        font-size: 40px;
+        font-size: 36px;
         line-height: 1.3;
     }
     .section-desc {
@@ -115,7 +115,7 @@ main {
         justify-content: center;
         align-items: center;
         @media (max-width: $tablet-width) {
-            font-size: 36px;
+            font-size: 32px;
         }
     }
     .boxs {
@@ -143,7 +143,8 @@ main {
         h2 {
             line-height: 94px;
             @media (max-width: $tablet-width) {
-                line-height: 70px;
+                margin-bottom: 10px;
+                line-height: 1.5;
             }
             mark {
                 display: inline-block;
@@ -159,8 +160,8 @@ main {
                     padding-right: 0;
                     padding-left: 0;
                     height: 64px;
-                    font-size: 45px;
-                    line-height: 64px;
+                    font-size: 36px;
+                    line-height: 1.4;
                 }
             }
         }
@@ -172,14 +173,17 @@ main {
             font-weight: bold;
             font-size: 40px;
             line-height: 1.5;
+            @media (max-width: $tablet-width) {
+                font-size: 35px;
+            }
         }
         p {
             width: 100%;
             color: #fff;
             font-weight: bold;
             @media (max-width: $tablet-width) {
-                font-size: 28px;
-                line-height: 42px;
+                font-size: 23px;
+                line-height: 1.5;
                 br {
                     display: none;
                 }
@@ -359,8 +363,11 @@ main {
                     width: 100%;
                 }
                 p {
-                    font-size: 28px;
+                    font-size: 22px;
                     line-height: 42px;
+                    @media (max-width: $tablet-width) {
+                        font-size: 28px;
+                    }
                 }
                 a {
                     @include bigBtn(#fff);
