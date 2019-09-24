@@ -72,7 +72,7 @@
                         <textarea id="contact-query" cols='40' placeholder="請在這裡描述您的需求(500字以內)：" rows='4' class="" maxlength="500"></textarea>
                     </div>
                     <div class="inforCheck">
-                        <label for="dm_ask"> <input name="information" class="information" id="dm_ask" type="checkbox" value="資料索取">索取 ERP 相關資料</label> 
+                        <label for="dm_ask"> <input name="information" class="information" id="dm_ask" type="checkbox" value="資料索取">索取進銷存相關資料</label> 
                     </div>
                     <hr>
                     <div class="verifica">
