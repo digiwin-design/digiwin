@@ -7,7 +7,7 @@
                 <img src="images/email-sub.png" alt />
             </picture>
         </a>
-        <a href="https://acho.tw/acho/r/2kaJT" target="_blank">
+        <a href="https://acho.tw/acho/f/D7NlU" target="_blank">
             <picture>
                 <source srcset="images/line-sub-s-beta.png" media="(max-width:900px)" />
                 <img src="images/line-sub.png" alt />
