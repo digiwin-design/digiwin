@@ -12,7 +12,7 @@
         mounted: function () {
             axios.get('/tw/dsc/assets/EventEnd/db.json')
                 .then(function (res) {
-                    this.urlMap = res.data.urlMap;
+                    this.urlMap = res.data;
                 }.bind(this));
         },
     });

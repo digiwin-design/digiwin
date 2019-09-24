@@ -1,34 +1,50 @@
-# 共用元件/檔案
+# 主網站元件/檔案
 | 名稱 | 位置 | 備註
 | -------- | -------- | --------
-| 右下角浮動廣告 | tw\dsc\assets\ad\ |
-| 活動結束 Banner | tw\dsc\assets\EventEnd\ |
-| 各行各業區塊 | tw\dsc\assets\index-industry\ | 首頁使用
-| 各行各業區塊 | tw\dsc\assets\industry-list\ | IT 編列預算使用
-| 各行各業區塊 | tw\dsc\assets\industry-list-v2\ | 行業使用
-| LINE 登入 | tw\dsc\assets\lineMember\ |
-| 繁/簡體站跳轉提示 | tw\dsc\assets\popup\ |
-| 次級選單 | tw\dsc\assets\submenu\ |
-| 次級選單手機版 | tw\dsc\assets\submenu-spa\ | 
-| 全站共用 JS | tw\dsc\js\common.min.js<br>(Source: tw\dsc\js\common.js ) |
-| 後台上稿用重置樣式 | tw\dsc\css\reboot.css<br>(Source: tw\dsc\css\reboot.scss) |
-| 研討會樣版 | tw\dsc\template\seminar\ |
+| 右下角浮動廣告 | /tw/dsc/assets/ad/ |
+| 活動結束 Banner | /tw/dsc/assets/EventEnd/ |
+| 各行各業區塊 | /tw/dsc/assets/index-industry/ | 首頁使用
+| 各行各業區塊 | /tw/dsc/assets/industry-list/ | IT 編列預算使用
+| 各行各業區塊 | /tw/dsc/assets/industry-list-v2/ | 行業使用
+| LINE 登入&訂閱 | /tw/dsc/assets/lineMember/ |
+| 繁/簡體站跳轉提示 | /tw/dsc/assets/popup/ |
+| 次級選單 | /tw/dsc/assets/submenu/ |
+| 次級選單手機版 | /tw/dsc/assets/submenu-spa/ | 
+| 全站共用 JS | /tw/dsc/js/common.min.js<br>(Source: /tw/dsc/js/common.js ) |
+| 後台上稿用重置樣式 | /tw/dsc/css/reboot.css<br>(Source: /tw/dsc/css/reboot.scss) |
+| 研討會樣版 | /tw/dsc/template/seminar/ |
 
-# 網站分類
+# 主網站分類
 | 名稱 | 位置 | 備註
 | -------- | -------- | --------
-| 文章 | tw\article\ | 實際網址@README.md
-| 活動 | tw\dsc\activity\ |
-| 企業通電子報 | tw\dsc\digital-newspaper\ |
-| 賀卡 | tw\dsc\card\ |
-| 工業 4.0 | tw\dsc\industry4\ |
-| CPL (實驗頁) | tw\dsc\marketing\ |
-| 方案/行業 | tw\dsc\solution\ |
-| 行業手機版 | tw\dsc\solution\mobile\ |
-| ERP | tw\ERP\ |
-| 產品 | tw\software\ |
-| 測試用 | tw\dsc\dev\ |
-| 404 Page | tw\dsc\404.html | 
+| 文章 | /tw/article/ | 實際網址@README.md
+| 活動 | /tw/dsc/activity/ |
+| 企業通電子報 | /tw/dsc/digital-newspaper/ |
+| 賀卡 | /tw/dsc/card/ |
+| 工業 4.0 | /tw/dsc/industry4/ |
+| CPL (實驗頁) | /tw/dsc/marketing/ |
+| 方案/行業 | /tw/dsc/solution/ |
+| 行業手機版 | /tw/dsc/solution/mobile/ |
+| ERP | /tw/ERP/ |
+| 產品 | /tw/software/ |
+| 測試用 | /tw/dsc/dev/ |
+| 404 Page | /tw/dsc/404.html | 
+
+# 其它網站
+## 工業 4.0
+URL：http://industry4.digiwin.com
+### 遠端桌面
+- IP：13.76.47.213
+- 使用者名稱：Industrie
+- 密碼：System@dmin00
+- 網站位置：F:\industry4
+## 人才招募網
+- URL：http://career.digiwin.com
+- 後台
+  - URL：http://career.digiwin.biz/tw/wp-login.php
+  - 帳號：admin
+  - 密碼：misadmin
+
 
 # API
 ## 需求諮詢 (e化單)
@@ -84,23 +100,23 @@
 - Response Sample
 ```json
 {
-    "act_id": "2019090003",
-    "act_theme": "打造智慧化扣件產業價值鏈生態系-示範產線觀摩暨交流媒合會",
-    "act_cnt": 3,
+    "act_id": "2019090003", // 活動代號
+    "act_theme": "打造智慧化扣件產業價值鏈生態系-示範產線觀摩暨交流媒合會", // 活動主題
+    "act_cnt": 3, // 場次數量
     "act_detail": [
         {
-            "subid": "07",
-            "info": "高雄 2019-10-15 (二) 09:30 ~ 12:10",
-            "act_date": "20191015",
-            "venue": "上午場-傳統產業創新加值中心 (高雄市楠梓區朝仁路55號)",
-            "meal": "Y", // 是否提供餐點
-            "live": "N" // 是否提供住宿
+            "subid": "07", // 場次代號
+            "info": "高雄 2019-10-15 (二) 09:30 ~ 12:10", // 場次資訊
+            "act_date": "20191015", // 場次日期
+            "venue": "上午場-傳統產業創新加值中心 (高雄市楠梓區朝仁路55號)", // 場次地點
+            "meal": "Y", // 供餐
+            "live": "N" // 供宿
         }
     ],
     "act_from": [
         {
-            "val": "001",
-            "name": "郵寄邀請函"
+            "val": "001", // 來源代號
+            "name": "郵寄邀請函" // 來源名稱
         }
     ]
 }
@@ -114,33 +130,33 @@
 ``` js
 {
     data: {
-        act_id: "",
-        company: "test",
-        unino: "",
-        mailcode: "",
-        address: "",
+        act_id: "", // 活動代號
+        company: "test", // 公司名稱
+        unino: "", // 統一編號
+        mailcode: "", // 郵遞區號
+        address: "", // 地址
         act_attendee: [
             {
-                name: "test",
-                dept: "",
-                job: "101",
-                job_note: "",
-                job_title: "E03",
-                jobt_note: "",
-                mail: "test@test.test",
-                mobile: "0987654321",
-                tel: "",
-                ext: "",
-                fax: "",
-                act_subid: "04",
-                act_date: "20190918",
+                name: "test", // 姓名
+                dept: "", // 部門
+                job: "101", // 職稱
+                job_note: "", // 職稱(其他)
+                job_title: "E03", // 職能別
+                jobt_note: "", // 職能別(其他)
+                mail: "test@test.test", // E-mail
+                mobile: "0987654321", // 行動電話
+                tel: "", // 電話
+                ext: "", // 分機
+                fax: "", // 傳真
+                act_subid: "04", // 場次代號
+                act_date: "20190918", // 場次日期
                 meal: 1, // 1：葷 2：素 3：不吃
                 live: "Y" // Y：住宿 N：不住宿
             }
         ],
-        act_from: "001郵寄邀請函",
-        source: "index",
-        lineId: ""
+        act_from: "001郵寄邀請函", // 訊息來源
+        source: "index", // 前端網頁來源代號
+        lineId: "" // userId
     }
 }
 ```
@@ -219,4 +235,26 @@ axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/member/Save', par
     "result": 1, // 1：成功 0：失敗
     "msg": "" // 錯誤訊息
 }
+```
+## 工業 4.0 評量 (評量 1.0)
+- URL：http://industry4.digiwin.com/DSCindustry/Ind.asmx/SendData
+- Method：GET
+- Request Sample
+```js
+let data = { time: "60684", username: "test", company: "test", dept: "test", job: "test", mail: "test@test.test", tel: "15367914640", industry: "C27", indusname: "電子與光電元件/零組件", Q1: "-1", Q2: "-1", Q3: "-1", Q4: "-1", Q5: "-1", Q6: "-1", Q7: "-1", Q8: "-1", Q9: "-1", Q10: "-1", Q11: "-1", Q12: "-1", Q13: "-1", Q14: "-1", Q15: "-1", Q16: "-1", Q17: "-1", Q18: "-1", Q191: "-1", Q192: "-1", Q193: "-1", Q194: "-1", Q201: "-1", Q202: "-1", Q203: "-1", Q204: "-1", Q211: "-1", Q212: "-1", Q213: "-1", Q214: "-1" };
+
+$.support.cors = true;
+$.ajax({
+    type: 'GET',
+    url: 'http://industry4.digiwin.com/DSCindustry/Ind.asmx/SendData',
+    dataType: 'jsonp',
+    data: { data },
+    success: function (res) {
+        // get result
+    }
+});
+```
+- Response Sample
+```js
+jQuery111209246674373720454_1569231947688({ "Msg": "", "QNo": "1909230012", "RptALL": "1909230012_ee297835_ALL.pdf", "RptALL_P1": "1909230012_ee297835_ALL_P1.jpg", "RptALL_P2": "1909230012_ee297835_ALL_P2.jpg", "W1": "n", "A1": "n", "P1": "n", "W2": "n", "A2": "n", "P2": "n", "W3": "n", "A3": "n", "P3": "n", "tit1": "信邦換軌轉型「三級跳」 見證小兵立大功的奇蹟", "url1": "http://mag.digiwin.biz/?p=138", "pic1": "http://mag.digiwin.biz/mag/wp-content/uploads/2015/08/138.jpg", "tit2": "智邦科技 實現產能最佳利用率，提升訂單能見度", "url2": "http://mag.digiwin.biz/?p=2507", "pic2": "http://mag.digiwin.biz/mag/wp-content/uploads/2015/02/2507.jpg", "tit3": "艾碼科技 智慧時代的產能協調者", "url3": "http://mag.digiwin.biz/?p=744", "pic3": "http://mag.digiwin.biz/mag/wp-content/uploads/2015/09/list09.png" });
 ```

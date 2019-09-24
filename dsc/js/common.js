@@ -82,38 +82,32 @@ $(function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
     // 加入閱讀權限的文章
-    let loginUrls = [
-        '/tw/dsc/dev/demo/line_member',
-        '/tw/blog/3/index/1897.html',
-        '/tw/blog/3/index/1899.html',
-        '/tw/blog/3/index/1911.htm',
-        '/tw/blog/3/index/1913.htm',
-        '/tw/blog/3/index/1914.htm',
-        '/tw/blog/3/index/1936.html',
-    ];
-
-    // 比對網址成功後載入對應的外部連結
-    let loginResult = loginUrls.find(function (item) {
-        item = item.replace(/(.html|.htm)$/, '');
-        let regex = new RegExp(item + '$');
-        return currentUrl.search(regex) !== -1;
-    });
-
-    if (!loginResult) return;
-
-    let head = document.querySelector('head');
-    let style = document.createElement('link');
-    style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
-    style.rel = 'stylesheet';
-    head.appendChild(style);
-
-    let preload = document.createElement('link');
-    preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
-    preload.rel = 'preload';
-    preload.as = 'image';
-    head.appendChild(preload);
-
-    $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
+    fetch('/tw/dsc/assets/lineMember/login.json')
+        .then(res => res.json())
+        .then(res => {
+            // 比對網址成功後載入對應的外部連結
+            let loginResult = res.find(function (item) {
+                item = item.replace(/(.html|.htm)$/, '');
+                let regex = new RegExp(item + '$');
+                return currentUrl.search(regex) !== -1;
+            });
+        
+            if (!loginResult) return;
+        
+            let head = document.querySelector('head');
+            let style = document.createElement('link');
+            style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
+            style.rel = 'stylesheet';
+            head.appendChild(style);
+        
+            let preload = document.createElement('link');
+            preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
+            preload.rel = 'preload';
+            preload.as = 'image';
+            head.appendChild(preload);
+        
+            $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
+        });
 });
 
 // 解決主選單擋住文章內容的問題

@@ -143,7 +143,7 @@ axios.get('/tw/dsc/assets/lineMember/form.json')
                 },
             },
             created() {
-                this.addForm(res.data.form);
+                this.addForm(res.data);
                 this.addCover();
             },
             mounted() {
