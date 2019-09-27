@@ -1,5 +1,3 @@
-httpVueLoader.register(Vue, 'components/index/section1-svg.vue');
-httpVueLoader.register(Vue, 'components/index/progress-bars.vue');
 // httpVueLoader.register(Vue, 'components/pain.vue');
 // Vue.use(VueAwesomeSwiper);
 
@@ -45,7 +43,7 @@ let app = new Vue({
             let mm = window.matchMedia('(min-width: 769px)');
             mm.addListener(this.resizeWidth);
             this.resizeWidth(mm);
-        }, 
+        },
         resizeWidth(pMatchMedia) {
             let isMobile = pMatchMedia.matches ? false : true;
             store.commit('updateDevice', isMobile);

@@ -1,4 +1,12 @@
 // =============================================================================
+// vue components
+// =============================================================================
+httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/section-title.vue');
+httpVueLoader.register(Vue, 'components/slider-banner.vue');
+httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
+
+// =============================================================================
 // function
 // =============================================================================
 function detectIE() {
@@ -97,9 +105,8 @@ function fetchFile(file) {
  * @param {function} callback
  */
 function getScrollPos(el, offset, callback) {
-    let scrollTop = $(window).scrollTop();
-    let target = $(el).offset().top + offset;
-    if (scrollTop >= (target - window.innerHeight)) {
+    let target = el.offsetTop + offset;
+    if (window.pageYOffset >= (target - window.innerHeight)) {
         callback();
     }
 }
@@ -114,7 +121,7 @@ $(document).on('click', '.js-nav', function (event) {
     let target = $(this).attr('href') || $(this).attr('xlink:href') || $(this).data('target');
     setTimeout(() => {
         let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
-        let targetPos = $(target).offset().top;
+        let targetPos = document.querySelector(target).offsetTop;
         let finalPos = offset ? targetPos - offset : targetPos;
         window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
     }, delay);
