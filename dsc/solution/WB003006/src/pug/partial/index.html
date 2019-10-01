@@ -29,4 +29,35 @@
     </div>
 </article>
 
+<article class="section3">
+    <div class="container">
+        <section-title title="餐飲業在新時代下的經營挑戰"></section-title>
+        <collapse v-if="isMediumWidth" :items="result.index.collapse"></collapse>
+        <tabs v-else :items="result.index.collapse"></tabs>
+    </div>
+</article>
+
+<article class="section4">
+    <div class="container">
+        <section-title
+            title="您需要的是<br>鼎新餐飲業解決方案<br><strong>四大支持</strong>"
+            padding-bottom="0"
+        ></section-title>
+        <div class="section4-illust">
+            <section4-svg-s v-if="isMobile"></section4-svg-s>
+            <section4-svg v-else></section4-svg>
+        </div>
+    </div>
+</article>
+
+<article class="section5">
+    <div class="container">
+        <section-title
+            title="鼎新餐飲零售全場景"
+            desc="實現線上及線下諮詢、候位、預訂、外賣、點餐、 收銀、會員、營銷活動及進銷存等平台資訊整合"
+        ></section-title>
+        <img src="images/index/section5-illust.png" alt="">
+    </div>
+</article>
+
 <contact v-bind:multiple="false" source=""></contact>

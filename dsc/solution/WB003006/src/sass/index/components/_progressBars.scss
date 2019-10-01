@@ -1,9 +1,9 @@
 main .progressBars {
     $theme-color: (
-        primary: #e41f1f,
-        primary-bar: #797979,
-        secondary: #f87575,
-        secondary-bar: #d6d6d6,
+    primary: #e41f1f,
+    primary-bar: #797979,
+    secondary: #f87575,
+    secondary-bar: #d6d6d6,
     );
     h2 {
         margin-bottom: .5em;
@@ -22,6 +22,9 @@ main .progressBars {
         display: flex;
         flex-direction: column;
         width: 50%;
+        @media (min-width: $tablet-width + 1) {
+            width: 270px;
+        }
         @at-root {
             main .progressBars li.highest .text p {
                 background-color: map-get($theme-color, primary);
@@ -40,10 +43,10 @@ main .progressBars {
             background-color: map-get($theme-color, secondary);
             color: #fff;
             font-size: 16px;
-            line-height: 24px;
             align-items: center;
             @media (min-width: $tablet-width + 1) {
                 min-height: 60px;
+                font-size: 21px;
             }
         }
     }
@@ -52,6 +55,7 @@ main .progressBars {
         height: 55px;
         line-height: 55px;
         @media (min-width: $tablet-width + 1) {
+            width: calc(100% - 270px);
             height: 40px;
             line-height: 40px;
         }
@@ -66,6 +70,7 @@ main .progressBars {
         @media (min-width: $tablet-width + 1) {
             font-size: 24px;
         }
+        &::before,
         &::after {
             content: '\00a0\00a0';
         }

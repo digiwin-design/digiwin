@@ -29,20 +29,54 @@ main {
         .container {
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
         &-source {
             margin-top: 1em;
             text-align: right;
+            line-height: 1;
             order: 1;
             @media (min-width: $tablet-width + 1) {
                 margin-top: 0;
                 margin-bottom: 1em;
+                padding-right: percentage(70/1200);
                 order: 0;
             }
         }
         .progressBars {
-            margin: 0 auto;
-            max-width: 756px;
+            width: 100%;
+            @media (min-width: $tablet-width + 1) {
+                margin-left: percentage(160/1200);
+            }
         }
+    }
+    .section3 {
+        padding-bottom: 60px;
+        background-color: #ececec;
+    }
+    .section4 {
+        .sectionTitle {
+            text-align: center;
+            strong {
+                color: #d10000;
+            }
+        }
+        &-illust {
+            margin: 0 auto;
+            max-width: 1087px;
+            @media (min-width: $tablet-width + 1) {
+                margin-top: 30px;
+            }
+        }
+        .svgContainer {
+            padding-top: percentage(391 / 343);
+            @media (min-width: $tablet-width + 1) {
+                padding-top: percentage(531 / 1087);
+            }
+        }
+    }
+    .section5 {
+        padding-bottom: 40px;
+        background-color: #ececec;
     }
 }

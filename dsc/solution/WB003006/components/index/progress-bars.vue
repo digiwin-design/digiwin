@@ -38,11 +38,11 @@ module.exports = {
 
             this.progressBars.forEach(function (progressBar, idx) {
                 progressBar.items.forEach(function (item) {
-                    // 取得各組前三名
-                    if (item.percentage > this.percentages[idx][3]) {
+                    // 取得各組前8名
+                    if (item.percentage > this.percentages[idx][8]) {
                         item['highest'] = true;
                     }
-                    // 取得各組第一名
+                    // 取得各組第1名
                     if (item.percentage === this.percentages[idx][0]) {
                         item['first'] = true;
                     }
@@ -51,6 +51,12 @@ module.exports = {
 
             return this.progressBars;
         },
+    },
+    watch: {
+        isMobile: function (val) {
+            this.destroyComponent();
+            this.initComponent();
+        }
     },
     methods: {
         scrollHandler: _.throttle(function () {
@@ -63,7 +69,8 @@ module.exports = {
             }
         }, 100),
         initComponent: function () {
-            $('.js-barGroup').each(function (idx, el) {
+            document.querySelectorAll('.js-barGroup').forEach(function (el, idx) {
+                let _this = this;
                 let li = d3
                     .select(el)
                     .selectAll('li')
@@ -94,25 +101,30 @@ module.exports = {
                     .transition()
                     .duration(2000)
                     .tween('text', function (d) { // 文字動畫
-                        var i = d3.interpolateRound(0, d.percentage);
+                        var i = d3.interpolateNumber(0, d.percentage);
                         return function (t) {
-                            this.textContent = i(t) + '%';
+                            this.textContent = i(t).toFixed(1) + '%';
                         };
                     })
                     .style('width', function (d) {
                         let percentage;
-                        if (this.isMobile && d.percentage < 23) {
-                            percentage = 23; // 最小寬度
+                        if (_this.isMobile && d.percentage < 40) {
+                            percentage = 40; // 最小寬度
                         }
-                        else if (d.percentage < 14) {
-                            percentage = 14; // 最小寬度
+                        else if (d.percentage < 20) {
+                            percentage = 20; // 最小寬度
                         }
                         else {
                             percentage = d.percentage;
                         }
                         return percentage + '%';
-                    });
+                    })
             }.bind(this));
+        },
+        destroyComponent: function () {
+            document.querySelectorAll('.js-barGroup').forEach(function (el, idx) {
+                el.innerHTML = '';
+            });
         },
     },
     mounted: function () {
