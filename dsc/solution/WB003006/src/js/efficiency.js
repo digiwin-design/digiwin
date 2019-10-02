@@ -1,4 +1,5 @@
-// httpVueLoader.register(Vue, 'components/pain.vue');
+httpVueLoader.register(Vue, 'components/pain.vue');
+httpVueLoader.register(Vue, 'components/slider.vue');
 // Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({

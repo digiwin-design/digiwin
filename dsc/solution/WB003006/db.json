@@ -141,6 +141,44 @@
                 ],
                 "url": "javascript:;"
             }
+        ],
+        "pains": [
+            {
+                "imgSrc": "images/efficiency/hoverBox-icon1.png",
+                "text": "資訊",
+                "hoverText": "門店POS、電商通路、多元支付、外賣外送平台…一堆資訊軟體加上硬體都要IT管理，無暇顧及之外，資訊最終都還是片段跟散亂！",
+                "color": "#e33737"
+            },
+            {
+                "imgSrc": "images/efficiency/hoverBox-icon2.png",
+                "text": "行銷",
+                "hoverText": "花了一堆廣告錢在社群，但效益都不如預期，每一筆廣告費換來的營收也頂多曇花一現…",
+                "color": "#f26c22"
+            },
+            {
+                "imgSrc": "images/efficiency/hoverBox-icon3.png",
+                "text": "採購",
+                "hoverText": "沒有門店營收即時分析，常常多買或少買，尤其資訊錯誤造成買錯，特別是有效期的食材，所造成重大損失，賠都賠不起!",
+                "color": "#5e5e5e"
+            },
+            {
+                "imgSrc": "images/efficiency/hoverBox-icon4.png",
+                "text": "店長",
+                "hoverText": "除了門店還要經營電商、社群…太多通路都要人工彙總，造成有時供不應求，有時又閒置，越來越辛苦反而利潤更少。",
+                "color": "#d8a136"
+            },
+            {
+                "imgSrc": "images/efficiency/hoverBox-icon5.png",
+                "text": "督導",
+                "hoverText": "店長店員來來去去，人力跟能力都是瓶頸，更別提巡店資料不即時。",
+                "color": "#afb825"
+            },
+            {
+                "imgSrc": "images/efficiency/hoverBox-icon6.png",
+                "text": "老闆",
+                "hoverText": "直營店營收起落，加盟店開幕閉幕，如何有效經營才能穩定執行，門店/市場/品牌等相關的拓展計劃",
+                "color": "#15c5b2"
+            }
         ]
     }
 }
