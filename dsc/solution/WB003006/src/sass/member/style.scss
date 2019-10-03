@@ -1,0 +1,34 @@
+@import '../common';
+@import 'components';
+
+main {
+    .section1 {
+        @include bg('member/section1-bg.jpg');
+        padding-bottom: 60px;
+        background-size: cover;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sectionTitle {
+            @media (min-width: $tablet-width + 1) {
+                text-align: center;
+            }
+        }
+        .checklist {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            li {
+                @media (min-width: $tablet-width + 1) {
+                    width: 50%;
+                    &:nth-child(odd) {
+                        padding-right: calc(2em);
+                    }
+                }
+            }
+        }
+    }
+}

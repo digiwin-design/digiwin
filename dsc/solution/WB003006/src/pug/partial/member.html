@@ -1,0 +1,14 @@
+<slider-banner-s v-if="isMobile" v-bind:slides="result.member.banner" device="mobile"></slider-banner-s>
+<slider-banner v-else v-bind:slides="result.member.banner" device="desktop"></slider-banner>
+
+<article class="section1">
+    <div class="container">
+        <section-title
+            title="會員營銷診斷清單"
+            desc="在你口袋的，是你真正的會員嗎？<br>會員經營與行銷專案的規劃執行，是否有所疑惑？"
+        ></section-title>
+        <checklist :lists="result.member.checklist"></checklist>
+    </div>
+</article>
+
+<contact v-bind:multiple="false" source=""></contact>

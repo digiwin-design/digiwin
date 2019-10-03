@@ -3,14 +3,14 @@
         <div class="swiper-wrapper">
             <div
                 v-for="slide in slides"
-                :key="slide.title[deviceType]"
-                :style="{ backgroundImage: 'url(' + slide.imgSrc[deviceType] + ')' }"
+                :key="slide.title[deviceType] || slide.title[0]"
+                :style="{ backgroundImage: 'url(' + slide.imgSrc[deviceType] || slide.imgSrc[0] + ')' }"
                 :class="'slide' + slide.id"
                 class="banner-slide swiper-slide"
             >
                 <div class="container">
-                    <p class="banner-title" v-html="slide.title[deviceType]"></p>
-                    <p class="banner-desc" v-html="slide.desc[deviceType]"></p>
+                    <p class="banner-title" v-html="slide.title[deviceType] || slide.title[0]"></p>
+                    <p class="banner-desc" v-html="slide.desc[deviceType] || slide.desc[0]"></p>
                 </div>
             </div>
         </div>
