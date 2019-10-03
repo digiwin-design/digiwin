@@ -116,6 +116,9 @@ main .hoverBox {
                 line-height: 1.3;
             }
         }
+        strong {
+            color: #fff45c;
+        }
         a {
             @include btn(230px, 40px, #000, #fff45c, 5px);
             font-size: 24px;

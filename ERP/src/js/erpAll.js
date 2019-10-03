@@ -5,6 +5,7 @@ httpVueLoader.register(Vue, 'components/erpAll/Banner.vue');
 httpVueLoader.register(Vue, 'components/erpAll/HoverBoxs.vue');
 httpVueLoader.register(Vue, 'components/erpAll/Accordion.vue');
 httpVueLoader.register(Vue, 'components/erpAll/MapComponent.vue');
+httpVueLoader.register(Vue, 'components/erpAll/section-btns.vue');
 httpVueLoader.register(Vue, '/tw/dsc/assets/industry-list-v2/industry.vue');
 
 const store = new Vuex.Store({

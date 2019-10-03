@@ -1,20 +1,19 @@
 <template>
     <div class="columns">
-        <div v-for="column in columns" v-bind:key="column.title" class="col">
+        <div v-for="column in columns" :key="column.title" class="col">
             <a
-                v-bind:href="column.url"
-                v-on:mouseenter="hoverHandler(true,$event)"
-                v-on:mouseleave="hoverHandler(false,$event)"
-                v-on:click="removeClass"
-                v-bind:class="{disabled:!isLink}"
+                :href="column.url"
+                @mouseenter="hoverHandler(true,$event)"
+                @mouseleave="hoverHandler(false,$event)"
+                @click="removeClass"
                 class="js-columns-link js-nav"
             >
                 <div>
-                    <img v-bind:src="column.imgSrc" class="mouseenter" alt>
-                    <img v-if="column.hoverImgSrc" v-bind:src="column.hoverImgSrc" class="mouseleave" alt>
+                    <img :src="column.imgSrc" class="mouseenter" alt>
+                    <img v-if="column.hoverImgSrc" :src="column.hoverImgSrc" class="mouseleave" alt>
                 </div>
                 <p>{{column.title}}</p>
-                <p>{{column.content}}</p>
+                <i class="material-icons">keyboard_arrow_down</i>
             </a>
         </div>
     </div>
@@ -24,14 +23,9 @@
 module.exports = {
     props: {
         columns: Array,
-        isLink: {
-            type: Boolean,
-            default: true
-        }
     },
     methods: {
         hoverHandler: function (value, evt) {
-            if (!this.isLink) return;
             if (value) {
                 evt.target.classList.add('is-hover');
             }

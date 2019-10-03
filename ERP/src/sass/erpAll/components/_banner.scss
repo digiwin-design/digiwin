@@ -3,8 +3,15 @@ main .banner {
     2: #7265ed,
     3: #3987f9,
     4: #c0cd56,
-    5: #e1ba20,
+    5: #c8b8a9,
     6: #f9a139,
+    );
+    $type-color: (
+    2: #3018c4,
+    3: #075dda,
+    4: #91a20b,
+    5: #9b7c61,
+    6: #dd8011,
     );
     $margin-bottom: (
     2: 70px,
@@ -26,21 +33,39 @@ main .banner {
                     background-color: transparent;
                     background-image: image-url('erpAll/section#{$i}-bg.jpg');
                 }
-            }
-            main .section#{$i} .banner::after {
-                border-top-color: map-get($color, $i);
+                @media (min-width: $content-width) {
+                    background-position: 50% 0;
+                }
+                &-type {
+                    background-color: map-get($type-color, $i);
+                }
+                &::after {
+                    border-top-color: map-get($color, $i);
+                }
             }
         }
-    }
-    @media (min-width: $content-width) {
-        background-position: 50% 0;
     }
     .container {
         position: relative;
         display: flex;
         flex-direction: column;
-        height: 400px;
+        padding-top: 43px;
+        height: 250px;
         justify-content: center;
+    }
+    &-type {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        width: 150px;
+        height: 43px;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+        letter-spacing: getLetterSpacing(50);
+        line-height: 43px;
+        @media (min-width: $content-width) {
+            left: 0;
+        }
     }
     h1 {
         display: flex;
@@ -54,7 +79,6 @@ main .banner {
         }
     }
     &-desc {
-        margin-bottom: 2em;
         line-height: 1.4;
         @media (min-width: $tablet-width+1) {
             font-size: 22px;
@@ -63,21 +87,6 @@ main .banner {
             display: none;
             @media (min-width: $tablet-width+1) {
                 display: block;
-            }
-        }
-    }
-    &-btns {
-        display: flex;
-        a {
-            @include btn(137px, 28px, #000, #fff45c, 5px);
-            @media (min-width: $tablet-width + 1) {
-                width: 230px;
-                height: 40px;
-                font-size: 24px;
-                line-height: 40px;
-            }
-            & + a {
-                margin-left: 20px;
             }
         }
     }

@@ -21,6 +21,7 @@ module.exports = {
     data: function () {
         return {
             timeline: new TimelineMax(),
+            timeline2: new TimelineMax(),
         }
     },
     computed: {
@@ -43,7 +44,7 @@ module.exports = {
                 // this.initGUI();
                 this.initAn();
                 this.scrollHandler();
-                window.addEventListener('scroll', this.scrollHandler);
+                if (!this.isMobile) this.hoverAn();
             }.bind(this));
         },
         initGUI: function () {
@@ -83,14 +84,8 @@ module.exports = {
                     opacity: 0,
                 })
                 .from('.js-map1-5', .5, {
-                    y: '-=20',
+                    y: '+=20',
                     opacity: 0,
-                })
-                .to('.js-bg', 1, {
-                    scale: 1.5,
-                    opacity: 0,
-                    repeat: -1,
-                    transformOrigin: '50% 50%',
                 });
 
             // map2
@@ -114,15 +109,75 @@ module.exports = {
             this.timeline.add(map2_2, .5);
             this.timeline.add(map2_3, 1);
             this.timeline.add(map2_4, 1.5);
+
+            // 水波動畫
+            this.timeline2.pause(0);
+            this.timeline2.to('.js-bg', 1, {
+                scale: 1.5,
+                opacity: 0,
+                repeat: -1,
+                transformOrigin: '50% 50%',
+            });
         },
         scrollHandler: _.throttle(function () {
+            window.addEventListener('scroll', this.scrollHandler);
             let el = this.isMobile ? this.elements.mapS1 : this.elements.map;
-            let offset = el.offsetHeight;
-            getScrollPos(el, offset, function () {
-                this.timeline.play();
+            getScrollPos(el, 0, function () {
                 window.removeEventListener('scroll', this.scrollHandler);
+                this.timeline.play();
+                setTimeout(this.shakeAn, 2000);
             }.bind(this));
         }, 100),
+        hoverAn: function () {
+            let _this = this;
+            document.querySelectorAll('[class^=js-map]').forEach(function (el) {
+                el.addEventListener('mouseenter', function () {
+                    _this.timeline2.restart();
+                    this.firstElementChild.style.display = 'inline';
+                });
+                el.addEventListener('mouseleave', function () {
+                    this.firstElementChild.style.display = 'none';
+                });
+            });
+        },
+        shakeAn: function () {
+            let oriLinks = [];
+            let ranLinks = [];
+
+            // 存入物件的className
+            document.querySelectorAll('.js-links > a').forEach(function (el) {
+                oriLinks.push(el.className.baseVal);
+            });
+
+            // 複製原始陣列做隨機陣列
+            let links = JSON.parse(JSON.stringify(oriLinks));
+
+            setInterval(function () {
+                // 隨機取完後重新複製
+                if (!links.length) {
+                    links = JSON.parse(JSON.stringify(oriLinks));
+                }
+
+                // 針對隨機取出的物件做動畫
+                ranLinks = this.getRanArr(links, 2);
+                ranLinks.forEach(function (item) {
+                    let el = document.querySelector('.js-links .' + item);
+                    el.classList.add('shake', 'shake-constant', 'shake-constant--hover');
+                    // 停止動畫
+                    setTimeout(function () {
+                        el.classList.remove('shake', 'shake-constant', 'shake-constant--hover');
+                    }, 1000);
+                });
+            }.bind(this), 2000);
+        },
+        getRanArr: function (beforeArr, total) {
+            var newArr = [];
+            for (var i = 0; i < total; i++) {
+                var ran = Math.floor(Math.random() * beforeArr.length);
+                newArr.push(beforeArr.splice(ran, 1)[0]); // 移出舊陣列數字到新陣列
+            };
+            return newArr;
+        }
     },
     mounted: function () {
         this.getSvg();

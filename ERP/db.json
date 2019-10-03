@@ -78,55 +78,51 @@
     "erpAll": {
         "section1": [
             {
-                "url": "#section4",
-                "title": "產業趨勢因應",
-                "content": "隨著雲端、大數據、人工智慧等技術應用與發展，驅使製造業與流通零售業快速朝往數位化轉型。",
-                "imgSrc": "images/erpAll/section1-icon3.png",
-                "hoverImgSrc": "images/erpAll/section1-icon3-h.png"
-            },
-            {
                 "url": "#section2",
-                "title": "職能管理效率",
-                "content": "讓e化取代傳統人工Excel作業，解決料帳不一、成本計算、薪資結算等賦能產銷人發財！",
-                "imgSrc": "images/erpAll/section1-icon1.png",
-                "hoverImgSrc": "images/erpAll/section1-icon1-h.png"
-            },
-            {
-                "url": "#section3",
-                "title": "經營管理能力",
-                "content": "根據企業的發展戰略及經營重點，找到最迫切、最關鍵的核心能力，借由IT提升企業的經營管理能力。",
+                "title": "職能管理",
                 "imgSrc": "images/erpAll/section1-icon2.png",
                 "hoverImgSrc": "images/erpAll/section1-icon2-h.png"
             },
             {
+                "url": "#section3",
+                "title": "經營能力",
+                "imgSrc": "images/erpAll/section1-icon3.png",
+                "hoverImgSrc": "images/erpAll/section1-icon3-h.png"
+            },
+            {
+                "url": "#section4",
+                "title": "產業趨勢",
+                "imgSrc": "images/erpAll/section1-icon1.png",
+                "hoverImgSrc": "images/erpAll/section1-icon1-h.png"
+            },
+            {
                 "url": "#section6",
-                "title": "行業精實管理",
-                "content": "即時因應政府法規，依各行業產業特性及經營需求，提供適合的ERP系統解決方案，協助企業精實生產、數位化管理。",
-                "imgSrc": "images/erpAll/section1-icon5.png",
-                "hoverImgSrc": "images/erpAll/section1-icon5-h.png"
+                "title": "行業分類",
+                "imgSrc": "images/erpAll/section1-icon4.png",
+                "hoverImgSrc": "images/erpAll/section1-icon4-h.png"
             },
             {
                 "url": "#section5",
-                "title": "加速企業成長",
-                "content": "從小微、中小、中大、大型到集團滿足企業發展歷程所需管理需求與營運模式提供ERP系統解決方案。",
-                "imgSrc": "images/erpAll/section1-icon4.png",
-                "hoverImgSrc": "images/erpAll/section1-icon4-h.png"
+                "title": "企業規模",
+                "imgSrc": "images/erpAll/section1-icon5.png",
+                "hoverImgSrc": "images/erpAll/section1-icon5-h.png"
             }
         ],
         "section2": {
+            "sectionLink": {
+                "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index.html",
+                "target": "_blank"
+            },
             "banner": {
                 "title": "<i>打通各作業流程&nbsp;</i><i>提高部門/職能管理效率</i>",
                 "desc": "ERP系統，以實現企業利潤較大化為目標，<br>提升和改善各部門管理效率",
-                "link": {
-                    "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index",
-                    "target": "_blank"
-                }
+                "type": "職能管理效率"
             },
             "hoverBoxs": [
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon1.png",
                     "title": "財務/會計 管理",
-                    "hoverText": "有效管控成本及資金流動，建構良好的內稽內控，針對不同規模企業，從應收到帳款、應付帳號、成本計算、薪資處理，到會計總帳，結算財務帳、現金流量、預算成本控制、嚴謹的內稽內控、利潤中心模式運作，皆能提供適用的財務管理系統與規劃服務。",
+                    "hoverText": "有效管控成本及資金流動，建構良好的內稽內控，針對不同規模企業，<strong>從應收到帳款、應付帳號、成本計算、薪資處理，到會計總帳，結算財務帳、現金流量、預算成本控制、嚴謹的內稽內控、利潤中心模式運作</strong>，皆能提供適用的財務管理系統與規劃服務。",
                     "link": {
                         "url": "/tw/ERP/financial.html",
                         "target": "_self"
@@ -135,7 +131,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon2.png",
                     "title": "生產管理",
-                    "hoverText": "企業常因無法確實掌握生產製造現場實際的產能狀況及物料進貨時程，對此包含產品結構管理(BOM)、製令管理、製程管理、託外加工管理、批次需求計劃管理(LRP)、彈性領發料及挪料管理、模具管理、品質管理…等，使生產製造資訊即時且透明化，能在深耕管理應用的同時，更加強對決策者的管理支援。",
+                    "hoverText": "企業常因無法確實掌握生產製造現場實際的產能狀況及物料進貨時程，對此包含<strong>產品結構管理(BOM)、製令管理、製程管理、託外加工管理、批次需求計劃管理(LRP)、彈性領發料及挪料管理、模具管理、品質管理…等，使生產製造資訊即時且透明化</strong>，能在深耕管理應用的同時，更加強對決策者的管理支援。",
                     "link": {
                         "url": "/tw/erp/manufacture.html",
                         "target": "_self"
@@ -144,7 +140,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon3.png",
                     "title": "人力資源管理",
-                    "hoverText": "快速因應法規 提升事務效率<br>快速且正確的因應各項法規的變動如二代健保、個人資料保護法、勞動基準法，除了使重複性的行政事務能夠系統化、自動化之外，更能快速在系統上處理新的法規辦法，將更多的時間及資源投入在人力資源發展事務上。",
+                    "hoverText": "快速因應法規 提升事務效率<br>快速且正確的因應各項法規的變動如二代健保、個人資料保護法、勞動基準法，<strong>除了使重複性的行政事務能夠系統化、自動化之外，更能快速在系統上處理新的法規辦法，將更多的時間及資源投入在人力資源發展事務上。</strong>",
                     "link": {
                         "url": "/tw/dsc/marketing/WB002838/WB00283805.htm",
                         "target": "_blank"
@@ -153,7 +149,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon4.png",
                     "title": "研發管理",
-                    "hoverText": "提供設計圖面整合工具，協助研發進行設計資料管理與資訊擷取再利用，並透過產品零組件架構，快速產出研發BOM表，提升研發效率。透過系統進行共用零件庫建立，將關鍵零組件標準化，降低研發於客製化開發時需重複投入之成本。",
+                    "hoverText": "提供設計圖面整合工具，協助研發進行設計資料管理與資訊擷取再利用，並透過產品零組件架構，<strong>快速產出研發BOM表，提升研發效率。透過系統進行共用零件庫建立，將關鍵零組件標準化，降低研發於客製化開發時需重複投入之成本。</strong>",
                     "link": {
                         "url": "/tw/portal/article/index/id/726/cid/42.html",
                         "target": "_self"
@@ -162,7 +158,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon5.png",
                     "title": "銷售管理",
-                    "hoverText": "提供職能模版及使用導航，快速複製同業或類似職能的應用場景，經由服務自動化的完整服務流程，達成滿意服務及主動追蹤，協助企業洞察供應鏈及顧客為中心的運作，為業務工作加值。服務機制的建立及維修管理，隨時提供有效率的服務，協助服務人員查詢完整的產品履歷。",
+                    "hoverText": "提供職能模版及使用導航，快速複製同業或類似職能的應用場景，經由服務自動化的完整服務流程，達成滿意服務及主動追蹤，<strong>協助企業洞察供應鏈及顧客為中心的運作，為業務工作加值。服務機制的建立及維修管理，隨時提供有效率的服務，協助服務人員查詢完整的產品履歷。</strong>",
                     "link": {
                         "url": "https://www.digiwin.com/tw/software/708.html",
                         "target": "_self"
@@ -171,7 +167,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon6.png",
                     "title": "進銷存管理",
-                    "hoverText": "從交易、進出貨、庫存轉撥到盤虧調整，經由入庫(進)、倉儲(存)、出庫、銷售(銷)各環節，轉為現金的實物流轉後，增加資金的存貨管理，解決人工作帳容易出錯、盤點對帳不易，並能即時準確查詢庫存異動、出貨狀況，管好庫存帳、財務帳，料帳合一。",
+                    "hoverText": "從交易、進出貨、庫存轉撥到盤虧調整，經由入庫(進)、倉儲(存)、出庫、銷售(銷)各環節，轉為現金的實物流轉後，增加資金的存貨管理，<strong>解決人工作帳容易出錯、盤點對帳不易，並能即時準確查詢庫存異動、出貨狀況，管好庫存帳、財務帳，料帳合一。</strong>",
                     "link": {
                         "url": "/tw/ERP/inventory.html",
                         "target": "_self"
@@ -180,19 +176,20 @@
             ]
         },
         "section3": {
+            "sectionLink": {
+                "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index.html",
+                "target": "_blank"
+            },
             "banner": {
                 "title": "<i>關注企業管理難題與挑戰&nbsp;</i><i>改善經營能力</i>",
                 "desc": "企業導入ERP，不只是讓作業流程電子化，<br>更是回歸管理本質，確保運營績效達成",
-                "link": {
-                    "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index",
-                    "target": "_blank"
-                }
+                "type": "經營管理能力"
             },
             "hoverBoxs": [
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon7.png",
                     "title": "編列預算",
-                    "hoverText": "編列年度預算對企業來說，是很重要的一件事！為何要事先編列預算？是為了促使明年度相關計畫與業務可以順利推動，預估需要建置的軟硬體支出而事先籌備。而不同職能，都面臨不同的挑戰與困擾，系統的需求也有所不同，預算編列將是企業有效落實計畫，進而實現目標的第一步。",
+                    "hoverText": "編列年度預算對企業來說，是很重要的一件事！為何要事先編列預算？<strong>是為了促使明年度相關計畫與業務可以順利推動，預估需要建置的軟硬體支出而事先籌備。</strong>而不同職能，都面臨不同的挑戰與困擾，系統的需求也有所不同，預算編列將是企業有效落實計畫，進而實現目標的第一步。",
                     "link": {
                         "url": "/tw/dsc/solution/WB002917/WB00291701.html",
                         "target": "_self"
@@ -201,7 +198,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon8.png",
                     "title": "企業流程管理",
-                    "hoverText": "精靈式表單設計及流程規劃，Step by Step 10分鐘內即刻完成。流程規劃直接於瀏覽器畫面以拖拉方式設計，圖形化流程圖一目了然。藉由智慧手機平台，即時處理電子表單簽核，重要資訊，絕不漏接，為實現企業行動商務的最佳解決方案。",
+                    "hoverText": "精靈式表單設計及流程規劃，<strong>Step by Step 10分鐘內即刻完成。</strong>流程規劃直接於瀏覽器畫面以拖拉方式設計，圖形化流程圖一目了然。<strong>藉由智慧手機平台，即時處理電子表單簽核，重要資訊，絕不漏接</strong>，為實現企業行動商務的最佳解決方案。",
                     "link": {
                         "url": "/tw/portal/article/index/id/706/cid/42.html",
                         "target": "_self"
@@ -210,7 +207,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon9.png",
                     "title": "訂單交付",
-                    "hoverText": "透過數據透明化、生產現場透明化、機台設備透明化，打造透明化工廠，透過電子看板提供訂單進度，工單生產狀況、製程進度、良率狀況、缺料資訊、機台狀態，各級人員接能輕易一鍵查詢現場進度。",
+                    "hoverText": "<strong>透過數據透明化、生產現場透明化、機台設備透明化，打造透明化工廠</strong>，透過電子看板提供訂單進度，工單生產狀況、製程進度、良率狀況、缺料資訊、機台狀態，各級人員接能輕易一鍵查詢現場進度。",
                     "link": {
                         "url": "/tw/dsc/marketing/WB002838/WB00283807.htm",
                         "target": "_blank"
@@ -219,7 +216,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon10.png",
                     "title": "食品安全",
-                    "hoverText": "協助因應食安法規，追蹤追溯皆靠人工key入，建立食品追蹤追溯系統，從客戶出貨批號，快速串連起庫存、在途、在製、供應商進貨資料，建構完整的產品外觀標示作業與簽核程序，有效解決包裝文件版本控管問題，進而降低包材報廢成。",
+                    "hoverText": "協助因應食安法規，追蹤追溯皆靠人工key入，<strong>建立食品追蹤追溯系統，從客戶出貨批號，快速串連起庫存、在途、在製、供應商進貨資料，建構完整的產品外觀標示作業與簽核程序</strong>，有效解決包裝文件版本控管問題，進而降低包材報廢成。",
                     "link": {
                         "url": "/tw/dsc/solution/WB002553/WB00255301.html",
                         "target": "_self"
@@ -228,7 +225,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon11.png",
                     "title": "會計快速結算",
-                    "hoverText": "財會人員除了要管理公司內部帳務、成本和財務報表，還要能即時跟上當地會計準則及稅務 法規的變動，使用財務管理系統，可同時處理多家公司或多套會計總帳，以利潤中心管理掌握部門損益。統籌管理應收應付、成本、薪資等，還能自行產出合併報表靈活應用。",
+                    "hoverText": "財會人員除了要管理公司內部帳務、成本和財務報表，還要能即時跟上當地會計準則及稅務 法規的變動，<strong>使用財務管理系統，可同時處理多家公司或多套會計總帳，以利潤中心管理掌握部門損益。</strong>統籌管理應收應付、成本、薪資等，還能自行產出合併報表靈活應用。",
                     "link": {
                         "url": "/tw/dsc/marketing/WB002838/WB00283809.htm",
                         "target": "_blank"
@@ -237,7 +234,7 @@
                 {
                     "imgSrc": "images/erpAll/hoverBox-icon12.png",
                     "title": "勞基法新修法",
-                    "hoverText": "鼎新HR Solution系統結合現行法規，隨時幫企業檢核公司規範合法性，能有效產出勞檢所需備查文件，系統資料庫完整記錄員工刷卡，能有效關聯薪資計算，讓結算薪資簡單又準確！",
+                    "hoverText": "鼎新HR Solution系統結合現行法規，隨時幫企業檢核公司規範合法性，<strong>能有效產出勞檢所需備查文件，系統資料庫完整記錄員工刷卡，能有效關聯薪資計算，讓結算薪資簡單又準確！</strong>",
                     "link": {
                         "url": "/tw/dsc/solution/WB002741/WB00274101.html",
                         "target": "_self"
@@ -246,28 +243,30 @@
             ]
         },
         "section4": {
+            "sectionLink": {
+                "url": "https://www.digiwin.com/tw/dsc/marketing/WB002838/WB00283808.htm",
+                "target": "_blank"
+            },
             "banner": {
                 "title": "<i>智慧化、數位化轉型趨勢&nbsp;</i><i>助力轉型升級</i>",
                 "desc": "以創造數據價值驅動智慧工廠與新零售發展，<br>實現降本增效提質減存。",
-                "link": {
-                    "url": "https://www.digiwin.com/tw/dsc/marketing/WB002838/WB00283808.htm",
-                    "target": "_blank"
-                }
+                "type": "產業趨勢因應"
             }
         },
         "section5": {
+            "sectionLink": {
+                "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index.html",
+                "target": "_blank"
+            },
             "banner": {
                 "title": "<i>全方位解決方案&nbsp;</i><i>支撐企業成長所需</i>",
                 "desc": "因應企業成長各個階段管理範疇與複雜度<br>提高資訊化管理需求",
-                "link": {
-                    "url": "https://www.digiwin.com/tw/dsc/project/WB002940/index",
-                    "target": "_blank"
-                }
+                "type": "企業規模成長"
             },
             "accordion": [
                 {
                     "title": "集團型企業",
-                    "detail": "累積1,500餘家大型企業輔導經驗，形成20多個行業最佳管理應用方案，從製造、分銷、零售到電商提供一體化解決方案。滿足企業佈局多個業務銷售辦公室、多元分銷結構、最終到達零售或電商的整體智能化供應鏈。",
+                    "detail": "累積1,500餘家大型企業輔導經驗，形成20多個行業最佳管理應用方案，<strong>從製造、分銷、零售到電商提供一體化解決方案。滿足企業佈局多個業務銷售辦公室、多元分銷結構、最終到達零售或電商的整體智能化供應鏈。</strong>",
                     "link": {
                         "url": "http://t100.digiwin.com",
                         "target": "_blank"
@@ -275,7 +274,7 @@
                 },
                 {
                     "title": "中大型流通",
-                    "detail": "整合流通經營體制，從上游加工廠商、國外供應、境外公司到各地分公司、物流中心，一直到下游通路，包含批發商、經銷商、門市專櫃經營體系、連鎖量販店、軍公教體系、郵購、自動販賣機、線上購物和維修服務中心等。",
+                    "detail": "<strong>整合流通經營體制，從上游加工廠商</strong>、國外供應、境外公司到各地分公司、物流中心，<strong>一直到下游通路</strong>，包含批發商、經銷商、門市專櫃經營體系、連鎖量販店、軍公教體系、郵購、自動販賣機、線上購物和維修服務中心等。",
                     "link": {
                         "url": "/tw/software/702.html",
                         "target": "_self"
@@ -283,7 +282,7 @@
                 },
                 {
                     "title": "中大型製造",
-                    "detail": "支援國際化多語系平台全球營運解決方案，提供適合當地法規的稅務、關務、勞務的在地應用模組；針對『內控內稽』在企業內部各環節的流程規定，設置每一作業流程適當的控制點，開發周延又不失彈性的管控與稽核功能。",
+                    "detail": "<strong>支援國際化多語系平台全球營運解決方案，提供適合當地法規的稅務、關務、勞務的在地應用模組</strong>；針對『內控內稽』在企業內部各環節的流程規定，設置每一作業流程適當的控制點，開發周延又不失彈性的管控與稽核功能。",
                     "link": {
                         "url": "/tw/software/701.html",
                         "target": "_self"
@@ -291,15 +290,15 @@
                 },
                 {
                     "title": "中小型企業",
-                    "detail": "管好帳、管好貨、管現場，無論是製造業還是買賣業，中小企業總是有各自的管理面向需要關注，從帳務到工廠管理，從貿易到通路經營，還有因應各項政府法規與稅制。",
+                    "detail": "<strong>管好帳、管好貨、管現場，無論是製造業還是買賣業，中小企業總是有各自的管理面向需要關注</strong>，從帳務到工廠管理，從貿易到通路經營，還有因應各項政府法規與稅制。",
                     "link": {
                         "url": "/tw/dsc/solution/WB002839/WB00283901.html",
                         "target": "_self"
                     }
                 },
                 {
-                    "title": "小微型企業 ",
-                    "detail": "商務應用雲快速、便利、有效率，系統快速開通，服務立即啟動，不需在硬體 、人力維護投入大筆經費，將各項複雜的數據資料，轉化成易懂的圖形顯示，讓您瞬間了解經營成效與成長趨勢。",
+                    "title": "小微型企業",
+                    "detail": "<strong>商務應用雲快速、便利、有效率，系統快速開通，服務立即啟動，不需在硬體 、人力維護投入大筆經費</strong>，將各項複雜的數據資料，轉化成易懂的圖形顯示，讓您瞬間了解經營成效與成長趨勢。",
                     "link": {
                         "url": "https://a1.digiwin.com",
                         "target": "_self"
@@ -307,7 +306,7 @@
                 },
                 {
                     "title": "新設公司",
-                    "detail": "公司創立初期只會有基本的人員負責行政與招募作業，業務開始運作時，才發現流程串接出現缺口，重工作業一再發生，管理上的困擾也一一浮現，因此新創立公司可以透過系統的導入與建置，提前架構公司標準SOP。",
+                    "detail": "公司創立初期只會有基本的人員負責行政與招募作業，業務開始運作時，才發現流程串接出現缺口，重工作業一再發生，管理上的困擾也一一浮現，<strong>因此新創立公司可以透過系統的導入與建置，提前架構公司標準SOP。</strong>",
                     "link": {
                         "url": "/tw/dsc/solution/WB002521/WB00252103.html",
                         "target": "_self"
@@ -316,13 +315,14 @@
             ]
         },
         "section6": {
+            "sectionLink": {
+                "url": "/tw/dsc/solution/WB002783/WB00278301.html",
+                "target": "_blank"
+            },
             "banner": {
                 "title": "每個產業 我們都是專家",
                 "desc": "累積30多年產業輔導經驗，<br>50,000 多家企業成功案例",
-                "link": {
-                    "url": "/tw/dsc/solution/WB002783/WB00278301.html",
-                    "target": "_blank"
-                }
+                "type": "行業精實分類"
             }
         },
         "section7": [

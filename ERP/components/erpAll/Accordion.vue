@@ -10,9 +10,12 @@
                 <i>{{item.title}}</i>
             </h2>
             <div v-bind:style="{display:displayHandler(idx)}">
-                <div class="accordion-content">
-                    <p>{{item.detail}}</p>
-                    <a v-bind:href="item.link.url" v-bind:target="item.link.target">了解<br>更多</a>
+                <div class="accordion-bar js-accordion-bar">
+                    <div class="accordion-content">
+                        <p class="accordion-content-title">{{item.title}}</p>
+                        <p v-html="item.detail" class="accordion-content-detail"></p>
+                        <a v-bind:href="item.link.url" v-bind:target="item.link.target" class="btn">了解更多</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,16 +35,16 @@ module.exports = {
         isMobile: function (value) {
             if (value) {
                 this.timeline.clear();
-                $('.js-accordion-col').removeAttr('style');
+                $('.js-accordion-bar').removeAttr('style');
             }
         }
     },
     methods: {
-        mediaSensor: function () {
+        mediaSensor: _.throttle(function () {
             let mm = window.matchMedia('(min-width: 1210px)');
             mm.addListener(this.resizeWidth);
             this.resizeWidth(mm);
-        },
+        }, 100),
         resizeWidth: function (pMatchMedia) {
             this.isMobile = pMatchMedia.matches ? false : true;
         },
@@ -72,21 +75,21 @@ module.exports = {
         },
         initAn: function () {
             this.timeline.pause();
-            this.timeline.staggerFrom('.js-accordion-col', .5, {
-                y: '-=200',
-                opacity: 0
-            }, -0.5);
+            this.timeline.from('.js-accordion-bar', 1.5, {
+                width: '0',
+                opacity: 0,
+            });
         },
         scrollHandler: _.throttle(function () {
             let el = this.$refs.accordion;
-            let offset = el.offsetHeight / 2;
-            getScrollPos(el, offset, function () {
+            getScrollPos(el, 0, function () {
                 this.timeline.play();
                 window.removeEventListener('scroll', this.scrollHandler);
             }.bind(this));
         }, 100),
     },
     mounted: function () {
+        window.addEventListener('resize', this.mediaSensor);
         this.mediaSensor();
         if (!this.isMobile) {
             window.addEventListener('scroll', this.scrollHandler);
@@ -95,6 +98,7 @@ module.exports = {
         }
     },
     beforeDestroy: function () {
+        window.removeEventListener('resize', this.mediaSensor);
         window.removeEventListener('scroll', this.scrollHandler);
     }
 }

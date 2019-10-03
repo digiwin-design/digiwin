@@ -3,16 +3,17 @@ main {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media (max-width: $content-width) {
+            margin: -10px -20px;
+        }
+        @media (max-width: 960px) {
+            justify-content: center;
+        }
     }
     .col {
-        width: percentage(150 / 320);
-        @media (max-width: $tablet-width) {
-            &:not(:last-child) {
-                margin-bottom: 1.5em;
-            };
-        }
-        @media (min-width: $tablet-width + 1) {
-            width: percentage(200 / 1200);
+        width: 136px;
+        @media (max-width: $content-width) {
+            margin: 10px 20px;
         }
         a {
             display: flex;
@@ -27,12 +28,8 @@ main {
             }
             div {
                 position: relative;
-                width: 120px;
-                height: 120px;
-                @media (min-width: $content-width) {
-                    width: 190px;
-                    height: 190px;
-                }
+                width: 136px;
+                height: 136px;
             }
         }
         img {
@@ -55,25 +52,21 @@ main {
             }
         }
         p {
+            margin-top: 20px;
+            margin-bottom: 5px;
             width: 100%;
             text-align: justify;
-            &:nth-of-type(1) {
-                margin-top: .8em;
-                margin-bottom: .3em;
-                text-align: center;
-                font-weight: bold;
-                font-size: 20px;
-                line-height: 1;
-                @media (min-width: $content-width) {
-                    font-size: 30px;
-                }
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1;
+            @media (min-width: 960px) {
+                font-size: 30px;
             }
-            &:nth-of-type(2) {
-                font-size: 15px;
-                @media (min-width: $content-width) {
-                    font-size: 20px;
-                }
-            }
+        }
+        .material-icons {
+            color: #595959;
+            font-size: 34px;
         }
     }
 }
