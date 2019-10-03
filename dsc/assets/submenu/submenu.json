@@ -39,8 +39,12 @@
             },
             {
                 "text": "智慧工廠",
-                "url": "industry",
+                "url": "javascript:;",
                 "dropdowns": [
+                    {
+                        "text": "智慧工廠",
+                        "url": "industry"
+                    },
                     {
                         "text": "採購收貨",
                         "url": "WB00247601_Industry01"
