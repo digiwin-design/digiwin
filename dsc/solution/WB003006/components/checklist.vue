@@ -1,9 +1,9 @@
 <template>
     <div class="checklist">
-        <ul>
-            <li v-for="list in lists" :key="list">
-                <img src="images/member/check-icon.png" class="animated bounceIn" alt="">
-                {{list}}
+        <ul v-for="(list, ulIdx) in lists" :key="list[0]">
+            <li v-for="(item, liIdx) in list" :key="item">
+                <img src="images/member/check-icon.png" class="animated bounceIn" :style="getDelay(ulIdx, liIdx)">
+                {{item}}
             </li>
         </ul>
     </div>
@@ -17,6 +17,16 @@ module.exports = {
             type: Array,
             required: true
         }
-    }
+    },
+    methods: {
+        getDelay(ulIdx, liIdx) {
+            if (ulIdx === 1) {
+                liIdx += this.lists[0].length;
+            }
+            return {
+                animationDelay: `${liIdx * .5}s`
+            }
+        }
+    },
 }
 </script>

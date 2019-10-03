@@ -16,19 +16,23 @@ main {
                 text-align: center;
             }
         }
-        .checklist {
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            li {
-                @media (min-width: $tablet-width + 1) {
-                    width: 50%;
-                    &:nth-child(odd) {
-                        padding-right: calc(2em);
-                    }
-                }
-            }
+    }
+    .section2,
+    .section3,
+    .section4 {
+        padding-bottom: 60px;
+    }
+    .section2 {
+        background-color: #fff;
+    }
+    .section3 {
+        background-color: #ececec;
+    }
+    .section4 {
+        background-color: #fff;
+        img {
+            display: block;
+            margin: 0 auto;
         }
     }
 }

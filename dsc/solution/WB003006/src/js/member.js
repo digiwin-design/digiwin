@@ -2,6 +2,7 @@ httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/checklist.vue');
+httpVueLoader.register(Vue, 'components/slider.vue');
 // httpVueLoader.register(Vue, 'components/pain.vue');
 // Vue.use(VueAwesomeSwiper);
 
