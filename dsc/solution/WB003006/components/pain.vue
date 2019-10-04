@@ -8,7 +8,10 @@
         <img :src="content.imgSrc" alt />
         <p class="pain-title" v-text="content.text"></p>
         <div class="pain-hover" :style="{ 'background-color': hoverBgColor }">
-            <p v-html="content.hoverText"></p>
+            <ul v-if="Array.isArray(content.hoverText)">
+                <li v-for="item in content.hoverText" :key="item" v-html="item"></li>
+            </ul>
+            <p v-else v-html="content.hoverText"></p>
         </div>
     </div>
 </template>
@@ -17,6 +20,10 @@
 module.exports = {
     name: 'Pain',
     props: {
+        content: {
+            type: Object,
+            required: true
+        },
         customClass: String,
         fadeIn: {
             type: Boolean,
@@ -25,10 +32,6 @@ module.exports = {
         arrow: {
             type: Boolean,
             default: true
-        },
-        content: {
-            type: Object,
-            required: true
         },
         height: {
             type: String,
@@ -77,7 +80,7 @@ main .pain {
     justify-content: center;
     align-items: center;
 }
-main .pain:hover [class$='-hover'] {
+main .pain:hover [class$="-hover"] {
     top: 0;
 }
 main .pain img {
@@ -89,7 +92,7 @@ main .pain-title {
     font-size: 24px;
     line-height: 1;
 }
-main .pain [class$='-hover'] {
+main .pain [class$="-hover"] {
     position: absolute;
     top: 100%;
     left: 0;
@@ -101,26 +104,28 @@ main .pain [class$='-hover'] {
     color: #fff;
     text-align: justify;
     line-height: 2;
-    transition: top .4s;
+    transition: top 0.4s;
     justify-content: center;
     align-items: center;
 }
-main .pain.fadeIn [class$='-hover'] * {
+main .pain [class$="-hover"] ul {
+    padding-left: 1em;
+    list-style-type: disc;
+}
+main .pain.fadeIn [class$="-hover"] * {
     opacity: 0;
 }
-main .pain.fadeIn:hover [class$='-hover'] * {
-    animation: fadeIn 1s .4s forwards;
+main .pain.fadeIn:hover [class$="-hover"] * {
+    animation: fadeIn 1s 0.4s forwards;
 }
 main .pain.arrow::after {
     position: absolute;
     top: calc(100% - 24px);
     left: 50%;
     color: #fff;
-    content: '\f106';
+    content: "\f106";
     font: normal normal normal 24px/1 FontAwesome;
     transform: translate(-50%, 0);
     animation: arrow 1.5s infinite ease-out;
 }
-
-
 </style>

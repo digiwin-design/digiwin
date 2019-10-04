@@ -197,5 +197,94 @@
                 "不用經營會員，靠多年的口碑行銷就夠了！"
             ]
         ]
+    },
+    "logistics": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["精準物流  全面增效<br>打造 <strong>鮮、準、價、效</strong><br>全管道供應鏈"],
+                "desc": [
+                    "食材供應配送的完善，完整供應鏈系統的升級，<br>效率都是驅動餐飲新零售的重要動力",
+                    "食材供應配送的完善，完整供應鏈系統的升級，效率都是驅動餐飲新零售的重要動力"
+                ],
+                "imgSrc": [
+                    "images/logistics/banner.jpg",
+                    "images/logistics/banner-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ],
+        "pains": [
+            {
+                "color": "#9c5454",
+                "imgSrc": "images/logistics/pain-icon1.png",
+                "text": "採購",
+                "hoverText": "每種食材配合的廠商有3家左右，要記得廠商有無固定送貨日、休假日，並跟價格低的廠商叫貨。"
+            },
+            {
+                "color": "#f26c22",
+                "imgSrc": "images/logistics/pain-icon2.png",
+                "text": "物流",
+                "hoverText": "亂無章法的堆放，貨送到門店時還要翻找，食材都不新鮮了。"
+            },
+            {
+                "color": "#ea6a6a",
+                "imgSrc": "images/logistics/pain-icon3.png",
+                "text": "倉管",
+                "hoverText": [
+                    "食材種類多又雜，人腦記憶倉庫位置，揀貨沒效率。",
+                    "進貨與生產入庫皆無登記有效期限，只能靠人為管控避免出快過期的食材給門市。"
+                ]
+            },
+            {
+                "color": "#afb825",
+                "imgSrc": "images/logistics/pain-icon4.png",
+                "text": "門店",
+                "hoverText": [
+                    "賣不夠顧客抱怨，甚至不再上門消費。備太多又擔心賣不好",
+                    "用紙本跟央廚貨總部叫貨，有時會忘記或重複叫貨。"
+                ]
+            },
+            {
+                "color": "#15c5b2",
+                "imgSrc": "images/logistics/pain-icon5.png",
+                "text": "總部",
+                "hoverText": "央廚與門店的預估依據不一樣，而且又重工。用excel做報表，也還要人員經驗判斷，經驗傳承不易。"
+            }
+        ],
+        "hoverBoxs": [
+            {
+                "imgSrc": "images/logistics/hoverBox-icon1.png",
+                "text": "鮮",
+                "hoverText": [
+                    "新鮮",
+                    "食材品質<br>配送效率"
+                ]
+            },
+            {
+                "imgSrc": "images/logistics/hoverBox-icon2.png",
+                "text": "準",
+                "hoverText": [
+                    "準確",
+                    "智能預測<br>以需定供"
+                ]
+            },
+            {
+                "imgSrc": "images/logistics/hoverBox-icon3.png",
+                "text": "價",
+                "hoverText": [
+                    "價值",
+                    "降低成本<br>減少浪費"
+                ]
+            },
+            {
+                "imgSrc": "images/logistics/hoverBox-icon4.png",
+                "text": "效",
+                "hoverText": [
+                    "效率",
+                    "標準化<br>數據化"
+                ]
+            }
+        ]
     }
 }

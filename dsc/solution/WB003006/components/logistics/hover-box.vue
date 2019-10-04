@@ -1,14 +1,7 @@
 <template>
-    <div
-        class="hoverBox"
-        :class="[customClass, {'fadeIn': fadeIn}, {'arrow': arrow}]"
-        :style="{
-            'background-color': bgColor,
-        }"
-        onclick
-    >
+    <div class="hoverBox" :class="[customClass, {'fadeIn': fadeIn}, {'arrow': arrow}]" onclick>
         <slot name="content"></slot>
-        <div class="hoverBox-hover" :style="{ 'background-color': hoverBgColor }">
+        <div class="hoverBox-hover">
             <slot name="hover"></slot>
         </div>
     </div>
@@ -25,25 +18,12 @@ module.exports = {
         arrow: {
             type: Boolean,
             default: true
-        },
-        color: {
-            type: String,
-            required: true
         }
     },
     computed: {
         isMobile: function () {
             return store.state.isMobile;
         },
-        bgColor: function () {
-            return 'hsl(' + this.hsl[0] + ',' + this.hsl[1] + '%,' + this.hsl[2] + '%' + ')';
-        },
-        hoverBgColor: function () {
-            return 'hsla(' + this.hsl[0] + ',' + this.hsl[1] + '%,' + (this.hsl[2] - 20) + '%' + ',.95)';
-        },
-        hsl: function () {
-            return w3color(this.color).toHslArray();
-        }
     },
 }
 </script>
@@ -67,9 +47,6 @@ main .hoverBox {
     overflow-y: hidden;
     cursor: pointer;
 }
-main .hoverBox:hover [class$="-hover"] {
-    top: 0;
-}
 main .hoverBox [class$="-hover"] {
     position: absolute;
     top: 100%;
@@ -78,6 +55,9 @@ main .hoverBox [class$="-hover"] {
     width: 100%;
     height: inherit;
     transition: top 0.4s;
+}
+main .hoverBox:hover [class$="-hover"] {
+    top: 0;
 }
 main .hoverBox.fadeIn [class$="-hover"] * {
     opacity: 0;
