@@ -24,46 +24,46 @@
   <path fill="none" stroke="#fff" stroke-miterlimit="8" stroke-width=".751" d="M320.61 137.69l13.97-3.47M334.58 134.22l13.97 3.47M319.96 137.69v21.73M348.69 137.69v21.73M319.88 159.42h28.81M319.96 140.3h28.81M319.96 138.67h28.81"/>
   <image width="162" height="102" transform="matrix(.25 0 0 .23 296.42 142.12)" xlink:href="data:image/png;base64,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"/>
   <path d="M802.76 149.9c2.51.72 1.79 6.91-.72 7.27.54 1.64.72 6.91-5.94 6.73-7.91 0-9.34-3.46-14.56-3.46v3.46h-8.62a3.63 3.63 0 01-3.6-3.64v-16.73a3.63 3.63 0 013.6-3.64h8.62v3.64c8.45-3.45 8.09-14 10.25-14.18 12.76-.18 5 12 5 12s7.19-2.37 7.91 4c-.18 1.82 0 2.91-2 4.55zm-8.63-6.55s5.93-12-1.08-11.82c-1.26 0-.72 11.09-11.51 14.73v11.45c4.14 0 9 4 14.38 4 4.5 0 4-3.82 3.06-5.28 3.6-1.09 2.7-6.18.9-6.73 1.62-2 2-2.54 2.16-3.82-.54-4.36-7.91-2.54-7.91-2.54" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(372.73 29.83)" font-size="33.515" fill="#2a2a2a" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="translate(372.73 29.83)" font-size="33.515" fill="#2a2a2a">
     生產領料
   </text>
-  <text transform="translate(374.12 65.13)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="translate(374.12 65.13)" font-size="25.136" fill="#5b5b5b">
     <tspan letter-spacing=".015em">減少物料</tspan><tspan x="102.05" y="0">浪費</tspan>
   </text>
-  <text transform="translate(481.63 262.48)" font-size="33.515" fill="#2a2a2a" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="translate(481.63 262.48)" font-size="33.515" fill="#2a2a2a">
     生產加工
   </text>
-  <text transform="translate(483.02 297.77)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="translate(483.02 297.77)" font-size="25.136" fill="#5b5b5b">
     <tspan letter-spacing=".015em">提升現場</tspan><tspan x="102.05" y="0">透明</tspan>
   </text>
-  <text transform="translate(250.15 262.48)" font-size="33.515" fill="#2a2a2a" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="translate(250.15 262.48)" font-size="33.515" fill="#2a2a2a">
     採購收貨
   </text>
-  <text transform="translate(251.55 297.77)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="translate(251.55 297.77)" font-size="25.136" fill="#5b5b5b">
     <tspan letter-spacing=".015em">減少進貨</tspan><tspan x="102.05" y="0">等待</tspan>
   </text>
-  <text transform="translate(837.18 29.83)" font-size="33.515" fill="#2a2a2a" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="translate(837.18 29.83)" font-size="33.515" fill="#2a2a2a">
     門店上餐
   </text>
-  <text transform="translate(838.58 65.13)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei" letter-spacing=".015em">
+  <text transform="translate(838.58 65.13)" font-size="25.136" fill="#5b5b5b" letter-spacing=".015em">
     品質保<tspan x="76.54" y="0" letter-spacing="0em">障</tspan>
   </text>
-  <text transform="translate(838.58 95.26)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei" letter-spacing=".015em">
+  <text transform="translate(838.58 95.26)" font-size="25.136" fill="#5b5b5b" letter-spacing=".015em">
     口味保<tspan x="76.54" y="0" letter-spacing="0em">障</tspan>
   </text>
-  <text transform="translate(713.87 262.48)" font-size="33.515" fill="#2a2a2a" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="translate(713.87 262.48)" font-size="33.515" fill="#2a2a2a">
     配送出貨
   </text>
-  <text transform="translate(715.27 297.77)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="translate(715.27 297.77)" font-size="25.136" fill="#5b5b5b">
     <tspan letter-spacing=".015em">提升出貨</tspan><tspan x="102.05" y="0">效率</tspan>
   </text>
-  <text transform="translate(715.27 329.99)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="translate(715.27 329.99)" font-size="25.136" fill="#5b5b5b">
     <tspan letter-spacing=".015em">避免發貨</tspan><tspan x="102.05" y="0">錯誤</tspan>
   </text>
-  <text transform="translate(606.78 29.83)" font-size="33.515" fill="#2a2a2a" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="translate(606.78 29.83)" font-size="33.515" fill="#2a2a2a">
     完工入庫
   </text>
-  <text transform="translate(608.17 65.13)" font-size="25.136" fill="#5b5b5b" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="translate(608.17 65.13)" font-size="25.136" fill="#5b5b5b">
     <tspan letter-spacing=".015em">提升入庫</tspan><tspan x="102.05" y="0">效率</tspan>
   </text>
 </svg>

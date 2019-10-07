@@ -1,4 +1,5 @@
 httpVueLoader.register(Vue, 'components/logistics/hover-box.vue');
+httpVueLoader.register(Vue, 'components/logistics/tabs.vue');
 httpVueLoader.register(Vue, 'components/logistics/section1-left-svg.vue');
 httpVueLoader.register(Vue, 'components/logistics/section1-right-svg.vue');
 

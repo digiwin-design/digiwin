@@ -1,9 +1,19 @@
 <template>
-    <div ref="svg" class="svgContainer"></div>
+    <div ref="svg" class="svgContainer" :style="{ 'padding-top': (h / w * 100) + '%' }"></div>
 </template>
 
 <script>
 module.exports = {
+    props: {
+        w: {
+            type: Number,
+            required: true
+        },
+        h: {
+            type: Number,
+            required: true
+        }
+    },
     data: function () {
         return {
             timeline: new TimelineMax(),

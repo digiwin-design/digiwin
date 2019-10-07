@@ -20,9 +20,6 @@ main {
             font-size: 18px;
             line-height: 1;
         }
-        .svgContainer {
-            padding-top: percentage(500 / 900);
-        }
     }
     .section2 {
         padding-bottom: 60px;
@@ -66,12 +63,6 @@ main {
             max-width: 1087px;
             @media (min-width: $tablet-width + 1) {
                 margin-top: 30px;
-            }
-        }
-        .svgContainer {
-            padding-top: percentage(391 / 343);
-            @media (min-width: $tablet-width + 1) {
-                padding-top: percentage(531 / 1087);
             }
         }
     }

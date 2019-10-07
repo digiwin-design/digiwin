@@ -1,4 +1,4 @@
-main .slider {
+main .slider-checkbox {
     transition: height .4s;
     & > div {
         overflow-x: hidden;
@@ -15,7 +15,7 @@ main .slider {
         display: flex;
         transition: transform .5s;
         @at-root {
-            main .slider input[type=checkbox]:checked + .slider-slides {
+            main .slider-checkbox input[type=checkbox]:checked + .slider-checkbox-slides {
                 transform: translateX(-100%);
             }
         }
@@ -60,10 +60,10 @@ main .slider {
                 transform: translateY(-50%);
             }
             @at-root {
-                main .slider-slide:first-child section label i {
+                main .slider-checkbox-slide:first-child section label i {
                     right: 25px;
                 }
-                main .slider-slide:last-child section label {
+                main .slider-checkbox-slide:last-child section label {
                     background-color: #000;
                     i {
                         left: 25px;

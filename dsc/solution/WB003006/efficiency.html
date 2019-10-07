@@ -57,7 +57,7 @@
 </article>
 
 <div class="section2">
-    <slider id="1">
+    <slider-checkbox id="1">
         <template slot="left">
             <section>
                 <section-title
@@ -75,11 +75,11 @@
                 <label for="slider-toggle1"><i class="material-icons">arrow_back</i>效率不佳的原因</label>
             </section>
         </template>
-    </slider>
+    </slider-checkbox>
 </div>
 
 <div class="section3">
-    <slider id="2">
+    <slider-checkbox id="2">
         <template slot="left">
             <section>
                 <section-title title="提昇總部效率之前"></section-title>
@@ -94,11 +94,11 @@
                 <label for="slider-toggle2"><i class="material-icons">arrow_back</i>回到提昇效率之前</label>
             </section>
         </template>
-    </slider>
+    </slider-checkbox>
 </div>
 
 <div class="section4">
-    <slider id="3">
+    <slider-checkbox id="3">
         <template slot="left">
             <section>
                 <section-title
@@ -119,12 +119,14 @@
                 <label for="slider-toggle3"><i class="material-icons">arrow_back</i>回到提昇效率之前</label>
             </section>
         </template>
-    </slider>
+    </slider-checkbox>
 </div>
 
 <div class="section5">
-    <section-title title="鼎新在餐飲總部及門店給予的支持"></section-title>
-    <img src="images/efficiency/section5-illust.png" alt="">
+    <div class="container">
+        <section-title title="鼎新在餐飲總部及門店給予的支持"></section-title>
+        <img src="images/efficiency/section5-illust.png" alt="">
+    </div>
 </div>
 
 <contact v-bind:multiple="false" source=""></contact>

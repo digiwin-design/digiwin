@@ -31,6 +31,9 @@ main {
     min-width: 360px;
     font-size: 18px;
     line-height: 1.6;
+    *:not(text) {
+        font-size: 100%;
+    }
     .container {
         margin: 0 auto;
         padding: 0 15px;

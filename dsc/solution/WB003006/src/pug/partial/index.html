@@ -10,7 +10,7 @@
         >
         </section-title>
         <div class="section1-illust">
-            <section1-svg></section1-svg>
+            <section1-svg :w="900" :h="500"></section1-svg>
         </div>
         <p class="section1-source">資料來源：經濟部統計處</p>
     </div>
@@ -33,7 +33,7 @@
     <div class="container">
         <section-title title="餐飲業在新時代下的經營挑戰"></section-title>
         <collapse v-if="isMediumWidth" :items="result.index.collapse"></collapse>
-        <tabs v-else :items="result.index.collapse"></tabs>
+        <tabs v-else :content="result.index.collapse"></tabs>
     </div>
 </article>
 
@@ -44,8 +44,8 @@
             padding-bottom="0"
         ></section-title>
         <div class="section4-illust">
-            <section4-svg-s v-if="isMobile"></section4-svg-s>
-            <section4-svg v-else></section4-svg>
+            <section4-svg-s :w="343" :h="391" v-if="isMobile"></section4-svg-s>
+            <section4-svg :w="1087" :h="531" v-else></section4-svg>
         </div>
     </div>
 </article>

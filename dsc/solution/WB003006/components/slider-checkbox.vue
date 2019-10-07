@@ -1,14 +1,14 @@
 <template>
-    <div class="slider">
+    <div class="slider-checkbox">
         <div>
             <input type="checkbox" v-bind:id="'slider-toggle' + id" v-model="isRightSlide" />
-            <div class="slider-slides">
-                <div class="slider-slide">
+            <div class="slider-checkbox-slides">
+                <div class="slider-checkbox-slide">
                     <div class="container">
                         <slot name="left"></slot>
                     </div>
                 </div>
-                <div class="slider-slide">
+                <div class="slider-checkbox-slide">
                     <div class="container">
                         <slot name="right"></slot>
                     </div>

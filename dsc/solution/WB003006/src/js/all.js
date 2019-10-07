@@ -6,10 +6,8 @@ httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/slider-banner.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/pain.vue');
-httpVueLoader.register(Vue, 'components/checklist.vue');
-httpVueLoader.register(Vue, 'components/slider.vue');
-httpVueLoader.register(Vue, 'components/slider2.vue');
-httpVueLoader.register(Vue, 'components/tabs.vue');
+httpVueLoader.register(Vue, 'components/slider-checkbox.vue');
+httpVueLoader.register(Vue, 'components/slider-radio.vue');
 
 // =============================================================================
 // function

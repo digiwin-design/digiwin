@@ -1,27 +1,27 @@
 <svg data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1087 531">
   <circle cx="544.81" cy="232.2" r="230.7" fill="#eaeaea" stroke="#b7b7b7" stroke-miterlimit="8" stroke-width="3"/>
-  <text transform="matrix(1.01 0 0 1 453.65 326.62)" font-size="35.043" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="matrix(1.01 0 0 1 453.65 326.62)" font-size="35.043">
     線下到線上
   </text>
-  <text transform="matrix(1.01 0 0 1 453.65 375.48)" font-size="35.043" font-family="MicrosoftJhengHeiBold,Microsoft JhengHei">
+  <text transform="matrix(1.01 0 0 1 453.65 375.48)" font-size="35.043">
     分散到融合
   </text>
-  <text transform="matrix(1.01 0 0 1 456.04 167.31)" font-size="84.699" fill="#666" font-family="DFLiHei-W7-WINP-BF,DFPLiHei-Bd">
+  <text transform="matrix(1.01 0 0 1 456.04 167.31)" font-size="84.699" fill="#666">
     鼎新
   </text>
-  <text transform="matrix(1.01 0 0 1 413.06 255.11)" font-size="84.699" fill="#d10000" font-family="DFLiHei-W7-WINP-BF,DFPLiHei-Bd">
+  <text transform="matrix(1.01 0 0 1 413.06 255.11)" font-size="84.699" fill="#d10000">
     新零售
   </text>
-  <text transform="matrix(1.01 0 0 1 119.35 354.2)" font-size="34.569" fill="#2da092" font-family="DFLiHei-W7-WINP-BF,DFPLiHei-Bd">
+  <text transform="matrix(1.01 0 0 1 119.35 354.2)" font-size="34.569" fill="#2da092">
     便捷支付
   </text>
-  <text transform="matrix(1.01 0 0 1 827.17 354.2)" font-size="34.569" fill="#809914" font-family="DFLiHei-W7-WINP-BF,DFPLiHei-Bd">
+  <text transform="matrix(1.01 0 0 1 827.17 354.2)" font-size="34.569" fill="#809914">
     精準物流
   </text>
-  <text transform="matrix(1.01 0 0 1 119.35 77.91)" font-size="34.569" fill="#f95346" font-family="DFLiHei-W7-WINP-BF,DFPLiHei-Bd">
+  <text transform="matrix(1.01 0 0 1 119.35 77.91)" font-size="34.569" fill="#f95346">
     提升效率
   </text>
-  <text transform="matrix(1.01 0 0 1 827.17 77.91)" font-size="34.569" fill="#d89500" font-family="DFLiHei-W7-WINP-BF,DFPLiHei-Bd">
+  <text transform="matrix(1.01 0 0 1 827.17 77.91)" font-size="34.569" fill="#d89500">
     會員營銷
   </text>
   <circle cx="357.19" cy="370.18" r="73.74" fill="#6cd8ce" stroke="#999" stroke-miterlimit="8" stroke-width="3.003"/>
@@ -56,16 +56,16 @@
   <path d="M353.34 116.96l-.67-23h4.73v-23.5a9.53 9.53 0 0 0-9.53-9.52h-.66L343 68.77h-1.09l-4.21-7.83h-.7a9.54 9.54 0 0 0-9.53 9.52v23.49h4.74l-.68 23c-9.19 1.17-18.66 4.18-18.66 9.27 0 6.46 15.22 9.94 29.55 9.94s29.58-3.47 29.58-9.92c0-5.1-9.47-8.11-18.66-9.28zm-23.62-25.21V70.46a7.33 7.33 0 0 1 6.68-7.29l4.19 7.81h3.73l4.2-7.81a7.34 7.34 0 0 1 6.68 7.29v21.29h-2.59l-.38-12.87-2.23.06 1.36 46.3h-4.13l-3.63-29.82-1.14.14-1.14-.14-3.66 29.82h-4.12l1.35-46.3-2.2-.06-.38 12.87zm12.74 42.22c-16.12 0-27.35-4.08-27.35-7.74 0-2.47 5.64-5.62 16.4-7l-.24 8.25h8.35l2.84-23.24 2.84 23.19h8.35l-.24-8.25c10.76 1.41 16.39 4.56 16.39 7 0 3.71-11.23 7.79-27.34 7.79z" fill="#444"/>
   <circle cx="349.62" cy="51.51" r="7.38" fill="#ffc524"/>
   <path d="M342.46 59.63a6.43 6.43 0 1 0-6.46-6.39 6.43 6.43 0 0 0 6.46 6.39zm0-10.66a4.23 4.23 0 1 1-4.23 4.27 4.24 4.24 0 0 1 4.23-4.27z" fill="#444"/>
-  <text transform="matrix(1.01 0 0 1 826.39 115.93)" font-size="20.442" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
-    <tspan letter-spacing=".045em">推動更多的通路、增加更</tspan><tspan x="235" y="0">多</tspan><tspan x="0" y="24.53" letter-spacing=".15em">的來客、精準營銷達到</tspan><tspan x="235" y="24.53">吸</tspan><tspan x="0" y="49.06" letter-spacing=".016em">粉、聚粉、活粉，完善360</tspan><tspan x="244.23" y="49.06">∘</tspan><tspan x="0" y="73.59">全方位會員營銷。</tspan>
+  <text transform="matrix(1.01 0 0 1 826.39 115.93)" font-size="20.442">
+    <tspan letter-spacing=".045em">推動更多的通路、增加更多</tspan><tspan x="0" y="24.53" letter-spacing=".15em">的來客、精準營銷達到</tspan><tspan x="235" y="24.53">吸</tspan><tspan x="0" y="49.06" letter-spacing=".016em">粉、聚粉、活粉，完善360</tspan><tspan x="244.23" y="49.06">∘</tspan><tspan x="0" y="73.59">全方位會員營銷。</tspan>
   </text>
-  <text transform="matrix(1.01 0 0 1 826.39 396.86)" font-size="20.442" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="matrix(1.01 0 0 1 826.39 396.86)" font-size="20.442">
     <tspan letter-spacing=".052em">到貨精準、降低缺貨，減</tspan><tspan x="236.64" y="0">少</tspan><tspan x="0" y="24.53">報廢，達到存貨有效控管。</tspan>
   </text>
-  <text transform="matrix(1.01 0 0 1 0 115.93)" font-size="20.442" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="matrix(1.01 0 0 1 0 115.93)" font-size="20.442">
     <tspan letter-spacing=".045em">完善門市服務、達成供應</tspan><tspan x="235" y="0">鏈</tspan><tspan x="0" y="24.53" letter-spacing=".045em">精準，不僅是做到、更需</tspan><tspan x="235" y="24.53">要</tspan><tspan x="0" y="49.06">有效率的方法。</tspan>
   </text>
-  <text transform="matrix(1.01 0 0 1 0 396.86)" font-size="20.442" font-family="MicrosoftJhengHeiRegular,Microsoft JhengHei">
+  <text transform="matrix(1.01 0 0 1 0 396.86)" font-size="20.442">
     <tspan letter-spacing=".045em">應用多元支付便利性，引</tspan><tspan x="235" y="0">動</tspan><tspan x="0" y="24.53" letter-spacing=".045em">會員儲值，藉以打通線上</tspan><tspan x="235" y="24.53">、</tspan><tspan x="0" y="49.06">線下、增加回購與忠誠度。</tspan>
   </text>
 </svg>

@@ -55,6 +55,7 @@
 }
 
 @mixin btn($width, $height, $color, $bgColor, $radius: 0, $maxWidth: false, $display: block) {
+    @include linkColor($color);
     display: block;
     height: $height;
     border-radius: $radius;
@@ -68,7 +69,6 @@
     @else {
         width: $width;
     }
-    @include linkColor($color);
 }
 
 // 增加點擊範圍
@@ -251,13 +251,10 @@
 
 /* #region extend */
 %clearfix {
-    &:before {
-        display: table;
-        content: '';
-    }
-    &:after {
-        display: table;
+    &::after {
+        display: block;
         clear: both;
+        height: 0;
         content: '';
     }
 }
@@ -284,7 +281,7 @@
         height: inherit;
         transition: top .4s;
     }
-    
+
     // fadeIn
     &[class*='fadeIn'] {
         @keyframes fadeIn {

@@ -27,7 +27,22 @@ main {
     }
     .section3 {
         background-color: #ececec;
-        text-align: center;
+        .sectionTitle {
+            h1 {
+                text-align: center;
+            }
+            p {
+                @media (min-width: $tablet-width + 1) {
+                    text-align: center;
+                }
+            }
+            br {
+                display: none;
+                @media (min-width: $tablet-width + 1) {
+                    display: block;
+                }
+            }
+        }
     }
     .section4 {
         background-color: #fff;

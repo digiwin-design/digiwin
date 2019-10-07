@@ -19,12 +19,12 @@ module.exports = {
         }
     },
     methods: {
-        getDelay(ulIdx, liIdx) {
+        getDelay: function (ulIdx, liIdx) {
             if (ulIdx === 1) {
                 liIdx += this.lists[0].length;
             }
             return {
-                animationDelay: `${liIdx * .5}s`
+                animationDelay: liIdx * .5 + 's'
             }
         }
     },

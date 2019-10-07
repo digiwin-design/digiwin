@@ -70,7 +70,8 @@
             // 設定目前選單樣式
             setActiveIndex() {
                 this.results[0].menus.forEach((menu, index) => {
-                    if (menu.url === page || menu.url === page + hash) {
+                    let url = menu.url.replace(/(.html|.htm)/g, '');
+                    if (url === page || url === page + hash) {
                         this.activeIndex = index;
                         this.setCurrentPage(menu.text);
                     } else if (menu.dropdowns) {

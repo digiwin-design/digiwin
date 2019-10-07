@@ -1,5 +1,5 @@
 <template>
-    <div class="slider2">
+    <div class="slider-radio">
         <input
             type="radio"
             v-for="(item, idx) in nav"
@@ -9,15 +9,15 @@
             :checked="idx === 0"
         >
 
-        <div v-if="nav" class="slider2-nav">
+        <div v-if="nav" class="slider-radio-nav">
             <label v-for="(item, idx) in nav" :key="item" :for="id + '-' + idx">{{item}}</label>
         </div>
 
-        <div class="slider2-content">
-            <div ref="slides" class="slider2-slides">
-                <div v-for="(item, idx) in nav" :key="item" class="slider2-slide js-slider2-slide">
+        <div class="slider-radio-content">
+            <div ref="slides" class="slider-radio-slides">
+                <div v-for="(item, idx) in nav" :key="item" class="slider-radio-slide js-slider-radio-slide">
                     <div class="container">
-                        <div class="slider2-slide-content">
+                        <div class="slider-radio-slide-content">
                             <slot :name="id + '-' + idx + '-t'"></slot>
                             <slot :name="id + '-' + idx"></slot>
                         </div>
@@ -57,7 +57,7 @@ module.exports = {
             this.$refs.slides.style.height = _height + 'px';
         },
         getHeight: function (index) {
-            return $(this.$el).find('.js-slider2-slide').eq(index).find('.container').outerHeight();
+            return $(this.$el).find('.js-slider-radio-slide').eq(index).find('.container').outerHeight();
         },
     },
     mounted: function () {

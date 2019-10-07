@@ -12,7 +12,7 @@
 </article>
 
 <div class="section2">
-    <slider id="1">
+    <slider-checkbox id="1">
         <template slot="left">
             <section>
                 <section-title
@@ -30,11 +30,11 @@
                 <label for="slider-toggle1"><i class="material-icons">arrow_back</i>無法掌握的原因</label>
             </section>
         </template>
-    </slider>
+    </slider-checkbox>
 </div>
 
 <div class="section3">
-    <slider id="2">
+    <slider-checkbox id="2">
         <template slot="left">
             <section>
                 <section-title
@@ -55,12 +55,14 @@
                 <label for="slider-toggle2"><i class="material-icons">arrow_back</i>回到提升效率之前</label>
             </section>
         </template>
-    </slider>
+    </slider-checkbox>
 </div>
 
 <div class="section4">
-    <section-title title="餐飲業會員管理<br>如何線下體驗引流線上"></section-title>
-    <img src="images/member/section4-illust.png" alt="">
+    <div class="container">
+        <section-title title="餐飲業會員管理<br>如何線下體驗引流線上"></section-title>
+        <img src="images/member/section4-illust.png" alt="">
+    </div>
 </div>
 
 <contact v-bind:multiple="false" source=""></contact>

@@ -1,3 +1,5 @@
+httpVueLoader.register(Vue, 'components/member/checklist.vue');
+
 const store = new Vuex.Store({
     state: {
         isMobile: false,

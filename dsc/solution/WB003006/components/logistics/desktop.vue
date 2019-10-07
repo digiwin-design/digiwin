@@ -2,13 +2,15 @@
     <div class="desktop">
         <section>
             <h1>鮮</h1>
-            <slider2 id="t1" :nav="['食材品質追溯','食材配送效率']">
+            <slider-radio id="t1" :nav="['食材品質追溯','食材配送效率']">
                 <template slot="t1-0-t">
                     <h2>食材標籤化、規範化；數據採集即時化；食品品質安全才有保障</h2>
                 </template>
                 <template slot="t1-0">
                     <div class="section1-left-illust">
-                        <section1-left-svg></section1-left-svg>
+                        <!-- SVG須改圖 -->
+                        <!-- <section1-left-svg :w="1042" :h="366"></section1-left-svg> -->
+                        <img src="images/logistics/section1-left-illust.png" alt="">
                     </div>
                 </template>
 
@@ -17,15 +19,15 @@
                 </template>
                 <template slot="t1-1">
                     <div class="section1-right-illust">
-                        <section1-right-svg></section1-right-svg>
+                        <section1-right-svg :w="834" :h="346"></section1-right-svg>
                     </div>
                 </template>
-            </slider2>
+            </slider-radio>
         </section>
         
         <section>
             <h1>準</h1>
-            <slider2 id="t2" :nav="['智能預測','以需定供']">
+            <slider-radio id="t2" :nav="['智能預測','以需定供']">
                 <template slot="t2-0-t">
                     <h2>以智能預測，備料準確，要貨就能即時準確</h2>
                 </template>
@@ -39,12 +41,12 @@
                 <template slot="t2-1">
                     <img src="images/logistics/section2-right-illust.png" alt="">
                 </template>
-            </slider2>
+            </slider-radio>
         </section>
         
         <section>
             <h1>價</h1>
-            <slider2 id="t3" :nav="['降低成本','減少浪費']">
+            <slider-radio id="t3" :nav="['降低成本','減少浪費']">
                 <template slot="t3-0-t">
                     <h2>全管道供應鏈資訊的完整串連，<br>從採購、生管、倉管、物流、門店到總部，<br>每個環節提升提升的效能，都能有效降低成本</h2>
                 </template>
@@ -58,12 +60,12 @@
                 <template slot="t3-1">
                     <img src="images/logistics/section3-right-illust.png" alt="">
                 </template>
-            </slider2>
+            </slider-radio>
         </section>
         
         <section>
             <h1>效</h1>
-            <slider2 id="t4" :nav="['標準化','數據化']">
+            <slider-radio id="t4" :nav="['標準化','數據化']">
                 <template slot="t4-0-t">
                     <h2>建構標準化的作業流程<br>從食材採購、製作流程、中廚加工、產品審核、半成品加工到最終門店出餐</h2>
                 </template>
@@ -77,7 +79,7 @@
                 <template slot="t4-1">
                     <img src="images/logistics/section4-right-illust.png" alt="">
                 </template>
-            </slider2>
+            </slider-radio>
         </section>
     </div>
 </template>

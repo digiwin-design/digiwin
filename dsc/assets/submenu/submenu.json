@@ -1439,5 +1439,35 @@
                 "url": "semiconductorBT"
             }
         ]
+    },
+    {
+        "id": "WB003006",
+        "title": "餐飲業",
+        "menus": [
+            {
+                "text": "餐飲業現況",
+                "url": "index.html"
+            },
+            {
+                "text": "提昇效率",
+                "url": "efficiency.html"
+            },
+            {
+                "text": "會員營銷",
+                "url": "member.html"
+            },
+            {
+                "text": "精準物流",
+                "url": "logistics.html"
+            },
+            {
+                "text": "便捷支付",
+                "url": "payment.html"
+            },
+            {
+                "text": "聯絡我們",
+                "url": "#contact"
+            }
+        ]
     }
 ]

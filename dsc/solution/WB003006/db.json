@@ -286,5 +286,63 @@
                 ]
             }
         ]
+    },
+    "payment": {
+        "banner": [
+            {
+                "id": 1,
+                "title": [
+                    "便捷支付，成交快速<br>支付有門道，回購看利道",
+                    "便捷支付，成交快速支付有門道，回購看利道"
+                ],
+                "desc": ["電子支付普及率節節升高，<br>便利與紅利是消費者選擇主因，<br>當消費者習慣已改變，<br>跟上潮流才能吸引人流，轉換金流！"],
+                "imgSrc": [
+                    "images/payment/banner.jpg",
+                    "images/payment/banner-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ],
+        "anchors": [
+            {
+                "text": ["消費<strong>前</strong>", "提高意願<br>促進消費"],
+                "imgSrc": "images/payment/anchor-illust1.png",
+                "bgColor": "#f17e7e"
+            },
+            {
+                "text": ["結帳<strong>中</strong>", "優化體驗<br>降低錯誤"],
+                "imgSrc": "images/payment/anchor-illust2.png",
+                "bgColor": "#ed3e3e"
+            },
+            {
+                "text": ["消費<strong>後</strong>", "提高忠誠<br>促動回購"],
+                "imgSrc": "images/payment/anchor-illust3.png",
+                "bgColor": "#a20a0a"
+            }
+        ],
+        "checklist": {
+            "section2": [
+                [
+                    "支付方式的服務費用(如年費及開通費用)成本越低越好",
+                    "結帳中的導購做的好，消費者買更多",
+                    "每筆交易手續費越低越好",
+                    "讓消費者更方便的付款",
+                    "縮短排隊結帳等待時間，優化消費體驗",
+                    "消費者付款資料安全有保障"
+                ]
+            ],
+            "section3": [
+                [
+                    "支付方式多，才能接觸到更多的消費者",
+                    "要如何留下這些消費者，讓他們變成會員",
+                    "不同支付的金流，該如何整合管理",
+                    "不同支付配合的優惠不同，該如何計算損益",
+                    "要如何避免顧客取消訂單，減少退貨成本",
+                    "減少人員對帳時間，提升作業效率與正確性",
+                    "售後服務做的好，客戶才留的住",
+                    "運用紅利回饋機制，促動回購意願並提高會員忠誠度"
+                ]
+            ]
+        }
     }
 }
