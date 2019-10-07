@@ -1,19 +1,9 @@
 <template>
-    <div ref="svg" class="svgContainer" :style="{ 'padding-top': (h / w * 100) + '%' }"></div>
+    <div ref="svg" class="svgContainer"></div>
 </template>
 
 <script>
 module.exports = {
-    props: {
-        w: {
-            type: Number,
-            required: true
-        },
-        h: {
-            type: Number,
-            required: true
-        }
-    },
     data: function () {
         return {
             timeline: new TimelineMax(),
@@ -23,11 +13,17 @@ module.exports = {
     methods: {
         getSvg: function () {
             fetchFile('images/logistics/svg/section1-left.svg').then(function (res) {
-                this.$refs.svg.innerHTML = res;
+                this.$el.innerHTML = res;
+                this.setSize();
                 // this.initGUI();
                 // this.initAn();
                 // this.scrollHandler();
             }.bind(this));
+        },
+        setSize: function () {
+            let w = this.$el.firstElementChild.viewBox.baseVal.width;
+            let h = this.$el.firstElementChild.viewBox.baseVal.height;
+            this.$el.style.paddingTop = (h / w * 100) + '%';
         },
         initGUI: function () {
             let _this = this;
@@ -50,8 +46,7 @@ module.exports = {
         },
         scrollHandler: _.throttle(function () {
             window.addEventListener('scroll', this.scrollHandler);
-            let el = this.$refs.svg;
-            getScrollPos(el, 0, function () {
+            getScrollPos(this.$el, 0, function () {
                 this.timeline.play();
                 window.removeEventListener('scroll', this.scrollHandler);
             }.bind(this));

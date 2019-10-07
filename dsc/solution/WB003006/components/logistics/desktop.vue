@@ -9,7 +9,7 @@
                 <template slot="t1-0">
                     <div class="section1-left-illust">
                         <!-- SVG須改圖 -->
-                        <!-- <section1-left-svg :w="1042" :h="366"></section1-left-svg> -->
+                        <!-- <section1-left-svg></section1-left-svg> -->
                         <img src="images/logistics/section1-left-illust.png" alt="">
                     </div>
                 </template>
@@ -19,7 +19,7 @@
                 </template>
                 <template slot="t1-1">
                     <div class="section1-right-illust">
-                        <section1-right-svg :w="834" :h="346"></section1-right-svg>
+                        <section1-right-svg></section1-right-svg>
                     </div>
                 </template>
             </slider-radio>
