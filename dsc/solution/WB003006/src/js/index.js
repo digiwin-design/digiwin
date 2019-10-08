@@ -4,8 +4,6 @@ httpVueLoader.register(Vue, 'components/index/section4-svg-s.vue');
 httpVueLoader.register(Vue, 'components/index/progress-bars.vue');
 httpVueLoader.register(Vue, 'components/index/collapse.vue');
 httpVueLoader.register(Vue, 'components/index/tabs.vue');
-// httpVueLoader.register(Vue, 'components/pain.vue');
-// Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({
     state: {
