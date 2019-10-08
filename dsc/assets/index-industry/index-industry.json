@@ -155,6 +155,37 @@
         }
     },
     {
+        "id": "22",
+        "title": "餐飲",
+        "contents": {
+            "main": {
+                "title": "餐飲業解決方案",
+                "url": "/tw/dsc/solution/WB003006/index.html",
+                "content": "實現餐飲業線上及線下諮詢、候位、預訂、外賣、點餐、 收銀、會員、營銷活動及進銷存等平台資訊整合。"
+            },
+            "details": [
+                {
+                    "title": "會員營銷",
+                    "url": "/tw/dsc/solution/WB003006/member.html",
+                    "target": "_self",
+                    "content": "線下體驗引流線上，針對不同會員，給予不同優惠，讓顧客逐步成為忠誠會員。"
+                },
+                {
+                    "title": "精準物流",
+                    "url": "/tw/dsc/solution/WB003006/logistics.html",
+                    "target": "_self",
+                    "content": "門店要貨、總店補貨、採購進貨、倉管揀貨、物流配貨，打造全管道供應鏈。"
+                },
+                {
+                    "title": "資料索取",
+                    "url": "/tw/contact/eform.html",
+                    "target": "_self",
+                    "content": "點擊諮詢餐飲行業相關資料"
+                }
+            ]
+        }
+    },
+    {
         "id": "05",
         "title": "流通",
         "contents": {

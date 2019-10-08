@@ -11,6 +11,7 @@ $(function () {
                 el: '#home-industry-app',
                 data: {
                     limit: 3
+                    // limit: 10 // dev
                 },
                 mounted() {
                     this.initComponents();
