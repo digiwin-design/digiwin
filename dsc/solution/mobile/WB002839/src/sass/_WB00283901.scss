@@ -6,6 +6,23 @@ main > .WB00283901 {
             padding-top: 180px;
             max-width: 490px;
         }
+        &-btns {
+            display: flex;
+            margin-top: 75px;
+            a {
+                // @include btn(190px, 40px, #fff, #ff8404);
+                display: block;
+                border-radius: 0;
+                background-color: #ff8404;
+                color: #fff;
+                text-align: center;
+                line-height: 40px;
+                width: calc((100% - 20px) / 2);
+                & + a {
+                    margin-left: 20px;
+                }
+            }
+        }
     }
     .section1 {
         padding-bottom: 70px;

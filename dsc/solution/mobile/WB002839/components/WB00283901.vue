@@ -4,6 +4,10 @@
             <div class="container">
                 <h1 class="mainTitle">管好帳、管好貨、管現場</h1>
                 <h2>但人就是這麼多...怎麼管?</h2>
+                <div class="header-btns">
+                    <a href v-on:click.prevent="scrollTo('#contact')">立即諮詢</a>
+                    <a href=" http://bit.ly/30TfgST" target="_blank">下載解決方案</a>
+                </div>
             </div>
         </div>
 
@@ -167,6 +171,14 @@ module.exports = {
                     url: 'https://www.digiwin.com/tw/dsc/activity/WB002890/WB00289002.htm'
                 },
             ];
+        }
+    },
+    methods: {
+        scrollTo(target) {
+            let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+            let targetPos = document.querySelector(target).offsetTop;
+            let finalPos = offset ? targetPos - offset : targetPos;
+            window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
         }
     },
     mounted() {

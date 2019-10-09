@@ -62,7 +62,7 @@ main .sectionTitle {
 main .header {
   background-position: 50% 0;
   background-repeat: no-repeat;
-  background-image: url('../images/barcode/header-bg-s.jpg?1543533104');
+  background-image: url('../images/barcode/header-bg-s.jpg?1558758748');
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,7 +70,7 @@ main .header {
 }
 @media (min-width: 900px) {
   main .header {
-    background-image: url('../images/barcode/header-bg.jpg?1543533104');
+    background-image: url('../images/barcode/header-bg.jpg?1558758748');
   }
 }
 main .header .container {
@@ -116,13 +116,13 @@ main .header h2 {
   }
 }
 main .section1 {
-  background-image: repeating-linear-gradient(rgba(32, 155, 111, 0.5) 0, rgba(32, 155, 111, 0.5) 775px, rgba(0, 176, 189, 0.5) 0, rgba(0, 176, 189, 0.5)), url('../images/barcode/section1-bg-s.jpg?1543533104');
+  background-image: repeating-linear-gradient(rgba(32, 155, 111, 0.5) 0, rgba(32, 155, 111, 0.5) 775px, rgba(0, 176, 189, 0.5) 0, rgba(0, 176, 189, 0.5)), url('../images/barcode/section1-bg-s.jpg?1558758748');
   background-position: 50% 0, 50% -10px;
   background-repeat: no-repeat;
 }
 @media (min-width: 1200px) {
   main .section1 {
-    background-image: url('../images/barcode/section1.png?1543533104'), url('../images/barcode/section1-bg.jpg?1543533104');
+    background-image: url('../images/barcode/section1.png?1558758748'), url('../images/barcode/section1-bg.jpg?1558758748');
     background-position: 50% 0, 50% 0;
   }
   main .section1-rows {
@@ -565,13 +565,13 @@ main .section4-row {
 }
 @media (min-width: 1200px) {
   main .section4-row:nth-of-type(1) {
-    background-image: url('../images/barcode/section4-illust1.jpg?1543533106');
+    background-image: url('../images/barcode/section4-illust1.jpg?1558758748');
     background-repeat: no-repeat;
   }
 }
 main .section4-row:nth-of-type(1) .section4-illust {
   height: 310px;
-  background-image: url('../images/barcode/section4-illust1.jpg?1543533106');
+  background-image: url('../images/barcode/section4-illust1.jpg?1558758748');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -582,13 +582,13 @@ main .section4-row:nth-of-type(1) .section4-illust {
 }
 @media (min-width: 1200px) {
   main .section4-row:nth-of-type(2) {
-    background-image: url('../images/barcode/section4-illust2.jpg?1543533106');
+    background-image: url('../images/barcode/section4-illust2.jpg?1558758748');
     background-repeat: no-repeat;
   }
 }
 main .section4-row:nth-of-type(2) .section4-illust {
   height: 280px;
-  background-image: url('../images/barcode/section4-illust2.jpg?1543533106');
+  background-image: url('../images/barcode/section4-illust2.jpg?1558758748');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -957,13 +957,13 @@ main .section5 h2 {
 }
 @media (min-width: 1200px) {
   main .section5-row:nth-of-type(1) {
-    background-image: url('../images/barcode/section5-illust1.jpg?1543538656');
+    background-image: url('../images/barcode/section5-illust1.jpg?1558758748');
     background-repeat: no-repeat;
   }
 }
 main .section5-row:nth-of-type(1) .section5-illust {
   height: 280px;
-  background-image: url('../images/barcode/section5-illust1.jpg?1543538656');
+  background-image: url('../images/barcode/section5-illust1.jpg?1558758748');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -974,13 +974,13 @@ main .section5-row:nth-of-type(1) .section5-illust {
 }
 @media (min-width: 1200px) {
   main .section5-row:nth-of-type(2) {
-    background-image: url('../images/barcode/section5-illust2.jpg?1543538656');
+    background-image: url('../images/barcode/section5-illust2.jpg?1558758748');
     background-repeat: no-repeat;
   }
 }
 main .section5-row:nth-of-type(2) .section5-illust {
   height: 280px;
-  background-image: url('../images/barcode/section5-illust2.jpg?1543538656');
+  background-image: url('../images/barcode/section5-illust2.jpg?1558758748');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -991,13 +991,13 @@ main .section5-row:nth-of-type(2) .section5-illust {
 }
 @media (min-width: 1200px) {
   main .section5-row:nth-of-type(3) {
-    background-image: url('../images/barcode/section5-illust3.jpg?1543538656');
+    background-image: url('../images/barcode/section5-illust3.jpg?1558758748');
     background-repeat: no-repeat;
   }
 }
 main .section5-row:nth-of-type(3) .section5-illust {
   height: 280px;
-  background-image: url('../images/barcode/section5-illust3.jpg?1543538656');
+  background-image: url('../images/barcode/section5-illust3.jpg?1558758748');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1008,13 +1008,13 @@ main .section5-row:nth-of-type(3) .section5-illust {
 }
 @media (min-width: 1200px) {
   main .section5-row:nth-of-type(4) {
-    background-image: url('../images/barcode/section5-illust4.jpg?1543538658');
+    background-image: url('../images/barcode/section5-illust4.jpg?1558758748');
     background-repeat: no-repeat;
   }
 }
 main .section5-row:nth-of-type(4) .section5-illust {
   height: 280px;
-  background-image: url('../images/barcode/section5-illust4.jpg?1543538658');
+  background-image: url('../images/barcode/section5-illust4.jpg?1558758748');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1150,6 +1150,18 @@ main .section5-text p {
     font-size: 20px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -182,3 +182,10 @@ new Vue({
         </div>
     `
 });
+
+new Vue({
+    el: '#contact',
+    components: {
+        contact: httpVueLoader('components/contact.vue')
+    }
+});

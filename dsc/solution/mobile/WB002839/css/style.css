@@ -109,6 +109,24 @@ main > .WB00283901 .header .container {
   padding-top: 180px;
   max-width: 490px;
 }
+main > .WB00283901 .header-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 75px;
+}
+main > .WB00283901 .header-btns a {
+  display: block;
+  border-radius: 0;
+  background-color: #ff8404;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  width: calc((100% - 20px) / 2);
+}
+main > .WB00283901 .header-btns a + a {
+  margin-left: 20px;
+}
 main > .WB00283901 .section1 {
   padding-bottom: 70px;
 }
