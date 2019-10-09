@@ -1,11 +1,7 @@
 <template>
     <div class="storm" :class="{ active: complete }">
         <img src="images/mag201909/header-wind.png" class="js-wind" />
-        <ul class="balls js-balls">
-            <li v-for="i in 8" :key="i">
-                <img src="images/mag201909/header-ball.png" alt />
-            </li>
-        </ul>
+        <img src="images/mag201909/header-ball.png" class="ball js-ball" v-for="i in 8" :key="i" />
     </div>
 </template>
 
@@ -18,10 +14,9 @@ module.exports = {
     },
     methods: {
         initAn: function () {
-            let _this = this;
             let tl = new TimelineMax();
             tl.from('.js-wind', 2, { opacity: 0 });
-            tl.staggerFrom('.js-balls li', 1, { opacity: 0, scale: 0 }, -0.2);
+            tl.staggerFrom('.js-ball', 1, { opacity: 0, scale: 0 }, -0.2);
         }
     },
     mounted: function () {
@@ -56,45 +51,45 @@ module.exports = {
     transform: skewX(-45deg);
     animation: lightAn 3s linear 2s infinite;
 }
-.balls li {
+.ball {
     position: absolute;
 }
-.balls li:nth-child(1) {
+.ball:nth-child(1) {
     top: 120px;
     left: 160px;
-    transform: scale(.5);
+    transform: scale(0.5);
 }
-.balls li:nth-child(2) {
+.ball:nth-child(2) {
     top: 185px;
     left: 135px;
     transform: scale(0.6);
 }
-.balls li:nth-child(3) {
+.ball:nth-child(3) {
     top: 280px;
     left: 35px;
     transform: scale(0.5);
 }
-.balls li:nth-child(4) {
+.ball:nth-child(4) {
     top: 260px;
     left: 210px;
     transform: scale(0.6);
 }
-.balls li:nth-child(5) {
+.ball:nth-child(5) {
     top: 280px;
     left: 340px;
     transform: scale(0.4);
 }
-.balls li:nth-child(6) {
+.ball:nth-child(6) {
     top: 270px;
     left: 460px;
     transform: scale(0.6);
 }
-.balls li:nth-child(7) {
+.ball:nth-child(7) {
     top: 360px;
     left: 385px;
     transform: scale(1);
 }
-.balls li:nth-child(8) {
+.ball:nth-child(8) {
     top: 415px;
     left: 450px;
     transform: scale(0.4);
