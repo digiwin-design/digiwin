@@ -1,7 +1,7 @@
 <template>
     <div class="subLinks">
         <p class="subLinks-title">\ 試閱限期公開，立即訂閱 /</p>
-        <a href="/tw/enewspaper.html" target="_blank">
+        <a href="/tw/zlsq.html?id=2042" target="_blank">
             <picture>
                 <source srcset="images/email-sub-s-beta.png" media="(max-width:900px)" />
                 <img src="images/email-sub.png" alt />
