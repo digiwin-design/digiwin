@@ -20,6 +20,7 @@
 | 文章 | /tw/article/ | 實際網址@README.md
 | 活動 | /tw/dsc/activity/ |
 | 企業通電子報 | /tw/dsc/digital-newspaper/ |
+| 企業通雜誌 | /tw/dsc/mag/ |
 | 賀卡 | /tw/dsc/card/ |
 | 工業 4.0 | /tw/dsc/industry4/ |
 | CPL (實驗頁) | /tw/dsc/marketing/ |
