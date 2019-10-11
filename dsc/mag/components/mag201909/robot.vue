@@ -13,7 +13,7 @@
 module.exports = {
     data: function () {
         return {
-            active: true,
+            active: false,
             sec: 0,
             isHover: false,
             timer: null,
@@ -57,7 +57,7 @@ module.exports = {
 }
 </script>
 
-<style>
+<style scoped>
 .robot {
     position: fixed;
     left: 0;
@@ -71,7 +71,7 @@ module.exports = {
     transform: translateX(-100px) rotate(30deg);
 }
 .robot.active [data-name="hand"] {
-    transform-origin: 250px 175px;
+    transform-origin: 254px 171px;
     animation: handAn 0.5s 1s infinite alternate;
 }
 .robot.active [data-name="ball"] {
