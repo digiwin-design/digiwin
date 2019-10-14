@@ -21,7 +21,7 @@ module.exports = {
     },
     methods: {
         getSvg: function () {
-            fetch('images/mag201909/svg/robot.svg')
+            fetch('images/mag201909/robot.svg')
                 .then(function (res) { return res.text() })
                 .then(function (res) {
                     this.$el.innerHTML = res;

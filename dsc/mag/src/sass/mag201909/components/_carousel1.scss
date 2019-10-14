@@ -84,35 +84,22 @@ main .carousel1 {
         }
         .swiper-button-prev,
         .swiper-button-next {
-            display: flex;
-            width: 50px;
-            height: 50px;
-            background-color: #ee4706;
-            background-image: none;
+            width: 36px;
+            background-size: contain;
             transform: translateY(-#{$pointerHeight / 2});
-            justify-content: center;
-            align-items: center;
         }
         .swiper-button-prev {
-            left: 0;
-            &::before {
-                width: 0;
-                height: 0;
-                border-width: 10px 20px 10px 0;
-                border-style: solid;
-                border-color: transparent #fff transparent transparent;
-                content: '';
+            left: 265px;
+            background-image: image-url('mag201909/carousel-prev.svg');
+            @media (max-width: $breakpoint) {
+                left: 0;
             }
         }
         .swiper-button-next {
-            right: 0;
-            &::before {
-                width: 0;
-                height: 0;
-                border-width: 10px 0 10px 20px;
-                border-style: solid;
-                border-color: transparent transparent transparent #fff;
-                content: '';
+            right: 265px;
+            background-image: image-url('mag201909/carousel-next.svg');
+            @media (max-width: $breakpoint) {
+                right: 0;
             }
         }
         .swiper-pagination {
@@ -138,7 +125,9 @@ main .carousel1 {
     }
     .slideItem {
         display: flex;
+        margin: 0 auto;
         padding: 40px;
+        max-width: 600px;
         border-radius: 10px;
         background-color: #239995;
         justify-content: center;
