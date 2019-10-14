@@ -89,5 +89,26 @@
         "imgSrc": "/tw/dsc/assets/ad/images/WB002993.jpg",
         "startTime": "2019-09-03",
         "endTime": "2019-09-25"
+    },
+    {
+        "url": "/tw/dsc/solution/WB002476/WB00247601.html",
+        "adUrl": "http://bit.ly/2pnlaOM",
+        "imgSrc": "/tw/dsc/assets/ad/images/20191017.jpg",
+        "startTime": "2019-10-15",
+        "endTime": "2019-10-18"
+    },
+    {
+        "url": "/tw/dsc/marketing/WB002838/WB00283807.htm",
+        "adUrl": "http://bit.ly/2pnlaOM",
+        "imgSrc": "/tw/dsc/assets/ad/images/20191017.jpg",
+        "startTime": "2019-10-15",
+        "endTime": "2019-10-18"
+    },
+    {
+        "url": "/tw/dsc/digital-newspaper/1903_index.html",
+        "adUrl": "http://bit.ly/2pnlaOM",
+        "imgSrc": "/tw/dsc/assets/ad/images/20191017.jpg",
+        "startTime": "2019-10-15",
+        "endTime": "2019-10-18"
     }
 ]
