@@ -1,4 +1,9 @@
 // =============================================================================
+// vue components
+// =============================================================================
+httpVueLoader.register(Vue, 'components/contact.vue');
+
+// =============================================================================
 // function
 // =============================================================================
 function detectIE() {
@@ -73,21 +78,6 @@ function ajaxSensor(method, url, data, callback) {
         });
 }
 
-/**
- * get url query string
- * @param {*} name query string
- * @param {*} url specified url
- */
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
 function fetchFile(file) {
     return new Promise(resolve => {
         fetch(file)
@@ -105,15 +95,31 @@ function fetchFile(file) {
     });
 }
 
+/**
+ * 判斷瀏覽器底部是否已捲動至指定元素
+ * @param {string} el
+ * @param {number} offset
+ * @param {function} callback
+ */
+function getScrollPos(el, offset, callback) {
+    let target = el.offsetTop + offset;
+    if (window.pageYOffset >= (target - window.innerHeight)) {
+        callback();
+    }
+}
+
 // =============================================================================
 // event
 // =============================================================================
 // 錨點連結
-$(document).on('click', '.js-nav', function(event) {
+$(document).on('click', '.js-nav', function (event) {
     event.preventDefault();
-    let target = $(this).attr('href') || $(this).data('target');
-    let offset = $('.page-submenu').outerHeight();
-    let targetPos = $(target).offset().top;
-    let finalPos = offset ? targetPos - offset : targetPos;
-    $('html, body').animate({ scrollTop: finalPos });
+    let delay = $(this).data('delay') ? $(this).data('delay') : 0;
+    let target = $(this).attr('href') || $(this).attr('xlink:href') || $(this).data('target');
+    setTimeout(() => {
+        let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+        let targetPos = document.querySelector(target).offsetTop;
+        let finalPos = offset ? targetPos - offset : targetPos;
+        window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
+    }, delay);
 });

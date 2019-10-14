@@ -14,31 +14,14 @@ html(lang='zh-Hant-TW')
         script(src='https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&flags=gated')
         script(src='/tw/dsc/assets/modernizr-custom.js')
         script(src='/tw/dsc/assets/mobile-detect.js')
-        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer='')
+        script(src='/tw/dsc/assets/mobile-detect-modernizr.js', defer)
         script(src="/tw/dsc/assets/smoothscroll.js", defer)
         script(src="/tw/dsc/assets/axios.min.js")
         script(src="/tw/dsc/assets/vuejs/vue-all-dev.js")
         script(src='/tw/dsc/js/common.min.js')
-
-        //- submenu
-        style.
-            .header-box {
-                height: auto;
-            }
-            .page-submenu {
-                position: fixed;
-                z-index: 28;
-                width: 100%;
-            }
     body
-        //- submenu
-        .header-box
-            header
-
         // 以下為後台上稿內容
         //- form
-        link(rel='stylesheet', href='/tw/dsc/css/Eform/form-rwd.css')
-        script(src='/tw/dsc/js/Eform/form.js', defer)
         link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
         script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
 
@@ -48,12 +31,9 @@ html(lang='zh-Hant-TW')
 
         //- 共用
         link(rel='stylesheet', href='/tw/dsc/css/reboot.css')
-        script(src='js/common.min.js', defer)
+        script(src='js/all.min.js', defer)
         
         block includes
         
-        main
+        main(v-cloak, v-if="result")
             block content
-            
-        include partial/contact.html
-        include ../../../../../template/form_component

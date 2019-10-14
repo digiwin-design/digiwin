@@ -1,3 +1,5 @@
+httpVueLoader.register(Vue, 'components/contact.vue');
+
 const store = new Vuex.Store({
     state: {
         isMobile: false,
@@ -16,7 +18,7 @@ new Vue({
     },
     data() {
         return {
-            content: null
+            result: null
         };
     },
     methods: {
@@ -31,7 +33,7 @@ new Vue({
         },
         getData() {
             axios.get('db.json').then(res => {
-                this.content = res.data;
+                this.result = res.data;
             });
         }
     },

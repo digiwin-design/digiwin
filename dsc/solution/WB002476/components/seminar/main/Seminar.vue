@@ -462,6 +462,8 @@
                 </div>
             </div>
         </article>
+
+        <contact v-bind:multiple="false" source></contact>
     </div>
 </template>
 
