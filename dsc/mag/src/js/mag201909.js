@@ -7,6 +7,7 @@ const store = new Vuex.Store({
     state: {
         isMobile: false,
         isMediumWidth: false,
+        isCarousel1MobileWidth: false,
         result: null,
     },
     mutations: {
@@ -15,6 +16,9 @@ const store = new Vuex.Store({
         },
         updateDevice2(state, payload) {
             state.isMediumWidth = payload;
+        },
+        updateDevice3(state, payload) {
+            state.isCarousel1MobileWidth = payload;
         },
         setData(state, payload) {
             state.result = payload;
@@ -60,6 +64,12 @@ let app = new Vue({
             mm.addListener(resizeWidth);
             resizeWidth(mm);
         },
+        mediaSensor3(minWidth) {
+            let resizeWidth = (pMatchMedia) => store.commit('updateDevice3', !pMatchMedia.matches);
+            let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
+            mm.addListener(resizeWidth);
+            resizeWidth(mm);
+        },
     },
     created() {
         store.dispatch('getData');
@@ -67,5 +77,6 @@ let app = new Vue({
     mounted() {
         this.mediaSensor(768);
         this.mediaSensor2(1199);
+        this.mediaSensor3(1300);
     },
 });

@@ -56,8 +56,11 @@ main .carousel1 {
         }
         .swiper-slide-active,
         .swiper-slide-next + .swiper-slide {
-            position: relative;
             cursor: pointer;
+            @media (max-width: $breakpoint) {
+                cursor: default;
+                pointer-events: none;
+            }
         }
         .swiper-slide-active {
             transform: scale(.7) translateX(150px);

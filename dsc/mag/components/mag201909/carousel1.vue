@@ -67,8 +67,8 @@ module.exports = {
         swiperA: function () {
             return this.$refs.awesomeSwiperA.swiper;
         },
-        isMediumWidth: function () {
-            return store.state.isMediumWidth;
+        isCarousel1MobileWidth: function () {
+            return store.state.isCarousel1MobileWidth;
         },
         mobileSlides: function () {
             return this.content;
@@ -82,7 +82,7 @@ module.exports = {
         },
     },
     watch: {
-        isMediumWidth: function (val, oldVal) {
+        isCarousel1MobileWidth: function (val, oldVal) {
             this.deviceChanged = true;
             this.setSlide();
         }
@@ -118,11 +118,8 @@ module.exports = {
                 });
         },
         setSlide: function () {
-            this.slides = this.isMediumWidth ? this.mobileSlides : this.desktopSlides;
+            this.slides = this.isCarousel1MobileWidth ? this.mobileSlides : this.desktopSlides;
         },
-        getCurrentSlide: function (slide) {
-            return this.isMediumWidth ? slide : slide >= 6 ? 0 : (slide + 1);
-        }
     },
     mounted: function () {
         this.setSlide();
