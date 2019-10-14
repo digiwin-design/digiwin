@@ -1,5 +1,7 @@
 httpVueLoader.register(Vue, 'components/mag201909/robot.vue');
 httpVueLoader.register(Vue, 'components/mag201909/storm.vue');
+httpVueLoader.register(Vue, 'components/mag201909/carousel1.vue');
+Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({
     state: {
@@ -21,7 +23,7 @@ const store = new Vuex.Store({
     actions: {
         getData(context) {
             axios.get('db.json').then(res => {
-                context.commit('setData', res.data);
+                context.commit('setData', res.data.mag201909);
                 app.$nextTick(() => {
                     // 依據選單高度設定main上方間距
                     let menuHeight = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;

@@ -20,11 +20,15 @@
     <!-- 後台上稿內容開始-->
     <link rel="stylesheet" href="/tw/dsc/css/Eform/xcConfirm.css">
     <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
-    <link rel="stylesheet" href="/tw/dsc/assets/submenu/submenu.css">
-    <script src="/tw/dsc/assets/submenu/submenu.min.js"></script>
+    <link rel="stylesheet" href="assets/submenu/submenu.css">
+    <script src="assets/submenu/submenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js" defer></script>
+    <link rel="stylesheet" href="assets/swiper.min.css">
+    <script src="assets/swiper.min.js" defer></script>
+    <script src="assets/vue-awesome-swiper.js" defer></script>
+    <script src="assets/lodash.min.js" defer></script>
     <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
     <script src="js/all.min.js" defer></script>
     <link rel="stylesheet" href="css/mag201909/style.css">
@@ -56,6 +60,14 @@
         </div>
     </template>
 </main-header>
+
+<article class="section1">
+    <hgroup>
+        <h2>《企業通》雜誌2019全新出刊</h2>
+        <h1>從領導者視角 看見數位轉型</h1>
+    </hgroup>
+    <carousel1 :content="result.carousel1"></carousel1>
+</article>
 
 <!-- <robot v-if="!isMobile"></robot> -->
     </main>

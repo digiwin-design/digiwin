@@ -1,0 +1,170 @@
+main .carousel1 {
+    $breakpoint: 1300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: $breakpoint) {
+        position: static;
+        left: auto;
+        transform: translateX(0);
+    }
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: none;
+        width: 1800px;
+        @media (max-width: $breakpoint) {
+            width: 100%;
+        }
+    }
+    &-carousel {
+        $pointerHeight: 77px;
+        .swiper-container {
+            width: 100%;
+        }
+        .swiper-wrapper {
+            padding-bottom: $pointerHeight;
+        }
+        .swiper-slide {
+            transition: transform .4s;
+            transform: scale(.7);
+            @media (max-width: $breakpoint) {
+                padding-right: 20px;
+                padding-left: 20px;
+                transform: none;
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                border-radius: 10px;
+                background-color: rgba(#0d0c12, .5);
+                content: '';
+                transition: background-color .2s;
+                @media (max-width: $breakpoint) {
+                    display: none;
+                }
+                @at-root {
+                    html.no-mobile main .vueSwiper .swiper-slide:hover::before {
+                        background-color: rgba(#0d0c12, .3);
+                    }
+                }
+            }
+        }
+        .swiper-slide-active,
+        .swiper-slide-next + .swiper-slide {
+            position: relative;
+            cursor: pointer;
+        }
+        .swiper-slide-active {
+            transform: scale(.7) translateX(150px);
+            transform-origin: 100% 50% 0;
+            @media (max-width: $breakpoint) {
+                transform: none;
+            }
+        }
+        .swiper-slide-next + .swiper-slide {
+            transform: scale(.7) translateX(-150px);
+            transform-origin: 0 50% 0;
+            @media (max-width: $breakpoint) {
+                transform: none;
+            }
+        }
+        .swiper-slide-next {
+            position: relative;
+            z-index: 1;
+            opacity: 1;
+            transform: scale(1);
+            &::before {
+                display: none;
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            background-color: #ee4706;
+            background-image: none;
+            transform: translateY(-#{$pointerHeight / 2});
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-button-prev {
+            left: 0;
+            &::before {
+                width: 0;
+                height: 0;
+                border-width: 10px 20px 10px 0;
+                border-style: solid;
+                border-color: transparent #fff transparent transparent;
+                content: '';
+            }
+        }
+        .swiper-button-next {
+            right: 0;
+            &::before {
+                width: 0;
+                height: 0;
+                border-width: 10px 0 10px 20px;
+                border-style: solid;
+                border-color: transparent transparent transparent #fff;
+                content: '';
+            }
+        }
+        .swiper-pagination {
+            bottom: 33px;
+            display: flex;
+            line-height: 14px;
+            justify-content: center;
+            @media (max-width: $breakpoint) {
+                bottom: 43px;
+            }
+        }
+        .swiper-pagination-bullet {
+            margin: 0 3px !important;
+            width: 14px;
+            height: 14px;
+            border-radius: 0;
+            background-color: #bbb;
+            opacity: 1;
+            &-active {
+                background-color: #239995;
+            }
+        }
+    }
+    .slideItem {
+        display: flex;
+        padding: 40px;
+        border-radius: 10px;
+        background-color: #239995;
+        justify-content: center;
+        @media (max-width: $breakpoint) {
+            padding: 22px;
+        }
+        &-img {
+            flex-shrink: 0;
+            @media (max-width: $breakpoint) {
+                width: 100px;
+            }
+        }
+        &-text {
+            padding-left: 6px;
+        }
+        p {
+            font-size: 22px;
+            @media (max-width: $breakpoint) {
+                font-size: 16px;
+            }
+            &:first-child {
+                color: #ffe402;
+            }
+            &:last-child {
+                color: #fff;
+            }
+        }
+    }
+}

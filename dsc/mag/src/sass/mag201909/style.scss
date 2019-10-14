@@ -2,5 +2,35 @@
 @import 'components';
 
 main {
-    
+    .section1 {
+        $breakpoint: 1300px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 40px;
+        padding-bottom: 475px;
+        background-color: #b1e2e8;
+        @media (max-width: $breakpoint) {
+            padding-bottom: 0;
+        }
+        hgroup {
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        h2 {
+            color: #2c2c2c;
+            font-size: 30px;
+            line-height: 1;
+            @media (max-width: $breakpoint) {
+                font-size: 18px;
+            }
+        }
+        h1 {
+            color: #1a2538;
+            font-weight: bold;
+            font-size: 40px;
+            @media (max-width: $breakpoint) {
+                font-size: 26px;
+            }
+        }
+    }
 }
