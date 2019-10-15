@@ -97,7 +97,7 @@ main {
     }
     .section3 {
         background-color: #eee;
-        header {
+        & > header {
             padding-top: 32px;
             padding-bottom: 40px;
             @media (min-width: $tablet-width + 1) {
@@ -176,6 +176,29 @@ main {
                 @at-root {
                     html.no-mobile main .section3 header a:hover {
                         background-color: #ab0a1d;
+                    }
+                }
+            }
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            @media (min-width: $content-width) {
+                flex-direction: row;
+            }
+        }
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            a {
+                display: flex;
+                width: 100%;
+                @media (min-width: $content-width) {
+                    width: 50%;
+                }
+                @at-root {
+                    html.no-mobile main .section3 .articles a:hover .articles-title {
+                        text-decoration: underline;
                     }
                 }
             }
