@@ -1,8 +1,12 @@
 <template>
-    <div class="carousel2">
+    <div id="carousel2" class="carousel2">
         <div class="swiper-container" ref="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="item in content" :key="item.imgSrc">
+                <div
+                    class="swiper-slide js-swiper-slide"
+                    v-for="item in content"
+                    :key="item.imgSrc"
+                >
                     <section class="slideItem">
                         <div class="slideItem-img">
                             <img :src="item.imgSrc" alt />
@@ -40,21 +44,31 @@ module.exports = {
     computed: {
         breakpoint: function () {
             return window.matchMedia('(min-width:1200px)');
+        },
+        articles: function () {
+            return document.querySelectorAll('#carousel2 .js-swiper-slide');
         }
     },
     methods: {
         breakpointChecker: function () {
             // if larger viewport and multi-row layout needed
             if (this.breakpoint.matches === true) {
+                document.addEventListener('scroll', this.scrollHandler);
 
                 // clean up old instances and inline styles when available
-                if (this.mySwiper !== null) this.mySwiper.destroy(true, true);
+                if (this.mySwiper !== null) {
+                    this.mySwiper.destroy(true, true);
+                }
 
                 // or/and do nothing
                 return;
 
                 // else if a small viewport and single column layout needed
             } else if (this.breakpoint.matches === false) {
+                document.removeEventListener('scroll', this.scrollHandler);
+                this.articles.forEach(article => {
+                    article.classList.add('active');
+                });
 
                 // fire small viewport version of swiper
                 return this.enableSwiper();
@@ -74,7 +88,19 @@ module.exports = {
                     prevEl: ".swiper-button-prev"
                 }
             });
-        }
+        },
+        scrollHandler: _.throttle(function () {
+            let windowBottom = window.pageYOffset + window.innerHeight;
+            this.articles.forEach(article => {
+                let articlePos = article.getBoundingClientRect().top + window.pageYOffset;
+                if (articlePos < windowBottom) {
+                    article.classList.add('active');
+                }
+                else {
+                    article.classList.remove('active');
+                }
+            });
+        }, 100)
     },
     mounted: function () {
         // keep an eye on viewport size changes
