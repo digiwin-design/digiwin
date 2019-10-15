@@ -1,6 +1,8 @@
 httpVueLoader.register(Vue, 'components/mag201909/robot.vue');
 httpVueLoader.register(Vue, 'components/mag201909/storm.vue');
 httpVueLoader.register(Vue, 'components/mag201909/carousel1.vue');
+httpVueLoader.register(Vue, 'components/mag201909/carousel2.vue');
+httpVueLoader.register(Vue, 'components/mag201909/toolbar.vue');
 Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({
@@ -57,7 +59,7 @@ let app = new Vue({
             let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
             mm.addListener(resizeWidth);
             resizeWidth(mm);
-        }, 
+        },
         mediaSensor2(minWidth) {
             let resizeWidth = (pMatchMedia) => store.commit('updateDevice2', !pMatchMedia.matches);
             let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);

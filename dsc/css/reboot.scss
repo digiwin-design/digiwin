@@ -56,6 +56,15 @@ main,
         max-width: 100%;
         vertical-align: top;
     }
+    header {
+        position: static;
+        top: auto;
+        width: auto;
+        background-color: transparent;
+        z-index: auto;
+        animation: none;
+        border-bottom: none;
+    }
 }
 
 // 一頁式二級選單下方間距
