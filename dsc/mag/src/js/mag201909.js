@@ -3,6 +3,7 @@ httpVueLoader.register(Vue, 'components/mag201909/storm.vue');
 httpVueLoader.register(Vue, 'components/mag201909/carousel1.vue');
 httpVueLoader.register(Vue, 'components/mag201909/carousel2.vue');
 httpVueLoader.register(Vue, 'components/mag201909/toolbar.vue');
+httpVueLoader.register(Vue, 'components/mag201909/articles.vue');
 Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({

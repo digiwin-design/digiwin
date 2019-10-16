@@ -65,6 +65,14 @@ main,
         animation: none;
         border-bottom: none;
     }
+    .fixed-block {
+        width: auto;
+        left: auto;
+        top: auto;
+        position: static;
+        z-index: auto;
+        animation: none;
+    }
 }
 
 // 一頁式二級選單下方間距

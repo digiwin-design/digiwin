@@ -1,15 +1,15 @@
 <template>
-    <div v-if="slides" class="carousel1">
+    <div v-if="isReady" class="carousel1">
         <swiper
             ref="awesomeSwiperA"
             :options="swiperOptionA"
             @slide-change="onSlideChange"
             @slide-change-transition-end="onSlideChangeTransitionEnd"
         >
-            <swiper-slide v-for="slide in slides" :key="slide.imgSrc">
+            <swiper-slide v-for="(slide, idx) in slides" :key="slide.speaker">
                 <div class="slideItem">
                     <div class="slideItem-img">
-                        <img :src="slide.imgSrc" alt>
+                        <img :src="'images/mag201909/carousel1-' + (idx + 1) + '.png'" alt />
                     </div>
                     <div class="slideItem-text">
                         <p v-html="slide.speaker"></p>
@@ -39,6 +39,10 @@ module.exports = {
                 loop: true,
                 autoHeight: true,
                 slidesPerView: 3,
+                autoplay: {
+                    disableOnInteraction: false,
+                    delay: 5000
+                },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true
@@ -58,6 +62,7 @@ module.exports = {
             slideReady: true,
             deviceChanged: false,
             slides: null,
+            isReady: false,
         }
     },
     computed: {
@@ -117,9 +122,24 @@ module.exports = {
         setSlide: function () {
             this.slides = this.isCarousel1MobileWidth ? this.mobileSlides : this.desktopSlides;
         },
+        preloadImg: function () {
+            let loaded = 0;
+            let total = this.slides.length;
+            for (let i = 1; i <= total; i++) {
+                let img = new Image();
+                img.onload = function () {
+                    loaded++;
+                    if (loaded === total) {
+                        this.isReady = true;
+                    }
+                }.bind(this);
+                img.src = 'images/mag201909/carousel1-' + i + '.png';
+            }
+        },
     },
     mounted: function () {
         this.setSlide();
+        this.preloadImg();
     },
     updated: function () {
         this.clickHandler();

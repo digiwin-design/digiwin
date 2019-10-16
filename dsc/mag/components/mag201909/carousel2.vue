@@ -4,12 +4,12 @@
             <div class="swiper-wrapper">
                 <div
                     class="swiper-slide js-swiper-slide"
-                    v-for="item in content"
-                    :key="item.imgSrc"
+                    v-for="(item, idx) in content"
+                    :key="item.title"
                 >
                     <section class="slideItem">
                         <div class="slideItem-img">
-                            <img :src="item.imgSrc" alt />
+                            <img :src="'images/mag201909/carousel2-' + (idx + 1) + '.jpg'" alt />
                         </div>
                         <div class="slideItem-text">
                             <h2>{{item.subtitle}}</h2>
@@ -53,7 +53,7 @@ module.exports = {
         breakpointChecker: function () {
             // if larger viewport and multi-row layout needed
             if (this.breakpoint.matches === true) {
-                document.addEventListener('scroll', this.scrollHandler);
+                window.addEventListener('scroll', this.scrollHandler);
 
                 // clean up old instances and inline styles when available
                 if (this.mySwiper !== null) {
@@ -65,8 +65,8 @@ module.exports = {
 
                 // else if a small viewport and single column layout needed
             } else if (this.breakpoint.matches === false) {
-                document.removeEventListener('scroll', this.scrollHandler);
-                this.articles.forEach(article => {
+                window.removeEventListener('scroll', this.scrollHandler);
+                this.articles.forEach(function (article) {
                     article.classList.add('active');
                 });
 
@@ -91,7 +91,7 @@ module.exports = {
         },
         scrollHandler: _.throttle(function () {
             let windowBottom = window.pageYOffset + window.innerHeight;
-            this.articles.forEach(article => {
+            this.articles.forEach(function (article) {
                 let articlePos = article.getBoundingClientRect().top + window.pageYOffset;
                 if (articlePos < windowBottom) {
                     article.classList.add('active');

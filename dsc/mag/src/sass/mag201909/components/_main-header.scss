@@ -48,8 +48,10 @@ main {
                 }
                 h1 {
                     width: 298px;
+                    // height: 71px;
                     @media (min-width: $content-width) {
-                        width: auto;
+                        width: 334px;
+                        // height: 80px;
                     }
                 }
                 p {

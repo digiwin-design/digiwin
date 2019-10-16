@@ -180,28 +180,15 @@ main {
                 }
             }
         }
-        section {
-            display: flex;
-            flex-direction: column;
-            @media (min-width: $content-width) {
-                flex-direction: row;
-            }
+    }
+    .ad {
+        background-color: #000;
+        a {
+            display: block;
         }
-        .articles {
-            display: flex;
-            flex-wrap: wrap;
-            a {
-                display: flex;
-                width: 100%;
-                @media (min-width: $content-width) {
-                    width: 50%;
-                }
-                @at-root {
-                    html.no-mobile main .section3 .articles a:hover .articles-title {
-                        text-decoration: underline;
-                    }
-                }
-            }
+        img {
+            display: block;
+            margin: 0 auto;
         }
     }
     .footer {

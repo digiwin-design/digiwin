@@ -1,6 +1,6 @@
 <template>
     <a
-        href="javascipt:;"
+        href="/tw/zlsq.html?id=2048"
         target="_blank"
         class="robot"
         :class="{ active: active }"
@@ -60,8 +60,9 @@ module.exports = {
 <style scoped>
 .robot {
     position: fixed;
-    left: 0;
     bottom: 0;
+    left: 0;
+    z-index: 1;
     width: 370px;
     height: 300px;
     transition: transform 1s;
