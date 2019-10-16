@@ -37,12 +37,11 @@ module.exports = {
         return {
             swiperOptionA: {
                 loop: true,
-                autoHeight: true,
                 slidesPerView: 3,
-                autoplay: {
-                    disableOnInteraction: false,
-                    delay: 5000
-                },
+                // autoplay: {
+                //     disableOnInteraction: false,
+                //     delay: 5000
+                // },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true

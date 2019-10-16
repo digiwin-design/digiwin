@@ -20,6 +20,7 @@ main .carousel1 {
         }
     }
     .swiper-slide {
+        height: auto;
         transition: transform .4s;
         transform: scale(.7);
         @media (max-width: $breakpoint) {
@@ -135,6 +136,7 @@ main .carousel1 {
         margin: 0 auto;
         padding: 40px;
         max-width: 600px;
+        height: 100%;
         border-radius: 10px;
         background-color: #239995;
         justify-content: center;

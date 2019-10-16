@@ -29,7 +29,7 @@ module.exports = {
 .storm {
     position: absolute;
     top: -115px;
-    left: 78px;
+    left: 28px;
     overflow: hidden;
     width: 555px;
     height: 522px;

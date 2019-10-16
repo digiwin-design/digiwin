@@ -18,7 +18,7 @@ main {
             @media (min-width: $content-width) {
                 padding-bottom: 45px;
                 background-image: image-url('mag201909/header-bg.png');
-                background-position: 0 -290px;
+                background-position: -50px -290px;
             }
         }
         .content {
@@ -32,7 +32,7 @@ main {
                 align-items: flex-end;
             }
             @media (min-width: $content-width) {
-                margin-right: 0;
+                margin-right: 80px;
                 max-width: 427px;
                 transform: translateX(0);
                 align-items: flex-start;

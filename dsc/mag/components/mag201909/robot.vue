@@ -13,6 +13,7 @@
 module.exports = {
     data: function () {
         return {
+            debug: false,
             active: false,
             sec: 0,
             isHover: false,
@@ -25,10 +26,12 @@ module.exports = {
                 .then(function (res) { return res.text() })
                 .then(function (res) {
                     this.$el.innerHTML = res;
+                    if (this.debug) this.active = true;
                     this.setTimer();
                 }.bind(this));
         },
         setTimer: function () {
+            if (this.debug) return;
             clearTimeout(this.timer);
             this.timer = setTimeout(function () {
                 if (this.sec < 7) {
@@ -64,34 +67,50 @@ module.exports = {
     left: 0;
     z-index: 1;
     width: 370px;
-    height: 300px;
+    height: 370px;
     transition: transform 1s;
-    transform: translateX(-100%) rotate(30deg);
+    transform: translateX(-100%);
 }
 .robot.active {
-    transform: translateX(-100px) rotate(30deg);
+    transform: translateX(-100px);
 }
-.robot.active [data-name="hand"] {
-    transform-origin: 254px 171px;
-    animation: handAn 0.5s 1s infinite alternate;
+.robot [data-name="arm"] {
+    transform-origin: 202px 160px;
+}
+.robot.active [data-name="arm"] {
+    animation: armAn 0.5s 1s infinite alternate;
+}
+.robot [data-name="lower-arm"] {
+    transform-origin: 252px 212px;
+}
+.robot.active [data-name="lower-arm"] {
+    animation: lowerArmAn 0.5s 1s infinite alternate;
 }
 .robot.active [data-name="ball"] {
     animation: ballAn 0.5s 1s infinite alternate ease-out;
 }
-@keyframes handAn {
+@keyframes armAn {
     from {
         transform: rotate(0);
     }
     to {
-        transform: rotate(20deg);
+        transform: rotate(-35deg);
+    }
+}
+@keyframes lowerArmAn {
+    from {
+        transform: rotate(35deg);
+    }
+    to {
+        transform: rotate(0);
     }
 }
 @keyframes ballAn {
     from {
-        transform: translateY(0);
+        transform: translate(53px, 20px);
     }
     to {
-        transform: translateY(-20px);
+        transform: translate(-10px, -70px);
     }
 }
 </style>

@@ -78,7 +78,6 @@ module.exports = {
         enableSwiper: function () {
             this.mySwiper = new Swiper(this.$refs.swiper, {
                 loop: true,
-                autoHeight: true,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
