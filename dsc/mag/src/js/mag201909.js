@@ -50,6 +50,9 @@ let app = new Vue({
         isMediumWidth() {
             return store.state.isMediumWidth;
         },
+        isIE() {
+            return detectIE();
+        },
         result() {
             return store.state.result;
         },
