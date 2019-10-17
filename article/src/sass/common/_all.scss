@@ -21,9 +21,4 @@ main {
     .btn {
         transition: all .15s ease-in-out;
     }
-    a:link,
-    a:visited,
-    a:hover {
-        color: inherit; /* override */
-    }
 }
