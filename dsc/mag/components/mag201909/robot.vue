@@ -20,6 +20,11 @@ module.exports = {
             timer: null,
         }
     },
+    watch: {
+        isHover: function (val) {
+            if (val) this.active = true;
+        }
+    },
     methods: {
         getSvg: function () {
             fetch('images/mag201909/robot.svg')
