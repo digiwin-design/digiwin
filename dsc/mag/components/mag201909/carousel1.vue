@@ -6,10 +6,10 @@
             @slide-change="onSlideChange"
             @slide-change-transition-end="onSlideChangeTransitionEnd"
         >
-            <swiper-slide v-for="(slide, idx) in slides" :key="slide.speaker">
+            <swiper-slide v-for="slide in slides" :key="slide.imgSrc">
                 <div class="slideItem">
                     <div class="slideItem-img">
-                        <img :src="'images/mag201909/carousel1-' + (idx + 1) + '.png'" alt />
+                        <img :src="slide.imgSrc" alt />
                     </div>
                     <div class="slideItem-text">
                         <p v-html="slide.speaker"></p>

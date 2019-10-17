@@ -72,7 +72,7 @@ module.exports = {
     transform: translateX(-100%);
 }
 .robot.active {
-    transform: translateX(-100px);
+    transform: translateX(-110px);
 }
 .robot [data-name="arm"] {
     transform-origin: 202px 160px;

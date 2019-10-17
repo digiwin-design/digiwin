@@ -29,6 +29,9 @@ main .articles {
             opacity: 1;
             transform: translateX(0);
         }
+        & + section {
+            margin-top: 10px;
+        }
         header {
             height: 300px;
             @media (min-width: $content-width) {
@@ -70,6 +73,7 @@ main .articles {
             p {
                 margin-top: 1em;
                 color: #fff;
+                text-align: justify;
                 line-height: 26px;
             }
         }
