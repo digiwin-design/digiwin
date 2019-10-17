@@ -128,7 +128,7 @@ $(function () {
         
             if (!result) return;
 
-            // 在標籤下方插入廣告
+            // 在文章標籤下方插入廣告
             let img = document.createElement('img');
             img.src = result.imgSrc;
 
