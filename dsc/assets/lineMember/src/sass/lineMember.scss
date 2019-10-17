@@ -13,6 +13,7 @@
     z-index: 1;
     display: none;
     background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0) 30%, #fff 40%, #fff 0);
+    pointer-events: none;
     @at-root {
         .list-case-show.no-login .articleCover {
             display: block;

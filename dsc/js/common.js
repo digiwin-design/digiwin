@@ -74,7 +74,6 @@ $(function () {
         let phoneNum = target.innerText.trim();
         document.querySelector('.xz-fudong a').setAttribute('href', 'tel:' + phoneNum);
     }
-
 });
 
 // 設置文章閱讀權限及插入訂閱表單
@@ -82,18 +81,18 @@ $(function () {
 $(function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
-    // 加入閱讀權限的文章
+    // 取得加入閱讀權限的文章
     fetch('/tw/dsc/assets/lineMember/login.json')
         .then(res => res.json())
         .then(res => {
             // 比對網址成功後載入對應的外部連結
-            let loginResult = res.find(function (item) {
+            let result = res.find(function (item) {
                 item = item.replace(/(.html|.htm)$/, '');
                 let regex = new RegExp(item + '$');
                 return currentUrl.search(regex) !== -1;
             });
         
-            if (!loginResult) return;
+            if (!result) return;
         
             let head = document.querySelector('head');
             let style = document.createElement('link');
@@ -108,6 +107,38 @@ $(function () {
             head.appendChild(preload);
         
             $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
+        });
+});
+
+// 文章插入廣告
+// 廣告清單：/tw/dsc/assets/article-ad/db.json
+$(function () {
+    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
+
+    // 取得插入廣告的文章
+    fetch('/tw/dsc/assets/article-ad/db.json')
+        .then(res => res.json())
+        .then(res => {
+            // 比對網址成功後載入對應的外部連結
+            let result = res.find(function (item) {
+                item = item.url.replace(/(.html|.htm)$/, '');
+                let regex = new RegExp(item + '$');
+                return currentUrl.search(regex) !== -1;
+            });
+        
+            if (!result) return;
+
+            // 在標籤下方插入廣告
+            let img = document.createElement('img');
+            img.src = result.imgSrc;
+
+            let a = document.createElement('a');
+            a.href = result.link;
+            a.target = '_blank';
+            a.style.display = 'block';
+            a.appendChild(img);
+
+            document.querySelector('.list-case-show .tag').insertAdjacentElement('afterend', a);
         });
 });
 
