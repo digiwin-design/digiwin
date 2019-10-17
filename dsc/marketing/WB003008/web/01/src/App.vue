@@ -4,7 +4,9 @@
         <MenuMask></MenuMask>
         <main>
             <HeaderForm></HeaderForm>
-            <h1>Hello World</h1>
+            <div class="container">
+                <h1>Hello World</h1>
+            </div>
             <Contact source=""></Contact>
         </main>
         <Footer></Footer>
@@ -12,14 +14,14 @@
 </template>
 
 <script>
-import './assets/js/modernizr-custom';
-import './assets/js/mobile-detect';
-import './assets/js/mobile-detect-modernizr';
-import Header from './components/Header.vue';
-import MenuMask from './components/MenuMask.vue';
-import Footer from './components/Footer.vue';
-import HeaderForm from './components/HeaderForm.vue';
-import Contact from './components/Contact.vue';
+import '@/assets/vendor/modernizr-custom';
+import '@/assets/vendor/mobile-detect';
+import '@/assets/vendor/mobile-detect-modernizr';
+import Header from '@/components/Header.vue';
+import MenuMask from '@/components/MenuMask.vue';
+import Footer from '@/components/Footer.vue';
+import HeaderForm from '@/components/HeaderForm.vue';
+import Contact from '@/components/Contact.vue';
 
 export default {
     name: 'app',
@@ -45,7 +47,20 @@ export default {
     min-height: 100vh;
 }
 main {
-    min-width: 320px;
+    min-width: 360px;
     flex-grow: 1;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+    @media (min-width: 361px) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    @media (min-width: 1200px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 </style>

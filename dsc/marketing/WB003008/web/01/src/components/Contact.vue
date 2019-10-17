@@ -165,9 +165,14 @@
 </template>
 
 <script>
-import '@/assets/js/xcConfirm';
+import '@/assets/vendor/xcConfirm';
+import '@/assets/vendor/xcConfirm.css';
 export default {
-    props: ['source'],
+    props: {
+        source: {
+            type: String
+        }
+    },
     methods: {
         init() {
             /**
@@ -177,7 +182,7 @@ export default {
             var codeSuces = document.getElementById('codeSuces');
             var statu_k = -1;
             //产生验证码 
-            window.onload = createCode;
+            window.addEventListener('load', createCode);
             function createCode() {
                 codeSuces.innerHTML = '';
                 statu_k = -1;
@@ -649,14 +654,6 @@ export default {
     },
     mounted() {
         this.init();
-        window.addEventListener('load', function () {
-            if (location.hash === '#contact') {
-                let offset = $('.page-submenu').outerHeight();
-                let targetPos = $('#contact').offset().top;
-                let finalPos = offset ? targetPos - offset : targetPos;
-                $('html, body').animate({ scrollTop: finalPos });
-            }
-        });
     },
 }
 </script>
