@@ -3,10 +3,7 @@
         <Header></Header>
         <MenuMask></MenuMask>
         <main>
-            <HeaderForm></HeaderForm>
-            <div class="container">
-                <h1>Hello World</h1>
-            </div>
+            <MainContent></MainContent>
             <Contact source=""></Contact>
         </main>
         <Footer></Footer>
@@ -20,8 +17,8 @@ import '@/assets/vendor/mobile-detect-modernizr';
 import Header from '@/components/Header.vue';
 import MenuMask from '@/components/MenuMask.vue';
 import Footer from '@/components/Footer.vue';
-import HeaderForm from '@/components/HeaderForm.vue';
 import Contact from '@/components/Contact.vue';
+import MainContent from '@/components/MainContent.vue';
 
 export default {
     name: 'app',
@@ -29,8 +26,8 @@ export default {
         Header,
         MenuMask,
         Footer,
-        HeaderForm,
         Contact,
+        MainContent,
     },
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());

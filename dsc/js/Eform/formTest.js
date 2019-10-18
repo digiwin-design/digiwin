@@ -3,7 +3,7 @@ var code;
 var codeSuces = document.getElementById('codeSuces');
 var statu_k = -1;
 //产生验证码 
-window.onload = createCode;
+window.addEventListener('load', createCode);
 function createCode() {
     codeSuces.innerHTML = '';
     statu_k = -1;

@@ -107,7 +107,6 @@ $background_color_4: #00c3f7;
 
 main {
     .headForm {
-        margin: 0 auto;
         padding: 30px;
         max-width: 380px;
         background-color: $background_color_1;
