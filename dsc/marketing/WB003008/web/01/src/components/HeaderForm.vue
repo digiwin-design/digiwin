@@ -1,6 +1,6 @@
 <template>
     <div class="headForm">
-        <p class="headForm-title">索取資料</p>
+        <p class="headForm-title">歡迎與我們聯繫索取資料</p>
         <ul class="headForm-fields">
             <li>
                 <input type="text" v-model.lazy="person" :class="{'is-invalid':personErr}" />
@@ -36,7 +36,7 @@ export default {
             this.personErr = !this.person.length;
         },
         phoneNum() {
-            this.phoneNumErr = !(/^\d{8,}$/.test(this.phoneNum.trim()));
+            this.phoneNumErr = !this.person.length;
         },
     },
     methods: {
@@ -65,7 +65,7 @@ export default {
                 };
                 const params = new URLSearchParams();
                 params.append('data', JSON.stringify(query));
-                axios.post('https://misws.digiwin.com/WebPageData/Service.asmx/SaveDat', params)
+                axios.post('https://misws.digiwin.com/WebPageData/Service.asmx/SaveData', params)
                     .then(function (res) {
                         if (res.data.result === '1') {
                             $('#thx').fadeIn();
@@ -78,8 +78,10 @@ export default {
                         }
                     })
                     .catch(function (err) {
-                        alert('網路錯誤，請稍後再試！');
-                        console.error(err);
+                        setTimeout(function () {
+                            alert('網路錯誤，請稍後再試！');
+                            console.error(err);
+                        }, 1000);
                     })
                     .finally(function () {
                         $('#loading').fadeOut();
@@ -111,7 +113,8 @@ main .headForm-title {
     margin-bottom: 1em;
     color: #333;
     text-align: center;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 27px;
     line-height: 1;
 }
 main .headForm-fields li {
@@ -160,9 +163,10 @@ main .headForm-submit {
     text-align: center;
     font-size: 16px;
     line-height: 40px;
-    transition: background-color 0.3s;
+    transition: background-color .3s;
 }
 html.no-mobile main .headForm-submit:hover {
     background-color: #00c3f7;
 }
+
 </style>

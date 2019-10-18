@@ -2,24 +2,24 @@
     <div>
         <div id="contact" class="section">
             <div class="container">
-                <p class="title">各行各業、不同企業規模皆有成功案例及解決方案，歡迎免費諮詢索取</p>
+                <p class="title">資料索取與諮詢</p>
                 <p class="sectionDesc-center">
-                    需要立即的支援與服務請直撥免付費專線
-                    <a href="tel:0800009890">0800-009-890</a>
+                    請撥打聯絡專線：<br>
+                    越南聯絡代表 許先生(+84-942239950)<br>
+                    馬來西亞聯絡代表 謝先生(+6-0379808233)
                 </p>
                 <div id="form">
                     <form>
                         <a id="fromSource" href="javascript:;" v-text="source"></a>
                         <div class="inforCheck">
-                            <label for="demand01">
-                                <input
-                                    name="contact-demand"
-                                    class="contact-demand"
-                                    id="demand01"
-                                    type="checkbox"
-                                    value="索取解決方案相關資料。"
-                                /> 索取解決方案相關資料。
-                            </label>
+                            <div class="demand">
+                                <div class="demand-items">
+                                    <label class="demand-item"><input name="contact-demand" class="contact-demand" type="checkbox" value="索取企業資源管理ERP型錄" />索取企業資源管理ERP型錄</label>
+                                    <label class="demand-item"><input name="contact-demand" class="contact-demand" type="checkbox" value="申請【越南】企業資訊規劃服務" />申請【越南】企業資訊規劃服務</label>
+                                    <label class="demand-item"><input name="contact-demand" class="contact-demand" type="checkbox" value="申請【馬來西亞】企業資訊規劃服務" />申請【馬來西亞】企業資訊規劃服務</label>
+                                    <label class="demand-item"><input name="contact-demand" class="contact-demand" type="checkbox" value="申請【泰國】企業資訊規劃服務" />申請【泰國】企業資訊規劃服務</label>
+                                </div>
+                            </div>
                             <div class="outline">若您有其他建議或想法，歡迎與我們分享：</div>
                             <div class="consult-cont">
                                 <p class="inputTitle"></p>
@@ -701,7 +701,7 @@ export default {
     height: 30px;
     border: 1px solid #ffae00;
     border-radius: 50%;
-    content: "";
+    content: '';
     text-align: center;
     font: normal normal normal 18px/1 FontAwesome;
     line-height: 30px;
@@ -739,6 +739,28 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+#form .inforCheck .demand {
+    width: 100%;
+}
+#form .inforCheck .demand-items {
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+}
+#form .inforCheck .demand-item {
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    color: #ff0;
+    font-size: 20px;
+    flex-shrink: 0;
+    align-items: baseline;
+}
+@media (max-width: 768px) {
+    #form .inforCheck .demand-item {
+        width: 100%;
+    }
+}
 #form .inforCheck .outline {
     position: relative;
     float: left;
@@ -754,14 +776,6 @@ export default {
     width: 100%;
     text-align: left;
     line-height: 30px;
-}
-#form .inforCheck label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    color: #ff0;
-    font-size: 20px;
 }
 #form .inforCheck-caption {
     margin-bottom: 10px;
@@ -797,8 +811,8 @@ export default {
     display: block;
     background-color: #eee;
     cursor: pointer;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: .5s;
+            transition: .5s;
 }
 #form .demandCheck .outline label br {
     display: none;
@@ -831,7 +845,7 @@ export default {
     width: 100%;
     border: 1px solid #d6d6d6;
     font-size: 16px;
-    font-family: Arial, "微軟正黑體";
+    font-family: Arial, '微軟正黑體';
     line-height: 27px;
 }
 #form .consult-cont .wordNum {
@@ -848,8 +862,8 @@ export default {
     top: 16px;
     left: 20px;
     z-index: -1;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: .5s;
+            transition: .5s;
 }
 #form .basciInfo .inputTitle.focus {
     top: 0;
@@ -867,7 +881,7 @@ export default {
     border-bottom: 1px solid #d6d6d6;
     background-color: transparent;
     font-size: 18px;
-    font-family: Arial, "微軟正黑體";
+    font-family: Arial, '微軟正黑體';
 }
 #form .basciInfo input:focus {
     outline: none;
@@ -889,11 +903,11 @@ export default {
     color: #fff;
     letter-spacing: 5px;
     font-size: 24px;
-    font-family: Arial, "微軟正黑體";
+    font-family: Arial, '微軟正黑體';
     line-height: 50px;
     cursor: pointer;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: .5s;
+            transition: .5s;
 }
 #form .btnBlock #submit:hover {
     background-color: #02769f;
@@ -903,7 +917,7 @@ export default {
     text-align: center;
     font-size: 14px;
 }
-#form .btnBlock .agreeLabel [type="checkbox"] {
+#form .btnBlock .agreeLabel [type='checkbox'] {
     vertical-align: middle;
 }
 #form #fromSource {
@@ -916,12 +930,12 @@ export default {
 }
 #form .verifica::before {
     display: table;
-    content: "";
+    content: '';
 }
 #form .verifica::after {
     display: table;
     clear: both;
-    content: "";
+    content: '';
 }
 #form .verifica .outline {
     float: left;
@@ -934,8 +948,8 @@ export default {
     padding: 0;
     width: 120px;
     border: none;
-    background: url("http://www.digiwin.com/tw/dsc/images/Eform/identCode.jpg")
-        no-repeat center center;
+    background: url('http://www.digiwin.com/tw/dsc/images/Eform/identCode.jpg')
+    no-repeat center center;
     color: #555;
     letter-spacing: 4px;
     font: italic bold 20px/40px Arial;
@@ -946,8 +960,8 @@ export default {
     margin: 10px 0 0 10px;
     width: 27px;
     height: 40px;
-    background: url("http://www.digiwin.com/tw/dsc/images/Eform/reloadDark.png")
-        no-repeat center center;
+    background: url('http://www.digiwin.com/tw/dsc/images/Eform/reloadDark.png')
+    no-repeat center center;
     cursor: pointer;
 }
 #form .verifica #codeSuces {
@@ -958,13 +972,6 @@ export default {
     font-size: 14px;
 }
 
-@media (max-width: 1060px) {
-    #form .inforCheck label:nth-of-type(1),
-    #form .inforCheck label:nth-of-type(2),
-    #form .inforCheck label:nth-of-type(3) {
-        width: 100%;
-    }
-}
 @media (max-width: 768px) {
     #contact {
         min-width: 100%;
@@ -996,9 +1003,6 @@ export default {
     }
     #form .inforCheck label {
         padding-left: 30px;
-    }
-    #form .inforCheck label input {
-        margin-left: -20px;
     }
     #form .basciInfo input {
         padding: 24px 0 4px 4px;
@@ -1055,14 +1059,14 @@ export default {
     display: none;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, .9);
     color: #fff;
     text-align: center;
 }
 #thx:before {
     display: inline-block;
     height: 100%;
-    content: "";
+    content: '';
     vertical-align: middle;
     text-align: center;
 }
@@ -1096,8 +1100,8 @@ export default {
     font-size: 24px;
     line-height: 50px;
     cursor: pointer;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: .5s;
+            transition: .5s;
 }
 #thx #thxContent .close:hover {
     background-color: #16639f;
@@ -1105,7 +1109,8 @@ export default {
 #thx #thxContent .title {
     margin-bottom: 15px;
     padding-top: 0;
-    /* override */
+
+/* override */
     text-align: center;
     font-size: 30px;
 }
@@ -1138,8 +1143,8 @@ export default {
     border-radius: 3px;
     background-color: #0f4773;
     line-height: 50px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: .5s;
+            transition: .5s;
 }
 #thx #goIndex a {
     display: block;
@@ -1164,8 +1169,8 @@ export default {
 .xcConfirm .popBox .sgBtn {
     border-radius: 3px;
     font-weight: normal;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: .5s;
+            transition: .5s;
 }
 .xcConfirm .popBox .sgBtn:hover {
     background-color: #0f4773;
@@ -1188,14 +1193,14 @@ export default {
     display: none;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, .9);
     color: #fff;
     text-align: center;
 }
 #loading:before {
     display: inline-block;
     height: 100%;
-    content: "";
+    content: '';
     vertical-align: middle;
 }
 #loading p {
@@ -1210,8 +1215,10 @@ export default {
     display: block;
     margin-bottom: 15px;
     height: 24px;
-    background: url("/tw/dsc/images/Eform/loading.gif") no-repeat center center;
+    background: url('/tw/dsc/images/Eform/loading.gif') no-repeat center center;
 }
 
 /* #endregion loading */
+
+
 </style>
