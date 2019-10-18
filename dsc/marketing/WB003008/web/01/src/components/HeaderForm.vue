@@ -7,8 +7,8 @@
                 <i v-if="!person">聯絡人</i>
             </li>
             <li>
-                <input type="text" v-model.lazy="phoneNum" :class="{'is-invalid':phoneNumErr}" />
-                <i v-if="!phoneNum">聯絡電話</i>
+                <input type="text" v-model.lazy="email" :class="{'is-invalid':emailErr}" />
+                <i v-if="!email">E-mail</i>
             </li>
         </ul>
         <a href @click.prevent="submit" class="headForm-submit">立即送出</a>
@@ -22,21 +22,21 @@ export default {
         return {
             person: null,
             personErr: false,
-            phoneNum: null,
-            phoneNumErr: false,
+            email: null,
+            emailErr: false,
         }
     },
     computed: {
         testResult() {
-            return Boolean(this.person) && !this.personErr && Boolean(this.phoneNum) && !this.phoneNumErr;
+            return Boolean(this.person) && !this.personErr && Boolean(this.email) && !this.emailErr;
         }
     },
     watch: {
         person() {
             this.personErr = !this.person.length;
         },
-        phoneNum() {
-            this.phoneNumErr = !this.person.length;
+        email() {
+            this.emailErr = !(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(this.email.trim()));
         },
     },
     methods: {
@@ -52,8 +52,8 @@ export default {
                     extension: '',
                     address: '',
                     contact_person: this.person.trim(),
-                    email: '',
-                    mobile: this.phoneNum.trim(),
+                    email: this.email.trim(),
+                    mobile: '',
                     department: '',
                     job_title: '',
                     req_sys: '',
@@ -96,77 +96,91 @@ export default {
 }
 </script>
 
-<style>
-main .headForm {
-    margin: 0 auto;
-    padding: 50px 30px 0;
-    width: 360px;
-    background-color: #fff;
-}
-@media (min-width: 769px) {
-    main .headForm {
-        padding-top: 40px;
-        padding-bottom: 40px;
+<style lang="scss">
+$color_1: #333;
+$color_2: #000;
+$color_3: #ff0028;
+$background_color_1: rgba(255, 255, 255, .95);
+$background_color_2: transparent;
+$background_color_3: #24a3ff;
+$background_color_4: #00c3f7;
+
+main {
+    .headForm {
+        margin: 0 auto;
+        padding: 30px;
+        max-width: 380px;
+        background-color: $background_color_1;
+        input {
+            padding-right: 10px;
+            padding-left: 10px;
+            width: 100%;
+            height: 41px;
+            border-top: none;
+            border-right: none;
+            border-bottom: 1px solid #d6d6d6;
+            border-left: none;
+            background-color: $background_color_2;
+            font-size: 18px;
+            line-height: 41px;
+            &:focus {
+                outline: none;
+                & + i {
+                    display: none;
+                }
+            }
+        }
+        input.is-invalid {
+            color: $color_3;
+            & + i {
+                color: $color_3;
+            }
+        }
+    }
+    .headForm-title {
+        margin-bottom: .7em;
+        color: $color_1;
+        text-align: center;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 1;
+    }
+    .headForm-fields {
+        li {
+            position: relative;
+            & + li {
+                margin-top: 10px;
+            }
+        }
+        i {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            color: $color_2;
+            font-size: 18px;
+            line-height: 41px;
+            pointer-events: none;
+        }
+    }
+    .headForm-submit {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        height: 56px;
+        border: 1px solid $background_color_3;
+        border-radius: 3px;
+        color: $background_color_3;
+        text-align: center;
+        letter-spacing: (25 / 1000) + em;
+        font-size: 24px;
+        line-height: 56px;
+        transition: background-color .3s;
+        @at-root {
+            html.no-mobile main .headForm-submit:hover {
+                background-color: $background_color_3;
+                color: #fff;
+            }
+        }
     }
 }
-main .headForm-title {
-    margin-bottom: 1em;
-    color: #333;
-    text-align: center;
-    font-weight: bold;
-    font-size: 27px;
-    line-height: 1;
-}
-main .headForm-fields li {
-    position: relative;
-}
-main .headForm-fields li + li {
-    margin-top: 10px;
-}
-main .headForm-fields li i {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    color: #777;
-    font-size: 16px;
-    line-height: 41px;
-    pointer-events: none;
-}
-main .headForm input {
-    padding-right: 10px;
-    padding-left: 10px;
-    width: 100%;
-    height: 41px;
-    border-top: none;
-    border-right: none;
-    border-bottom: 1px solid #777;
-    border-left: none;
-    background-color: #f5f5f5;
-    font-size: 16px;
-    line-height: 41px;
-}
-main .headForm input:focus + i {
-    display: none;
-}
-main .headForm input.is-invalid,
-main .headForm input.is-invalid + i {
-    color: #ff0028;
-}
-main .headForm-submit {
-    display: block;
-    margin-top: 20px;
-    width: 100%;
-    height: 40px;
-    border-radius: 0;
-    background-color: #0096ff;
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-    line-height: 40px;
-    transition: background-color .3s;
-}
-html.no-mobile main .headForm-submit:hover {
-    background-color: #00c3f7;
-}
-
 </style>
