@@ -35,7 +35,7 @@ function getParameterByName(name) {
 // BUG：電腦開啟手機版網址無法自動轉址(重新整理始可)
 (function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
-    
+
     // 判斷目的裝置
     let md = new MobileDetect(window.navigator.userAgent);
     let device = md.mobile() ? 'desktop' : 'mobile';
@@ -91,21 +91,21 @@ $(function () {
                 let regex = new RegExp(item + '$');
                 return currentUrl.search(regex) !== -1;
             });
-        
+
             if (!result) return;
-        
+
             let head = document.querySelector('head');
             let style = document.createElement('link');
             style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
             style.rel = 'stylesheet';
             head.appendChild(style);
-        
+
             let preload = document.createElement('link');
             preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
             preload.rel = 'preload';
             preload.as = 'image';
             head.appendChild(preload);
-        
+
             $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
         });
 });
@@ -125,7 +125,7 @@ $(function () {
                 let regex = new RegExp(item + '$');
                 return currentUrl.search(regex) !== -1;
             });
-        
+
             if (!result) return;
 
             // 在文章標籤下方插入廣告
@@ -205,5 +205,17 @@ $(function () {
                 },
                 template: '<ad :info="info"></ad>',
             });
+        });
+});
+
+// 修改資料下載標題
+$(function () {
+    if (location.pathname !== '/tw/zlsq.html') return;
+    let id = getParameterByName('id');
+    fetch('/tw/dsc/assets/resources.json')
+        .then(res => res.json())
+        .then(res => {
+            let result = res.find(val => val.id === id);
+            if (result) document.querySelector('.form-bd .title').textContent = result.title;
         });
 });
