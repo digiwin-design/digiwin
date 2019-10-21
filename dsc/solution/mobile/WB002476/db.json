@@ -1,0 +1,73 @@
+{
+    "index": {
+        "banner": [
+            {
+                "id": 1,
+                "imgSrc": ["images/index/banner1.jpg"],
+                "url": "javascript:;"
+            }
+        ],
+        "tabs": [
+            [
+                {
+                    "content": "游董事長：「考慮業界口碑，我們只選擇最有名的品牌及持續成長的系統商！」",
+                    "company": {
+                        "link": "/tw/case/1507.html",
+                        "name": "生產空氣壓自動化零組件 台灣氣立股份有限公司"
+                    }
+                },
+                {
+                    "content": "林協理說：「別輕忽客戶維修履歷的重要性。」",
+                    "company": {
+                        "link": "/tw/case/1503.html",
+                        "name": "工具母機 台灣瀧澤"
+                    }
+                },
+                {
+                    "content": "林敏正執行長：「對鳳記來說，最重要的就是備料與報價。」",
+                    "company": {
+                        "link": "/tw/case/1509.html",
+                        "name": "塑膠押出機設備製造商 鳳記國際機械"
+                    }
+                }
+            ],
+            [
+                {
+                    "content": "「高層說要讓製造工程師打單?? 這怎麼可能?? 」",
+                    "company": {
+                        "link": "/tw/case/1079.html",
+                        "name": "半導體零組件加工生產 翔名科技"
+                    }
+                },
+                {
+                    "content": "吳特助：「以前當榮富的主管或使用者提出需求時，總以為系統無法做到，只能認命的將ERP報表轉到Excel做加工。」",
+                    "company": {
+                        "link": "/tw/case/699.html",
+                        "name": "鑽銑複合機和鋸床 榮富工業"
+                    }
+                },
+                {
+                    "content": "紀總經理：「對品牌而言，維修服務部門是公司很重要的單位，我們希望維修師出任務時可自行解決大部份問題，無須再透過電話查詢庫存、確認需求，既無時效也耗費成本。",
+                    "company": {
+                        "link": "/tw/case/1089.html",
+                        "name": "品牌銷售與售後維修子公司 奇美集團"
+                    }
+                }
+            ]
+        ],
+        "videos": [
+            {
+                "videoSrc": "https://www.youtube.com/embed/48zNG2xA6jQ",
+                "videoCaption": "機械交通圓夢計畫"
+            },
+            {
+                "videoSrc": "https://www.youtube.com/embed/qKmnB3UfArY",
+                "videoCaption": "交期總是石沉大海？"
+            },
+            {
+                "videoSrc": "https://www.youtube.com/embed/1qyxdQfzXtU",
+                "videoCaption": "缺料生產就停擺？"
+            }
+        ]
+    }
+}
