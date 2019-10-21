@@ -4,7 +4,7 @@
             <div
                 v-for="slide in slides"
                 :key="slide.title[deviceType] || slide.title[0]"
-                :style="{ backgroundImage: 'url(' + slide.imgSrc[deviceType] || slide.imgSrc[0] + ')' }"
+                :style="{ backgroundImage: 'url(' + (slide.imgSrc[deviceType] || slide.imgSrc[0]) + ')' }"
                 :class="'slide' + slide.id"
                 class="banner-slide swiper-slide"
             >
