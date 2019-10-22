@@ -50,7 +50,6 @@ URL：http://industry4.digiwin.com
 
 # API
 ## 需求諮詢 (e化單)
-送出需求內容
 - URL
   - 正式：http://misws.digiwin.com/WebPageData/Service.asmx/SaveData
   - 測試：https://misws.digiwin.com/WebPageDataTest/Service.asmx/SaveData
@@ -90,6 +89,14 @@ URL：http://industry4.digiwin.com
     "farm": "N"
 }
 ```
+### 信件通知人
+- 正式  
+潘家鴈、李孟純、石渼華、黃郁雯、林佩君、張琇媚、黃子芸、沈家如、蔡任維、宋冠樺、李宜芳、王齡翊
+- 正式 (東南亞實驗頁)  
+宋冠樺、李孟純、洪之文、石渼华、張琇媚、黃子芸、李宜芳、王齡翊
+- 測試  
+陳琬婷、林韓蕙、蔡承真、李孟純、謝元中
+
 ## 線上活動報名
 ### 取得活動資訊
 - URL：
