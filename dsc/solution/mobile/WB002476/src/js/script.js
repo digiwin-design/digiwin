@@ -1,7 +1,8 @@
-// Vue.use(VueAwesomeSwiper);
+Vue.use(VueAwesomeSwiper);
 httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
+httpVueLoader.register(Vue, 'components/slider.vue');
 httpVueLoader.register(Vue, 'components/index/tabs.vue');
 
 let mixin = {
@@ -42,6 +43,10 @@ const router = new VueRouter({
         {
             path: '/industry/:tab?',
             component: httpVueLoader('views/industry.vue')
+        },
+        {
+            path: '/WB00247601_Industry01/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry01.vue')
         },
         {
             path: '/:tab?',

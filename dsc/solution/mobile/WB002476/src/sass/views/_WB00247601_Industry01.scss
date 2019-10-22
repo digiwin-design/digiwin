@@ -1,0 +1,92 @@
+main .WB00247601_Industry01 {
+    .title {
+        margin-bottom: 1em;
+        font-size: 26px;
+    }
+    .header {
+        @include bg('WB00247601_Industry01/header-bg.jpg');
+        padding-top: 55px;
+        height: 350px;
+        h1 {
+            color: #00e7f6;
+            font-weight: normal;
+            font-size: 34px;
+            line-height: 38px;
+        }
+        h2 {
+            margin-top: 5px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 1;
+        }
+    }
+    .section1 {
+        padding-top: 33px;
+        h1 {
+            color: #555;
+            line-height: 36px;
+        }
+        .swiper-slide {
+            width: 300px;
+        }
+        .slide {
+            $color: #297396 #31b5d6 #018c95 #29bac3;
+            position: relative;
+            padding: 25% 25px 25px 25px;
+            height: 440px;
+            border: 1px solid #f00;
+            &-tag {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-top: 20px;
+                width: 154px;
+                height: 100px;
+                @at-root {
+                    @for $n from 1 through 4 {
+                        main .WB00247601_Industry01 .section1 .slide#{$n} .slide-tag {
+                            background-image: linear-gradient(147deg, nth($color, $n) 50%, transparent 0);
+                        }
+                    }
+                }
+                &::before {
+                    display: block;
+                    width: 85px;
+                    color: #fff;
+                    content: attr(data-text);
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+            }
+            figure {
+                text-align: center;
+            }
+            figcaption {
+                margin-top: 15px;
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 24px;
+                @at-root {
+                    @for $n from 1 through 4 {
+                        main .WB00247601_Industry01 .section1 .slide#{$n} figcaption {
+                            color: nth($color, $n);
+                        }
+                    }
+                }
+            }
+            &-text {
+                line-height: 28px;
+                p + p {
+                    margin-top: 1em;
+                }
+                ul {
+                    padding-left: 1em;
+                    list-style-type: disc;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

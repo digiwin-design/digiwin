@@ -69,5 +69,37 @@
                 "videoCaption": "缺料生產就停擺？"
             }
         ]
+    },
+    "WB00247601_Industry01": {
+        "slider1": [
+            {
+                "id": 1,
+                "tag": "事件",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon1.png",
+                "figcaption": "倉庫",
+                "text": "<p>廠商來貨，一堆又一堆。收貨聲，聲聲催。顧得了這頭，就漏得那頭.........。要的沒有，不要的一堆。</p>"
+            },
+            {
+                "id": 2,
+                "tag": "困擾",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon2.png",
+                "figcaption": "倉庫主管",
+                "text": "<ul><li>開發件推陳出新，來不及認識就灰飛煙滅，新人要怎麼教？</li><li>兩個東西長很像，圓的、扁的差不多，教我如何認識它？該入哪個帳？</li><li>每次找料跟尋寶一樣，東翻翻、西翻翻，東西到底壓在哪？</li></ul>"
+            },
+            {
+                "id": 3,
+                "tag": "影響誰",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon3.png",
+                "figcaption": "採購/生管",
+                "text": "<p>採購:廠商來貨後就是噩夢的開始，對料帳比追料更花時間，晚上還要加班入帳。天長地久有時盡，此恨綿綿無絕期。</p><p>生管:生產在等料做，倉庫說沒有來，廠商說早送了，採購在幹什麼？</p>"
+            },
+            {
+                "id": 4,
+                "tag": "結果",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon4.png",
+                "figcaption": "廠長",
+                "text": "<p>IQC是公司品質的第一關卡，但往往因時間不足，檢驗項目繁多費時費工，而無法完全落實檢驗。最後在FQC不過關，一切還是得重來。</p>"
+            }
+        ]
     }
 }

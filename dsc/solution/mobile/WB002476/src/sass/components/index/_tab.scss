@@ -1,5 +1,6 @@
 main .index .tabs {
     li {
+        @extend %clearfix;
         padding: 30px 25px 10px;
         @at-root {
             main .index .tabs.tab1 li:nth-of-type(even) {
@@ -15,9 +16,8 @@ main .index .tabs {
             line-height: 28px;
         }
         a {
-            display: block;
+            float: right;
             color: #da2d2f;
-            text-align: right;
             font-size: 12px;
             line-height: 2.3;
             @media (min-width: $mobile-width) {
