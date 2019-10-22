@@ -1,12 +1,7 @@
 <template>
     <div class="slider">
         <swiper ref="awesomeSwiperA" :options="swiperOptionA">
-            <swiper-slide
-                v-for="slide in slides"
-                :key="slide.id"
-            >
-                <slot :name="'slot' + slide.id"></slot>
-            </swiper-slide>
+            <slot></slot>
         </swiper>
     </div>
 </template>
@@ -22,9 +17,9 @@ module.exports = {
     data() {
         return {
             swiperOptionA: {
-                loop: true,
                 slidesPerView: 'auto',
                 spaceBetween: 6,
+                freeMode: true,
             }
         }
     },

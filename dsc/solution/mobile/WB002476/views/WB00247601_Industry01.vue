@@ -11,8 +11,8 @@
             <div class="container">
                 <h1 class="title">如果有一個工具，能將這一段段的收料作業串起來那就好了</h1>
                 <slider :slides="result.WB00247601_Industry01.slider1">
-                    <template :slot="`slot${slide.id}`" v-for="slide in result.WB00247601_Industry01.slider1">
-                        <div class="slide" :class="`slide${slide.id}`" :key="slide.id">
+                    <swiper-slide v-for="slide in result.WB00247601_Industry01.slider1" :key="slide.id">
+                        <div class="slide" :class="`slide${slide.id}`">
                             <p class="slide-tag" :data-text="slide.tag"></p>
                             <figure>
                                 <img :src="slide.imgSrc" alt="">
@@ -20,7 +20,7 @@
                             </figure>
                             <div class="slide-text" v-html="slide.text"></div>
                         </div>
-                    </template>
+                    </swiper-slide>
                 </slider>
             </div>
         </article>
