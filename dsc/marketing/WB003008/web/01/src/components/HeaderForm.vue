@@ -44,7 +44,7 @@ export default {
             if (this.testResult) {
                 $('#loading').fadeIn();
                 let query = {
-                    doc_no: document.querySelector('#fromSource').innerText,
+                    doc_no: this.getSource(),
                     source: document.title,
                     page_dir: decodeURI(location.href),
                     company: '',
@@ -91,6 +91,10 @@ export default {
                 let msg = '尚有聯絡資料未填寫或Email格式錯誤，請重新確認。';
                 window.wxc.xcConfirm(msg, window.wxc.xcConfirm.typeEnum.info);
             }
+        },
+        getSource() {
+            let result = /WB\d{6}/.exec(location.pathname);
+            return result ? result[0] : document.querySelector('#fromSource').innerText;
         },
     },
 }
