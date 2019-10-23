@@ -102,12 +102,12 @@
                         <img src="@/assets/images/WF_iGP_logo.png" alt />
                         <a data-fancybox="gallery" href="WF2.png">
                             <div class="boost">
-                                <img src="@/assets/images/icon_magnifier.png" alt class="Icon_click" />
+                                <img src="@/assets/images/icon_magnifier.png" alt="系統架構圖" class="Icon_click" />
                             </div>
                         </a>
                     </div>
                     <div class="fr" style="width: 50%">
-                        <img src="@/assets/images/right.png" alt style="margin-top: 40px" />
+                        <img src="@/assets/images/right.png" alt="ERP系統導入效益：企業作業流程標準化、跨部溝通正確流暢、減少人工作業誤差、庫存物料帳實一致、提高生產製造產能、財務報表即時準確、符合法規降低風險、資訊即時加速反應力、提升數據管理決策力" style="margin-top: 40px" />
                     </div>
                 </div>
                 <a href @click.prevent="clickHandler">
@@ -117,10 +117,10 @@
                     <img src="@/assets/images/mWF_iGP_logo.png" alt style="margin-top:25px;" />
                     <a data-fancybox="gallery" href="WF2.png">
                         <div class="boost">
-                            <img src="@/assets/images/icon_magnifierm.png" alt class="Icon_click" />
+                            <img src="@/assets/images/icon_magnifierm.png" alt="系統架構圖" class="Icon_click" />
                         </div>
                     </a>
-                    <img src="@/assets/images/rightm.png" alt style="margin-bottom: 15px;" />
+                    <img src="@/assets/images/rightm.png" alt="ERP系統導入效益：企業作業流程標準化、跨部溝通正確流暢、減少人工作業誤差、庫存物料帳實一致、提高生產製造產能、財務報表即時準確、符合法規降低風險、資訊即時加速反應力、提升數據管理決策力" style="margin-bottom: 15px;" />
                     <div class="hint">
                         <p class="clearbtn">
                             <img src="@/assets/images/clear-button.png" alt />
