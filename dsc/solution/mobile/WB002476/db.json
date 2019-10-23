@@ -1,0 +1,105 @@
+{
+    "index": {
+        "banner": [
+            {
+                "id": 1,
+                "imgSrc": ["images/index/banner1.jpg"],
+                "url": "javascript:;"
+            }
+        ],
+        "tabs": [
+            [
+                {
+                    "content": "游董事長：「考慮業界口碑，我們只選擇最有名的品牌及持續成長的系統商！」",
+                    "company": {
+                        "link": "/tw/case/1507.html",
+                        "name": "生產空氣壓自動化零組件 台灣氣立股份有限公司"
+                    }
+                },
+                {
+                    "content": "林協理說：「別輕忽客戶維修履歷的重要性。」",
+                    "company": {
+                        "link": "/tw/case/1503.html",
+                        "name": "工具母機 台灣瀧澤"
+                    }
+                },
+                {
+                    "content": "林敏正執行長：「對鳳記來說，最重要的就是備料與報價。」",
+                    "company": {
+                        "link": "/tw/case/1509.html",
+                        "name": "塑膠押出機設備製造商 鳳記國際機械"
+                    }
+                }
+            ],
+            [
+                {
+                    "content": "「高層說要讓製造工程師打單?? 這怎麼可能?? 」",
+                    "company": {
+                        "link": "/tw/case/1079.html",
+                        "name": "半導體零組件加工生產 翔名科技"
+                    }
+                },
+                {
+                    "content": "吳特助：「以前當榮富的主管或使用者提出需求時，總以為系統無法做到，只能認命的將ERP報表轉到Excel做加工。」",
+                    "company": {
+                        "link": "/tw/case/699.html",
+                        "name": "鑽銑複合機和鋸床 榮富工業"
+                    }
+                },
+                {
+                    "content": "紀總經理：「對品牌而言，維修服務部門是公司很重要的單位，我們希望維修師出任務時可自行解決大部份問題，無須再透過電話查詢庫存、確認需求，既無時效也耗費成本。",
+                    "company": {
+                        "link": "/tw/case/1089.html",
+                        "name": "品牌銷售與售後維修子公司 奇美集團"
+                    }
+                }
+            ]
+        ],
+        "videos": [
+            {
+                "videoSrc": "https://www.youtube.com/embed/48zNG2xA6jQ",
+                "videoCaption": "機械交通圓夢計畫"
+            },
+            {
+                "videoSrc": "https://www.youtube.com/embed/qKmnB3UfArY",
+                "videoCaption": "交期總是石沉大海？"
+            },
+            {
+                "videoSrc": "https://www.youtube.com/embed/1qyxdQfzXtU",
+                "videoCaption": "缺料生產就停擺？"
+            }
+        ]
+    },
+    "WB00247601_Industry01": {
+        "slider1": [
+            {
+                "id": 1,
+                "tag": "事件",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon1.png",
+                "figcaption": "倉庫",
+                "text": "<p>廠商來貨，一堆又一堆。收貨聲，聲聲催。顧得了這頭，就漏得那頭.........。要的沒有，不要的一堆。</p>"
+            },
+            {
+                "id": 2,
+                "tag": "困擾",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon2.png",
+                "figcaption": "倉庫主管",
+                "text": "<ul><li>開發件推陳出新，來不及認識就灰飛煙滅，新人要怎麼教？</li><li>兩個東西長很像，圓的、扁的差不多，教我如何認識它？該入哪個帳？</li><li>每次找料跟尋寶一樣，東翻翻、西翻翻，東西到底壓在哪？</li></ul>"
+            },
+            {
+                "id": 3,
+                "tag": "影響誰",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon3.png",
+                "figcaption": "採購/生管",
+                "text": "<p>採購:廠商來貨後就是噩夢的開始，對料帳比追料更花時間，晚上還要加班入帳。天長地久有時盡，此恨綿綿無絕期。</p><p>生管:生產在等料做，倉庫說沒有來，廠商說早送了，採購在幹什麼？</p>"
+            },
+            {
+                "id": 4,
+                "tag": "結果",
+                "imgSrc": "images/WB00247601_Industry01/slider1-icon4.png",
+                "figcaption": "廠長",
+                "text": "<p>IQC是公司品質的第一關卡，但往往因時間不足，檢驗項目繁多費時費工，而無法完全落實檢驗。最後在FQC不過關，一切還是得重來。</p>"
+            }
+        ]
+    }
+}

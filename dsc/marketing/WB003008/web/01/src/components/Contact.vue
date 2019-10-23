@@ -213,7 +213,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
+@media (min-width: 361px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
 #contact {
     position: relative;
     margin: 0 auto;

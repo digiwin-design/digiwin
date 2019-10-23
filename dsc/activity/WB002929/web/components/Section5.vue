@@ -4,6 +4,7 @@
             <h1 class="title">從職場新鮮人到管理議題專家</h1>
             <div class="video">
                 <div class="video-container">
+                    <!-- poster使用透明圖片以顯示.video背景(IE不支援) -->
                     <video controls poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
                         <source src="public/video.Ogg" type="video/ogg">
                         <source src="public/video.mp4" type="video/mp4">

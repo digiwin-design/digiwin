@@ -4,7 +4,7 @@
             <h1 class="sectionTitle">
                 <slot name="title"></slot>
             </h1>
-            <div v-show="desc" class="articleDesc">
+            <div v-if="desc" class="articleDesc">
                 <slot v-if="isMobile" name="desc-s"></slot>
                 <slot v-else name="desc"></slot>
             </div>

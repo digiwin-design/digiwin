@@ -320,5 +320,117 @@
                 "anchor": "#contact"
             }
         ]
+    },
+    {
+        "id": "WB002476",
+        "title": "機械業",
+        "menus": [
+            {
+                "text": "機械首頁",
+                "url": "#/"
+            },
+            {
+                "text": "智慧工廠",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "智慧工廠",
+                        "url": "#/industry"
+                    },
+                    {
+                        "text": "採購收貨",
+                        "url": "#/WB00247601_Industry01"
+                    },
+                    {
+                        "text": "IQC",
+                        "url": "#/WB00247601_Industry02"
+                    },
+                    {
+                        "text": "原料倉",
+                        "url": "#/WB00247601_Industry03"
+                    },
+                    {
+                        "text": "副線生產",
+                        "url": "#/WB00247601_Industry04"
+                    },
+                    {
+                        "text": "裝配店面倉",
+                        "url": "#/WB00247601_Industry05"
+                    },
+                    {
+                        "text": "主線生產",
+                        "url": "#/WB00247601_Industry06"
+                    },
+                    {
+                        "text": "出貨",
+                        "url": "#/WB00247601_Industry07"
+                    },
+                    {
+                        "text": "戰情室",
+                        "url": "#/WB00247601_Industry08"
+                    }
+                ]
+            },
+            {
+                "text": "客製化訂單",
+                "url": "#/WB00247601_2"
+            },
+            {
+                "text": "生產製造",
+                "url": "#/WB00247601_manufacture"
+            },
+            {
+                "text": "輔導案例",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "東毓油壓",
+                        "url": "#/WB00247601_3"
+                    },
+                    {
+                        "text": "東野精機",
+                        "url": "#/WB00247601_case"
+                    }
+                ]
+            },
+            {
+                "text": "研討會",
+                "url": "#/WB00247601_4"
+            },
+            {
+                "text": "解決方案",
+                "url": "#/WB00247601_5",
+                "dropdowns": [
+                    {
+                        "text": "機械維修",
+                        "url": "#/WB00247601_repair"
+                    },
+                    {
+                        "text": "邁向工業4.0",
+                        "url": "http://industry4.digiwin.com",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "評量健檢",
+                        "url": "http://industry4.digiwin.com/diagnosis.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "產官學研討會",
+                        "url": "http://industry4.digiwin.com/activity.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "方案規劃",
+                        "url": "http://industry4.digiwin.com/smartFactory.htm",
+                        "target": "_blank"
+                    }
+                ]
+            },
+            {
+                "text": "聯絡我們",
+                "anchor": "#contact"
+            }
+        ]
     }
 ]
