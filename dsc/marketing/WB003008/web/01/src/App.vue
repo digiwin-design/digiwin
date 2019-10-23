@@ -37,7 +37,6 @@ export default {
 
 <style lang="scss">
 @import '@/assets/sass/reset.scss';
-@import '@/assets/sass/common.scss';
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -46,18 +45,5 @@ export default {
 main {
     min-width: 360px;
     flex-grow: 1;
-}
-.container {
-    margin: 0 auto;
-    padding: 0 15px;
-    max-width: 1200px;
-    @media (min-width: 361px) {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    @media (min-width: 1200px) {
-        padding-right: 0;
-        padding-left: 0;
-    }
 }
 </style>
