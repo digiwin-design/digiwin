@@ -1,4 +1,5 @@
 main .WB00247601_Industry01 {
+    padding-bottom: 55px;
     .title {
         margin-bottom: 1em;
         font-size: 26px;
@@ -23,6 +24,7 @@ main .WB00247601_Industry01 {
     }
     .section1 {
         padding-top: 33px;
+        padding-bottom: 2em;
         h1 {
             color: #555;
             line-height: 36px;
@@ -33,9 +35,14 @@ main .WB00247601_Industry01 {
         .slide {
             $color: #297396 #31b5d6 #018c95 #29bac3;
             position: relative;
+            margin-bottom: 2em;
             padding: 25% 25px 25px 25px;
             height: 440px;
-            border: 1px solid #f00;
+            @for $n from 1 through 4 {
+                &.slide#{$n} {
+                    border: 1px solid nth($color, $n);
+                }
+            }
             &-tag {
                 position: absolute;
                 top: 0;
@@ -88,5 +95,133 @@ main .WB00247601_Industry01 {
                 }
             }
         }
+        &-additional {
+            color: #555;
+            text-indent: 2em;
+            line-height: 28px;
+        }
+    }
+    .section2 {
+        padding-top: 40px;
+        padding-bottom: 2em;
+        background-color: #efefef;
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        section + section {
+            margin-top: 1em;
+        }
+        h2 {
+            @include btn(110px, 35px, #fff, #ffc104);
+            margin-bottom: .5em;
+            font-size: 20px;
+            @at-root {
+                $color: #ffc104 #f60 #1879aa;
+                @for $n from 1 through 3 {
+                    main .WB00247601_Industry01 .section2 section:nth-of-type(#{$n}) h2 {
+                        background-color: nth($color, $n);
+                    }
+                }
+            }
+        }
+        p {
+            line-height: 26px;
+            & + ul {
+                margin-top: 5px;
+            }
+            & + p {
+                margin-top: 5px;
+            }
+        }
+        ul {
+            padding-left: 1em;
+            list-style-type: disc;
+            line-height: 26px;
+        }
+        li + li {
+            margin-top: 5px;
+        }
+    }
+    .section3 {
+        padding: 40px 0;
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        .slider {
+            margin-bottom: 45px;
+        }
+        .swiper-slide {
+            width: 300px;
+            height: auto;
+        }
+        .slide {
+            padding: 20px;
+            height: 100%;
+            border: 2px solid #169da0;
+        }
+        h2 {
+            margin-bottom: 1em;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #949494;
+            color: #149da0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        li {
+            font-weight: bold;
+            line-height: 26px;
+            & + li {
+                margin-top: 5px;
+            }
+        }
+        video {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            & + h2 {
+                margin-top: 34px;
+            }
+        }
+    }
+    .section4 {
+        margin-bottom: 55px;
+        padding-top: 33px;
+        padding-bottom: 40px;
+        background-color: #149da0;
+        h1 {
+            text-align: center;
+            line-height: 36px;
+        }
+        &-item {
+            display: flex;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #0a7377;
+            justify-content: center;
+            align-items: center;
+            & + .section4-item {
+                margin-top: 20px;
+            }
+        }
+        figcaption {
+            margin-bottom: 20px;
+            color: #faff3e;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        p {
+            color: #fff;
+            line-height: 28px;
+        }
+    }
+    .bottomBtn {
+        @include btn(100%, 50px, #fff, #00a2a5, 0, true);
+        margin: 0 auto;
+        max-width: 330px;
+        color: #fff;
+        font-size: 22px;
     }
 }
