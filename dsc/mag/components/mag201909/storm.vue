@@ -1,5 +1,5 @@
 <template>
-    <div class="storm" :class="{ active: complete }">
+    <div class="storm">
         <img src="images/mag201909/header-wind.png" class="js-wind" />
         <img src="images/mag201909/header-ball.png" class="ball js-ball" v-for="i in 8" :key="i" />
     </div>
@@ -7,11 +7,6 @@
 
 <script>
 module.exports = {
-    data: function () {
-        return {
-            complete: true,
-        }
-    },
     methods: {
         initAn: function () {
             let tl = new TimelineMax();
@@ -35,7 +30,7 @@ module.exports = {
     height: 522px;
     animation: stormAn 1.5s linear 1;
 }
-.storm.active::after {
+.storm::after {
     position: absolute;
     top: 0;
     left: 150%;
