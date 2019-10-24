@@ -49,6 +49,34 @@ const router = new VueRouter({
             component: httpVueLoader('views/WB00247601_Industry01.vue')
         },
         {
+            path: '/WB00247601_Industry02/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry02.vue')
+        },
+        {
+            path: '/WB00247601_Industry03/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry03.vue')
+        },
+        {
+            path: '/WB00247601_Industry04/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry04.vue')
+        },
+        {
+            path: '/WB00247601_Industry05/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry05.vue')
+        },
+        {
+            path: '/WB00247601_Industry06/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry06.vue')
+        },
+        {
+            path: '/WB00247601_Industry07/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry07.vue')
+        },
+        {
+            path: '/WB00247601_Industry08/:tab?',
+            component: httpVueLoader('views/WB00247601_Industry08.vue')
+        },
+        {
             path: '/:tab?',
             component: httpVueLoader('views/index.vue')
         },

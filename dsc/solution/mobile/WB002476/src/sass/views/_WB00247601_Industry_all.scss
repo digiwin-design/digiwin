@@ -1,13 +1,19 @@
-main .WB00247601_Industry01 {
+main [class^=WB00247601_Industry] {
     padding-bottom: 55px;
     .title {
         margin-bottom: 1em;
         font-size: 26px;
     }
     .header {
-        @include bg('WB00247601_Industry01/header-bg.jpg');
         padding-top: 55px;
         height: 350px;
+        @at-root {
+            @for $n from 1 through 8 {
+                main .WB00247601_Industry0#{$n} .header {
+                    @include bg('WB00247601_Industry0#{$n}/header-bg.jpg');
+                }
+            }
+        }
         h1 {
             color: #00e7f6;
             font-weight: normal;
@@ -29,15 +35,18 @@ main .WB00247601_Industry01 {
             color: #555;
             line-height: 36px;
         }
+        .slider {
+            margin-bottom: 2em;
+        }
         .swiper-slide {
             width: 300px;
+            height: auto;
         }
         .slide {
             $color: #297396 #31b5d6 #018c95 #29bac3;
             position: relative;
-            margin-bottom: 2em;
             padding: 25% 25px 25px 25px;
-            height: 440px;
+            height: 100%;
             @for $n from 1 through 4 {
                 &.slide#{$n} {
                     border: 1px solid nth($color, $n);
@@ -52,7 +61,7 @@ main .WB00247601_Industry01 {
                 height: 100px;
                 @at-root {
                     @for $n from 1 through 4 {
-                        main .WB00247601_Industry01 .section1 .slide#{$n} .slide-tag {
+                        main [class^=WB00247601_Industry] .section1 .slide#{$n} .slide-tag {
                             background-image: linear-gradient(147deg, nth($color, $n) 50%, transparent 0);
                         }
                     }
@@ -77,7 +86,7 @@ main .WB00247601_Industry01 {
                 font-size: 24px;
                 @at-root {
                     @for $n from 1 through 4 {
-                        main .WB00247601_Industry01 .section1 .slide#{$n} figcaption {
+                        main [class^=WB00247601_Industry] .section1 .slide#{$n} figcaption {
                             color: nth($color, $n);
                         }
                     }
@@ -85,13 +94,9 @@ main .WB00247601_Industry01 {
             }
             &-text {
                 line-height: 28px;
-                p + p {
-                    margin-top: 1em;
-                }
                 ul {
                     padding-left: 1em;
                     list-style-type: disc;
-                    line-height: 24px;
                 }
             }
         }
@@ -107,7 +112,6 @@ main .WB00247601_Industry01 {
         background-color: #efefef;
         h1 {
             text-align: center;
-            font-weight: bold;
         }
         section + section {
             margin-top: 1em;
@@ -119,28 +123,24 @@ main .WB00247601_Industry01 {
             @at-root {
                 $color: #ffc104 #f60 #1879aa;
                 @for $n from 1 through 3 {
-                    main .WB00247601_Industry01 .section2 section:nth-of-type(#{$n}) h2 {
+                    main [class^=WB00247601_Industry] .section2 section:nth-of-type(#{$n}) h2 {
                         background-color: nth($color, $n);
                     }
                 }
             }
         }
+        p + ul,
+        p + p,
+        li + li {
+            margin-top: 5px;
+        }
         p {
             line-height: 26px;
-            & + ul {
-                margin-top: 5px;
-            }
-            & + p {
-                margin-top: 5px;
-            }
         }
         ul {
             padding-left: 1em;
             list-style-type: disc;
             line-height: 26px;
-        }
-        li + li {
-            margin-top: 5px;
         }
     }
     .section3 {
@@ -189,32 +189,108 @@ main .WB00247601_Industry01 {
     .section4 {
         margin-bottom: 55px;
         padding-top: 33px;
-        padding-bottom: 40px;
-        background-color: #149da0;
-        h1 {
+        h1,
+        h2 {
             text-align: center;
             line-height: 36px;
         }
-        &-item {
-            display: flex;
-            padding-top: 40px;
-            padding-bottom: 40px;
-            background-color: #0a7377;
-            justify-content: center;
-            align-items: center;
-            & + .section4-item {
-                margin-top: 20px;
+        @at-root {
+            main .WB00247601_Industry01 .section4 {
+                padding-bottom: 40px;
+                background-color: #149da0;
+                &-item {
+                    display: flex;
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    background-color: #0a7377;
+                    justify-content: center;
+                    align-items: center;
+                    & + .section4-item {
+                        margin-top: 20px;
+                    }
+                }
+                figcaption {
+                    margin-bottom: 20px;
+                    color: #faff3e;
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+                p {
+                    color: #fff;
+                    line-height: 28px;
+                }
             }
-        }
-        figcaption {
-            margin-bottom: 20px;
-            color: #faff3e;
-            font-weight: bold;
-            font-size: 24px;
-        }
-        p {
-            color: #fff;
-            line-height: 28px;
+            main .WB00247601_Industry02 .section4 {
+                &-item {
+                    padding-bottom: 40px;
+                    &:nth-of-type(2) {
+                        padding-top: 40px;
+                        background-color: #169da0;
+                    }
+                }
+            }
+            main .WB00247601_Industry04 .section4 {
+                .grid {
+                    display: grid;
+                    row-gap: 40px;
+                }
+                ul {
+                    margin-bottom: 1em;
+                }
+                li {
+                    display: flex;
+                    line-height: 28px;
+                    align-items: baseline;
+                    &::before {
+                        margin-right: .5em;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #000;
+                        content: '';
+                        transform: rotate(45deg);
+                        flex-shrink: 0;
+                    }
+                }
+            }
+            main .WB00247601_Industry06 .section4 {
+                .grid {
+                    display: grid;
+                    row-gap: 40px;
+                }
+                .row {
+                    &:nth-of-type(2),
+                    &:nth-of-type(4) {
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                    }
+                    &:nth-of-type(2) {
+                        background-color: #169da0;
+                    }
+                    &:nth-of-type(4) {
+                        background-color: #f5f5f5;
+                    }
+                }
+            }
+            main .WB00247601_Industry08 .section4 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1 {
+                    text-align: left;
+                    line-height: 36px;
+                }
+                &-item {
+                    padding-bottom: 40px;
+                    width: 100%;
+                    &:nth-of-type(2) {
+                        padding-top: 40px;
+                        background-color: #169da0;
+                    }
+                }
+                h2 {
+                    color: #fff;
+                }
+            }
         }
     }
     .bottomBtn {
