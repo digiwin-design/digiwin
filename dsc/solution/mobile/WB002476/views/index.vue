@@ -68,5 +68,8 @@
 module.exports = {
     name: 'index',
     mixins: [mixin],
+    components: {
+        'tabs': httpVueLoader('components/index/tabs.vue'),
+    },
 }
 </script>

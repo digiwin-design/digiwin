@@ -123,6 +123,66 @@
         {
             "desktop": "/tw/dsc/solution/WB002554/WB00255401_control.html",
             "mobile": "/tw/dsc/solution/mobile/WB002554/index.html#/control"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/industry.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/industry"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry01.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry01"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry02.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry02"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry03.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry03"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry04.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry04"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry05.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry05"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry06.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry06"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry07.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry07"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_Industry08.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_Industry08"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_manufacture.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_manufacture"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_3.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_3"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_case.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_case"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_4.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_4"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_repair.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_repair"
         }
     ]
 }

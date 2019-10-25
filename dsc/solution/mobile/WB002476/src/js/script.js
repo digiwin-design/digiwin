@@ -3,7 +3,6 @@ httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/slider.vue');
-httpVueLoader.register(Vue, 'components/index/tabs.vue');
 
 let mixin = {
     computed: {
@@ -77,9 +76,33 @@ const router = new VueRouter({
             component: httpVueLoader('views/WB00247601_Industry08.vue')
         },
         {
+            path: '/WB00247601_2/:tab?',
+            component: httpVueLoader('views/WB00247601_2.vue')
+        },
+        {
+            path: '/WB00247601_manufacture/:tab?',
+            component: httpVueLoader('views/WB00247601_manufacture.vue')
+        },
+        {
+            path: '/WB00247601_3/:tab?',
+            component: httpVueLoader('views/WB00247601_3.vue')
+        },
+        {
+            path: '/WB00247601_case/:tab?',
+            component: httpVueLoader('views/WB00247601_case.vue')
+        },
+        {
+            path: '/WB00247601_4/:tab?',
+            component: httpVueLoader('views/WB00247601_4.vue')
+        },
+        {
+            path: '/WB00247601_repair/:tab?',
+            component: httpVueLoader('views/WB00247601_repair.vue')
+        },
+        {
             path: '/:tab?',
             component: httpVueLoader('views/index.vue')
-        },
+        }
     ],
     scrollBehavior(to, from, savedPosition) {
         return { x: 0, y: 0 };
