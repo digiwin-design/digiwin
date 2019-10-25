@@ -61,10 +61,11 @@ function getParameterByName(name) {
         });
 })();
 
-// add production/no-production class
+// add class to html tag
 (function () {
-    let str = location.hostname === 'www.digiwin.com' ? 'production' : 'no-production';
-    document.querySelector('html').classList.add(str);
+    let isProd = location.hostname === 'www.digiwin.com' ? 'production' : 'no-production';
+    let currentPage = location.pathname.split('/').pop().replace('.html', '');
+    document.querySelector('html').classList.add(isProd, currentPage);
 })();
 
 // 修改手機版電話號碼(與後台電腦版連動)
