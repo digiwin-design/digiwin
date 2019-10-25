@@ -11,6 +11,7 @@
 | 次級選單 | /tw/dsc/assets/submenu/ |
 | 次級選單手機版 | /tw/dsc/assets/submenu-spa/ | 
 | 全站共用 JS | /tw/dsc/js/common.min.js<br>(Source: /tw/dsc/js/common.js ) |
+| 全站共用 CSS | /tw/dsc/css/all.css |
 | 後台上稿用重置樣式 | /tw/dsc/css/reboot.css<br>(Source: /tw/dsc/css/reboot.scss) |
 | 研討會樣版 | /tw/dsc/template/seminar/ |
 | 文章廣告 Banner | /tw/dsc/assets/article-ad/ |
