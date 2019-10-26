@@ -10,12 +10,12 @@
 | 繁/簡體站跳轉提示 | /tw/dsc/assets/popup/ |
 | 次級選單 | /tw/dsc/assets/submenu/ |
 | 次級選單手機版 | /tw/dsc/assets/submenu-spa/ | 
-| 全站共用 JS | /tw/dsc/js/common.min.js<br>(Source: /tw/dsc/js/common.js ) |
+| 全站共用 JS | /tw/dsc/js/common.min.js<br>(source: /tw/dsc/js/common.js ) |
 | 全站共用 CSS | /tw/dsc/css/all.css |
-| 後台上稿用重置樣式 | /tw/dsc/css/reboot.css<br>(Source: /tw/dsc/css/reboot.scss) |
+| 後台上稿用重置樣式 | /tw/dsc/css/reboot.css<br>(source: /tw/dsc/css/reboot.scss) |
 | 研討會樣版 | /tw/dsc/template/seminar/ |
 | 文章廣告 Banner | /tw/dsc/assets/article-ad/ |
-| 資料下載標題設置 | /tw/dsc/assets/resources/ |
+| 資料下載標題設置 | /tw/dsc/assets/resources/ | 資料來源為 Firebase
 
 # 主網站分類
 | 名稱 | 位置 | 備註
