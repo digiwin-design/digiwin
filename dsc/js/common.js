@@ -211,12 +211,50 @@ $(function () {
 
 // 修改資料下載標題
 $(function () {
-    if (location.pathname !== '/tw/zlsq.html') return;
-    let id = getParameterByName('id');
-    fetch('/tw/dsc/assets/resources.json')
-        .then(res => res.json())
-        .then(res => {
-            let result = res.find(val => val.id === id);
-            if (result) document.querySelector('.form-bd .title').textContent = result.title;
-        });
+    if (location.hostname === 'www.digiwin.com' && location.pathname !== '/tw/zlsq.html') return;
+    
+    const firebaseConfig = {
+        apiKey: 'AIzaSyAHt_p6RibnGGyi2PWES5kQi7K5-m_9lNs',
+        authDomain: 'digiwin-4a7d3.firebaseapp.com',
+        databaseURL: 'https://digiwin-4a7d3.firebaseio.com',
+        projectId: 'digiwin-4a7d3',
+        storageBucket: 'digiwin-4a7d3.appspot.com',
+        messagingSenderId: '306272678210',
+        appId: '1:306272678210:web:d0f8a849f5902ba0e498db'
+    };
+    if (firebase.apps.length === 0) {
+        firebase.initializeApp(firebaseConfig);
+    }
+
+    let contentRef = firebase.database().ref('resources');
+    contentRef.once('value').then(snapshot => {
+        let content = snapshot.val();
+        for (const key in content) {
+            if (content.hasOwnProperty(key)) {
+                const element = content[key];
+                if (element.id == getParameterByName('id')) {
+                    document.querySelector('.form-bd .title').textContent = element.title;
+                    break;
+                }
+            }
+        }
+    });
+
+    // =========================================================================
+    // use local data
+    // =========================================================================
+    // fetch('db.json')
+    //     .then(res => res.json())
+    //     .then(res => {
+    //         res = res.resources;
+    //         for (const key in res) {
+    //             if (res.hasOwnProperty(key)) {
+    //                 const element = res[key];
+    //                 if (element.id == getParameterByName('id')) {
+    //                     document.querySelector('.form-bd .title').textContent = element.title;
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //     });
 });

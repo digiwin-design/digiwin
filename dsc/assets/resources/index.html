@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>資料下載標題產生器</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <style>
+        #app {
+            display: grid;
+            row-gap: 10px;
+            justify-items: center;
+        }
+        .form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+            text-align: center;
+        }
+        .table {
+            height: calc(75vh - 50px);
+            overflow: auto;
+        }
+        [type=number] {
+            margin-left: 5px;
+            width: 5em;
+        }
+        [type=text] {
+            margin-top: 5px;
+            width: 50%;
+        }
+        [type=submit] {
+            margin-top: 1em;
+            width: 50%;
+        }
+        .button-error {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(202, 60, 60);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="form">
+            <form class="pure-form" @submit.prevent="submitHandler">
+                <div>https://www.digiwin.com/tw/zlsq.html?id=<input type="number" placeholder="ID" required v-model.number="newContent.id" ref="id"></div>
+                <input type="text" placeholder="標題" required v-model="newContent.title">
+                <input type="submit" value="新增" class="pure-button">
+            </form>
+        </div>
+
+        <div class="table">
+            <table class="pure-table" v-if="content.length">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>標題</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, idx) in content" :key="item.key" :class="{ 'pure-table-odd': ((idx + 1) % 2 === 1) }">
+                        <td>{{item.id}}</td>
+                        <td>{{item.title}}</td>
+                        <td><button class="pure-button button-error" @click="deleteHandler(item.key)">刪除</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p v-else>載入中...</p>
+        </div>
+    </div>
+
+    <!-- test -->
+    <!-- <div class="form-bd">
+        <h1 class="title" style="text-align: center;">title</h1>
+    </div> -->
+
+    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&amp;flags=gated"></script>
+    <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
+
+    <!-- test -->
+    <!-- <script src="/tw/static/js/jquery-1.11.3.min.js"></script>
+    <script src="/tw/dsc/assets/mobile-detect.js"></script>
+    <script src="/tw/dsc/js/common.min.js"></script> -->
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    newContent: {
+                        id: null,
+                        title: '',
+                        key: '',
+                    },
+                    content: [],
+                }
+            },
+            computed: {
+                firebaseConfig() {
+                    return {
+                        apiKey: 'AIzaSyAHt_p6RibnGGyi2PWES5kQi7K5-m_9lNs',
+                        authDomain: 'digiwin-4a7d3.firebaseapp.com',
+                        databaseURL: 'https://digiwin-4a7d3.firebaseio.com',
+                        projectId: 'digiwin-4a7d3',
+                        storageBucket: 'digiwin-4a7d3.appspot.com',
+                        messagingSenderId: '306272678210',
+                        appId: '1:306272678210:web:d0f8a849f5902ba0e498db'
+                    }
+                },
+                isValid() {
+                    let flag = true;
+                    for (const key in this.content) {
+                        if (this.content.hasOwnProperty(key)) {
+                            const element = this.content[key];
+                            if (element.id === this.newContent.id) {
+                                flag = false;
+                                break;
+                            }
+                        }
+                    }
+                    return flag;
+                }
+            },
+            methods: {
+                submitHandler() {
+                    if (!this.isValid) {
+                        alert('此 ID 已存在');
+                        this.$refs.id.select();
+                        return;
+                    }
+                    let ref = firebase.database().ref('resources');
+                    ref.push(this.newContent);
+                    this.newContent.id = null;
+                    this.newContent.title = '';
+                    this.$refs.id.focus();
+                },
+                getContent() {
+                    let ref = firebase.database().ref('resources');
+                    ref.orderByChild('id').on('value', snapshot => {
+                        let tempContent = [];
+                        snapshot.forEach(el => {
+                            let { id, title } = el.val();
+                            tempContent.push({
+                                id,
+                                title,
+                                key: el.key
+                            });
+                        });
+                        tempContent.reverse();
+                        this.content = tempContent;
+                    });
+                },
+                deleteHandler(key) {
+                    if (confirm('確定刪除？')) {
+                        let ref = firebase.database().ref(`resources/${key}`);
+                        ref.remove();
+                    }
+                },
+            },
+            created() {
+                if (firebase.apps.length === 0) {
+                    firebase.initializeApp(this.firebaseConfig);
+                }
+                this.getContent();
+            },
+        })
+    </script>
+</body>
+
+</html>
