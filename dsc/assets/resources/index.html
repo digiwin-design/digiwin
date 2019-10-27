@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>資料下載標題修改器</title>
+    
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&amp;flags=gated" defer></script>
+    <script src="/tw/dsc/assets/vuejs/vue-all-dev.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js" defer></script>
+    <script src="script.min.js" defer></script>
+
+    <!-- title replace test -->
+    <!-- <script src="/tw/static/js/jquery-1.11.3.min.js"></script>
+    <script src="/tw/dsc/assets/mobile-detect.js"></script>
+    <script src="/tw/dsc/js/common.min.js"></script> -->
+    
     <style>
         [v-cloak] {
             display: none;
@@ -131,104 +143,6 @@
     <!-- <div class="form-bd">
         <h1 class="title" style="text-align: center;">title</h1>
     </div> -->
-
-    <script src="https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&amp;flags=gated"></script>
-    <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
-
-    <!-- title replace test -->
-    <!-- <script src="/tw/static/js/jquery-1.11.3.min.js"></script>
-    <script src="/tw/dsc/assets/mobile-detect.js"></script>
-    <script src="/tw/dsc/js/common.min.js"></script> -->
-
-    <script>
-        new Vue({
-            el: '#app',
-            data() {
-                return {
-                    newContent: {
-                        id: null,
-                        title: '',
-                        key: '',
-                    },
-                    content: [],
-                }
-            },
-            computed: {
-                firebaseConfig() {
-                    return {
-                        apiKey: 'AIzaSyAHt_p6RibnGGyi2PWES5kQi7K5-m_9lNs',
-                        authDomain: 'digiwin-4a7d3.firebaseapp.com',
-                        databaseURL: 'https://digiwin-4a7d3.firebaseio.com',
-                        projectId: 'digiwin-4a7d3',
-                        storageBucket: 'digiwin-4a7d3.appspot.com',
-                        messagingSenderId: '306272678210',
-                        appId: '1:306272678210:web:d0f8a849f5902ba0e498db'
-                    }
-                },
-                // 檢查ID是否重複
-                existed() {
-                    let result = true;
-                    for (const key in this.content) {
-                        if (this.content.hasOwnProperty(key)) {
-                            const element = this.content[key];
-                            if (element.id === this.newContent.id) {
-                                result = false;
-                                break;
-                            }
-                        }
-                    }
-                    return result;
-                }
-            },
-            methods: {
-                submitHandler() {
-                    if (!this.existed) {
-                        alert(`${this.newContent.id} 的 ID 已存在`);
-                        this.$refs.id.select();
-                        return;
-                    }
-                    let ref = firebase.database().ref('resources');
-                    ref.push(this.newContent);
-                    this.newContent.id = null;
-                    this.newContent.title = '';
-                    this.$refs.id.focus();
-                },
-                getContent() {
-                    let ref = firebase.database().ref('resources');
-
-                    // 依ID排序順序(預設升冪)存入陣列後反轉
-                    ref.orderByChild('id').on('value', snapshot => {
-                        let tempContent = [];
-                        snapshot.forEach(el => {
-                            let { id, title } = el.val();
-                            tempContent.push({
-                                id,
-                                title,
-                                key: el.key
-                            });
-                        });
-                        tempContent.reverse();
-
-                        this.content = tempContent;
-                    });
-                },
-                deleteHandler(key) {
-                    if (confirm('確定刪除？')) {
-                        let ref = firebase.database().ref(`resources/${key}`);
-                        ref.remove();
-                    }
-                },
-            },
-            created() {
-                if (firebase.apps.length === 0) {
-                    firebase.initializeApp(this.firebaseConfig);
-                }
-                this.getContent();
-            },
-        })
-    </script>
 </body>
 
 </html>
