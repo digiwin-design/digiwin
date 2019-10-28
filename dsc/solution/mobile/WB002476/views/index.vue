@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <slider-banner-s v-bind:slides="result.index.banner" device="mobile">
+        <slider-banner-s v-bind:slides="result.banner" device="mobile">
             <template slot="slot1">
                 <div class="title">
                     <h1>魔鬼就在細節中！<br><strong>90%</strong>的訂單客製化！</h1>
@@ -50,7 +50,7 @@
             <div class="container">
                 <h1 class="sectionTitle2">影音視頻</h1>
 
-                <template v-for="video in result.index.videos">
+                <template v-for="video in result.videos">
                     <div class="video-container" :key="video.videoSrc">
                         <iframe :src="video.videoSrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -67,9 +67,13 @@
 <script>
 module.exports = {
     name: 'index',
-    mixins: [mixin],
     components: {
         'tabs': httpVueLoader('components/index/tabs.vue'),
+    },
+    computed: {
+        result() {
+            return store.state.result.index;
+        }
     },
 }
 </script>

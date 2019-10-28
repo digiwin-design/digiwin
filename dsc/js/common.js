@@ -211,7 +211,7 @@ $(function () {
 
 // 修改資料下載標題
 $(function () {
-    if (location.hostname === 'www.digiwin.com' && location.pathname !== '/tw/zlsq.html') return;
+    if (location.pathname !== '/tw/zlsq.html') return;
     
     const firebaseConfig = {
         apiKey: 'AIzaSyAHt_p6RibnGGyi2PWES5kQi7K5-m_9lNs',
