@@ -616,5 +616,51 @@
                 "id": 4
             }
         ]
+    },
+    "WB00247601_case": {
+        "collapse1": [
+            {
+                "title": "減少答交等待時間",
+                "fileName": "01"
+            },
+            {
+                "title": "減少人工判斷時間",
+                "fileName": "02"
+            },
+            {
+                "title": "減少出圖等待時間",
+                "fileName": "03"
+            },
+            {
+                "title": "減少人工鍵入時間",
+                "fileName": "04"
+            },
+            {
+                "title": "減少歸庫盤點時間",
+                "fileName": "05"
+            }
+        ],
+        "collapse2": [
+            {
+                "title": "減少異常發生時間",
+                "fileName": "06"
+            },
+            {
+                "title": "減少算料備貨時間",
+                "fileName": "07"
+            },
+            {
+                "title": "減少餘料數量",
+                "fileName": "08"
+            },
+            {
+                "title": "減少追貨追料時間",
+                "fileName": "09"
+            },
+            {
+                "title": "減少開會時間",
+                "fileName": "10"
+            }
+        ]
     }
 }

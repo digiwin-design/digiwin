@@ -33,6 +33,9 @@ main,
     }
     a {
         transition: none;
+        &:hover {
+            color: initial;
+        }
     }
     textarea {
         color: initial;

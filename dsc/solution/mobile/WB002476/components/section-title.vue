@@ -37,7 +37,7 @@ h1 {
     font-size: 26px;
 }
 p {
-    margin-top: 0.5em;
+    margin-top: 1em;
     max-width: 100%;
 }
 </style>
