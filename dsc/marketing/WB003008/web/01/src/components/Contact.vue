@@ -11,9 +11,14 @@
                         <i>+84-942239950</i>
                     </a>
                     <br />
-                    <a href="tel:+6-0379808233">
+                    <a href="tel:+886 36283411">
+                        泰國聯絡代表 戚小姐
+                        <i>+886 936283411</i>
+                    </a>
+                    <br />
+                    <a href="tel:+601123554916">
                         馬來西亞聯絡代表 謝先生
-                        <i>+6-0379808233</i>
+                        <i>+601123554916</i>
                     </a>
                 </p>
                 <div id="form">
@@ -260,8 +265,8 @@ export default {
     align-items: center;
 }
 @media (max-width: 768px) {
-    #contact .sectionDesc-center a:last-of-type {
-        margin-top: 10px;
+    #contact .sectionDesc-center a:not(:first-of-type) {
+        margin-top: .2em;
     }
 }
 #contact .sectionDesc-center a:first-of-type {

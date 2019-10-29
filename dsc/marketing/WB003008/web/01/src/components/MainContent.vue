@@ -5,7 +5,7 @@
             <div class="container">
                 <img src="title1.png" alt class="Img_s pc" />
                 <img src="title2.png" alt class="mImg_s m-mobile" />
-                <p class="Txt_p">全面ERP產品方案能依據不同企業的發展規模，從數位化效益出發，全面提<br />升企業運營效能。我們探索各行各業所有業務流程推出真正有效的行業智能<br />整合解決方案，讓企業運營更高效、更快速、更簡單。</p>
+                <p class="Txt_p">最適合企業在東南亞發展使用的全方位ERP產品，符合在地稅制法規，滿足製造業行業特性，依企業各階段發展規模，提供高品質、高效益的東南亞在地化服務(越南、馬來西亞、泰國皆有營業據點)。</p>
                 <HeaderForm></HeaderForm>
             </div>
         </section>
@@ -14,7 +14,7 @@
             <div class="container">
                 <h2>以企業經營為視角，<br />讓管理變輕鬆</h2>
                 <img src="@/assets/images/line.png" alt class="Img_h" />
-                <p class="txt_p1">選擇鼎捷軟件-亞太區製造業最大的資訊服務品牌，<br />讓您揮別過去管理困擾，實現數位應用價值。</p>
+                <p class="txt_p1">鼎捷淬煉在地經驗與行業解決方案，<br />讓您揮別過去的管理困擾，實現資訊化應用價值。</p>
                 <div class="box-r">
                     <p class="txt_p1 color-1">您是否遇到以下難題…</p>
                 </div>
@@ -89,9 +89,9 @@
         </section>
         <section id="D_solution">
             <div class="container">
-                <h2>智能流程導向的<br />企業資源規劃解決方案</h2>
+                <h2>最多企業的聰明選擇，<br />東南亞在地化管理就選鼎捷！</h2>
                 <img src="@/assets/images/line.png" alt class="Img_h" />
-                <p class="txt_p1">東南亞環境與市場在變化、企業在變革、管理當然也需要變通！</p>
+                <p class="txt_p1">Workflow ERP符合在地稅制法規，滿足製造業行業特性</p>
                 <p class="Txt_p">Workflow ERP iGP提供進銷存管理、財務管理(會計總帳與應收應付管理)、生產管理、訂單管理、採購管理、<br />物料需求管理(MRP/LRP)、產品結構管理(BOM表)…等，配合智能流程管理系統IMS、電子表單與行業知識<br />包，更能結合當地法令(電子發票、關務稅制)，協助企業快速建置完整的企業資源規劃評估。</p>
                 <div
                     style="height: 736px; overflow: hidden; margin: 0 auto;margin-top: 25px;"
@@ -349,6 +349,10 @@ p {
     color: #fff;
     font-weight: bold;
     font-size: 20px;
+    width: 720px;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 #D_view {
@@ -612,7 +616,6 @@ a[data-fancybox=gallery] {
     }
     p {
         padding: 0 20px;
-        text-align: center;
         font-size: 18px;
         line-height: 1.5;
     }
