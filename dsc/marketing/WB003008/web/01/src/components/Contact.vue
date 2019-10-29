@@ -25,7 +25,7 @@
                     <form>
                         <a id="fromSource" href="javascript:;" v-text="source"></a>
                         <div class="inforCheck">
-                            <p class="inforCheck-caption">請勾選貴公司想要改善的項目：</p>
+                            <p class="inforCheck-caption">請勾選貴公司想要諮詢的項目：</p>
                             <div class="demand">
                                 <div class="demand-items">
                                     <label class="demand-item">
