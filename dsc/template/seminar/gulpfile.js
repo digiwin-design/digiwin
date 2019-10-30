@@ -19,7 +19,7 @@ gulp.task('sass', function() {
             css: 'css'
         }))
         .pipe($.sourcemaps.init({ loadMaps: true }))
-        .pipe($.postcss([autoprefixer({ grid: true })]))
+        .pipe($.postcss([autoprefixer()]))
         .pipe($.sourcemaps.write(''))
         .pipe(gulp.dest('css'));
 });
