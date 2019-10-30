@@ -1,18 +1,11 @@
 <template>
     <div>
-        <!-- 改版後 -->
-        <!-- <div class="header">
+        <div class="header">
             <div class="container">
                 <div class="header-text">
                     <h1>{{content.title}}</h1>
+                    <p>訂單客製化系列研討會，挑戰多樣少量的生產衝擊</p>
                 </div>
-            </div>
-        </div> -->
-        
-        <div class="header">
-            <div class="container">
-                <h1>訂單客製化系列研討會，挑戰多樣少量的生產衝擊</h1>
-                <p>2014年起我們就開始規劃一系列機械業研討會，協助產業在面對「訂單客製化」的挑戰下，透過管理手法及資訊工具的整合，能夠支撐降低設計變更後用料錯誤的浪費，與變更調整所產生的等待浪費，實現「即時化」、「自動化」的精實精神。以下研討會資訊均開放講義資料索取，歡迎與鼎新線上客服秘書聯繫或留下您的資料，我們將會為您送達資料。</p>
             </div>
         </div>
 

@@ -1,5 +1,10 @@
 module.exports = {
-    props: ['content'],
+    props: {
+        content: {
+            type: Object,
+            required: true
+        }
+    },
     computed: {
         isMobile() {
             return store.state.isMobile;

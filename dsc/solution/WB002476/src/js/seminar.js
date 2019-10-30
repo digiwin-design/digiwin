@@ -33,7 +33,7 @@ new Vue({
         },
         getData() {
             axios.get('db.json').then(res => {
-                this.result = res.data;
+                this.result = res.data.seminar;
             });
         }
     },
