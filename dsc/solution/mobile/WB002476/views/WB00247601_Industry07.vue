@@ -9,8 +9,8 @@
 
         <article class="section1">
             <h1 class="title container">如果高頻變動的出貨作業能有個即時更新的工作順序那就好了</h1>
-            <slider :slides="result.WB00247601_Industry07.slider1">
-                <swiper-slide v-for="slide in result.WB00247601_Industry07.slider1" :key="slide.id">
+            <slider :slides="result.slider1">
+                <swiper-slide v-for="slide in result.slider1" :key="slide.id">
                     <div class="slide" :class="`slide${slide.id}`">
                         <p class="slide-tag" :data-text="slide.tag"></p>
                         <figure>
@@ -51,8 +51,8 @@
 
         <article class="section3">
             <h1 class="title">管理可視化 作業自動化</h1>
-            <slider :slides="result.WB00247601_Industry07.slider2">
-                <swiper-slide v-for="slide in result.WB00247601_Industry07.slider2" :key="slide.id">
+            <slider :slides="result.slider2">
+                <swiper-slide v-for="slide in result.slider2" :key="slide.id">
                     <div class="slide" :class="`slide${slide.id}`">
                         <h2>{{slide.title}}</h2>
                         <ul>
@@ -91,7 +91,7 @@ module.exports = {
     name: 'WB00247601_Industry07',
     computed: {
         result() {
-            return store.state.result;
+            return store.state.result.WB00247601_Industry07;
         }
     },
 }

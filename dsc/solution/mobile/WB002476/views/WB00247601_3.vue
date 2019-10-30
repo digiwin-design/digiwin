@@ -120,10 +120,5 @@
 <script>
 module.exports = {
     name: 'WB00247601_3',
-    computed: {
-        result() {
-            return store.state.result;
-        }
-    },
 }
 </script>

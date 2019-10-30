@@ -70,10 +70,5 @@
 <script>
 module.exports = {
     name: 'industry',
-    computed: {
-        result() {
-            return store.state.result;
-        }
-    },
 }
 </script>

@@ -621,45 +621,73 @@
         "collapse1": [
             {
                 "title": "減少答交等待時間",
-                "fileName": "01"
+                "fileName": "WB00247601_case/01"
             },
             {
                 "title": "減少人工判斷時間",
-                "fileName": "02"
+                "fileName": "WB00247601_case/02"
             },
             {
                 "title": "減少出圖等待時間",
-                "fileName": "03"
+                "fileName": "WB00247601_case/03"
             },
             {
                 "title": "減少人工鍵入時間",
-                "fileName": "04"
+                "fileName": "WB00247601_case/04"
             },
             {
                 "title": "減少歸庫盤點時間",
-                "fileName": "05"
+                "fileName": "WB00247601_case/05"
             }
         ],
         "collapse2": [
             {
                 "title": "減少異常發生時間",
-                "fileName": "06"
+                "fileName": "WB00247601_case/06"
             },
             {
                 "title": "減少算料備貨時間",
-                "fileName": "07"
+                "fileName": "WB00247601_case/07"
             },
             {
                 "title": "減少餘料數量",
-                "fileName": "08"
+                "fileName": "WB00247601_case/08"
             },
             {
                 "title": "減少追貨追料時間",
-                "fileName": "09"
+                "fileName": "WB00247601_case/09"
             },
             {
                 "title": "減少開會時間",
-                "fileName": "10"
+                "fileName": "WB00247601_case/10"
+            }
+        ]
+    },
+    "WB00247601_repair": {
+        "collapse1": [
+            {
+                "title": "1. Right Time, Right Service",
+                "fileName": "WB00247601_repair/1001"
+            },
+            {
+                "title": "2. 機台設備維修履歷完備度",
+                "fileName": "WB00247601_repair/1002"
+            },
+            {
+                "title": "3. 提高維修時程掌握度",
+                "fileName": "WB00247601_repair/1003"
+            },
+            {
+                "title": "4. 客戶滿意來自完善的維修流程",
+                "fileName": "WB00247601_repair/1004"
+            },
+            {
+                "title": "5. 透過主動式服務，創造差異化競爭力",
+                "fileName": "WB00247601_repair/1005"
+            },
+            {
+                "title": "6. 維修戰技經驗傳承",
+                "fileName": "WB00247601_repair/1006"
             }
         ]
     }

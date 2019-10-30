@@ -12,8 +12,8 @@
 
         <article class="section1">
             <h1 class="title container">如果有一個即時掌全廠、控異常、指揮應變的資訊那就好了</h1>
-            <slider :slides="result.WB00247601_Industry08.slider1">
-                <swiper-slide v-for="slide in result.WB00247601_Industry08.slider1" :key="slide.id">
+            <slider :slides="result.slider1">
+                <swiper-slide v-for="slide in result.slider1" :key="slide.id">
                     <div class="slide" :class="`slide${slide.id}`">
                         <p class="slide-tag" :data-text="slide.tag"></p>
                         <figure>
@@ -76,7 +76,7 @@ module.exports = {
     name: 'WB00247601_Industry08',
     computed: {
         result() {
-            return store.state.result;
+            return store.state.result.WB00247601_Industry08;
         }
     },
 }
