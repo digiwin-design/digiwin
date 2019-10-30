@@ -103,7 +103,7 @@
                     </a>
                 </div>
                 <div class="section3-bottom">
-                    <a href="">更多客戶案例</a>
+                    <a href="/tw/case.html" target="_blank">更多客戶案例</a>
                     <p>累積30多年產業輔導經驗，50,000 多家企業成功案例<br>轉化成行業解決方案，提供您最佳服務與支援</p>
                 </div>
             </div>

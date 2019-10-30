@@ -152,6 +152,9 @@ main .WB00247601_3 {
             }
         }
         &-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             a {
                 @include btn(292px, 53px, #fff, #00a2a5);
                 margin: 0 auto;
@@ -160,7 +163,6 @@ main .WB00247601_3 {
             p {
                 margin-top: 1em;
                 color: #333;
-                text-align: center;
                 font-size: 17px;
                 line-height: 30px;
             }

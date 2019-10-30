@@ -120,6 +120,9 @@
                 else if (url && !anchor) {
                     window.open(`${url}`, '_self');
                     this.setPageInfo(url);
+                    if (url !== 'javascript:;') {
+                        this.closeDropdownHandler();
+                    }
                 }
                 else if (!url && anchor) {
                     let targetPos = $(anchor).offset().top;
