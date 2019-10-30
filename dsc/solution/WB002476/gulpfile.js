@@ -18,10 +18,7 @@ gulp.task('sass', function() {
             css: 'css'
         }))
         .pipe($.sourcemaps.init({ loadMaps: true }))
-        .pipe($.postcss([autoprefixer({
-            browsers: ['last 2 version'],
-            grid: true
-        })]))
+        .pipe($.postcss([autoprefixer({ grid: true })]))
         .pipe($.sourcemaps.write(''))
         .pipe(gulp.dest('css'));
 });
@@ -37,7 +34,7 @@ gulp.task('babel', function() {
     gulp.src('src/js/**/*.js')
         .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
         .pipe($.sourcemaps.init())
-        .pipe($.babel({ presets: ['env'] }))
+        .pipe($.babel({ presets: ['@babel/preset-env'] }))
         .pipe($.uglify())
         .pipe($.rename({ extname: '.min.js' }))
         .pipe($.sourcemaps.write(''))

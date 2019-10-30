@@ -24,10 +24,7 @@ gulp.task('sass', function () {
                 http_images_path: '../../images' // image-url 的輸出路徑
             })
         }))
-        .pipe($.postcss([autoprefixer({
-            browsers: ['last 2 version'],
-            grid: true
-        })]))
+        .pipe($.postcss([autoprefixer({ grid: true })]))
         .pipe($.sourcemaps.write(''))
         .pipe(gulp.dest('css'));
 });
