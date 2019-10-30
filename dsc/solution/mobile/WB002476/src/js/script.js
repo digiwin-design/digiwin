@@ -6,14 +6,6 @@ httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/slider.vue');
 httpVueLoader.register(Vue, 'components/collapse.vue');
 
-let mixin = {
-    data() {
-        return {
-            result: store.state.result
-        };
-    }
-};
-
 NProgress.configure({ showSpinner: false });
 
 const store = new Vuex.Store({
