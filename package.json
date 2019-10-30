@@ -25,6 +25,7 @@
     "browser-sync": "^2.26.7",
     "browserify": "^16.5.0",
     "del": "^5.1.0",
+    "eslint": "^6.6.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
     "gulp-compass": "^2.1.0",
@@ -44,9 +45,6 @@
     "path-exists": "^4.0.0",
     "vinyl-source-stream": "^2.0.0",
     "yargs": "^14.2.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.6.0"
   },
   "browserslist": [
     "last 2 version"
