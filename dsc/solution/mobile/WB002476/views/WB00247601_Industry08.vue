@@ -67,7 +67,7 @@
             </div>
         </article>
 
-        <router-link to="/industry/2" class="bottomBtn">回 機械設備業智慧工廠全場景</router-link>
+        <router-link to="/industry/2#fullScene" class="bottomBtn">回 機械設備業智慧工廠全場景</router-link>
     </div>
 </template>
 

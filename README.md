@@ -16,6 +16,7 @@
 | 研討會樣版 | /tw/dsc/template/seminar/ |
 | 文章廣告 Banner | /tw/dsc/assets/article-ad/ |
 | 資料下載標題設置 | /tw/dsc/assets/resources/ | 資料來源為 Firebase
+| 原錯誤連結轉址用 | /tw/portal/page/index/id/1202.html |
 
 # 官網分類
 | 名稱 | 位置 | 備註

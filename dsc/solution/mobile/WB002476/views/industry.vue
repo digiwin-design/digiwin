@@ -48,10 +48,10 @@
             </section>
         </article>
 
-        <article class="section2">
+        <article id="fullScene" class="section2">
             <div class="container">
                 <h1 class="title">機械設備業智慧工廠全場景</h1>
-                <img src="images/industry/section2-illust.svg" alt="">
+                <img src="images/industry/section2-illust.png" alt="">
                 <div class="section2-links">
                     <router-link to="/WB00247601_Industry01/2">採購收貨</router-link>
                     <router-link to="/WB00247601_Industry02/2">IQC</router-link>

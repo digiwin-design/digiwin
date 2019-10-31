@@ -5,16 +5,21 @@ httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/slider.vue');
 httpVueLoader.register(Vue, 'components/collapse.vue');
+httpVueLoader.register(Vue, 'components/loading.vue');
 
 NProgress.configure({ showSpinner: false });
 
 const store = new Vuex.Store({
     state: {
         result: null,
+        loading: false,
     },
     mutations: {
         setData(state, payload) {
             state.result = payload;
+        },
+        updateLoadingState(state, payload) {
+            state.loading = payload;
         },
     },
     actions: {
@@ -105,6 +110,32 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
     NProgress.start();
     next();
+    if (!to.hash) return;
+
+    // 當切換的頁面中有錨點時，待圖片載入完成後再捲動至該處
+    store.commit('updateLoadingState', true);
+    setTimeout(() => {
+        let loaded = 0;
+        let images = [
+            'images/industry/section1-illust.png',
+            'images/industry/section1-2-illust.png',
+            'images/industry/section2-illust.png',
+        ];
+        images.forEach(img => {
+            let image = document.createElement('IMG');
+            image.onload = () => {
+                loaded++;
+                if (loaded === images.length) {
+                    store.commit('updateLoadingState', false);
+                    let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+                    let targetPos = document.querySelector(to.hash).offsetTop;
+                    let finalPos = offset ? targetPos - offset : targetPos;
+                    window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
+                }
+            };
+            image.src = img;
+        });
+    }, 1000); // delay for ios
 });
 router.afterEach((to, from) => {
     let submenu = document.querySelector('.page-submenu');

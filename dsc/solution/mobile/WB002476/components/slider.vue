@@ -19,7 +19,6 @@ module.exports = {
             swiperOptionA: {
                 slidesPerView: 'auto',
                 spaceBetween: 6,
-                freeMode: true,
                 slidesOffsetBefore: 20,
                 slidesOffsetAfter: 20,
             }
