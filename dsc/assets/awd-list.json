@@ -169,8 +169,16 @@
             "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_manufacture"
         },
         {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_2.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_2"
+        },
+        {
             "desktop": "/tw/dsc/solution/WB002476/WB00247601_3.html",
             "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_3"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002476/WB00247601_4.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002476/index.html#/WB00247601_4"
         },
         {
             "desktop": "/tw/dsc/solution/WB002476/WB00247601_case.html",

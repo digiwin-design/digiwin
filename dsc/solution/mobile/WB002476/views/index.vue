@@ -24,7 +24,7 @@
                 <h1 class="sectionTitle1">業界對工具機產業發展之期許：發展中高階工具機 著眼客製化</h1>
                 <img src="images/index/section2-illust.png" alt="">
                 <p>中時電子報<br>發展中高階工具機的客製化應用，應可以台灣內需的作為練兵的市場，例如：航太領域。以台中精機為例，公司投入多年研發與台灣航太發動機供應鏈合作，並且成立「顧客創值應用中心」，不斷以客戶需求為導向，強化應用技術的研發，現已打入漢翔、長亨等業者供應鏈之高階零件。</p>
-                <a href="/tw/dsc/solution/WB002476/WB00247601_2.html" class="sectionBtn">影響與因應</a>
+                <router-link to="/WB00247601_2/3" class="sectionBtn">影響與因應</router-link>
             </div>
         </article>
 
