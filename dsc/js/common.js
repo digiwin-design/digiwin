@@ -111,6 +111,40 @@ $(function () {
         });
 });
 
+// 設置文章閱讀權限及插入訂閱表單(v2)
+// 表單標題清單：/tw/dsc/assets/login_v2/form.json
+$(function () {
+    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
+
+    // 取得加入閱讀權限的文章
+    fetch('/tw/dsc/assets/login_v2/login.json')
+        .then(res => res.json())
+        .then(res => {
+            // 比對網址成功後載入對應的外部連結
+            let result = res.find(function (item) {
+                item = item.replace(/(.html|.htm)$/, '');
+                let regex = new RegExp(item + '$');
+                return currentUrl.search(regex) !== -1;
+            });
+
+            if (!result) return;
+
+            let head = document.querySelector('head');
+            
+            let link1 = document.createElement('link');
+            link1.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+            link1.rel = 'stylesheet';
+            head.appendChild(link1);
+            
+            let link2 = document.createElement('link');
+            link2.href = '/tw/dsc/assets/login_v2/css/login.css';
+            link2.rel = 'stylesheet';
+            head.appendChild(link2);
+
+            $.getScript('/tw/dsc/assets/login_v2/js/login.min.js');
+        });
+});
+
 // 文章插入廣告
 // 廣告清單：/tw/dsc/assets/article-ad/db.json
 $(function () {
