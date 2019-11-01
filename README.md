@@ -6,7 +6,7 @@
 | 各行各業區塊 | /tw/dsc/assets/index-industry/ | 首頁使用
 | 各行各業區塊 | /tw/dsc/assets/industry-list/ | IT 編列預算使用
 | 各行各業區塊 | /tw/dsc/assets/industry-list-v2/ | 行業使用
-| LINE 登入&訂閱 | /tw/dsc/assets/lineMember/ |
+| 登入&訂閱 | /tw/dsc/assets/login/ |
 | 繁/簡體站跳轉提示 | /tw/dsc/assets/popup/ |
 | 次級選單 | /tw/dsc/assets/submenu/ |
 | 次級選單手機版 | /tw/dsc/assets/submenu-spa/ | 

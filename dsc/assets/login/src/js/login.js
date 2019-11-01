@@ -1,6 +1,6 @@
-httpVueLoader.register(Vue, '/tw/dsc/assets/lineMember/components/subscribe-form.vue');
+httpVueLoader.register(Vue, '/tw/dsc/assets/login/components/subscribe-form.vue');
 
-axios.get('/tw/dsc/assets/lineMember/form.json')
+axios.get('/tw/dsc/assets/login/form.json')
     .then(res => {
         new Vue({
             el: '.list-case-show',

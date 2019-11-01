@@ -78,12 +78,12 @@ $(function () {
 });
 
 // 設置文章閱讀權限及插入訂閱表單
-// 表單標題清單：/tw/dsc/assets/lineMember/form.json
+// 表單標題清單：/tw/dsc/assets/login/form.json
 $(function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
     // 取得加入閱讀權限的文章
-    fetch('/tw/dsc/assets/lineMember/login.json')
+    fetch('/tw/dsc/assets/login/login.json')
         .then(res => res.json())
         .then(res => {
             // 比對網址成功後載入對應的外部連結
@@ -97,17 +97,17 @@ $(function () {
 
             let head = document.querySelector('head');
             let style = document.createElement('link');
-            style.href = '/tw/dsc/assets/lineMember/css/lineMember.css';
+            style.href = '/tw/dsc/assets/login/css/login.css';
             style.rel = 'stylesheet';
             head.appendChild(style);
 
             let preload = document.createElement('link');
-            preload.href = '/tw/dsc/assets/lineMember/images/lineMember/btn-h.png';
+            preload.href = '/tw/dsc/assets/login/images/login/btn-h.png';
             preload.rel = 'preload';
             preload.as = 'image';
             head.appendChild(preload);
 
-            $.getScript('/tw/dsc/assets/lineMember/js/lineMember.min.js');
+            $.getScript('/tw/dsc/assets/login/js/login.min.js');
         });
 });
 
