@@ -111,10 +111,9 @@ axios.get('/tw/dsc/assets/lineMember/form.json')
                 addForm(formMap) {
                     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
                     formMap.forEach(el => {
-                        let url = el.url.replace(/(.html|.htm)$/, '');
+                        let { url, title, lineUrl } = el;
+                        url = url.replace(/(.html|.htm)$/, '');
                         if (url === currentUrl) {
-                            let title = el.title;
-                            let lineUrl = el.lineUrl;
                             $('.list-case-show').append(`<subscribe-form title="${title}" line-url="${lineUrl}"></subscribe-form>`);
                         }
                     });
@@ -123,7 +122,9 @@ axios.get('/tw/dsc/assets/lineMember/form.json')
                     $('.list-case-show').append('<div class="articleCover"><a href @click.prevent="login">登入看更多</a></div>');
         
                     // 登出按鈕，測試用
-                    // $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
+                    if (location.hostname === 'localhost') {
+                        $('.list-case-show').prepend('<button @click="logout" style="position: fixed;left: 0;bottom: 0;z-index: 1;">登出</button>');
+                    }
                 },
                 saveData() {
                     let data = {
