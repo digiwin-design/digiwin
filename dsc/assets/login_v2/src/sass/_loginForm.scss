@@ -7,14 +7,14 @@
     z-index: 10;
     display: flex;
     margin: auto;
-    background-color: rgba(#000, .8);
+    background-color: rgba(#000, .4);
     justify-content: center;
     align-items: center;
     form {
         position: relative;
         padding: 20px;
         width: 285px;
-        height: 150px;
+        border-radius: 5px;
         background-color: #fff;
     }
     input[type='email'] {
@@ -22,7 +22,7 @@
         color: #495057;
     }
     .invalid-feedback {
-        display: block;
+        display: block; // override default style
     }
     .loginForm-submit {
         position: relative;
@@ -83,24 +83,6 @@
     }
     &-field {
         width: 100%;
-        @media (max-width: 991px) {
-            width: calc((100% - 5px) * .4);
-        }
-        @media (max-width: $tablet-width) {
-            width: 100%;
-        }
-        & + .loginForm-field {
-            margin-left: 5px;
-            width: calc((100% - 265px) * .6);
-            @media (max-width: 991px) {
-                width: calc((100% - 5px) * .6);
-            }
-            @media (max-width: $tablet-width) {
-                margin-top: 10px;
-                margin-left: 0;
-                width: 100%;
-            }
-        }
     }
     &-btns {
         display: flex;
@@ -117,6 +99,7 @@
         position: absolute;
         top: -16px;
         right: -16px;
+        display: flex;
         padding: 0;
         width: 42px;
         height: 42px;
@@ -125,5 +108,7 @@
         background-color: #000;
         color: #fff;
         cursor: pointer;
+        justify-content: center;
+        align-items: center;
     }
 }

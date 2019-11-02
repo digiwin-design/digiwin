@@ -12,8 +12,8 @@
                             class="form-control"
                             id="subscribe-name"
                             required
-                        >
-                        <div v-show="nameErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
+                        />
+                        <div v-show="nameErr" class="invalid-feedback">必填欄位</div>
                     </div>
                     <div class="subscribe-field">
                         <label for="subscribe-email">電子信箱</label>
@@ -23,18 +23,14 @@
                             class="form-control"
                             id="subscribe-email"
                             required
-                        >
+                        />
                         <div v-show="emailErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
                     </div>
                     <div class="subscribe-btns">
-                        <div class="subscribe-submit" :class="{'is-loading':isLoading}">
-                            <input type="submit" class="btn btn-primary" value="訂閱">
+                        <div class="subscribe-submit" :class="{ 'is-loading': isLoading }">
+                            <input type="submit" class="btn btn-primary" value="訂閱" />
                         </div>
-                        <a
-                            :href="lineUrl"
-                            class="subscribe-line"
-                            target="_blank"
-                        >社群訂閱</a>
+                        <a :href="lineUrl" class="subscribe-line" target="_blank">社群訂閱</a>
                     </div>
                 </div>
             </fieldset>
@@ -56,26 +52,30 @@ module.exports = {
         }
     },
     computed: {
-        userId: function () {
-            return localStorage.getItem('lineUserId') || '';
+        dev: function () {
+            return location.hostname === 'localhost';
+        },
+        userID: function () {
+            return localStorage.getItem('line_userID') || '';
         },
         displayName: function () {
-            return localStorage.getItem('lineDisplayName') || '';
+            return localStorage.getItem('line_displayName') || '';
         }
     },
     methods: {
         checkForm: function () {
             this.nameErr = !this.name.length;
-            this.emailErr = !this.email.length || !this.checkEmail();
+            this.emailErr = !this.checkEmail();
         },
         checkEmail: function () {
-            return /^.+@.+$/.test(this.email);
+            return /.+@.+\..+/.test(this.email);
         },
         submit: function () {
             this.checkForm();
             if (this.nameErr || this.emailErr) return;
+
             let data = {
-                lineId: this.userId,
+                lineId: this.userID,
                 lineName: this.displayName,
                 realName: this.name,
                 eMail: this.email,
@@ -94,22 +94,58 @@ module.exports = {
                 ],
                 memEvent: []
             };
-            const params = new URLSearchParams();
-            params.append('', JSON.stringify(data));
-            this.isLoading = true;
-            axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/member/Save', params)
+            this.ajaxSensor(data, 'https://misws.digiwin.com/SocialMediaMarketing/api/member/Save')
                 .then(function (res) {
-                    this.isLoading = false;
-                    console.log(data);
-                    if (!(res.data && res.data.result)) {
-                        alert('系統忙碌中，請稍後再試！');
-                        console.error(res.data.msg);
-                        return;
-                    }
-                    alert('訂閱成功');
+                    Swal.fire(
+                        '訂閱成功',
+                        '',
+                        'success'
+                    )
                     this.name = '';
                     this.email = '';
-                }.bind(this));
+                });
+        },
+        ajaxSensor: function (data, apiURL = this.apiURL) {
+            let _this = this;
+            let mock = new AxiosMockAdapter(axios, { delayResponse: 2000 });
+            mock.onPost(apiURL).reply(function (config) {
+                return [200, {
+                    result: 1,
+                    msg: ''
+                }];
+            });
+            if (!this.dev) mock.restore();
+
+            return new Promise(function (resolve, reject) {
+                _this.isLoading = true;
+                const params = new URLSearchParams();
+                params.append('', JSON.stringify(data));
+                axios.post(apiURL, params)
+                    .then(function (res) {
+                        if (!res.data.result) {
+                            Swal.fire({
+                                type: 'error',
+                                title: 'Oops...',
+                                text: '伺服器錯誤，請稍候再試！',
+                            });
+                            console.error(res.data.msg);
+                            return;
+                        }
+                        resolve();
+                        console.log(res.data);
+                    })
+                    .catch(function (err) {
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: '伺服器錯誤，請稍候再試！',
+                        });
+                        console.error(err);
+                    })
+                    .finally(function () {
+                        _this.isLoading = false;
+                    });
+            });
         },
         setFormAnchor: function () {
             let targetPos = $(this.$el).offset().top;

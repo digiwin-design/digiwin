@@ -111,16 +111,15 @@ $(function () {
         });
 });
 
-// 設置文章閱讀權限及插入訂閱表單(v2)
-// 表單標題清單：/tw/dsc/assets/login_v2/form.json
+// 設置文章登入及訂閱表單(v2)
+// 訂閱表單標題清單：/tw/dsc/assets/login_v2/form.json
 $(function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
-    // 取得加入閱讀權限的文章
+    // 取得加入閱讀權限的文章，比對網址成功後載入對應的外部連結
     fetch('/tw/dsc/assets/login_v2/login.json')
         .then(res => res.json())
         .then(res => {
-            // 比對網址成功後載入對應的外部連結
             let result = res.find(function (item) {
                 item = item.replace(/(.html|.htm)$/, '');
                 let regex = new RegExp(item + '$');
@@ -130,18 +129,39 @@ $(function () {
             if (!result) return;
 
             let head = document.querySelector('head');
-            
-            let link1 = document.createElement('link');
-            link1.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
-            link1.rel = 'stylesheet';
-            head.appendChild(link1);
-            
-            let link2 = document.createElement('link');
-            link2.href = '/tw/dsc/assets/login_v2/css/login.css';
-            link2.rel = 'stylesheet';
-            head.appendChild(link2);
 
-            $.getScript('/tw/dsc/assets/login_v2/js/login.min.js');
+            let links = [
+                'https://fonts.googleapis.com/icon?family=Material+Icons',
+                '/tw/dsc/assets/login_v2/css/login.css'
+            ];
+            links.forEach(link => {
+                let el = document.createElement('link');
+                el.href = link;
+                el.rel = 'stylesheet';
+                head.appendChild(el);
+            });
+
+            let scripts = [
+                'https://unpkg.com/axios-mock-adapter/dist/axios-mock-adapter.min.js',
+                'https://cdn.jsdelivr.net/npm/sweetalert2@8'
+            ];
+            let getScript = (src) => {
+                return new Promise((resolve, reject) => {
+                    let el = document.createElement('script');
+                    el.src = src;
+                    el.defer = true;
+                    head.appendChild(el);
+                    el.onload = () => resolve();
+                });
+            };
+            Promise.all([getScript(scripts[0]), getScript(scripts[1])])
+                .then(() => {
+                    let el = document.createElement('script');
+                    el.src = '/tw/dsc/assets/login_v2/js/login.min.js';
+                    el.defer = true;
+                    head.appendChild(el);
+                })
+                .catch(err => console.error(err));
         });
 });
 
@@ -246,7 +266,7 @@ $(function () {
 // 修改資料下載標題
 $(function () {
     if (location.pathname !== '/tw/zlsq.html') return;
-    
+
     const firebaseConfig = {
         apiKey: 'AIzaSyAHt_p6RibnGGyi2PWES5kQi7K5-m_9lNs',
         authDomain: 'digiwin-4a7d3.firebaseapp.com',
