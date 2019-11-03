@@ -1,5 +1,5 @@
 <template>
-    <div class="subscribe">
+    <div class="subscribe" v-if="userID" v-cloak>
         <form @submit.prevent="submit">
             <fieldset>
                 <legend>{{title}}專欄訂閱</legend>
@@ -163,3 +163,5 @@ module.exports = {
     },
 }
 </script>
+
+<style src="/tw/dsc/assets/login_v2/css/subscribe.css"></style>

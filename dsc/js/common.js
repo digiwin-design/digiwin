@@ -141,10 +141,7 @@ $(function () {
                 head.appendChild(el);
             });
 
-            let scripts = [
-                'https://unpkg.com/axios-mock-adapter/dist/axios-mock-adapter.min.js',
-                'https://cdn.jsdelivr.net/npm/sweetalert2@8'
-            ];
+            let scripts = ['https://cdn.jsdelivr.net/npm/sweetalert2@8'];
             let getScript = (src) => {
                 return new Promise((resolve, reject) => {
                     let el = document.createElement('script');
@@ -154,7 +151,7 @@ $(function () {
                     el.onload = () => resolve();
                 });
             };
-            Promise.all([getScript(scripts[0]), getScript(scripts[1])])
+            Promise.all([getScript(scripts[0])])
                 .then(() => {
                     let el = document.createElement('script');
                     el.src = '/tw/dsc/assets/login_v2/js/login.min.js';
@@ -162,6 +159,28 @@ $(function () {
                     head.appendChild(el);
                 })
                 .catch(err => console.error(err));
+        });
+});
+
+$(function () {
+    fetch('/tw/dsc/assets/login_v2/subscribe.json')
+        .then(res => res.json())
+        .then(res => {
+            let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
+            res.forEach(el => {
+                let { url, title, lineUrl } = el;
+                url = url.replace(/(.html|.htm)$/, '');
+                if (url === currentUrl) {
+                    document.querySelector('.list-case-show').insertAdjacentHTML('afterend', '<div id="subscribeForm"></div>');
+                    new Vue({
+                        el: '#subscribeForm',
+                        components: {
+                            'subscribe-form': httpVueLoader('/tw/dsc/assets/login_v2/components/subscribe-form.vue'),
+                        },
+                        template: `<subscribe-form title="${title}" line-url="${lineUrl}"></subscribe-form>`
+                    });
+                }
+            });
         });
 });
 

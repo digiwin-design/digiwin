@@ -1,3 +1,9 @@
+@import 'bootstrap/custom';
+@import 'common';
+
+[v-cloak] {
+    display: none;
+}
 .subscribe {
     clear: both;
     margin: 2em auto;
@@ -110,5 +116,12 @@
             margin-top: 15px;
             margin-left: 0;
         }
+    }
+}
+// 上線後表單上方間距
+.list-case {
+    margin-bottom: 170px;
+    @media (max-width: 414px) {
+        margin-bottom: 275px;
     }
 }

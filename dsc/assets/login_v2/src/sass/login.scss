@@ -1,6 +1,5 @@
 @import 'bootstrap/custom';
 @import 'common';
-@import 'subscribe';
 @import 'loginForm';
 
 // transition
@@ -49,13 +48,5 @@
         //         background-image: image-url('login/btn-h.png');
         //     }
         // }
-    }
-}
-
-// 上線後表單上方間距
-.list-case {
-    margin-bottom: 170px;
-    @media (max-width: 414px) {
-        margin-bottom: 275px;
     }
 }
