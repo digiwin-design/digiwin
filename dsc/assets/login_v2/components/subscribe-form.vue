@@ -163,5 +163,3 @@ module.exports = {
     },
 }
 </script>
-
-<style src="/tw/dsc/assets/login_v2/css/subscribe.css"></style>
