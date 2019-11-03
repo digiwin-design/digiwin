@@ -162,28 +162,6 @@ $(function () {
         });
 });
 
-$(function () {
-    fetch('/tw/dsc/assets/login_v2/subscribe.json')
-        .then(res => res.json())
-        .then(res => {
-            let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
-            res.forEach(el => {
-                let { url, title, lineUrl } = el;
-                url = url.replace(/(.html|.htm)$/, '');
-                if (url === currentUrl) {
-                    document.querySelector('.list-case-show').insertAdjacentHTML('afterend', '<div id="subscribeForm"></div>');
-                    new Vue({
-                        el: '#subscribeForm',
-                        components: {
-                            'subscribe-form': httpVueLoader('/tw/dsc/assets/login_v2/components/subscribe-form.vue'),
-                        },
-                        template: `<subscribe-form title="${title}" line-url="${lineUrl}"></subscribe-form>`
-                    });
-                }
-            });
-        });
-});
-
 // 文章插入廣告
 // 廣告清單：/tw/dsc/assets/article-ad/db.json
 $(function () {

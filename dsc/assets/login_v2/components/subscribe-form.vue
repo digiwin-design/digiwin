@@ -1,5 +1,5 @@
 <template>
-    <div class="subscribe" v-if="userID" v-cloak>
+    <div class="subscribe">
         <form @submit.prevent="submit">
             <fieldset>
                 <legend>{{title}}專欄訂閱</legend>

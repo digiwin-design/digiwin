@@ -23,6 +23,9 @@ new Vue({
         state() {
             return 'abcde'; // 自訂驗證碼
         },
+        code() {
+            return this.getParameterByName('code');
+        },
         callbackURL() {
             return location.origin + location.pathname;
         },
@@ -38,30 +41,24 @@ new Vue({
         }
     },
     methods: {
-        checkLogin() {
-            let today = new Date();
-            let exp = parseInt(localStorage.getItem('line_exp'), 10) || parseInt(localStorage.getItem('email_exp'), 10);
-            if (!exp || today.getTime() > exp) {
-                this.cleanLS();
-                return false;
+        init() {
+            let state = this.getParameterByName('state');
+            if (this.code && state === this.state) {
+                this.getCode(); // 從登入畫面導回
             }
-            return true;
+            else {
+                this.showCover(); // 未登入
+            }
         },
         getCode() {
-            let code = this.getParameterByName('code');
-            let state = this.getParameterByName('state');
-            if (code && state === this.state) {
-                let pageName = this.callbackURL.split('/').pop();
-                history.replaceState({}, '', pageName);
-                this.getToken(code);
-                return;
-            }
-            this.showCover();
+            let pageName = this.callbackURL.split('/').pop();
+            history.replaceState({}, '', pageName);
+            this.getToken();
         },
-        getToken(code) {
+        getToken() {
             const params = new URLSearchParams();
             params.append('grant_type', 'authorization_code');
-            params.append('code', code);
+            params.append('code', this.code);
             params.append('redirect_uri', this.callbackURL);
             params.append('client_id', this.channelID);
             params.append('client_secret', this.channelSecret);
@@ -87,6 +84,7 @@ new Vue({
                     localStorage.setItem('line_displayName', res.data.displayName);
                     this.setExpTime('line_exp');
                     this.saveLineLog();
+                    this.addSubscribeForm();
                 })
                 .catch(error => this.showCover());
         },
@@ -104,14 +102,14 @@ new Vue({
             };
             // this.ajaxSensor(data);
         },
-        showCover() {
-            // 設定文章高度
-            if (this.$el.offsetHeight > 1400) {
-                this.$el.style.height = '1400px';
-                this.$el.style.overflow = 'hidden';
+        checkLogin() {
+            let today = new Date();
+            let exp = parseInt(localStorage.getItem('line_exp'), 10) || parseInt(localStorage.getItem('email_exp'), 10);
+            if (!exp || today.getTime() > exp) {
+                this.cleanLS();
+                return false;
             }
-            // 取消隱藏
-            this.$el.classList.add('no-login');
+            return true;
         },
         addCover() {
             // 預設隱藏
@@ -137,6 +135,37 @@ new Vue({
                 `);
             }
         },
+        showCover() {
+            // 設定文章高度
+            if (this.$el.offsetHeight > 1400) {
+                this.$el.style.height = '1400px';
+                this.$el.style.overflow = 'hidden';
+            }
+            // 取消隱藏
+            this.$el.classList.add('no-login');
+        },
+        addSubscribeForm() {
+            fetch('/tw/dsc/assets/login_v2/subscribe.json')
+                .then(res => res.json())
+                .then(res => {
+                    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
+                    res.forEach(el => {
+                        let { url, title, lineUrl } = el;
+                        url = url.replace(/(.html|.htm)$/, '');
+                        if (url === currentUrl) {
+                            // 比對網址成功後插入訂閱表單
+                            document.querySelector('.list-case-show').insertAdjacentHTML('afterend', '<div id="subscribeForm"></div>');
+                            new Vue({
+                                el: '#subscribeForm',
+                                components: {
+                                    'subscribe-form': httpVueLoader('/tw/dsc/assets/login_v2/components/subscribe-form.vue'),
+                                },
+                                template: `<subscribe-form title="${title}" line-url="${lineUrl}"></subscribe-form>`
+                            });
+                        }
+                    });
+                });
+        },
         logout() {
             this.cleanLS();
             location.reload();
@@ -148,7 +177,7 @@ new Vue({
             localStorage.removeItem('line_exp');
             localStorage.removeItem('email_exp');
         },
-        setExpTime(itemName, day = 3) { // 設置登入到期時間(預設第3天結束後到期)
+        setExpTime(itemName, day = 3) { // 設置登入到期時間(預設第三天結束後到期)
             let today = new Date();
             let lastDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + day);
             localStorage.setItem(itemName, lastDay.getTime());
@@ -204,11 +233,17 @@ new Vue({
         this.addCover();
     },
     mounted() {
+        // 如已登入 line 則檢查訂閱表單列表
+        if (this.userID) {
+            this.addSubscribeForm();
+        }
+
+        // 檢查是否已登入 email/line 且未逾期
         if (this.checkLogin()) {
             this.saveViewLog();
-            return;
         }
-        // 未登入或從登入畫面導回時執行
-        this.getCode();
+        else {
+            this.init();
+        }
     },
 });
