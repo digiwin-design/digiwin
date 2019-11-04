@@ -3,6 +3,10 @@
     @return ($px / 16) + rem;
 }
 
+@function em($px) {
+    @return ($px / 16) + em;
+}
+
 @function lineHeight($px, $fz: 16) {
     @return $px / $fz;
 }
@@ -197,6 +201,26 @@
     &:link,
     &:visited {
         color: $color;
+    }
+}
+
+@mixin quoteBlock($img, $offset: 0) {
+    position: relative;
+    padding: image-height($img) + $offset image-width($img) + $offset;
+    &::before,
+    &::after {
+        @include imgBg($img, true);
+        position: absolute;
+        content: '';
+    }
+    &::before {
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        right: 0;
+        bottom: 0;
+        transform: rotate(180deg);
     }
 }
 /* #endregion mixin */

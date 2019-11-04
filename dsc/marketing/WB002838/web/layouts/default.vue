@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="wrapper" v-show="result">
+        <div class="wrapper">
             <Header/>
             <nuxt/>
             <MenuMask></MenuMask>
@@ -30,28 +30,17 @@ export default {
         MenuMask,
         Footer,
     },
-    computed: {
-        result() {
-            return this.$store.state.result;
-        }
-    },
     methods: {
-        mediaSensor() {
-            let mm = window.matchMedia("(min-width: 769px)");
-            mm.addListener(this.resizeWidth);
-            this.resizeWidth(mm);
-        },
-        resizeWidth(pMatchMedia) {
-            let isMobile = pMatchMedia.matches ? false : true;
-            this.$store.commit('updateDevice', isMobile);
-            if (!isMobile) {
-                this.$store.commit('toggleMask', false);
-            }
+        mediaSensor(minWidth) {
+            let resizeWidth = (pMatchMedia) => this.$store.commit('updateDevice', !pMatchMedia.matches);
+            let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
+            mm.addListener(resizeWidth);
+            resizeWidth(mm);
         },
     },
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
-        this.mediaSensor();
+        this.mediaSensor(768);
     },
 };
 </script>

@@ -1,5 +1,4 @@
 @import '../common';
-@import 'components';
 
 .sectionTitle {
     margin-bottom: .5em;
@@ -18,10 +17,10 @@
     }
 }
 header {
-    @include headerBg('~assets/images/03/header-bg-m.jpg', '~assets/images/03/header-bg-s.jpg');
+    @include headerBg('~assets/images/03_v2/header-bg-m.jpg', '~assets/images/03_v2/header-bg-s.jpg');
     background-size: cover;
     @media (min-width: 1025px) {
-        background-image: url('~assets/images/03/header-bg.jpg');
+        background-image: url('~assets/images/03_v2/header-bg.jpg');
         background-size: auto;
     }
     .container {
@@ -67,11 +66,11 @@ header {
 .section1 {
     $breakpoint: 1024px;
 
-@include bg('~assets/images/03/section1-bg-s.jpg', 50% 100%);
+@include bg('~assets/images/03_v2/section1-bg-s.jpg', 50% 100%);
     background-color: #dbedfd;
 
     @media (min-width: $breakpoint) {
-        background-image: url('~assets/images/03/section1-bg.jpg');
+        background-image: url('~assets/images/03_v2/section1-bg.jpg');
     }
     .container {
         position: relative;
@@ -93,7 +92,7 @@ header {
         }
     }
     &-flag {
-        @include imgBg('~assets/images/03/section1-flag-s.png');
+        @include imgBg('~assets/images/03_v2/section1-flag-s.png');
         position: absolute;
         top: 0;
         left: 0;
@@ -101,7 +100,7 @@ header {
         height: 88px;
         content: '';
         @media (min-width: $breakpoint) {
-            @include imgBg('~assets/images/03/section1-flag.png');
+            @include imgBg('~assets/images/03_v2/section1-flag.png');
             width: 245px;
             height: 113px;
         }
@@ -264,7 +263,7 @@ header {
             justify-content: center;
             align-items: center;
             &::before {
-                @include imgBg('~assets/images/03/hover-bottom-icon.png');
+                @include imgBg('~assets/images/03_v2/hover-bottom-icon.png');
                 margin-right: 7px;
                 width: 15px;
                 height: 15px;
@@ -301,7 +300,7 @@ header {
                 left: 0;
                 width: 477px;
                 height: 285px;
-                background-image: url(~assets/images/03/section4-case-illust.png);
+                background-image: url(~assets/images/03_v2/section4-case-illust.png);
                 background-repeat: no-repeat;
                 content: '';
             }
