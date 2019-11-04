@@ -24,7 +24,7 @@
                             id="subscribe-email"
                             required
                         />
-                        <div v-show="emailErr" class="invalid-feedback">欄位有誤，請重新填寫</div>
+                        <div v-show="emailErr" class="invalid-feedback">此 Email 無效</div>
                     </div>
                     <div class="subscribe-btns">
                         <div class="subscribe-submit" :class="{ 'is-loading': isLoading }">
@@ -41,7 +41,16 @@
 <script>
 module.exports = {
     name: 'SubscribeForm',
-    props: ['title', 'lineUrl'],
+    props: {
+        title: {
+            type: String,
+            required: true
+        },
+        lineUrl: {
+            type: String,
+            required: true
+        },
+    },
     data: function () {
         return {
             name: '',
@@ -103,9 +112,10 @@ module.exports = {
                     )
                     this.name = '';
                     this.email = '';
-                });
+                }.bind(this));
         },
-        ajaxSensor: function (data, apiURL = this.apiURL) {
+        ajaxSensor: function (data, apiURL) {
+            apiURL = apiURL || this.apiURL;
             let _this = this;
             let mock = new AxiosMockAdapter(axios, { delayResponse: 2000 });
             mock.onPost(apiURL).reply(function (config) {

@@ -100,7 +100,7 @@ new Vue({
                 email: '',
                 source: location.href
             };
-            // this.ajaxSensor(data);
+            this.ajaxSensor(data);
         },
         checkLogin() {
             let today = new Date();
@@ -170,6 +170,13 @@ new Vue({
             this.cleanLS();
             location.reload();
         },
+        manualLogout() { // 透過網址登出
+            if (location.hash == '#logout') {
+                this.cleanLS();
+                let currentPage = location.pathname.split('/').pop();
+                history.replaceState({}, '', currentPage);
+            }
+        },
         cleanLS() {
             localStorage.removeItem('line_token');
             localStorage.removeItem('line_userID');
@@ -229,6 +236,8 @@ new Vue({
         },
     },
     created() {
+        this.manualLogout();
+        
         // 在 vue 掛載 DOM 前插入子組件
         this.addCover();
     },

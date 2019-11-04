@@ -1,32 +1,36 @@
 <template>
-    <transition name="fade">
-        <div class="loginForm" v-show="value">
-            <form @submit.prevent="emailLogin">
-                <div class="loginForm-fields">
-                    <div class="loginForm-field">
-                        <label for="loginForm-email">電子信箱</label>
-                        <input
-                            type="email"
-                            class="form-control"
-                            id="loginForm-email"
-                            v-model.trim="email"
-                            required
-                        />
-                        <div class="invalid-feedback" v-show="emailErr">欄位有誤，請重新填寫</div>
-                    </div>
-                    <div class="loginForm-btns">
-                        <div class="loginForm-submit" :class="{ 'is-loading': isLoading }">
-                            <button type="submit" class="btn btn-primary">登入</button>
+    <div>
+        <transition name="fade">
+            <div class="loginForm" v-show="value">
+                <form @submit.prevent="emailLogin">
+                    <div class="loginForm-fields">
+                        <div class="loginForm-field">
+                            <label for="loginForm-email">電子信箱</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="loginForm-email"
+                                v-model.trim="email"
+                                required
+                            />
+                            <div class="invalid-feedback" v-show="emailErr">此 Email 無效</div>
                         </div>
-                        <a href class="loginForm-line" @click.prevent="lineLogin">社群登入</a>
+                        <div class="loginForm-btns">
+                            <div class="loginForm-submit" :class="{ 'is-loading': isLoading }">
+                                <button type="submit" class="btn btn-primary">登入</button>
+                            </div>
+                            <a href class="loginForm-line" @click.prevent="lineLogin">社群登入</a>
+                        </div>
                     </div>
-                </div>
-                <button class="loginForm-close" @click.prevent="closePopup">
-                    <i class="material-icons">close</i>
-                </button>
-            </form>
-        </div>
-    </transition>
+                    <button class="loginForm-close" @click.prevent="closePopup">
+                        <i class="material-icons">close</i>
+                    </button>
+                </form>
+            </div>
+        </transition>
+        <!-- preload font -->
+        <i class="material-icons" style="opacity: 0;">close</i>
+    </div>
 </template>
 
 <script>
@@ -86,7 +90,8 @@ module.exports = {
                 this.$emit('set-email', this.email); // 將 email 存入父元素的 data
             }.bind(this));
         },
-        ajaxSensor: function (data, apiURL = this.apiURL) {
+        ajaxSensor: function (data, apiURL) {
+            apiURL = apiURL || this.apiURL;
             let _this = this;
             let mock = new AxiosMockAdapter(axios, { delayResponse: 2000 });
             mock.onPost(apiURL).reply(function (config) {

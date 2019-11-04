@@ -1,8 +1,44 @@
-// 取得網址參數
+/**
+ * 取得網址參數
+ * @param {string} name 參數名
+ */
 function getParameterByName(name) {
     let url = new URL(location.href);
     let params = url.searchParams;
     return params.get(name);
+}
+
+/**
+ * 動態引入JS
+ * @param {array} urls 
+ * @returns {Promise}
+ */
+function appendScripts(urls) {
+    let head = document.querySelector('head');
+    let appendFile = (src) => {
+        return new Promise((resolve, reject) => {
+            let el = document.createElement('script');
+            el.src = src;
+            el.defer = true;
+            head.appendChild(el);
+            el.onload = () => resolve();
+        });
+    };
+    return urls.map(url => appendFile(url));
+}
+
+/**
+ * 動態引入CSS
+ * @param {array} urls 
+ */
+function appendLinks(urls) {
+    let head = document.querySelector('head');
+    urls.forEach(url => {
+        let el = document.createElement('link');
+        el.href = url;
+        el.rel = 'stylesheet';
+        head.appendChild(el);
+    });
 }
 
 // 轉址
@@ -96,6 +132,7 @@ $(function () {
             if (!result) return;
 
             let head = document.querySelector('head');
+
             let style = document.createElement('link');
             style.href = '/tw/dsc/assets/login/css/login.css';
             style.rel = 'stylesheet';
@@ -134,24 +171,10 @@ $(function () {
                 'https://fonts.googleapis.com/icon?family=Material+Icons',
                 '/tw/dsc/assets/login_v2/css/login.css'
             ];
-            links.forEach(link => {
-                let el = document.createElement('link');
-                el.href = link;
-                el.rel = 'stylesheet';
-                head.appendChild(el);
-            });
+            appendLinks(links);
 
             let scripts = ['https://cdn.jsdelivr.net/npm/sweetalert2@8'];
-            let getScript = (src) => {
-                return new Promise((resolve, reject) => {
-                    let el = document.createElement('script');
-                    el.src = src;
-                    el.defer = true;
-                    head.appendChild(el);
-                    el.onload = () => resolve();
-                });
-            };
-            Promise.all([getScript(scripts[0])])
+            Promise.all(appendScripts(scripts))
                 .then(() => {
                     let el = document.createElement('script');
                     el.src = '/tw/dsc/assets/login_v2/js/login.min.js';

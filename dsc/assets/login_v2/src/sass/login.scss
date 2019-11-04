@@ -3,6 +3,10 @@
 @import 'loginForm';
 @import 'subscribe';
 
+[v-cloak] {
+    display: none;
+}
+
 // transition
 .fade-enter-active,
 .fade-leave-active {
@@ -32,7 +36,6 @@
         }
     }
     a {
-        // @extend %hide-text;
         position: absolute;
         top: calc(40% + 2em);
         left: calc(50% - 107.5px);
@@ -42,12 +45,6 @@
         color: #fff;
         text-align: center;
         line-height: 44px;
-        // background: image-url('login/btn.png') 50%/contain;
         pointer-events: auto;
-        // @at-root {
-        //     html.no-mobile .articleCover a:hover {
-        //         background-image: image-url('login/btn-h.png');
-        //     }
-        // }
     }
 }
