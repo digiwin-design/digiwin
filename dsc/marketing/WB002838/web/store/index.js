@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const state = () => ({
     device: null,
     isMobile: false,
@@ -22,4 +24,12 @@ export const mutations = {
     setData(state, payload) {
         state.result = payload;
     },
+};
+
+export const actions = {
+    getData({ commit }) {
+        axios.get('public/db.json').then(res => {
+            commit('setData', res.data);
+        });
+    }
 };

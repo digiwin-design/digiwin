@@ -1,5 +1,98 @@
 @import 'common';
 
+main {
+    @media (min-width: $tablet-width + 1) {
+        padding-top: 507px;
+    }
+}
 .hero {
-    
+    @include bg('~assets/images/03/hero-bg-s.png');
+    height: 696px;
+    @media (min-width: $tablet-width + 1) {
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        z-index: -1;
+        height: 745px;
+        background-image: url('~assets/images/03/hero-bg.png');
+    }
+    &__container {
+        margin: 0 auto;
+        padding-top: 270px;
+        max-width: 300px;
+        height: 100%;
+        @media (min-width: $tablet-width + 1) {
+            padding-top: 150px;
+            max-width: $content-width;
+        }
+    }
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        @media (min-width: $tablet-width + 1) {
+            flex-direction: row;
+            margin-top: 20px;
+        }
+        > a {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 68px;
+            justify-content: center;
+            align-items: center;
+            @media (min-width: $tablet-width + 1) {
+                width: 280px;
+                height: 74px;
+            }
+            &:nth-child(1) {
+                background-color: #fac613;
+                color: #063780;
+                letter-spacing: getLetterSpacing(10);
+                font-size: 22px;
+            }
+            &:nth-child(2) {
+                margin-top: 12px;
+                background-color: #0656a0;
+                color: #fff;
+                text-align: center;
+                line-height: 21px;
+                @media (min-width: $tablet-width + 1) {
+                    margin-top: 0;
+                    margin-left: 15px;
+                }
+            }
+        }
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+.section1 {
+    .container {
+        border-radius: 20px 20px 0 0;
+        background-color: #fff;
+    }
+    &__boxs {
+        display: flex;
+        margin: -15px auto;
+        width: 300px;
+        flex-wrap: wrap;
+        @media (min-width: $tablet-width + 1) {
+            width: 600px;
+        }
+        @media (min-width: $content-width) {
+            margin: -5px;
+            width: 1120px;
+        }
+    }
+    &__box {
+        margin: 15px;
+        width: 270px;
+        @media (min-width: $content-width) {
+            margin: 5px;
+            width: 265px;
+        }
+    }
 }

@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="wrapper">
+        <div class="wrapper" v-if="result">
             <Header/>
             <nuxt/>
             <MenuMask></MenuMask>
@@ -22,13 +22,18 @@ export default {
         ],
         link: [
             { rel: 'stylesheet', href: `${process.env.BASE_URL}public/vendor/font-awesome/css/font-awesome.min.css` },
-            { rel: 'stylesheet', href: `${process.env.BASE_URL}public/vendor/eform/xcConfirm.css` }
+            { rel: 'stylesheet', href: `${process.env.BASE_URL}public/vendor/eform/xcConfirm.css` },
         ]
     },
     components: {
         Header,
         MenuMask,
         Footer,
+    },
+    computed: {
+        result() {
+            return this.$store.state.result;
+        },
     },
     methods: {
         mediaSensor(minWidth) {
@@ -37,6 +42,9 @@ export default {
             mm.addListener(resizeWidth);
             resizeWidth(mm);
         },
+    },
+    created() {
+        this.$store.dispatch('getData');
     },
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());

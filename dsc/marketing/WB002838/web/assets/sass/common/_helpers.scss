@@ -45,7 +45,6 @@
     @else {
         width: $width;
     }
-    @include linkColor($color);
 }
 
 // 增加點擊範圍
@@ -193,14 +192,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-}
-
-@mixin linkColor($color) {
-    color: $color;
-    &:link,
-    &:visited {
-        color: $color;
     }
 }
 

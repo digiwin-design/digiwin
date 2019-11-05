@@ -27,7 +27,7 @@ export default {
             return this.$store.state.isMobile ? 'mobile' : 'desktop';
         },
         links() {
-            return this.$store.state.result.links;
+            return this.$store.state.result['05'].links;
         }
     },
     methods: {

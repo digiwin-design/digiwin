@@ -1,5 +1,5 @@
 <template>
-    <main v-if="result">
+    <main>
         <StickyNav v-if="isMobile"></StickyNav>
 
         <header>
@@ -80,7 +80,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import StickyNav from '~/components/05/StickyNav';
 import Contact from '~/components/05/Contact';
 import HoverBox from '~/components/05/HoverBox';
@@ -113,18 +112,8 @@ export default {
             return this.$store.state.isMobile;
         },
         result() {
-            return this.$store.state.result;
+            return this.$store.state.result['05'];
         },
-    },
-    methods: {
-        getData() {
-            axios.get('public/db.json').then(res => {
-                this.$store.commit('setData', res.data['05']);
-            });
-        },
-    },
-    created() {
-        this.getData();
     },
 };
 </script>

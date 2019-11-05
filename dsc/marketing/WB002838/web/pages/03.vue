@@ -1,7 +1,7 @@
 <template>
-    <main v-if="result">
+    <main>
         <div class="hero">
-            <div class="container">
+            <div class="hero__container">
                 <h1>
                     <picture>
                         <source srcset="~/assets/images/03/hero-title.png" media="(min-width: 769px)">
@@ -10,26 +10,42 @@
                 </h1>
                 <div class="hero__btn">
                     <a href="">立即諮詢</a>
-                    <a href="">【線上研討會】<br>從《工業3.5》看台灣產業發展</a>
+                    <a href="">
+                        <strong>【線上研討會】</strong>
+                        從《工業3.5》看台灣產業發展
+                    </a>
                 </div>
             </div>
         </div>
+        
         <article class="section1">
             <div class="container">
                 <SectionTitle
                     title="鼎新MES，完整掌握生產現場即時訊息"
                     desc="鼎新MES，與ERP無縫整合，隨需搭建智慧化工廠，實現從入庫、派工、報工、出場及設備狀態全程追溯，滿足企業在製品管理(WIP)、品質控管(SPC)、設備整合與管理(EMS)、問題追溯分析、生產現場的即時數據採集等關鍵需求，為企業做出更準確的生產管理決策。"
                 ></SectionTitle>
+                <div class="section1__boxs">
+                    <div class="section1__box" v-for="box in result.hoverBox" :key="box.title">
+                        <HoverBox :box="box"></HoverBox>
+                    </div>
+                </div>
             </div>
         </article>
+
+        <article class="section2">
+            <SectionTitle title="客戶實證"></SectionTitle>
+            <CarouselAndAccordion></CarouselAndAccordion>
+        </article>
+
         <Contact></Contact>
     </main>
 </template>
 
 <script>
-import axios from 'axios';
 import Contact from '~/components/03/Contact';
 import SectionTitle from '~/components/03/SectionTitle';
+import HoverBox from '~/components/03/HoverBox';
+import CarouselAndAccordion from '~/components/03/CarouselAndAccordion';
 
 export default {
     head: {
@@ -45,24 +61,16 @@ export default {
     components: {
         Contact,
         SectionTitle,
+        HoverBox,
+        CarouselAndAccordion,
     },
     computed: {
         isMobile() {
             return this.$store.state.isMobile;
         },
         result() {
-            return this.$store.state.result;
+            return this.$store.state.result['03'];
         },
-    },
-    methods: {
-        getData() {
-            axios.get('public/db.json').then(res => {
-                this.$store.commit('setData', res.data['03']);
-            });
-        },
-    },
-    created() {
-        this.getData();
     },
 };
 </script>
