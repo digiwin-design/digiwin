@@ -2,7 +2,7 @@
     <div class="case" :class="type">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide js-slide" v-for="(item, idx) in cases" :key="item.industry">
+                <div class="swiper-slide js-slide" v-for="(item, idx) in cases" :key="item.title">
                     <div>
                         <h2
                             @click="accordionSlideToggle"
@@ -85,10 +85,10 @@ export default {
             this.$nextTick(() => {
                 this.mySwiper = new Swiper(".swiper-container", {
                     loop: true,
-                    // autoplay: {
-                    //     disableOnInteraction: false,
-                    //     delay: 5000
-                    // },
+                    autoplay: {
+                        disableOnInteraction: false,
+                        delay: 5000
+                    },
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true
@@ -122,7 +122,7 @@ export default {
                 slide.style.height = `${contentHeight + titleHeight}px`;
                 setTimeout(() => {
                     slide.style.height = 'auto';
-                }, 500);
+                }, 410);
             }
         },
         removeAccordionSlideHeight() {

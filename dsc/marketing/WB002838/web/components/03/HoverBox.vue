@@ -1,5 +1,5 @@
 <template>
-    <div class="hover-box">
+    <div class="hover-box" onclick>
         <h2>{{box.title}}</h2>
         <div class="hover-box__content">
             <p class="hover-box__before" v-html="box.before"></p>

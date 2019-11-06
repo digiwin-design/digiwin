@@ -114,7 +114,6 @@ main {
     @media (min-width: $tablet-width + 1) {
         position: absolute;
         top: 35px;
-        z-index: -1;
         width: 100%;
         height: 745px;
         background-image: url('~assets/images/03/hero-bg.png');
@@ -172,6 +171,7 @@ main {
     }
 }
 .section1 {
+    position: relative;
     .container {
         border-radius: 20px 20px 0 0;
         background-color: #fff;

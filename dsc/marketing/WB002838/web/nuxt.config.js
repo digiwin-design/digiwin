@@ -2,7 +2,7 @@
 let router = { path: 'marketing/WB002838' };
 switch (process.env.DEPLOY_ENV) {
     case 'TEST':
-        router.base = `/tw/dsc/dev/${router.path}/test/`;
+        router.base = `/tw/dsc/${router.path}/web/dist/`;
         break;
     case 'DEV':
         router.base = `/tw/dsc/dev/${router.path}/web/`;
@@ -33,11 +33,8 @@ module.exports = {
         script: [
             { src: 'https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&flags=gated', defer: 'defer' },
             { src: `${router.base}public/vendor/jquery.min.js`, defer: 'defer' },
-            { src: 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', defer: 'defer' },
             { src: `${router.base}public/all.js`, defer: 'defer' },
         ],
-        link: [
-        ]
     },
 
     /*
@@ -63,6 +60,7 @@ module.exports = {
         { src: '~/plugins/mobile-detect-modernizr.js', ssr: false },
         { src: '~/plugins/stickyfill.min.js', ssr: false },
         { src: '~/plugins/jquery-nav-scroll', ssr: false },
+        { src: '~/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', ssr: false },
     ],
 
     /*
@@ -121,6 +119,5 @@ module.exports = {
     },
     env: {
         BASE_URL: router.base,
-        API_URL: router.base === '/' ? '//10.20.88.52:2838/' : `//www.digiwin.com${router.base}`
     }
 };
