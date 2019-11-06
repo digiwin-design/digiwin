@@ -15,7 +15,7 @@ switch (process.env.DEPLOY_ENV) {
         break;
 }
 
-const pkg = require('./package')
+const pkg = require('./package');
 
 
 module.exports = {
@@ -31,8 +31,9 @@ module.exports = {
             { hid: 'description', name: 'description', content: pkg.description }
         ],
         script: [
-            { src: 'https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find&flags=gated', defer: 'defer' },
+            { src: 'https://polyfill.io/v3/polyfill.js?features=default,fetch,HTMLPictureElement,Array.prototype.find,NodeList.prototype.forEach&flags=gated', defer: 'defer' },
             { src: `${router.base}public/vendor/jquery.min.js`, defer: 'defer' },
+            { src: 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', defer: 'defer' },
             { src: `${router.base}public/all.js`, defer: 'defer' },
         ],
         link: [
@@ -88,20 +89,20 @@ module.exports = {
     router: {
         base: router.base,
         scrollBehavior: (to, from, savedPosition) => {
-            let position = false
+            let position = false;
 
             // if no children detected
             if (to.matched.length < 2) {
                 // scroll to the top of the page
-                position = { x: 0, y: 0 }
+                position = { x: 0, y: 0 };
             } else if (to.matched.some((r) => r.components.default.options.scrollToTop)) {
                 // if one of the children has scrollToTop option set to true
-                position = { x: 0, y: 0 }
+                position = { x: 0, y: 0 };
             }
 
             // savedPosition is only available for popstate navigations (back button)
             if (savedPosition) {
-                position = savedPosition
+                position = savedPosition;
             }
 
             return new Promise(resolve => {
@@ -111,15 +112,15 @@ module.exports = {
                     // or if the selector didn't match any element.
                     if (to.hash && document.querySelector(to.hash)) {
                         // scroll to anchor by returning the selector
-                        position = { selector: to.hash }
+                        position = { selector: to.hash };
                     }
-                    resolve(position)
-                })
-            })
+                    resolve(position);
+                });
+            });
         }
     },
     env: {
         BASE_URL: router.base,
         API_URL: router.base === '/' ? '//10.20.88.52:2838/' : `//www.digiwin.com${router.base}`
     }
-}
+};

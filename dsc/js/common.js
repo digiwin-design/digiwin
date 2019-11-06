@@ -153,7 +153,7 @@ $(function () {
 $(function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
-    // 取得加入閱讀權限的文章，比對網址成功後載入對應的外部連結
+    // 取得加入閱讀權限的文章，比對網址成功後載入相關連結
     fetch('/tw/dsc/assets/login_v2/login.json')
         .then(res => res.json())
         .then(res => {
@@ -194,7 +194,7 @@ $(function () {
     fetch('/tw/dsc/assets/article-ad/db.json')
         .then(res => res.json())
         .then(res => {
-            // 比對網址成功後載入對應的外部連結
+            // 比對網址成功後載入對應連結
             let result = res.find(function (item) {
                 item = item.url.replace(/(.html|.htm)$/, '');
                 let regex = new RegExp(item + '$');

@@ -17,13 +17,13 @@ import Footer from '~/components/Footer.vue';
 
 export default {
     head: {
-        script: [
-            { src: `${process.env.BASE_URL}public/vendor/eform/xcConfirm.js`, defer: 'defer' },
-        ],
         link: [
             { rel: 'stylesheet', href: `${process.env.BASE_URL}public/vendor/font-awesome/css/font-awesome.min.css` },
             { rel: 'stylesheet', href: `${process.env.BASE_URL}public/vendor/eform/xcConfirm.css` },
-        ]
+        ],
+        script: [
+            { src: `${process.env.BASE_URL}public/vendor/eform/xcConfirm.js`, defer: 'defer' },
+        ],
     },
     components: {
         Header,
