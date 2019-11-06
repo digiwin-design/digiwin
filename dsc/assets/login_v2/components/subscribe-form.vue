@@ -62,7 +62,7 @@ module.exports = {
     },
     computed: {
         dev: function () {
-            return location.hostname === 'localhost';
+            return location.hostname !== 'www.digiwin.com';
         },
         userID: function () {
             return localStorage.getItem('line_userID') || '';

@@ -173,7 +173,11 @@ $(function () {
             ];
             appendLinks(links);
 
-            let scripts = ['https://cdn.jsdelivr.net/npm/sweetalert2@8'];
+            let scripts = [
+                'https://cdn.jsdelivr.net/npm/sweetalert2@8',
+                'https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.min.js',
+                'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit'
+            ];
             Promise.all(appendScripts(scripts))
                 .then(() => {
                     let el = document.createElement('script');

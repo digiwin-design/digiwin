@@ -9,7 +9,7 @@ new Vue({
     },
     computed: {
         dev() {
-            return location.hostname === 'localhost';
+            return location.hostname !== 'www.digiwin.com';
         },
         userID() {
             return localStorage.getItem('line_userID');
@@ -237,7 +237,7 @@ new Vue({
     },
     created() {
         this.manualLogout();
-        
+
         // 在 vue 掛載 DOM 前插入子組件
         this.addCover();
     },

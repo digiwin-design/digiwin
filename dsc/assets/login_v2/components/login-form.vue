@@ -1,7 +1,7 @@
 <template>
     <div>
         <transition name="fade">
-            <div class="loginForm" v-show="value">
+            <div class="loginForm" v-if="value">
                 <form @submit.prevent="emailLogin">
                     <div class="loginForm-fields">
                         <div class="loginForm-field">
@@ -11,12 +11,19 @@
                                 class="form-control"
                                 id="loginForm-email"
                                 v-model.trim="email"
+                                v-focus
                                 required
                             />
                             <div class="invalid-feedback" v-show="emailErr">此 Email 無效</div>
                         </div>
+                        <vue-recaptcha
+                            ref="recaptcha"
+                            @verify="onVerify"
+                            @expired="onExpired"
+                            :sitekey="sitekey"
+                        ></vue-recaptcha>
                         <div class="loginForm-btns">
-                            <div class="loginForm-submit" :class="{ 'is-loading': isLoading }">
+                            <div class="loginForm-submit" :class="{ 'is-loading': isLoading, 'disabled': !valid }">
                                 <button type="submit" class="btn btn-primary">登入</button>
                             </div>
                             <a href class="loginForm-line" @click.prevent="lineLogin">社群登入</a>
@@ -46,19 +53,26 @@ module.exports = {
             required: true
         },
     },
+    components: {
+        'vue-recaptcha': VueRecaptcha
+    },
     data: function () {
         return {
             email: localStorage.getItem('email') || '',
             isLoading: false,
             emailErr: false,
+            valid: false,
         }
     },
     computed: {
         dev: function () {
-            return location.hostname === 'localhost';
+            return location.hostname !== 'www.digiwin.com';
         },
         apiURL: function () {
             return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
+        },
+        sitekey: function () {
+            return '6LennwITAAAAAOVHXsN6PfrFhF9kCNFJVn__Myan';
         },
     },
     methods: {
@@ -80,6 +94,7 @@ module.exports = {
         emailLogin: function () {
             this.checkEmail();
             if (this.emailErr) return;
+            if (!this.valid) return;
 
             let data = {
                 email: this.email,
@@ -133,6 +148,19 @@ module.exports = {
                     });
             });
         },
+        onVerify: function (response) {
+            this.valid = true;
+        },
+        onExpired: function () {
+            this.valid = false;
+        },
     },
+    directives: {
+        focus: {
+            inserted: function (el) {
+                el.focus();
+            }
+        }
+    }
 }
 </script>
