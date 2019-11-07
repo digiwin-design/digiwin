@@ -24,7 +24,7 @@
     .invalid-feedback {
         display: block; // override default style
     }
-    .loginForm-submit {
+    &-submit {
         position: relative;
         width: 120px;
         color: #fff;
@@ -52,17 +52,15 @@
             font-family: -apple-system, Roboto, Helvetica, Arial, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
         }
     }
-    .loginForm-line {
-        width: 120px;
-        font-family: -apple-system, Roboto, Helvetica, Arial, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-    }
     &-line {
         display: flex;
+        width: 120px;
         height: 38px;
         border-radius: .25rem;
         background-color: #00c300;
         color: #fff;
         font-size: 16px;
+        font-family: -apple-system, Roboto, Helvetica, Arial, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
         line-height: 1;
         justify-content: center;
         align-items: center;
@@ -102,6 +100,12 @@
             margin-top: 15px;
             margin-left: 0;
         }
+    }
+    &-desc {
+        margin-top: 1em;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1;
     }
     &-close {
         position: absolute;

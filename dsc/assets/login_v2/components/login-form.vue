@@ -32,6 +32,7 @@
                     <button class="loginForm-close" @click.prevent="closePopup">
                         <i class="material-icons">close</i>
                     </button>
+                    <p class="loginForm-desc">一鍵登入鼎新官網，72小時官網內容全文公開</p>
                 </form>
             </div>
         </transition>
