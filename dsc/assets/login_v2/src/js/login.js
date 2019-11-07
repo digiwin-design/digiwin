@@ -1,7 +1,7 @@
 new Vue({
     el: '.list-case-show',
     components: {
-        'login-form': httpVueLoader('./components/login-form.vue'),
+        'login-form': httpVueLoader('/tw/dsc/assets/login_v2/components/login-form.vue'),
     },
     data: {
         showPopup: false,
