@@ -126,7 +126,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
+@import '~/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 @import '~assets/sass/common';
 
 .fancybox-bg {
@@ -179,7 +179,7 @@ main {
     height: 696px;
     @media (min-width: $tablet-width + 1) {
         position: absolute;
-        top: 35px;
+        top: 0;
         width: 100%;
         height: 745px;
         background-image: url('~assets/images/03/hero-bg.png');
