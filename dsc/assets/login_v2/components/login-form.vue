@@ -77,6 +77,7 @@ module.exports = {
     },
     methods: {
         closePopup: function () {
+            this.valid = false;
             this.$emit('input', false);
         },
         checkEmail: function () {
