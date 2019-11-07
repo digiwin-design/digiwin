@@ -138,10 +138,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css');
 @import '~assets/sass/common/variable';
 @import '~assets/sass/common/helpers';
-
 $mobile-title-height: 97px;
 .case {
     .container {
@@ -177,20 +176,20 @@ $mobile-title-height: 97px;
     &__row {
         &:nth-child(1) {
             padding-top: 1em;
-            padding-bottom: 0.5em;
+            padding-bottom: .5em;
             @media (min-width: $tablet-width + 1) {
                 padding: 0 0 0 408px;
                 min-height: 150px;
             }
             h3 {
-                margin-bottom: 0.2em;
+                margin-bottom: .2em;
                 color: #0685ad;
                 font-weight: bold;
                 font-size: 30px;
                 line-height: 36px;
                 &::before {
                     display: block;
-                    margin-bottom: 0.5em;
+                    margin-bottom: .5em;
                     color: #000;
                     content: attr(data-industry);
                     letter-spacing: getLetterSpacing(60);
@@ -205,16 +204,16 @@ $mobile-title-height: 97px;
         }
         &:nth-child(2) {
             $bg-color: #08acb2 #039196 #028388;
-            @for $i from 1 through 3 {
-                &.case#{$i} {
-                    background-color: nth($bg-color, $i);
-                }
-            }
             display: flex;
             padding-top: 32px;
             padding-bottom: 40px;
             color: #fff;
             flex-wrap: wrap;
+            @for $i from 1 through 3 {
+                &.case#{$i} {
+                    background-color: nth($bg-color, $i);
+                }
+            }
             @media (min-width: $tablet-width + 1) {
                 position: relative;
                 padding: 115px 50px 22px 50px;
@@ -236,6 +235,7 @@ $mobile-title-height: 97px;
             bottom: 0;
             left: 0;
             display: block;
+            border-bottom-left-radius: 20px;
         }
     }
     &__subtitle {
@@ -261,7 +261,7 @@ $mobile-title-height: 97px;
                 width: 0;
                 height: 0;
                 border-style: solid;
-                content: "";
+                content: '';
             }
             &::before {
                 right: 100%;
@@ -316,7 +316,7 @@ $mobile-title-height: 97px;
             display: block;
             overflow: hidden;
             height: $mobile-title-height;
-            transition: height 0.4s;
+            transition: height .4s;
             & + .swiper-slide {
                 margin-top: 2px;
             }

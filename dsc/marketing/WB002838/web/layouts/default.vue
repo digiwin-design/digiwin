@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="wrapper" v-if="result">
+        <div class="wrapper" v-if="result" v-cloak>
             <Header/>
             <nuxt/>
             <MenuMask></MenuMask>
