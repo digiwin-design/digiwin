@@ -100,9 +100,16 @@ export default {
             this.mySwiper && this.mySwiper.destroy();
         },
         initPopup() {
+            let _this = this;
             $('[data-fancybox]').fancybox({
                 toolbar: false,
                 smallBtn: true,
+                afterShow() {
+                    _this.mySwiper.autoplay.stop();
+                },
+                afterClose() {
+                    _this.mySwiper.autoplay.start();
+                },
             });
         },
         accordionSlideToggle() {
@@ -134,10 +141,16 @@ export default {
             if (this.isMobile) {
                 event.target.style.willChange = 'height';
             }
+            else {
+                this.mySwiper.autoplay.stop();
+            }
         },
         onLeave() {
             if (this.isMobile) {
                 event.target.style.willChange = 'auto';
+            }
+            else {
+                this.mySwiper.autoplay.start();
             }
         },
     },
@@ -148,7 +161,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css');
+@import '~/node_modules/swiper/css/swiper.min.css';
 @import '~assets/sass/common/variable';
 @import '~assets/sass/common/helpers';
 $mobile-title-height: 97px;

@@ -1,94 +1,112 @@
 <template>
     <main>
-        <div class="hero">
-            <div class="hero__container">
-                <h1>
-                    <picture>
-                        <source srcset="~/assets/images/03/hero-title.png" media="(min-width: 769px)">
-                        <img src="~/assets/images/03/hero-title-s.png" alt="MES 打造透明生產現場 整合IT與OT 實現精實管理 降本增效提質">
-                    </picture>
-                </h1>
-                <div class="hero__btn">
-                    <a href="#contact" class="js-nav">立即諮詢</a>
-                    <a href="">
-                        <strong>【線上研討會】</strong>
-                        從《工業3.5》看台灣產業發展
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <article class="section1">
-            <div class="container">
-                <SectionTitle
-                    title="鼎新MES，完整掌握生產現場即時訊息"
-                    desc="鼎新MES，與ERP無縫整合，隨需搭建智慧化工廠，實現從入庫、派工、報工、出場及設備狀態全程追溯，滿足企業在製品管理(WIP)、品質控管(SPC)、設備整合與管理(EMS)、問題追溯分析、生產現場的即時數據採集等關鍵需求，為企業做出更準確的生產管理決策。"
-                ></SectionTitle>
-                <div class="boxs">
-                    <div class="boxs__item" v-for="box in result.hoverBox" :key="box.title">
-                        <HoverBox :box="box"></HoverBox>
+        <transition name="fade">
+            <div v-if="isReady">
+                <div class="hero">
+                    <div class="hero__container">
+                        <h1>
+                            <picture>
+                                <source
+                                    srcset="~/assets/images/03/hero-title.png"
+                                    media="(min-width: 769px)"
+                                />
+                                <img
+                                    src="~/assets/images/03/hero-title-s.png"
+                                    alt="MES 打造透明生產現場 整合IT與OT 實現精實管理 降本增效提質"
+                                />
+                            </picture>
+                        </h1>
+                        <div class="hero__btn">
+                            <a href="#contact" class="js-nav">立即諮詢</a>
+                            <a href>
+                                <strong>【線上研討會】</strong>
+                                從《工業3.5》看台灣產業發展
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
 
-        <article class="section2">
-            <SectionTitle title="客戶實證"></SectionTitle>
-            <CarouselAndAccordion :cases="result.case"></CarouselAndAccordion>
-        </article>
-
-        <article class="section3">
-            <div class="container">
-                <section-title
-                    title="鼎新MES為智能製造創造三大核心價值"
-                    desc="打造高效、精益、透明化現場管理，只有通過精益製造和數字化管理等先進的生產<br>管理方式優化工廠底層資源，改善數據採集品質，提高生產透明度與效益。"
-                ></section-title>
-                <div class="grid">
-                    <div class="grid__item" v-for="(item, idx) in result.section3" :key="item.title">
-                        <figure>
-                            <img :src="require(`~/assets/images/03/section3-item${idx + 1}.png`)" alt="">
-                            <figcaption>{{item.title}}</figcaption>
-                        </figure>
-                        <p>{{item.content}}</p>
+                <article class="section1">
+                    <div class="container">
+                        <SectionTitle
+                            title="鼎新MES，完整掌握生產現場即時訊息"
+                            desc="鼎新MES，與ERP無縫整合，隨需搭建智慧化工廠，實現從入庫、派工、報工、出場及設備狀態全程追溯，滿足企業在製品管理(WIP)、品質控管(SPC)、設備整合與管理(EMS)、問題追溯分析、生產現場的即時數據採集等關鍵需求，為企業做出更準確的生產管理決策。"
+                        ></SectionTitle>
+                        <div class="boxs">
+                            <div class="boxs__item" v-for="box in result.hoverBox" :key="box.title">
+                                <HoverBox :box="box"></HoverBox>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </article>
+                </article>
 
-        <article class="section4">
-            <div class="container">
-                <section-title
-                    title="MES四大中心  打通生產現場資訊壁壘"
-                    desc="透過四大中心形成以工藝路線為依據，以生產計畫為主體，打通生產管理部門和生產執行部門的資訊壁壘，提供準確、完善的可以指導生產組織的決策資訊"
-                ></section-title>
-                <div class="grid">
-                    <div class="grid__item" v-for="item in result.section4" :key="item.title">
-                        <h2>{{item.title}}</h2>
-                        <p>{{item.content}}</p>
+                <article class="section2">
+                    <SectionTitle title="客戶實證"></SectionTitle>
+                    <CarouselAndAccordion :cases="result.case"></CarouselAndAccordion>
+                </article>
+
+                <article class="section3">
+                    <div class="container">
+                        <section-title
+                            title="鼎新MES為智能製造創造三大核心價值"
+                            desc="打造高效、精益、透明化現場管理，只有通過精益製造和數字化管理等先進的生產<br>管理方式優化工廠底層資源，改善數據採集品質，提高生產透明度與效益。"
+                        ></section-title>
+                        <div class="grid">
+                            <div
+                                class="grid__item"
+                                v-for="(item, idx) in result.section3"
+                                :key="item.title"
+                            >
+                                <figure>
+                                    <img
+                                        :src="require(`~/assets/images/03/section3-item${idx + 1}.png`)"
+                                        alt
+                                    />
+                                    <figcaption>{{item.title}}</figcaption>
+                                </figure>
+                                <p>{{item.content}}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </article>
+                </article>
 
-        <article class="section5">
-            <div class="container">
-                <section-title
-                    title="鼎新 值得您選擇"
-                    desc="在地深耕超過30年，累積超過50,000多家企業成功案例，服務橫跨東南亞與中國，每個產業我們都是專家，跟得上國際趨勢，隨時因應在地法規，鼎新最懂您！"
-                ></section-title>
-                <div class="grid">
-                    <div class="grid__item" v-for="(item, idx) in result.section5" :key="item[0]">
-                        <div class="grid__text">
-                            <p v-html="text" v-for="text in item" :key="text"></p>
-                        </div> 
-                        <img :src="require(`~/assets/images/03/section5-item${idx + 1}.png`)" alt="">
+                <article class="section4">
+                    <div class="container">
+                        <section-title
+                            title="MES四大中心  打通生產現場資訊壁壘"
+                            desc="透過四大中心形成以工藝路線為依據，以生產計畫為主體，打通生產管理部門和生產執行部門的資訊壁壘，提供準確、完善的可以指導生產組織的決策資訊"
+                        ></section-title>
+                        <div class="grid">
+                            <div class="grid__item" v-for="item in result.section4" :key="item.title">
+                                <h2>{{item.title}}</h2>
+                                <p>{{item.content}}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <a href="/tw/software/1832.html" target="_blank" class="readmore">了解更多產品訊息</a>
-            </div>
-        </article>
+                </article>
 
-        <Contact></Contact>
+                <article class="section5">
+                    <div class="container">
+                        <section-title
+                            title="鼎新 值得您選擇"
+                            desc="在地深耕超過30年，累積超過50,000多家企業成功案例，服務橫跨東南亞與中國，每個產業我們都是專家，跟得上國際趨勢，隨時因應在地法規，鼎新最懂您！"
+                        ></section-title>
+                        <div class="grid">
+                            <div class="grid__item" v-for="(item, idx) in result.section5" :key="item[0]">
+                                <div class="grid__text">
+                                    <p v-html="text" v-for="text in item" :key="text"></p>
+                                </div>
+                                <img :src="require(`~/assets/images/03/section5-item${idx + 1}.png`)" alt />
+                            </div>
+                        </div>
+                        <a href="/tw/software/1832.html" target="_blank" class="readmore">了解更多產品訊息</a>
+                    </div>
+                </article>
+
+                <Contact></Contact>
+            </div>
+            <Loading v-else></Loading>
+        </transition>
     </main>
 </template>
 
@@ -97,6 +115,7 @@ import Contact from '~/components/03/Contact';
 import SectionTitle from '~/components/03/SectionTitle';
 import HoverBox from '~/components/03/HoverBox';
 import CarouselAndAccordion from '~/components/03/CarouselAndAccordion';
+import Loading from '~/components/03/Loading.vue';
 
 export default {
     head: {
@@ -114,6 +133,12 @@ export default {
         SectionTitle,
         HoverBox,
         CarouselAndAccordion,
+        Loading,
+    },
+    data() {
+        return {
+            isReady: false,
+        }
     },
     computed: {
         isMobile() {
@@ -123,15 +148,37 @@ export default {
             return this.$store.state.result['03'];
         },
     },
+    methods: {
+        preloadImg() {
+            let loaded = 0;
+            let images = [
+                'public/images/03/hero-bg.png',
+                'public/images/03/hero-bg-s.png',
+            ];
+            images.forEach(img => {
+                let image = new Image();
+                image.src = img;
+                image.onload = () => {
+                    loaded++;
+                    if (loaded === images.length) {
+                        setTimeout(() => this.isReady = true, 500);
+                    }
+                };
+            });
+        }
+    },
+    mounted() {
+        this.preloadImg();
+    },
 };
 </script>
 
 <style lang="scss">
-@import '~/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
-@import '~assets/sass/common';
+@import "~/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "~assets/sass/common";
 
 .fancybox-bg {
-    background-color: rgba(#000, .35);
+    background-color: rgba(#000, 0.35);
 }
 .fancybox-slide {
     overflow: hidden;
@@ -163,7 +210,7 @@ main {
     &::before,
     &::after {
         position: absolute;
-        content: url('~assets/images/03/square-green.png');
+        content: url("~assets/images/03/square-green.png");
     }
     &::before {
         top: 1420px;
@@ -176,14 +223,14 @@ main {
     }
 }
 .hero {
-    @include bg('~assets/images/03/hero-bg-s.png');
+    @include bg("~static/public/images/03/hero-bg-s.png");
     height: 696px;
     @media (min-width: $tablet-width + 1) {
         position: absolute;
         top: 0;
         width: 100%;
         height: 745px;
-        background-image: url('~assets/images/03/hero-bg.png');
+        background-image: url("~static/public/images/03/hero-bg.png");
     }
     &__container {
         margin: 0 auto;
@@ -309,12 +356,12 @@ main {
     &::before,
     &::after {
         position: absolute;
-        content: url('~assets/images/03/square-white.png');
+        content: url("~assets/images/03/square-white.png");
     }
     &::before {
         top: 510px;
         left: calc(50% - 1146px);
-        opacity: .28;
+        opacity: 0.28;
     }
     &::after {
         top: -27px;
@@ -345,7 +392,7 @@ main {
             border: 2px solid #fff;
             border-radius: 20px;
             h2 {
-                margin-bottom: .5em;
+                margin-bottom: 0.5em;
                 text-align: center;
                 font-weight: bold;
                 font-size: 30px;
@@ -402,7 +449,7 @@ main {
             }
             p {
                 &:nth-child(1) {
-                    margin-bottom: .7em;
+                    margin-bottom: 0.7em;
                     font-size: 21px;
                     &::first-line {
                         font-size: 27.5px;
@@ -427,7 +474,7 @@ main {
                 width: 2px;
                 height: 30px;
                 background-color: #aba8a8;
-                content: '';
+                content: "";
             }
             @media (min-width: $tablet-width) {
                 margin-bottom: 20px;
