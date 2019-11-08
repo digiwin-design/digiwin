@@ -31,20 +31,16 @@
     background-repeat: no-repeat;
 }
 
-@mixin btn($width, $height, $color, $bgColor, $radius: 0, $maxWidth: false, $display: block) {
-    display: block;
+@mixin btn($width, $height, $color, $bgColor, $radius: 0, $maxWidth: none, $display: block) {
+    display: $display;
+    max-width: $maxWidth;
+    width: $width;
     height: $height;
     border-radius: $radius;
     background-color: $bgColor;
     color: $color;
     text-align: center;
     line-height: $height;
-    @if ($maxWidth == true) {
-        max-width: $width;
-    }
-    @else {
-        width: $width;
-    }
 }
 
 // 增加點擊範圍
@@ -251,7 +247,7 @@
         height: inherit;
         transition: top .4s;
     }
-    
+
     // fadeIn
     &[class*='fadeIn'] {
         @keyframes fadeIn {

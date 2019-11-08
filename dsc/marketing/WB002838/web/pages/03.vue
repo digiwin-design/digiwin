@@ -9,7 +9,7 @@
                     </picture>
                 </h1>
                 <div class="hero__btn">
-                    <a href="">立即諮詢</a>
+                    <a href="#contact" class="js-nav">立即諮詢</a>
                     <a href="">
                         <strong>【線上研討會】</strong>
                         從《工業3.5》看台灣產業發展
@@ -84,6 +84,7 @@
                         <img :src="require(`~/assets/images/03/section5-item${idx + 1}.png`)" alt="">
                     </div>
                 </div>
+                <a href="/tw/software/1832.html" target="_blank" class="readmore">了解更多產品訊息</a>
             </div>
         </article>
 
@@ -266,6 +267,9 @@ main {
 }
 .section3 {
     padding-bottom: 55px;
+    @media (min-width: $tablet-width + 1) {
+        padding-bottom: 75px;
+    }
     .grid {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
@@ -353,7 +357,16 @@ main {
     }
 }
 .section5 {
+    padding-bottom: 55px;
     background-color: #e5f4f5;
+    @media (min-width: $tablet-width + 1) {
+        padding-bottom: 40px;
+    }
+    .sectionTitle {
+        @media (min-width: $content-width) {
+            padding-top: 5em !important;
+        }
+    }
     .grid {
         display: grid;
         grid-template-rows: repeat(3, auto);
@@ -419,6 +432,14 @@ main {
             @media (min-width: $tablet-width) {
                 margin-bottom: 20px;
             }
+        }
+    }
+    .readmore {
+        @include btn(100%, 78px, #fff, #08acb2, 0, 348px);
+        margin: 0 auto;
+        font-size: 24px;
+        @media (min-width: $tablet-width + 1) {
+            transform: translateY(-40px);
         }
     }
 }

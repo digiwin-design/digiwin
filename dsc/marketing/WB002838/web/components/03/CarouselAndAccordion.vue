@@ -2,7 +2,7 @@
     <div class="case" :class="type">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide js-slide" v-for="(item, idx) in cases" :key="item.title">
+                <div class="swiper-slide js-slide" v-for="(item, idx) in cases" :key="item.title" @mouseenter="onEnter" @mouseleave="onLeave">
                     <div>
                         <h2
                             @click="accordionSlideToggle"
@@ -129,6 +129,16 @@ export default {
             document.querySelectorAll('.js-slide').forEach(el => {
                 el.style.height = '';
             });
+        },
+        onEnter() {
+            if (this.isMobile) {
+                event.target.style.willChange = 'height';
+            }
+        },
+        onLeave() {
+            if (this.isMobile) {
+                event.target.style.willChange = 'auto';
+            }
         },
     },
     mounted() {

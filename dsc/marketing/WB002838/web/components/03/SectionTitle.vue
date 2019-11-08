@@ -16,7 +16,7 @@ export default {
         },
         paddingTop: {
             type: String,
-            default: '2.7em'
+            default: '3em'
         },
         paddingBottom: {
             type: String,

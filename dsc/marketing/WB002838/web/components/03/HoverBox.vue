@@ -1,9 +1,9 @@
 <template>
-    <div class="hover-box" onclick>
+    <div class="hover-box" onclick @mouseenter="onEnter" @mouseleave="onLeave">
         <h2>{{box.title}}</h2>
         <div class="hover-box__content">
             <p class="hover-box__before" v-html="box.before"></p>
-            <p class="hover-box__after" v-html="box.after"></p>
+            <p class="hover-box__after" v-html="box.after" ref="after"></p>
         </div>
     </div>
 </template>
@@ -15,7 +15,15 @@ export default {
             type: Object,
             required: true
         }
-    }
+    },
+    methods: {
+        onEnter() {
+            this.$refs.after.style.willChange = 'transition';
+        },
+        onLeave() {
+            this.$refs.after.style.willChange = 'auto';
+        },
+    },
 }
 </script>
 
@@ -27,8 +35,8 @@ export default {
     overflow: hidden;
     height: 308px;
     border-radius: 20px;
-    border-radius: 20px;
     color: #fff;
+    -webkit-mask-image: radial-gradient(white, black); // fix hidden with border radius not working on ios
     &::after {
         position: absolute;
         bottom: 15px;
