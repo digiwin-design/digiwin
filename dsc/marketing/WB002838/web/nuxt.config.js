@@ -58,7 +58,6 @@ module.exports = {
         { src: '~/plugins/modernizr-custom.js', ssr: false },
         { src: '~/plugins/mobile-detect.js', ssr: false },
         { src: '~/plugins/mobile-detect-modernizr.js', ssr: false },
-        { src: '~/plugins/stickyfill.min.js', ssr: false },
         { src: '~/plugins/jquery-nav-scroll', ssr: false },
         { src: '~/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', ssr: false },
     ],

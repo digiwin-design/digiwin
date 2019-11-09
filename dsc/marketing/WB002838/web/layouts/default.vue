@@ -1,12 +1,10 @@
 <template>
-    <transition name="fade">
-        <div class="wrapper" v-if="result" v-cloak>
-            <Header/>
-            <nuxt/>
-            <MenuMask></MenuMask>
-            <Footer/>
-        </div>
-    </transition>
+    <div class="wrapper">
+        <Header/>
+        <nuxt/>
+        <MenuMask></MenuMask>
+        <Footer/>
+    </div>
 </template>
 
 <script>
@@ -29,11 +27,6 @@ export default {
         Header,
         MenuMask,
         Footer,
-    },
-    computed: {
-        result() {
-            return this.$store.state.result;
-        },
     },
     methods: {
         mediaSensor(minWidth) {

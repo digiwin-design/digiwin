@@ -145,7 +145,7 @@ export default {
             return this.$store.state.isMobile;
         },
         result() {
-            return this.$store.state.result['03'];
+            return this.$store.state.result && this.$store.state.result['03'];
         },
     },
     methods: {

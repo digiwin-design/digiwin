@@ -33,7 +33,9 @@ export default {
     methods: {
         stickyInit() {
             let elements = document.querySelectorAll('.js-fixedNav');
-            Stickyfill.add(elements);
+            let Stickyfill = require('stickyfill');
+            let stickyfill = Stickyfill();
+            stickyfill.add(elements);
         },
         navScrollInit() {
             $('.js-fixedNav').navScroll({ scrollSpy: true });
