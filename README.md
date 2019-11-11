@@ -13,7 +13,7 @@
 | 全站共用 JS | /tw/dsc/js/common.min.js<br>(source: /tw/dsc/js/common.js ) |
 | 全站共用 CSS | /tw/dsc/css/all.css |
 | 後台上稿用重置樣式 | /tw/dsc/css/reboot.css<br>(source: /tw/dsc/css/reboot.scss) |
-| 研討會樣版 | /tw/dsc/template/seminar/ |
+| 研討會 Demo | /tw/dsc/dev/demo/seminar/ |
 | 文章廣告 Banner | /tw/dsc/assets/article-ad/ |
 | 資料下載標題設置 | /tw/dsc/assets/resources/ | 資料來源為 Firebase
 | 原錯誤連結轉址用 | /tw/portal/page/index/id/1202.html |
