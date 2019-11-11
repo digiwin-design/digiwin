@@ -2,7 +2,7 @@
     <main>
         <transition name="fade">
             <div v-if="isReady">
-                <div class="hero">
+                <div class="hero" :style="heroBgStyle">
                     <div class="hero__container">
                         <h1>
                             <picture>
@@ -18,7 +18,7 @@
                         </h1>
                         <div class="hero__btn">
                             <a href="#contact" class="js-nav">立即諮詢</a>
-                            <a href>
+                            <a href="/tw/zlsq.html?id=1937" target="_blank">
                                 <strong>【線上研討會】</strong>
                                 從《工業3.5》看台灣產業發展
                             </a>
@@ -119,12 +119,12 @@ import Loading from '~/components/03/Loading.vue';
 
 export default {
     head: {
-        title: '鼎新MES-將過程經驗數據化，打造人機協作透明製造現場',
+        title: 'MES 打造透明生產現場，整合IT與OT，實現精實管理、降本增效提質',
         meta: [
             {
                 hid: 'description',
                 name: 'description',
-                content: '台灣製造業的智慧製造轉型路徑─人機協作鋼鐵人，透過MES智能現場執行系統，連結人腦與數據大腦，打造高效、精益、透明化現場管理，只有通過精益製造和數字化管理等先進的生產，管理方式優化工廠底層資源，改善數據採集品質，提高生產透明度與效益。'
+                content: '鼎新MES，與ERP無縫整合，隨需搭建智慧化工廠，實現從入庫、派工、報工、出場及設備狀態全程追溯，滿足企業在製品管理(WIP)、品質控管(SPC)、設備整合與管理(EMS)、問題追溯分析、生產現場的即時數據採集等關鍵需求，為企業做出更準確的生產管理決策。'
             }
         ],
     },
@@ -147,6 +147,10 @@ export default {
         result() {
             return this.$store.state.result && this.$store.state.result['03'];
         },
+        heroBgStyle() {
+            let url = this.isMobile ? 'public/images/03/hero-bg-s.png' : 'public/images/03/hero-bg.png';
+            return { 'background-image': `url(${url})` };
+        },
     },
     methods: {
         preloadImg() {
@@ -165,7 +169,7 @@ export default {
                     }
                 };
             });
-        }
+        },
     },
     mounted() {
         this.preloadImg();
@@ -223,14 +227,14 @@ main {
     }
 }
 .hero {
-    @include bg("~static/public/images/03/hero-bg-s.png");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
     height: 696px;
     @media (min-width: $tablet-width + 1) {
         position: absolute;
         top: 0;
         width: 100%;
         height: 745px;
-        background-image: url("~static/public/images/03/hero-bg.png");
     }
     &__container {
         margin: 0 auto;
