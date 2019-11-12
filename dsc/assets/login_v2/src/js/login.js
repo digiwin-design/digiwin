@@ -5,14 +5,16 @@ new Vue({
     },
     data: {
         showPopup: false,
-        email: '',
     },
     computed: {
         dev() {
             return location.hostname !== 'www.digiwin.com';
         },
+        email() {
+            return localStorage.getItem('email') || '';
+        },
         userID() {
-            return localStorage.getItem('line_userID');
+            return localStorage.getItem('line_userID') || '';
         },
         channelID() {
             return '1570741188';
@@ -30,14 +32,8 @@ new Vue({
             return location.origin + location.pathname;
         },
         apiURL() {
-            return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
-        }
-    },
-    watch: {
-        email(val) {
-            localStorage.setItem('email', val);
-            this.setExpTime('email_exp');
-            location.reload();
+            // return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
+            return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/SaveTest';
         }
     },
     methods: {
@@ -83,29 +79,33 @@ new Vue({
                     localStorage.setItem('line_userID', res.data.userId);
                     localStorage.setItem('line_displayName', res.data.displayName);
                     this.setExpTime('line_exp');
-                    this.saveLineLog();
+                    this.saveLineLog(res.data.userId);
                     this.addSubscribeForm();
                 })
                 .catch(error => this.showCover());
         },
-        saveLineLog() {
+        saveLineLog(id) {
             let data = {
-                lineId: this.userID,
+                logtype: 'lineId',
+                lineId: id,
+                mail: '',
                 source: location.href
             };
             this.ajaxSensor(data);
         },
         saveViewLog() {
             let data = {
-                email: '',
+                logtype: this.userID ? 'lineId' : 'mail',
+                lineId: this.userID,
+                mail: this.userID ? '' : this.email,
                 source: location.href
             };
             this.ajaxSensor(data);
         },
         checkLogin() {
             let today = new Date();
-            let exp = parseInt(localStorage.getItem('line_exp'), 10) || parseInt(localStorage.getItem('email_exp'), 10);
-            if (!exp || today.getTime() > exp) {
+            let exp = localStorage.getItem('line_exp') || localStorage.getItem('email_exp');
+            if (!exp || today.getTime() > parseInt(exp, 10)) {
                 this.cleanLS();
                 return false;
             }
@@ -120,7 +120,7 @@ new Vue({
                 <login-form
                     v-model="showPopup"
                     :info="{ channelID: channelID, state: state, callbackURL: callbackURL }"
-                    @set-email="setEmail"
+                    @set-exp="setExpTime"
                     @post="ajaxSensor"
                 ></login-form>
             `);
@@ -188,9 +188,6 @@ new Vue({
             let today = new Date();
             let lastDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + day);
             localStorage.setItem(itemName, lastDay.getTime());
-        },
-        setEmail(email) {
-            this.email = email;
         },
         getParameterByName(name) {
             let url = new URL(location.href);

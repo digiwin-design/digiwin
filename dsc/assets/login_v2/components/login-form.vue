@@ -70,10 +70,11 @@ module.exports = {
             return location.hostname !== 'www.digiwin.com';
         },
         apiURL: function () {
-            return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
+            // return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
+            return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/SaveTest';
         },
         sitekey: function () {
-            return '6LennwITAAAAAOVHXsN6PfrFhF9kCNFJVn__Myan';
+            return this.dev ? '6LennwITAAAAAOVHXsN6PfrFhF9kCNFJVn__Myan' : '6LfRfcEUAAAAACrGjmwhfLqKej_n2JD4zz9kppq8';
         },
     },
     methods: {
@@ -99,12 +100,16 @@ module.exports = {
             if (!this.valid) return;
 
             let data = {
-                email: this.email,
+                logtype: 'mail',
+                lineId: '',
+                mail: this.email,
                 source: location.href
             };
             this.ajaxSensor(data).then(function (res) {
                 this.$emit('input', false); // close popup
-                this.$emit('set-email', this.email); // 將 email 存入父元素的 data
+                this.$emit('set-exp', 'email_exp');
+                localStorage.setItem('email', this.email);
+                location.reload();
             }.bind(this));
         },
         ajaxSensor: function (data, apiURL) {
