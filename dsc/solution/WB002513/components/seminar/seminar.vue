@@ -511,4 +511,58 @@
     </div>
 </template>
 
-<script src="components/seminar/main/seminar.min.js"></script>
+<script>
+module.exports = {
+    props: ['content'],
+    computed: {
+        isMobile: function () {
+            return store.state.isMobile;
+        },
+    },
+    watch: {
+        isMobile: function (value) {
+            // mobile->desktop時預設展開第一項
+            if (!value) {
+                $(this.$refs.accordion).find('h2').eq(0).addClass('active').next().slideDown()
+                    .end().siblings('h2').removeClass('active').next().slideUp();
+            }
+        }
+    },
+    methods: {
+        slideToggle: function (event) {
+            let $target = event.target.nodeName === 'H2' ? $(event.target) : $(event.target).parents('h2');
+            $target.toggleClass('active').next().slideToggle();
+            if (!this.isMobile) {
+                $target.siblings('h2').removeClass('active').next().slideUp();
+            }
+        },
+        clickHandler: function (event) {
+            let delay = $(event.target).data('delay');
+            this.scrollHandler(event, delay);
+        },
+        clickHandlerOnMobile: function (event) {
+            this.scrollHandler(event);
+        },
+        scrollHandler: function (event, delay) {
+            delay = delay || 0;
+            // 展開/收合
+            $(event.target.hash).addClass('active').next().slideDown();
+            if (!this.isMobile) {
+                $(event.target.hash).siblings('h2').removeClass('active').next().slideUp();
+            }
+            // 滾動頁面
+            let $target = $(event.target);
+            let target = $target.attr('href') || $target.data('target');
+            setTimeout(function () {
+                let offset = $('.page-submenu').outerHeight();
+                let targetPos = $(target).offset().top;
+                let finalPos = offset ? targetPos - offset : targetPos;
+                $('html, body').animate({ scrollTop: finalPos });
+            }, delay);
+        }
+    },
+    mounted: function () {
+        $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+    },
+};
+</script>

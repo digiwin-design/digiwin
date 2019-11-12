@@ -1,24 +1,56 @@
 [v-cloak] {
     display: none;
 }
+
+// vue transition
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+// fade image in after load
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+// dat.GUI
+.dg.ac {
+    z-index: 99;
+}
+
 main {
-    padding-top: 50px;
     min-width: 360px;
     font-size: 18px;
     line-height: 1.6;
-    @media (min-width: $tablet-width + 1) {
-        padding-top: 0;
+    *:not(text) {
+        font-size: 100%;
     }
     .container {
         margin: 0 auto;
+        padding: 0 15px;
         max-width: $content-width;
+        @media (min-width: 361px) {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        @media (min-width: $content-width) {
+            padding-right: 0;
+            padding-left: 0;
+        }
     }
-    .mainTitle {
-        font-weight: bold;
-        font-size: 30px;
+    .btn {
+        transition: all .15s ease-in-out;
     }
-    .sectionTitle {
-        padding-top: 50px;
-        font-size: 26px;
+    .video-container {
+        @include youtubeIframe();
     }
 }

@@ -8,4 +8,5 @@ block includes
     script(src='js/seminar.min.js', defer)
 
 block content
-    seminar(v-if='content', :content='content')
+    seminar(v-if='result', :content='result')
+    contact(v-bind:multiple='false', source='')

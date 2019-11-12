@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block includes
+    //- fancybox
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css")
+    script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js", defer)
+    
+    link(rel='stylesheet', href='css/WB00251301/style.css')
+    script(src='js/WB00251301.min.js', defer)
+
+block content
+    include WB00251301.html
