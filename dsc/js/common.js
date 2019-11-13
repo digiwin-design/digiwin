@@ -113,48 +113,13 @@ $(function () {
     }
 });
 
-// 設置文章閱讀權限及插入訂閱表單
-// 表單標題清單：/tw/dsc/assets/login/form.json
-$(function () {
-    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
-
-    // 取得加入閱讀權限的文章
-    fetch('/tw/dsc/assets/login/login.json')
-        .then(res => res.json())
-        .then(res => {
-            // 比對網址成功後載入對應的外部連結
-            let result = res.find(function (item) {
-                item = item.replace(/(.html|.htm)$/, '');
-                let regex = new RegExp(item + '$');
-                return currentUrl.search(regex) !== -1;
-            });
-
-            if (!result) return;
-
-            let head = document.querySelector('head');
-
-            let style = document.createElement('link');
-            style.href = '/tw/dsc/assets/login/css/login.css';
-            style.rel = 'stylesheet';
-            head.appendChild(style);
-
-            let preload = document.createElement('link');
-            preload.href = '/tw/dsc/assets/login/images/login/btn-h.png';
-            preload.rel = 'preload';
-            preload.as = 'image';
-            head.appendChild(preload);
-
-            $.getScript('/tw/dsc/assets/login/js/login.min.js');
-        });
-});
-
-// 設置文章登入及訂閱表單(v2)
-// 訂閱表單標題清單：/tw/dsc/assets/login_v2/form.json
+// 設置文章登入及訂閱表單
+// 訂閱表單標題清單：/tw/dsc/assets/login/form.json
 $(function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
     // 取得加入閱讀權限的文章，比對網址成功後載入相關連結
-    fetch('/tw/dsc/assets/login_v2/login.json')
+    fetch('/tw/dsc/assets/login/login.json')
         .then(res => res.json())
         .then(res => {
             let result = res.find(function (item) {
@@ -169,7 +134,7 @@ $(function () {
 
             let links = [
                 'https://fonts.googleapis.com/icon?family=Material+Icons',
-                '/tw/dsc/assets/login_v2/css/login.css'
+                '/tw/dsc/assets/login/css/login.css'
             ];
             appendLinks(links);
 
@@ -181,7 +146,7 @@ $(function () {
             Promise.all(appendScripts(scripts))
                 .then(() => {
                     let el = document.createElement('script');
-                    el.src = '/tw/dsc/assets/login_v2/js/login.min.js';
+                    el.src = '/tw/dsc/assets/login/js/login.min.js';
                     el.defer = true;
                     head.appendChild(el);
                 })

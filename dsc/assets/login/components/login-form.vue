@@ -70,8 +70,7 @@ module.exports = {
             return location.hostname !== 'www.digiwin.com';
         },
         apiURL: function () {
-            // return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
-            return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/SaveTest';
+            return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
         },
         sitekey: function () {
             return this.dev ? '6LennwITAAAAAOVHXsN6PfrFhF9kCNFJVn__Myan' : '6LfRfcEUAAAAACrGjmwhfLqKej_n2JD4zz9kppq8';
