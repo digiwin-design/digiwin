@@ -43,6 +43,18 @@
                     "mobile": "images/case/banner2-s.jpg"
                 }
             }
+        ],
+        "case1": [
+            {
+                "id": 1,
+                "title": ["安琪兒婦嬰用品"],
+                "desc": ["掌握新消費模式，打造精品專業銷售服務<br>線上線下大融合，開啟全通路的經營佈局", "掌握新消費模式，<br>打造精品專業銷售服務<br>線上線下大融合，<br>開啟全通路的經營佈局"],
+                "imgSrc": [
+                    "images/case1/hero-bg.jpg",
+                    "images/case1/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
         ]
     },
     "hoverBoxs": {
