@@ -1,4 +1,4 @@
-main .progressBars {
+main .progressBar {
     h2 {
         margin-bottom: .5em;
         color: map-get($seminar-color, primary);
@@ -17,10 +17,10 @@ main .progressBars {
         flex-direction: column;
         width: 50%;
         @at-root {
-            main .progressBars li.highest .text p {
+            main .progressBar li.highest .text p {
                 background-color: map-get($seminar-color, primary);
             }
-            main .progressBars li.highest .bar {
+            main .progressBar li.highest .bar {
                 background-color: map-get($seminar-color, orange);
             }
         }

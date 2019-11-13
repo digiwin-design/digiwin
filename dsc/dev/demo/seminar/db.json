@@ -56,48 +56,22 @@
                 ]
             }
         ],
-        "progressBars": [
+        "progressBar": [
             {
-                "subtitle": "長條圖標題1",
-                "items": [
-                    {
-                        "text": "長條圖文字1-1",
-                        "percentage": 10
-                    },
-                    {
-                        "text": "長條圖文字1-2",
-                        "percentage": 20
-                    },
-                    {
-                        "text": "長條圖文字1-3",
-                        "percentage": 30
-                    },
-                    {
-                        "text": "長條圖文字1-4",
-                        "percentage": 40
-                    }
-                ]
+                "text": "長條圖文字1-1",
+                "percentage": 10
             },
             {
-                "subtitle": "長條圖標題2",
-                "items": [
-                    {
-                        "text": "長條圖文字2-1",
-                        "percentage": 10
-                    },
-                    {
-                        "text": "長條圖文字2-2",
-                        "percentage": 20
-                    },
-                    {
-                        "text": "長條圖文字2-3",
-                        "percentage": 30
-                    },
-                    {
-                        "text": "長條圖文字2-4",
-                        "percentage": 40
-                    }
-                ]
+                "text": "長條圖文字1-2",
+                "percentage": 20
+            },
+            {
+                "text": "長條圖文字1-3",
+                "percentage": 30
+            },
+            {
+                "text": "長條圖文字1-4",
+                "percentage": 40
             }
         ]
     }

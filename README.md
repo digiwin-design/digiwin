@@ -83,14 +83,16 @@
 宋冠樺、李孟純、洪之文、石渼华、張琇媚、黃子芸、李宜芳、王齡翊
 - 測試  
 陳琬婷、林韓蕙、蔡承真、李孟純、謝元中
-## LINE 登入紀錄
+## LINE/Email 登入紀錄
 - URL：http://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save
 - Method：POST
 - Request Sample
 ```js
 let data = {
-    lineId: 'U807f121a6ca7f7b808a96e23d5517b8c', // LINE ID
-    source: 'https://www.digiwin.com/tw/dsc/dev/demo/line_member' // 觀看來源網頁位址
+    logtype: "lineId", // 儲存類型(lineId/mail)
+    lineId: "U807f121a6ca7f7b808a96e23d5517b8c", // 如 logtype= mail 可為空字串
+    mail: "test@test.test", // 如 logtype= lineId 可為空字串
+    source: "https://www.digiwin.com/tw/software/2063.html" // 來源網址
 };
 const params = new URLSearchParams();
 params.append('', JSON.stringify(data));
@@ -106,6 +108,9 @@ axios.post('https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save', pa
     "msg": "" // 錯誤訊息
 }
 ```
+- 呼叫時機
+1. LINE/Email 登入成功時
+1. 已登入狀態下進入文章頁面時
 ## LINE 訂閱報名紀錄
 - URL：http://misws.digiwin.com/SocialMediaMarketing/api/member/Save
 - Method：POST
