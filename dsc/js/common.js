@@ -114,7 +114,7 @@ $(function () {
 });
 
 // 設置文章登入及訂閱表單
-// 訂閱表單標題清單：/tw/dsc/assets/login/form.json
+// 訂閱表單標題清單：/tw/dsc/assets/login/subscribe.json
 $(function () {
     let currentUrl = location.pathname.replace(/(.html|.htm)$/, '');
 
