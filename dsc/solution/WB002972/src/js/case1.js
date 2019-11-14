@@ -36,6 +36,15 @@ let app = new Vue({
     components: {
         'slider-banner': httpVueLoader('components/case1/slider-banner.vue'),
         'slider-banner-s': httpVueLoader('components/case1/slider-banner-s.vue'),
+        'section-title': httpVueLoader('components/case1/section-title.vue'),
+        'section-title2': httpVueLoader('components/case1/section-title2.vue'),
+        'section2-svg': httpVueLoader('components/case1/svg/section2-svg.vue'),
+        'section3-svg': httpVueLoader('components/case1/svg/section3-svg.vue'),
+        'section4-svg': httpVueLoader('components/case1/svg/section4-svg.vue'),
+        'section5-svg': httpVueLoader('components/case1/svg/section5-svg.vue'),
+        'section6-svg': httpVueLoader('components/case1/svg/section6-svg.vue'),
+        'section7-svg': httpVueLoader('components/case1/svg/section7-svg.vue'),
+        'slider-checkbox': httpVueLoader('components/case1/slider-checkbox.vue'),
     },
     computed: {
         isMobile() {

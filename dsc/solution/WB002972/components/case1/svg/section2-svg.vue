@@ -1,29 +1,45 @@
 <template>
-    <div ref="svg" class="svgContainer"></div>
+    <div class="svg">
+        <div ref="svgContainer" class="svg__container" v-html="content"></div>
+    </div>
 </template>
 
 <script>
 module.exports = {
+    props: {
+        src: {
+            type: String,
+            required: true
+        }
+    },
     data: function () {
         return {
+            content: '',
             timeline: new TimelineMax(),
-            target: null
         }
     },
     computed: {
-        isMobile: function () {
-            return store.state.isMobile;
-        },
+        ref: function () {
+            return this.$refs.svgContainer;
+        }
     },
     methods: {
         getSvg: function () {
-            fetchFile('images/intro/svg/section3.svg').then(function (res) {
-                this.$refs.svg.innerHTML = res;
-                // this.initGUI();
-                this.initAn();
-                this.scrollHandler();
-                window.addEventListener('scroll', this.scrollHandler);
+            fetchFile(this.src).then(function (res) {
+                this.content = res;
+                this.$nextTick(() => {
+                    this.setSize();
+                    this.initGUI();
+                    this.initAn();
+                    this.scrollHandler();
+                });
             }.bind(this));
+        },
+        setSize: function () {
+            let w = this.ref.firstElementChild.viewBox.baseVal.width;
+            let h = this.ref.firstElementChild.viewBox.baseVal.height;
+            this.ref.style.paddingTop = (h / w * 100) + '%';
+            this.$el.style.maxWidth = w + 'px';
         },
         initGUI: function () {
             let _this = this;
@@ -42,23 +58,16 @@ module.exports = {
             gui.add(controls, 'pause');
         },
         initAn: function () {
-            this.timeline.set(this.$refs.svg.querySelectorAll('g'), {
-                transformOrigin: '50% 50%',
-                scale: .3,
-                opacity: 0
-            });
-            this.timeline.pause(0);
-            for (let i = 1; i <= 2; i++) {
+            let groups = document.querySelectorAll('[data-name^=g]');
+            for (let i = 1; i <= groups.length; i++) {
                 let pos = i === 1 ? '0' : '-=.4';
-                this.timeline.to(this.$refs.svg.querySelector('[data-name=group' + i + ']'), .8, {
-                    scale: 1,
-                    opacity: 1
-                }, pos);
+                this.timeline.from('[data-name=g' + i + ']', .8, { opacity: 0 }, pos);
             }
+            this.timeline.pause();
         },
         scrollHandler: _.throttle(function () {
-            let el = this.$refs.svg;
-            getScrollPos(el, function () {
+            window.addEventListener('scroll', this.scrollHandler);
+            getScrollPos(this.ref, function () {
                 this.timeline.play();
                 window.removeEventListener('scroll', this.scrollHandler);
             }.bind(this));
@@ -73,13 +82,16 @@ module.exports = {
 }
 </script>
 
-<style>
-main .svgContainer {
+<style scoped>
+.svg {
+    margin: 0 auto;
+}
+.svg__container {
     position: relative;
     width: 100%;
     height: 0;
 }
-main .svgContainer svg {
+.svg__container svg {
     position: absolute;
     top: 0;
     left: 0;

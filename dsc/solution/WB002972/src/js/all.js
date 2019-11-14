@@ -108,13 +108,12 @@ function fetchFile(file) {
 /**
  * 判斷瀏覽器底部是否已捲動至指定元素
  * @param {string} el
- * @param {number} offset
  * @param {function} callback
+ * @param {number} offset
  */
-function getScrollPos(el, offset, callback) {
-    let scrollTop = $(window).scrollTop();
-    let target = $(el).offset().top + offset;
-    if (scrollTop >= (target - window.innerHeight)) {
+function getScrollPos(el, callback, offset = 0) {
+    let targetPos = el.getBoundingClientRect().top + window.pageYOffset - window.innerHeight + offset;
+    if (window.pageYOffset >= targetPos) {
         callback();
     }
 }

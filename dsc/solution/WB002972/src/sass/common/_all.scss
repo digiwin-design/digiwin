@@ -26,24 +26,6 @@ main {
             padding-left: 0;
         }
     }
-    .mainTitle {
-        font-weight: bold;
-        font-size: 30px;
-    }
-    .sectionTitle {
-        padding-top: 2em;
-        padding-bottom: 1em;
-        text-align: center;
-        font-size: 26px;
-        line-height: 1.3;
-        @media (min-width: $tablet-width + 1) {
-            font-size: 36px;
-        }
-    }
-    .sectionDesc {
-        margin-bottom: 2em;
-        text-align: center;
-    }
     .btn {
         display: block;
         width: 100%;
