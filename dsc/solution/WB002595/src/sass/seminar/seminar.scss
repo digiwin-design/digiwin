@@ -26,7 +26,8 @@ main {
         }
         h1 {
             color: #f0fe11;
-            font-size: 30px;
+            font-weight: bold;
+            font-size: 36px;
             @media (min-width: $tablet-width + 1) {
                 font-size: 48px;
             }
