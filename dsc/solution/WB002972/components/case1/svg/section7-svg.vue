@@ -27,11 +27,11 @@ module.exports = {
         getSvg: function () {
             fetchFile(this.src).then(function (res) {
                 this.content = res;
-                this.$nextTick(() => {
+                this.$nextTick(function () {
                     this.setSize();
                     // this.initGUI();
-                    // this.initAn();
-                    // this.scrollHandler();
+                    this.initAn();
+                    this.scrollHandler();
                 });
             }.bind(this));
         },
@@ -58,7 +58,18 @@ module.exports = {
             gui.add(controls, 'pause');
         },
         initAn: function () {
-            
+            // get svg group total
+            let nodes = Array.from(this.ref.querySelectorAll('[data-name^=g]'));
+            let groups = nodes.map(function(val, idx) {
+                return val.getAttribute('data-name');
+            });
+            groups = Array.from(new Set(groups));
+
+            for (let i = 1; i <= groups.length; i++) {
+                let pos = i === 1 ? '0' : '-=.4';
+                this.timeline.from(this.ref.querySelectorAll('[data-name=g' + i + ']'), .8, { opacity: 0 }, pos);
+            }
+            this.timeline.pause();
         },
         scrollHandler: _.throttle(function () {
             window.addEventListener('scroll', this.scrollHandler);

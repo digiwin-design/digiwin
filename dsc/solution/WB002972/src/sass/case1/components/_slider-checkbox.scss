@@ -46,6 +46,7 @@ main .slider-checkbox {
     section {
         display: flex;
         flex-direction: column;
+        width: 100%;
         align-items: center;
         label {
             @include btn(300px, 60px, #fff, #b91818);

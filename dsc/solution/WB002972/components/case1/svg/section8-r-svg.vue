@@ -21,6 +21,16 @@ module.exports = {
     computed: {
         ref: function () {
             return this.$refs.svgContainer;
+        },
+        isRightSlide: function () {
+            return store.state.isRightSlide;
+        }
+    },
+    watch: {
+        isRightSlide: function (val) {
+            if (val) {
+                this.timeline.play();
+            }
         }
     },
     methods: {
@@ -64,17 +74,25 @@ module.exports = {
                 return val.getAttribute('data-name');
             });
             groups = Array.from(new Set(groups));
-            
+
             for (let i = 1; i <= groups.length; i++) {
                 let pos = i === 1 ? '0' : '-=.4';
-                this.timeline.from(this.ref.querySelectorAll('[data-name=g' + i + ']'), .8, { opacity: 0 }, pos);
+                if (i === 5) {
+                    this.timeline.from(this.ref.querySelector('[data-name=g5]'), .8, { width: 0 }, pos);
+                }
+                else {
+                    this.timeline.from(this.ref.querySelectorAll('[data-name=g' + i + ']'), .8, { opacity: 0 }, pos);
+                }
             }
             this.timeline.pause();
+
         },
         scrollHandler: _.throttle(function () {
             window.addEventListener('scroll', this.scrollHandler);
             getScrollPos(this.ref, function () {
-                this.timeline.play();
+                if (this.isRightSlide) {
+                    this.timeline.play();
+                }
                 window.removeEventListener('scroll', this.scrollHandler);
             }.bind(this));
         }, 100),
@@ -91,6 +109,7 @@ module.exports = {
 <style scoped>
 .svg {
     margin: 0 auto;
+    width: 100%;
 }
 .svg__container {
     position: relative;

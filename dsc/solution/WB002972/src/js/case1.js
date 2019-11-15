@@ -1,9 +1,8 @@
-// Vue.use(VueAwesomeSwiper);
-
 const store = new Vuex.Store({
     state: {
         isMobile: false,
         isMediumWidth: false,
+        isRightSlide: false,
         result: null,
     },
     mutations: {
@@ -15,6 +14,9 @@ const store = new Vuex.Store({
         },
         setData(state, payload) {
             state.result = payload;
+        },
+        updateSlide(state, payload) {
+            state.isRightSlide = payload;
         },
     },
     actions: {
@@ -36,6 +38,7 @@ let app = new Vue({
     components: {
         'slider-banner': httpVueLoader('components/case1/slider-banner.vue'),
         'slider-banner-s': httpVueLoader('components/case1/slider-banner-s.vue'),
+        'slider-checkbox': httpVueLoader('components/case1/slider-checkbox.vue'),
         'section-title': httpVueLoader('components/case1/section-title.vue'),
         'section-title2': httpVueLoader('components/case1/section-title2.vue'),
         'section2-svg': httpVueLoader('components/case1/svg/section2-svg.vue'),
@@ -44,7 +47,8 @@ let app = new Vue({
         'section5-svg': httpVueLoader('components/case1/svg/section5-svg.vue'),
         'section6-svg': httpVueLoader('components/case1/svg/section6-svg.vue'),
         'section7-svg': httpVueLoader('components/case1/svg/section7-svg.vue'),
-        'slider-checkbox': httpVueLoader('components/case1/slider-checkbox.vue'),
+        'section8-l-svg': httpVueLoader('components/case1/svg/section8-l-svg.vue'),
+        'section8-r-svg': httpVueLoader('components/case1/svg/section8-r-svg.vue'),
     },
     computed: {
         isMobile() {

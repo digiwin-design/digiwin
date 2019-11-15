@@ -64,7 +64,7 @@ module.exports = {
                 return val.getAttribute('data-name');
             });
             groups = Array.from(new Set(groups));
-            
+
             for (let i = 1; i <= groups.length; i++) {
                 let pos = i === 1 ? '0' : '-=.4';
                 this.timeline.from(this.ref.querySelectorAll('[data-name=g' + i + ']'), .8, { opacity: 0 }, pos);
@@ -91,6 +91,7 @@ module.exports = {
 <style scoped>
 .svg {
     margin: 0 auto;
+    width: 100%;
 }
 .svg__container {
     position: relative;

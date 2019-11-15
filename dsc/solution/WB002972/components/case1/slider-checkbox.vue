@@ -37,6 +37,7 @@ module.exports = {
         isRightSlide: function (val) {
             this.currentSlide = val ? 1 : 0;
             this.setSlideHeight();
+            store.commit('updateSlide', val);
         }
     },
     methods: {

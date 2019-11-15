@@ -14,7 +14,7 @@ main {
             background-color: $color;
         }
     }
-    article:not(.section1) {
+    article:not(.section1):not(.section5) {
         padding-bottom: 60px;
     }
     .section1 {
