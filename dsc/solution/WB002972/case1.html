@@ -109,8 +109,8 @@
         <template slot="left">
             <section>
                 <section-title title="現在的安琪兒一持續往更好進化中" desc="即時掌握人、貨、場，才能快速因應市場變化"></section-title>
-                <section8-l-svg src="images/case1/svg/section8-l/section8-l.svg" v-if="!isMobile"></section8-l-svg>
-                <img src="images/case1/section8-l-s.jpg" v-else>
+                <section8-l-svg src="images/case1/svg/section8-l/section8-l.svg" v-show="!isMobile"></section8-l-svg>
+                <img src="images/case1/section8-l-s.jpg" v-show="isMobile">
                 <label for="slider-toggle1">看看安琪兒行銷成效 &gt;&gt;&gt;</label>
             </section>
         </template>

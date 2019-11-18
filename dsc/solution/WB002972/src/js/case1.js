@@ -20,7 +20,9 @@ const store = new Vuex.Store({
             state.isRightSlide = payload;
         },
         updateLoadedSvg(state, payload) {
-            state.loadedSvg.push(payload);
+            if (state.loadedSvg.length < 2) {
+                state.loadedSvg.push(payload);
+            }
         },
     },
     actions: {

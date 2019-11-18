@@ -41,6 +41,7 @@ module.exports = {
     watch: {
         isRightSlide: function (val) {
             this.currentSlide = val ? 1 : 0;
+            this.getSlideHeight();
             this.setSlideHeight();
             store.commit('updateSlide', val);
         },
@@ -62,10 +63,10 @@ module.exports = {
         }
     },
     mounted: function () {
-        window.addEventListener('resize', function () {
+        window.addEventListener('resize', _.throttle(function () {
             this.getSlideHeight();
             this.setSlideHeight();
-        }.bind(this));
+        }.bind(this), 100));
     },
 }
 </script>
