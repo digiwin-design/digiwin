@@ -21,7 +21,7 @@ module.exports = {
         }
     },
     computed: {
-        isMobile() {
+        isMobile: function () {
             return store.state.isMobile;
         },
         stayTime: function () {
