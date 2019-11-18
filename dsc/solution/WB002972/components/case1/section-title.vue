@@ -36,17 +36,30 @@ module.exports = {
     max-width: 100%;
     font-size: 26px;
 }
-.sectionTitle p {
-    margin-top: .5em;
-    max-width: 100%;
-}
-.sectionTitle strong {
-    color: #bb0b20;
-    font-weight: normal;
-}
 @media (min-width: 769px) {
     .sectionTitle h1 {
         font-size: 36px;
     }
+}
+.sectionTitle p {
+    margin-top: .5em;
+    max-width: 100%;
+}
+@media (min-width: 769px) {
+    .sectionTitle p {
+        text-align: center;
+    }
+}
+.sectionTitle p br {
+    display: none;
+}
+@media (min-width: 769px) {
+    .sectionTitle p br {
+        display: block;
+    }
+}
+.sectionTitle strong {
+    color: #bb0b20;
+    font-weight: normal;
 }
 </style>

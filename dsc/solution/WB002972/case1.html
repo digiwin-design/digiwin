@@ -34,6 +34,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js" defer></script>
     <script src="js/all.min.js" defer></script>
     <link rel="preload" href="images/case1/hero-bg.jpg" as="image">
+    <link rel="preload" href="images/case1/hero-bg-s.jpg" as="image">
     <link rel="stylesheet" href="css/case1/style.css">
     <script src="js/case1.min.js" defer></script>
     <main v-cloak v-if="result"><slider-banner-s v-if="isMobile" v-bind:slides="result.banner.case1" device="mobile"></slider-banner-s>
@@ -69,7 +70,7 @@
 <article class="section3">
     <div class="container">
         <section-title title="安琪兒邁向更好一找出<strong>2大關鍵</strong>問題"></section-title>
-        <img src="images/case1/svg/section3-s.svg" v-if="isMobile">
+        <img src="images/case1/section3-s.png" v-if="isMobile">
         <section3-svg src="images/case1/svg/section3.svg" v-else></section3-svg>
     </div>
 </article>
@@ -77,8 +78,8 @@
 <article class="section4">
     <div class="container">
         <section-title title="更好的安琪兒一<strong>3階段啟動</strong>新零售模式"></section-title>
-        <img src="images/case1/svg/section4-s.svg" v-if="isMobile">
-        <section4-svg src="images/case1/svg/section4.svg" v-else></section4-svg>
+        <section4-svg src="images/case1/svg/section4-s.svg" v-show="isMobile"></section4-svg>
+        <section4-svg src="images/case1/svg/section4.svg" v-show="!isMobile"></section4-svg>
     </div>
 </article>
 
@@ -115,7 +116,7 @@
         </template>
         <template slot="right">
             <section>
-                <section-title title="統一會員中心和行銷活動的成效" desc="透過導入新零售模式，打造會員中心，吸引有效的新會員<br>並且深入經營，達到多來客、常回購、高客單，提升營收看的見"></section-title>
+                <section-title title="統一會員中心和行銷活動的成效" desc="透過導入新零售模式，打造會員中心，吸引有效的新會員，<br>並且深入經營，達到多來客、常回購、高客單，提升營收看的見"></section-title>
                 <section8-r-svg src="images/case1/svg/section8-r.svg"></section8-r-svg>
                 <label for="slider-toggle1">&lt;&lt;&lt; 回到上一頁</label>
             </section>

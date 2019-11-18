@@ -4,6 +4,7 @@ const store = new Vuex.Store({
         isMediumWidth: false,
         isRightSlide: false,
         result: null,
+        loadedSvg: [],
     },
     mutations: {
         updateDevice(state, payload) {
@@ -17,6 +18,9 @@ const store = new Vuex.Store({
         },
         updateSlide(state, payload) {
             state.isRightSlide = payload;
+        },
+        updateLoadedSvg(state, payload) {
+            state.loadedSvg.push(payload);
         },
     },
     actions: {

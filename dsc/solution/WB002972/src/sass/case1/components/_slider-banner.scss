@@ -7,9 +7,12 @@ main .banner {
         cursor: pointer;
     }
     &-slide {
-        height: 420px;
+        padding-top: 80px;
+        height: 451px;
         background-position: 100% 0;
         @media (min-width: $tablet-width + 1) {
+            padding-top: 0;
+            height: 501px;
             background-position: 50% 0;
         }
     }
@@ -17,7 +20,9 @@ main .banner {
         display: flex;
         flex-direction: column;
         height: 100%;
-        justify-content: center;
+        @media (min-width: $tablet-width + 1) {
+            justify-content: center;
+        }
     }
     &-title {
         margin-bottom: .5em;

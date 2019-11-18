@@ -1365,6 +1365,16 @@
                 "url": "case"
             },
             {
+                "text": "輔導案例",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "安琪兒",
+                        "url": "case1"
+                    }
+                ]
+            },
+            {
                 "text": "研討會",
                 "url": "seminar"
             },

@@ -33,18 +33,25 @@ module.exports = {
             currentSlide: 0,
         }
     },
+    computed: {
+        loadedSvg: function () {
+            return store.state.loadedSvg;
+        }
+    },
     watch: {
         isRightSlide: function (val) {
             this.currentSlide = val ? 1 : 0;
             this.setSlideHeight();
             store.commit('updateSlide', val);
-        }
+        },
+        loadedSvg: function (val) {
+            if (val.length === 2) {
+                this.getSlideHeight();
+                this.setSlideHeight();
+            }
+        },
     },
     methods: {
-        onLoad: function () {
-            this.getSlideHeight();
-            this.setSlideHeight();
-        },
         getSlideHeight: function () {
             this.$el.querySelectorAll('section').forEach(function (el, idx) {
                 this.$set(this.sectionHeight, idx, el.offsetHeight);
@@ -55,7 +62,6 @@ module.exports = {
         }
     },
     mounted: function () {
-        window.addEventListener('load', this.onLoad);
         window.addEventListener('resize', function () {
             this.getSlideHeight();
             this.setSlideHeight();

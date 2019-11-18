@@ -32,6 +32,7 @@ module.exports = {
                     // this.initGUI();
                     this.initAn();
                     this.scrollHandler();
+                    store.commit('updateLoadedSvg', 'section8-l');
                 });
             }.bind(this));
         },
