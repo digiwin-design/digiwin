@@ -104,13 +104,13 @@ module.exports = {
     }
 }
 .robot [data-name="arm"] {
-    transform-origin: 202px 160px;
+    transform-origin: 202px 160px; /* [data-name="arm-joint"] cx & cy */
 }
 .robot.active [data-name="arm"] {
     animation: armAn 0.5s 1s infinite alternate;
 }
 .robot [data-name="lower-arm"] {
-    transform-origin: 252px 212px;
+    transform-origin: 252px 212px; /* [data-name="lower-arm-joint"] cx & cy */
     transform: rotate(30deg);
 }
 .robot.active [data-name="lower-arm"] {
