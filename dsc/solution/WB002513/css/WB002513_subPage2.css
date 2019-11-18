@@ -60,7 +60,7 @@ main .subA01bg {
 
 main h3.mis01_icon {
     text-align: left;
-    background: url(../images/Icon.png) no-repeat left -200px;
+    background: url(../images/icon.png) no-repeat left -105px;
     padding-left: 40px;
     color: #0c53aa;
 }
@@ -119,7 +119,7 @@ main #subA02 ul li {
 
 main h3.mis02_icon {
     text-align: left;
-    background: url(../images/Icon.png) no-repeat left -50px;
+    background: url(../images/icon.png) no-repeat left -55px;
     padding-left: 40px;
     color: #0c53aa;
 }
@@ -200,10 +200,9 @@ main .subC01bg {
 
 main h3.mis03_icon {
     text-align: left;
-    background: url(../images/Icon.png) no-repeat left -150px;
+    background: url(../images/icon.png) no-repeat left -155px;
     padding-left: 40px;
     color: #0c53aa;
-	line-height: 70px;
 }
 
 main h4.BB {

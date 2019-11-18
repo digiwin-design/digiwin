@@ -295,7 +295,7 @@ main .subC01bg {
 
 main h3.DD {
     text-align: left;
-    background: url(../images/Icon.png) no-repeat left 0px;
+    background: url(../images/icon.png) no-repeat left -5px;
     padding-left: 40px;
     color: #0c53aa;
 }
