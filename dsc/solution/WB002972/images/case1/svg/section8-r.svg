@@ -1,6 +1,6 @@
-<svg id="f2d25593-ed04-4bb8-8046-f08eb8a3fc6e" data-name="圖層 1"
+<svg id="bc8401af-40ab-451f-8255-eebfb76e2c03" data-name="圖層 1"
 	xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 559.3">
-	<g id="fc5d323d-e843-423d-a77b-ac5de0409682" data-name="g6">
+	<g id="e1c84650-5335-47b2-89f6-245d0c873817" data-name="g6">
 		<text transform="translate(788.12 187.18)" style="font-size:34.51818084716797px;fill:#7a7a7a;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">
 			<tspan style="letter-spacing:0.012996991208708022em">增</tspan>
 			<tspan x="34.97" y="0">加</tspan>
@@ -47,7 +47,7 @@
 		</text>
 		<text transform="translate(969.48 526.91)" style="font-size:34.51818084716797px;fill:#dc5924;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">次</text>
 	</g>
-	<g id="ad1229c1-0415-40d1-b623-4e9a2abdad03" data-name="g4">
+	<g id="a2d1ec48-99de-42da-9d50-2c104d7e3006" data-name="g4">
 		<path d="M329.28,136.91c0-12.72,9.9-22.68,21.68-22.68h89.67a21.9,21.9,0,0,1,21.68,22.68V629a22.28,22.28,0,0,1-21.68,22.69H351A22.56,22.56,0,0,1,329.28,629V136.91Z" transform="translate(291.09 -114.23)" style="fill:#f0f0e9;fill-rule:evenodd"/>
 		<text transform="translate(640.14 56.45)" style="font-size:31.55946922302246px;fill:#b03800;font-family:MicrosoftJhengHeiBold, Microsoft JhengHei">
 			<tspan style="letter-spacing:0.0019821126027636336em">導入</tspan>
@@ -65,7 +65,7 @@
 		<text transform="translate(661.37 422.19)" style="font-size:31.55946922302246px;fill:#b03800;font-family:MicrosoftJhengHeiBold, Microsoft JhengHei">30%</text>
 		<text transform="translate(655.78 504.05)" style="font-size:31.55946922302246px;fill:#b03800;font-family:MicrosoftJhengHeiBold, Microsoft JhengHei">1.43</text>
 	</g>
-	<g id="a6986569-3892-4f11-92a4-2af219327ce2" data-name="g3">
+	<g id="f45b7642-669d-407b-950c-9c7fe55739e2" data-name="g3">
 		<path d="M166.69,136.91a21.89,21.89,0,0,1,21.68-22.68h88.69a22.36,22.36,0,0,1,22.66,22.68V629c0,12.43-9.9,22.39-22.66,22.69H188.37A22.26,22.26,0,0,1,166.69,629V136.91Z" transform="translate(291.09 -114.23)" style="fill:#eaebee;fill-rule:evenodd"/>
 		<text transform="translate(481.26 54.14)" style="font-size:28.60076904296875px;stroke:#000;stroke-miterlimit:10;stroke-width:0.6219699382781982px;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei;letter-spacing:0.013003342134134585em">導入
 			<tspan x="57.94" y="0" style="letter-spacing:0.000017087177574421263em">後</tspan>
@@ -92,7 +92,7 @@
 			<tspan x="40.15" y="0">7</tspan>
 		</text>
 	</g>
-	<g id="b434ee94-3181-438a-8a25-c1eb6d4a64ac" data-name="g2">
+	<g id="b34572e2-fa63-4178-9fb4-3c9ed3cb6097" data-name="g2">
 		<path d="M3.12,136.91c.5-12.72,10.45-22.68,22.67-22.68h88.68a22.64,22.64,0,0,1,22.66,22.68V629a23,23,0,0,1-22.66,22.69H25.79A23.5,23.5,0,0,1,3.12,629V136.91Z" transform="translate(291.09 -114.23)" style="fill:#f4d7d7;fill-rule:evenodd"/>
 		<text transform="translate(322.35 51.86)" style="font-size:26.62830924987793px;stroke:#000;stroke-miterlimit:10;stroke-width:0.5790799856185913px;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">
 			<tspan style="letter-spacing:-0.008992915894882976em">導入</tspan>
@@ -111,8 +111,7 @@
 			<tspan style="letter-spacing:-0.004991985966139121em">10</tspan>
 			<tspan x="30.6" y="0">%</tspan>
 		</text>
-		<text transform="translate(340.79 336.82)" style="font-size:26.62830924987793px;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">0</text>
-		<text transform="translate(354.13 336.82)" style="font-size:26.62830924987793px;stroke:#000;stroke-miterlimit:10;stroke-width:0.5790799856185913px;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">倍</text>
+		<text transform="translate(345.13 336.82)" style="font-size:26.62830924987793px;stroke:#000;stroke-miterlimit:10;stroke-width:0.5790799856185913px;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">無</text>
 		<text transform="translate(323.78 418.52)" style="font-size:26.62830924987793px;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">
 			<tspan style="letter-spacing:-0.004991985966139121em">10</tspan>
 			<tspan x="30.6" y="0" style="letter-spacing:-0.002018817853953321em">.</tspan>
@@ -124,7 +123,7 @@
 			<tspan x="21.38" y="0" style="letter-spacing:0.000018352889581393828em">1</tspan>
 		</text>
 	</g>
-	<g id="ebbeed99-1bc1-4f72-9ec7-93d187d4647d" data-name="g1">
+	<g id="ba0621bc-12ad-4860-84dd-97a7972c99ef" data-name="g1">
 		<path d="M-291.09,255.26c0-4.78,3.79-8.57,8.86-8.88h243c5.09.31,8.89,4.1,8.87,8.88v33.53a8.79,8.79,0,0,1-8.87,8.88h-243a8.8,8.8,0,0,1-8.86-8.88V255.26Z" transform="translate(291.09 -114.23)" style="fill:#7a7a7a;fill-rule:evenodd"/>
 		<text transform="translate(31.9 166.96)" style="font-size:27.59040069580078px;fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.5361799597740173px;font-family:MicrosoftJhengHeiRegular, Microsoft JhengHei">
 			<tspan style="letter-spacing:0.015002838914792508em">新增會員人</tspan>
@@ -155,7 +154,7 @@
 		<path d="M-161.18,627.68a3.94,3.94,0,0,1,4-3.93,4,4,0,0,1,3.92,4,3.94,3.94,0,0,1-4,3.93,3.93,3.93,0,0,1-3.92-4Zm7.68,41.92a3.94,3.94,0,0,1-4,3.93,3.94,3.94,0,0,1-3.92-4,3.94,3.94,0,0,1,4-3.93,3.93,3.93,0,0,1,3.92,4Zm-2.76-41.9-.19,41.89h-2l.19-41.89h2Z" transform="translate(291.09 -114.23)" style="fill:#dc5924"/>
 	</g>
     <foreignObject data-name="g5" width="1016" height="559.3">
-        <svg id="a29bdf1b-63f5-4072-acba-512ff7724747" width="100%" height="100%">
+        <svg id="bfa3c266-26c5-4fa3-9e35-5c1c8ede6679" width="100%" height="100%">
             <path d="M493.94,310.84A3.95,3.95,0,1,0,490,306.9a3.94,3.94,0,0,0,3.94,3.94ZM-156.95,303a4,4,0,0,0-3.94,3.95,4,4,0,0,0,3.94,3.94A3.94,3.94,0,0,0-153,306.9a3.94,3.94,0,0,0-3.94-3.95Zm650.89,3H-156.95v2H493.94v-2Z" transform="translate(291.09 -114.23)" style="fill:#7a7a7a"/>
             <path d="M493.94,399.49a3.95,3.95,0,1,0-3.94-3.95,3.94,3.94,0,0,0,3.94,3.95Zm-650.89-7.89a3.94,3.94,0,0,0-3.94,3.94,4,4,0,0,0,3.94,3.95,3.94,3.94,0,0,0,3.94-3.95,3.93,3.93,0,0,0-3.94-3.94Zm650.89,3H-156.95v2H493.94v-2Z" transform="translate(291.09 -114.23)" style="fill:#f5c201"/>
             <path d="M493.94,481.79a3.95,3.95,0,1,0-3.94-3.94,3.93,3.93,0,0,0,3.94,3.94Zm-650.89-7.89a4,4,0,0,0-3.94,4,3.94,3.94,0,0,0,3.94,3.94,3.93,3.93,0,0,0,3.94-3.94,3.94,3.94,0,0,0-3.94-4Zm650.89,3H-156.95v2H493.94v-2Z" transform="translate(291.09 -114.23)" style="fill:#526db0"/>
