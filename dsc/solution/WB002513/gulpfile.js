@@ -74,6 +74,15 @@ gulp.task('bower', function() {
         'overrides': {
             'jquery': {
                 'main': 'dist/jquery.min.js'
+            },
+            'lodash': {
+                'main': 'dist/lodash.min.js'
+            },
+            'swiper': {
+                'main':  [
+                    'dist/css/swiper.min.css',
+                    'dist/js/swiper.min.js'
+                ]
             }
         }
     })).pipe(gulp.dest('assets'));

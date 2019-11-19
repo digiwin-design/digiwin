@@ -20,7 +20,7 @@ const store = new Vuex.Store({
     actions: {
         getData(context) {
             axios.get('db.json').then(res => {
-                context.commit('setData', res.data);
+                context.commit('setData', res.data.manufacture);
                 app.$nextTick(() => {
                     // 依據選單高度設定main上方間距
                     let menuHeight = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
@@ -33,6 +33,14 @@ const store = new Vuex.Store({
 
 let app = new Vue({
     el: 'main',
+    components: {
+        'slider-banner': httpVueLoader('components/WB00251301_Manufacture/slider-banner.vue'),
+        'slider-banner-s': httpVueLoader('components/WB00251301_Manufacture/slider-banner-s.vue'),
+        'section-title': httpVueLoader('components/WB00251301_Manufacture/section-title.vue'),
+        'progress-bar': httpVueLoader('components/WB00251301_Manufacture/progress-bar.vue'),
+        'pain': httpVueLoader('components/WB00251301_Manufacture/pain.vue'),
+        'collapse': httpVueLoader('components/WB00251301_Manufacture/collapse.vue'),
+    },
     computed: {
         isMobile() {
             return store.state.isMobile;
@@ -43,6 +51,12 @@ let app = new Vue({
         result() {
             return store.state.result;
         },
+        pains() {
+            return {
+                section1: this.result.pains.slice(0, 3),
+                section2: this.result.pains.slice(3)
+            };
+        }
     },
     methods: {
         mediaSensor(minWidth) {
