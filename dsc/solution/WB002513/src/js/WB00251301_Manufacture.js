@@ -40,6 +40,7 @@ let app = new Vue({
         'progress-bar': httpVueLoader('components/WB00251301_Manufacture/progress-bar.vue'),
         'pain': httpVueLoader('components/WB00251301_Manufacture/pain.vue'),
         'collapse': httpVueLoader('components/WB00251301_Manufacture/collapse.vue'),
+        'chart-list': httpVueLoader('components/WB00251301_Manufacture/chart-list.vue'),
     },
     computed: {
         isMobile() {

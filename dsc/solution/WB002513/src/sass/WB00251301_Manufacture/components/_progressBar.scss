@@ -1,10 +1,12 @@
 main .progressBar {
     $color: (
-        primary: #0971aa,
-        secondary: #169dc1,
-        primary-bar: #3a3a3a,
-        secondary-bar: #7a7a7a,
+    primary: #0971aa,
+    secondary: #169dc1,
+    primary-bar: #3a3a3a,
+    secondary-bar: #7a7a7a,
     );
+    margin: 0 auto;
+    max-width: 885px;
     h2 {
         margin-bottom: .5em;
         color: map-get($color, primary);
