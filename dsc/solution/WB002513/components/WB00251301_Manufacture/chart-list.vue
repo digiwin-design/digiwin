@@ -45,10 +45,18 @@ module.exports = {
             let height = this.$el.offsetHeight;
             this.$el.style.height = height + 'px';
         }, 100),
+        preload: function () {
+            let imgs = [];
+            for (let i = 1; i <= 7; i++) {
+                imgs.push('images/WB00251301_Manufacture/collapse-illust' + i + '.png');
+            }
+            preloadImg(imgs);
+        },
     },
     mounted: function () {
         window.addEventListener('load', this.setHeight);
         window.addEventListener('resize', this.setHeight);
+        this.preload();
     },
 }
 </script>

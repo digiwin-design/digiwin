@@ -110,6 +110,28 @@ function fetchFile(file) {
     });
 }
 
+/**
+ * 預先載入圖片
+ * @param {Array} imgs
+ * @returns {Promise}
+ */
+function preloadImg(imgs) {
+    return new Promise(resolve => {
+        let loaded = 0;
+        for (let i = 0; i < imgs.length; i++) {
+            const element = imgs[i];
+            let img = document.createElement('IMG');
+            img.src = element;
+            img.onload = () => {
+                loaded++;
+                if (loaded === imgs.length) {
+                    resolve();
+                }
+            };
+        }
+    });
+}
+
 // =============================================================================
 // event
 // =============================================================================

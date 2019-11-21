@@ -26,6 +26,7 @@ const store = new Vuex.Store({
                     let menuHeight = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
                     document.querySelector('main').style.paddingTop = menuHeight > 50 ? '50px' : 0;
                     app.init();
+                    app.scrollTo(location.hash);
                 });
             });
         },
@@ -57,6 +58,13 @@ let app = new Vue({
             let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
             mm.addListener(resizeWidth);
             resizeWidth(mm);
+        },
+        scrollTo(target) {
+            if (!target) return;
+            let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+            let targetPos = document.querySelector(target).getBoundingClientRect().top + window.pageYOffset;
+            let finalPos = offset ? targetPos - offset : targetPos;
+            window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
         },
         init() {
             let bannerRun = function () { banTimer = setInterval(bannerPlay, 4000); };

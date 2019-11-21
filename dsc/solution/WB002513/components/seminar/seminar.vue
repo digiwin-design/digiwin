@@ -1,12 +1,12 @@
 <template>
     <div>
-        <!-- <div class="header">
+        <div class="header">
             <div class="container">
                 <div class="header-text">
                     <h1>{{content.title}}</h1>
                 </div>
             </div>
-        </div> -->
+        </div>
         <article class="section1">
             <div class="container">
                 <h1>{{content.section1Title}}</h1>
