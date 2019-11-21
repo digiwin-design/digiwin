@@ -32,10 +32,5 @@ module.exports = {
         'accordion': httpVueLoader('components/seminar/accordion.vue'),
         'progress-bar': httpVueLoader('components/seminar/progress-bar.vue'),
     },
-    mounted: function () {
-        if (typeof (NProgress) !== 'undefined') {
-            NProgress.done();
-        }
-    },
 };
 </script>

@@ -432,5 +432,105 @@
                 "anchor": "#contact"
             }
         ]
+    },
+    {
+        "id": "WB002513",
+        "title": "電子業",
+        "menus": [
+            {
+                "text": "回首頁",
+                "url": "#/"
+            },
+            {
+                "text": "工業4.0",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "邁向工業4.0",
+                        "url": "http://industry4.digiwin.com",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "評量健檢",
+                        "url": "http://industry4.digiwin.com/diagnosis.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "產官學研討會",
+                        "url": "http://industry4.digiwin.com/activity.htm",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "方案規劃",
+                        "url": "http://industry4.digiwin.com/smartFactory.htm",
+                        "target": "_blank"
+                    }
+                ]
+            },
+            {
+                "text": "電子業議題",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "少量多樣接單",
+                        "url": "#/issue01"
+                    },
+                    {
+                        "text": "電子業轉型",
+                        "url": "#/issue02"
+                    },
+                    {
+                        "text": "IPO須知",
+                        "url": "#/issue03"
+                    }
+                ]
+            },
+            {
+                "text": "生產製造",
+                "url": "#/manufacture"
+            },
+            {
+                "text": "輔導案例",
+                "url": "#/#inCase_bg"
+            },
+            {
+                "text": "研討會",
+                "url": "#/seminar"
+            },
+            {
+                "text": "MIS專區",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "ERPII介紹",
+                        "url": "#/#wrapper2_bg"
+                    },
+                    {
+                        "text": "資安 備援 虛擬化",
+                        "url": "#/mis01"
+                    },
+                    {
+                        "text": "資訊委外",
+                        "url": "#/mis02"
+                    },
+                    {
+                        "text": "VPN",
+                        "url": "#/mis02"
+                    },
+                    {
+                        "text": "機房建置",
+                        "url": "#/mis02"
+                    },
+                    {
+                        "text": "預算編製管理",
+                        "url": "#/mis03"
+                    }
+                ]
+            },
+            {
+                "text": "解決方案",
+                "url": "#/#problems"
+            }
+        ]
     }
 ]
