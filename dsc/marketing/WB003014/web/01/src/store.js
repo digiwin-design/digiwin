@@ -9,6 +9,7 @@ export default new Vuex.Store({
         device: null,
         isMobile: false,
         showMask: false,
+        result: null,
     },
     mutations: {
         setDevice(state, payload) {

@@ -1,18 +1,120 @@
 <template>
-    <div class="wrapper">
-        <Header></Header>
-        <MenuMask></MenuMask>
-        <main :style="mainBgStyle">
-            <div class="container">
-                <div class="hero">
-                    <h1><img src="images/logo-w.png" alt="Digiwin TV">鼎新線上活動</h1>
-                    <p>研討會參會新選擇<br>不出門也能了解產業脈動與最新趨勢</p>
-                    <a href="https://www.digiwin.com/tw/zlsq.html?id=2069" target="_blank"><i class="fa fa-check-square-o" aria-hidden="true"></i>訂閱活動消息</a>
+    <transition name="fade">
+        <div v-if="result" class="wrapper">
+            <Header></Header>
+            <MenuMask></MenuMask>
+            <main :style="mainBgStyle">
+                <div class="main-container">
+                    <div class="hero">
+                        <div class="container">
+                            <h1>
+                                <img src="images/logo-w.png" alt="Digiwin TV" />鼎新線上活動
+                            </h1>
+                            <p>
+                                研討會參會新選擇
+                                <br />不出門也能了解產業脈動與最新趨勢
+                            </p>
+                            <a
+                                href="https://www.digiwin.com/tw/zlsq.html?id=2069"
+                                target="_blank"
+                                class="mainLink"
+                            >
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>訂閱活動消息
+                            </a>
+                        </div>
+                    </div>
+
+                    <article class="latest">
+                        <div class="container">
+                            <h1 class="title" data-text="The Latest Vedio">近期播出</h1>
+                            <div class="content">
+                                <div class="content__illust">
+                                    <img src="@/assets/images/latest-illust.jpg" alt />
+                                </div>
+                                <div class="content__text">
+                                    <h2>
+                                        <i class="logo sm"></i>活動預告
+                                    </h2>
+                                    <p>
+                                        智慧工廠線上參訪
+                                        <br />看見台灣傳產轉型力量
+                                    </p>
+                                    <p>
+                                        2019年終壓軸鉅獻
+                                        <br />不需親身走訪就能眼見為憑
+                                    </p>
+                                    <a
+                                        href="http://acpms.digiwin.com/WebRegACT/onair.html?gNo=2019110002"
+                                        target="_blank"
+                                        class="mainLink"
+                                    >
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>立即預約線上參訪
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="about">
+                        <div class="container">
+                            <h1 class="title" data-text="About DigiwinTV">
+                                關於
+                                <i class="logo"></i>
+                            </h1>
+                            <p>
+                                在《重構：數字化轉型的邏輯》書中，數位化轉型的關鍵字之首為「不確定性」，
+                                <br />以知識和資訊力應對不確定性成為轉型共同的挑戰！
+                            </p>
+                            <p>
+                                <strong>DigiwinTV線上活動</strong>，讓您獲取知識不再被時間、地點、人數所限。
+                                <br />從專家視角共論趨勢議題、親眼走訪標竿企業製造現場、效益導向的數位化轉型實證解析...
+                            </p>
+                            <p>人人啟發與賦能將成數位化轉型最大的動能，讓DigiwinTV為您蓄滿能量！</p>
+                            <a
+                                href="https://www.digiwin.com/tw/zlsq.html?id=2069"
+                                target="_blank"
+                                class="mainLink"
+                            >
+                                <i class="fa fa-check-square-o" aria-hidden="true"></i>訂閱DigiwinTV電子報
+                                <br />掌握最新活動訊息
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="category">
+                        <div class="container">
+                            <h1 class="title" data-text="Category">
+                                <i class="logo"></i>系列主題
+                            </h1>
+                            <div class="content">
+                                <div class="content__item" v-for="(item, idx) in result.category" :key="item.title">
+                                    <img :src="require(`@/assets/images/category-icon${idx + 1}.png`)" alt />
+                                    <h2>{{item.title}}</h2>
+                                    <p>{{item.desc}}</p>
+                                    <a :href="item.link" class="end js-nav" v-if="activityEnded(item.link)">
+                                        往期內容
+                                        <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <a :href="item.link" target="_blank" v-else>
+                                        預約觀看
+                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="recommended" class="recommended">
+                        <div class="container">
+                            <h1 class="title" data-text="RECOMMENDED">精彩內容試看</h1>
+                            <Recommended></Recommended>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </main>
-        <Footer></Footer>
-    </div>
+            </main>
+            <Footer></Footer>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -22,6 +124,7 @@ import '@/assets/vendor/mobile-detect-modernizr';
 import Header from '@/components/Header.vue';
 import MenuMask from '@/components/MenuMask.vue';
 import Footer from '@/components/Footer.vue';
+import Recommended from '@/components/Recommended.vue';
 
 export default {
     name: 'app',
@@ -29,6 +132,7 @@ export default {
         Header,
         MenuMask,
         Footer,
+        Recommended,
     },
     computed: {
         isMobile() {
@@ -38,8 +142,10 @@ export default {
             return this.$store.state.result;
         },
         mainBgStyle() {
-            let url = this.isMobile ? 'images/main-bg-s.png' : 'images/main-bg.png';
-            return { 'background-image': `url(${url})` };
+            let bg1 = this.isMobile ? 'images/main-bg-s.png' : 'images/main-bg.png';
+            let bg2 = 'images/main-bg2.png';
+            let bg3 = 'images/main-bg3.png';
+            return { 'background-image': `url(${bg1}), url(${bg2}), url(${bg3})` };
         }
     },
     methods: {
@@ -49,6 +155,24 @@ export default {
             mm.addListener(resizeWidth);
             resizeWidth(mm);
         },
+        clickHandler() {
+            document.addEventListener('click', function () {
+                const el = event.target;
+                if (el.tagName === 'A' && el.classList.contains('js-nav')) {
+                    event.preventDefault();
+                    let selector = el.getAttribute('href') || el.getAttribute('xlink:href') || el.dataset.target;
+                    let target = document.querySelector(selector);
+                    if (!target) return;
+                    let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+                    let targetPos = target.getBoundingClientRect().top + window.pageYOffset;
+                    let finalPos = offset ? targetPos - offset : targetPos;
+                    window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
+                }
+            });
+        },
+        activityEnded(link) {
+            return link.startsWith('#');
+        }
     },
     created() {
         this.$store.dispatch('getData');
@@ -56,6 +180,7 @@ export default {
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
         this.mediaSensor(768);
+        this.clickHandler();
     },
 }
 </script>
@@ -63,6 +188,17 @@ export default {
 <style lang="scss">
 @import '@/assets/sass/reset.scss';
 @import '@/assets/sass/common.scss';
+
+// transition
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -70,9 +206,15 @@ export default {
 }
 main {
     min-width: 360px;
-    background-position: 50% 0;
+    background-color: #0f3f7b;
+    background-position: 50% 0, 50% 1888px, 50% 3366px;
     background-repeat: no-repeat;
     flex-grow: 1;
+}
+.main-container {
+    margin: 0 auto;
+    max-width: $content-width;
+    outline: 1px solid #0ff;
 }
 .container {
     margin: 0 auto;
@@ -84,8 +226,51 @@ main {
         padding-left: 20px;
     }
     @media (min-width: 1200px) {
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+i.logo {
+    @include imgBg('~@/assets/images/logo.svg');
+    display: inline-block;
+    margin: 0 5px;
+    width: 139px;
+    height: 45px;
+    vertical-align: text-bottom;
+    &.sm {
+        width: 131px;
+        height: 42px;
+    }
+}
+.title {
+    display: block;
+    margin: 0 auto .6em;
+    padding-top: 40px;
+    color: #3f3f41;
+    text-align: center;
+    letter-spacing: getLetterSpacing(30);
+    font-weight: bold;
+    font-size: 38px;
+    &::before {
+        display: block;
+        margin-bottom: 10px;
+        color: #d12223;
+        content: attr(data-text);
+        font-size: 18px;
+    }
+}
+.mainLink {
+    display: flex;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: getLetterSpacing(10);
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 34px;
+    justify-content: center;
+    align-items: center;
+    i {
+        margin-right: 10px;
     }
 }
 .hero {
@@ -121,24 +306,189 @@ main {
             line-height: 42px;
         }
     }
-    a {
-        display: flex;
+    .mainLink {
         height: 63px;
-        border-radius: 5px;
         background-color: #f96823;
-        color: #fff;
-        letter-spacing: getLetterSpacing(10);
-        font-weight: bold;
-        font-size: 26px;
-        justify-content: center;
-        align-items: center;
         @media (min-width: $tablet-width + 1) {
+            padding-top: 23px;
+            padding-bottom: 23px;
             width: 320px;
             height: 80px;
             font-size: 32px;
         }
-        i {
-            margin-right: 10px;
+    }
+}
+.latest {
+    padding-bottom: 40px;
+    border-radius: 20px;
+    background-color: #ffbd0b;
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        &__illust {
+            width: 100%;
+            text-align: center;
+            @media (min-width: $tablet-width + 1) {
+                width: calc(100% - 395px);
+            }
+        }
+        &__text {
+            padding-top: 30px;
+            width: 100%;
+            @media (min-width: $tablet-width + 1) {
+                padding-top: 0;
+                padding-left: 45px;
+                width: 395px;
+            }
+            @media (min-width: $content-width) {
+                padding-top: 40px;
+            }
+            h2 {
+                margin-bottom: .5em;
+                color: #d12223;
+                font-weight: bold;
+                font-size: 26px;
+            }
+            p {
+                &:nth-of-type(1) {
+                    margin-bottom: .2em;
+                    letter-spacing: getLetterSpacing(10);
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                &:nth-of-type(2) {
+                    margin-bottom: 1em;
+                    letter-spacing: getLetterSpacing(10);
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+            .mainLink {
+                height: 70px;
+                background-color: #0c7fd0;
+                @media (min-width: $tablet-width + 1) {
+                    width: 310px;
+                }
+            }
+        }
+    }
+}
+.about {
+    @include bg('~@/assets/images/about-bg.png', 50% 100%);
+    margin-top: 30px;
+    padding-bottom: 40px;
+    border-radius: 20px 20px 0 0;
+    background-color: #fff;
+    p {
+        letter-spacing: getLetterSpacing(10);
+        font-size: 20px;
+        line-height: 28px;
+        @media (min-width: $tablet-width + 1) {
+            text-align: center;
+        }
+        + p {
+            margin-top: .5em;
+        }
+        strong {
+            color: #0f3f7b;
+            font-weight: bold;
+        }
+        br {
+            display: none;
+            @media (min-width: $tablet-width + 1) {
+                display: block;
+            }
+        }
+    }
+    .mainLink {
+        margin-top: 1em;
+        max-width: 610px;
+        height: 100px;
+        background-color: #f96823;
+        @media (min-width: $tablet-width + 1) {
+            margin-right: auto;
+            margin-left: auto;
+            height: 70px;
+            br {
+                display: none;
+            }
+        }
+    }
+}
+.category {
+    padding-bottom: 40px;
+    background-color: #dee2e8;
+    .content {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $tablet-width + 1) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            outline: 1px solid #f00;
+            @media (min-width: $tablet-width + 1) {
+                width: (100% - percentage(140 / 1100)) / 3;
+            }
+            + .content__item {
+                margin-top: 60px;
+                @media (min-width: $tablet-width + 1) {
+                    margin-top: 0;
+                }
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+            h2 {
+                margin-top: 25px;
+                color: #0f3f7b;
+                letter-spacing: getLetterSpacing(30);
+                font-weight: bold;
+                font-size: 30px;
+            }
+            p {
+                margin-top: .5em;
+                margin-bottom: 1em;
+                color: #3f3f3f;
+                letter-spacing: getLetterSpacing(10);
+                font-size: 20px;
+                line-height: 28px;
+                flex-grow: 1;
+                @media (min-width: $tablet-width + 1) {
+                    font-size: 22px;
+                }
+            }
+            a {
+                display: flex;
+                padding-right: 17px;
+                padding-left: 30px;
+                height: 70px;
+                border-radius: 5px;
+                background-color: #0c7fd0;
+                color: #fff;
+                letter-spacing: getLetterSpacing(70);
+                font-weight: bold;
+                font-size: 26px;
+                justify-content: space-between;
+                align-items: center;
+                &.end {
+                    background-color: #ffbd0b;
+                    color: #0f3f7b;
+                }
+            }
+        }
+    }
+}
+.recommended {
+    @include bg('~@/assets/images/recommended-bg.jpg');
+    .title {
+        color: #fff;
+        &::before {
+            color: #ffbd0b;
         }
     }
 }

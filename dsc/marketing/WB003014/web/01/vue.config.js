@@ -18,5 +18,6 @@ module.exports = {
         sourceMap: true
     },
 
-    lintOnSave: false
+    lintOnSave: false,
+    publicPath: '/tw/dsc/marketing/WB003014/web/01/'
 }
