@@ -96,7 +96,6 @@ gulp.task('pug', function() {
     return gulp.src('src/pug/**/*.pug')
         .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
         .pipe($.pug({ pretty: true }))
-        .pipe($.rename({ extname: '.html' }))
         .pipe(gulp.dest(''));
 });
 
