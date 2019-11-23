@@ -5,19 +5,18 @@
             ref="carousel"
             :interval="4000"
             type="card"
-            :autoplay="false"
+            :autoplay="true"
             :height="carouselHeight"
             trigger="click"
             arrow="never"
             indicator-position="outside"
             v-show="!isMobile"
         >
-            <el-carousel-item v-for="item in 6" :key="item">
-                <div class="item">
-                    <img src="@/assets/images/recommended-list/01.jpg" alt />
+            <el-carousel-item v-for="(item, idx) in items" :key="item.video">
+                <div class="item" data-fancybox :href="item.video">
+                    <img :src="require(`@/assets/images/recommended-poster/poster${idx + 1}.jpg`)" alt />
                     <ul class="hashtag">
-                        <li>#tag1</li>
-                        <li>#tag2</li>
+                        <li v-for="tag in item.tags" :key="tag">#{{tag}}</li>
                     </ul>
                 </div>
             </el-carousel-item>
@@ -27,31 +26,38 @@
         <el-carousel
             ref="carouselM"
             :interval="4000"
-            :autoplay="false"
+            :autoplay="true"
             :height="carouselHeight"
             trigger="click"
             arrow="never"
             indicator-position="outside"
             v-show="isMobile"
         >
-            <el-carousel-item v-for="item in 6" :key="item">
-                <div class="item">
-                    <img src="@/assets/images/recommended-list/01.jpg" alt />
+            <el-carousel-item v-for="(item, idx) in items" :key="item.video">
+                <div class="item" data-fancybox :href="item.video">
+                    <img :src="require(`@/assets/images/recommended-poster/poster${idx + 1}.jpg`)" alt />
                     <ul class="hashtag">
-                        <li>#tag1</li>
-                        <li>#tag2</li>
+                        <li v-for="tag in item.tags" :key="tag">#{{tag}}</li>
                     </ul>
                 </div>
             </el-carousel-item>
         </el-carousel>
 
-        <a href class="carousel__left" @click.prevent="onChange(-1)"></a>
-        <a href class="carousel__right" @click.prevent="onChange(1)"></a>
+        <a href class="carousel__arrow carousel__arrow--left" @click.prevent="onChange(-1)"></a>
+        <a href class="carousel__arrow carousel__arrow--right" @click.prevent="onChange(1)"></a>
     </div>
 </template>
 
 <script>
+import '@fancyapps/fancybox';
+import '@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 export default {
+    props: {
+        items: {
+            type: Array,
+            required: true
+        }
+    },
     data() {
         return {
             carouselHeight: '',
@@ -100,10 +106,9 @@ export default {
         padding-right: 40px;
         padding-left: 40px;
     }
-    &__left,
-    &__right {
+    &__arrow {
         position: absolute;
-        top: 50%;
+        top: calc(50% - 36.5px);
         width: 23px;
         height: 23px;
         border-bottom: 5px solid rgba(255,255,255,.75);
@@ -111,34 +116,47 @@ export default {
         border-radius: 0;
         background-color: transparent;
         content: '';
-    }
-    &__left {
-        left: -20px;
-        transform: rotate(45deg) translateY(-50%);
-        @media (min-width: $tablet-width + 1) {
-            left: 10px;
+        &--left {
+            left: -5px;
+            transform: translateY(-50%) rotate(45deg);
+            @media (min-width: $tablet-width + 1) {
+                left: 5px;
+            }
         }
-    }
-    &__right {
-        right: -20px;
-        transform: rotate(-135deg) translateY(-50%);
-        @media (min-width: $tablet-width + 1) {
-            right: 10px;
+        &--right {
+            right: -5px;
+            transform: translateY(-50%) scaleX(-1) rotate(45deg);
+            @media (min-width: $tablet-width + 1) {
+                right: 5px;
+            }
         }
     }
 }
 /deep/ .el-carousel {
     &__item {
         border-radius: 10px;
-        background-color: #d3dce6;
+        background-image: repeating-linear-gradient(135deg, #313131 0, #313131 7px, #404040 7px, #404040 8px);
     }
     &__mask {
         z-index: 1;
         background-color: #000;
         opacity: .4;
     }
-    &__indicators {
-
+    &__indicator.is-active button {
+        background-color: #ffbd0b;
+    }
+    &__indicator--horizontal {
+        padding-top: 26px;
+        padding-right: 7.5px;
+        padding-bottom: 30px;
+        padding-left: 7.5px;
+    }
+    &__button {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #9d9d9d;
+        opacity: 1;
     }
 }
 /deep/ .item {

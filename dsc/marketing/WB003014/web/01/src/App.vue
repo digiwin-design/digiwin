@@ -107,7 +107,7 @@
                     <article id="recommended" class="recommended">
                         <div class="container">
                             <h1 class="title" data-text="RECOMMENDED">精彩內容試看</h1>
-                            <Recommended></Recommended>
+                            <Carousel :items="result.recommended"></Carousel>
                         </div>
                     </article>
                 </div>
@@ -124,7 +124,7 @@ import '@/assets/vendor/mobile-detect-modernizr';
 import Header from '@/components/Header.vue';
 import MenuMask from '@/components/MenuMask.vue';
 import Footer from '@/components/Footer.vue';
-import Recommended from '@/components/Recommended.vue';
+import Carousel from '@/components/Carousel.vue';
 
 export default {
     name: 'app',
@@ -132,7 +132,7 @@ export default {
         Header,
         MenuMask,
         Footer,
-        Recommended,
+        Carousel,
     },
     computed: {
         isMobile() {
@@ -429,7 +429,6 @@ i.logo {
         &__item {
             display: flex;
             flex-direction: column;
-            outline: 1px solid #f00;
             @media (min-width: $tablet-width + 1) {
                 width: (100% - percentage(140 / 1100)) / 3;
             }
@@ -444,11 +443,12 @@ i.logo {
                 margin: 0 auto;
             }
             h2 {
-                margin-top: 25px;
+                margin-top: .8em;
                 color: #0f3f7b;
                 letter-spacing: getLetterSpacing(30);
                 font-weight: bold;
                 font-size: 30px;
+                line-height: 1.2;
             }
             p {
                 margin-top: .5em;

@@ -15,5 +15,20 @@
             "desc": "數位化只是手段，實際取得效益才是目的！標竿企業如何做到的？讓專家顧問團與您深度剖析實際應用案例，一同解決企業內部問題！",
             "link": "#video-list"
         }
+    ],
+    "recommended": [
+        {
+            "video": "https://www.youtube.com/watch?v=35UmxY-_tb0",
+            "tags": ["tag1", "tag2"]
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=BKz-5xpJB68",
+            "tags": ["tag1", "tag2"]
+        },
+        {
+            "video": "https://www.youtube.com/watch?v=061OUAbvbRU",
+            "tags": ["tag1", "tag2"]
+        }
     ]
+
 }
