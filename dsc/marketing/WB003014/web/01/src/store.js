@@ -10,6 +10,7 @@ export default new Vuex.Store({
         isMobile: false,
         showMask: false,
         result: null,
+        loading: true,
     },
     mutations: {
         setDevice(state, payload) {
@@ -23,6 +24,9 @@ export default new Vuex.Store({
         },
         setData(state, payload) {
             state.result = payload;
+        },
+        updateLoading(state, payload) {
+            state.loading = payload;
         },
     },
     actions: {

@@ -1,6 +1,6 @@
 <template>
-    <transition name="fade">
-        <div v-if="result" class="wrapper">
+    <div>
+        <div class="wrapper" v-if="!loading">
             <Header></Header>
             <MenuMask></MenuMask>
             <main :style="mainBgStyle">
@@ -17,19 +17,17 @@
                             <a
                                 href="https://www.digiwin.com/tw/zlsq.html?id=2069"
                                 target="_blank"
-                                class="mainLink"
-                            >
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>訂閱活動消息
-                            </a>
+                                class="mainLink check"
+                            >訂閱活動消息</a>
                         </div>
                     </div>
 
                     <article class="latest">
                         <div class="container">
-                            <h1 class="title" data-text="The Latest Vedio">近期播出</h1>
+                            <h1 class="title" data-text="THE LATEST VEDIO">近期播出</h1>
                             <div class="content">
                                 <div class="content__illust">
-                                    <img src="@/assets/images/latest-illust.jpg" alt />
+                                    <img src="images/latest-illust.jpg" alt />
                                 </div>
                                 <div class="content__text">
                                     <h2>
@@ -46,10 +44,8 @@
                                     <a
                                         href="http://acpms.digiwin.com/WebRegACT/onair.html?gNo=2019110002"
                                         target="_blank"
-                                        class="mainLink"
-                                    >
-                                        <i class="fa fa-calendar" aria-hidden="true"></i>立即預約線上參訪
-                                    </a>
+                                        class="mainLink calendar"
+                                    >立即預約線上參訪</a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +53,7 @@
 
                     <article class="about">
                         <div class="container">
-                            <h1 class="title" data-text="About DigiwinTV">
+                            <h1 class="title" data-text="ABOUT DIGIWINTV">
                                 關於
                                 <i class="logo"></i>
                             </h1>
@@ -73,9 +69,9 @@
                             <a
                                 href="https://www.digiwin.com/tw/zlsq.html?id=2069"
                                 target="_blank"
-                                class="mainLink"
+                                class="mainLink check"
                             >
-                                <i class="fa fa-check-square-o" aria-hidden="true"></i>訂閱DigiwinTV電子報
+                                訂閱DigiwinTV電子報
                                 <br />掌握最新活動訊息
                             </a>
                         </div>
@@ -83,15 +79,25 @@
 
                     <article class="category">
                         <div class="container">
-                            <h1 class="title" data-text="Category">
+                            <h1 class="title" data-text="CATEGORY">
                                 <i class="logo"></i>系列主題
                             </h1>
-                            <div class="content">
-                                <div class="content__item" v-for="(item, idx) in result.category" :key="item.title">
-                                    <img :src="require(`@/assets/images/category-icon${idx + 1}.png`)" alt />
+                            <div class="items">
+                                <div
+                                    class="item"
+                                    v-for="(item, idx) in result.category"
+                                    :key="item.title"
+                                >
+                                    <div class="item__illust">
+                                        <img :src="require(`@/assets/images/category-icon${idx + 1}.png`)" alt>
+                                    </div>
                                     <h2>{{item.title}}</h2>
                                     <p>{{item.desc}}</p>
-                                    <a :href="item.link" class="end js-nav" v-if="activityEnded(item.link)">
+                                    <a
+                                        :href="item.link"
+                                        class="end js-nav"
+                                        v-if="activityEnded(item.link)"
+                                    >
                                         往期內容
                                         <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                                     </a>
@@ -110,11 +116,60 @@
                             <Carousel :items="result.recommended"></Carousel>
                         </div>
                     </article>
+
+                    <article id="video-list" class="video-list">
+                        <div class="container">
+                            <h1 class="title" data-text="VIDEO LIST">往期內容</h1>
+                            <p class="desc">
+                                錯過直播了嗎？別扼腕，
+                                <br />精彩直播活動回看同樣精彩！
+                            </p>
+                            <Collapse :items="result.videoList"></Collapse>
+                        </div>
+                    </article>
+
+                    <div class="follow">
+                        <div class="container">
+                            <h1 class="title" data-text="FOLLOW US">想知道更多時下發燒話題，歡迎關注</h1>
+                            <div class="items">
+                                <a
+                                    href="https://www.facebook.com/DSCmain/?utm_source=facebook.com&utm_medium=social&utm_content=facebook.com_DSC_1122_fb_fans&utm_campaign=facebook.com_DSC_1122_digiwintv"
+                                    target="_blank"
+                                    class="item"
+                                >
+                                    <img src="@/assets/images/icon-fb.png" alt />
+                                    <p>
+                                        成為鼎新電腦Facebook粉絲，
+                                        <br />為您分享更多有趣或時下熱門議題！
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://acho.tw/acho/f/1yEaW"
+                                    target="_blank"
+                                    class="item"
+                                >
+                                    <img src="@/assets/images/icon-line.png" alt />
+                                    <p>
+                                        加個LINE好友！
+                                        <br />不定時會有抽獎小活動和新知分享唷～
+                                    </p>
+                                </a>
+                                <a href="/tw" target="_blank" class="item">
+                                    <img src="@/assets/images/icon-digiwin.png" alt />
+                                    <p>
+                                        更多專業解析及
+                                        <br />不同產業轉型案例分享！
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
             <Footer></Footer>
         </div>
-    </transition>
+        <loading :loading="loading"></loading>
+    </div>
 </template>
 
 <script>
@@ -124,7 +179,9 @@ import '@/assets/vendor/mobile-detect-modernizr';
 import Header from '@/components/Header.vue';
 import MenuMask from '@/components/MenuMask.vue';
 import Footer from '@/components/Footer.vue';
+import Loading from '@/components/Loading.vue';
 import Carousel from '@/components/Carousel.vue';
+import Collapse from '@/components/Collapse.vue';
 
 export default {
     name: 'app',
@@ -132,7 +189,9 @@ export default {
         Header,
         MenuMask,
         Footer,
+        Loading,
         Carousel,
+        Collapse,
     },
     computed: {
         isMobile() {
@@ -141,11 +200,25 @@ export default {
         result() {
             return this.$store.state.result;
         },
+        loading() {
+            return this.$store.state.loading;
+        },
         mainBgStyle() {
             let bg1 = this.isMobile ? 'images/main-bg-s.png' : 'images/main-bg.png';
             let bg2 = 'images/main-bg2.png';
             let bg3 = 'images/main-bg3.png';
             return { 'background-image': `url(${bg1}), url(${bg2}), url(${bg3})` };
+        }
+    },
+    watch: {
+        result() {
+            this.preloadImg([
+                'images/main-bg.png',
+                'images/main-bg-s.png',
+                'images/logo-w.png',
+                'images/latest-illust.jpg',
+            ])
+            .then(() => this.$store.commit('updateLoading', false));
         }
     },
     methods: {
@@ -167,6 +240,23 @@ export default {
                     let targetPos = target.getBoundingClientRect().top + window.pageYOffset;
                     let finalPos = offset ? targetPos - offset : targetPos;
                     window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
+                }
+            });
+        },
+        preloadImg(imgs) {
+            return new Promise(resolve => {
+                if (!imgs.length) resolve();
+                let loaded = 0;
+                for (let i = 0; i < imgs.length; i++) {
+                    const element = imgs[i];
+                    let img = document.createElement('IMG');
+                    img.src = element;
+                    img.onload = () => {
+                        loaded++;
+                        if (loaded === imgs.length) {
+                            resolve();
+                        }
+                    };
                 }
             });
         },
@@ -205,6 +295,7 @@ export default {
     min-height: 100vh;
 }
 main {
+    padding-bottom: 40px;
     min-width: 360px;
     background-color: #0f3f7b;
     background-position: 50% 0, 50% 1888px, 50% 3366px;
@@ -214,13 +305,11 @@ main {
 .main-container {
     margin: 0 auto;
     max-width: $content-width;
-    outline: 1px solid #0ff;
 }
 .container {
     margin: 0 auto;
     padding: 0 10px;
     max-width: 1200px;
-    outline: 1px solid #f00;
     @media (min-width: 361px) {
         padding-right: 20px;
         padding-left: 20px;
@@ -269,8 +358,21 @@ i.logo {
     line-height: 34px;
     justify-content: center;
     align-items: center;
-    i {
+    &::before {
         margin-right: 10px;
+        content: '';
+        @at-root {
+            .mainLink.check::before {
+                @include imgBg('~@/assets/images/icon-check.svg');
+                width: 27px;
+                height: 24px;
+            }
+            .mainLink.calendar::before {
+                @include imgBg('~@/assets/images/icon-calendar.svg');
+                width: 25px;
+                height: 27px;
+            }
+        }
     }
 }
 .hero {
@@ -315,6 +417,10 @@ i.logo {
             width: 320px;
             height: 80px;
             font-size: 32px;
+        }
+        &::before {
+            width: 37px;
+            height: 34px;
         }
     }
 }
@@ -417,68 +523,71 @@ i.logo {
     }
 }
 .category {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     background-color: #dee2e8;
-    .content {
+    .items {
         display: flex;
         flex-direction: column;
         @media (min-width: $tablet-width + 1) {
             flex-direction: row;
             justify-content: space-between;
         }
-        &__item {
-            display: flex;
-            flex-direction: column;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $tablet-width + 1) {
+            width: (100% - percentage(140 / 1100)) / 3;
+        }
+        + .item {
+            margin-top: 60px;
             @media (min-width: $tablet-width + 1) {
-                width: (100% - percentage(140 / 1100)) / 3;
+                margin-top: 0;
             }
-            + .content__item {
-                margin-top: 60px;
-                @media (min-width: $tablet-width + 1) {
-                    margin-top: 0;
-                }
+        }
+        &__illust {
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            margin-top: .8em;
+            color: #0f3f7b;
+            letter-spacing: getLetterSpacing(30);
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 1.2;
+        }
+        p {
+            margin-top: .5em;
+            margin-bottom: 1em;
+            width: 100%;
+            color: #3f3f3f;
+            letter-spacing: getLetterSpacing(10);
+            font-size: 20px;
+            line-height: 28px;
+            flex-grow: 1;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 22px;
             }
-            img {
-                display: block;
-                margin: 0 auto;
-            }
-            h2 {
-                margin-top: .8em;
+        }
+        a {
+            display: flex;
+            padding-right: 17px;
+            padding-left: 30px;
+            width: 100%;
+            height: 70px;
+            border-radius: 5px;
+            background-color: #0c7fd0;
+            color: #fff;
+            letter-spacing: getLetterSpacing(70);
+            font-weight: bold;
+            font-size: 26px;
+            justify-content: space-between;
+            align-items: center;
+            &.end {
+                background-color: #ffbd0b;
                 color: #0f3f7b;
-                letter-spacing: getLetterSpacing(30);
-                font-weight: bold;
-                font-size: 30px;
-                line-height: 1.2;
-            }
-            p {
-                margin-top: .5em;
-                margin-bottom: 1em;
-                color: #3f3f3f;
-                letter-spacing: getLetterSpacing(10);
-                font-size: 20px;
-                line-height: 28px;
-                flex-grow: 1;
-                @media (min-width: $tablet-width + 1) {
-                    font-size: 22px;
-                }
-            }
-            a {
-                display: flex;
-                padding-right: 17px;
-                padding-left: 30px;
-                height: 70px;
-                border-radius: 5px;
-                background-color: #0c7fd0;
-                color: #fff;
-                letter-spacing: getLetterSpacing(70);
-                font-weight: bold;
-                font-size: 26px;
-                justify-content: space-between;
-                align-items: center;
-                &.end {
-                    background-color: #ffbd0b;
-                    color: #0f3f7b;
-                }
             }
         }
     }
@@ -489,6 +598,76 @@ i.logo {
         color: #fff;
         &::before {
             color: #ffbd0b;
+        }
+    }
+}
+.video-list {
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    border-radius: 0 0 20px 20px;
+    background-color: #dee2e8;
+    .desc {
+        margin-bottom: 1em;
+        color: #3f3f3f;
+        text-align: center;
+        letter-spacing: getLetterSpacing(10);
+        font-size: 24px;
+        line-height: 34px;
+        @media (min-width: $tablet-width + 1) {
+            &::before {
+                content: '\\ ';
+            }
+            &::after {
+                content: '/';
+            }
+            br {
+                display: none;
+            }
+        }
+    }
+}
+.follow {
+    padding-bottom: 30px;
+    border-radius: 20px;
+    background-color: #dee2e8;
+    .title {
+        line-height: 42px;
+        @media (min-width: $tablet-width + 1) {
+            line-height: 1;
+        }
+        &::before {
+            line-height: 1;
+        }
+    }
+    .items {
+        display: flex;
+        margin: 0 -7px;
+        @media (min-width: $tablet-width + 1) {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 930px;
+        }
+    }
+    .item {
+        margin: 0 7px;
+        width: 100%;
+        flex-grow: 1;
+        @media (min-width: $tablet-width + 1) {
+            text-align: center;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto 14px;
+    }
+    p {
+        color: #3f3f41;
+        line-height: 22px;
+        br {
+            display: none;
+            @media (min-width: $tablet-width + 1) {
+                display: block;
+            }
         }
     }
 }

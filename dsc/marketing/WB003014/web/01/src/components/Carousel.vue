@@ -14,7 +14,9 @@
         >
             <el-carousel-item v-for="(item, idx) in items" :key="item.video">
                 <div class="item" data-fancybox :href="item.video">
-                    <img :src="require(`@/assets/images/recommended-poster/poster${idx + 1}.jpg`)" alt />
+                    <div class="item__poster">
+                        <img :src="require(`@/assets/images/recommended-poster/poster${idx + 1}.jpg`)" alt />
+                    </div>
                     <ul class="hashtag">
                         <li v-for="tag in item.tags" :key="tag">#{{tag}}</li>
                     </ul>
@@ -35,7 +37,9 @@
         >
             <el-carousel-item v-for="(item, idx) in items" :key="item.video">
                 <div class="item" data-fancybox :href="item.video">
-                    <img :src="require(`@/assets/images/recommended-poster/poster${idx + 1}.jpg`)" alt />
+                    <div class="item__poster">
+                        <img :src="require(`@/assets/images/recommended-poster/poster${idx + 1}.jpg`)" alt />
+                    </div>
                     <ul class="hashtag">
                         <li v-for="tag in item.tags" :key="tag">#{{tag}}</li>
                     </ul>
@@ -49,6 +53,7 @@
 </template>
 
 <script>
+import _ from 'lodash';
 import '@fancyapps/fancybox';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 export default {
@@ -75,11 +80,11 @@ export default {
         }
     },
     methods: {
-        setCarouselHeight() {
+        setCarouselHeight: _.throttle(function () {
             let scaleW = this.isMobile ? 1 : 0.5;
             let cardWidth = this.$el.offsetWidth * scaleW;
             this.carouselHeight = cardWidth * 0.6 + "px";
-        },
+        }, 100),
         onChange(type) {
             let el = this.isMobile ? this.carouselM : this.carousel;
             if (type === -1) {
@@ -133,6 +138,7 @@ export default {
     }
 }
 /deep/ .el-carousel {
+    overflow-y: hidden; /* for ie */
     &__item {
         border-radius: 10px;
         background-image: repeating-linear-gradient(135deg, #313131 0, #313131 7px, #404040 7px, #404040 8px);
@@ -167,6 +173,9 @@ export default {
     @media (min-width: $tablet-width + 1) {
         padding: 27px 27px 0;
     }
+    &__poster {
+        width: 100%;
+    }
 }
 /deep/ .hashtag {
     display: flex;
@@ -175,7 +184,7 @@ export default {
     font-weight: bold;
     flex-grow: 1;
     align-items: center;
-    @media (min-width: $tablet-width + 1) {
+    @media (min-width: 961px) {
         font-size: 22px;
     }
     li + li {

@@ -18,17 +18,94 @@
     ],
     "recommended": [
         {
-            "video": "https://www.youtube.com/watch?v=35UmxY-_tb0",
-            "tags": ["tag1", "tag2"]
+            "video": "https://youtu.be/Z9GXsJQu6jI",
+            "tags": ["數位應用價值", "管理議題"]
         },
         {
-            "video": "https://www.youtube.com/watch?v=BKz-5xpJB68",
-            "tags": ["tag1", "tag2"]
+            "video": "https://youtu.be/qvh57vmnFEU",
+            "tags": ["數位應用價值", "備料政策"]
         },
         {
-            "video": "https://www.youtube.com/watch?v=061OUAbvbRU",
-            "tags": ["tag1", "tag2"]
+            "video": "https://youtu.be/kt0RV1RtpZk",
+            "tags": ["美中貿易戰", "數位化轉型"]
+        },
+        {
+            "video": "https://youtu.be/1GfHtDT0vaw",
+            "tags": ["新零售", "全域營銷"]
+        },
+        {
+            "video": "https://youtu.be/u7BGwQ4pY2k",
+            "tags": ["新零售", "全域營銷"]
+        }
+    ],
+    "videoList": [
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "2019鼎新企業高峰年會",
+            "contentText": "鼎新企業高峰年會邁向第七個年頭，帶給千家企業夥伴產業新知與趨勢議題。邀請業界黃金講師陣容，以實務角度帶出製造產業及零售業最新趨勢，與您一同邁向台灣新智造、新零售。",
+            "link": "/tw/activity/1780.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "從《工業3.5》看台灣產業現狀 專家導讀會",
+            "contentText": "「工業3.5」是台灣製造企業面向智慧製造的混和型策略！而何謂工業3.5？特邀鼎新電腦歐俋伶總經理為大家導讀《工業3.5》，並分享台灣中小製造業轉型案例。",
+            "link": "/tw/activity/1931.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "精實智慧製造 實現降本提效數位化轉型路徑",
+            "contentText": "精實生產的理論由來已久，是一套以排除浪費為主要目的之系統性生產方法。鼎新電腦資深顧問常金龍，將與您釐清精實製造與智慧製造的關係，以及雙軌併行之道。",
+            "link": "/tw/activity/1931.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "工業互聯網APP賦能實現精實智能生產",
+            "contentText": "工業APP如何達到小應用大效益，讓企業主隨時隨地瞭解設備投資收益 ，降本增效提升企業OEE水準？讓鼎新電腦工業APP事業部曹永誠副總經理告訴您敏穩雙態IT新趨勢。",
+            "link": "/tw/activity/1931.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "數據驅動數位化轉型有捷徑",
+            "contentText": "數位化轉型的目的是達到商業模式的變革，這條漫漫轉型路要如何才能把握方向不走偏、不繞遠路？鼎新電腦蘇斌雄專家，將與您分享面向數位化轉型與智慧製造的變與不變。",
+            "link": "/tw/activity/1931.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "中美貿易戰看智能製造與工業互聯網，如何賦能台灣製造業數位化轉型",
+            "contentText": "中美貿易戰持續延燒，對台灣產業的影響為何？本次邀請鼎新電腦資深副總裁陳劉杰，從三個精彩案例分享智能製造與工業互聯網，如何賦能台灣製造業數位化轉型。",
+            "link": "/tw/activity/1976.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "自動化工業展x塑橡膠工業展 專家看展指南 台灣智慧製造發展新視野",
+            "contentText": "本次邀請2位專家，用對談形式從展會亮點到趨勢走向，並以自身專長分享人機協作軟硬融通的智慧製造路徑，讓您快速從展會趨勢掌握智能製造發展方向！",
+            "link": "/tw/activity/1980.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "書籍導讀會 《面向未來的智造者》 看台灣精實智能製造趨勢",
+            "contentText": "由鼎新電腦曹永誠副總經理分享《面對未來的智造者：工業4 .0的困惑與下一波製造業再興》書中「精實智能製造」的內涵，以及數據如何支持精實變革改善。",
+            "link": "/tw/activity/1997.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "CIO到COO企業創新三部曲",
+            "contentText": "身為高階的您，如何發展企業的核心價值？此次分享從CIO到COO的角色價值轉換，到企業數位化轉型與智能化，如何善用資訊工具配合管理需求，達到企業經營夢想？",
+            "link": "/tw/activity/1998.html"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "走出產銷迷宮創新商機 ─東野精機價值交付案例完整解析",
+            "contentText": "由價值交付雙嬌帶您了解管理議題的制定、有效產銷會議的關鍵要素，並以實證案例─東野精機以訂單交付管理議題，作為價值交付之落地實證手法完整解析。",
+            "link": "/tw/activity/2040.html",
+            "hightlight": "true"
+        },
+        {
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "開啟新零售實現全域營銷─鼎新新零售方案實證案例分享會",
+            "contentText": "從數位化轉型的角度分享新零售的價值，並解析鼎新經營新零售三家客戶，實際運用新零售達到會員經營、虛實整合、全域營銷的案例分享。",
+            "link": "/tw/activity/2055.html",
+            "hightlight": "true"
         }
     ]
-
 }
