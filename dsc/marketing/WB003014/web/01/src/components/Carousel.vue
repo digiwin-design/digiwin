@@ -5,7 +5,7 @@
             ref="carousel"
             :interval="4000"
             type="card"
-            :autoplay="true"
+            :autoplay="false"
             :height="carouselHeight"
             trigger="click"
             arrow="never"
@@ -179,6 +179,7 @@ export default {
 }
 /deep/ .hashtag {
     display: flex;
+    width: 100%;
     color: #fff6dc;
     letter-spacing: getLetterSpacing(30);
     font-weight: bold;

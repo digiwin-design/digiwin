@@ -7,18 +7,9 @@
                 <div class="main-container">
                     <div class="hero">
                         <div class="container">
-                            <h1>
-                                <img src="images/logo-w.png" alt="Digiwin TV" />鼎新線上活動
-                            </h1>
-                            <p>
-                                研討會參會新選擇
-                                <br />不出門也能了解產業脈動與最新趨勢
-                            </p>
-                            <a
-                                href="https://www.digiwin.com/tw/zlsq.html?id=2069"
-                                target="_blank"
-                                class="mainLink check"
-                            >訂閱活動消息</a>
+                            <h1><img src="images/logo-w.png" alt="Digiwin TV">鼎新線上活動</h1>
+                            <p>研討會參會新選擇<br>不出門也能了解產業脈動與最新趨勢</p>
+                            <a href="https://www.digiwin.com/tw/zlsq.html?id=2069" target="_blank" class="mainLink check">訂閱活動消息</a>
                         </div>
                     </div>
 
@@ -27,25 +18,13 @@
                             <h1 class="title" data-text="THE LATEST VEDIO">近期播出</h1>
                             <div class="content">
                                 <div class="content__illust">
-                                    <img src="images/latest-illust.jpg" alt />
+                                    <img src="images/latest-illust.jpg" alt>
                                 </div>
                                 <div class="content__text">
-                                    <h2>
-                                        <i class="logo sm"></i>活動預告
-                                    </h2>
-                                    <p>
-                                        智慧工廠線上參訪
-                                        <br />看見台灣傳產轉型力量
-                                    </p>
-                                    <p>
-                                        2019年終壓軸鉅獻
-                                        <br />不需親身走訪就能眼見為憑
-                                    </p>
-                                    <a
-                                        href="http://acpms.digiwin.com/WebRegACT/onair.html?gNo=2019110002"
-                                        target="_blank"
-                                        class="mainLink calendar"
-                                    >立即預約線上參訪</a>
+                                    <h2><i class="logo sm"></i>活動預告</h2>
+                                    <p>智慧工廠線上參訪<br>看見台灣傳產轉型力量</p>
+                                    <p>2019年終壓軸鉅獻<br>不需親身走訪就能眼見為憑</p>
+                                    <a href="http://acpms.digiwin.com/WebRegACT/onair.html?gNo=2019110002" target="_blank" class="mainLink calendar">立即預約線上參訪</a>
                                 </div>
                             </div>
                         </div>
@@ -53,58 +32,26 @@
 
                     <article class="about">
                         <div class="container">
-                            <h1 class="title" data-text="ABOUT DIGIWINTV">
-                                關於
-                                <i class="logo"></i>
-                            </h1>
-                            <p>
-                                在《重構：數字化轉型的邏輯》書中，數位化轉型的關鍵字之首為「不確定性」，
-                                <br />以知識和資訊力應對不確定性成為轉型共同的挑戰！
-                            </p>
-                            <p>
-                                <strong>DigiwinTV線上活動</strong>，讓您獲取知識不再被時間、地點、人數所限。
-                                <br />從專家視角共論趨勢議題、親眼走訪標竿企業製造現場、效益導向的數位化轉型實證解析...
-                            </p>
+                            <h1 class="title" data-text="ABOUT DIGIWINTV">關於<i class="logo"></i></h1>
+                            <p>在《重構：數字化轉型的邏輯》書中，數位化轉型的關鍵字之首為「不確定性」，<br>以知識和資訊力應對不確定性成為轉型共同的挑戰！</p>
+                            <p><strong>DigiwinTV線上活動</strong>，讓您獲取知識不再被時間、地點、人數所限。<br>從專家視角共論趨勢議題、親眼走訪標竿企業製造現場、效益導向的數位化轉型實證解析...</p>
                             <p>人人啟發與賦能將成數位化轉型最大的動能，讓DigiwinTV為您蓄滿能量！</p>
-                            <a
-                                href="https://www.digiwin.com/tw/zlsq.html?id=2069"
-                                target="_blank"
-                                class="mainLink check"
-                            >
-                                訂閱DigiwinTV電子報
-                                <br />掌握最新活動訊息
-                            </a>
+                            <a href="https://www.digiwin.com/tw/zlsq.html?id=2069" target="_blank" class="mainLink check">訂閱DigiwinTV電子報<br> 掌握最新活動訊息</a>
                         </div>
                     </article>
 
                     <article class="category">
                         <div class="container">
-                            <h1 class="title" data-text="CATEGORY">
-                                <i class="logo"></i>系列主題
-                            </h1>
+                            <h1 class="title" data-text="CATEGORY"><i class="logo"></i>系列主題</h1>
                             <div class="items">
-                                <div
-                                    class="item"
-                                    v-for="(item, idx) in result.category"
-                                    :key="item.title"
-                                >
+                                <div class="item" v-for="(item, idx) in result.category" :key="item.title">
                                     <div class="item__illust">
-                                        <img :src="require(`@/assets/images/category-icon${idx + 1}.png`)" alt>
+                                        <img :src="`images/category-icon${idx + 1}.png`" alt>
                                     </div>
                                     <h2>{{item.title}}</h2>
                                     <p>{{item.desc}}</p>
-                                    <a
-                                        :href="item.link"
-                                        class="end js-nav"
-                                        v-if="activityEnded(item.link)"
-                                    >
-                                        往期內容
-                                        <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <a :href="item.link" target="_blank" v-else>
-                                        預約觀看
-                                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                                    </a>
+                                    <a href class="end" @click.prevent="scrollToAnchor(item.link)" v-if="activityEnded(item.link)">往期內容<i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+                                    <a :href="item.link" target="_blank" v-else>預約觀看<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -120,10 +67,7 @@
                     <article id="video-list" class="video-list">
                         <div class="container">
                             <h1 class="title" data-text="VIDEO LIST">往期內容</h1>
-                            <p class="desc">
-                                錯過直播了嗎？別扼腕，
-                                <br />精彩直播活動回看同樣精彩！
-                            </p>
+                            <p class="desc">錯過直播了嗎？別扼腕，<br>精彩直播活動回看同樣精彩！</p>
                             <Collapse :items="result.videoList"></Collapse>
                         </div>
                     </article>
@@ -137,29 +81,16 @@
                                     target="_blank"
                                     class="item"
                                 >
-                                    <img src="@/assets/images/icon-fb.png" alt />
-                                    <p>
-                                        成為鼎新電腦Facebook粉絲，
-                                        <br />為您分享更多有趣或時下熱門議題！
-                                    </p>
+                                    <img src="@/assets/images/icon-fb.png" alt>
+                                    <p>成為鼎新電腦Facebook粉絲，<br>為您分享更多有趣或時下熱門議題！</p>
                                 </a>
-                                <a
-                                    href="https://acho.tw/acho/f/1yEaW"
-                                    target="_blank"
-                                    class="item"
-                                >
-                                    <img src="@/assets/images/icon-line.png" alt />
-                                    <p>
-                                        加個LINE好友！
-                                        <br />不定時會有抽獎小活動和新知分享唷～
-                                    </p>
+                                <a href="https://acho.tw/acho/f/1yEaW" target="_blank" class="item">
+                                    <img src="@/assets/images/icon-line.png" alt>
+                                    <p>加個LINE好友！<br>不定時會有抽獎小活動和新知分享唷～</p>
                                 </a>
                                 <a href="/tw" target="_blank" class="item">
-                                    <img src="@/assets/images/icon-digiwin.png" alt />
-                                    <p>
-                                        更多專業解析及
-                                        <br />不同產業轉型案例分享！
-                                    </p>
+                                    <img src="@/assets/images/icon-digiwin.png" alt>
+                                    <p>更多專業解析及<br>不同產業轉型案例分享！</p>
                                 </a>
                             </div>
                         </div>
@@ -217,9 +148,15 @@ export default {
                 'images/main-bg-s.png',
                 'images/logo-w.png',
                 'images/latest-illust.jpg',
+                'images/category-icon1.png',
+                'images/category-icon2.png',
+                'images/category-icon3.png',
             ])
-            .then(() => this.$store.commit('updateLoading', false));
-        }
+                .then(() => this.$store.commit('updateLoading', false));
+        },
+        loading() {
+            this.$nextTick(() => this.scrollToAnchor(location.hash, false));
+        },
     },
     methods: {
         mediaSensor(minWidth) {
@@ -227,21 +164,6 @@ export default {
             let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
             mm.addListener(resizeWidth);
             resizeWidth(mm);
-        },
-        clickHandler() {
-            document.addEventListener('click', function () {
-                const el = event.target;
-                if (el.tagName === 'A' && el.classList.contains('js-nav')) {
-                    event.preventDefault();
-                    let selector = el.getAttribute('href') || el.getAttribute('xlink:href') || el.dataset.target;
-                    let target = document.querySelector(selector);
-                    if (!target) return;
-                    let offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
-                    let targetPos = target.getBoundingClientRect().top + window.pageYOffset;
-                    let finalPos = offset ? targetPos - offset : targetPos;
-                    window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
-                }
-            });
         },
         preloadImg(imgs) {
             return new Promise(resolve => {
@@ -262,7 +184,18 @@ export default {
         },
         activityEnded(link) {
             return link.startsWith('#');
-        }
+        },
+        scrollToAnchor(targetId, behavior = 'smooth') {
+            if (targetId) {
+                let targetPos = document.querySelector(targetId).getBoundingClientRect().top + window.pageYOffset;
+                if (behavior) {
+                    window.scroll({ top: targetPos, left: 0, behavior });
+                }
+                else {
+                    window.scroll({ top: targetPos, left: 0 });
+                }
+            }
+        },
     },
     created() {
         this.$store.dispatch('getData');
@@ -270,7 +203,6 @@ export default {
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
         this.mediaSensor(768);
-        this.clickHandler();
     },
 }
 </script>
