@@ -1,18 +1,15 @@
 <template>
-    <div class="index">
+    <div class="issue01">
         <slider-banner-s :slides="result.banner" device="mobile"></slider-banner-s>
     </div>
 </template>
 
 <script>
 module.exports = {
-    name: 'index',
-    components: {
-        'slider-banner-s': httpVueLoader('components/index/slider-banner-s.vue'),
-    },
+    name: 'issue01',
     computed: {
         result() {
-            return store.state.result.index;
+            return store.state.result.issue01;
         }
     },
 }

@@ -33,6 +33,10 @@ const store = new Vuex.Store({
 const router = new VueRouter({
     routes: [
         {
+            path: '/issue01/:tab?',
+            component: httpVueLoader('views/issue01.vue')
+        },
+        {
             path: '/manufacture/:tab?',
             component: httpVueLoader('views/manufacture.vue')
         },

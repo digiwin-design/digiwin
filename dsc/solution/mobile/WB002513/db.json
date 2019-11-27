@@ -24,6 +24,17 @@
             }
         ]
     },
+    "issue01": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題1"],
+                "desc": ["描述1"],
+                "imgSrc": ["images/issue01/hero-bg.jpg"],
+                "url": "javascript:;"
+            }
+        ]
+    },
     "seminar": {
         "title": "研討會",
         "section1Title": "系列研討會，挑戰少量多樣的生產衝擊",
