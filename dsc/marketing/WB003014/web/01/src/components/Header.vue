@@ -7,36 +7,36 @@
 
         //- 主選單區
         #nav
-            a(href='http://www.digiwin.com/tw', target='_blank')
-                img.logo(src='http://www.digiwin.com/tw/dsc/Library/images/logo.png', alt='鼎新官網', width='90', height='29')
+            a(href='https://www.digiwin.com/tw', target='_blank')
+                img.logo(src='https://www.digiwin.com/tw/dsc/Library/images/logo.png', alt='鼎新官網', width='90', height='29')
             ul.link
                 li.line_L
-                    a(href='http://www.digiwin.com/tw/activity.html', target='_blank') 最新課程
+                    a(href='https://www.digiwin.com/tw/activity.html', target='_blank') 最新課程
                 li
-                    a(href='http://www.digiwin.com/tw/enewspaper.html', target='_blank') 電子報
+                    a(href='https://www.digiwin.com/tw/enewspaper.html', target='_blank') 電子報
                 li
                     a(href='javascript:;')
                         | 解決方案
-                        img(src='http://www.digiwin.com/tw/dsc/Library/images/arr.png', width='9', height='7')
+                        img(src='https://www.digiwin.com/tw/dsc/Library/images/arr.png', width='9', height='7')
                     ul.subLink
                         li
-                            a(href='http://www.digiwin.com/tw/case.html', target='_blank') E化案例
+                            a(href='https://www.digiwin.com/tw/case.html', target='_blank') E化案例
                 li
                     a(href='https://www.youtube.com/user/DSCTCE00', target='_blank')
                         | YouTube
-                        img(src='http://www.digiwin.com/tw/dsc/Library/images/arr.png', width='9', height='7')
+                        img(src='https://www.digiwin.com/tw/dsc/Library/images/arr.png', width='9', height='7')
                     ul.subLink
                         li
                             a(href='https://www.facebook.com/DSCmain', target='_blank') 鼎新粉絲團
                         li
-                            a(href='http://www.digiwin.com/tw/dsc/service/WB002588/WB00258801.html', target='_blank') 心服務新價值
+                            a(href='https://www.digiwin.com/tw/dsc/service/WB002588/WB00258801.html', target='_blank') 心服務新價值
                         li
                             a(href='https://a1.digiwin.com/', target='_blank') 商務應用雲
                         li
-                            a(href='http://www.digiwin.com/tw/dsc/service/WB002903/web/WB00290301_index.htm', target='_blank') 鼎新服務雲
+                            a(href='https://www.digiwin.com/tw/dsc/service/WB002903/web/WB00290301_index.htm', target='_blank') 鼎新服務雲
                 li.Phone
-                    a(href='http://www.digiwin.com/tw/contact/eform.html')
-                        img(src='http://www.digiwin.com/tw/dsc/Library/images/phoneIcon.png', width='16', height='12')
+                    a(href='https://www.digiwin.com/tw/contact/eform.html')
+                        img(src='https://www.digiwin.com/tw/dsc/Library/images/phoneIcon.png', width='16', height='12')
                         |  0800-888-162
 </template>
 
@@ -69,7 +69,7 @@ export default {
 
             $("#LOGO_M").on("click", DIGIWIN);
             function DIGIWIN() {
-                window.open("http://www.digiwin.com/tw");
+                window.open("https://www.digiwin.com/tw");
 
             }
         },

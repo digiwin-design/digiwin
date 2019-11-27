@@ -2,17 +2,17 @@
 //- footer
 #dgwFooter
     .link01
-        a(href='http://www.digiwin.com/tw/portal/page/index/id/1202.html', target='_blank') 隱私權聲明
+        a(href='https://www.digiwin.com/tw/portal/page/index/id/1202.html', target='_blank') 隱私權聲明
         span │
         a(href='http://career.digiwin.com/', target='_blank') 人才招募
         span │
         a(href='https://www.facebook.com/digiwinHR', target='_blank') 粉絲團
         span │
-        a(href='http://www.digiwin.com/tw/contact/eform.html', target='_blank') 聯絡我們
+        a(href='https://www.digiwin.com/tw/contact/eform.html', target='_blank') 聯絡我們
     .link02
         ul
             li
-                img(src='http://www.digiwin.com/tw/dsc/Library/images/digiwinSoft.png', width='77', height='18', align='absmiddle')
+                img(src='https://www.digiwin.com/tw/dsc/Library/images/digiwinSoft.png', width='77', height='18', align='absmiddle')
                 span │
                 span.text01
                     a(href='/tw') 鼎新電腦
