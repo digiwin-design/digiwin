@@ -301,3 +301,13 @@ $(function () {
     //         }
     //     });
 });
+
+// 修改首頁資料索取錯誤連結
+$(function () {
+    if (location.pathname !== '/tw') return;
+    var links = document.querySelectorAll('.h-new:last-of-type a');
+    links.forEach(el => {
+        let url = el.getAttribute('href');
+        el.href = url.replace(/\/tw\/tw\//, '/tw/');
+    });
+});
