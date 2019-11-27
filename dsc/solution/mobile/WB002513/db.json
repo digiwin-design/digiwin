@@ -1,4 +1,29 @@
 {
+    "index": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題1"],
+                "desc": ["描述1"],
+                "imgSrc": ["images/index/hero-bg1.jpg"],
+                "url": "javascript:;"
+            },
+            {
+                "id": 2,
+                "title": ["標題2"],
+                "desc": ["描述2"],
+                "imgSrc": ["images/index/hero-bg2.jpg"],
+                "url": "javascript:;"
+            },
+            {
+                "id": 3,
+                "title": ["標題3"],
+                "desc": ["描述3"],
+                "imgSrc": ["images/index/hero-bg3.jpg"],
+                "url": "javascript:;"
+            }
+        ]
+    },
     "seminar": {
         "title": "研討會",
         "section1Title": "系列研討會，挑戰少量多樣的生產衝擊",

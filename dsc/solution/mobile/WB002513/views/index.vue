@@ -1,8 +1,6 @@
 <template>
     <div class="index">
-        <main-header>
-            <template slot="content"></template>
-        </main-header>
+        <slider-banner-s :slides="result.banner" device="mobile"></slider-banner-s>
     </div>
 </template>
 
@@ -11,7 +9,7 @@ module.exports = {
     name: 'WB002513',
     computed: {
         result() {
-            return store.state.result;
+            return store.state.result.index;
         }
     },
 }

@@ -1,4 +1,4 @@
-main .manufacture .banner {
+main .index .banner {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -7,12 +7,8 @@ main .manufacture .banner {
         cursor: pointer;
     }
     &-slide {
-        height: image-height('manufacture/hero-bg-s.jpg');
+        height: image-height('index/hero-bg1.jpg');
         background-position: 100% 0;
-        @media (min-width: $tablet-width + 1) {
-            height: image-height('manufacture/hero-bg.jpg');
-            background-position: 50% 0;
-        }
     }
     .container {
         display: flex;
@@ -29,9 +25,6 @@ main .manufacture .banner {
         font-weight: bold;
         font-size: 40px;
         line-height: 1.2;
-        @media (min-width: $tablet-width + 1) {
-            font-size: 48px;
-        }
     }
     &-desc {
         max-width: 500px;
@@ -48,9 +41,6 @@ main .manufacture .banner {
         width: 100%;
         height: 100%;
         transform: translateX(-50%);
-        @media (min-width: $content-width) {
-            width: $content-width;
-        }
     }
     &-button-next,
     &-button-prev {
@@ -63,11 +53,11 @@ main .manufacture .banner {
     }
     &-button-next {
         right: 5px;
-        background: image-url('manufacture/banner-btn-next.png') 100% 50%/contain no-repeat;
+        background: image-url('index/banner-btn-next.png') 100% 50%/contain no-repeat;
     }
     &-button-prev {
         left: 5px;
-        background: image-url('manufacture/banner-btn-prev.png') 0 50%/contain no-repeat;
+        background: image-url('index/banner-btn-prev.png') 0 50%/contain no-repeat;
     }
     &-pagination {
         position: absolute;
@@ -76,11 +66,6 @@ main .manufacture .banner {
         display: flex;
         transform: translateX(-50%);
         align-items: center;
-        @media (min-width: $tablet-width + 1) {
-            right: 46px;
-            left: auto;
-            transform: translateX(0);
-        }
         &-bullet {
             width: 14px;
             height: 14px;
