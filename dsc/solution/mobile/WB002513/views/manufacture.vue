@@ -1,6 +1,6 @@
 <template>
     <div class="manufacture">
-        <slider-banner-s v-bind:slides="result.banner" device="mobile"></slider-banner-s>
+        <slider-banner-s v-bind:slides="result.banner"></slider-banner-s>
 
         <article class="section1">
             <div class="container">

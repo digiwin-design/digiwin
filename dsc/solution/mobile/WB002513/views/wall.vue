@@ -1,15 +1,15 @@
 <template>
-    <div class="issue01">
+    <div class="wall">
         <slider-banner-s :slides="result.banner"></slider-banner-s>
     </div>
 </template>
 
 <script>
 module.exports = {
-    name: 'issue01',
+    name: 'wall',
     computed: {
         result() {
-            return store.state.result.issue01;
+            return store.state.result.wall;
         }
     },
 }

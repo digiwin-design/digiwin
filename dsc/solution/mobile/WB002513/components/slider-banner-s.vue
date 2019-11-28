@@ -3,14 +3,14 @@
         <div class="swiper-wrapper">
             <div
                 v-for="slide in slides"
-                :key="slide.title[deviceType] || slide.title[0]"
-                :style="{ backgroundImage: 'url(' + (slide.imgSrc[deviceType] || slide.imgSrc[0]) + ')' }"
+                :key="slide.title"
+                :style="{ backgroundImage: 'url(' + slide.imgSrc + ')' }"
                 :class="'slide' + slide.id"
                 class="banner-slide swiper-slide"
             >
                 <div class="container">
-                    <p class="banner-title" v-html="slide.title[deviceType] || slide.title[0]"></p>
-                    <p class="banner-desc" v-html="slide.desc[deviceType] || slide.desc[0]"></p>
+                    <p class="banner-title" v-html="slide.title"></p>
+                    <p class="banner-desc" v-html="slide.desc"></p>
                 </div>
             </div>
         </div>
@@ -29,10 +29,6 @@ module.exports = {
             type: Array,
             required: true
         },
-        device: {
-            type: String,
-            required: true
-        },
         nav: {
             type: Boolean,
             default: false
@@ -44,9 +40,6 @@ module.exports = {
         }
     },
     computed: {
-        deviceType: function () {
-            return this.device === 'desktop' ? 0 : 1;
-        },
         clickable: function () {
             return this.slides[this.index].url !== 'javascript:;';
         },

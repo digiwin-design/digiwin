@@ -1,15 +1,16 @@
 <template>
-    <div class="issue01">
+    <div class="solution">
         <slider-banner-s :slides="result.banner"></slider-banner-s>
+        <h2>{{$route.params.id}}</h2>
     </div>
 </template>
 
 <script>
 module.exports = {
-    name: 'issue01',
+    name: 'solution',
     computed: {
         result() {
-            return store.state.result.issue01;
+            return store.state.result.solution;
         }
     },
 }

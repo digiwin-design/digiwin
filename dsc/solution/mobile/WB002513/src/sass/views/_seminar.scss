@@ -33,6 +33,7 @@ main .seminar {
         text-align: center;
         font-weight: bold;
         font-size: 26px;
+        line-height: 1.3;
         @media (min-width: $tablet-width + 1) {
             font-size: 36px;
         }
@@ -41,6 +42,7 @@ main .seminar {
         &-desc {
             margin: 0 auto;
             max-width: 1000px;
+            line-height: 1.6;
         }
         &-nav {
             display: flex;

@@ -1,4 +1,4 @@
-// Vue.use(VueAwesomeSwiper);
+Vue.use(VueAwesomeSwiper);
 httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
@@ -43,6 +43,14 @@ const router = new VueRouter({
         {
             path: '/seminar/:tab?',
             component: httpVueLoader('views/seminar.vue')
+        },
+        {
+            path: '/solution/:id/:tab?',
+            component: httpVueLoader('views/solution.vue')
+        },
+        {
+            path: '/wall/:tab?',
+            component: httpVueLoader('views/wall.vue')
         },
         {
             path: '/:tab?',

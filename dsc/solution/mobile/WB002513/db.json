@@ -3,24 +3,145 @@
         "banner": [
             {
                 "id": 1,
-                "title": ["標題1"],
-                "desc": ["描述1"],
-                "imgSrc": ["images/index/hero-bg1.jpg"],
+                "title": "少量多樣<br>已是接單常態",
+                "desc": "●客製化訂單時代來臨,公司營運策略如何因應?<br>●生產規劃、存貨政策、採購策略、產品開發...的挑戰在那裡?",
+                "imgSrc": "images/index/hero-bg1.jpg",
                 "url": "javascript:;"
             },
             {
                 "id": 2,
-                "title": ["標題2"],
-                "desc": ["描述2"],
-                "imgSrc": ["images/index/hero-bg2.jpg"],
+                "title": "電子業轉型<br>車用,交通,醫療...<br>已是趨勢",
+                "desc": "●搶進新市場的背後,企業內部需要作那些改變?<br>●通過TS-16949、ISO-13485，真正的挑戰才正要開始?",
+                "imgSrc": "images/index/hero-bg2.jpg",
                 "url": "javascript:;"
             },
             {
                 "id": 3,
-                "title": ["標題3"],
-                "desc": ["描述3"],
-                "imgSrc": ["images/index/hero-bg3.jpg"],
+                "title": "擁抱智慧製造<br>勾勒最佳路徑",
+                "subtitle": "贏在生產力4.0",
+                "desc": "邁向智慧製造阻力最小之路",
+                "imgSrc": "images/index/hero-bg3.jpg",
                 "url": "javascript:;"
+            }
+        ],
+        "section1": [
+            {
+                "link": "solution/01",
+                "figcaption": "電子零組件"
+            },
+            {
+                "link": "solution/02",
+                "figcaption": "電子組裝業"
+            },
+            {
+                "link": "solution/03",
+                "figcaption": "連接器"
+            },
+            {
+                "link": "solution/04",
+                "figcaption": "電池製造"
+            },
+            {
+                "link": "solution/05",
+                "figcaption": "太陽能"
+            },
+            {
+                "link": "solution/06",
+                "figcaption": "LED"
+            },
+            {
+                "link": "solution/07",
+                "figcaption": "PCB"
+            },
+            {
+                "link": "solution/08",
+                "figcaption": "IC設計"
+            }
+        ],
+        "section2": [
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201211123807.html",
+                "text": "電子表單(ASP版)"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201211123807.html",
+                "text": "企業流程管理BPM"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201402131102.html",
+                "text": "人力資源HR"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201402133996.html",
+                "text": "先進規劃與排程APS"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201402135005.html",
+                "text": "廠區生產追蹤SFT"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P2012111241110.html",
+                "text": "Portal"
+            },
+            {
+                "link": "http://www.dsc.com.tw/event/WB002323/WB00232301.html",
+                "text": "專案成本"
+            },
+            {
+                "link": "https://www.digiwin.com/tw/dsc/solution/WB002513/WB00251301?tag#contact",
+                "text": "廠務管理"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P2012111250711.html",
+                "text": "商業智慧BI"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201211123618.html",
+                "text": "客戶關係管理CRM"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201404098942.html",
+                "text": "產品生命週期PLM"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201510069182.html",
+                "text": "MES"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201404149431.html",
+                "text": "Mobile Solution"
+            },
+            {
+                "link": "https://www.digiwin.com/softwareDetail_P201402139004.html",
+                "text": "供應鏈管理EC"
+            },
+            {
+                "link": "https://www.digiwin.com/tw/dsc/solution/WB002513/WB00251301?tag#contact",
+                "text": "產品溯源"
+            },
+            {
+                "link": "https://www.digiwin.com/tw/dsc/solution/WB002513/WB00251301?tag#contact",
+                "text": "CQA"
+            }
+        ],
+        "slides": [
+            {
+                "video": "https://www.youtube.com/embed/H_XO3fwT0F8",
+                "company": "信邦<br>電子",
+                "people": "王紹新 董事長",
+                "content": "轉型創新沒有捷徑，因為機會只留給準備好的人！時存危機感將引領企業邁向成功，且最重要的關鍵就是：要能夠捨得！"
+            },
+            {
+                "video": "https://www.youtube.com/embed/0dPtb5mFa8Y",
+                "company": "創譽<br>科技",
+                "people": "應國良 總經理",
+                "content": "系統上線第二個月系統版和人工版的數據幾乎完全一致，生管負擔減少許多；人均產值、生產效率和訂單達交率更有明顯提升！"
+            },
+            {
+                "video": "https://www.youtube.com/embed/0U0kU-CSEGo",
+                "company": "茂寧<br>企業",
+                "people": "薛聰義 經理",
+                "content": "採購物料計劃改用APS系統後，生管在八小時內就能夠完成原本的工作項目。寧茂企業 快速回應機制提升客戶服務滿意度！"
             }
         ]
     },
@@ -28,9 +149,9 @@
         "banner": [
             {
                 "id": 1,
-                "title": ["標題1"],
-                "desc": ["描述1"],
-                "imgSrc": ["images/issue01/hero-bg.jpg"],
+                "title": "標題1",
+                "desc": "描述1",
+                "imgSrc": "images/issue01/hero-bg.jpg",
                 "url": "javascript:;"
             }
         ]
@@ -40,121 +161,25 @@
         "section1Title": "系列研討會，挑戰少量多樣的生產衝擊",
         "section1Desc": "鼎新為電子業舉辦各式管理議題與實務操作兼俱的研討會，如您在過去因工作繁忙無法親臨參加，我們將提供免費講義資料索取….期許與您在產業快速變化的年代，一同吸收新知，一同改變與成長…"
     },
-    "manufacture": {
+    "solution": {
         "banner": [
             {
                 "id": 1,
-                "title": ["電子同業反應建置資訊系統欲改善的問題"],
-                "desc": ["統計今年度電子業反映的作業與管理困擾整理出相關數據，發現經濟景氣再不佳，電子業對於資訊系統建置與規劃依然持續在進行，誠如下圖所示，ERP建置仍是首要，其中尤以齊料控料、交期追蹤、品質追溯、設備績效等生產相關管理議題最受重視，並列入IT建置首要改善的重點。"],
-                "imgSrc": [
-                    "images/manufacture/hero-bg.jpg",
-                    "images/manufacture/hero-bg-s.jpg"
-                ],
+                "title": "title",
+                "desc": "desc",
+                "imgSrc": "images/solution/hero-bg.jpg",
                 "url": "javascript:;"
             }
-        ],
-        "progressBar": [
+        ]
+    },
+    "wall": {
+        "banner": [
             {
-                "text": "因公司規模擴編,營業額成長，舊系統已不敷使用,需要導入較完整之ERP，尤其是生管製程的功能加強…",
-                "percentage": 67.2
-            },
-            {
-                "text": "常有缺料問題，追料不及生產及委外加工物料需要管理",
-                "percentage": 58.5
-            },
-            {
-                "text": "業務接單無法即時回覆客戶交期，常需要三天以上才能回覆，造成訂單流失",
-                "percentage": 53.6
-            },
-            {
-                "text": "客戶要求提出生產履歷，訪廠時現場常無法舉證料件的來源符合規範….",
-                "percentage": 33.7
-            },
-            {
-                "text": "希望有能工具協助統計有效工時，無效工時，與生產的良率狀況 ?",
-                "percentage": 31.9
-            },
-            {
-                "text": "人事薪資結合刷卡出缺勤, 績效考核.教育訓練.人員招募",
-                "percentage": 29.8
-            },
-            {
-                "text": "希望將ISO文件,表單資訊化,方面內部流程管理與主管出差外地方便隨時簽核..",
-                "percentage": 36.8
-            }
-        ],
-        "pains": [
-            {
-                "color": "#1165a0",
-                "imgSrc": "images/manufacture/hover-box1.svg",
-                "text": "來自竹科某網通設備廠來電",
-                "hoverText": "你好，目前我們生管回饋缺料狀態的回應交期要3~7天，希望系統能縮短生產交貨的前置時間..還有，舊系統只知道缺料未齊，但無法評估到貨時間....."
-            },
-            {
-                "color": "#0081bd",
-                "imgSrc": "images/manufacture/hover-box2.svg",
-                "text": "來自竹北某IC設計廠來電",
-                "hoverText": "你好，我們現在IC的刻號/批號/Datecode/BIN管理目前都是用office記錄，後續的品質追蹤、產品版次管理無法串連.....連帶庫存也不準..."
-            },
-            {
-                "color": "#1165a0",
-                "imgSrc": "images/manufacture/hover-box3.svg",
-                "text": "來自桃園某PCB廠來電",
-                "hoverText": "你好，因為PCB產業的製程很複雜，需要同時多機台交叉使用.....公司主管希望可以更了解機台稼動率和產能缺口，必要時刻可快速配置....."
-            },
-            {
-                "color": "#ff9f16",
-                "imgSrc": "images/manufacture/hover-box4.svg",
-                "text": "業務",
-                "hoverText": "客戶訂單就在眼前了，卻卡在交期回覆接不下來…怎麼辦~~!!!"
-            },
-            {
-                "color": "#a8ba14",
-                "imgSrc": "images/manufacture/hover-box5.svg",
-                "text": "物管",
-                "hoverText": "工單只是缺一顆料就不能開工，造成產能浪費交期延誤，到底要怎麼控齊料?"
-            },
-            {
-                "color": "#1eb372",
-                "imgSrc": "images/manufacture/hover-box6.png",
-                "text": "生管",
-                "hoverText": "工單進了產線就像進了黑箱，進度到那了沒人知道，要去現場追幾次才能知道交期?"
-            },
-            {
-                "color": "#04b4c9",
-                "imgSrc": "images/manufacture/hover-box7.svg",
-                "text": "採購",
-                "hoverText": "業務不下預測，買太多料變庫存，又要我扛責任...."
-            }
-        ],
-        "collapse": [
-            {
-                "title": "生產資源排程進度追蹤",
-                "desc": "結合設備甘特圖、產能負荷、行事曆。清楚的掌握產能狀況"
-            },
-            {
-                "title": "瓶頸資源負荷表",
-                "desc": "確認目前的預測及訂單的產品組合，廠內產能是否會Over Loading、瓶頸製程會飄移至哪些製程"
-            },
-            {
-                "title": "每日派工表",
-                "desc": "以企業整體最大利益(訂單交期及優先權)，系統建議每張工單各製程在哪些機台生產以及預計生產日期。"
-            },
-            {
-                "title": "訂單規畫總表",
-                "desc": "生管透過訂單規劃總表掌握特定訂單(詢單)之規劃結果，並將此訊息回覆給業務單位以快速回應顧客，並對可能延後的訂單提出警訊。"
-            },
-            {
-                "title": "訂單交期總表",
-                "desc": "以延遲訂單展出造成延遲的物料，做為User行動方案的參考"
-            },
-            {
-                "title": "客戶需求變更後續行動方案建議",
-                "desc": "那些物料的庫存、在途採購在訂單異動後會變成呆滯料、需採購調整或是跟客戶進行索賠協商。"
-            },
-            {
-                "title": "採購令跟催表",
-                "desc": ""
+                "id": 1,
+                "title": "title",
+                "desc": "desc",
+                "imgSrc": "images/wall/hero-bg.jpg",
+                "url": "javascript:;"
             }
         ]
     }

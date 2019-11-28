@@ -99,6 +99,14 @@ gulp.task('pug', function () {
         .pipe(gulp.dest(''));
 });
 
+// 圖片壓縮
+gulp.task('imagemin', function () {
+    return gulp.src('images/**/*')
+        .pipe($.plumber({ errorHandler: $.notify.onError('<%= error.message %>') }))
+        .pipe($.imagemin())
+        .pipe(gulp.dest('images'));
+});
+
 // 刪除已編譯檔案
 gulp.task('del', function () {
     return del(['css/**', 'js/**']);
