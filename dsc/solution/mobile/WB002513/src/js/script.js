@@ -4,6 +4,7 @@ httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/pain.vue');
+httpVueLoader.register(Vue, 'components/case-list.vue');
 
 NProgress.configure({ showSpinner: false });
 

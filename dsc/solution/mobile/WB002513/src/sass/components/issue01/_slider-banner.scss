@@ -8,7 +8,7 @@ main .issue01 .banner {
     }
     &-slide {
         height: image-height('issue01/hero-bg.jpg');
-        background-position: 100% 0;
+        background-position: 50% 0;
     }
     .container {
         display: flex;
@@ -20,18 +20,21 @@ main .issue01 .banner {
         margin-bottom: .5em;
         max-width: 500px;
         width: 100%;
-        color: #ff0;
+        color: #fff;
         letter-spacing: getLetterSpacing(25);
         font-weight: bold;
         font-size: 40px;
         line-height: 1.2;
+        strong {
+            color: #ff0;
+        }
     }
     &-desc {
         max-width: 500px;
         width: 100%;
         color: #fff;
         letter-spacing: getLetterSpacing(25);
-        line-height: 1.2;
+        line-height: 1.6;
     }
     &-controls {
         position: absolute;

@@ -8,7 +8,7 @@ main .wall .banner {
     }
     &-slide {
         height: image-height('wall/hero-bg.jpg');
-        background-position: 100% 0;
+        background-position: 50% 0;
     }
     .container {
         display: flex;
@@ -31,7 +31,7 @@ main .wall .banner {
         width: 100%;
         color: #fff;
         letter-spacing: getLetterSpacing(25);
-        line-height: 1.2;
+        line-height: 1.3;
     }
     &-controls {
         position: absolute;
