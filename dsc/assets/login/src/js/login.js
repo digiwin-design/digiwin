@@ -39,18 +39,17 @@ new Vue({
         init() {
             let state = this.getParameterByName('state');
             if (this.code && state === this.state) {
-                this.getCode(); // 從登入畫面導回
+                this.getToken(); // 從登入畫面導回
             }
             else {
                 this.showCover(); // 未登入
             }
         },
-        getCode() {
+        getToken() {
+            // 變更網址
             let pageName = this.callbackURL.split('/').pop();
             history.replaceState({}, '', pageName);
-            this.getToken();
-        },
-        getToken() {
+
             const params = new URLSearchParams();
             params.append('grant_type', 'authorization_code');
             params.append('code', this.code);
