@@ -38,6 +38,14 @@ const router = new VueRouter({
             component: httpVueLoader('views/issue01.vue')
         },
         {
+            path: '/issue02/:tab?',
+            component: httpVueLoader('views/issue02.vue')
+        },
+        {
+            path: '/issue03/:tab?',
+            component: httpVueLoader('views/issue03.vue')
+        },
+        {
             path: '/manufacture/:tab?',
             component: httpVueLoader('views/manufacture.vue')
         },

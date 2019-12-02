@@ -1,4 +1,4 @@
-main .issue01 .banner {
+main .issue03 .banner {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -7,7 +7,7 @@ main .issue01 .banner {
         cursor: pointer;
     }
     &-slide {
-        height: image-height('issue01/hero-bg.jpg');
+        height: image-height('issue03/hero-bg.jpg');
         background-position: 50% 0;
     }
     .container {
@@ -19,20 +19,18 @@ main .issue01 .banner {
     &-title {
         margin-bottom: .5em;
         width: 100%;
-        color: #fff;
+        color: #ff0;
         letter-spacing: getLetterSpacing(25);
         font-weight: bold;
-        font-size: 40px;
+        font-size: 28px;
         line-height: 1.2;
-        strong {
-            color: #ff0;
-        }
     }
     &-desc {
         width: 100%;
         color: #fff;
         letter-spacing: getLetterSpacing(25);
-        line-height: 1.6;
+        font-size: 16px;
+        line-height: 1.5;
     }
     &-controls {
         position: absolute;
@@ -54,11 +52,11 @@ main .issue01 .banner {
     }
     &-button-next {
         right: 5px;
-        background: image-url('issue01/banner-btn-next.png') 100% 50%/contain no-repeat;
+        background: image-url('issue03/banner-btn-next.png') 100% 50%/contain no-repeat;
     }
     &-button-prev {
         left: 5px;
-        background: image-url('issue01/banner-btn-prev.png') 0 50%/contain no-repeat;
+        background: image-url('issue03/banner-btn-prev.png') 0 50%/contain no-repeat;
     }
     &-pagination {
         position: absolute;

@@ -89,19 +89,19 @@ main .issue01 {
         padding-bottom: 55px;
         background-color: #00577b;
         .sectionTitle {
-            h1 {
+            > h1 {
                 color: #fff;
                 letter-spacing: getLetterSpacing(25);
                 font-size: 22px;
-            }
-            strong {
-                color: #cde624;
+                strong {
+                    color: #cde624;
+                }
             }
         }
     }
     .section5 {
         background-color: #cde9ee;
-        .sectionTitle h1 {
+        .sectionTitle > h1 {
             color: #2466a0;
         }
     }
@@ -109,30 +109,15 @@ main .issue01 {
         padding-bottom: 55px;
         background-color: #0c7cc3;
         .sectionTitle {
-            h1 {
+            > h1 {
                 color: #fff;
-            }
-            strong {
-                color: #fff600;
+                strong {
+                    color: #fff600;
+                }
             }
         }
         a {
-            display: flex;
-            margin: 0 auto;
-            width: 175px;
-            height: 50px;
-            border: 2px solid #fff;
-            border-radius: 10px;
-            background-image: linear-gradient(#086eb7 55%, #034ea2 0);
-            color: #fff;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.3em;
-            justify-content: center;
-            align-items: center;
-            i {
-                margin-left: 5px;
-            }
+            @include mainBtn(175px, 50px, #086eb7, #034ea2);
         }
     }
 }

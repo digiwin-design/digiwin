@@ -258,6 +258,28 @@
         transform: rotate(180deg);
     }
 }
+
+@mixin mainBtn($width, $height, $gradient-color1, $gradient-color2) {
+    display: flex;
+    margin: 0 auto;
+    width: $width;
+    height: $height;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-image: linear-gradient($gradient-color1 55%, $gradient-color2 0);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    justify-content: center;
+    align-items: center;
+    i {
+        margin-left: 5px;
+    }
+    &:hover {
+        color: #fff; // override
+    }
+}
 /* #endregion mixin */
 
 /* #region extend */

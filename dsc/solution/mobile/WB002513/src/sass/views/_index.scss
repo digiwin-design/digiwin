@@ -15,7 +15,7 @@ main .index {
     .section1 {
         padding-bottom: 55px;
         background-color: #eaeaea;
-        .sectionTitle h1 {
+        .sectionTitle > h1 {
             color: #034ea2;
         }
         .grid {
@@ -36,10 +36,10 @@ main .index {
         @include bg('index/section2-bg.jpg');
         padding-bottom: 55px;
         .sectionTitle {
-            h1 {
+            > h1 {
                 color: #fff;
             }
-            p {
+            > p {
                 color: #7fbbe6;
             }
         }
@@ -75,10 +75,10 @@ main .index {
         padding-bottom: 55px;
         background-color: #eaeaea;
         .sectionTitle {
-            h1 {
+            > h1 {
                 color: #034ea2;
             }
-            p {
+            > p {
                 color: #0684df;
             }
         }
@@ -90,10 +90,10 @@ main .index {
     .section4 {
         padding-bottom: 55px;
         .sectionTitle {
-            h1 {
+            > h1 {
                 color: #034ea2;
             }
-            p {
+            > p {
                 color: #1382e1;
             }
         }
@@ -114,10 +114,10 @@ main .index {
         padding-bottom: 30px;
         background-color: #caeffe;
         .sectionTitle {
-            h1 {
+            > h1 {
                 color: #086eb7;
             }
-            p {
+            > p {
                 color: #36a2e6;
             }
         }

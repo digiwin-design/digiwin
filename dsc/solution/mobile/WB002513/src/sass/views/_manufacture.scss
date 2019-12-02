@@ -2,7 +2,7 @@ main .manufacture {
     .w-1000 {
         max-width: 1000px;
     }
-    .sectionTitle h1 {
+    .sectionTitle > h1 {
         font-weight: bold;
     }
     .section1 {
@@ -39,7 +39,7 @@ main .manufacture {
         padding-bottom: 60px;
         background-color: #d4e2e9;
         .sectionTitle {
-            h1 {
+            > h1 {
                 @media (min-width: $tablet-width + 1) {
                     text-align: center;
                 }
@@ -75,8 +75,8 @@ main .manufacture {
             padding-bottom: 60px;
         }
         .sectionTitle {
-            h1,
-            p {
+            > h1,
+            > p {
                 color: #fff;
             }
         }
@@ -85,8 +85,8 @@ main .manufacture {
         padding-bottom: 60px;
         background-color: #d4e2e9;
         .sectionTitle {
-            h1,
-            p {
+            > h1,
+            > p {
                 color: #055c8a;
             }
         }
@@ -99,8 +99,8 @@ main .manufacture {
         padding-bottom: 60px;
         background-color: #055c8a;
         .sectionTitle {
-            h1,
-            p {
+            > h1,
+            > p {
                 color: #fff;
             }
         }
