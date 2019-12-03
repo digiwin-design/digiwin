@@ -1,4 +1,4 @@
-main .solution .banner {
+main .mis01 .banner {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -7,7 +7,7 @@ main .solution .banner {
         cursor: pointer;
     }
     &-slide {
-        height: image-height('solution/hero-bg.jpg');
+        height: image-height('mis01/hero-bg.jpg');
         background-position: 50% 0;
     }
     .container {
@@ -17,15 +17,15 @@ main .solution .banner {
         justify-content: center;
     }
     &-title {
-        max-width: 500px;
+        margin-bottom: .5em;
         width: 100%;
-        color: #fff;
+        color: #ff0;
         letter-spacing: getLetterSpacing(25);
         font-weight: bold;
-        font-size: 36px;
+        font-size: 40px;
+        line-height: 1.2;
     }
     &-desc {
-        max-width: 500px;
         width: 100%;
         color: #fff;
         letter-spacing: getLetterSpacing(25);
@@ -51,11 +51,11 @@ main .solution .banner {
     }
     &-button-next {
         right: 5px;
-        background: image-url('solution/banner-btn-next.png') 100% 50%/contain no-repeat;
+        background: image-url('mis01/banner-btn-next.png') 100% 50%/contain no-repeat;
     }
     &-button-prev {
         left: 5px;
-        background: image-url('solution/banner-btn-prev.png') 0 50%/contain no-repeat;
+        background: image-url('mis01/banner-btn-prev.png') 0 50%/contain no-repeat;
     }
     &-pagination {
         position: absolute;

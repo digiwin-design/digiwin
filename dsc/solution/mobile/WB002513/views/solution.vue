@@ -1,7 +1,13 @@
 <template>
     <div class="solution">
         <slider-banner-s :slides="result.banner"></slider-banner-s>
-        <h2>{{$route.params.id}}</h2>
+
+        <article class="section3">
+            <div class="container">
+                <section-title title="成功案例"></section-title>
+                <case-list :list="result.caseList"></case-list>
+            </div>
+        </article>
     </div>
 </template>
 
@@ -10,7 +16,7 @@ module.exports = {
     name: 'solution',
     computed: {
         result() {
-            return store.state.result.solution;
+            return store.state.result.solution.find(item => item.id === this.$route.params.id);
         }
     },
 }

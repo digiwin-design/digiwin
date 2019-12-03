@@ -259,12 +259,12 @@
     }
 }
 
-@mixin mainBtn($width, $height, $gradient-color1, $gradient-color2) {
+@mixin mainBtn($width, $height, $gradient-color1, $gradient-color2, $border-color) {
     display: flex;
     margin: 0 auto;
     width: $width;
     height: $height;
-    border: 2px solid #fff;
+    border: 2px solid $border-color;
     border-radius: 10px;
     background-image: linear-gradient($gradient-color1 55%, $gradient-color2 0);
     color: #fff;

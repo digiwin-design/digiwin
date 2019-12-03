@@ -19,7 +19,7 @@
             </div>
         </article>
 
-        <article class="section2">
+        <article id="ERPII" class="section2">
             <div class="container">
                 <section-title
                     title="ERP不再只是ERP"
@@ -31,7 +31,7 @@
             </div>
         </article>
 
-        <article class="section3">
+        <article id="case" class="section3">
             <div class="container">
                 <section-title
                     title="行業深耕，獨到專精"
@@ -89,7 +89,7 @@
                 <h2>跨越疆界與文化，管理在彈指之間達成目標</h2>
                 <p>雅得電池南向佈建，發揮生產基地優勢創造利潤空間，營收破 10%持續成長! 安全與舒適是當今的車子不間斷地要求，身為傳統二輪車用鉛酸電池大廠的雅得電池，成立於 1989 年，百分之百外銷的商業模式。在面臨環保議題以及科技的衝擊和挑戰，仍持續不斷堅守本質、發展電池技術。2011 年南向佈局，將生產基地遷移至越南，形成台灣總部、全球銷售(主要在歐美)、越南生產的多國營運模式。面對市場激烈競爭下，雅得積極投入創新的技術、改善生產流程、降低成本減低風險，滿足經營策略下的管理機制，讓營收持續成長，奠定未來成功的基石。本活動邀請雅得電池李美宜執行副總、黃慧玲財務長及陳燕如生管課長，為您深入剖析雅得電池成功關鍵。</p>
                 <a href="/tw/dsc/activity/WB002862/WB00286201.htm" target="_blank">了解更多</a>
-                <router-link to="seminar/6">看更多研討會資訊</router-link>
+                <router-link to="seminar/?tab=6">看更多研討會資訊</router-link>
             </div>
         </article>
     </div>

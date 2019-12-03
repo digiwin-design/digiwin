@@ -154,7 +154,7 @@ main .issue02 {
             color: #fff;
         }
         a {
-            @include mainBtn(175px, 50px, #086eb7, #034ea2);
+            @include mainBtn(175px, 50px, #086eb7, #034ea2, #fff);
         }
     }
 }

@@ -34,36 +34,52 @@ const store = new Vuex.Store({
 const router = new VueRouter({
     routes: [
         {
-            path: '/issue01/:tab?',
+            path: '/',
+            component: httpVueLoader('views/index.vue')
+        },
+        {
+            path: '/issue01',
             component: httpVueLoader('views/issue01.vue')
         },
         {
-            path: '/issue02/:tab?',
+            path: '/issue02',
             component: httpVueLoader('views/issue02.vue')
         },
         {
-            path: '/issue03/:tab?',
+            path: '/issue03',
             component: httpVueLoader('views/issue03.vue')
         },
         {
-            path: '/manufacture/:tab?',
+            path: '/manufacture',
             component: httpVueLoader('views/manufacture.vue')
         },
         {
-            path: '/seminar/:tab?',
+            path: '/seminar',
             component: httpVueLoader('views/seminar.vue')
         },
         {
-            path: '/solution/:id/:tab?',
+            path: '/mis01',
+            component: httpVueLoader('views/mis01.vue')
+        },
+        {
+            path: '/mis02',
+            component: httpVueLoader('views/mis02.vue')
+        },
+        {
+            path: '/mis03',
+            component: httpVueLoader('views/mis03.vue')
+        },
+        {
+            path: '/solution/:id',
             component: httpVueLoader('views/solution.vue')
         },
         {
-            path: '/wall/:tab?',
+            path: '/wall',
             component: httpVueLoader('views/wall.vue')
         },
         {
-            path: '/:tab?',
-            component: httpVueLoader('views/index.vue')
+            path: '*',
+            redirect: '/'
         },
     ],
     scrollBehavior(to, from, savedPosition) {
@@ -76,8 +92,8 @@ router.beforeEach((to, from, next) => {
 });
 router.afterEach((to, from) => {
     let submenu = document.querySelector('.page-submenu');
-    if (to.params.tab) {
-        let tab = parseInt(to.params.tab, 10);
+    if (to.query.tab) {
+        let tab = parseInt(to.query.tab, 10);
         $(submenu).addClass('active').find(`li:nth-child(${tab})`).addClass('active').siblings().removeClass('active');
     }
     else {

@@ -21,14 +21,23 @@ main .index {
         .grid {
             display: grid;
             column-gap: 10px;
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 144px);
             grid-template-columns: repeat(2, 1fr);
             row-gap: 30px;
             a {
                 text-align: center;
             }
+            figure {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                align-items: center;
+            }
             img {
                 margin-bottom: 20px;
+            }
+            figcaption {
+                margin-top: auto;
             }
         }
     }

@@ -491,7 +491,7 @@
             },
             {
                 "text": "輔導案例",
-                "url": "#/#inCase_bg"
+                "url": "#/#case"
             },
             {
                 "text": "研討會",
@@ -503,7 +503,7 @@
                 "dropdowns": [
                     {
                         "text": "ERPII介紹",
-                        "url": "#/#wrapper2_bg"
+                        "url": "#/#ERPII"
                     },
                     {
                         "text": "資安 備援 虛擬化",
