@@ -35,13 +35,18 @@ export default {
             mm.addListener(resizeWidth);
             resizeWidth(mm);
         },
-    },
-    created() {
-        this.$store.dispatch('getData');
+        mediaSensor2(minWidth) {
+            let resizeWidth = (pMatchMedia) => this.$store.commit('updateDevice2', !pMatchMedia.matches);
+            let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
+            mm.addListener(resizeWidth);
+            resizeWidth(mm);
+        },
     },
     mounted() {
+        this.$store.dispatch('getData');
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
         this.mediaSensor(768);
+        this.mediaSensor2(1099);
     },
 };
 </script>
