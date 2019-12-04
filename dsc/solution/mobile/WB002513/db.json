@@ -26,7 +26,7 @@
         ],
         "section1": [
             {
-                "link": "solution/01",
+                "link": "solution",
                 "figcaption": "電子零組件"
             },
             {
@@ -640,13 +640,27 @@
     },
     "solution": [
         {
-            "id": "01",
+            "name": "solution01",
             "banner": [
                 {
                     "id": 1,
                     "title": "電子零組件",
                     "imgSrc": "images/solution/hero-bg.jpg",
                     "url": "javascript:;"
+                }
+            ],
+            "section2": [
+                {
+                    "name": "研發管理",
+                    "desc": "管控研發專案進度、文件、資源，將資源做適當分配，知識累積分享，文件版本統一，有效管理專案里程碑的進度與研發成本。"
+                },
+                {
+                    "name": "送樣管理",
+                    "desc": "管控送樣進度，文件自動化傳遞，串連業務、研發、財會、生產等相關單位的協同合作，提高 Hit Rate。"
+                },
+                {
+                    "name": "製程追蹤及最佳化排程",
+                    "desc": "可依據機台產能及模／工具產能結合料況直接推算生產排程；Web化多職能平台，輕鬆掌握廠內外資訊。提供生產設備/派工執行等各類電子看板。自訂品質需收集之資料，幫助產品追溯。"
                 }
             ],
             "caseList": [
@@ -663,13 +677,31 @@
             ]
         },
         {
-            "id": "02",
+            "name": "solution02",
             "banner": [
                 {
                     "id": 1,
                     "title": "電子組裝業",
                     "imgSrc": "images/solution/hero-bg.jpg",
                     "url": "javascript:;"
+                }
+            ],
+            "section2": [
+                {
+                    "name": "產品開發管理",
+                    "desc": [
+                        "樣品申請與承認時間控管",
+                        "產品變更版本的紀錄",
+                        "專案時程控管及支援的調配",
+                        "產品研發經驗的傳承",
+                        "產品研發完整的料件資料管理"
+                    ]
+                }
+            ],
+            "section3": [
+                {
+                    "name": "自動編碼引導",
+                    "desc": "彈性易於使用的編碼原則功能，可自行定義料件相關欄位，編碼人員快速辨識此料編已編否，如未編則自動生成編碼，使用者可依尋產品，解決編碼複雜問題。"
                 }
             ],
             "caseList": [
@@ -682,6 +714,72 @@
                     "link": "/tw/case/1551.html",
                     "company": "仲琦科技",
                     "desc": "總經理在上班時不能一天沒有EasyFlow，透過Portal整合EasyFlow 表單，使得老闆所推行的無紙化可以實現。現在，也已經很少看到助理拿著簽核表單四處跑了…"
+                }
+            ]
+        },
+        {
+            "name": "solution03",
+            "banner": [
+                {
+                    "id": 1,
+                    "title": "連接器",
+                    "imgSrc": "images/solution/hero-bg.jpg",
+                    "url": "javascript:;"
+                }
+            ]
+        },
+        {
+            "name": "solution04",
+            "banner": [
+                {
+                    "id": 1,
+                    "title": "電池製造",
+                    "imgSrc": "images/solution/hero-bg.jpg",
+                    "url": "javascript:;"
+                }
+            ]
+        },
+        {
+            "name": "solution05",
+            "banner": [
+                {
+                    "id": 1,
+                    "title": "太陽能",
+                    "imgSrc": "images/solution/hero-bg.jpg",
+                    "url": "javascript:;"
+                }
+            ]
+        },
+        {
+            "name": "solution06",
+            "banner": [
+                {
+                    "id": 1,
+                    "title": "LED",
+                    "imgSrc": "images/solution/hero-bg.jpg",
+                    "url": "javascript:;"
+                }
+            ]
+        },
+        {
+            "name": "solution07",
+            "banner": [
+                {
+                    "id": 1,
+                    "title": "PCB",
+                    "imgSrc": "images/solution/hero-bg.jpg",
+                    "url": "javascript:;"
+                }
+            ]
+        },
+        {
+            "name": "solution08",
+            "banner": [
+                {
+                    "id": 1,
+                    "title": "IC設計",
+                    "imgSrc": "images/solution/hero-bg.jpg",
+                    "url": "javascript:;"
                 }
             ]
         }

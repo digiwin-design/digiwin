@@ -70,8 +70,50 @@ const router = new VueRouter({
             component: httpVueLoader('views/mis03.vue')
         },
         {
-            path: '/solution/:id',
-            component: httpVueLoader('views/solution.vue')
+            path: '/solution',
+            component: httpVueLoader('views/solution/main.vue'),
+            children: [
+                {
+                    path: '',
+                    name: 'solution01',
+                    component: httpVueLoader('views/solution/solution01.vue'),
+                },
+                {
+                    path: '02',
+                    name: 'solution02',
+                    component: httpVueLoader('views/solution/solution02.vue'),
+                },
+                {
+                    path: '03',
+                    name: 'solution03',
+                    component: httpVueLoader('views/solution/solution03.vue'),
+                },
+                {
+                    path: '04',
+                    name: 'solution04',
+                    component: httpVueLoader('views/solution/solution04.vue'),
+                },
+                {
+                    path: '05',
+                    name: 'solution05',
+                    component: httpVueLoader('views/solution/solution05.vue'),
+                },
+                {
+                    path: '06',
+                    name: 'solution06',
+                    component: httpVueLoader('views/solution/solution06.vue'),
+                },
+                {
+                    path: '07',
+                    name: 'solution07',
+                    component: httpVueLoader('views/solution/solution07.vue'),
+                },
+                {
+                    path: '08',
+                    name: 'solution08',
+                    component: httpVueLoader('views/solution/solution08.vue'),
+                },
+            ]
         },
         {
             path: '/wall',

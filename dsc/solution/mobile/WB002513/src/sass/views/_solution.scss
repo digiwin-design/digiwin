@@ -1,3 +1,78 @@
-main .solution {
+main [class^=solution] {
+    letter-spacing: getLetterSpacing(25);
+    .sectionTitle {
+        align-items: flex-start;
+        > h1 {
+            color: #285c9c;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+    ul {
+        padding-left: 1em;
+        list-style-type: disc;
+    }
 
+    // table
+    table {
+        width: 100%;
+        border: 1px solid #000;
+        font-size: 16px;
+    }
+    tbody > tr:nth-of-type(odd) {
+        background-color: #e8e8e8;
+    }
+    th,
+    td {
+        padding: 1em;
+        vertical-align: top;
+    }
+    th {
+        text-align: left;
+        line-height: 1;
+        &:nth-of-type(1) {
+            width: 35%;
+        }
+        &:nth-of-type(2) {
+            width: 65%;
+        }
+    }
+    td {
+        line-height: 1.6;
+    }
+
+    /* ====================================================================== */
+    /* solution1~8 */
+    /* ====================================================================== */
+    &.solution01 {
+        .section1 p {
+            text-indent: 2em;
+            line-height: 1.6;
+        }
+    }
+    &.solution02 {
+        .section1 p {
+            text-indent: 2em;
+            line-height: 1.6;
+            + p {
+                margin-top: 1em;
+            }
+        }
+        .section4 {
+            a {
+                display: block;
+                margin-bottom: 1em;
+                color: #43aaf2;
+            }
+            h2 {
+                font-weight: bold;
+            }
+            p {
+                line-height: 1.6;
+                + a {
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
 }
