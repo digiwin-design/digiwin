@@ -35,6 +35,11 @@ module.exports = {
             { src: `${router.base}public/vendor/jquery.min.js`, defer: 'defer' },
             { src: `${router.base}public/all.js`, defer: 'defer' },
         ],
+        link: [
+            { rel: 'preload', href: 'public/images/10/main-bg.jpg', as: 'image' },
+            { rel: 'preload', href: 'public/images/10/main-bg-s.jpg', as: 'image' },
+            { rel: 'preload', href: 'public/images/10/main-title.png', as: 'image' },
+        ]
     },
 
     /*
