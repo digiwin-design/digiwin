@@ -24,7 +24,7 @@
                                     <h2><i class="logo sm"></i>{{result.latest.title}}</h2>
                                     <p>{{result.latest.subtitle}}</p>
                                     <p v-html="result.latest.content"></p>
-                                    <a href="http://acpms.digiwin.com/WebRegACT/onair.html?gNo=2019110002" target="_blank" class="mainLink calendar">立即預約線上參訪</a>
+                                    <a :href="result.latest.link" target="_blank" class="mainLink calendar">立即預約線上參訪</a>
                                 </div>
                             </div>
                         </div>
@@ -392,7 +392,7 @@ i.logo {
                     margin-bottom: .2em;
                     letter-spacing: getLetterSpacing(10);
                     font-weight: bold;
-                    font-size: 30px;
+                    font-size: 26px;
                     line-height: 40px;
                 }
                 &:nth-of-type(2) {
@@ -400,6 +400,9 @@ i.logo {
                     letter-spacing: getLetterSpacing(10);
                     font-size: 20px;
                     line-height: 28px;
+                }
+                strong {
+                    font-weight: bold;
                 }
             }
             .mainLink {
