@@ -21,9 +21,9 @@
                                     <img src="images/latest-illust.jpg" alt>
                                 </div>
                                 <div class="content__text">
-                                    <h2><i class="logo sm"></i>活動預告</h2>
-                                    <p>智慧工廠線上參訪<br>看見台灣傳產轉型力量</p>
-                                    <p>2019年終壓軸鉅獻<br>不需親身走訪就能眼見為憑</p>
+                                    <h2><i class="logo sm"></i>{{result.latest.title}}</h2>
+                                    <p>{{result.latest.subtitle}}</p>
+                                    <p v-html="result.latest.content"></p>
                                     <a href="http://acpms.digiwin.com/WebRegACT/onair.html?gNo=2019110002" target="_blank" class="mainLink calendar">立即預約線上參訪</a>
                                 </div>
                             </div>
@@ -363,6 +363,9 @@ i.logo {
     .content {
         display: flex;
         flex-wrap: wrap;
+        @media (min-width: $content-width + 1) {
+            align-items: center;
+        }
         &__illust {
             width: 100%;
             text-align: center;
@@ -377,9 +380,6 @@ i.logo {
                 padding-top: 0;
                 padding-left: 45px;
                 width: 395px;
-            }
-            @media (min-width: $content-width) {
-                padding-top: 40px;
             }
             h2 {
                 margin-bottom: .5em;
