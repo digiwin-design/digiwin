@@ -5,7 +5,7 @@
             ref="carousel"
             :interval="4000"
             type="card"
-            :autoplay="false"
+            :autoplay="!showPopup"
             :height="carouselHeight"
             trigger="click"
             arrow="never"
@@ -28,7 +28,7 @@
         <el-carousel
             ref="carouselM"
             :interval="4000"
-            :autoplay="true"
+            :autoplay="!showPopup"
             :height="carouselHeight"
             trigger="click"
             arrow="never"
@@ -66,6 +66,7 @@ export default {
     data() {
         return {
             carouselHeight: '',
+            showPopup: false,
         }
     },
     computed: {
@@ -93,11 +94,23 @@ export default {
             else {
                 el.next();
             }
+        },
+        initPopup() {
+            let _this = this;
+            $("[data-fancybox]").fancybox({
+                afterShow() {
+                    _this.showPopup = true;
+                },
+                afterClose() {
+                    _this.showPopup = false;
+                },
+            });
         }
     },
     mounted() {
-        this.setCarouselHeight();
         window.addEventListener("resize", () => this.setCarouselHeight());
+        this.setCarouselHeight();
+        this.initPopup();
     },
 }
 </script>
