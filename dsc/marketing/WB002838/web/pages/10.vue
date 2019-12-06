@@ -1,5 +1,5 @@
 <template>
-    <main :style="getBgStyle('main-bg')">
+    <main :style="getBgStyle('main-bg')" v-if="result">
         <div class="section1">
             <div class="section1-1 container">
                 <h1><img src="public/images/10/main-title.png" alt="新零售數據賦能 做對的事"></h1>
@@ -25,7 +25,11 @@
             <div class="section1-3">
                 <p class="section1-3__title container">到底，這些企業如何<strong>成功應用新零售方案</strong>，提升<strong>營運效能</strong>?</p>
                 <i class="arrow"></i>
-                <Carousel></Carousel>
+                <Carousel :carousel="result.carousel"></Carousel>
+                <div class="link">
+                    <a href="/tw/dsc/solution/WB002972/case" target="_blank">新零售完整方案</a>
+                    <a href="/tw/zlsq.html?id=2059" target="_blank"><div>線上觀看<strong>【鼎新新零售發佈會】</strong><br>立即預約</div></a>
+                </div>
             </div>
         </div>
 
@@ -108,18 +112,12 @@ main {
 }
 
 // debug
-// .section1 {
-//     height: 2400px;
-//     @media (min-width: $content-width + 1) {
-//         height: 1700px;
-//     }
-// }
-// .section2 {
-//     height: 2409px;
-//     @media (min-width: $content-width + 1) {
-//         height: 1137px;
-//     }
-// }
+.section2 {
+    height: 2409px;
+    @media (min-width: $content-width + 1) {
+        height: 1137px;
+    }
+}
 // .section3 {
 //     height: 3087px;
 //     @media (min-width: $content-width + 1) {
@@ -129,6 +127,7 @@ main {
 
 .section1 {
     padding-top: 170px;
+    padding-bottom: 20px;
     .link {
         display: flex;
         flex-direction: column;
@@ -250,6 +249,9 @@ main {
             @media (min-width: $content-width + 1) {
                 margin-bottom: 18px;
             }
+        }
+        .link {
+            margin-top: 33px;
         }
     }
 }

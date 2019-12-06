@@ -2,10 +2,10 @@
     <div class="carousel">
         <div v-swiper:mySwiper="swiperOption">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(item, idx) in 3" :key="item">
+                <div class="swiper-slide" v-for="(slide, idx) in carousel" :key="slide.video">
                     <div class="slide container">
                         <div class="slide__video">
-                            <a data-fancybox href="https://youtu.be/uerKd6Cfqr0">
+                            <a data-fancybox :href="slide.video">
                                 <img :src="require(`@/assets/images/10/slide${idx + 1}-poster.jpg`)">
                             </a>
                         </div>
@@ -13,12 +13,11 @@
                             <div class="slide__content--title">
                                 <img :src="require(`@/assets/images/10/slide${idx + 1}-logo.png`)">
                                 <ul>
-                                    <li>35年老牌婦嬰百貨─安琪兒</li>
-                                    <li>線下帶動線下，實際體驗帶動全域營銷</li>
+                                    <li v-for="t in slide.title" :key="t">{{t}}</li>
                                 </ul>
                             </div>
-                            <p class="slide__content--desc">消費習慣的改變、少子化的衝擊，婦嬰市場要如何做到突圍？安琪兒以會員經營作為突破口，整合線上線下行銷，以會員經營滾動商機，更以即時營運報表做到快速反應、有效決策！</p>
-                            <a href="">完整案例</a>
+                            <p class="slide__content--desc">{{slide.desc}}</p>
+                            <a :href="slide.link" target="_blank" v-if="slide.link">完整案例</a>
                         </div>
                     </div>
                 </div>
@@ -38,14 +37,52 @@ if (process.browser) {
 }
 
 export default {
+    props: {
+        carousel: {
+            type: Array,
+            require: true
+        }
+    },
     data() {
         return {
             swiperOption: {
+                loop: true,
+                autoplay: {
+                    disableOnInteraction: false,
+                    delay: 5000
+                },
                 pagination: {
                     el: '.swiper-pagination'
                 },
+            },
+            showPopup: false,
+        }
+    },
+    watch: {
+        showPopup(value) {
+            if (value) {
+                this.mySwiper.autoplay.stop();
+            }
+            else {
+                this.mySwiper.autoplay.start();
             }
         }
+    },
+    methods: {
+        initPopup() {
+            let _this = this;
+            $("[data-fancybox]").fancybox({
+                afterShow() {
+                    _this.showPopup = true;
+                },
+                afterClose() {
+                    _this.showPopup = false;
+                },
+            });
+        }
+    },
+    mounted() {
+        this.initPopup();
     },
 }
 </script>
@@ -83,6 +120,7 @@ $content-width: 1100px;
     flex-direction: column;
     margin: 0 auto;
     max-width: 590px;
+    height: 100%;
     @media (min-width: $content-width + 1) {
         flex-direction: row;
         max-width: 1000px;
@@ -98,11 +136,13 @@ $content-width: 1100px;
     &__content {
         padding: 20px;
         background-color: #f9711f;
-        box-shadow: 0 0 10px 5px rgba(78,10,14,.2);
         color: #fff;
+        flex-grow: 1;
         @media (min-width: $content-width + 1) {
+            padding-bottom: 30px;
             width: 430px;
             height: 430px;
+            box-shadow: 0 0 10px 5px rgba(78,10,14,.2);
             order: -1;
         }
         &--title {
@@ -152,6 +192,9 @@ $content-width: 1100px;
         padding-top: 20px;
         padding-bottom: 20px;
     }
+}
+/deep/ .swiper-slide {
+    height: auto;
 }
 /deep/ .swiper-pagination {
     bottom: 13px;
