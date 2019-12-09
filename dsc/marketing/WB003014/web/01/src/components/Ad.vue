@@ -46,9 +46,7 @@ export default {
     },
     watch: {
         isMobile(value) {
-            if (value && this.showAd) {
-                this.showMask = true;
-            }
+            this.showMask = value && this.showAd;
         }
     },
     methods: {
@@ -64,11 +62,13 @@ export default {
                 img.src = this.info.imgSrc;
             }.bind(this));
         },
-        setTimer() {
+        init() {
+            this.showAd = dayjs().isBetween(this.info.startTime, this.info.endTime);
+            this.showMask = this.showAd && this.isMobile;
+            // this.setTimer();
+        },
+        setTimer: function () {
             timer = setInterval(function () {
-                this.showAd = dayjs().isBetween(this.info.startTime, this.info.endTime);
-                this.showMask = this.showAd && this.isMobile;
-
                 // 超過活動時間後停止計時器
                 let beforeEnd = dayjs().isBefore(dayjs(this.info.endTime));
                 if (!beforeEnd) {
@@ -78,7 +78,7 @@ export default {
         },
     },
     created() {
-        this.preloadImg().then(this.setTimer);
+        this.preloadImg().then(this.init);
     },
 }
 </script>

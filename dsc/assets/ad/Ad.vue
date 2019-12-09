@@ -36,19 +36,15 @@ module.exports = {
     },
     watch: {
         isMobile: function (value) {
-            if (value && this.showAd) {
-                this.showMask = true;
-            }
+            this.showMask = value && this.showAd;
         }
     },
     methods: {
-        mediaSensor: function () {
-            let mm = window.matchMedia('(min-width: 769px)');
-            mm.addListener(this.resizeWidth);
-            this.resizeWidth(mm);
-        },
-        resizeWidth: function (pMatchMedia) {
-            this.isMobile = pMatchMedia.matches ? false : true;
+        mediaSensor(minWidth) {
+            let resizeWidth = (pMatchMedia) => this.isMobile = !pMatchMedia.matches;
+            let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
+            mm.addListener(resizeWidth);
+            resizeWidth(mm);
         },
         closeAd: function () {
             clearInterval(timer);
@@ -62,11 +58,13 @@ module.exports = {
                 img.src = this.info.imgSrc;
             }.bind(this));
         },
+        init() {
+            this.showAd = dayjs().isBetween(this.info.startTime, this.info.endTime);
+            this.showMask = this.showAd && this.isMobile;
+            // this.setTimer();
+        },
         setTimer: function () {
             timer = setInterval(function () {
-                this.showAd = dayjs().isBetween(this.info.startTime, this.info.endTime);
-                this.showMask = this.showAd && this.isMobile;
-
                 // 超過活動時間後停止計時器
                 let beforeEnd = dayjs().isBefore(dayjs(this.info.endTime));
                 if (!beforeEnd) {
@@ -77,8 +75,8 @@ module.exports = {
     },
     created: function () {
         dayjs.extend(dayjs_plugin_isBetween);
-        this.mediaSensor();
-        this.preloadImg().then(this.setTimer);
+        this.mediaSensor(768);
+        this.preloadImg().then(this.init);
     },
 }
 </script>
