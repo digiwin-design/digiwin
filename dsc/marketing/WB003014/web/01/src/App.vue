@@ -98,6 +98,7 @@
                 </div>
             </main>
             <Footer></Footer>
+            <Ad :info="adData" v-if="adData"></Ad>
         </div>
         <loading :loading="loading"></loading>
     </div>
@@ -113,6 +114,7 @@ import Footer from '@/components/Footer.vue';
 import Loading from '@/components/Loading.vue';
 import Carousel from '@/components/Carousel.vue';
 import Collapse from '@/components/Collapse.vue';
+import Ad from '@/components/Ad.vue';
 
 export default {
     name: 'app',
@@ -123,6 +125,7 @@ export default {
         Loading,
         Carousel,
         Collapse,
+        Ad,
     },
     computed: {
         isMobile() {
@@ -130,6 +133,9 @@ export default {
         },
         result() {
             return this.$store.state.result;
+        },
+        adData() {
+            return this.$store.state.adData;
         },
         loading() {
             return this.$store.state.loading;
@@ -199,6 +205,7 @@ export default {
     },
     created() {
         this.$store.dispatch('getData');
+        this.$store.dispatch('getAdData');
     },
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());

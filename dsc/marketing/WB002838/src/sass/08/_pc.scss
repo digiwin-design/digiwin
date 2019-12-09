@@ -16,6 +16,12 @@ html.no-mobile {
             left: 50%;
             transform: translateX(-50%);
         }
+        a {
+            position: absolute;
+            top: 364px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     .section1 {
         @include bg('08/section1-bg.jpg');

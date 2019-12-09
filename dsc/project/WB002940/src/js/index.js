@@ -1,6 +1,3 @@
-httpVueLoader.register(Vue, 'components/Ad.vue');
-httpVueLoader.register(Vue, 'components/MenuMask.vue');
-
 //3图上弹出
 $(function () {
     $('.threeBox li').hover(function () {
@@ -35,18 +32,10 @@ $(function () {
 const store = new Vuex.Store({
     state: {
         isMobile: false,
-        showMask: true,
-        showAd: true,
     },
     mutations: {
         updateDevice(state, payload) {
             state.isMobile = payload;
-        },
-        toggleMask(state, payload) {
-            state.showMask = payload;
-        },
-        toggleAd(state, payload) {
-            state.showAd = payload;
         },
     }
 });

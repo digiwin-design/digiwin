@@ -21,25 +21,3 @@ const store = new Vuex.Store({
         },
     }
 });
-
-new Vue({
-    el: '#ad',
-    components: {
-        'ad': httpVueLoader('components/Ad.vue'),
-        'menu-mask': httpVueLoader('components/MenuMask.vue'),
-    },
-    methods: {
-        mediaSensor() {
-            let mm = window.matchMedia('(min-width: 769px)');
-            mm.addListener(this.resizeWidth);
-            this.resizeWidth(mm);
-        }, 
-        resizeWidth(pMatchMedia) {
-            let isMobile = pMatchMedia.matches ? false : true;
-            store.commit('updateDevice', isMobile);
-        },
-    },
-    mounted() {
-        this.mediaSensor();
-    },
-});
