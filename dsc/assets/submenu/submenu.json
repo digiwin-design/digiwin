@@ -1479,5 +1479,45 @@
                 "url": "#contact"
             }
         ]
+    },
+    {
+        "id": "ServiceCloud",
+        "title": "服務雲管家",
+        "menus": [
+            {
+                "text": "服務雲介紹",
+                "url": "#remould"
+            },
+            {
+                "text": "雲管家",
+                "url": "#steward"
+            },
+            {
+                "text": "高管報告",
+                "url": "#steward2"
+            },
+            {
+                "text": "產品特色",
+                "url": "#item"
+            }
+        ],
+        "anchors": [
+            {
+                "url": "#remould",
+                "index": 0
+            },
+            {
+                "url": "#steward",
+                "index": 1
+            },
+            {
+                "url": "#steward2",
+                "index": 2
+            },
+            {
+                "url": "#item",
+                "index": 3
+            }
+        ]
     }
 ]
