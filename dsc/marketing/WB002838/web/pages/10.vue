@@ -1,67 +1,105 @@
 <template>
-    <main :style="getBgStyle('main-bg')" v-if="result">
-        <div class="section1">
-            <div class="section1-1 container">
-                <h1><img src="public/images/10/main-title.png" alt="新零售數據賦能 做對的事"></h1>
-                <div class="link">
-                    <a href="#contact" class="js-nav">預約專人諮詢</a>
-                    <a href="/tw/zlsq.html?id=2059" target="_blank"><div>線上觀看<strong>【鼎新新零售發佈會】</strong><br>立即預約</div></a>
+    <main>
+        <div :style="getBgStyle('main-bg')" v-if="result">
+            <div class="section1">
+                <div class="section1-1 container">
+                    <h1><img src="public/images/10/main-title.png" alt="新零售數據賦能 做對的事"></h1>
+                    <div class="link">
+                        <a href="#contact" class="js-nav">預約專人諮詢</a>
+                        <a href="/tw/zlsq.html?id=2059" target="_blank"><div>線上觀看<strong>【鼎新新零售發佈會】</strong><br>立即預約</div></a>
+                    </div>
+                </div>
+                <div class="section1-2 container">
+                    <div class="section1-2__img">
+                        <img src="@/assets/images/10/section1-illust.png" alt="">
+                    </div>
+                    <div class="section1-2__text">
+                        <p>渠道多、行銷多、競爭多，但顧客的忠誠度卻低，面對新零售挑戰，台灣流通業者，如何向對的人在對的時間提供對的服務，透過精準行銷，提升顧客的忠誠度，也有效降低營銷成本？</p>
+                        <p>您還在找答案的同時，台灣已經有3家老品牌，透過新零售方案應用，成功提升營運效能：</p>
+                        <ul>
+                            <li>有效整合線上線下會員，分眾推送專屬的優惠內容。</li>
+                            <li>虛實通路結合會員經營，提升銷售額，並透過系統管理讓料帳一致。</li>
+                            <li>透過工具去中間化，直接接觸終端消費者，提供獨特優惠，吸引消費者回購、轉介。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section1-3">
+                    <p class="section1-3__title container">到底，這些企業如何<strong>成功應用新零售方案</strong>，提升<strong>營運效能</strong>?</p>
+                    <i class="arrow"></i>
+                    <Carousel :carousel="result.carousel"></Carousel>
+                    <div class="link">
+                        <a href="/tw/dsc/solution/WB002972/case" target="_blank">新零售完整方案</a>
+                        <a href="/tw/zlsq.html?id=2059" target="_blank"><div>線上觀看<strong>【鼎新新零售發佈會】</strong><br>立即預約</div></a>
+                    </div>
                 </div>
             </div>
-            <div class="section1-2 container">
-                <div class="section1-2__img">
-                    <img src="@/assets/images/10/section1-illust.png" alt="">
+
+            <article class="section2">
+                <div class="container">
+                    <section-title
+                        title="面對新零售挑戰，業者的經營轉型"
+                        desc="以消費者體驗為中心的零售型態，無時無刻為了消費者提供超出期望的內容，<br>以人為主就是以消費者體驗為中心；<br>以心為本，掌握數據(人心)就是掌握消費者需求！"
+                        padding-top="6em"
+                    ></section-title>
+                    <div class="items">
+                        <div class="item" v-for="(item, idx) in result.section2" :key="item.title">
+                            <img :src="require(`@/assets/images/10/case${idx + 1}-logo.png`)" alt="">
+                            <h2>{{item.title}}</h2>
+                            <img src="@/assets/images/10/icon-arrow.png" alt="">
+                            <figure>
+                                <img :src="require(`@/assets/images/10/section2-illust${idx + 1}.png`)" alt="">
+                                <figcaption v-html="item.figcaption"></figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
-                <div class="section1-2__text">
-                    <p>渠道多、行銷多、競爭多，但顧客的忠誠度卻低，面對新零售挑戰，台灣流通業者，如何向對的人在對的時間提供對的服務，透過精準行銷，提升顧客的忠誠度，也有效降低營銷成本？</p>
-                    <p>您還在找答案的同時，台灣已經有3家老品牌，透過新零售方案應用，成功提升營運效能：</p>
-                    <ul>
-                        <li>有效整合線上線下會員，分眾推送專屬的優惠內容。</li>
-                        <li>虛實通路結合會員經營，提升銷售額，並透過系統管理讓料帳一致。</li>
-                        <li>透過工具去中間化，直接接觸終端消費者，提供獨特優惠，吸引消費者回購、轉介。</li>
-                    </ul>
+            </article>
+
+            <article class="section3">
+                <section-title
+                    title="鼎新新零售四大價值，提升流通管理新價值"
+                    padding-top="8em"
+                    class="container"
+                ></section-title>
+                <div class="intro">
+                    <div class="container">
+                        <div class="intro__text">
+                            <p>善用科技、強化服務、提升效率。<br>服務不再是負擔，而是一種體驗；<br>而科技更不能只是噱頭，確保效率提升。</p>
+                            <p>—鼎新電腦<br>張進聰 資深副總裁</p>
+                        </div>
+                        <div class="intro__video">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/1GfHtDT0vaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="section1-3">
-                <p class="section1-3__title container">到底，這些企業如何<strong>成功應用新零售方案</strong>，提升<strong>營運效能</strong>?</p>
-                <i class="arrow"></i>
-                <Carousel :carousel="result.carousel"></Carousel>
-                <div class="link">
-                    <a href="/tw/dsc/solution/WB002972/case" target="_blank">新零售完整方案</a>
-                    <a href="/tw/zlsq.html?id=2059" target="_blank"><div>線上觀看<strong>【鼎新新零售發佈會】</strong><br>立即預約</div></a>
-                </div>
-            </div>
+            </article>
+            <!-- <Contact></Contact> -->
         </div>
-
-        <article class="section2">
-            <div class="container"></div>
-        </article>
-
-        <article class="section3">
-            <div class="container"></div>
-        </article>
-        <!-- <Contact></Contact> -->
     </main>
 </template>
 
 <script>
 import Contact from '~/components/10/Contact';
 import Carousel from '~/components/10/Carousel';
+import SectionTitle from '~/components/10/SectionTitle';
 
 export default {
     head: {
-        title: '標題',
+        title: '新零售‧服務新價值 | 新零售數據賦能，做對的事！',
         meta: [
             {
                 hid: 'description',
                 name: 'description',
-                content: '描述'
+                content: '串聯實體與虛擬通路，整合線上、線下消費者資訊，在對的時間、向對的人提供對的服務，提升顧客忠誠度、降低營銷成本'
             }
         ],
     },
     components: {
         Contact,
         Carousel,
+        SectionTitle,
     },
     computed: {
         isMobile() {
@@ -77,6 +115,7 @@ export default {
     methods: {
         getBgStyle(fileName) {
             let url = this.isMediumWidth ? `public/images/10/${fileName}-s.jpg` : `public/images/10/${fileName}.jpg`;
+            console.log(url);
             return { 'background-image': `url(${url})` };
         }
     },
@@ -90,14 +129,15 @@ $content-width: 1100px;
 body {
     line-height: 1;
 }
-main {
+main > div {
     background-position: 50% 0;
     background-repeat: no-repeat;
 }
 .container {
     padding-right: 10px;
     padding-left: 10px;
-    // outline: 1px solid #f00;
+    max-width: 1100px;
+    outline: 1px solid #f00;
     @media (min-width: $content-width) {
         padding-right: 0;
         padding-left: 0;
@@ -110,14 +150,20 @@ main {
     width: 26px;
     height: 35px;
 }
+.sectionTitle::before {
+    margin-bottom: 1em;
+    width: 70px;
+    height: 70px;
+    content: '';
+}
 
 // debug
-.section2 {
-    height: 2409px;
-    @media (min-width: $content-width + 1) {
-        height: 1137px;
-    }
-}
+// .section2 {
+//     height: 2409px;
+//     @media (min-width: $content-width + 1) {
+//         height: 1137px;
+//     }
+// }
 // .section3 {
 //     height: 3087px;
 //     @media (min-width: $content-width + 1) {
@@ -256,11 +302,82 @@ main {
     }
 }
 .section2 {
-    background-image: url('~@/assets/images/10/section2-bg-s.png'), linear-gradient(transparent 50%, #e86f1e 0);
+    background-image: url('~@/assets/images/10/section2-bg-s.png'), linear-gradient(transparent 10%, #e86f1e 0);
     background-position: 50% 0;
     background-repeat: no-repeat;
     @media (min-width: $content-width + 1) {
-        background-image: url('~@/assets/images/10/section2-bg.png'), linear-gradient(transparent 50%, #e86f1e 0);
+        background-image: url('~@/assets/images/10/section2-bg.png'), linear-gradient(transparent 10%, #e86f1e 0);
+    }
+    .container {
+        @media (min-width: $content-width + 1) {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+    }
+    .sectionTitle {
+        color: #fff;
+        &::before {
+            @include imgBg('~@/assets/images/10/section2-titleicon.png');
+        }
+    }
+    .items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $content-width + 1) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        color: #fff;
+        font-weight: bold;
+        align-items: center;
+        h2 {
+            position: relative;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            width: 100%;
+            height: 80px;
+            background-color: #000;
+            text-align: center;
+            font-size: 32px;
+            line-height: 80px;
+            &::first-letter {
+                color: #fff154;
+            }
+            &::before {
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-width: 0 5.5px 9px 5.5px;
+                border-style: solid;
+                border-color: transparent transparent #000 transparent;
+                content: '';
+                transform: translateX(-50%);
+            }
+        }
+        figure {
+            margin-top: 15px;
+            text-align: center;
+        }
+        figcaption {
+            margin-top: 20px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        + .item {
+            margin-top: 90px;
+            @media (min-width: $content-width + 1) {
+                margin-top: 0;
+            }
+        }
     }
 }
 .section3 {
@@ -268,6 +385,50 @@ main {
     background-color: #ffdfb8;
     @media (min-width: $content-width + 1) {
         @include bg('~@/assets/images/10/section3-bg.jpg');
+    }
+    .sectionTitle {
+        color: #f55a00;
+        @media (min-width: $content-width + 1) {
+            padding-top: 14em !important;
+        }
+        &::before {
+            @include imgBg('~@/assets/images/10/section3-titleicon.png');
+        }
+    }
+    .intro {
+        @include bg('~@/assets/images/10/section3-bg-s.png', calc(50% + 85px) 0);
+        position: relative;
+        padding-top: 310px;
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        &__text {
+            position: absolute;
+            top: 95px;
+            left: 50%;
+            padding-right: 10px;
+            max-width: 190px;
+            p {
+                color: #fff;
+                line-height: 24px;
+                &:nth-of-type(1) {
+                    margin-bottom: .5em;
+                    font-weight: bold;
+                }
+                &:nth-of-type(2) {
+                    padding-left: 1em;
+                    text-indent: -1em;
+                }
+            }
+        }
+        &__video {
+            margin: 0 auto;
+            max-width: 360px;
+        }
+        .video-container {
+            @include youtubeIframe();
+        }
     }
 }
 </style>

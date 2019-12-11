@@ -11,7 +11,7 @@
                         </div>
                         <div class="slide__content">
                             <div class="slide__content--title">
-                                <img :src="require(`@/assets/images/10/slide${idx + 1}-logo.png`)">
+                                <img :src="require(`@/assets/images/10/case${idx + 1}-logo.png`)">
                                 <ul>
                                     <li v-for="t in slide.title" :key="t">{{t}}</li>
                                 </ul>
