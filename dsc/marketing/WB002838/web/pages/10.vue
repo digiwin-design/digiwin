@@ -4,7 +4,7 @@
             <div class="section1">
                 <div class="section1-1 container">
                     <h1><img src="public/images/10/main-title.png" alt="新零售數據賦能 做對的事"></h1>
-                    <div class="link">
+                    <div class="links">
                         <a href="#contact" class="js-nav">預約專人諮詢</a>
                         <a href="/tw/zlsq.html?id=2059" target="_blank"><div>線上觀看<strong>【鼎新新零售發佈會】</strong><br>立即預約</div></a>
                     </div>
@@ -27,7 +27,7 @@
                     <p class="section1-3__title container">到底，這些企業如何<strong>成功應用新零售方案</strong>，提升<strong>營運效能</strong>?</p>
                     <i class="arrow"></i>
                     <Carousel :carousel="result.carousel"></Carousel>
-                    <div class="link">
+                    <div class="links">
                         <a href="/tw/dsc/solution/WB002972/case" target="_blank">新零售完整方案</a>
                         <a href="/tw/zlsq.html?id=2059" target="_blank"><div>線上觀看<strong>【鼎新新零售發佈會】</strong><br>立即預約</div></a>
                     </div>
@@ -44,7 +44,7 @@
                     <div class="items">
                         <div class="item" v-for="(item, idx) in result.section2" :key="item.title">
                             <img :src="require(`@/assets/images/10/case${idx + 1}-logo.png`)" alt="">
-                            <h2>{{item.title}}</h2>
+                            <h2 v-html="item.title"></h2>
                             <img src="@/assets/images/10/icon-arrow.png" alt="">
                             <figure>
                                 <img :src="require(`@/assets/images/10/section2-illust${idx + 1}.png`)" alt="">
@@ -74,8 +74,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="chart">
+                    <picture>
+                        <source media="(min-width: 1101px)" srcset="@/assets/images/10/section3-chart.png">
+                        <img src="@/assets/images/10/section3-chart-s.png" alt="新零售價值">
+                    </picture>
+                </div>
+                <div class="items container">
+                    <div class="item" v-for="(item, idx) in result.section3" :key="item.title">
+                        <img :src="require(`@/assets/images/10/section3-itemtitle${idx + 1}.jpg`)" alt="">
+                        <div class="item__content">
+                            <h2>{{item.title}}</h2>
+                            <p>{{item.desc}}</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="/tw/dsc/solution/WB002972/case" target="_blank" class="link">
+                    了解新零售完整方案
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </a>
             </article>
-            <!-- <Contact></Contact> -->
+            <Contact></Contact>
         </div>
     </main>
 </template>
@@ -95,6 +114,12 @@ export default {
                 content: '串聯實體與虛擬通路，整合線上、線下消費者資訊，在對的時間、向對的人提供對的服務，提升顧客忠誠度、降低營銷成本'
             }
         ],
+        link: [
+            { rel: 'preload', href: 'public/images/10/main-bg.jpg', as: 'image' },
+            { rel: 'preload', href: 'public/images/10/main-bg-s.jpg', as: 'image' },
+            { rel: 'preload', href: 'public/images/10/main-title.png', as: 'image' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+        ]
     },
     components: {
         Contact,
@@ -126,10 +151,27 @@ export default {
 @import '~assets/sass/common';
 $content-width: 1100px;
 
+@mixin btn($maxWidth) {
+    display: flex;
+    max-width: $maxWidth;
+    width: 100%;
+    height: 86px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     line-height: 1;
 }
 main > div {
+    margin: 0 auto;
+    max-width: 1920px;
     background-position: 50% 0;
     background-repeat: no-repeat;
 }
@@ -137,7 +179,6 @@ main > div {
     padding-right: 10px;
     padding-left: 10px;
     max-width: 1100px;
-    outline: 1px solid #f00;
     @media (min-width: $content-width) {
         padding-right: 0;
         padding-left: 0;
@@ -157,24 +198,10 @@ main > div {
     content: '';
 }
 
-// debug
-// .section2 {
-//     height: 2409px;
-//     @media (min-width: $content-width + 1) {
-//         height: 1137px;
-//     }
-// }
-// .section3 {
-//     height: 3087px;
-//     @media (min-width: $content-width + 1) {
-//         height: 2260px;
-//     }
-// }
-
 .section1 {
     padding-top: 170px;
     padding-bottom: 20px;
-    .link {
+    .links {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -184,18 +211,7 @@ main > div {
             justify-content: center;
         }
         a {
-            display: flex;
-            max-width: 370px;
-            width: 100%;
-            height: 86px;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            color: #fff;
-            text-align: center;
-            font-weight: bold;
-            font-size: 26px;
-            justify-content: center;
-            align-items: center;
+            @include btn(370px);
             &:nth-of-type(1) {
                 background-color: #5d51cb;
             }
@@ -296,17 +312,20 @@ main > div {
                 margin-bottom: 18px;
             }
         }
+        .carousel {
+            margin-bottom: 33px;
+        }
         .link {
             margin-top: 33px;
         }
     }
 }
 .section2 {
-    background-image: url('~@/assets/images/10/section2-bg-s.png'), linear-gradient(transparent 10%, #e86f1e 0);
+    background-image: url('~@/assets/images/10/section2-bg-s.png'), linear-gradient(transparent 15%, #e86f1e 0);
     background-position: 50% 0;
     background-repeat: no-repeat;
     @media (min-width: $content-width + 1) {
-        background-image: url('~@/assets/images/10/section2-bg.png'), linear-gradient(transparent 10%, #e86f1e 0);
+        background-image: url('~@/assets/images/10/section2-bg.png'), linear-gradient(transparent 15%, #e86f1e 0);
     }
     .container {
         @media (min-width: $content-width + 1) {
@@ -326,7 +345,7 @@ main > div {
         align-items: center;
         @media (min-width: $content-width + 1) {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: stretch;
             justify-content: space-between;
         }
     }
@@ -347,9 +366,6 @@ main > div {
             text-align: center;
             font-size: 32px;
             line-height: 80px;
-            &::first-letter {
-                color: #fff154;
-            }
             &::before {
                 position: absolute;
                 bottom: 100%;
@@ -362,15 +378,30 @@ main > div {
                 content: '';
                 transform: translateX(-50%);
             }
+            strong {
+                color: #fff154;
+            }
         }
         figure {
             margin-top: 15px;
+            max-width: 100%;
             text-align: center;
+            @media (min-width: $content-width + 1) {
+                display: flex;
+                flex-direction: column;
+                height: 210px;
+                align-items: center;
+                flex-grow: 1;
+            }
         }
         figcaption {
             margin-top: 20px;
+            max-width: 100%;
             font-size: 22px;
             line-height: 30px;
+            @media (min-width: $content-width + 1) {
+                margin-top: auto;
+            }
         }
         + .item {
             margin-top: 90px;
@@ -382,6 +413,7 @@ main > div {
 }
 .section3 {
     @include bg('~@/assets/images/10/section3-bg-s.jpg');
+    padding-bottom: 47px;
     background-color: #ffdfb8;
     @media (min-width: $content-width + 1) {
         @include bg('~@/assets/images/10/section3-bg.jpg');
@@ -397,37 +429,133 @@ main > div {
     }
     .intro {
         @include bg('~@/assets/images/10/section3-bg-s.png', calc(50% + 85px) 0);
-        position: relative;
-        padding-top: 310px;
+        margin-bottom: 42px;
+        @media (min-width: $content-width + 1) {
+            @include bg('~@/assets/images/10/section3-bg.png', 50% 0);
+            margin-bottom: 25px;
+        }
         .container {
+            position: relative;
+            padding-top: 310px;
             padding-right: 0;
             padding-left: 0;
+            @media (min-width: $content-width + 1) {
+                padding-top: 678px;
+            }
         }
         &__text {
             position: absolute;
             top: 95px;
             left: 50%;
             padding-right: 10px;
-            max-width: 190px;
+            @media (min-width: $content-width + 1) {
+                top: 400px;
+                right: 50px;
+                left: auto;
+                padding-right: 0;
+                width: 600px;
+                text-align: center;
+            }
             p {
                 color: #fff;
                 line-height: 24px;
                 &:nth-of-type(1) {
                     margin-bottom: .5em;
                     font-weight: bold;
+                    @media (min-width: $content-width + 1) {
+                        margin-bottom: .7em;
+                        font-size: 26px;
+                        line-height: 36px;
+                    }
                 }
                 &:nth-of-type(2) {
                     padding-left: 1em;
                     text-indent: -1em;
+                    @media (min-width: $content-width + 1) {
+                        padding-left: 0;
+                        text-indent: 0;
+                        font-size: 22px;
+                        br {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
         &__video {
             margin: 0 auto;
-            max-width: 360px;
+            max-width: 570px;
+            @media (min-width: $content-width + 1) {
+                position: absolute;
+                top: 38px;
+                right: 50px;
+                max-width: none;
+                width: 600px;
+            }
         }
         .video-container {
             @include youtubeIframe();
+        }
+    }
+    .chart {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .items {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 54px;
+        align-items: center;
+        @media (min-width: $content-width + 1) {
+            flex-direction: row;
+            padding-right: 50px;
+            padding-left: 50px;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        width: 310px;
+        box-shadow: 0 .8px 2.2px rgba(0, 0, 0, .02),
+        0 2px 5.3px rgba(0, 0, 0, .028),
+        0 3.8px 10px rgba(0, 0, 0, .035),
+        0 6.7px 17.9px rgba(0, 0, 0, .042),
+        0 12.5px 33.4px rgba(0, 0, 0, .05),
+        0 30px 80px rgba(0, 0, 0, .07);
+        &__title {
+            height: 130px;
+        }
+        &__content {
+            padding: 25px 25px 30px 25px;
+            background-color: #fff;
+            flex-grow: 1;
+        }
+        h2 {
+            margin-bottom: .5em;
+            color: #695ce0;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        p {
+            color: #1b1b1b;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        + .item {
+            margin-top: 30px;
+            @media (min-width: $content-width + 1) {
+                margin-top: 0;
+            }
+        }
+    }
+    .link {
+        @include btn(710px);
+        margin: 0 auto;
+        background-color: #5d51cb;
+        i {
+            font-size: 1.5em;
         }
     }
 }

@@ -52,7 +52,8 @@ export default {
                     delay: 5000
                 },
                 pagination: {
-                    el: '.swiper-pagination'
+                    el: '.swiper-pagination',
+                    clickable: true
                 },
             },
             showPopup: false,
