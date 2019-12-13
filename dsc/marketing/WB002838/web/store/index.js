@@ -6,7 +6,6 @@ export const state = () => ({
     isMediumWidth: false,
     showMask: false,
     showAd: true,
-    result: null,
 });
 
 export const mutations = {
@@ -25,15 +24,4 @@ export const mutations = {
     toggleAd(state, payload) {
         state.showAd = payload;
     },
-    setData(state, payload) {
-        state.result = payload;
-    },
-};
-
-export const actions = {
-    getData({ commit }) {
-        axios.get('public/db.json').then(res => {
-            commit('setData', res.data);
-        });
-    }
 };

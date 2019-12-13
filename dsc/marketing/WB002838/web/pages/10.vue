@@ -115,9 +115,9 @@ export default {
             }
         ],
         link: [
-            { rel: 'preload', href: 'public/images/10/main-bg.jpg', as: 'image' },
-            { rel: 'preload', href: 'public/images/10/main-bg-s.jpg', as: 'image' },
-            { rel: 'preload', href: 'public/images/10/main-title.png', as: 'image' },
+            { rel: 'preload', href: `${process.env.BASE_URL}public/images/10/main-bg.jpg`, as: 'image' },
+            { rel: 'preload', href: `${process.env.BASE_URL}public/images/10/main-bg-s.jpg`, as: 'image' },
+            { rel: 'preload', href: `${process.env.BASE_URL}public/images/10/main-title.png`, as: 'image' },
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
         ]
     },
@@ -126,6 +126,14 @@ export default {
         Carousel,
         SectionTitle,
     },
+    asyncData({ $axios }) {
+        return $axios.$get(`${process.env.API_URL}public/db.json`)
+            .then(res => {
+                return {
+                    result: res['10'],
+                };
+            });
+    },
     computed: {
         isMobile() {
             return this.$store.state.isMobile;
@@ -133,14 +141,10 @@ export default {
         isMediumWidth() {
             return this.$store.state.isMediumWidth;
         },
-        result() {
-            return this.$store.state.result && this.$store.state.result['10'];
-        },
     },
     methods: {
         getBgStyle(fileName) {
             let url = this.isMediumWidth ? `public/images/10/${fileName}-s.jpg` : `public/images/10/${fileName}.jpg`;
-            console.log(url);
             return { 'background-image': `url(${url})` };
         }
     },

@@ -202,9 +202,9 @@ $content-width: 1100px;
     display: flex;
     justify-content: center;
     @media (min-width: $content-width + 1) {
-        bottom: 82px;
-        left: calc(50% + 432px);
-        width: auto;
+        bottom: 82px !important;
+        left: calc(50% + 432px) !important;
+        width: auto !important;
     }
     &-bullet {
         margin-right: 7.5px !important;

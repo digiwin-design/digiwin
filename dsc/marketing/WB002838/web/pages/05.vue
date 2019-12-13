@@ -1,7 +1,7 @@
 <template>
     <main>
         <template v-if="result">
-            <StickyNav v-if="isMobile"></StickyNav>
+            <StickyNav :links="result.links" v-if="isMobile"></StickyNav>
 
             <header>
                 <div class="container">
@@ -16,7 +16,7 @@
                 </div>
             </header>
 
-            <StickyNav v-if="!isMobile"></StickyNav>
+            <StickyNav :links="result.links" v-if="!isMobile"></StickyNav>
 
             <article id="section1" class="section1">
                 <div class="container">
@@ -93,7 +93,7 @@
                 <div class="container">
                     <h1 class="sectionTitle">HRM全面支持</h1>
                     <h2 class="sectionDesc">現在開始主動出擊！善用鼎新HRM，人資改革不成問題！</h2>
-                    <Accordion></Accordion>
+                    <Accordion :lists="result.section4"></Accordion>
                 </div>
             </article>
 
@@ -131,12 +131,17 @@ export default {
         Accordion,
         Ad,
     },
+    asyncData({ $axios }) {
+        return $axios.$get(`${process.env.API_URL}public/db.json`)
+            .then(res => {
+                return {
+                    result: res['05'],
+                };
+            });
+    },
     computed: {
         isMobile() {
             return this.$store.state.isMobile;
-        },
-        result() {
-            return this.$store.state.result && this.$store.state.result['05'];
         },
     },
 };

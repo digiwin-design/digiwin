@@ -43,7 +43,6 @@ export default {
         },
     },
     mounted() {
-        this.$store.dispatch('getData');
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
         this.mediaSensor(768);
         this.mediaSensor2(1099);

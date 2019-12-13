@@ -135,6 +135,14 @@ export default {
         CarouselAndAccordion,
         Loading,
     },
+    asyncData({ $axios }) {
+        return $axios.$get(`${process.env.API_URL}public/db.json`)
+            .then(res => {
+                return {
+                    result: res['03'],
+                };
+            });
+    },
     data() {
         return {
             isReady: false,
@@ -143,9 +151,6 @@ export default {
     computed: {
         isMobile() {
             return this.$store.state.isMobile;
-        },
-        result() {
-            return this.$store.state.result && this.$store.state.result['03'];
         },
         heroBgStyle() {
             let url = this.isMobile ? 'public/images/03/hero-bg-s.png' : 'public/images/03/hero-bg.png';

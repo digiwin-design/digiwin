@@ -17,6 +17,7 @@
 import _ from 'lodash';
 
 export default {
+    props: ['links'],
     data() {
         return {
             isActive: false
@@ -26,9 +27,6 @@ export default {
         device() {
             return this.$store.state.isMobile ? 'mobile' : 'desktop';
         },
-        links() {
-            return this.$store.state.result['05'].links;
-        }
     },
     methods: {
         stickyInit() {

@@ -66,6 +66,7 @@ module.exports = {
     ** Nuxt.js modules
     */
     modules: [
+        '@nuxtjs/axios',
     ],
 
     /*
@@ -118,5 +119,6 @@ module.exports = {
     },
     env: {
         BASE_URL: router.base,
+        API_URL: router.base === '/' ? 'http://10.20.88.75:2838/' : `http://www.digiwin.com${router.base}`
     }
 };

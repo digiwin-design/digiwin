@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "axios": "^0.18.0",
+    "@nuxtjs/axios": "^5.8.0",
     "cross-env": "^5.2.0",
     "dayjs": "^1.8.15",
     "jquery": "^3.3.1",

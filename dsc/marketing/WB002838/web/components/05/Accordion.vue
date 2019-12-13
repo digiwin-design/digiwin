@@ -16,13 +16,11 @@
 
 <script>
 export default {
+    props: ['lists'],
     computed: {
         isMobile() {
             return this.$store.state.isMobile;
         },
-        lists() {
-            return this.$store.state.result['05'].section4;
-        }
     },
     watch: {
         isMobile(value) {
