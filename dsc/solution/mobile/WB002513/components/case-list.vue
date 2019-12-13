@@ -2,7 +2,7 @@
     <div class="case-list">
         <a :href="item.link" target="_blank" v-for="item in list" :key="item.company">
             <dl>
-                <dt><p>{{item.company}}</p></dt>
+                <dt><i>{{item.company}}</i></dt>
                 <dd>{{item.desc}}</dd>
             </dl>
         </a>

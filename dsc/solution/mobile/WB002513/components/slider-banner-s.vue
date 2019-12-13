@@ -10,7 +10,7 @@
             >
                 <div class="container">
                     <p class="banner-title" v-html="slide.title"></p>
-                    <p class="banner-desc" v-html="slide.desc"></p>
+                    <p class="banner-desc" v-if="slide.desc" v-html="slide.desc"></p>
                 </div>
             </div>
         </div>

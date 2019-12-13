@@ -1,6 +1,6 @@
 <template>
     <div class="solution">
-        <slider-banner-s :slides="result.banner"></slider-banner-s>
+        <slider-banner-s :slides="result.banner" :class="result.name"></slider-banner-s>
         <router-view></router-view>        
     </div>
 </template>

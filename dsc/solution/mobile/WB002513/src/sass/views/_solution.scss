@@ -1,4 +1,5 @@
-main [class^=solution] {
+main .banner + [class^=solution] {
+    padding-bottom: 30px;
     letter-spacing: getLetterSpacing(25);
     .sectionTitle {
         align-items: flex-start;
@@ -11,68 +12,90 @@ main [class^=solution] {
     ul {
         padding-left: 1em;
         list-style-type: disc;
+        line-height: 1.6;
     }
-
-    // table
-    table {
+    h2 {
+        font-weight: bold;
+    }
+    p {
+        text-indent: 2em;
+        line-height: 1.6;
+    }
+    img,
+    figure {
+        display: block;
+        margin: 0 auto;
+    }
+    .subtitle {
+        display: block;
+        margin-bottom: 1em;
+        color: #43aaf2;
+        font-weight: bold;
+    }
+    table.table {
         width: 100%;
         border: 1px solid #000;
         font-size: 16px;
-    }
-    tbody > tr:nth-of-type(odd) {
-        background-color: #e8e8e8;
-    }
-    th,
-    td {
-        padding: 1em;
-        vertical-align: top;
-    }
-    th {
-        text-align: left;
-        line-height: 1;
-        &:nth-of-type(1) {
-            width: 35%;
+        tbody > tr:nth-of-type(odd) {
+            background-color: #e8e8e8;
         }
-        &:nth-of-type(2) {
-            width: 65%;
+        th,
+        td {
+            padding: 1em;
+            vertical-align: top;
+        }
+        th {
+            text-align: left;
+            line-height: 1;
+            &:nth-of-type(1) {
+                width: 35%;
+            }
+            &:nth-of-type(2) {
+                width: 65%;
+            }
+        }
+        td {
+            line-height: 1.6;
         }
     }
-    td {
-        line-height: 1.6;
+    dl.list {
+        border: 1px solid #000;
+        dt,
+        dd {
+            padding: 1em;
+        }
+        dt {
+            background-color: #e8e8e8;
+        }
+        dd {
+            line-height: 1.6;
+        }
+    }
+    @for $n from 1 through 2 {
+        .mt-#{$n} {
+            margin-top: #{$n}em;
+        }
     }
 
     /* ====================================================================== */
     /* solution1~8 */
     /* ====================================================================== */
-    &.solution01 {
-        .section1 p {
-            text-indent: 2em;
-            line-height: 1.6;
+    &.solution03,
+    &.solution05,
+    &.solution06,
+    &.solution07 {
+        padding-top: 48px;
+    }
+    &.solution05 {
+        figcaption {
+            color: #f60;
+            text-align: center;
         }
     }
-    &.solution02 {
-        .section1 p {
-            text-indent: 2em;
-            line-height: 1.6;
-            + p {
-                margin-top: 1em;
-            }
-        }
-        .section4 {
-            a {
-                display: block;
-                margin-bottom: 1em;
-                color: #43aaf2;
-            }
-            h2 {
-                font-weight: bold;
-            }
-            p {
-                line-height: 1.6;
-                + a {
-                    margin-top: 1em;
-                }
-            }
+    &.solution08 {
+        padding-bottom: 55px;
+        .nav {
+            @include btn(100%, 57px, #fff, #034ea2);
         }
     }
 }

@@ -9,6 +9,12 @@ main .solution .banner {
     &-slide {
         height: image-height('solution/hero-bg.jpg');
         background-position: 50% 0;
+        @at-root {
+            main .solution .banner.solution08 .banner-slide {
+                height: image-height('solution/hero-bg2.jpg');
+                background-size: cover;
+            }
+        }
     }
     .container {
         display: flex;
@@ -23,13 +29,24 @@ main .solution .banner {
         letter-spacing: getLetterSpacing(25);
         font-weight: bold;
         font-size: 36px;
+        @at-root {
+            main .solution .banner.solution08 .banner-title {
+                color: #0c53aa;
+            }
+        }
     }
     &-desc {
+        margin-top: 1em;
         max-width: 500px;
         width: 100%;
         color: #fff;
         letter-spacing: getLetterSpacing(25);
         line-height: 1.3;
+        @at-root {
+            main .solution .banner.solution08 .banner-desc {
+                color: #000;
+            }
+        }
     }
     &-controls {
         position: absolute;
