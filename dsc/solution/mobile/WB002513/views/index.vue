@@ -5,7 +5,7 @@
         <article id="solution" class="section1">
             <div class="container">
                 <section-title
-                    title="專為特定產業研發的<br>解決方案"
+                    title="專為特定產業研發的解決方案"
                     desc="電子業涵蓋範圖廣大，光電光學半導體各自擁有不同產業特性與挑戰，鼎新針對各行業特性開發專用模組，提供業界更適合的系統應用。"
                 ></section-title>
                 <div class="grid">
@@ -47,7 +47,7 @@
         <article class="section4">
             <div class="container">
                 <section-title
-                    title="我們給您規劃的<br>解決方案藍圖"
+                    title="我們給您規劃的解決方案藍圖"
                     desc="從企業初創、上市櫃到集團化的完整資訊系統方案<br>逐步疊加過程，實現工業4.0智慧製造"
                 ></section-title>
                 <div class="items">

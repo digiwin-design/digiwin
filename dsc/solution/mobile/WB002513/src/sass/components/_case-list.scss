@@ -1,8 +1,5 @@
 main .case-list {
     letter-spacing: getLetterSpacing(25);
-    a {
-        display: block;
-    }
     dt {
         display: flex;
         padding: 0 20px;
@@ -15,9 +12,12 @@ main .case-list {
             font-weight: bold;
             font-size: 20px;
         }
-        &::after {
+        a {
+            position: relative;
             color: #e4ff00;
-            content: 'more';
+            &::before {
+                @include clickableArea(false, 18px);
+            }
         }
     }
     dd {

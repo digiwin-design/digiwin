@@ -35,7 +35,7 @@
                     <dt :key="item.name">{{item.name}}</dt>
                     <dd :key="item.desc.imgSrc">
                         <div v-if="item.desc.text" v-html="item.desc.text"></div>
-                        <img :src="item.desc.imgSrc" alt="" :class="{ 'mt-1': item.desc.text }">
+                        <img :src="img" :class="{ 'mt-1': item.desc.text || idx > 0 }" v-for="(img, idx) in item.desc.imgSrc" :key="img">
                     </dd>
                 </template>
             </dl>

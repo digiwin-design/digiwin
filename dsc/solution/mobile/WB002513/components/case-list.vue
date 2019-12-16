@@ -1,11 +1,12 @@
 <template>
     <div class="case-list">
-        <a :href="item.link" target="_blank" v-for="item in list" :key="item.company">
-            <dl>
-                <dt><i>{{item.company}}</i></dt>
-                <dd>{{item.desc}}</dd>
-            </dl>
-        </a>
+        <dl v-for="item in list" :key="item.company">
+            <dt>
+                <i>{{item.company}}</i>
+                <a :href="item.link" target="_blank">more</a>
+            </dt>
+            <dd>{{item.desc}}</dd>
+        </dl>
     </div>
 </template>
 

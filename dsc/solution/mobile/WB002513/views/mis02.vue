@@ -4,7 +4,7 @@
         <article class="section1">
             <div class="container">
                 <section-title title="企業常見資訊維護問題與解決方案"></section-title>
-                <section v-for="item in result.list" :key="item.title">
+                <section :id="item.id" v-for="item in result.list" :key="item.title">
                     <h1>{{item.title}}</h1>
                     <p v-for="i in item.content" :key="i" v-html="i"></p>
                 </section>

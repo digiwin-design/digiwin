@@ -125,7 +125,16 @@ const router = new VueRouter({
         },
     ],
     scrollBehavior(to, from, savedPosition) {
-        return to.hash ? { selector: to.hash } : { x: 0, y: 0 };
+        let offset = location.hostname === 'www.digiwin.com' && document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight || 0;
+        if (to.hash) {
+            return {
+                selector: to.hash,
+                offset: { x: 0, y: offset }
+            };
+        }
+        else {
+            return { x: 0, y: 0 };
+        }
     }
 });
 router.beforeEach((to, from, next) => {

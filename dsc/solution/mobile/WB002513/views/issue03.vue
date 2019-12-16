@@ -24,7 +24,7 @@
         <article class="section2">
             <div class="container">
                 <section-title title="IPO成功案例"></section-title>
-                <a :href="item.link" :data-co="item.company" v-for="item in result.section2" :key="item.company">
+                <a :href="item.link" target="_blank" :data-co="item.company" v-for="item in result.section2" :key="item.company">
                     <i v-html="item.company"></i>
                     {{item.content}}
                 </a>
