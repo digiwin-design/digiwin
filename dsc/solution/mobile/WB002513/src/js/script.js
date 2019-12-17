@@ -5,16 +5,25 @@ httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
 httpVueLoader.register(Vue, 'components/pain.vue');
 httpVueLoader.register(Vue, 'components/case-list.vue');
+httpVueLoader.register(Vue, 'components/loading.vue');
 
 NProgress.configure({ showSpinner: false });
 
 const store = new Vuex.Store({
     state: {
         result: null,
+        isReady: false,
+        loading: false,
     },
     mutations: {
         setData(state, payload) {
             state.result = payload;
+        },
+        setReady(state, payload) {
+            state.isReady = payload;
+        },
+        setLoading(state, payload) {
+            state.loading = payload;
         },
     },
     actions: {
@@ -125,23 +134,20 @@ const router = new VueRouter({
         },
     ],
     scrollBehavior(to, from, savedPosition) {
-        let offset = location.hostname === 'www.digiwin.com' && document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight || 0;
-        if (to.hash) {
-            return {
-                selector: to.hash,
-                offset: { x: 0, y: offset }
-            };
-        }
-        else {
-            return { x: 0, y: 0 };
-        }
+        return { x: 0, y: 0 };
     }
 });
 router.beforeEach((to, from, next) => {
-    NProgress.start();
+    if (to.path !== from.path) {
+        NProgress.start();
+    }
     next();
 });
 router.afterEach((to, from) => {
+    if (to.path !== from.path) {
+        store.commit('setReady', false);
+    }
+
     let submenu = document.querySelector('.page-submenu');
     if (to.query.tab) {
         let tab = parseInt(to.query.tab, 10);
@@ -150,7 +156,31 @@ router.afterEach((to, from) => {
     else {
         $(submenu).removeClass('active').find('li').removeClass('active');
     }
-    NProgress.done();
+
+    if (!to.hash) return;
+
+    store.commit('setLoading', true);
+    
+    let toHash = () => {
+        let timer = setTimeout(() => {
+            if (app.isReady) {
+                clearTimeout(timer);
+                setTimeout(() => {
+                    let offset = location.hostname === 'www.digiwin.com' && document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+                    let targetPos = document.querySelector(to.hash).getBoundingClientRect().top + window.pageYOffset;
+                    let top = offset ? targetPos - offset : targetPos;
+                    window.scroll({ top, left: 0, behavior: 'smooth' });
+                    
+                    store.commit('setLoading', false);
+                    NProgress.done();
+                }, 1000);
+            }
+            else {
+                toHash();
+            }
+        }, 100);
+    };
+    toHash();
 });
 
 const app = new Vue({
@@ -159,6 +189,16 @@ const app = new Vue({
     computed: {
         result() {
             return store.state.result;
+        },
+        isReady() {
+            return store.state.isReady;
+        },
+    },
+    watch: {
+        isReady(value) {
+            if (value) {
+                NProgress.done();
+            }
         }
     },
     created() {

@@ -1,5 +1,5 @@
 <template>
-    <div class="banner swiper-container" :class="{ clickable, disabled }" @click="clickHandler">
+    <div class="banner swiper-container" :class="{ clickable, disabled }" @click="clickHandler" v-if="imgLoaded">
         <div class="swiper-wrapper">
             <div
                 v-for="slide in slides"
@@ -35,7 +35,8 @@ module.exports = {
     },
     data: function () {
         return {
-            index: 0
+            index: 0,
+            imgLoaded: false,
         }
     },
     computed: {
@@ -82,10 +83,18 @@ module.exports = {
             else {
                 location.assign(url);
             }
-        }
+        },
+        preload() {
+            let imgs = this.slides.map(item => item.imgSrc);
+            return preloadImg(imgs);
+        },
     },
     mounted: function () {
-        this.initSwiper();
+        this.preload().then(() => {
+            this.imgLoaded = true;
+            this.$nextTick(() => this.initSwiper());
+            store.commit('setReady', true);
+        });
     },
 }
 </script>

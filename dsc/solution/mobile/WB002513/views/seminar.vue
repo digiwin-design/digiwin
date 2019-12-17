@@ -1,5 +1,5 @@
 <template>
-    <div class="seminar">
+    <div class="seminar" v-if="isReady">
         <div class="header">
             <div class="container">
                 <div class="header-text">
@@ -512,7 +512,10 @@ module.exports = {
     computed: {
         result() {
             return store.state.result.seminar;
-        }
+        },
+        isReady() {
+            return store.state.isReady;
+        },
     },
     methods: {
         slideToggle(event) {
@@ -539,10 +542,16 @@ module.exports = {
                 let finalPos = offset ? targetPos - offset : targetPos;
                 $('html, body').animate({ scrollTop: finalPos });
             }, delay);
-        }
+        },
+        preload() {
+            return preloadImg(['images/seminar/header-bg.jpg']);
+        },
     },
     mounted() {
         $(this.$refs.accordion).find('h2').eq(0).addClass('active');
+        this.preload().then(() => {
+            store.commit('setReady', true);
+        });
     },
 }
 </script>

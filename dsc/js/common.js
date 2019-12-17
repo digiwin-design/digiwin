@@ -70,7 +70,7 @@ function appendLinks(urls) {
 // 電腦/手機版轉址
 // BUG：電腦開啟手機版網址無法自動轉址(重新整理始可)
 (function () {
-    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash;
+    let currentUrl = location.pathname.replace(/(.html|.htm)$/, '') + location.hash.replace(/#\w*$/, '');
 
     // 判斷目的裝置
     let md = new MobileDetect(window.navigator.userAgent);
