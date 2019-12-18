@@ -150,13 +150,8 @@ main .index {
             font-size: 16px;
             line-height: 1.6;
         }
-        a {
-            @include btn(100%, 32px, #034ea2, #c5ebfe);
-            border: 1px solid #034ea2;
-            font-size: 16px;
-            & + a {
-                margin-top: 1em;
-            }
+        a + a {
+            margin-top: 1em;
         }
     }
 }
