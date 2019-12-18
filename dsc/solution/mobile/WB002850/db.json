@@ -1,0 +1,13 @@
+{
+    "index": {
+        "banner": [
+            {
+                "id": 1,
+                "title": "title",
+                "desc": "desc",
+                "imgSrc": "images/index/hero-bg.jpg",
+                "url": "javascript:;"
+            }
+        ]
+    }
+}
