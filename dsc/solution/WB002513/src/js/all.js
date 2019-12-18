@@ -2,6 +2,7 @@
 // vue components
 // =============================================================================
 httpVueLoader.register(Vue, 'components/contact.vue');
+httpVueLoader.register(Vue, 'components/slider-banner.vue');
 
 // =============================================================================
 // function

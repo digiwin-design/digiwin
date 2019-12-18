@@ -20,7 +20,7 @@ const store = new Vuex.Store({
     actions: {
         getData(context) {
             axios.get('db.json').then(res => {
-                context.commit('setData', res.data);
+                context.commit('setData', res.data.WB00251301);
                 app.$nextTick(() => {
                     // 依據選單高度設定main上方間距
                     let menuHeight = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;

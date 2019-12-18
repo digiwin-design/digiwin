@@ -26,6 +26,10 @@
     <script src="/tw/dsc/js/Eform/xcConfirm.js" defer></script>
     <link rel="stylesheet" href="/tw/dsc/assets/submenu/submenu.css">
     <script src="/tw/dsc/assets/submenu/submenu.min.js"></script>
+    <link rel="stylesheet" href="assets/swiper.min.css">
+    <script src="assets/swiper.min.js" defer></script>
+    <script src="assets/vue-awesome-swiper.js" defer></script>
+    <link rel="stylesheet" href="/tw/dsc/solution/WB002513/css/font-awesome.min.css">
     <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
     <script src="js/all.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
@@ -35,77 +39,7 @@
     <link rel="stylesheet" href="css/WB002513_common.css">
     <link rel="stylesheet" href="css/WB00251301/style.css">
     <script src="js/WB00251301.min.js" defer></script>
-    <main v-cloak v-if="result"><div id="banner">
-    <div id="top"></div>
-    <div id="bannerCon" class="clearfix">
-        <div class="banner_01">
-            <h2>
-                <a href="/tw/dsc/solution/WB002513/WB00251301_Issue01" target="_blank"><img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/banner1.png"></a>
-                <ul id="bannerButton" class="clearfix">
-
-                    <li class="bottom2"><a href="/tw/dsc/solution/WB002513/WB00251301_Issue01" target="_blank">了解更多</a></li>
-                </ul>
-            </h2>
-        </div>
-        <div class="banner_02">
-            <h2>
-                <a href="/tw/dsc/solution/WB002513/WB00251301_Issue02" target="_blank"><img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/banner2.png"></a>
-                <ul id="bannerButton" class="clearfix">
-
-                    <li class="bottom2"><a href="/tw/dsc/solution/WB002513/WB00251301_Issue02" target="_blank">了解更多</a></li>
-                </ul>
-            </h2>
-
-        </div>
-        <div class="banner_03">
-            <h2>
-                <a href="http://mag.digiwin.biz/category/%E5%85%A8%E7%90%83%E5%8B%95%E6%85%8B/%E5%B7%A5%E6%A5%AD4-0-%E6%99%BA%E6%85%A7%E8%A3%BD%E9%80%A0/" target="_blank"><img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/banner3.png"></a>
-                <ul id="bannerButton" class="clearfix">
-
-                    <li class="bottom2"><a href="http://mag.digiwin.biz/category/%E5%85%A8%E7%90%83%E5%8B%95%E6%85%8B/%E5%B7%A5%E6%A5%AD4-0-%E6%99%BA%E6%85%A7%E8%A3%BD%E9%80%A0/" target="_blank">了解更多</a></li>
-                </ul>
-            </h2>
-        </div>
-    </div>
-    <div id="bannerOrder">
-        <ul>
-            <li class="now">
-                <img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/buttonS_01.jpg" alt="少量多樣已是接單常態">
-                <a href="javascript:;">
-                    <div class="bannerDes">
-                        <img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/button_01.jpg" alt="少量多樣已是接單常態">
-                        <p><span class="bannerTitle">少量多樣已是接單常態</span><br>客製化訂單時代來臨,公司營運策略如何因應?</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/buttonS_02.jpg" alt="電子業轉型車用,交通,醫療...已是趨勢">
-                <a href="javascript:;">
-                    <div class="bannerDes">
-                        <img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/button_02.jpg" alt="電子業轉型車用,交通,醫療...已是趨勢">
-                        <p><span class="bannerTitle">電子業轉型車用,交通,醫療...已是趨勢</span><br>搶進新市場的背後,企業內部需要作那些改變?</p>
-                    </div>
-                </a>
-            </li>
-
-
-            <li>
-                <img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/buttonS_03.jpg" alt="贏在生產力4.0">
-                <a href="javascript:;">
-                    <div class="bannerDes">
-                        <img src="https://www.digiwin.com/tw/dsc/solution/WB002513/images/button_03.jpg" alt="贏在生產力4.0">
-                        <p><span class="bannerTitle">贏在生產力4.0</span><br>擁抱智慧製造、勾勒專業路徑</p>
-                    </div>
-                </a>
-            </li>
-
-
-        </ul>
-    </div>
-    <!--bannerCon end-->
-</div>
-<!--banner end-->
-
+    <main v-cloak v-if="result"><slider-banner v-bind:slides="result.banner" device="desktop" :nav="true"></slider-banner>
 
 <div id="wrapper1_bg">
     <h2 id="problems"><span class="title">專為特定產業研發的解決方案</span></h2>

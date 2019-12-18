@@ -1,4 +1,17 @@
+@import '../common/variable';
+@import 'components';
+
 main {
+    .container {
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: $content-width;
+        @media (min-width: $content-width) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
     #banner {
         position: relative;
         overflow: hidden;

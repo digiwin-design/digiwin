@@ -8,11 +8,7 @@
                 :class="'slide' + slide.id"
                 class="banner-slide swiper-slide"
             >
-                <div class="container">
-                    <p class="banner-subtitle" v-if="slide.subtitle" v-html="slide.subtitle[deviceType]"></p>
-                    <p class="banner-title" v-html="slide.title[deviceType]"></p>
-                    <div class="banner-desc" v-if="slide.desc" v-html="slide.desc[deviceType]"></div>
-                </div>
+                <div class="container banner-text" v-html="slide.text[deviceType]"></div>
             </div>
         </div>
         <div class="banner-controls">
@@ -60,10 +56,10 @@ module.exports = {
             let _this = this;
             new Swiper(_this.$el, {
                 loop: true,
-                // autoplay: {
-                //     disableOnInteraction: false,
-                //     delay: 5000
-                // },
+                autoplay: {
+                    disableOnInteraction: false,
+                    delay: 5000
+                },
                 pagination: {
                     el: '.banner-pagination',
                     clickable: true,
