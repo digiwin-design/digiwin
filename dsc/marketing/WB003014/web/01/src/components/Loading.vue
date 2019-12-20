@@ -27,12 +27,20 @@ export default {
     z-index: 1000000; // override Header
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, .9);
     justify-content: center;
     align-items: center;
 }
 .loading {
-    margin-top: .5em;
     width: 50px;
+    animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 </style>

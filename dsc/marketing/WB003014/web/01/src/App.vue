@@ -18,13 +18,16 @@
                             <h1 class="title" data-text="THE LATEST VEDIO">近期播出</h1>
                             <div class="content">
                                 <div class="content__illust">
-                                    <img src="images/latest-illust.jpg" alt>
+                                    <div class="video-container">
+                                        <iframe src="https://www.youtube.com/embed/hGvNevZG_OQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                 </div>
                                 <div class="content__text">
                                     <h2><i class="logo sm"></i>{{result.latest.title}}</h2>
-                                    <p>{{result.latest.subtitle}}</p>
-                                    <p v-html="result.latest.content"></p>
-                                    <a :href="result.latest.link" target="_blank" class="mainLink calendar">立即預約線上參訪</a>
+                                    <p class="content__text-subtitle">{{result.latest.subtitle}}</p>
+                                    <p class="content__text-content">{{result.latest.content}}</p>
+                                    <p class="content__text-time">{{result.latest.time}}</p>
+                                    <a :href="result.latest.link" target="_blank" class="mainLink calendar">立即報名線上直播</a>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +221,6 @@ export default {
 @import '@/assets/sass/reset.scss';
 @import '@/assets/sass/common.scss';
 
-// transition
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 1s;
@@ -227,7 +229,9 @@ export default {
 .fade-leave-to {
     opacity: 0;
 }
-
+.video-container {
+    @include youtubeIframe();
+}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -377,7 +381,7 @@ i.logo {
             width: 100%;
             text-align: center;
             @media (min-width: $tablet-width + 1) {
-                width: calc(100% - 395px);
+                width: calc(100% - 415px);
             }
         }
         &__text {
@@ -386,7 +390,7 @@ i.logo {
             @media (min-width: $tablet-width + 1) {
                 padding-top: 0;
                 padding-left: 45px;
-                width: 395px;
+                width: 415px;
             }
             h2 {
                 margin-bottom: .5em;
@@ -394,23 +398,25 @@ i.logo {
                 font-weight: bold;
                 font-size: 26px;
             }
-            p {
-                &:nth-of-type(1) {
-                    margin-bottom: .2em;
-                    letter-spacing: getLetterSpacing(10);
-                    font-weight: bold;
-                    font-size: 26px;
-                    line-height: 40px;
-                }
-                &:nth-of-type(2) {
-                    margin-bottom: 1em;
-                    letter-spacing: getLetterSpacing(10);
-                    font-size: 20px;
-                    line-height: 28px;
-                }
-                strong {
-                    font-weight: bold;
-                }
+            &-subtitle {
+                margin-bottom: .2em;
+                letter-spacing: getLetterSpacing(10);
+                font-weight: bold;
+                font-size: 26px;
+                line-height: 40px;
+            }
+            &-content {
+                letter-spacing: getLetterSpacing(10);
+                font-size: 20px;
+                line-height: 28px;
+            }
+            &-time {
+                margin-top: .5em;
+                margin-bottom: 1em;
+                letter-spacing: getLetterSpacing(10);
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 28px;
             }
             .mainLink {
                 height: 70px;
