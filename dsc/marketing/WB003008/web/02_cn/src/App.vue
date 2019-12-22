@@ -4,7 +4,7 @@
             <Header></Header>
             <MenuMask></MenuMask>
             <main>
-                <div class="hero" :style="{ backgroundImage: `url(${publicPath + heroImgSrc})` }">
+                <div class="hero" :style="{ backgroundImage: `url(${heroImgSrc})` }">
                     <div class="container">
                         <div class="hero__text">
                             <h1>企业出海・选鼎捷</h1>
@@ -57,9 +57,6 @@ export default {
         },
         loading() {
             return this.$store.state.loading;
-        },
-        publicPath() {
-            return process.env.BASE_URL;
         },
         heroImgSrc() {
             return this.isMobile ? 'images/hero-bg-s.jpg' : 'images/hero-bg.jpg';
