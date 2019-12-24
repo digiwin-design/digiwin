@@ -3,10 +3,6 @@
     @return ($px / 16) + rem;
 }
 
-@function em($px) {
-    @return ($px / 16) + em;
-}
-
 @function lineHeight($px, $fz: 16) {
     @return $px / $fz;
 }
@@ -15,51 +11,28 @@
 @function getLetterSpacing($num) {
     @return ($num / 1000) + em;
 }
-
-@function columnWidth($margin, $cols) {
-    @return calc((100% - #{$margin} * #{$cols} * 2) / #{$cols});
-}
 /* #endregion function */
 
 /* #region mixin */
-@mixin imgBg($img, $is-inline: false, $maxWidth: false) {
-    height: image-height($img);
-
-    @if ($is-inline) {
-        background-image: inline-image($img);
-    }
-    @else {
-        background-image: image-url($img);
-    }
-
-    @if ($maxWidth == true) {
-        max-width: image-width($img);
-    }
-    @else {
-        width: image-width($img);
-    }
-
-    @content;
+@mixin imgBg($img, $pos: 50%) {
+    background-image: url($img);
+    background-position: $pos;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-@mixin bg($img, $pos: 50% 0, $is-inline: false) {
+@mixin bg($img, $pos: 50% 0) {
+    background-image: url($img);
     background-position: $pos;
     background-repeat: no-repeat;
-    @if ($is-inline) {
-        background-image: inline-image($img);
-    }
-    @else {
-        background-image: image-url($img);
-    }
-    @content;
 }
 
 @mixin btn($width, $height, $color, $bgColor, $radius: 0, $maxWidth: false, $display: block) {
-    @include linkColor($color);
     display: block;
     height: $height;
     border-radius: $radius;
     background-color: $bgColor;
+    color: $color;
     text-align: center;
     line-height: $height;
     @if ($maxWidth == true) {
@@ -141,17 +114,18 @@
 }
 
 // 固定頂部導覽列
-@mixin stickyNav($isMobile, $totalLink, $height, $fontSize, $bgColor, $bgColor-active, $borderColor: #fff, $color: #fff, $color-active: #fff) {
-    z-index: map-get($z-index, nav);
+@mixin stickyNav($totalLink, $height, $fontSize, $bgColor, $bgColor-active, $borderColor: #fff, $color: #fff, $color-active: #fff) {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    box-sizing: content-box;
     width: 100%;
     height: $height;
+    border-bottom: 1px solid $borderColor;
     background-color: $bgColor;
-    &.is-sticky a {
-        &:first-of-type.active.is-active,
-        &:not(:first-of-type).active {
-            background-color: $bgColor-active;
-            color: $color-active;
-        }
+    &.mbnav {
+        display: block;
+        line-height: $height;
     }
     .container {
         display: flex;
@@ -159,28 +133,30 @@
         padding-left: 0;
     }
     a {
+        display: flex;
+        flex-direction: column;
         width: (100% / $totalLink);
         height: $height;
-        border-right: 1px solid $borderColor;
         color: $color;
         text-align: center;
         font-size: $fontSize;
-        @if ($isMobile) {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.3;
-            justify-content: center;
-            align-items: center;
+        line-height: 1.3;
+        transition: background-color .2s;
+        justify-content: center;
+        align-items: center;
+        &.active {
+            background-color: $bgColor-active;
+            color: $color-active;
         }
-        @else {
-            display: block;
-            line-height: $height;
-        }
-        &:first-of-type {
-            border-left: 1px solid $borderColor;
+        @media (min-width: $content-width + 1) {
+            &:first-of-type {
+                border-left: 1px solid $borderColor;
+            }
+            &:last-of-type {
+                border-right: 1px solid $borderColor;
+            }
         }
     }
-    @content;
 }
 
 // youtube嵌入
@@ -200,74 +176,21 @@
     @content;
 }
 
-@mixin headerBg($img, $imgS: $img, $pos: 50% 0) {
-    background-image: image-url($imgS);
+@mixin headerBg($img, $imgS: $img, $pos: 50% 100%) {
+    background-image: url($imgS);
     background-position: $pos;
     background-repeat: no-repeat;
     @media (min-width: $tablet-width + 1) {
-        background-image: image-url($img);
+        background-image: url($img);
     }
     .container {
         position: relative;
         display: flex;
         flex-direction: column;
-        height: image-height($imgS);
         justify-content: center;
         @media (min-width: $tablet-width + 1) {
             height: image-height($img);
         }
-    }
-}
-
-@mixin linkColor($color) {
-    color: $color;
-    &:link,
-    &:visited {
-        color: $color;
-    }
-}
-
-@mixin quoteBlock($img: '', $offset: 0) {
-    position: relative;
-    @if $img == '' {
-        padding-top: (39px + $offset);
-        padding-bottom: (39px + $offset);
-        @media (min-width: 769px) {
-            padding-right: (47px + $offset);
-            padding-left: (47px + $offset);
-        }
-        &::before,
-        &::after {
-            width: 47px;
-            height: 39px;
-            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAnCAMAAACoquHzAAAAS1BMVEUAAADMzMzPz8/d3d3j4+PT09Pi4uLS0tLMzMzS0tLW1tbY2NjY2Nju7u7n5+fk5OTn5+fc3Nze3t7r6+vMzMzd3d3W1tbPz8/k5OTT1chzAAAAFHRSTlMAqqE3H31CjpNrVXFKCS8ZEl4vCXxYnnkAAAEGSURBVDjL7ZXZisRACEXVlEkt2WZ6tv//0iEYI8b0wEC/dZ/Hew8igVhwkJhwg+HErXLeCprAmAf82EnOXkvWoreUxY5+Vdv5Ojz4xQrzTTff9OizS3GxZXzRSdofac7MPIKS8FCRiJpuo3YFT1Gb7UvaeLY9/HjqLLPxeYXr8Ti7dCKJRzizF82nP5JS0Je9mHz8KXEJ/rsUA1z6NfidFPwYv0T/z31ovePTfPaFPCZhOXwBWy906nswj+KHApv4oajix4LFD3kSPxa9+p4ifmS49od/+nTPp5f/jH6R+xAZYEYX2PFar4oGwDHnm11zByV7LYyc9LWIv8vG27dLv0CIxQTwC7coWUmaFFoKAAAAAElFTkSuQmCC);
-        }
-    }
-    @else {
-        padding-top: (image-height($img) + $offset);
-        padding-bottom: (image-height($img) + $offset);
-        @media (min-width: 769px) {
-            padding-right: (image-width($img) + $offset);
-            padding-left: (image-width($img) + $offset);
-        }
-        &::before,
-        &::after {
-            @include imgBg($img, true);
-        }
-    }
-    &::before,
-    &::after {
-        position: absolute;
-        content: '';
-    }
-    &::before {
-        top: 0;
-        left: 0;
-    }
-    &::after {
-        right: 0;
-        bottom: 0;
-        transform: rotate(180deg);
     }
 }
 /* #endregion mixin */

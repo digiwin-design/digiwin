@@ -4,15 +4,70 @@
             <Header></Header>
             <MenuMask></MenuMask>
             <main>
-                <div class="hero" :style="{ backgroundImage: `url(${heroImgSrc})` }">
-                    <div class="container">
-                        <div class="hero__text">
-                            <h1>企业出海・选鼎捷</h1>
-                            <p>亚太地区制造业管理系统领导品牌<br>针对越南、泰国、马来西亚投资的新设企业、新建工厂提供一站式的专业服务，让版图发展在东南亚行稳致远。</p>
+                <div v-if="result">
+                    <div class="hero" :style="{ backgroundImage: `url(${heroImgSrc})` }">
+                        <div class="container">
+                            <div class="hero__text">
+                                <h1>企业出海・选鼎捷</h1>
+                                <p>亚太地区制造业管理系统领导品牌<br>针对越南、泰国、马来西亚投资的新设企业、新建工厂提供一站式的专业服务，让版图发展在东南亚行稳致远。</p>
+                            </div>
+                            <HeaderForm></HeaderForm>
                         </div>
-                        <HeaderForm></HeaderForm>
                     </div>
+
+                    <article class="section1">
+                        <SectionTitle class="container" :title="result.section1.sectionTitle.title" :desc="result.section1.sectionTitle.desc" :color="result.section1.sectionTitle.color"></SectionTitle>
+                        <div class="boxs">
+                            <HoverBox v-for="item in result.section1.hoverBox" :key="item.id">
+                                <template slot="before">
+                                    <div class="hoverBox__before">
+                                        <ul class="hoverBox__before-title">
+                                            <li v-for="text in item.before.title" :key="text">{{text}}</li>
+                                        </ul>
+                                        <p class="hoverBox__before-content" v-for="text in item.before.content" :key="text" v-html="text"></p>
+                                    </div>
+                                    <div class="hoverBox__bottom">
+                                        <p>{{item.bottom}}</p>
+                                    </div>
+                                </template>
+                                <template slot="hover">
+                                    <p class="hoverBox__hover-content" v-html="item.hover.content"></p>
+                                    <a href class="hoverBox__hover-link" @click.prevent="scrollToAnchor(item.hover.link.url)">{{item.hover.link.text}}</a>
+                                </template>
+                            </HoverBox>
+                        </div>
+                        <p class="container bottom">鼎捷以越南、泰国、马来西亚为主要服务据点外，亦可延伸服务区域：缅甸、柬埔寨、菲律宾…等国。</p>
+                    </article>
+
+                    <article class="section2">
+                        <SectionTitle class="container" :title="result.section2.sectionTitle.title" :desc="result.section2.sectionTitle.desc" :color="result.section2.sectionTitle.color"></SectionTitle>
+                        <Collapse></Collapse>
+                        <div class="container">
+                            <a href class="contact" @click.prevent="scrollToAnchor('#contact')">立即咨询</a>
+                        </div>
+                    </article>
+
+                    <article class="section3">
+                        <div class="container">
+                            <SectionTitle :title="result.section3.sectionTitle.title" :desc="result.section3.sectionTitle.desc" :color="result.section3.sectionTitle.color"></SectionTitle>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="percent">14.7%</div>
+                                    <p>智能制造ERP产品市占率国内领先</p>
+                                    <p>赛迪网《2017年中国智能制造产业ERP软件产品深度研究报告》显示，鼎捷在中国市场占有率高居本土第一。</p>
+                                    <figure>
+                                        <img src="@/assets/images/section3-chart1.png" alt="">
+                                        <figcaption>数据来源:CCIDnet 2018 .04</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col">
+                                    <img src="@/assets/images/section3-chart2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
+
                 <Contact source=""></Contact>
             </main>
             <Footer></Footer>
@@ -33,6 +88,9 @@ import Loading from '@/components/Loading.vue';
 import Ad from '@/components/Ad.vue';
 import Contact from '@/components/Contact.vue';
 import HeaderForm from '@/components/HeaderForm.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
+import HoverBox from '@/components/HoverBox.vue';
+import Collapse from '@/components/Collapse.vue';
 
 export default {
     name: 'app',
@@ -44,6 +102,9 @@ export default {
         Ad,
         Contact,
         HeaderForm,
+        SectionTitle,
+        HoverBox,
+        Collapse,
     },
     computed: {
         isMobile() {
@@ -119,8 +180,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/sass/reset.scss';
-@import '@/assets/sass/common.scss';
+@import '@/assets/sass/reset';
+@import '@/assets/sass/common';
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -134,7 +195,7 @@ main {
     margin: 0 auto;
     padding: 0 10px;
     max-width: 1200px;
-    outline: 1px solid #f00;
+    // outline: 1px solid #f00;
     @media (min-width: 361px) {
         padding-right: 20px;
         padding-left: 20px;
@@ -145,20 +206,21 @@ main {
     }
 }
 .hero {
-    padding-top: 230px;
     height: 758px;
     @media (min-width: $tablet-width + 1) {
-        padding-top: 0;
         height: 520px;
     }
     .container {
         display: flex;
         flex-direction: column;
+        padding-bottom: 42px;
         max-width: 380px;
         height: 100%;
         align-items: center;
+        justify-content: flex-end;
         @media (min-width: $tablet-width + 1) {
             flex-direction: row;
+            padding-bottom: 0;
             max-width: $content-width;
             justify-content: space-between;
         }
@@ -186,6 +248,129 @@ main {
             line-height: 30px;
             @media (min-width: $tablet-width + 1) {
                 margin-top: 1em;
+            }
+        }
+    }
+}
+.section1 {
+    padding-bottom: 55px;
+    background-color: #f2f2f2;
+    .boxs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $content-width) {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .hoverBox + .hoverBox {
+        margin-top: 10px;
+        @media (min-width: $content-width) {
+            margin-top: 0;
+            margin-left: 13px;
+        }
+    }
+    .bottom {
+        display: none;
+        @media (min-width: $content-width) {
+            display: block;
+            margin-top: 30px;
+            font-size: 24px;
+        }
+    }
+}
+.section2 {
+    @include bg('~@/assets/images/section2-bg-s.jpg');
+    padding-bottom: 55px;
+    @media (min-width: $tablet-width + 1) {
+        background-image: url('~@/assets/images/section2-bg.jpg');
+    }
+    .sectionTitle p {
+        color: #fff;
+        @media (min-width: $content-width + 1) {
+            text-align: center;
+        }
+    }
+    .contact {
+        display: flex;
+        margin: 30px auto 0;
+        max-width: 530px;
+        height: 80px;
+        border-radius: 10px;
+        background-color: $text-danger;
+        box-shadow: 0 5px #950f05;
+        color: #fff;
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: $tablet-width + 1) {
+            margin-top: 56px;
+        }
+        &::after {
+            margin-left: 10px;
+            width: 18px;
+            height: 18px;
+            border-bottom: 5px solid #fff;
+            border-left: 5px solid #fff;
+            content: '';
+            transform: scaleX(-1) rotate(45deg);
+        }
+        &:active {
+            box-shadow: none;
+            transform: translateY(5px);
+        }
+    }
+}
+.section3 {
+    padding-bottom: 55px;
+    background-color: #eeefef;
+    .sectionTitle p {
+        @media (min-width: $content-width + 1) {
+            text-align: center;
+        }
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 430px;
+        align-items: center;
+        @media (min-width: $tablet-width + 1) {
+            flex-direction: row;
+            max-width: 960px;
+        }
+    }
+    .col {
+        &:nth-of-type(1) {
+            .percent {
+                color: #dc3246;
+                font-weight: bold;
+                font-size: 66px;
+            }
+            p {
+                font-size: 20px;
+                &:nth-of-type(1) {
+                    margin-top: .5em;
+                    font-weight: bold;
+                }
+                &:nth-of-type(2) {
+                    margin-top: .5em;
+                    margin-bottom: .5em;
+                    line-height: 1.75;
+                }
+            }
+            figcaption {
+                margin-top: 15px;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+        &:nth-of-type(2) {
+            margin-top: 10px;
+            @media (min-width: $tablet-width + 1) {
+                margin-top: 0;
+                margin-left: percentage(60 / 960);
             }
         }
     }
