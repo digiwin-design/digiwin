@@ -54,6 +54,10 @@ main .subBanner.mis01Page {
     background: url(../images/mis/misBanner01.jpg) no-repeat center top;
 }
 
+main .subBanner.wall {
+    background: url(../images/wall/hero-bg.jpg) no-repeat center top;
+}
+
 main .subA01bg {
     width: 100%;
 }
