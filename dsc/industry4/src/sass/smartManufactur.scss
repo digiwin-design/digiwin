@@ -21,6 +21,9 @@ main {
         height: calc(100vh - 136px);
         background: url('../images/WB002760/bg_mainVisual.jpg') no-repeat center center;
         color: #fff;
+        @media (max-height: 768px) {
+            height: auto;
+        }
         .content {
             padding-bottom: 70px;
         }

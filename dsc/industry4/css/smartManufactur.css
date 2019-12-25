@@ -290,6 +290,11 @@ main #mainVisual {
   background: url("../images/WB002760/bg_mainVisual.jpg") no-repeat center center;
   color: #fff;
 }
+@media (max-height: 768px) {
+  main #mainVisual {
+    height: auto;
+  }
+}
 main #mainVisual .content {
   padding-bottom: 70px;
 }
@@ -1010,7 +1015,7 @@ main .case {
   padding-top: 50px;
   padding-bottom: 70px;
   background-color: #ccd7e1;
-  background-image: url('../images/WB002760/case-bg-s.png?1540871507');
+  background-image: url('../images/WB002760/case-bg-s.png?1558758740');
   background-position: 0 50px;
   background-repeat: no-repeat;
 }
@@ -1107,8 +1112,6 @@ main .case-video iframe {
 main .case-video:first-child {
   margin-bottom: 25px;
 }
-
-
 
 
 

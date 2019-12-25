@@ -1080,7 +1080,7 @@ main .case {
   padding-top: 50px;
   padding-bottom: 70px;
   background-color: #e3e3e3;
-  background-image: url('../images/smartFactory/case-bg-s.png?1540871507');
+  background-image: url('../images/smartFactory/case-bg-s.png?1558758740');
   background-position: 0 80px;
   background-repeat: no-repeat;
 }
@@ -1204,12 +1204,6 @@ main .case-pagination-bullet:first-of-type {
 main .case-pagination-bullet-active {
   background-color: #008ea3;
 }
-
-
-
-
-
-
 
 
 
