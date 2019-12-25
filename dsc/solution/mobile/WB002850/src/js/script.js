@@ -1,8 +1,11 @@
-// Vue.use(VueAwesomeSwiper);
+Vue.use(VueAwesomeSwiper);
 httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/loading.vue');
+httpVueLoader.register(Vue, 'components/section-title.vue');
+httpVueLoader.register(Vue, 'components/hover-boxs.vue');
+// httpVueLoader.register(Vue, 'components/hover-box.vue');
 
 NProgress.configure({ showSpinner: false });
 
@@ -42,6 +45,18 @@ const router = new VueRouter({
         {
             path: '/',
             component: httpVueLoader('views/index.vue')
+        },
+        {
+            path: '/brand',
+            component: httpVueLoader('views/brand.vue')
+        },
+        {
+            path: '/store',
+            component: httpVueLoader('views/store.vue')
+        },
+        {
+            path: '/solution',
+            component: httpVueLoader('views/solution.vue')
         },
         {
             path: '*',
@@ -96,6 +111,48 @@ router.afterEach((to, from) => {
         }, 100);
     };
     toHash();
+});
+
+Vue.component('hover-box', {
+    props: {
+        color: {
+            type: String,
+            required: true
+        },
+        customClass: String,
+        fadeIn: {
+            type: Boolean,
+            default: false
+        },
+        arrow: {
+            type: Boolean,
+            default: true
+        }
+    },
+    computed: {
+        bgColor: function () {
+            return 'hsl(' + this.hsl[0] + ',' + this.hsl[1] + '%,' + this.hsl[2] + '%' + ')';
+        },
+        hoverBgColor: function () {
+            return 'hsla(' + this.hsl[0] + ',' + this.hsl[1] + '%,' + (this.hsl[2] - 20) + '%' + ',.95)';
+        },
+        hsl: function () {
+            return w3color(this.color).toHslArray();
+        }
+    },
+    template: `
+        <div
+            class="hoverBox js-hoverBox"
+            :class="[customClass, { 'fadeIn': fadeIn }, { 'arrow': arrow }]"
+            :style="{ 'background-color': bgColor }"
+            onclick
+        >
+            <slot name="content"></slot>
+            <div class="hoverBox-hover js-hoverBox-hover" :style="{ 'background-color': hoverBgColor }">
+                <slot name="hover"></slot>
+            </div>
+        </div>
+    `
 });
 
 const app = new Vue({

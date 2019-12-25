@@ -11,7 +11,7 @@
         "menus": [
             {
                 "text": "", // 選單文字
-                "url": "", // 選單連結
+                "url": "", // 選單/錨點連結(錨點key改為anchor)
                 "dropdowns": [
                     {
                         "text": "", // 子選單文字

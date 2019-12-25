@@ -532,5 +532,31 @@
                 "url": "#/#solution"
             }
         ]
+    },
+    {
+        "id": "WB002850",
+        "title": "醫美業",
+        "menus": [
+            {
+                "text": "醫美首頁",
+                "url": "#/"
+            },
+            {
+                "text": "奠定口碑",
+                "url": "#/brand"
+            },
+            {
+                "text": "快速展店",
+                "url": "#/store"
+            },
+            {
+                "text": "解決方案",
+                "url": "#/solution"
+            },
+            {
+                "text": "聯絡我們",
+                "anchor": "#contact"
+            }
+        ]
     }
 ]
