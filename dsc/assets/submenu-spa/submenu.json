@@ -558,5 +558,31 @@
                 "anchor": "#contact"
             }
         ]
+    },
+    {
+        "id": "WB002711",
+        "title": "美妝業",
+        "menus": [
+            {
+                "text": "美妝首頁",
+                "url": "#/"
+            },
+            {
+                "text": "生意管理",
+                "url": "#/business"
+            },
+            {
+                "text": "多通路管理",
+                "url": "#/multichannel"
+            },
+            {
+                "text": "輔導案例",
+                "url": "#/case"
+            },
+            {
+                "text": "聯絡我們",
+                "anchor": "#contact"
+            }
+        ]
     }
 ]

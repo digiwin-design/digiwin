@@ -1,0 +1,46 @@
+{
+    "index": {
+        "banner": [
+            {
+                "id": 1,
+                "title": "藥品及化妝品零售業快訊",
+                "desc": "105年藥妝零售業全年營收1,962億元，創歷年新高，年增4.2%，近十年平均成長率為3.2%。預估106年藥妝零售業營業額將持續攀升，突破2,000億",
+                "imgSrc": "images/index/hero-bg.jpg",
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "business": {
+        "banner": [
+            {
+                "id": 1,
+                "title": "title",
+                "desc": "desc",
+                "imgSrc": "images/business/hero-bg.jpg",
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "multichannel": {
+        "banner": [
+            {
+                "id": 1,
+                "title": "title",
+                "desc": "desc",
+                "imgSrc": "images/multichannel/hero-bg.jpg",
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "case": {
+        "banner": [
+            {
+                "id": 1,
+                "title": "title",
+                "desc": "desc",
+                "imgSrc": "images/case/hero-bg.jpg",
+                "url": "javascript:;"
+            }
+        ]
+    }
+}
