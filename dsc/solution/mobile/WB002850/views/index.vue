@@ -13,7 +13,7 @@
                 <div class="container">
                     <section-title title="用貼心關懷啟動完善的服務流程"></section-title>
                     <img src="images/index/section2-illust.jpg" alt="">
-                    <router-link to="/solution?tab=2">了解更多醫學美容管理系統</router-link>
+                    <router-link to="/solution?tab=4">了解更多醫學美容管理系統</router-link>
                 </div>
             </article>
         </template>

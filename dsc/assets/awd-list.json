@@ -255,6 +255,22 @@
         {
             "desktop": "/tw/dsc/solution/WB002513/WB00251301_solution08.html",
             "mobile": "/tw/dsc/solution/mobile/WB002513/index.html#/solution/08"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002850/WB00285001.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002850/index.html#/"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002850/brand.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002850/index.html#/brand"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002850/store.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002850/index.html#/store"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002850/solution.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002850/index.html#/solution"
         }
     ]
 }

@@ -1,8 +1,6 @@
-main .hoverBoxs {
-    .swiper-box {
-        overflow: hidden;
-        padding-bottom: 70px;
-    }
+main .swiper-box {
+    overflow: hidden;
+    padding-bottom: 70px;
     .swiper-container {
         overflow: visible;
     }
@@ -28,6 +26,6 @@ main .hoverBoxs {
         opacity: 1;
     }
     .swiper-pagination-bullet-active {
-        background-color: #3987f9;
+        background-color: #f25102;
     }
 }

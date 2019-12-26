@@ -4,8 +4,8 @@ httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/loading.vue');
 httpVueLoader.register(Vue, 'components/section-title.vue');
-httpVueLoader.register(Vue, 'components/hover-boxs.vue');
-// httpVueLoader.register(Vue, 'components/hover-box.vue');
+httpVueLoader.register(Vue, 'components/swiper-box.vue');
+httpVueLoader.register(Vue, 'components/case-tab.vue');
 
 NProgress.configure({ showSpinner: false });
 

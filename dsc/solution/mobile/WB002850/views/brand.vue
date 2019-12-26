@@ -1,7 +1,11 @@
 <template>
     <div class="brand">
-        <slider-banner-s :slides="result.banner" device="mobile"></slider-banner-s>
-        <hover-boxs v-bind:boxs="result.hoverBoxs"></hover-boxs>
+        <slider-banner-s :slides="result.banner"></slider-banner-s>
+        
+        <template v-if="isReady">
+            <swiper-box :boxs="result.hoverBoxs"></swiper-box>
+            <case-tab :cases="result.caseTab"></case-tab>
+        </template>
     </div>
 </template>
 
@@ -11,7 +15,10 @@ module.exports = {
     computed: {
         result() {
             return store.state.result.brand;
-        }
+        },
+        isReady() {
+            return store.state.isReady;
+        },
     },
 }
 </script>
