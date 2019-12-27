@@ -7,8 +7,10 @@ main .case .banner {
         cursor: pointer;
     }
     &-slide {
-        height: image-height('case/hero-bg.jpg');
-        background-position: 50% 0;
+        height: 360px;
+        background-color: #f0383a;
+        background-position: 100% 0;
+        background-repeat: no-repeat;
     }
     .container {
         display: flex;
@@ -18,10 +20,10 @@ main .case .banner {
     }
     &-title {
         width: 100%;
-        color: #ff0;
+        color: #fff;
         letter-spacing: getLetterSpacing(25);
         font-weight: bold;
-        font-size: 40px;
+        font-size: 36px;
         line-height: 1.2;
     }
     &-desc {

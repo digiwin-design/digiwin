@@ -7,8 +7,10 @@ main .business .banner {
         cursor: pointer;
     }
     &-slide {
-        height: image-height('business/hero-bg.jpg');
-        background-position: 50% 0;
+        height: 360px;
+        background-color: #f0383a;
+        background-position: 100% 0;
+        background-repeat: no-repeat;
     }
     .container {
         display: flex;
@@ -17,11 +19,11 @@ main .business .banner {
         justify-content: center;
     }
     &-title {
-        width: 100%;
-        color: #ff0;
+        width: 290px;
+        color: #fff;
         letter-spacing: getLetterSpacing(25);
         font-weight: bold;
-        font-size: 40px;
+        font-size: 23px;
         line-height: 1.2;
     }
     &-desc {
