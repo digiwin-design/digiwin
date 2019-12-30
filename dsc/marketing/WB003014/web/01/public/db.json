@@ -130,20 +130,11 @@
         {
             "category": 2,
             "titleType": "智慧工廠<br>線上參訪",
-            "titleName": "君牧塑膠－智慧工廠線上參訪",
+            "titleName": "君牧塑膠線上參訪",
             "contentText": "由標竿企業轉型團隊現身說法，從轉型實證分享、各站點導覽解說、智能方案實證經驗分享交流，帶您走進製造現場，看見「傳統產業」逐步實現「智慧工廠」的轉型之路。",
             "imgUrl": "list12.jpg",
             "link": "/tw/activity/1964.html",
             "linkText": "案例影片及講義下載"
-        },
-        {
-            "category": 2,
-            "titleType": "智慧工廠<br>線上參訪",
-            "titleName": "碩陽電機－數位應用價值講堂",
-            "contentText": "由專家顧問解析碩陽電機進行價值交付管理升級的契機、瓶頸與成功關鍵為何？剖析存貨管理之目的，以及運用動態存貨調控流程的實證作為和成效！",
-            "imgUrl": "list13.jpg",
-            "link": "/tw/activity/2078.html",
-            "linkText": "直播活動回看"
         },
         {
             "category": 3,
@@ -161,6 +152,15 @@
             "contentText": "從數位化轉型的角度分享新零售的價值，並解析鼎新經營新零售三家客戶，實際運用新零售達到會員經營、虛實整合、全域營銷的案例分享。",
             "imgUrl": "list11.jpg",
             "link": "/tw/activity/2055.html",
+            "linkText": "直播活動回看"
+        },
+        {
+            "category": 3,
+            "titleType": "數位應用<br>價值講堂",
+            "titleName": "智能物流x動態存貨調控─碩陽電機價值交付案例完整解析",
+            "contentText": "由專家顧問解析碩陽電機進行價值交付管理升級的契機、瓶頸與成功關鍵為何？剖析存貨管理之目的，以及運用動態存貨調控流程的實證作為和成效！",
+            "imgUrl": "list13.jpg",
+            "link": "/tw/activity/2078.html",
             "linkText": "直播活動回看"
         }
     ]
