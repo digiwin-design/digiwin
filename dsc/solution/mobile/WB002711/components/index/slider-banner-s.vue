@@ -88,6 +88,7 @@ module.exports = {
         },
         preload() {
             let imgs = this.slides.map(item => item.imgSrc);
+            imgs.push('images/index/hero-img.png');
             return preloadImg(imgs);
         },
     },

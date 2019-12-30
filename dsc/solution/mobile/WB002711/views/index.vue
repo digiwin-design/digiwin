@@ -39,13 +39,39 @@
                     </div>
                 </div>
             </article>
+
+            <article class="section4 container">
+                <section-title title="輔導案例"></section-title>
+                <case-card v-for="item in result.cases" :key="item.id" :my-case="item"></case-card>
+            </article>
+
+            <article class="section5">
+                <div class="container">
+                    <section-title title="多通路經營管理"></section-title>
+                    <router-link to="/multichannel">
+                        <img src="images/index/multichannel.svg" alt="">
+                    </router-link>
+                </div>
+            </article>
+
+            <article class="section6">
+                <div class="container">
+                    <section-title title="電子發票即將全面實施" padding-bottom="1em"></section-title>
+                    <p class="desc">自106年1月1日起停止核准營業人以電子計算機開立統一發票，最快107年1月1日全面停止使用電子計算機發票，政府法規總是來的又急又快，因應的腳步可不能慢。<br>因應法規的第一步從”了解”開始鼎新邀請PWC資誠企業館顧問主講研討會會中說明電子發票相關法規與實施要點...</p>
+                    <a href="/tw/dsc/solution/WB002742/WB00274201.html" target="_blank">
+                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        了解更多
+                    </a>
+                    <img src="images/index/invoice.png" alt="">
+                </div>
+            </article>
         </template>
     </div>
 </template>
 
 <script>
 module.exports = {
-    name: 'WB002711',
+    name: 'index',
     components: {
         'slider-banner-s': httpVueLoader('../components/index/slider-banner-s.vue'),
         'progress-bar': httpVueLoader('../components/index/progress-bar.vue'),

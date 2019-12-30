@@ -106,6 +106,32 @@
                 "imgSrc": "images/index/channel6.png",
                 "caption": "新零售"
             }
+        ],
+        "cases": [
+            {
+                "id": 1,
+                "company": "森田藥粧",
+                "category": "美容藥妝",
+                "description": "林財務長說「森田是品牌企業，不同於零售或連鎖業型態，當公司要追求十倍成長時，對零售或連鎖業而言至少需開八倍的店面，培養八倍的人才，但是透過有效的品牌運作則能創造目標效益」",
+                "url": "/tw/case/1038.html",
+                "imgSrc": "images/index/case01.jpg"
+            },
+            {
+                "id": 2,
+                "company": "第一化工",
+                "category": "化工原料",
+                "description": "黃副總說當門市開到第3~4家時核帳的業務量已經倍增，核帳人力卻早已不堪負荷。系統導入後，現在10家店已經可以加速對帳作業，目前除了自家網路店外，尚有Yahoo購物商城、PChome商店街、及目前進入的企業內網購物平台經營....",
+                "url": "/tw/case/1498.html",
+                "imgSrc": "images/index/case02.jpg"
+            },
+            {
+                "id": 3,
+                "company": "屈臣氏",
+                "category": "通路",
+                "description": "只有有需求的時候才會進系統裡查資料，設定案件類別、月份、案件數量，數字馬上就出來了，還可以比較不同月份的趨勢，主管可以更快掌握客戶的需求。在處理案件上，也可應用以往的案例經驗，應變跟查詢都變得更簡單快速！」",
+                "url": "/tw/case/1582.html",
+                "imgSrc": "images/index/case03.jpg"
+            }
         ]
     },
     "business": {
