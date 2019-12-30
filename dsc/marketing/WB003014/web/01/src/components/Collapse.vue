@@ -2,18 +2,18 @@
     <el-collapse v-model="activeNames" :accordion="!isMobile">
         <el-collapse-item :name="index + 1" v-for="(item, index) in items" :key="item.titleName">
             <template slot="title">
-                <div class="collapse-title" :class="{ highlight: item.hightlight }">
+                <div class="collapse-title" :class="`category${item.category}`">
                     <div class="collapse-title__type" v-html="item.titleType"></div>
                     <div class="collapse-title__name">{{item.titleName}}</div>
                 </div>
             </template>
             <div class="collapse-content">
                 <div class="collapse-content__illust">
-                    <img :src="require(`@/assets/images/video-list/list${index + 1}.jpg`)" alt />
+                    <img :src="require(`@/assets/images/video-list/${item.imgUrl}`)" alt />
                 </div>
                 <div class="collapse-content__text">
                     <p>{{item.contentText}}</p>
-                    <a :href="item.link" target="_blank">直播活動回看</a>
+                    <a :href="item.link" target="_blank">{{item.linkText}}</a>
                 </div>
             </div>
         </el-collapse-item>
@@ -90,15 +90,17 @@ export default {
         display: flex;
         padding: 18px 0;
         width: 100px;
-        background-color: #ffbd0b;
         color: #3f3f3f;
         font-weight: bold;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
         @at-root {
-            .collapse-title.highlight .collapse-title__type {
-                background-color: #ffa87f;
+            $category: #ffbd0b #ff9898 #ffa87f;
+            @for $i from 1 through 3 {
+                .collapse-title.category#{$i} .collapse-title__type {
+                    background-color: nth($category, $i);
+                }
             }
         }
         @media (min-width: $tablet-width + 1) {
@@ -112,12 +114,14 @@ export default {
         display: flex;
         padding: 18px 1.5em 18px 10px;
         width: 100%;
-        background-color: #2d5e9c;
         color: #fff;
         align-items: center;
         @at-root {
-            .collapse-title.highlight .collapse-title__name {
-                background-color: #5d5588;
+            $category: #2d5e9c #20436f #5d5588;
+            @for $i from 1 through 3 {
+                .collapse-title.category#{$i} .collapse-title__name {
+                    background-color: nth($category, $i);
+                }
             }
         }
         @media (min-width: $tablet-width + 1) {
@@ -165,7 +169,9 @@ export default {
             font-size: 24px;
             @media (min-width: $tablet-width + 1) {
                 margin: auto auto 0;
-                width: 220px;
+                padding-right: 38px;
+                padding-left: 38px;
+                width: auto;
             }
         }
     }

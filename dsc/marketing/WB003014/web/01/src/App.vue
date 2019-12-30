@@ -27,7 +27,7 @@
                                     <p class="content__text-subtitle">{{result.latest.subtitle}}</p>
                                     <p class="content__text-content">{{result.latest.content}}</p>
                                     <p class="content__text-time">{{result.latest.time}}</p>
-                                    <a :href="result.latest.link" target="_blank" class="mainLink calendar">立即報名線上直播</a>
+                                    <a :href="result.latest.link" target="_blank" class="mainLink calendar">立即申請預約回看</a>
                                 </div>
                             </div>
                         </div>
