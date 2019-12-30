@@ -34,11 +34,12 @@ module.exports = {
 }
 h1 {
     max-width: 100%;
-    font-size: 26px;
-    line-height: 1.6;
+    color: #555;
+    font-size: 30px;
+    line-height: 1.2;
 }
 p {
-    margin-top: 0.5em;
+    margin-top: .5em;
     max-width: 100%;
     line-height: 1.6;
 }

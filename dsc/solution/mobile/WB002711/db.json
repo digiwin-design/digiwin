@@ -5,8 +5,106 @@
                 "id": 1,
                 "title": "藥品及化妝品零售業快訊",
                 "desc": "105年藥妝零售業全年營收1,962億元，創歷年新高，年增4.2%，近十年平均成長率為3.2%。預估106年藥妝零售業營業額將持續攀升，突破2,000億",
-                "imgSrc": "images/index/hero-bg.jpg",
+                "imgSrc": "images/index/bg-hero.jpg",
                 "url": "javascript:;"
+            }
+        ],
+        "progressBar": [
+            {
+                "text": "多通路的訂單難以整合，相關財務報表系統產出後，需人工再去調整，重工時間太多",
+                "percentage": 75
+            },
+            {
+                "text": "有門市專案及網購通路，希望可以整合門市及網路前後台作業",
+                "percentage": 72
+            },
+            {
+                "text": "多套系統混搭無法串連，物料庫存、報表數字需靠人工修改",
+                "percentage": 46
+            },
+            {
+                "text": "原本代工型態，轉型新增門市專櫃、電商零售，需要系統支持",
+                "percentage": 55
+            },
+            {
+                "text": "公司有委外生產，生產進度與成本難以掌握",
+                "percentage": 58
+            },
+            {
+                "text": "電子計算機發票欲轉換電子發票，且結合財務作業避免重工",
+                "percentage": 78
+            },
+            {
+                "text": "跨店支援、出缺勤紀錄、排班排休、請假紀錄等眾多資料需要系統協助",
+                "percentage": 63
+            }
+        ],
+        "pains": [
+            {
+                "imgSrc": "images/index/icon-pain1.png",
+                "text": "來自台北某面膜品牌客戶來電",
+                "hoverText": "你好，我們有門市也有在百貨公司設專櫃，老闆還要成立觀光工廠，有沒有系統可以管控即時庫存與補貨提醒，還有觀光工廠的團務?",
+                "color": "#efba70"
+            },
+            {
+                "imgSrc": "images/index/icon-pain2.png",
+                "text": "來自台中大里某自創品牌妝品工廠來電",
+                "hoverText": "你好，我們有預計要在PCHOME, YAHOO, MOMO....這些電商品台賣產品，有沒有工具可以協助作接單還有出貨的處理，最好有對帳的功能....",
+                "color": "#b988b8"
+            },
+            {
+                "imgSrc": "images/index/icon-pain3.png",
+                "text": "來自台北某面膜品牌客戶來電",
+                "hoverText": "你好，我們有部份委外生產，目前在生產進度與成本結算部份，需要系統協助...另外，也想了解配方管理的部份....",
+                "color": "#7ccdc4"
+            }
+        ],
+        "issues": [
+            {
+                "imgSrc": "images/index/issue1.png",
+                "title": "商品與行銷議題",
+                "content": "原物料的計畫性採購依據、商品的批號效期管控、新產品的鋪貨計畫、促銷組合的產品搭配與定價政策..."
+            },
+            {
+                "imgSrc": "images/index/issue2.png",
+                "title": "生產議題",
+                "content": "配方BOM組合與變更、主副聯產品的生產狀況、現場料桶裝罐裝的處理、委外生產"
+            },
+            {
+                "imgSrc": "images/index/issue3.png",
+                "title": "通路與銷售議題",
+                "content": "通路合約費用管理計算、通路對帳與電子發票、檔商品提報與檔期促銷活動搭配、網購接單出貨的時效"
+            },
+            {
+                "imgSrc": "images/index/issue4.png",
+                "title": "營運分析議題",
+                "content": "那些通路是打品牌?賺營收?賺利潤?那些商品是金牛?老狗?檔期或促銷活動是賣得越多利潤越高?目標客群是否有移動改變的趨勢?"
+            }
+        ],
+        "channel": [
+            {
+                "imgSrc": "images/index/channel1.png",
+                "caption": "經銷代理"
+            },
+            {
+                "imgSrc": "images/index/channel2.png",
+                "caption": "連鎖賣場"
+            },
+            {
+                "imgSrc": "images/index/channel3.png",
+                "caption": "門市專櫃"
+            },
+            {
+                "imgSrc": "images/index/channel4.png",
+                "caption": "網購生意"
+            },
+            {
+                "imgSrc": "images/index/channel5.png",
+                "caption": "觀光工廠"
+            },
+            {
+                "imgSrc": "images/index/channel6.png",
+                "caption": "新零售"
             }
         ]
     },
@@ -15,7 +113,7 @@
             {
                 "id": 1,
                 "title": "代工、研發、生產、品牌、行銷、通路經營<br>樣樣都要精通，作化妝品這一行很不簡單",
-                "imgSrc": "images/business/hero-bg.png",
+                "imgSrc": "images/business/bg-hero.png",
                 "url": "javascript:;"
             }
         ]
@@ -25,7 +123,7 @@
             {
                 "id": 1,
                 "title": "多通路管理",
-                "imgSrc": "images/multichannel/hero-bg.png",
+                "imgSrc": "images/multichannel/bg-hero.png",
                 "url": "javascript:;"
             }
         ]
@@ -36,7 +134,7 @@
                 "id": 1,
                 "title": "行業深耕，<br>獨到專精",
                 "desc": "鼎新電腦累積30多年產業輔導驗，50,000多家企業成功案例，提供完整行業解決方案；因應產業趨勢、法令制度的變化，提供最佳服務與支援！",
-                "imgSrc": "images/case/hero-bg.png",
+                "imgSrc": "images/case/bg-hero.png",
                 "url": "javascript:;"
             }
         ]
