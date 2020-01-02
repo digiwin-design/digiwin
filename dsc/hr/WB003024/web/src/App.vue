@@ -5,10 +5,10 @@
             <MenuMask></MenuMask>
             <main>
                 <router-view v-if="!loading" />
-                <loading :loading="loading"></loading>
             </main>
             <Footer></Footer>
         </div>
+        <loading :loading="loading"></loading>
     </div>
 </template>
 
@@ -56,7 +56,7 @@ export default {
         loading() {
             this.$nextTick(() => this.scrollToAnchor());
         },
-        routeName(value) {
+        routeName() {
             this.$store.commit('setLoading', true);
         },
     },

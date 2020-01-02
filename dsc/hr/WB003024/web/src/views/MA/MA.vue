@@ -20,7 +20,12 @@
         </div>
 
         <article class="section1">
-            <div class="section1-1"></div>
+            <div class="section1-1">
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem quo facere facilis aut consequatur error?</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem</li>
+                </ul>
+            </div>
             <div class="section1-2"><div></div></div>
         </article>
     </div>
@@ -116,6 +121,40 @@ export default {
             height: 0;
             background-image: url('section1-bg1.jpg');
             background-size: 100% auto;
+        }
+        ul {
+            display: none;
+            @media (min-width: $tablet-width + 1) {
+                display: block;
+            }
+        }
+        li {
+            position: absolute;
+            font-size: 18px;
+            line-height: 1.8;
+            @media (min-width: $content-width) {
+                font-size: 20px;
+            }
+            &:nth-child(1) {
+                top: 25%;
+                left: 20px;
+                width: 30%;
+                @media (min-width: $content-width) {
+                    left: 10%;
+                    width: percentage(392 / 1920);
+                }
+            }
+            &:nth-child(2) {
+                top: 25%;
+                right: 20px;
+                z-index: 1;
+                width: 30%;
+                @media (min-width: $content-width) {
+                    top: 60%;
+                    right: 10%;
+                    width: percentage(388 / 1920);
+                }
+            }
         }
     }
     &-2 {
