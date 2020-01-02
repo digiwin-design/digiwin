@@ -5,7 +5,7 @@
                 <div>
                     <picture>
                         <source media="(min-width: 769px)" :srcset="require('./hero-logo.png')">
-                        <img :src="require('./hero-logo-s.png')" alt="2020儲備鼎尖數位人才養成計畫">
+                        <img :src="require('./hero-logo-s.png')" alt="DigiWIN Your Future">
                     </picture>
                 </div>
             </div>
@@ -21,12 +21,13 @@
 
         <article class="section1">
             <div class="section1-1">
-                <ul>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem quo facere facilis aut consequatur error?</li>
-                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem</li>
-                </ul>
+                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem quo facere facilis aut consequatur error?</div>
             </div>
-            <div class="section1-2"><div></div></div>
+            <div class="section1-2">
+                <div>
+                    <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem</div>
+                </div>
+            </div>
         </article>
     </div>
 </template>
@@ -122,40 +123,6 @@ export default {
             background-image: url('section1-bg1.jpg');
             background-size: 100% auto;
         }
-        ul {
-            display: none;
-            @media (min-width: $tablet-width + 1) {
-                display: block;
-            }
-        }
-        li {
-            position: absolute;
-            font-size: 18px;
-            line-height: 1.8;
-            @media (min-width: $content-width) {
-                font-size: 20px;
-            }
-            &:nth-child(1) {
-                top: 25%;
-                left: 20px;
-                width: 30%;
-                @media (min-width: $content-width) {
-                    left: 10%;
-                    width: percentage(392 / 1920);
-                }
-            }
-            &:nth-child(2) {
-                top: 25%;
-                right: 20px;
-                z-index: 1;
-                width: 30%;
-                @media (min-width: $content-width) {
-                    top: 60%;
-                    right: 10%;
-                    width: percentage(388 / 1920);
-                }
-            }
-        }
     }
     &-2 {
         @include bg('section1-bg2-s.jpg');
@@ -171,6 +138,39 @@ export default {
                 padding-bottom: percentage(620 / 1038);
                 background-image: url('section1-bg2.png');
                 background-size: 100% auto;
+            }
+        }
+    }
+    .text {
+        font-size: 20px;
+        line-height: 1.8;
+        @media (min-width: $tablet-width + 1) {
+            position: absolute;
+        }
+        @at-root {
+            .section1-1 .text {
+                @media (min-width: $tablet-width + 1) {
+                    top: 25%;
+                    left: 20px;
+                    width: 30%;
+                }
+                @media (min-width: $content-width) {
+                    left: 10%;
+                    width: percentage(392 / 1920);
+                }
+            }
+            .section1-2 .text {
+                @media (min-width: $tablet-width + 1) {
+                    top: 0;
+                    right: 20px;
+                    z-index: 1;
+                    width: 50%;
+                }
+                @media (min-width: $content-width) {
+                    top: 40%;
+                    right: 10%;
+                    width: percentage(388 / 1038);
+                }
             }
         }
     }
