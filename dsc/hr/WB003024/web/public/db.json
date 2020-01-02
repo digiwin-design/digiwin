@@ -1,1 +1,14 @@
-{}
+{
+    "home": {
+        "preloadImg": []
+    },
+    "ma": {
+        "preloadImg": [
+            "images/MA/hero-s.jpg",
+            "images/MA/hero.jpg"
+        ]
+    },
+    "school": {
+        "preloadImg": []
+    }
+}

@@ -4,17 +4,11 @@
             <Header></Header>
             <MenuMask></MenuMask>
             <main>
-                <div id="nav2">
-                  <router-link to="/">進入頁</router-link> |
-                  <router-link to="/ma">儲備MA招募</router-link> |
-                  <router-link to="/school">校園招募</router-link> |
-                  <a href="javascript:;">社會招募</a>
-                </div>
-                <router-view/>
+                <router-view v-if="!loading" />
+                <loading :loading="loading"></loading>
             </main>
             <Footer></Footer>
         </div>
-        <loading :loading="loading"></loading>
     </div>
 </template>
 
@@ -39,24 +33,31 @@ export default {
         isMobile() {
             return this.$store.state.isMobile;
         },
-        result() {
-            return this.$store.state.result;
+        viewData() {
+            return this.$store.getters.viewData;
         },
         loading() {
             return this.$store.state.loading;
         },
+        routeName() {
+            return this.$store.state.route.name;
+        },
     },
     watch: {
-        result() {
-            this.preloadImg([])
-            .then(() => {
-                setTimeout(() => {
-                    this.$store.commit('setLoading', false);
-                }, 500);
-            });
+        viewData(value) {
+            if (!value) return;
+            this.preloadImg(value.preloadImg)
+                .then(() => {
+                    setTimeout(() => {
+                        this.$store.commit('setLoading', false);
+                    }, 500);
+                });
         },
         loading() {
             this.$nextTick(() => this.scrollToAnchor());
+        },
+        routeName(value) {
+            this.$store.commit('setLoading', true);
         },
     },
     methods: {
@@ -111,7 +112,7 @@ export default {
 @import '@/assets/sass/common.scss';
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.5s;
+    transition: opacity .5s;
 }
 .fade-enter,
 .fade-leave-to {
@@ -123,31 +124,24 @@ export default {
     min-height: 100vh;
 }
 main {
-    min-width: 360px;
+    margin: 0 auto;
+    min-width: $min-width;
+    max-width: $max-width;
+    width: 100%;
     flex-grow: 1;
 }
 .container {
+    outline: 1px solid #0ff;
     margin: 0 auto;
     padding: 0 15px;
-    max-width: 1200px;
-    @media (min-width: 361px) {
+    max-width: $content-width;
+    @media (min-width: $min-width + 1) {
         padding-right: 20px;
         padding-left: 20px;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: $content-width) {
         padding-right: 0;
         padding-left: 0;
-    }
-}
-#nav2 {
-    padding: 30px;
-    a {
-        color: #2c3e50;
-        font-weight: bold;
-
-        &.router-link-exact-active {
-            color: #42b983;
-        }
     }
 }
 </style>

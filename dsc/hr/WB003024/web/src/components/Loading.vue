@@ -27,9 +27,10 @@ export default {
     z-index: 1000000; // override Header
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, .9);
+    // background-color: rgba(255, 255, 255, .9);
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 .loading {
     width: 50px;

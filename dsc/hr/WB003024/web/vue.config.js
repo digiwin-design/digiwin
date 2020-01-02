@@ -16,5 +16,6 @@ module.exports = {
     css: {
         sourceMap: true
     },
-    lintOnSave: false
+    lintOnSave: false,
+    publicPath: '/tw/dsc/hr/WB003024/web/'
 }

@@ -12,6 +12,11 @@ export default new Vuex.Store({
         result: null,
         loading: true,
     },
+    getters: {
+        viewData(state) {
+            return state.result && state.result[state.route.name];
+        }
+    },
     mutations: {
         setDevice(state, payload) {
             state.device = payload;
@@ -30,7 +35,7 @@ export default new Vuex.Store({
         },
     },
     actions: {
-        getData({commit}) {
+        getData({ commit }) {
             axios.get('db.json').then(res => commit('setData', res.data));
         },
     }
