@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div v-if="!loading">
         <div class="nav">
             <router-link to="/">進入頁</router-link> |
             <router-link to="/ma">儲備MA招募</router-link> |
@@ -11,10 +11,11 @@
 </template>
 
 <script>
+import mixins from '@/mixins';
+
 export default {
     name: 'home',
-    components: {
-    },
+    mixins: [mixins],
 }
 </script>
 

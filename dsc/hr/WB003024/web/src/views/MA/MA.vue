@@ -1,5 +1,5 @@
 <template>
-    <div class="MA">
+    <div v-if="!loading">
         <div class="hero" :style="{ backgroundImage: isMobile ? 'url(images/MA/hero-s.jpg)' : 'url(images/MA/hero.jpg)' }">
             <div class="logo">
                 <div>
@@ -17,27 +17,55 @@
                     </picture>
                 </div>
             </h1>
+            <a href class="arrow" @click.prevent="scrollToAnchor('#section1')"></a>
         </div>
 
-        <article class="section1">
-            <div class="section1-1">
-                <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem quo facere facilis aut consequatur error?</div>
-            </div>
-            <div class="section1-2">
-                <div>
-                    <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, autem impedit architecto suscipit libero illo hic quibusdamexercitationem</div>
-                </div>
-            </div>
+        <article id="section1" class="section1">
+            <section-title
+                title="<strong>賦能</strong>，夢想更接近"
+                desc="人才養成與發展是鼎新一直以的堅持，與我們一起引領企業數字化轉型"
+                :padding-top="isMobile ? '55px' : '80px'"
+                class="container"
+            ></section-title>
+            
+            <Section1Content></Section1Content>
         </article>
+
+        <article class="section2"></article>
     </div>
 </template>
 
 <script>
+import mixins from '@/mixins';
+import SectionTitle from '@/components/SectionTitle.vue';
+import Section1Content from '@/components/MA/Section1Content/Section1Content.vue';
+
 export default {
-    computed: {
-        isMobile() {
-            return this.$store.state.isMobile;
-        },
+    name: 'ma',
+    mixins: [mixins],
+    components: {
+        SectionTitle,
+        Section1Content,
+    },
+    methods: {
+        loadImg() {
+            let images = [
+                "images/MA/hero-s.jpg",
+                "images/MA/hero.jpg"
+            ];
+            this.preloadImg(images)
+                .then(() => {
+                    setTimeout(() => {
+                        this.$store.commit('setLoading', false);
+                    }, 500);
+                });
+        }
+    },
+    created() {
+        if (!this.$store.state.loading) {
+            this.$store.commit('setLoading', true);
+        }
+        this.loadImg();
     },
 }
 </script>
@@ -45,6 +73,7 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/sass/common/variable';
 @import '~@/assets/sass/common/helpers';
+
 .hero {
     position: relative;
     height: 757px;
@@ -110,69 +139,51 @@ export default {
             height: 100%;
         }
     }
+    .arrow {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        width: 44px;
+        height: 44px;
+        transform: translateX(-50%);
+        @media (min-width: $tablet-width + 1) {
+            bottom: 3.7%;
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            border-bottom: 2px solid #fff;
+            border-left: 2px solid #fff;
+            content: '';
+            @media (min-width: $tablet-width + 1) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &::before {
+            transform: translate(-50%, calc(-50% - 10px)) rotate(-45deg);
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
 }
 .section1 {
-    position: relative;
-    background-color: #ccc;
-    &-1 {
-        @include bg('section1-bg1-s.jpg');
-        height: 640px;
+    background-color: #e2e9ef;
+    .sectionTitle {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
         @media (min-width: $tablet-width + 1) {
-            padding-bottom: percentage(834 / 1920);
-            height: 0;
-            background-image: url('section1-bg1.jpg');
-            background-size: 100% auto;
+            position: relative;
         }
     }
-    &-2 {
-        @include bg('section1-bg2-s.jpg');
-        height: 620px;
-        @media (min-width: $tablet-width + 1) {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: percentage(1038 / 1920);
-            height: auto;
-            background-image: none;
-            > div {
-                padding-bottom: percentage(620 / 1038);
-                background-image: url('section1-bg2.png');
-                background-size: 100% auto;
-            }
-        }
-    }
-    .text {
-        font-size: 20px;
-        line-height: 1.8;
-        @media (min-width: $tablet-width + 1) {
-            position: absolute;
-        }
-        @at-root {
-            .section1-1 .text {
-                @media (min-width: $tablet-width + 1) {
-                    top: 25%;
-                    left: 20px;
-                    width: 30%;
-                }
-                @media (min-width: $content-width) {
-                    left: 10%;
-                    width: percentage(392 / 1920);
-                }
-            }
-            .section1-2 .text {
-                @media (min-width: $tablet-width + 1) {
-                    top: 0;
-                    right: 20px;
-                    z-index: 1;
-                    width: 50%;
-                }
-                @media (min-width: $content-width) {
-                    top: 40%;
-                    right: 10%;
-                    width: percentage(388 / 1038);
-                }
-            }
-        }
-    }
+}
+.section2 {
+    
 }
 </style>

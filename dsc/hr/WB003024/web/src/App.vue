@@ -4,7 +4,7 @@
             <Header></Header>
             <MenuMask></MenuMask>
             <main>
-                <router-view v-if="!loading" />
+                <router-view/>
             </main>
             <Footer></Footer>
         </div>
@@ -16,6 +16,7 @@
 import '@/assets/vendor/modernizr-custom';
 import '@/assets/vendor/mobile-detect';
 import '@/assets/vendor/mobile-detect-modernizr';
+import mixins from '@/mixins';
 import Header from '@/components/Header.vue';
 import MenuMask from '@/components/MenuMask.vue';
 import Footer from '@/components/Footer.vue';
@@ -23,6 +24,7 @@ import Loading from '@/components/Loading.vue';
 
 export default {
     name: 'app',
+    mixins: [mixins],
     components: {
         Header,
         MenuMask,
@@ -30,34 +32,19 @@ export default {
         Loading,
     },
     computed: {
-        isMobile() {
-            return this.$store.state.isMobile;
-        },
         viewData() {
             return this.$store.getters.viewData;
-        },
-        loading() {
-            return this.$store.state.loading;
-        },
-        routeName() {
-            return this.$store.state.route.name;
         },
     },
     watch: {
         viewData(value) {
             if (!value) return;
-            this.preloadImg(value.preloadImg)
-                .then(() => {
-                    setTimeout(() => {
-                        this.$store.commit('setLoading', false);
-                    }, 500);
-                });
+            setTimeout(() => {
+                this.$store.commit('setLoading', false);
+            }, 500);
         },
         loading() {
-            this.$nextTick(() => this.scrollToAnchor());
-        },
-        routeName() {
-            this.$store.commit('setLoading', true);
+            this.$nextTick(() => this.scrollToAnchor(`#${this.$route.query.a}`));
         },
     },
     methods: {
@@ -66,35 +53,6 @@ export default {
             let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
             mm.addListener(resizeWidth);
             resizeWidth(mm);
-        },
-        preloadImg(imgs) {
-            return new Promise(resolve => {
-                if (!imgs.length) resolve();
-                let loaded = 0;
-                for (let i = 0; i < imgs.length; i++) {
-                    const element = imgs[i];
-                    let img = document.createElement('IMG');
-                    img.src = element;
-                    img.onload = () => {
-                        loaded++;
-                        if (loaded === imgs.length) {
-                            resolve();
-                        }
-                    };
-                }
-            });
-        },
-        scrollToAnchor(behavior = 'smooth') {
-            const target = document.querySelector(`#${this.$route.query.a}`);
-            if (target) {
-                let targetPos = target.getBoundingClientRect().top + window.pageYOffset;
-                if (behavior) {
-                    window.scroll({ top: targetPos, left: 0, behavior });
-                }
-                else {
-                    window.scroll({ top: targetPos, left: 0 });
-                }
-            }
         },
     },
     created() {
@@ -110,6 +68,7 @@ export default {
 <style lang="scss">
 @import '@/assets/sass/reset.scss';
 @import '@/assets/sass/common.scss';
+
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity .5s;
@@ -131,7 +90,7 @@ main {
     flex-grow: 1;
 }
 .container {
-    outline: 1px solid #0ff;
+    // outline: 1px solid #0ff;
     margin: 0 auto;
     padding: 0 15px;
     max-width: $content-width;

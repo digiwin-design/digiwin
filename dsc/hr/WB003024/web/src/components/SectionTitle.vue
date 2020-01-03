@@ -16,33 +16,45 @@ module.exports = {
         },
         paddingTop: {
             type: String,
-            default: '2.7em'
+            default: '55px'
         },
         paddingBottom: {
             type: String,
-            default: '2em'
+            default: '2.8em'
         }
     }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '~@/assets/sass/common/variable';
+@import '~@/assets/sass/common/helpers';
+
 .sectionTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.sectionTitle h1 {
+h1 {
     max-width: 100%;
-    font-size: 26px;
-}
-.sectionTitle p {
-    margin-top: 0.5em;
-    max-width: 100%;
-}
-@media (min-width: 769px) {
-    .sectionTitle h1 {
-        font-size: 36px;
+    letter-spacing: getLetterSpacing(50);
+    font-size: 30px;
+    @media (min-width: $tablet-width + 1) {
+        font-size: 40px;
     }
+}
+p {
+    margin-top: 1em;
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.3;
+    @media (min-width: $tablet-width + 1) {
+        margin-top: .5em;
+        font-size: 28px;
+    }
+}
+/deep/ strong {
+    color: #3a46ac;
+    font-weight: bold;
 }
 </style>
