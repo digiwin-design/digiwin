@@ -31,7 +31,19 @@
             <Section1Content></Section1Content>
         </article>
 
-        <article class="section2"></article>
+        <article class="section2">
+            <div class="container">
+                <section-title
+                    title="<strong>實力</strong>，從這裡養成"
+                    desc="從人才培養、訓練到驗收，建構完整的數字化人才訓練發展階梯"
+                    :padding-top="isMobile ? '55px' : '80px'"
+                ></section-title>
+                <picture>
+                    <source media="(min-width: 769px)" :srcset="require('./section2-chart.svg')">
+                    <img :src="require('./section2-chart-s.svg')" alt="">
+                </picture>
+            </div>
+        </article>
     </div>
 </template>
 
@@ -131,7 +143,7 @@ export default {
                 }
             }
         }
-        picture {
+        img {
             position: absolute;
             top: 0;
             left: 0;
@@ -184,6 +196,21 @@ export default {
     }
 }
 .section2 {
-    
+    @include bg('section2-bg-s.jpg', 50% 100%);
+    padding-bottom: 70px;
+    @media (min-width: $tablet-width + 1) {
+        padding-bottom: 147px;
+        background-image: url('section2-bg.png');
+        background-position: 50% 0;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 470px;
+        @media (min-width: $tablet-width + 1) {
+            margin-top: 20px;
+            max-width: 1133px;
+        }
+    }
 }
 </style>

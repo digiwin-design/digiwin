@@ -9,13 +9,12 @@
             </div>
         </div>
         <div class="content2" ref="content2">
-            <div>
-                <div class="container">
-                    <div class="content2__text" ref="rightText">
-                        <p class="content2__text--title" data-text="從菜鳥變身專家"></p>
-                        <p>突破自我極限，離開舒適圈，我們提供全方位、系統化的訓練，快速充實各方面專業能力、提升視野，並擁有寬廣的發展空間，在數智領航的未來時代，成就將與你同行。</p>
-                    </div>
+            <div class="container">
+                <div class="content2__text" ref="rightText">
+                    <p class="content2__text--title" data-text="從菜鳥變身專家"></p>
+                    <p>突破自我極限，離開舒適圈，我們提供全方位、系統化的訓練，快速充實各方面專業能力、提升視野，並擁有寬廣的發展空間，在數智領航的未來時代，成就將與你同行。</p>
                 </div>
+                <img :src="require('./section1-bg2.png')" alt="">
             </div>
         </div>
     </div>
@@ -24,13 +23,28 @@
 <script>
 import _ from 'lodash';
 import gsap from 'gsap';
-import dat from 'dat.gui';
+import * as dat from 'dat.gui';
+import mixins from '@/mixins';
 
 export default {
     name: 'Section1-content',
+    mixins: [mixins],
     data() {
         return {
+            gui: null,
             timeline: null,
+        }
+    },
+    watch: {
+        isMobile(value) {
+            window.removeEventListener('scroll', this.scrollHandler);
+            if (value) {
+                this.$refs.content2.removeAttribute('style');
+            }
+            else {
+                this.initAn();
+                window.addEventListener('scroll', this.scrollHandler);
+            }
         }
     },
     methods: {
@@ -42,28 +56,35 @@ export default {
             }
         }, 100),
         initGUI() {
+            if (process.env.NODE_ENV === 'production' || this.gui) return;
             let _this = this;
-            let gui = new dat.GUI();
+            this.gui = new dat.GUI();
             let controls = {
                 restart: function () {
                     _this.timeline.restart();
                     window.addEventListener('scroll', _this.scrollHandler);
                 }
             };
-            gui.add(controls, 'restart');
+            this.gui.add(controls, 'restart');
         },
         initAn() {
+            // this.initGUI();
             this.timeline = gsap.timeline();
             this.timeline.from(this.$refs.leftText, { duration: .5, x: -100, opacity: 0 });
-            this.timeline.from(this.$refs.content2, { duration: .5, x: '100%' });
+            this.timeline.to(this.$refs.content2, { duration: .5, width: '55%' });
             this.timeline.from(this.$refs.rightText, { duration: .5, x: 100, opacity: 0 });
             this.timeline.pause();
         },
     },
     mounted() {
-        this.initGUI();
-        this.initAn();
-        window.addEventListener('scroll', this.scrollHandler);
+        if (!this.isMobile) {
+            this.initAn();
+            this.scrollHandler();
+            window.addEventListener('scroll', this.scrollHandler);
+        }
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.scrollHandler);
     },
 }
 </script>
@@ -151,6 +172,7 @@ export default {
 }
 .content2 {
     @include bg('section1-bg2-s.jpg', 33% 0);
+    overflow: hidden;
     padding-top: 35px;
     height: 620px;
     @media (min-width: $mobile-width + 1) {
@@ -161,14 +183,9 @@ export default {
         right: 0;
         bottom: 0;
         padding-top: 0;
-        width: percentage(1038 / 1920);
-        height: auto;
+        width: 0;
+        height: 74%;
         background-image: none;
-        > div {
-            padding-bottom: percentage(620 / 1038);
-            background-image: url('section1-bg2.png');
-            background-size: 100% auto;
-        }
     }
     &__text {
         margin-left: auto;
@@ -188,6 +205,17 @@ export default {
             top: 47%;
             right: 20%;
             width: percentage(388 / 1038);
+        }
+    }
+    img {
+        display: none;
+        @media (min-width: $tablet-width + 1) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            max-width: none;
+            height: 100%;
         }
     }
 }
