@@ -44,6 +44,17 @@
                 </picture>
             </div>
         </article>
+
+        <article class="section3">
+            <section-title
+                title="<strong>蛻變</strong>，耀眼成長過程"
+                desc="獲得的不只是個人技能的提升，以更為全局的視角審視產業發展與企業經營"
+                :padding-top="isMobile ? '55px' : '80px'"
+                padding-bottom="2em"
+                class="container"
+            ></section-title>
+            <Carousel :carousel="viewData.carousel"></Carousel>
+        </article>
     </div>
 </template>
 
@@ -51,6 +62,7 @@
 import mixins from '@/mixins';
 import SectionTitle from '@/components/SectionTitle.vue';
 import Section1Content from '@/components/MA/Section1Content/Section1Content.vue';
+import Carousel from '@/components/MA/Carousel/Carousel.vue';
 
 export default {
     name: 'ma',
@@ -58,6 +70,7 @@ export default {
     components: {
         SectionTitle,
         Section1Content,
+        Carousel,
     },
     methods: {
         loadImg() {
@@ -211,6 +224,18 @@ export default {
             margin-top: 20px;
             max-width: 1133px;
         }
+    }
+}
+.section3 {
+    $mobile-width: 560px;
+    $tablet-width: 1300px;
+    background-color: #b5b9c6;
+    @media (min-width: $mobile-width + 1) {
+        padding-bottom: 70px;
+    }
+    @media (min-width: $tablet-width + 1) {
+        background-color: transparent;
+        background-image: linear-gradient(#b5b9c6 642px, #fff 0);
     }
 }
 </style>

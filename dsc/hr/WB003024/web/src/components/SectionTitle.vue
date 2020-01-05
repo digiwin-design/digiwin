@@ -54,7 +54,7 @@ p {
     }
 }
 /deep/ strong {
-    color: #3a46ac;
+    color: $main-color;
     font-weight: bold;
 }
 </style>

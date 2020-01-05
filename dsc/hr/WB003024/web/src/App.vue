@@ -31,11 +31,6 @@ export default {
         Footer,
         Loading,
     },
-    computed: {
-        viewData() {
-            return this.$store.getters.viewData;
-        },
-    },
     watch: {
         viewData(value) {
             if (!value) return;
@@ -54,6 +49,12 @@ export default {
             mm.addListener(resizeWidth);
             resizeWidth(mm);
         },
+        mediaSensor2(minWidth) {
+            let resizeWidth = (pMatchMedia) => this.$store.commit('setDeviceType2', !pMatchMedia.matches);
+            let mm = window.matchMedia(`(min-width: ${minWidth + 1}px)`);
+            mm.addListener(resizeWidth);
+            resizeWidth(mm);
+        },
     },
     created() {
         this.$store.dispatch('getData');
@@ -61,6 +62,7 @@ export default {
     mounted() {
         this.$store.commit('setDevice', new MobileDetect(window.navigator.userAgent).mobile());
         this.mediaSensor(768);
+        this.mediaSensor2(1499);
     },
 }
 </script>

@@ -3,8 +3,14 @@ const mixins = {
         isMobile() {
             return this.$store.state.isMobile;
         },
+        isMediumWidth() {
+            return this.$store.state.isMediumWidth;
+        },
         loading() {
             return this.$store.state.loading;
+        },
+        viewData() {
+            return this.$store.getters.viewData;
         },
     },
     methods: {

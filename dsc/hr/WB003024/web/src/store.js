@@ -9,6 +9,7 @@ export default new Vuex.Store({
     state: {
         device: null,
         isMobile: false,
+        isMediumWidth: false,
         showMask: false,
         result: null,
         loading: true,
@@ -24,6 +25,9 @@ export default new Vuex.Store({
         },
         setDeviceType(state, payload) {
             state.isMobile = payload;
+        },
+        setDeviceType2(state, payload) {
+            state.isMediumWidth = payload;
         },
         setMask(state, payload) {
             state.showMask = payload;
