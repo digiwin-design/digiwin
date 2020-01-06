@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!loading">
+    <div class="ma" v-if="!loading">
         <div class="hero" :style="{ backgroundImage: isMobile ? 'url(images/MA/hero-s.jpg)' : 'url(images/MA/hero.jpg)' }">
             <div class="logo">
                 <div>
@@ -67,9 +67,9 @@
                         padding-bottom="2em"
                     ></section-title>
                     <ul>
-                        <li>．藉由完整流程輔導，深入接觸各企業，快速的積累管理經驗</li>
-                        <li>．以提升管理指標效益為目標，進行企業經營成效分析與管理診斷</li>
-                        <li>．以創造系統應用價值為前提，提供企業專業解決方案，成為企業高階的專業幕僚</li>
+                        <li>藉由完整流程輔導，深入接觸各企業，快速的積累管理經驗</li>
+                        <li>以提升管理指標效益為目標，進行企業經營成效分析與管理診斷</li>
+                        <li>以創造系統應用價值為前提，提供企業專業解決方案，成為企業高階的專業幕僚</li>
                     </ul>
                     <a href="">加入我們</a>
                 </div>
@@ -92,6 +92,17 @@
                 </a>
             </div>
         </article>
+
+        <article class="section6">
+            <div class="container">
+                <section-title
+                    title="頂尖優質環境，成就鼎尖人才"
+                    desc="打造工作與休閒的舒適空間<br>同時擁有舒適感、幸福感與安全感"
+                    :padding-top="isMobile ? '55px' : '80px'"
+                ></section-title>
+                <Carousel2 :items="viewData.carousel2"></Carousel2>
+            </div>
+        </article>
     </div>
 </template>
 
@@ -99,9 +110,10 @@
 import '@fancyapps/fancybox';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 import mixins from '@/mixins';
-import SectionTitle from '@/components/SectionTitle.vue';
+import SectionTitle from '@/components/MA/SectionTitle.vue';
 import Section1Content from '@/components/MA/Section1Content/Section1Content.vue';
 import Carousel from '@/components/MA/Carousel/Carousel.vue';
+import Carousel2 from '@/components/MA/Carousel2/Carousel2.vue';
 
 export default {
     name: 'ma',
@@ -110,6 +122,7 @@ export default {
         SectionTitle,
         Section1Content,
         Carousel,
+        Carousel2,
     },
     methods: {
         loadImg() {
@@ -138,6 +151,9 @@ export default {
 @import '~@/assets/sass/common/variable';
 @import '~@/assets/sass/common/helpers';
 
+.ma {
+    letter-spacing: -1px;
+}
 .hero {
     position: relative;
     height: 757px;
@@ -310,6 +326,8 @@ export default {
     }
     ul {
         margin-bottom: 2.5rem;
+        padding-left: 1.5em;
+        list-style-type: disc;
         @media (min-width: $content-width + 1) {
             margin-bottom: 6rem;
         }
@@ -336,6 +354,7 @@ export default {
     }
 }
 .section5 {
+    overflow: hidden;
     padding-bottom: 55px;
     @media (min-width: $tablet-width + 1) {
         position: relative;
@@ -351,11 +370,11 @@ export default {
         }
         &::before {
             top: -10px;
-            left: 0;
+            left: 75px;
             background-color: #b50b6f;
         }
         &::after {
-            right: 0;
+            right: 75px;
             bottom: -10px;
             background-color: $main-color;
         }
@@ -374,6 +393,13 @@ export default {
                 margin-left: 15px;
             }
         }
+    }
+}
+.section6 {
+    @include bg('section6-bg.jpg');
+    padding-bottom: 64px;
+    .sectionTitle {
+        text-align: center;
     }
 }
 </style>

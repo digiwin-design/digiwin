@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!loading">
+    <div class="home" v-if="!loading">
         <div class="nav">
             <router-link to="/">進入頁</router-link> |
             <router-link to="/ma">儲備MA招募</router-link> |
