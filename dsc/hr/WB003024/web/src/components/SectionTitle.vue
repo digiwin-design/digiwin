@@ -16,7 +16,7 @@ module.exports = {
         },
         paddingTop: {
             type: String,
-            default: '55px'
+            default: '50px'
         },
         paddingBottom: {
             type: String,
@@ -39,6 +39,7 @@ h1 {
     max-width: 100%;
     letter-spacing: getLetterSpacing(50);
     font-size: 30px;
+    line-height: 1.2;
     @media (min-width: $tablet-width + 1) {
         font-size: 40px;
     }

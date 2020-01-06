@@ -92,7 +92,7 @@ main {
     flex-grow: 1;
 }
 .container {
-    // outline: 1px solid #0ff;
+    outline: 1px solid #0ff;
     margin: 0 auto;
     padding: 0 15px;
     max-width: $content-width;

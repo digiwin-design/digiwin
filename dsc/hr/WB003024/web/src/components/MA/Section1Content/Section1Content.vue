@@ -37,13 +37,24 @@ export default {
     },
     watch: {
         isMobile(value) {
+            if (this.timeline) {
+                this.timeline.kill();
+            }
             window.removeEventListener('scroll', this.scrollHandler);
-            if (value) {
-                this.$refs.content2.removeAttribute('style');
+            
+            if (!value) {
+                if (this.timeline) {
+                    this.timeline.restart();
+                }
+                else {
+                    this.initAn();
+                }
+                window.addEventListener('scroll', this.scrollHandler);
             }
             else {
-                this.initAn();
-                window.addEventListener('scroll', this.scrollHandler);
+                this.$refs.content2.removeAttribute('style');
+                this.$refs.leftText.removeAttribute('style');
+                this.$refs.rightText.removeAttribute('style');
             }
         }
     },
@@ -60,7 +71,7 @@ export default {
             let _this = this;
             this.gui = new dat.GUI();
             let controls = {
-                restart: function () {
+                restart() {
                     _this.timeline.restart();
                     window.addEventListener('scroll', _this.scrollHandler);
                 }
@@ -70,9 +81,9 @@ export default {
         initAn() {
             // this.initGUI();
             this.timeline = gsap.timeline();
-            this.timeline.from(this.$refs.leftText, { duration: .5, x: -100, opacity: 0 });
+            this.timeline.to(this.$refs.leftText, { duration: .5, x: 0, opacity: 1 });
             this.timeline.to(this.$refs.content2, { duration: .5, width: '55%' });
-            this.timeline.from(this.$refs.rightText, { duration: .5, x: 100, opacity: 0 });
+            this.timeline.to(this.$refs.rightText, { duration: .5, x: 0, opacity: 1 });
             this.timeline.pause();
         },
     },
@@ -159,6 +170,8 @@ export default {
             width: 55%;
         }
         @media (min-width: $tablet-width + 1) {
+            transform: translateX(-100px);
+            opacity: 0;
             top: 25%;
             left: 20px;
             width: 30%;
@@ -195,6 +208,8 @@ export default {
             width: 55%;
         }
         @media (min-width: $tablet-width + 1) {
+            transform: translateX(100px);
+            opacity: 0;
             top: 0;
             right: 20px;
             z-index: 1;

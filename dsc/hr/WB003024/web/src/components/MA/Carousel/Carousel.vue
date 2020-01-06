@@ -89,7 +89,7 @@ $tablet-width: 1300px;
     @media (min-width: $tablet-width + 1) {
         display: flex;
         margin: 0 auto;
-        max-width: $content-width;
+        max-width: $content-width + 50px;
         align-items: flex-start;
     }
 }
@@ -144,6 +144,10 @@ $tablet-width: 1300px;
             border-style: solid;
             border-color: transparent $main-color $main-color transparent;
             transform: skewX(45deg);
+            &::before {
+                @include clickableArea(false, 14px);
+                transform: skewX(-45deg) translateX(7px);
+            }
         }
         @media (min-width: $tablet-width + 1) {
             top: auto;
@@ -247,7 +251,7 @@ $tablet-width: 1300px;
     }
 }
 .text {
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     @media (min-width: $mobile-width + 1) {
         position: relative;
         flex: auto;
@@ -259,9 +263,8 @@ $tablet-width: 1300px;
     @media (min-width: $tablet-width + 1) {
         position: relative;
         margin-top: 45px;
-        padding-right: percentage(80 / 1220);
-        padding-bottom: 2em;
-        padding-left: percentage(110 / 1220);
+        padding-right: percentage(60 / 1220);
+        padding-left: percentage(90 / 1220);
         min-height: 445px;
         &::before,
         &::after {
@@ -274,12 +277,12 @@ $tablet-width: 1300px;
         }
         &::before {
             bottom: -45px;
-            left: 100px;
+            left: 80px;
             background-color: #b50b6f;
         }
         &::after {
             top: -35px;
-            right: 55px;
+            right: 45px;
             background-color: $main-color;
         }
     }
@@ -288,6 +291,7 @@ $tablet-width: 1300px;
         margin-bottom: 1em;
         color: $main-color;
         letter-spacing: getLetterSpacing(50);
+        font-weight: bold;
         font-size: 18px;
         line-height: 1.3;
         @media (min-width: $mobile-width + 1) {
@@ -308,7 +312,7 @@ $tablet-width: 1300px;
             letter-spacing: getLetterSpacing(50);
         }
         @media (min-width: $tablet-width + 1) {
-            padding-left: 48px;
+            padding-left: 36px;
             font-size: 18px;
             line-height: 28px;
         }

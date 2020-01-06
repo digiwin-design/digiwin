@@ -55,10 +55,49 @@
             ></section-title>
             <Carousel :carousel="viewData.carousel"></Carousel>
         </article>
+
+        <article class="section4">
+            <img :src="require('./section4-pic.jpg')" alt="join us">
+            <div class="container">
+                <div class="content">
+                    <section-title
+                        title="認識儲備顧問，創造不平凡"
+                        desc="不要懷疑，你正在通往一條不凡的路，只要你對職務內容感興趣，歡迎加入我們"
+                        :padding-top="isMediumWidth ? '45px' : '75px'"
+                        padding-bottom="2em"
+                    ></section-title>
+                    <ul>
+                        <li>．藉由完整流程輔導，深入接觸各企業，快速的積累管理經驗</li>
+                        <li>．以提升管理指標效益為目標，進行企業經營成效分析與管理診斷</li>
+                        <li>．以創造系統應用價值為前提，提供企業專業解決方案，成為企業高階的專業幕僚</li>
+                    </ul>
+                    <a href="">加入我們</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="section5 container">
+            <section-title
+                title="數位行家在鼎新"
+                desc="給您的成長環境，不僅來自於工作中的教學相長，更在於創造輕鬆自在的經驗分享與知識傳遞氛圍"
+                :padding-top="isMobile ? '55px' : '80px'"
+                padding-bottom="2em"
+            ></section-title>
+            <div class="content">
+                <a href="https://youtu.be/3X7zvkeyTPc" data-fancybox>
+                    <img :src="require('./section5-poster1.jpg')" alt="">
+                </a>
+                <a href="https://youtu.be/fp0xugGs4qA" data-fancybox>
+                    <img :src="require('./section5-poster2.jpg')" alt="">
+                </a>
+            </div>
+        </article>
     </div>
 </template>
 
 <script>
+import '@fancyapps/fancybox';
+import '@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 import mixins from '@/mixins';
 import SectionTitle from '@/components/SectionTitle.vue';
 import Section1Content from '@/components/MA/Section1Content/Section1Content.vue';
@@ -236,6 +275,105 @@ export default {
     @media (min-width: $tablet-width + 1) {
         background-color: transparent;
         background-image: linear-gradient(#b5b9c6 642px, #fff 0);
+    }
+}
+.section4 {
+    padding-bottom: 70px;
+    background-color: $main-color;
+    color: #fff;
+    @media (min-width: $tablet-width + 1) {
+        padding-bottom: 0;
+        background: $main-color url('section4-bg.png') 50% 0 no-repeat;
+    }
+    > img {
+        @media (min-width: $tablet-width + 1) {
+            display: none;
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $tablet-width + 1) {
+            width: 55%;
+            height: 620px;
+            align-items: flex-start;
+        }
+        @media (min-width: $content-width + 1) {
+            width: 50%;
+        }
+    }
+    .sectionTitle {
+        @media (min-width: $tablet-width + 1) {
+            align-items: flex-start;
+        }
+    }
+    ul {
+        margin-bottom: 2.5rem;
+        @media (min-width: $content-width + 1) {
+            margin-bottom: 6rem;
+        }
+    }
+    li {
+        font-size: 18px;
+        line-height: 22px;
+        @media (min-width: $tablet-width + 1) {
+            font-size: 20px;
+        }
+        + li {
+            margin-top: .5em;
+            @media (min-width: $tablet-width + 1) {
+                margin-top: 1em;
+            }
+        }
+    }
+    a {
+        @include btn(400px, 80px, $main-color, #bfdefb, 0, true);
+        width: 100%;
+        letter-spacing: getLetterSpacing(200);
+        font-weight: bold;
+        font-size: 36px;
+    }
+}
+.section5 {
+    padding-bottom: 55px;
+    @media (min-width: $tablet-width + 1) {
+        position: relative;
+        padding-bottom: 105px;
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: -1;
+            width: 1px;
+            height: 625px;
+            content: '';
+            transform: rotate(-14deg);
+        }
+        &::before {
+            top: -10px;
+            left: 0;
+            background-color: #b50b6f;
+        }
+        &::after {
+            right: 0;
+            bottom: -10px;
+            background-color: $main-color;
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $tablet-width + 1) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        a + a {
+            margin-top: 15px;
+            @media (min-width: $tablet-width + 1) {
+                margin-top: 0;
+                margin-left: 15px;
+            }
+        }
     }
 }
 </style>
