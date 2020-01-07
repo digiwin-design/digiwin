@@ -12,12 +12,12 @@
             <h1>
                 <div class="container">
                     <picture>
-                        <source media="(min-width: 769px)" :srcset="require('./hero-title.png')">
-                        <img :src="require('./hero-title-s.png')" alt="2020儲備鼎尖數位人才養成計畫">
+                        <source media="(min-width: 769px)" srcset="images/MA/hero-title.png">
+                        <img src="images/MA/hero-title-s.png" alt="2020儲備鼎尖數位人才養成計畫">
                     </picture>
                 </div>
             </h1>
-            <a href class="arrow" @click.prevent="scrollToAnchor('#section1')"></a>
+            <a href ref="arrow" class="arrow" :class="{ 'is-fixed': arrowFixed }" @click.prevent="scrollToAnchor('#section1')"></a>
         </div>
 
         <article id="section1" class="section1">
@@ -71,8 +71,9 @@
                         <li>以提升管理指標效益為目標，進行企業經營成效分析與管理診斷</li>
                         <li>以創造系統應用價值為前提，提供企業專業解決方案，成為企業高階的專業幕僚</li>
                     </ul>
-                    <a href="">加入我們</a>
+                    <a href="https://forms.gle/P6hovf7QjtX6LXaK8" target="_blank">加入我們</a>
                 </div>
+                <div class="tag" data-text="join us"></div>
             </div>
         </article>
 
@@ -99,14 +100,53 @@
                     title="頂尖優質環境，成就鼎尖人才"
                     desc="打造工作與休閒的舒適空間<br>同時擁有舒適感、幸福感與安全感"
                     :padding-top="isMobile ? '55px' : '80px'"
+                    padding-bottom="3.4em"
                 ></section-title>
                 <Carousel2 :items="viewData.carousel2"></Carousel2>
+            </div>
+        </article>
+
+        <article class="section7">
+            <div class="container">
+                <section-title
+                    title="掌握人才招募訊息"
+                    desc="您可以獲取近期關於鼎新招募活動，歡迎到現場拉近你我的距離"
+                    :padding-top="isMobile ? '55px' : '80px'"
+                    :padding-bottom="isMobile ? '2em' : '3.8em'"
+                ></section-title>
+                <div class="content">
+                    <a href="https://www.facebook.com/digiwinHR" target="_blank">校園徵才活動</a>
+                    <a href="https://www.facebook.com/digiwinHR" target="_blank">數位人才講座</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="section8">
+            <div class="container">
+                <section-title title="歡迎聯繫我們"></section-title>
+                <div class="content">
+                    <div class="content__text">
+                        更多儲備鼎尖人最新消息不定期在臉書粉絲團曝光，<br>
+                        歡迎加入鼎新人才招募網粉絲專頁！<br>
+                        若有相關疑問，請洽：<br>
+                        2020儲備鼎尖人才專案小組<br>
+                        電話：886-4-2305-4567#4581<br>
+                        Email：kimberlyhsu@digiwin.com
+                    </div>
+                    <div class="content__qrcode">
+                        <figure>
+                            <img :src="require('./qrcode.jpg')" alt="">
+                            <figcaption>鼎新人才招募網粉絲專頁</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </article>
     </div>
 </template>
 
 <script>
+import _ from 'lodash';
 import '@fancyapps/fancybox';
 import '@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 import mixins from '@/mixins';
@@ -124,11 +164,28 @@ export default {
         Carousel,
         Carousel2,
     },
+    data() {
+        return {
+            arrowFixed: false,
+        }
+    },
+    watch: {
+        loading(value) {
+            if (value) return;
+            this.$nextTick(() => {
+                this.locateArrow();
+                window.addEventListener('scroll', this.locateArrow);
+                window.addEventListener('resize', this.locateArrow);
+            });
+        },
+    },
     methods: {
         loadImg() {
             let images = [
-                "images/MA/hero-s.jpg",
-                "images/MA/hero.jpg"
+                'images/MA/hero-s.jpg',
+                'images/MA/hero.jpg',
+                'images/MA/hero-title.png',
+                'images/MA/hero-title-s.png',
             ];
             this.preloadImg(images)
                 .then(() => {
@@ -136,13 +193,22 @@ export default {
                         this.$store.commit('setLoading', false);
                     }, 500);
                 });
-        }
+        },
+        locateArrow: _.throttle(function () {
+            let windowBottom = window.pageYOffset + window.innerHeight;
+            let targetPos = document.querySelector('#section1').getBoundingClientRect().top + window.pageYOffset;
+            this.arrowFixed = !(targetPos < windowBottom);
+        }, 100),
     },
     created() {
         if (!this.$store.state.loading) {
             this.$store.commit('setLoading', true);
         }
         this.loadImg();
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.locateArrow);
+        window.removeEventListener('resize', this.locateArrow);
     },
 }
 </script>
@@ -229,6 +295,10 @@ export default {
         @media (min-width: $tablet-width + 1) {
             bottom: 3.7%;
         }
+        &.is-fixed {
+            position: fixed;
+            bottom: 3.7%;
+        }
         &::before,
         &::after {
             position: absolute;
@@ -284,16 +354,18 @@ export default {
 .section3 {
     $mobile-width: 560px;
     $tablet-width: 1300px;
+    overflow: hidden;
     background-color: #b5b9c6;
     @media (min-width: $mobile-width + 1) {
         padding-bottom: 70px;
     }
     @media (min-width: $tablet-width + 1) {
         background-color: transparent;
-        background-image: linear-gradient(#b5b9c6 642px, #fff 0);
+        background-image: linear-gradient(#b5b9c6 650px, #fff 0);
     }
 }
 .section4 {
+    $tablet-width: 960px;
     padding-bottom: 70px;
     background-color: $main-color;
     color: #fff;
@@ -302,9 +374,14 @@ export default {
         background: $main-color url('section4-bg.png') 50% 0 no-repeat;
     }
     > img {
+        display: block;
+        margin: 0 auto;
         @media (min-width: $tablet-width + 1) {
             display: none;
         }
+    }
+    > .container {
+        position: relative;
     }
     .content {
         display: flex;
@@ -351,6 +428,39 @@ export default {
         letter-spacing: getLetterSpacing(200);
         font-weight: bold;
         font-size: 36px;
+        transition: all .15s ease-in-out;
+        @at-root {
+            html.no-mobile .section4 a:hover {
+                background-color: #ff46aa;
+                color: #fff;
+            }
+        }
+    }
+    .tag {
+        display: none;
+        @media (min-width: $tablet-width + 1) {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            display: block;
+            width: 248.5px;
+            height: 70px;
+            background-color: rgba($main-color, .7);
+            text-align: center;
+            transform: skewX(14deg) translateY(-50%);
+            &::before {
+                display: block;
+                color: #fff;
+                content: attr(data-text);
+                letter-spacing: getLetterSpacing(200);
+                font-size: 30px;
+                line-height: 70px;
+                transform: skewX(-14deg);
+            }
+        }
+        @media (min-width: $content-width + 1) {
+            right: 85px;
+        }
     }
 }
 .section5 {
@@ -400,6 +510,110 @@ export default {
     padding-bottom: 64px;
     .sectionTitle {
         text-align: center;
+    }
+    @media (min-width: $tablet-width + 1) {
+        padding-bottom: 120px;
+    }
+}
+.section7 {
+    padding-bottom: 72px;
+    background-color: $main-color;
+    color: #fff;
+    @media (min-width: $tablet-width + 1) {
+        padding-bottom: 120px;
+    }
+    @media (min-width: 1366px) {
+        background-image: url('section7-bg1.png'), url('section7-bg2.png');
+        background-position: 0 0, 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        > a {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            font-size: 18px;
+            transition: color .15s ease-in-out;
+            align-items: center;
+            @media (min-width: $tablet-width + 1) {
+                font-size: 30px;
+            }
+            @at-root {
+                html.no-mobile .section7 .content > a:hover {
+                    color: #ff46aa;
+                }
+            }
+            &::before {
+                margin-bottom: 13px;
+                width: 135px;
+                height: 105px;
+                background: 50%/contain no-repeat;
+                content: '';
+                transition: background-image .15s ease-in-out;
+                @media (min-width: $tablet-width + 1) {
+                    margin-bottom: 37px;
+                    width: 171px;
+                    height: 134px;
+                }
+                @for $i from 1 through 2 {
+                    @at-root {
+                        .section7 .content > a:nth-child(#{$i})::before {
+                            background-image: url('section7-icon#{$i}.png');
+                        }
+                        html.no-mobile .section7 .content > a:hover:nth-child(#{$i})::before {
+                            background-image: url('section7-icon#{$i}-h.png');
+                        }
+                        // preload
+                        .section7 .content > a:nth-child(#{$i})::after {
+                            background-image: url('section7-icon#{$i}-h.png');
+                            content: '';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.section8 {
+    padding-bottom: 54px;
+    background-color: #323232;
+    color: #fff;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: $mobile-width + 1) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        @media (min-width: $tablet-width + 1) {
+            margin: 0 auto;
+            max-width: 640px;
+            justify-content: space-between;
+        }
+        &__text {
+            margin-bottom: 2em;
+            font-size: 18px;
+            line-height: 30px;
+            @media (min-width: $mobile-width + 1) {
+                margin-right: 1em;
+                margin-bottom: 0;
+            }
+            @media (min-width: $tablet-width + 1) {
+                font-size: 20px;
+                line-height: 36px;
+            }
+        }
+        &__qrcode {
+            flex: none;
+            text-align: center;
+            figcaption {
+                margin-top: 8px;
+                font-size: 14px;
+            }
+        }
     }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel">
+    <div class="carousel" @mouseenter="hoverHandler" @mouseleave="hoverHandler">
         <div class="thumbs">
             <div class="avatar" :class="{ active: index === idx }" v-for="(item, idx) in carousel" :key="item.name" @click="changeSlide(idx)">
                 <img class="avatar__pic" :src="require(`./avatar${idx + 1}.png`)" alt="">
@@ -23,8 +23,6 @@
 </template>
 
 <script>
-import 'jquery-touchswipe';
-
 export default {
     name: 'Carousel',
     props: {
@@ -37,6 +35,7 @@ export default {
         return {
             index: 0,
             timer: null,
+            autoplay: true,
         }
     },
     computed: {
@@ -47,9 +46,10 @@ export default {
     methods: {
         changeSlide(index) {
             clearInterval(this.timer);
+            this.autoplay = false;
             this.index = index >= this.carousel.length ? 0 : index < 0 ? this.carousel.length - 1 : index;
         },
-        autoPlay() {
+        play() {
             let index = this.index
             let total = this.carousel.length;
             this.timer = setInterval(() => {
@@ -57,24 +57,19 @@ export default {
                 this.index = index % total;
             }, 5000);
         },
-        initTouchswipe() {
-            const _this = this;
-            $(this.$refs.slide).swipe({
-                swipe(event, direction) {
-                    if (direction === 'left') {
-                        _this.changeSlide(_this.index + 1);
-                    }
-                    else if (direction === 'right') {
-                        _this.changeSlide(_this.index - 1);
-                    }
-                },
-                threshold: 0
-            });
-        },
+        hoverHandler() {
+            if (!this.autoplay) return;
+
+            if (event.type === 'mouseenter') {
+                clearInterval(this.timer);
+            }
+            else {
+                this.play();
+            }
+        }
     },
     mounted() {
-        this.autoPlay();
-        this.initTouchswipe();
+        this.play();
     },
 }
 </script>
@@ -170,7 +165,7 @@ $tablet-width: 1300px;
             border: 2px solid transparent;
             background-clip: content-box;
             cursor: pointer;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: flex-end;
             @media (min-width: $tablet-width + 1) {
                 position: relative;
@@ -193,7 +188,7 @@ $tablet-width: 1300px;
             width: 180.4px;
             height: 215px;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
             @media (min-width: $mobile-width + 1) {
                 position: relative;
                 z-index: 1;
@@ -216,7 +211,6 @@ $tablet-width: 1300px;
         @media (min-width: $tablet-width + 1) {
             width: 303.8px;
             height: 45px;
-            align-self: flex-end;
         }
         &::before {
             display: block;
@@ -236,14 +230,18 @@ $tablet-width: 1300px;
         transform: skewX(-14deg);
         @at-root {
             .thumbs .avatar__pic {
+                margin-right: 2px;
                 height: 50px;
                 @media (min-width: $tablet-width + 1) {
+                    margin-right: 5px;
                     height: 100px;
                 }
             }
             .slide .avatar__pic {
+                margin-right: 15px;
                 height: 185px;
                 @media (min-width: $tablet-width + 1) {
+                    margin-right: 24px;
                     height: 375px;
                 }
             }

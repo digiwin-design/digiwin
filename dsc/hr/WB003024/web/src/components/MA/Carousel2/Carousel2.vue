@@ -9,6 +9,7 @@
             trigger="click"
             arrow="never"
             indicator-position="outside"
+            :autoplay="autoplay"
             v-show="!isMobile"
         >
             <el-carousel-item v-for="item in items" :key="item">
@@ -21,11 +22,13 @@
         <!-- mobile -->
         <el-carousel
             ref="carouselM"
+            class="carouselM"
             :interval="4000"
             :height="carouselHeight"
             trigger="click"
             arrow="never"
             indicator-position="outside"
+            :autoplay="autoplay"
             v-show="isMobile"
         >
             <el-carousel-item v-for="item in items" :key="item">
@@ -42,6 +45,7 @@
 
 <script>
 import _ from 'lodash';
+import 'jquery-touchswipe';
 
 export default {
     props: {
@@ -57,18 +61,13 @@ export default {
                 height: 350
             },
             carouselHeight: '',
+            autoplay: true,
         }
     },
     computed: {
         isMobile() {
             return this.$store.state.isMobile;
         },
-        carousel() {
-            return this.$refs.carousel;
-        },
-        carouselM() {
-            return this.$refs.carouselM;
-        }
     },
     methods: {
         setCarouselHeight: _.throttle(function () {
@@ -77,7 +76,8 @@ export default {
             this.carouselHeight = cardWidth * (this.imgSize.height / this.imgSize.width) + 'px';
         }, 100),
         onChange(type) {
-            let el = this.isMobile ? this.carouselM : this.carousel;
+            this.autoplay = false;
+            let el = this.isMobile ? this.$refs.carouselM : this.$refs.carousel;
             if (type === -1) {
                 el.prev();
             }
@@ -85,10 +85,28 @@ export default {
                 el.next();
             }
         },
+        initTouchswipe() {
+            const _this = this;
+            $('.carouselM').swipe({
+                swipe(event, direction) {
+                    if (direction === 'left') {
+                        _this.onChange(1);
+                    }
+                    else if (direction === 'right') {
+                        _this.onChange(-1);
+                    }
+                },
+                threshold: 0,
+                allowPageScroll: 'vertical',
+            });
+        },
     },
     mounted() {
         window.addEventListener("resize", () => this.setCarouselHeight());
         this.setCarouselHeight();
+        if (this.isMobile) {
+            this.initTouchswipe();
+        }
     },
 }
 </script>
@@ -104,13 +122,11 @@ export default {
     padding: 0 22px;
     max-width: 600px;
     @media (min-width: $mobile-width + 1) {
-        padding-right: 64px;
-        padding-left: 64px;
+        padding-right: 46px;
+        padding-left: 46px;
     }
     @media (min-width: $tablet-width + 1) {
-        padding-right: 150px;
-        padding-left: 150px;
-        max-width: none;
+        max-width: 1200px;
     }
     &__arrow {
         position: absolute;
@@ -126,22 +142,10 @@ export default {
         &--left {
             left: 0;
             transform: scaleX(-1) translateY(-50%);
-            @media (min-width: $mobile-width + 1) {
-                left: 18px;
-            }
-            @media (min-width: $tablet-width + 1) {
-                left: 104px;
-            }
         }
         &--right {
             right: 0;
             transform: translateY(-50%);
-            @media (min-width: $mobile-width + 1) {
-                right: 18px;
-            }
-            @media (min-width: $tablet-width + 1) {
-                right: 104px;
-            }
         }
         &::before {
             @include clickableArea(17px, 17px);
@@ -156,7 +160,7 @@ export default {
     &__mask {
         z-index: 1;
         background-color: #000;
-        opacity: .4;
+        opacity: .6;
     }
     &__indicators {
         display: none;

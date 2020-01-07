@@ -117,10 +117,12 @@ export default {
     line-height: 30px;
     @media (min-width: $tablet-width + 1) {
         position: absolute;
-        padding-top: 2em;
-        line-height: 1.3;
+        padding-top: 1em;
+        font-size: 17px;
+        line-height: 1.6;
     }
     @media (min-width: 1000px) {
+        padding-top: 2em;
         font-size: 20px;
         line-height: 36px;
     }
@@ -170,11 +172,11 @@ export default {
             width: 55%;
         }
         @media (min-width: $tablet-width + 1) {
-            transform: translateX(-100px);
-            opacity: 0;
             top: 25%;
             left: 20px;
             width: 30%;
+            opacity: 0;
+            transform: translateX(-100px);
         }
         @media (min-width: $content-width) {
             top: 32%;
@@ -208,13 +210,13 @@ export default {
             width: 55%;
         }
         @media (min-width: $tablet-width + 1) {
-            transform: translateX(100px);
-            opacity: 0;
             top: 0;
             right: 20px;
             z-index: 1;
             margin-left: 0;
             width: 50%;
+            opacity: 0;
+            transform: translateX(100px);
         }
         @media (min-width: $content-width) {
             top: 47%;
