@@ -216,9 +216,14 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/sass/common/variable';
 @import '~@/assets/sass/common/helpers';
+$content-width: 1500px !default;
+$main-color: #3a46ac;
 
 .ma {
     letter-spacing: -1px;
+}
+.container {
+    max-width: $content-width;
 }
 .hero {
     position: relative;

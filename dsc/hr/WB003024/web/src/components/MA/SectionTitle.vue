@@ -29,6 +29,8 @@ module.exports = {
 <style lang="scss" scoped>
 @import '~@/assets/sass/common/variable';
 @import '~@/assets/sass/common/helpers';
+$content-width: 1500px !default;
+$main-color: #3a46ac;
 
 .sectionTitle {
     display: flex;
