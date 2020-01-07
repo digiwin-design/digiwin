@@ -2,11 +2,11 @@
     <div class="home" v-if="!loading">
         <div class="nav">
             <router-link to="/">進入頁</router-link> |
-            <router-link to="/ma">儲備MA招募</router-link> |
+            <router-link to="/MA">儲備MA招募</router-link> |
             <router-link to="/school">校園招募</router-link> |
             <a href="javascript:;">社會招募</a>
         </div>
-        <img alt="Vue logo" src="@/assets/logo.png">
+        <h1>進入頁</h1>
     </div>
 </template>
 
