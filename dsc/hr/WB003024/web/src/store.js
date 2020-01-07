@@ -12,7 +12,7 @@ export default new Vuex.Store({
         isMediumWidth: false,
         showMask: false,
         result: null,
-        loading: true,
+        loading: false,
     },
     getters: {
         viewData(state) {

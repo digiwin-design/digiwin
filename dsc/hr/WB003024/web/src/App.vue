@@ -32,14 +32,10 @@ export default {
         Loading,
     },
     watch: {
-        viewData(value) {
-            if (!value) return;
-            setTimeout(() => {
-                this.$store.commit('setLoading', false);
-            }, 500);
-        },
-        loading() {
-            this.$nextTick(() => this.scrollToAnchor(`#${this.$route.query.a}`));
+        loading(value) {
+            if (!value) {
+                this.$nextTick(() => this.scrollToAnchor(`#${this.$route.query.a}`));
+            }
         },
     },
     methods: {
@@ -92,7 +88,7 @@ main {
     flex-grow: 1;
 }
 .container {
-    outline: 1px solid #0ff;
+    // outline: 1px solid #0ff;
     margin: 0 auto;
     padding: 0 15px;
     max-width: $content-width;
