@@ -3,7 +3,7 @@
         <p class="headForm-title">联系我们</p>
         <ul class="headForm-fields">
             <li>
-                <input type="text" v-model.lazy="company" />
+                <input type="text" v-model.lazy="company" :class="{'is-invalid':companyErr}" />
                 <i v-if="!company">公司名称</i>
             </li>
             <li>
@@ -27,6 +27,7 @@ export default {
     data() {
         return {
             company: null,
+            companyErr: false,
             person: null,
             personErr: false,
             telephone: null,
@@ -38,13 +39,16 @@ export default {
             return location.hostname !== 'www.digiwin.com';
         },
         testResult() {
-            return this.person && !this.personErr && this.telephone && !this.telephoneErr;
+            return this.company && !this.companyErr && this.person && !this.personErr && this.telephone && !this.telephoneErr;
         },
         apiURL() {
             return 'https://misws.digiwin.com/WebPageData/Service.asmx/SaveData';
         },
     },
     watch: {
+        company() {
+            this.companyErr = !this.company.length;
+        },
         person() {
             this.personErr = !this.person.length;
         },
@@ -96,14 +100,14 @@ export default {
                         }
                         else {
                             setTimeout(function () {
-                                alert('網路錯誤，請稍後再試！');
+                                alert('网路错误，请稍后再试！');
                                 console.error(res.data.msg);
                             }, 1000);
                         }
                     })
                     .catch(function (err) {
                         setTimeout(function () {
-                            alert('網路錯誤，請稍後再試！');
+                            alert('网路错误，请稍后再试！');
                             console.error(err);
                         }, 1000);
                     })

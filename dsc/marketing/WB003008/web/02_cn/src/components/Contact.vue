@@ -93,10 +93,10 @@
                                     type="text"
                                     name="contact-company"
                                     id="contact-company"
-                                    class="contact"
+                                    class="contact required"
                                 />
                                 <p class="inputTitle">
-                                    公司名称
+                                    <span class="requiredHint">*</span>公司名称
                                     <span class="fillHint">(请填写完整公司名称)</span>
                                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                                 </p>

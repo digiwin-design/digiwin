@@ -1,58 +1,86 @@
 <template>
     <div class="headForm">
-        <p class="headForm-title">欢迎与我们联系索取资料</p>
+        <p class="headForm-title">联系我们</p>
         <ul class="headForm-fields">
             <li>
-                <input type="text" v-model.lazy="person" :class="{'is-invalid':personErr}" />
-                <i v-if="!person">联络人</i>
+                <input type="text" v-model.lazy="company" :class="{'is-invalid':companyErr}" />
+                <i v-if="!company">公司名称</i>
             </li>
             <li>
-                <input type="text" v-model.lazy="email" :class="{'is-invalid':emailErr}" />
-                <i v-if="!email">E-mail</i>
+                <input type="text" v-model.lazy="person" :class="{'is-invalid':personErr}" />
+                <i v-if="!person">联系人</i>
+            </li>
+            <li>
+                <input type="text" v-model.lazy="telephone" :class="{'is-invalid':telephoneErr}" />
+                <i v-if="!telephone">联系电话</i>
             </li>
         </ul>
-        <a href @click.prevent="submit" class="headForm-submit">立即送出</a>
+        <a href @click.prevent="submit" class="headForm-submit">立即申请</a>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
+
 export default {
     data() {
         return {
+            company: null,
+            companyErr: false,
             person: null,
             personErr: false,
-            email: null,
-            emailErr: false,
+            telephone: null,
+            telephoneErr: false,
         }
     },
     computed: {
+        dev() {
+            return location.hostname !== 'www.digiwin.com';
+        },
         testResult() {
-            return Boolean(this.person) && !this.personErr && Boolean(this.email) && !this.emailErr;
-        }
+            return this.company && !this.companyErr && this.person && !this.personErr && this.telephone && !this.telephoneErr;
+        },
+        apiURL() {
+            return 'https://misws.digiwin.com/WebPageData/Service.asmx/SaveData';
+        },
     },
     watch: {
+        company() {
+            this.companyErr = !this.company.length;
+        },
         person() {
             this.personErr = !this.person.length;
         },
-        email() {
-            this.emailErr = !(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(this.email.trim()));
+        telephone() {
+            this.telephoneErr = !this.telephone.length;
         },
     },
     methods: {
         submit() {
             if (this.testResult) {
                 $('#loading').fadeIn();
+
+                // ajax mock
+                let mock = new MockAdapter(axios, { delayResponse: 2000 });
+                mock.onPost(this.apiURL).reply(200, {
+                    msg: '',
+                    result: '1',
+                    farm: 'N'
+                });
+                if (!this.dev) mock.restore();
+
+                // ajax
                 let query = {
                     doc_no: this.getSource(),
                     source: document.title,
                     page_dir: decodeURI(location.href),
-                    company: '',
+                    company: this.company.trim(),
                     telephone: '',
                     extension: '',
                     address: '',
                     contact_person: this.person.trim(),
-                    email: this.email.trim(),
+                    email: '',
                     mobile: '',
                     department: '',
                     job_title: '',
@@ -65,7 +93,7 @@ export default {
                 };
                 const params = new URLSearchParams();
                 params.append('data', JSON.stringify(query));
-                axios.post('https://misws.digiwin.com/WebPageData/Service.asmx/SaveData', params)
+                axios.post(this.apiURL, params)
                     .then(function (res) {
                         if (res.data.result === '1') {
                             $('#thx').fadeIn();
@@ -73,7 +101,7 @@ export default {
                         else {
                             setTimeout(function () {
                                 alert('网路错误，请稍后再试！');
-                                console.error(err);
+                                console.error(res.data.msg);
                             }, 1000);
                         }
                     })
@@ -88,7 +116,7 @@ export default {
                     });
             }
             else {
-                let msg = '尚有联络资料未填写或Email格式错误，请重新确认。';
+                let msg = '尚有联络资料未填写，请重新确认。';
                 window.wxc.xcConfirm(msg, window.wxc.xcConfirm.typeEnum.info);
             }
         },
@@ -101,7 +129,6 @@ export default {
 </script>
 
 <style lang="scss">
-$tablet-width: 768px;
 $color_1: #333;
 $color_2: #000;
 $color_3: #ff0028;
@@ -113,11 +140,9 @@ $background_color_4: #00c3f7;
 main {
     .headForm {
         padding: 30px;
-        max-width: 380px;
+        max-width: 360px;
+        width: 100%;
         background-color: $background_color_1;
-        @media (max-width: $tablet-width) {
-            padding: 20px 10px;
-        }
         input {
             padding-right: 10px;
             padding-left: 10px;

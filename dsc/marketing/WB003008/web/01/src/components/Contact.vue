@@ -79,10 +79,10 @@
                                     type="text"
                                     name="contact-company"
                                     id="contact-company"
-                                    class="contact"
+                                    class="contact required"
                                 />
                                 <p class="inputTitle">
-                                    公司名稱
+                                    <span class="requiredHint">*</span>公司名稱
                                     <span class="fillHint">(請填寫完整公司名稱)</span>
                                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                                 </p>
