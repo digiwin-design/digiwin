@@ -68,6 +68,9 @@ export default {
         isMobile() {
             return this.$store.state.isMobile;
         },
+        device() {
+            return this.$store.state.device;
+        },
     },
     methods: {
         setCarouselHeight: _.throttle(function () {
@@ -104,7 +107,7 @@ export default {
     mounted() {
         window.addEventListener("resize", () => this.setCarouselHeight());
         this.setCarouselHeight();
-        if (this.isMobile) {
+        if (this.device) {
             this.initTouchswipe();
         }
     },
@@ -114,7 +117,6 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/sass/common/variable';
 @import '~@/assets/sass/common/helpers';
-$content-width: 1500px !default;
 $main-color: #3a46ac;
 
 .carousel {

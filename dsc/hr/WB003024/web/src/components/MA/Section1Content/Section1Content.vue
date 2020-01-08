@@ -81,9 +81,9 @@ export default {
         initAn() {
             // this.initGUI();
             this.timeline = gsap.timeline();
-            this.timeline.to(this.$refs.leftText, { duration: .5, x: 0, opacity: 1 });
-            this.timeline.to(this.$refs.content2, { duration: .5, width: '55%' });
-            this.timeline.to(this.$refs.rightText, { duration: .5, x: 0, opacity: 1 });
+            this.timeline.to(this.$refs.leftText, { duration: .8, x: 0, opacity: 1 });
+            this.timeline.to(this.$refs.content2, { duration: .8, width: '55%' });
+            this.timeline.to(this.$refs.rightText, { duration: .8, x: 0, opacity: 1 });
             this.timeline.pause();
         },
     },
@@ -103,7 +103,6 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/sass/common/variable';
 @import '~@/assets/sass/common/helpers';
-$content-width: 1500px !default;
 $main-color: #3a46ac;
 
 .content {

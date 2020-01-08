@@ -79,7 +79,6 @@ export default {
 @import '~@/assets/sass/common/helpers';
 $mobile-width: 560px;
 $tablet-width: 1300px;
-$content-width: 1500px !default;
 $main-color: #3a46ac;
 
 .carousel {

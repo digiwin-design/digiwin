@@ -115,8 +115,8 @@
                     :padding-bottom="isMobile ? '2em' : '3.8em'"
                 ></section-title>
                 <div class="content">
-                    <a href="https://www.facebook.com/digiwinHR" target="_blank">校園徵才活動</a>
-                    <a href="https://www.facebook.com/digiwinHR" target="_blank">數位人才講座</a>
+                    <a href="http://career.digiwin.com" target="_blank">校園徵才活動</a>
+                    <a href="https://www.digiwin.com/tw/dsc/hr/WB003024/edm/WB00302402_edm.html" target="_blank">數位人才講座</a>
                 </div>
             </div>
         </article>
@@ -133,12 +133,12 @@
                         電話：886-4-2305-4567#4581<br>
                         Email：kimberlyhsu@digiwin.com
                     </div>
-                    <div class="content__qrcode">
+                    <a href="https://www.facebook.com/digiwinHR" class="content__qrcode" target="_blank">
                         <figure>
                             <img :src="require('./qrcode.jpg')" alt="">
                             <figcaption>鼎新人才招募網粉絲專頁</figcaption>
                         </figure>
-                    </div>
+                    </a>
                 </div>
             </div>
         </article>
@@ -216,7 +216,6 @@ export default {
 <style lang="scss" scoped>
 @import '~@/assets/sass/common/variable';
 @import '~@/assets/sass/common/helpers';
-$content-width: 1500px !default;
 $main-color: #3a46ac;
 
 .ma {
@@ -224,6 +223,10 @@ $main-color: #3a46ac;
 }
 .container {
     max-width: $content-width;
+    @media (min-width: $content-width) {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 .hero {
     position: relative;
@@ -613,6 +616,7 @@ $main-color: #3a46ac;
         }
         &__qrcode {
             flex: none;
+            color: #fff;
             text-align: center;
             figcaption {
                 margin-top: 8px;
