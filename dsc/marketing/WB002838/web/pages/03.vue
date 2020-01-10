@@ -230,6 +230,12 @@ main {
         left: calc(50% + 620px);
         transform: rotate(70deg);
     }
+    .container {
+        @media (min-width: $content-width) {
+            padding-right: 55px;
+            padding-left: 55px;
+        }
+    }
 }
 .hero {
     background-position: 50% 0;

@@ -23,7 +23,7 @@ main {
         padding-left: 20px;
     }
     @media (min-width: $content-width) {
-        padding-right: 55px;
-        padding-left: 55px;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
