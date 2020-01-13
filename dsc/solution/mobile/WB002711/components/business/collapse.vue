@@ -3,12 +3,18 @@
         <el-collapse-item :name="idx + 1" v-for="(item, idx) in items" :key="item.title">
             <!-- title -->
             <template slot="title">
-                <h2></h2>
+                <h2>{{item.title}}</h2>
             </template>
 
             <!-- content -->
             <div class="container">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, officia ad odit, eligendi in mollitia debitis ex error cum accusantium odio. Odit doloribus deserunt tempora, at voluptatum facere animi excepturi?
+                <h3><strong>{{item.content.title}}</strong>作業困擾說明</h3>
+                <p>{{item.content.desc}}</p>
+                <figure>
+                    <img :src="item.content.imgUrl" alt="">
+                    <figcaption>▲{{item.content.figcaption}}</figcaption>
+                </figure>
+                <a href="/tw/dsc/solution/WB002972/case.html" target="_blank" v-if="items.length === idx + 1">看完整新零售解決方案>>></a>
             </div>
         </el-collapse-item>
     </el-collapse>
@@ -25,7 +31,7 @@ module.exports = {
     },
     data: function () {
         return {
-            activeNames: ['1']
+            activeNames: [1]
         };
     },
 }
@@ -48,7 +54,7 @@ module.exports = {
     padding-right: 15px;
     padding-left: 15px;
     height: 84px;
-    background-color: #555;
+    background-color: #e7534c;
     color: #fff;
     font-size: 24px;
     line-height: 30px;
@@ -61,11 +67,42 @@ module.exports = {
 }
 .el-collapse-item__header h2 {
     font-weight: bold;
+    font-size: 22px;
 }
 .el-collapse-item__arrow {
     margin-right: 6px;
 }
 .el-collapse-item__content {
     padding: 2em 0;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.el-collapse-item__content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.el-collapse-item__content h3 {
+    margin-bottom: .5em;
+    width: 100%;
+    font-size: 22px;
+}
+.el-collapse-item__content h3 strong {
+    color: #ff6464;
+}
+.el-collapse-item__content p {
+    margin-bottom: 1em;
+}
+.el-collapse-item__content img {
+    margin-bottom: .5em;
+}
+.el-collapse-item__content a {
+    margin-top: 1em;
+    width: 297px;
+    height: 50px;
+    background-color: #ff6464;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
 }
 </style>

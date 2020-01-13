@@ -1,14 +1,14 @@
 <template>
     <el-collapse v-model="activeNames" class="collapse">
-        <el-collapse-item :name="idx + 1" v-for="(item, idx) in items" :key="item.title">
+        <el-collapse-item :name="idx + 1" v-for="(item, idx) in collapse" :key="item.title">
             <!-- title -->
             <template slot="title">
-                <h2></h2>
+                <h2>{{item.title}}</h2>
             </template>
 
             <!-- content -->
             <div class="container">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, officia ad odit, eligendi in mollitia debitis ex error cum accusantium odio. Odit doloribus deserunt tempora, at voluptatum facere animi excepturi?
+                <tabs :tabs="item.tabs"></tabs>
             </div>
         </el-collapse-item>
     </el-collapse>
@@ -17,15 +17,18 @@
 <script>
 module.exports = {
     name: 'Collapse',
+    components: {
+        'tabs': httpVueLoader('./tabs.vue'),
+    },
     props: {
-        items: {
+        collapse: {
             type: Array,
             required: true
-        }
+        },
     },
     data: function () {
         return {
-            activeNames: ['1']
+            activeNames: [1]
         };
     },
 }
@@ -48,7 +51,7 @@ module.exports = {
     padding-right: 15px;
     padding-left: 15px;
     height: 84px;
-    background-color: #555;
+    background-color: #e7534c;
     color: #fff;
     font-size: 24px;
     line-height: 30px;
@@ -67,5 +70,6 @@ module.exports = {
 }
 .el-collapse-item__content {
     padding: 2em 0;
+    font-size: 18px;
 }
 </style>

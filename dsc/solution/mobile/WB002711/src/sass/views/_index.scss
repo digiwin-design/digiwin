@@ -12,7 +12,7 @@ main .index {
             padding-bottom: 55px;
         }
         .pains {
-            @include bg('index/bg-pains.jpg');
+            @include bg('index/pains-bg.jpg');
             padding: 55px 0;
             .pain + .pain {
                 margin-top: 25px;
