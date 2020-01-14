@@ -32,10 +32,10 @@
                         雖然重點都是把商品賣給消費者，但是過程中怎麼賣、通路該怎麼管理卻是大不同...
                     </p>
                     <div class="grid">
-                        <div class="grid__item" v-for="item in result.channel" :key="item.imgSrc">
+                        <a :href="item.url" target="_blank" class="grid__item" v-for="item in result.channel" :key="item.imgSrc">
                             <div class="grid__item--img" :style="{ backgroundImage: `url(${item.imgSrc})` }"></div>
                             <p class="grid__item--caption">{{item.caption}}</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </article>

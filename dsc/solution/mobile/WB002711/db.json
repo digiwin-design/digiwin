@@ -83,26 +83,32 @@
         ],
         "channel": [
             {
+                "url": "/tw/dsc/solution/WB002675/WB00267501_1.html",
                 "imgSrc": "images/index/channel1.png",
                 "caption": "經銷代理"
             },
             {
+                "url": "/tw/dsc/solution/WB002675/WB00267501_2.html",
                 "imgSrc": "images/index/channel2.png",
                 "caption": "連鎖賣場"
             },
             {
+                "url": "/tw/dsc/solution/WB002675/WB00267501_3.html",
                 "imgSrc": "images/index/channel3.png",
                 "caption": "門市專櫃"
             },
             {
+                "url": "/tw/dsc/solution/WB002595/WB00259501.html",
                 "imgSrc": "images/index/channel4.png",
                 "caption": "網購生意"
             },
             {
+                "url": "/tw/dsc/solution/WB002675/WB00267501_4.html",
                 "imgSrc": "images/index/channel5.png",
                 "caption": "觀光工廠"
             },
             {
+                "url": "/tw/dsc/solution/WB002972/case.html",
                 "imgSrc": "images/index/channel6.png",
                 "caption": "新零售"
             }

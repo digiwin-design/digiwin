@@ -61,6 +61,7 @@ main .index {
             justify-items: center;
             align-items: center;
             &__item {
+                display: block;
                 &--img {
                     margin-bottom: 1em;
                     width: 120px;
