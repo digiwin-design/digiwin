@@ -271,6 +271,22 @@
         {
             "desktop": "/tw/dsc/solution/WB002850/solution.html",
             "mobile": "/tw/dsc/solution/mobile/WB002850/index.html#/solution"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002711/WB00271101.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002711/index.html#/"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002711/WB00271101_business.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002711/index.html#/business"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002711/WB00271101_multichannel.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002711/index.html#/multichannel"
+        },
+        {
+            "desktop": "/tw/dsc/solution/WB002711/WB00271101_case.html",
+            "mobile": "/tw/dsc/solution/mobile/WB002711/index.html#/case"
         }
     ]
 }

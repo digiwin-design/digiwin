@@ -215,37 +215,41 @@
     }
 }
 
-@mixin quoteBlock($img: '', $offset: 0) {
+@mixin quoteBlock($img: '', $width: 47px, $offset: 0px) {
+    position: relative;
     @if $img == '' {
-        padding-top: (39px + $offset);
-        padding-bottom: (39px + $offset);
+        $height: $width * (39 / 47);
+        padding-top: calc(#{$height} + #{$offset});
+        padding-bottom: calc(#{$height} + #{$offset});
         @media (min-width: 769px) {
-            padding-right: (47px + $offset);
-            padding-left: (47px + $offset);
+            padding-right: calc(#{$width} + #{$offset});
+            padding-left: calc(#{$width} + #{$offset});
         }
         &::before,
         &::after {
-            width: 47px;
-            height: 39px;
+            width: $width;
+            height: $height;
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAnCAMAAACoquHzAAAAS1BMVEUAAADMzMzPz8/d3d3j4+PT09Pi4uLS0tLMzMzS0tLW1tbY2NjY2Nju7u7n5+fk5OTn5+fc3Nze3t7r6+vMzMzd3d3W1tbPz8/k5OTT1chzAAAAFHRSTlMAqqE3H31CjpNrVXFKCS8ZEl4vCXxYnnkAAAEGSURBVDjL7ZXZisRACEXVlEkt2WZ6tv//0iEYI8b0wEC/dZ/Hew8igVhwkJhwg+HErXLeCprAmAf82EnOXkvWoreUxY5+Vdv5Ojz4xQrzTTff9OizS3GxZXzRSdofac7MPIKS8FCRiJpuo3YFT1Gb7UvaeLY9/HjqLLPxeYXr8Ti7dCKJRzizF82nP5JS0Je9mHz8KXEJ/rsUA1z6NfidFPwYv0T/z31ovePTfPaFPCZhOXwBWy906nswj+KHApv4oajix4LFD3kSPxa9+p4ifmS49od/+nTPp5f/jH6R+xAZYEYX2PFar4oGwDHnm11zByV7LYyc9LWIv8vG27dLv0CIxQTwC7coWUmaFFoKAAAAAElFTkSuQmCC);
         }
     }
     @else {
-        padding-top: (image-height($img) + $offset);
-        padding-bottom: (image-height($img) + $offset);
+        padding-top: calc(#{image-height($img)} + #{$offset});
+        padding-bottom: calc(#{image-height($img)} + #{$offset});
         @media (min-width: 769px) {
-            padding-right: (image-width($img) + $offset);
-            padding-left: (image-width($img) + $offset);
+            padding-right: calc(#{image-width($img)} + #{$offset});
+            padding-left: calc(#{image-width($img)} + #{$offset});
         }
         &::before,
         &::after {
             @include imgBg($img, true);
         }
     }
-    position: relative;
     &::before,
     &::after {
         position: absolute;
+        background-position: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
         content: '';
     }
     &::before {

@@ -316,6 +316,18 @@
                                 "color": "#bd973c"
                             }
                         ]
+                    },
+                    "right": {
+                        "subtitle": "作經銷批發生意，其實您可以這樣管",
+                        "listTitle": "通路合約控管好、加快結帳與對帳",
+                        "list": [
+                            "系統建立各通路商談定的合約費用計算方式與條件記錄，並自動產出費用金額與通路。",
+                            "合約費用明細表，可指定日期產出銷/ 退單據。",
+                            "通路合約費用可依金額自動拋轉產生應付憑單，依贈品產生訂單。",
+                            "自動依採購合約條件設定滾算採購費用，可指定資料日期，篩選進/退貨單單據。"
+                        ],
+                        "imgUrl": "images/multichannel/solution1.jpg",
+                        "figcaption": "解決方案圖"
                     }
                 }
             },
@@ -339,6 +351,150 @@
                                 "color": "#49bcc3"
                             }
                         ]
+                    },
+                    "right": {
+                        "subtitle": "作連鎖通路KA生意，其實您可以這樣管",
+                        "listTitle": "善用批號管理、進而降低報廢成本",
+                        "list": [
+                            "可按客戶商品允收期條件建立於系統中。",
+                            "出貨時由系統依照該客戶的商品允收期條件自動帶出出貨[批號]，倉庫人員僅需按系統建議的批號指示去倉庫撿貨即可。",
+                            "若有短效期品，系統能夠提早警示及提醒，讓同仁能盡早將[即期品]在未過期前充分被利用，降低報廢成本。",
+                            "避免出錯的批號導致被客戶退貨或罰款。"
+                        ],
+                        "imgUrl": "images/multichannel/solution2.jpg",
+                        "figcaption": "解決方案圖"
+                    }
+                }
+            },
+            {
+                "title": "門市專櫃",
+                "tabs": {
+                    "left": {
+                        "subtitle": "做門市專櫃生意，管理重點有那些？預購活動、滿額活動、會員專屬、促銷活動、門市要貨",
+                        "desc": "新光三越週年慶要開始了，只要預購抗老活膚霜組合，就送化妝包跟面膜，加購青春不老眼霜再加送旅行組一份，買二組送安瓶，買三組送行李箱.....某貴婦本來預購晚霜跟眼霜的組合，又說要換成精華液跟安瓶，又加買了彩妝盤，扣掉她之前付的禮券跟刷卡訂金，還要再收多少錢?",
+                        "pains": [
+                            {
+                                "imgSrc": "images/multichannel/icon-pain5.png",
+                                "text": "貴婦",
+                                "hoverText": "上次預訂的眼霜我不要了，幫我換成安瓶組合，但我想要行李箱，幫我算一下還要買多少才能送?",
+                                "color": "#efba70"
+                            },
+                            {
+                                "imgSrc": "images/multichannel/icon-pain6.png",
+                                "text": "櫃姐",
+                                "hoverText": "這位是VIP千萬不能得罪，但她一下要精華液，一下要送旅行組，現在又要溱到行李箱的滿額贈，已經搞不楚要收多少錢?",
+                                "color": "#b988b8"
+                            }
+                        ]
+                    },
+                    "right": {
+                        "subtitle": "經營門市專櫃其實您可以這樣管",
+                        "listTitle": "預購活動用心做、檔期營收穩達標",
+                        "list": [
+                            "預購明細隨時掌握，訂金及沖銷歷程統一控管。",
+                            "付款取貨確保顧客及公司權益。"
+                        ],
+                        "imgUrl": "images/multichannel/solution3.jpg",
+                        "figcaption": "解決方案圖"
+                    }
+                }
+            },
+            {
+                "title": "網購生意",
+                "tabs": {
+                    "left": {
+                        "subtitle": "作網購生意，管理重點有那些？接單、出貨、對帳、退換貨",
+                        "desc": "YA平台有267張單、PC平台有234張單、樂平台有189張單….哇！每天訂單這麼多，這季獎金可以領到手軟，但平台格式都不同打單打到眼睛花，就算加班也打不完吧？訂單從四面八方一直來！",
+                        "pains": [
+                            {
+                                "imgSrc": "images/multichannel/icon-pain7.png",
+                                "text": "客戶",
+                                "hoverText": "我前天訂了1組青春不老組，贈品是面膜10片，沒收到贈品阿....",
+                                "color": "#ef8570"
+                            },
+                            {
+                                "imgSrc": "images/multichannel/icon-pain8.png",
+                                "text": "客戶",
+                                "hoverText": "網頁上寫買晚霜50ml就送3瓶5ml的旅行組，還有送10ml化妝水，但我收到面膜?",
+                                "color": "#cdbc5d"
+                            },
+                            {
+                                "imgSrc": "images/multichannel/icon-pain9.png",
+                                "text": "客戶",
+                                "hoverText": "不是24小時到貨嗎?但我一直沒收到貨....",
+                                "color": "#7ccdc4"
+                            }
+                        ]
+                    },
+                    "right": {
+                        "subtitle": "網購生意其實您可以這樣管",
+                        "list": [
+                            "接單零誤差、出貨搶時效",
+                            "平台訂單自動轉入、確認即可",
+                            "隨時掌握準確的商品庫存",
+                            "自動產生對應的物流貨運",
+                            "降低平台扣款及缺貨罰款"
+                        ],
+                        "imgUrl": "images/multichannel/solution4.jpg",
+                        "figcaption": "解決方案圖"
+                    }
+                }
+            },
+            {
+                "title": "觀光工廠",
+                "tabs": {
+                    "left": {
+                        "subtitle": "經營觀光工廠，管理重點有那些？接團前、接團中、接團後",
+                        "desc": "控團沒做好影響有多大？哪一團什麼時候進來，不容易掌握，花時間做聯繫，需要做臨時應變。團控沒控好，引起團和團碰撞，造成館內壅擠，客人參觀意願降低。",
+                        "hoverBox": [
+                            {
+                                "imgSrc": "images/multichannel/icon-pain10.png",
+                                "hoverImgSrc": "images/multichannel/icon-pain10-h.png",
+                                "color": "#5cc99c"
+                            }
+                        ]
+                    },
+                    "right": {
+                        "subtitle": "觀光工廠其實您可以這樣管",
+                        "listTitle": "資源有限，事先安排不忙亂!",
+                        "list": [
+                            "團務資料預先建立，預先安排接待人力與有限資源。",
+                            "掌握準確商品庫存，即時補貨，架上不缺貨。"
+                        ],
+                        "imgUrl": "images/multichannel/solution5.jpg",
+                        "figcaption": "解決方案圖"
+                    }
+                }
+            },
+            {
+                "title": "新零售",
+                "tabs": {
+                    "left": {
+                        "subtitle": "門市、網購平台缺一不可，線上、線下、物流及金流全渠道會員管理",
+                        "desc": "消費者可選擇的渠道多又廣，不配合就少了很多機會？一配合多平台多通路，優惠折扣都不一樣，成本也不一樣，到底哪個能賺哪個是賠？而金流和物流的串接，和還有一堆會員資訊要分析！任何一個環節錯了，都是人財兩失.........",
+                        "pains": [
+                            {
+                                "imgSrc": "images/multichannel/icon-pain11.png",
+                                "text": "行銷企劃",
+                                "hoverText": "推了不同促銷方案，也不知道效果如何？越來越高的廣告行銷費用，但並沒有實際反應在銷售數字上.......",
+                                "color": "#ef8570"
+                            },
+                            {
+                                "imgSrc": "images/multichannel/icon-pain12.png",
+                                "text": "錢老闆",
+                                "hoverText": "商品要有門市可以體驗，還要上架到各網路平台，消費者要好、要快還要便宜，這樣還有利潤可以賺嗎？",
+                                "color": "#cdbc5d"
+                            }
+                        ]
+                    },
+                    "right": {
+                        "subtitle": "全渠道整合管理其實可以這樣管",
+                        "list": [
+                            "接從來客紀錄中找出對的人，去推對的活動，才能提高行銷效益",
+                            "有效整合全渠道會員管理、線上、線下、物流金流到消費者，進行大數據分析"
+                        ],
+                        "imgUrl": "images/multichannel/solution6.jpg",
+                        "figcaption": "解決方案圖"
                     }
                 }
             }
@@ -352,6 +508,64 @@
                 "desc": "鼎新電腦累積30多年產業輔導驗，50,000多家企業成功案例，提供完整行業解決方案；因應產業趨勢、法令制度的變化，提供最佳服務與支援！",
                 "imgSrc": "images/case/hero-bg.png",
                 "url": "javascript:;"
+            }
+        ],
+        "cases": [
+            {
+                "id": 1,
+                "company": "和康生物科技(碧芙蕾詩/BIOFLASH)",
+                "category": "生物科技",
+                "description": "建立BOM，過往的成本計算需要四小時，而現在僅需半小時即可快速完成",
+                "url": "/tw/case/674.html",
+                "imgSrc": "images/case/case01.jpg"
+            },
+            {
+                "id": 2,
+                "company": "耐斯",
+                "category": "原料化工",
+                "description": "李經理認為IT必須幫助耐斯完成幾件事情：降低成本、優化作業過程從而減少資源消費、提高作業速度",
+                "url": "/tw/case/1023.html",
+                "imgSrc": "images/case/case02.jpg"
+            },
+            {
+                "id": 3,
+                "company": "益美化工",
+                "category": "原料化工",
+                "description": "由成本結算後所得出正確的成本，提供高層作為售價決策，增加經營分析管理掌握成本效益",
+                "url": "/tw/case/1055.html",
+                "imgSrc": "images/case/case03.jpg"
+            },
+            {
+                "id": 4,
+                "company": "香根企業",
+                "category": "高端品牌包材",
+                "description": "公司高層在跟鼎新談系統應用時，想的是公司未來二岸三地的大量溝通與使用",
+                "url": "/tw/case/1581.html",
+                "imgSrc": "images/case/case04.jpg"
+            },
+            {
+                "id": 5,
+                "company": "南六企業",
+                "category": "不織布王國",
+                "description": "HR蔣小姐說在收集文件上面，我的結算資料會更快速，也沒有紙本問題，系統會幫我看出缺勤的人員，我只要專心看幾個有出勤異常的人，包括輪班津貼部分系統都會幫我算好",
+                "url": "/tw/case/592.html",
+                "imgSrc": "images/case/case05.jpg"
+            },
+            {
+                "id": 6,
+                "company": "獨領風騷",
+                "category": "通路",
+                "description": "合夥人欲查詢大陸山東門市每日業績狀況，在POS的架構上，可控制交易資料回傳的時間",
+                "url": "/tw/case/1037.html",
+                "imgSrc": "images/case/case06.jpg"
+            },
+            {
+                "id": 7,
+                "company": "屈臣氏",
+                "category": "通路",
+                "description": "我們多了更多的時間向客戶介紹產品，直接以電話大量購買的訂單也變多了",
+                "url": "/tw/case/1582.html",
+                "imgSrc": "images/case/case07.jpg"
             }
         ]
     }

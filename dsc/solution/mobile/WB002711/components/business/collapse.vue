@@ -12,7 +12,7 @@
                 <p>{{item.content.desc}}</p>
                 <figure>
                     <img :src="item.content.imgUrl" alt="">
-                    <figcaption>▲{{item.content.figcaption}}</figcaption>
+                    <figcaption>▲ {{item.content.figcaption}}</figcaption>
                 </figure>
                 <a href="/tw/dsc/solution/WB002972/case.html" target="_blank" v-if="items.length === idx + 1">看完整新零售解決方案>>></a>
             </div>
@@ -95,6 +95,7 @@ module.exports = {
 }
 .el-collapse-item__content img {
     margin-bottom: .5em;
+    border: 1px solid #c0c0c0;
 }
 .el-collapse-item__content a {
     margin-top: 1em;
