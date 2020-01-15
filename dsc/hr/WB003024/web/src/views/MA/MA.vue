@@ -4,8 +4,8 @@
             <div class="logo">
                 <div>
                     <picture>
-                        <source media="(min-width: 769px)" :srcset="require('./hero-logo.png')">
-                        <img :src="require('./hero-logo-s.png')" alt="DigiWIN Your Future">
+                        <source media="(min-width: 769px)" srcset="./hero-logo.png">
+                        <img src="./hero-logo-s.png" alt="DigiWIN Your Future">
                     </picture>
                 </div>
             </div>
@@ -39,8 +39,8 @@
                     :padding-top="isMobile ? '55px' : '80px'"
                 ></section-title>
                 <picture>
-                    <source media="(min-width: 769px)" :srcset="require('./section2-chart.svg')">
-                    <img :src="require('./section2-chart-s.svg')" alt="">
+                    <source media="(min-width: 769px)" srcset="./section2-chart.svg">
+                    <img src="./section2-chart-s.svg" alt="">
                 </picture>
             </div>
         </article>
@@ -57,7 +57,7 @@
         </article>
 
         <article class="section4">
-            <img :src="require('./section4-pic.jpg')" alt="join us">
+            <img src="./section4-pic.jpg" alt="join us">
             <div class="container">
                 <div class="content">
                     <section-title
@@ -86,10 +86,10 @@
             ></section-title>
             <div class="content">
                 <a href="https://youtu.be/3X7zvkeyTPc" data-fancybox>
-                    <img :src="require('./section5-poster1.jpg')" alt="">
+                    <img src="./section5-poster1.jpg" alt="">
                 </a>
                 <a href="https://youtu.be/fp0xugGs4qA" data-fancybox>
-                    <img :src="require('./section5-poster2.jpg')" alt="">
+                    <img src="./section5-poster2.jpg" alt="">
                 </a>
             </div>
         </article>
@@ -135,7 +135,7 @@
                     </div>
                     <a href="https://www.facebook.com/digiwinHR" class="content__qrcode" target="_blank">
                         <figure>
-                            <img :src="require('./qrcode.jpg')" alt="">
+                            <img src="./qrcode.jpg" alt="">
                             <figcaption>鼎新人才招募網粉絲專頁</figcaption>
                         </figure>
                     </a>
@@ -230,6 +230,7 @@ $main-color: #3a46ac;
 }
 .hero {
     position: relative;
+    overflow: hidden;
     height: 757px;
     background-position: 50% 0;
     background-size: cover;
@@ -323,7 +324,7 @@ $main-color: #3a46ac;
             }
         }
         &::before {
-            transform: translate(-50%, calc(-50% - 10px)) rotate(-45deg);
+            transform: translateX(-50%) translateY(-50%) translateY(-10px) rotate(-45deg);
         }
         &::after {
             transform: translate(-50%, -50%) rotate(-45deg);
@@ -402,6 +403,9 @@ $main-color: #3a46ac;
         }
         @media (min-width: $content-width + 1) {
             width: 50%;
+        }
+        > * {
+            width: 100%;
         }
     }
     .sectionTitle {
@@ -504,11 +508,14 @@ $main-color: #3a46ac;
             flex-direction: row;
             justify-content: space-between;
         }
-        a + a {
-            margin-top: 15px;
-            @media (min-width: $tablet-width + 1) {
-                margin-top: 0;
-                margin-left: 15px;
+        a {
+            width: 100%;
+            + a {
+                margin-top: 15px;
+                @media (min-width: $tablet-width + 1) {
+                    margin-top: 0;
+                    margin-left: 15px;
+                }
             }
         }
     }
@@ -537,7 +544,11 @@ $main-color: #3a46ac;
     }
     .content {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        &::before,
+        &::after {
+            content: '';
+        }
         > a {
             display: flex;
             flex-direction: column;
@@ -594,12 +605,15 @@ $main-color: #3a46ac;
         align-items: center;
         @media (min-width: $mobile-width + 1) {
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
         @media (min-width: $tablet-width + 1) {
             margin: 0 auto;
             max-width: 640px;
-            justify-content: space-between;
+        }
+        &::before,
+        &::after {
+            content: '';
         }
         &__text {
             margin-bottom: 2em;

@@ -115,8 +115,8 @@ $main-color: #3a46ac;
         background-color: transparent;
     }
     @media (min-width: $tablet-width + 1) {
-        flex: auto;
         overflow: visible;
+        width: calc(100% - 280px);
     }
     > .container {
         margin: 0;
@@ -253,11 +253,11 @@ $main-color: #3a46ac;
     padding-bottom: 2em;
     @media (min-width: $mobile-width + 1) {
         position: relative;
-        flex: auto;
         margin-top: 24px;
         padding-right: 1em;
         padding-left: 40px;
         min-height: 355px;
+        width: 100%;
     }
     @media (min-width: $tablet-width + 1) {
         position: relative;

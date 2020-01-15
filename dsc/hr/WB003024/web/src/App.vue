@@ -101,9 +101,9 @@ export default {
         this.mediaSensor(768);
         this.mediaSensor2(1499);
         
-        if (this.detectIE) {
-            alert('建議使用 Google Chrome，以獲得最佳瀏覽效果。');
-        }
+        // if (this.detectIE) {
+        //     alert('建議使用 Google Chrome，以獲得最佳瀏覽效果。');
+        // }
     },
 }
 </script>
