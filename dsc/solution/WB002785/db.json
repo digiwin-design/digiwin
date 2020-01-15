@@ -1,0 +1,128 @@
+{
+    "WB00278501": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501/hero-bg.jpg",
+                    "images/WB00278501/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_law": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_law/hero-bg.jpg",
+                    "images/WB00278501_law/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_verify": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_verify/hero-bg.jpg",
+                    "images/WB00278501_verify/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_research": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_research/hero-bg.jpg",
+                    "images/WB00278501_research/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_control": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_control/hero-bg.jpg",
+                    "images/WB00278501_control/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_produce": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_produce/hero-bg.jpg",
+                    "images/WB00278501_produce/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_service": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_service/hero-bg.jpg",
+                    "images/WB00278501_service/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_seminar": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_seminar/hero-bg.jpg",
+                    "images/WB00278501_seminar/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_case": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["標題"],
+                "desc": ["描述"],
+                "imgSrc": [
+                    "images/WB00278501_case/hero-bg.jpg",
+                    "images/WB00278501_case/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    }
+}
