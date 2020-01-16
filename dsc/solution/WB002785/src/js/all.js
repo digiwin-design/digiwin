@@ -5,6 +5,9 @@ httpVueLoader.register(Vue, 'components/contact.vue');
 httpVueLoader.register(Vue, 'components/main-header.vue');
 httpVueLoader.register(Vue, 'components/slider-banner.vue');
 httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
+httpVueLoader.register(Vue, 'components/hover-box.vue');
+httpVueLoader.register(Vue, 'components/slider.vue');
+httpVueLoader.register(Vue, 'components/tabs.vue');
 
 // =============================================================================
 // function

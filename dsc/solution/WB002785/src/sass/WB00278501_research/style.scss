@@ -1,4 +1,62 @@
 @import '../common';
 @import 'components';
 
-main {}
+main {
+    line-height: 1.6;
+    .hoverBox {
+        // icon
+        @for $nth from 1 through 13 {
+            &.icon#{$nth} {
+                &::before {
+                    background-image: image-url('hoverBox-icons/icon#{$nth}.png');
+                }
+            }
+        }
+    }
+    .slider {
+        &-desc {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5em;
+            width: 100%;
+            align-items: center;
+            &-title {
+                margin-bottom: .5em;
+                text-align: center;
+                font-weight: bold;
+                font-size: 24px;
+            }
+            ul {
+                padding-left: 1em;
+                list-style-type: disc;
+            }
+            & > * {
+                max-width: 100%;
+            }
+        }
+        &-more {
+            @include btn(100%, 40px, #fff, #e94609, 0);
+            margin: 30px auto 0;
+            max-width: 335px;
+            font-size: 20px;
+        }
+        &-listCols {
+            display: flex;
+            ul + ul {
+                margin-left: 50px;
+            }
+        }
+    }
+    .desktop-nav a,
+    .mobile .accordion h2 {
+        background-color: #e94609;
+    }
+    .sectionTitle {
+        padding-top: 50px;
+        text-align: center;
+        font-size: 26px;
+        @media (min-width: $tablet-width + 1) {
+            font-size: 36px;
+        }
+    }
+}

@@ -19,7 +19,7 @@ module.exports = {
     props: {
         color: {
             type: String,
-            required: true
+            default: '#e94609'
         },
         customClass: String,
         fadeIn: {

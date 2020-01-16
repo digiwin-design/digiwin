@@ -36,6 +36,10 @@ const store = new Vuex.Store({
 
 let app = new Vue({
     el: 'main',
+    components: {
+        mobile: httpVueLoader('components/WB00278501_research/mobile.vue'),
+        desktop: httpVueLoader('components/WB00278501_research/desktop.vue'),
+    },
     computed: {
         isMobile() {
             return store.state.isMobile;
@@ -45,6 +49,9 @@ let app = new Vue({
         },
         result() {
             return store.state.result;
+        },
+        componentId() {
+            return store.state.isMobile ? 'mobile' : 'desktop';
         },
     },
     methods: {

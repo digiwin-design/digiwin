@@ -18,26 +18,25 @@ main .banner {
         flex-direction: column;
         height: 100%;
         justify-content: center;
-    }
-    &-title {
-        max-width: 500px;
-        width: 100%;
-        color: #ff0;
-        letter-spacing: getLetterSpacing(25);
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 1.2;
+        align-items: center;
         @media (min-width: $tablet-width + 1) {
-            font-size: 48px;
+            flex-direction: row;
         }
     }
-    &-desc {
-        margin-top: 1em;
-        max-width: 500px;
-        width: 100%;
+    &-title {
+        margin-bottom: .5em;
         color: #fff;
+        white-space: nowrap;
         letter-spacing: getLetterSpacing(25);
-        line-height: 1.3;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.2;
+        @media (min-width: $tablet-width + 1) {
+            flex: none;
+            margin-right: .5em;
+            margin-bottom: 0;
+            font-size: 48px;
+        }
     }
     &-controls {
         position: absolute;

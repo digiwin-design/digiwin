@@ -20,12 +20,11 @@ main .banner {
         justify-content: center;
     }
     &-title {
-        max-width: 500px;
         width: 100%;
-        color: #ff0;
+        color: #fff;
         letter-spacing: getLetterSpacing(25);
         font-weight: bold;
-        font-size: 40px;
+        font-size: 36px;
         line-height: 1.2;
         @media (min-width: $tablet-width + 1) {
             font-size: 48px;
@@ -33,11 +32,11 @@ main .banner {
     }
     &-desc {
         margin-top: 1em;
-        max-width: 500px;
+        max-width: 800px;
         width: 100%;
         color: #fff;
         letter-spacing: getLetterSpacing(25);
-        line-height: 1.3;
+        line-height: 1.6;
     }
     &-controls {
         position: absolute;

@@ -36,6 +36,10 @@ const store = new Vuex.Store({
 
 let app = new Vue({
     el: 'main',
+    components: {
+        'slider-banner-s': httpVueLoader('components/WB00278501_case/slider-banner-s.vue'),
+        'slider-banner': httpVueLoader('components/WB00278501_case/slider-banner.vue'),
+    },
     computed: {
         isMobile() {
             return store.state.isMobile;
