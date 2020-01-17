@@ -5,10 +5,10 @@ main {
     line-height: 1.6;
     .hoverBox {
         // icon
-        @for $nth from 1 through 13 {
+        @for $nth from 1 through 3 {
             &.icon#{$nth} {
                 &::before {
-                    background-image: image-url('hoverBox-icons/icon#{$nth}.png');
+                    background-image: image-url('WB00278501_research/hover-box-icon#{$nth}.png');
                 }
             }
         }
@@ -21,10 +21,28 @@ main {
             width: 100%;
             align-items: center;
             &-title {
+                display: flex;
+                flex-direction: column;
                 margin-bottom: .5em;
-                text-align: center;
                 font-weight: bold;
                 font-size: 24px;
+                align-items: center;
+                @media (min-width: $tablet-width + 1) {
+                    flex-direction: row;
+                    align-items: flex-start;
+                }
+                > strong {
+                    flex: none;
+                    margin-bottom: .5em;
+                    color: #30c2c4;
+                    font-size: 36px;
+                    font-family: -apple-system, Roboto, Helvetica, Arial, 'PingFang TC', PMingLiU, sans-serif;
+                    line-height: 1;
+                    @media (min-width: $tablet-width + 1) {
+                        margin-right: .5em;
+                        margin-bottom: 0;
+                    }
+                }
             }
             ul {
                 padding-left: 1em;
@@ -33,12 +51,6 @@ main {
             & > * {
                 max-width: 100%;
             }
-        }
-        &-more {
-            @include btn(100%, 40px, #fff, #e94609, 0);
-            margin: 30px auto 0;
-            max-width: 335px;
-            font-size: 20px;
         }
         &-listCols {
             display: flex;
@@ -49,7 +61,7 @@ main {
     }
     .desktop-nav a,
     .mobile .accordion h2 {
-        background-color: #e94609;
+        background-color: #30c2c4;
     }
     .sectionTitle {
         padding-top: 50px;
@@ -57,6 +69,17 @@ main {
         font-size: 26px;
         @media (min-width: $tablet-width + 1) {
             font-size: 36px;
+        }
+    }
+    .more {
+        @include btn(100%, 60px, #00ada7, #fff, 0);
+        margin: 50px auto 0;
+        max-width: 510px;
+        border: 1px solid #00ada7;
+        font-weight: bold;
+        font-size: 24px;
+        @media (min-width: $tablet-width + 1) {
+            margin-top: 0;
         }
     }
 }
