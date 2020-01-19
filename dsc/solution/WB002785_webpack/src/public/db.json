@@ -1,0 +1,127 @@
+{
+    "WB00278501": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["別讓舊版證書效期<br>成為市場擴展的絆腳石", "別讓舊版證書效期<br>成為市場擴展的<br>絆腳石"],
+                "desc": ["及早準備ISO13485:2016換證<br>讓醫材市場暢行無阻"],
+                "imgSrc": [
+                    "images/WB00278501/hero-bg.jpg",
+                    "images/WB00278501/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_law": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["醫材法規"],
+                "desc": ["醫療器材產品範圍廣泛，產品所使用技術種類繁多，由於醫療器材攸關使用安全且涉及醫療專業行為，各國訂定嚴謹的法令確保其安全性及效能，因此醫療器材產業能否成功行銷全球，業者需能符合國際法規要求來進行產品的研發與生產，亦即要能否建立符合法規要求之品質管理系統，進而持續改善並維持其有效性。"],
+                "imgSrc": [
+                    "images/WB00278501_law/hero-bg.jpg",
+                    "images/WB00278501_law/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_verify": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["電腦確效"],
+                "desc": ["確效(Validation)：係指有文件證明的行動，能證實程序、製程、機械設備、原材料或系統確實能持續穩定的導致預期之效果。就像ISO制度！要文件證明！"],
+                "imgSrc": [
+                    "images/WB00278501_verify/hero-bg.jpg",
+                    "images/WB00278501_verify/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_research": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["產品研發控不好，開發效率優不了"],
+                "desc": ["研發佔比非常大的醫材產業，每天同時進行多個專案。研發團隊從專案建立到圖文修改、料號承認、EBOM建立整合入ERP的MBOM量產，中間繁瑣的資料交換與不同版本保存的過程，正是一個產品的生命週期。尤其醫療器材成品品號需於衛服部核准後才可投入生產、製造與販售；通常研發與認證需同時進行，部門之間的協同作業進行當下，作業困擾也一一衍生..."],
+                "imgSrc": [
+                    "images/WB00278501_research/hero-bg.jpg",
+                    "images/WB00278501_research/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_control": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["GMP+GDP+ISO13485 » 品質"],
+                "desc": ["ISO13485：2003  為醫療器材品質管理系統，為了確保醫療器材的安全和功效，從供應商評估、進料檢驗、製程檢驗、成品檢驗、不良品管制、退貨處理…..各環節皆須符合規範和紀錄"],
+                "imgSrc": [
+                    "images/WB00278501_control/hero-bg.jpg",
+                    "images/WB00278501_control/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_produce": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["打通產銷平台, 提升出貨效率與品質"],
+                "desc": ["缺料的問題真的只能用存貨來解決嗎? 若供需無法及時平衡, 將影響訂單出貨 ，無法及時回覆客戶準確的交期, 將會影響客戶滿意度及再次下單的意願，若是不能應用條碼來簡化進出貨及盤點的效率及正確性, 可能會影響客戶對出貨品質的滿意度..."],
+                "imgSrc": [
+                    "images/WB00278501_produce/hero-bg.jpg",
+                    "images/WB00278501_produce/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_service": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["從服務創造價值,形塑醫材服務新模式"],
+                "desc": ["售後維修服務如何主動出擊，把無形的服務轉換為企業獲利來源，其中維護合約、維修履歷到客訴的追蹤處理，都是售後服務的重要管理程序，售服作得好，老客戶忠誠度就能持續維持，進而建立市場好口碑，提昇品牌價值。"],
+                "imgSrc": [
+                    "images/WB00278501_service/hero-bg.jpg",
+                    "images/WB00278501_service/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_seminar": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["醫材研討會，挑戰法規與品質的衝擊"],
+                "desc": ["鼎新為醫材業舉辦管理議題與實務操作兼俱的研討會，如您在過去因工作繁忙無法親臨參加，我們將提供免費講義資料索取….期許與您在產業快速變化的年代，一同吸收新知，一同改變與成長…"],
+                "imgSrc": [
+                    "images/WB00278501_seminar/hero-bg.jpg",
+                    "images/WB00278501_seminar/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    },
+    "WB00278501_case": {
+        "banner": [
+            {
+                "id": 1,
+                "title": ["行業深耕．獨到專精"],
+                "imgSrc": [
+                    "images/WB00278501_case/hero-bg.jpg",
+                    "images/WB00278501_case/hero-bg-s.jpg"
+                ],
+                "url": "javascript:;"
+            }
+        ]
+    }
+}
