@@ -2,5 +2,11 @@
 @import 'components';
 
 main {
-    
+    .section1 {
+        @include bg('../../images/WB00278501/section1-bg-s.jpg');
+        .sectionTitle > h1 {
+            letter-spacing: getLetterSpacing(50);
+            color: #fff;
+        }
+    }
 }

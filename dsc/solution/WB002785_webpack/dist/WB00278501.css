@@ -178,3 +178,13 @@ main .banner {
             transform: translate3d(0px, 0, 0) !important; }
   main .banner.disabled .banner-pagination {
     display: none; }
+
+main .section1 {
+  background-image: url(images/WB00278501/section1-bg-s.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat; }
+  main .section1 .sectionTitle > h1 {
+    letter-spacing: 0.05em;
+    color: #fff; }
+
+/*# sourceMappingURL=WB00278501.css.map*/

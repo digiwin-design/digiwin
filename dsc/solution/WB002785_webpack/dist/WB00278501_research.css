@@ -395,18 +395,16 @@ main .desktop .slider {
         -ms-flex-align: center;
             align-items: center; }
     main .desktop .slider-nav label {
-      color: #888;
       display: block;
       height: 50px;
       border-radius: 25px;
       background-color: transparent;
+      color: #888;
       text-align: center;
       line-height: 50px;
       width: 150px;
       border: 1px solid #888;
       cursor: pointer; }
-      main .desktop .slider-nav label:link, main .desktop .slider-nav label:visited {
-        color: #888; }
       main .desktop .slider-nav label + label {
         margin-left: 30px; }
   main .desktop .slider-content {
@@ -614,11 +612,11 @@ main {
       main .sectionTitle {
         font-size: 36px; } }
   main .more {
-    color: #00ada7;
     display: block;
     height: 60px;
     border-radius: 0;
     background-color: #fff;
+    color: #00ada7;
     text-align: center;
     line-height: 60px;
     width: 100%;
@@ -627,8 +625,8 @@ main {
     border: 1px solid #00ada7;
     font-weight: bold;
     font-size: 24px; }
-    main .more:link, main .more:visited {
-      color: #00ada7; }
     @media (min-width: 769px) {
       main .more {
         margin-top: 0; } }
+
+/*# sourceMappingURL=WB00278501_research.css.map*/

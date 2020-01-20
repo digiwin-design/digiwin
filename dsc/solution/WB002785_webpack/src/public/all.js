@@ -8,6 +8,7 @@ httpVueLoader.register(Vue, 'components/slider-banner-s.vue');
 httpVueLoader.register(Vue, 'components/hover-box.vue');
 httpVueLoader.register(Vue, 'components/slider.vue');
 httpVueLoader.register(Vue, 'components/tabs.vue');
+httpVueLoader.register(Vue, 'components/section-title.vue');
 
 // =============================================================================
 // function

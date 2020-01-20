@@ -1,66 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	function webpackJsonpCallback(data) {
-/******/ 		var chunkIds = data[0];
-/******/ 		var moreModules = data[1];
-/******/ 		var executeModules = data[2];
-/******/
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, resolves = [];
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 				resolves.push(installedChunks[chunkId][0]);
-/******/ 			}
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/
-/******/ 		while(resolves.length) {
-/******/ 			resolves.shift()();
-/******/ 		}
-/******/
-/******/ 		// add entry modules from loaded chunk to deferred list
-/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
-/******/
-/******/ 		// run deferred modules when all chunks ready
-/******/ 		return checkDeferredModules();
-/******/ 	};
-/******/ 	function checkDeferredModules() {
-/******/ 		var result;
-/******/ 		for(var i = 0; i < deferredModules.length; i++) {
-/******/ 			var deferredModule = deferredModules[i];
-/******/ 			var fulfilled = true;
-/******/ 			for(var j = 1; j < deferredModule.length; j++) {
-/******/ 				var depId = deferredModule[j];
-/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
-/******/ 			}
-/******/ 			if(fulfilled) {
-/******/ 				deferredModules.splice(i--, 1);
-/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
-/******/ 			}
-/******/ 		}
-/******/
-/******/ 		return result;
-/******/ 	}
-/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
-/******/ 	// object to store loaded and loading chunks
-/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 	// Promise = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
-/******/ 		"WB00278501": 0
-/******/ 	};
-/******/
-/******/ 	var deferredModules = [];
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -139,18 +79,9 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
-/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
-/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-/******/ 	jsonpArray.push = webpackJsonpCallback;
-/******/ 	jsonpArray = jsonpArray.slice();
-/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
-/******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
-/******/
-/******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./js/WB00278501.js","vendor"]);
-/******/ 	// run deferred modules when ready
-/******/ 	return checkDeferredModules();
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/WB00278501.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -163,7 +94,98 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_WB00278501_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/WB00278501/style.scss */ \"./sass/WB00278501/style.scss\");\n/* harmony import */ var _sass_WB00278501_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_WB00278501_style_scss__WEBPACK_IMPORTED_MODULE_0__);\n // Vue.use(VueAwesomeSwiper);\n\nvar store = new Vuex.Store({\n  state: {\n    isMobile: false,\n    isMediumWidth: false,\n    result: null\n  },\n  mutations: {\n    updateDevice: function updateDevice(state, payload) {\n      state.isMobile = payload;\n    },\n    updateDevice2: function updateDevice2(state, payload) {\n      state.isMediumWidth = payload;\n    },\n    setData: function setData(state, payload) {\n      state.result = payload;\n    }\n  },\n  actions: {\n    getData: function getData(context) {\n      axios.get('public/db.json').then(function (res) {\n        context.commit('setData', res.data.WB00278501);\n        app.$nextTick(function () {\n          // 依據選單高度設定main上方間距\n          var menuHeight = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;\n          document.querySelector('main').style.paddingTop = menuHeight > 50 ? '50px' : 0;\n\n          if (location.hash) {\n            app.moveTo(location.hash);\n          }\n        });\n      });\n    }\n  }\n});\nvar app = new Vue({\n  el: 'main',\n  computed: {\n    isMobile: function isMobile() {\n      return store.state.isMobile;\n    },\n    isMediumWidth: function isMediumWidth() {\n      return store.state.isMediumWidth;\n    },\n    result: function result() {\n      return store.state.result;\n    }\n  },\n  methods: {\n    mediaSensor: function mediaSensor(minWidth) {\n      var resizeWidth = function resizeWidth(pMatchMedia) {\n        return store.commit('updateDevice', !pMatchMedia.matches);\n      };\n\n      var mm = window.matchMedia(\"(min-width: \".concat(minWidth + 1, \"px)\"));\n      mm.addListener(resizeWidth);\n      resizeWidth(mm);\n    },\n    mediaSensor2: function mediaSensor2(minWidth) {\n      var resizeWidth = function resizeWidth(pMatchMedia) {\n        return store.commit('updateDevice2', !pMatchMedia.matches);\n      };\n\n      var mm = window.matchMedia(\"(min-width: \".concat(minWidth + 1, \"px)\"));\n      mm.addListener(resizeWidth);\n      resizeWidth(mm);\n    },\n    moveTo: function moveTo(selector) {\n      var target = document.querySelector(selector);\n      if (!target) return;\n      var offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;\n      var targetPos = document.querySelector(target).getBoundingClientRect().top + window.pageYOffset;\n      var finalPos = offset ? targetPos - offset : targetPos;\n      window.scroll({\n        top: finalPos,\n        left: 0,\n        behavior: 'smooth'\n      });\n    }\n  },\n  created: function created() {\n    store.dispatch('getData');\n  },\n  mounted: function mounted() {\n    this.mediaSensor(768);\n    this.mediaSensor2(1199);\n  }\n});\n\n//# sourceURL=webpack:///./js/WB00278501.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _sass_WB00278501_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/WB00278501/style.scss */ "./sass/WB00278501/style.scss");
+/* harmony import */ var _sass_WB00278501_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_WB00278501_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+ // Vue.use(VueAwesomeSwiper);
+
+var store = new Vuex.Store({
+  state: {
+    isMobile: false,
+    isMediumWidth: false,
+    result: null
+  },
+  mutations: {
+    updateDevice: function updateDevice(state, payload) {
+      state.isMobile = payload;
+    },
+    updateDevice2: function updateDevice2(state, payload) {
+      state.isMediumWidth = payload;
+    },
+    setData: function setData(state, payload) {
+      state.result = payload;
+    }
+  },
+  actions: {
+    getData: function getData(context) {
+      axios.get('public/db.json').then(function (res) {
+        context.commit('setData', res.data.WB00278501);
+        app.$nextTick(function () {
+          // 依據選單高度設定main上方間距
+          var menuHeight = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+          document.querySelector('main').style.paddingTop = menuHeight > 50 ? '50px' : 0;
+
+          if (location.hash) {
+            app.moveTo(location.hash);
+          }
+        });
+      });
+    }
+  }
+});
+var app = new Vue({
+  el: 'main',
+  computed: {
+    isMobile: function isMobile() {
+      return store.state.isMobile;
+    },
+    isMediumWidth: function isMediumWidth() {
+      return store.state.isMediumWidth;
+    },
+    result: function result() {
+      return store.state.result;
+    }
+  },
+  methods: {
+    mediaSensor: function mediaSensor(minWidth) {
+      var resizeWidth = function resizeWidth(pMatchMedia) {
+        return store.commit('updateDevice', !pMatchMedia.matches);
+      };
+
+      var mm = window.matchMedia("(min-width: ".concat(minWidth + 1, "px)"));
+      mm.addListener(resizeWidth);
+      resizeWidth(mm);
+    },
+    mediaSensor2: function mediaSensor2(minWidth) {
+      var resizeWidth = function resizeWidth(pMatchMedia) {
+        return store.commit('updateDevice2', !pMatchMedia.matches);
+      };
+
+      var mm = window.matchMedia("(min-width: ".concat(minWidth + 1, "px)"));
+      mm.addListener(resizeWidth);
+      resizeWidth(mm);
+    },
+    moveTo: function moveTo(selector) {
+      var target = document.querySelector(selector);
+      if (!target) return;
+      var offset = document.querySelector('.page-submenu') && document.querySelector('.page-submenu').offsetHeight;
+      var targetPos = document.querySelector(target).getBoundingClientRect().top + window.pageYOffset;
+      var finalPos = offset ? targetPos - offset : targetPos;
+      window.scroll({
+        top: finalPos,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  },
+  created: function created() {
+    store.dispatch('getData');
+  },
+  mounted: function mounted() {
+    this.mediaSensor(768);
+    this.mediaSensor2(1199);
+  }
+});
 
 /***/ }),
 
@@ -174,8 +196,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sas
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sass/WB00278501/style.scss?");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=WB00278501.js.map

@@ -32,14 +32,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="assets/color-converter.js" defer></script>
     <link rel="stylesheet" href="/tw/dsc/css/reboot.css">
-    <script src="public/all.js" defer></script>
+    <script src="public/all.js"></script>
     <link rel="preload" href="images/WB00278501/hero-bg.jpg" as="image">
-    <link rel="stylesheet" href="css/WB00278501.css">
+    <link rel="stylesheet" href="WB00278501.css">
     <main v-cloak v-if="result"><slider-banner-s v-if="isMobile" v-bind:slides="result.banner" device="mobile"></slider-banner-s>
 <slider-banner v-else v-bind:slides="result.banner" device="desktop"></slider-banner>
 
+<article class="section1">
+    <div class="container">
+        <img src="images/WB00278501/section1-logo.png" alt="">
+        <section-title
+            title="無論是身處醫材產業的您，或是即將進入醫材產業的電子業與機械業，完成ISO13485、GMP、GDP認證已經是基本門鑑"
+            :padding-top="0"
+        ></section-title>
+    </div>
+</article>
+
 <contact v-bind:multiple="false" source=""></contact>
     </main>
-    <!-- 後台上稿內容結束-->
-  <script type="text/javascript" src="js/vendor.js"></script><script type="text/javascript" src="js/WB00278501.js"></script></body>
+  <script type="text/javascript" src="js/WB00278501.js"></script></body>
 </html>

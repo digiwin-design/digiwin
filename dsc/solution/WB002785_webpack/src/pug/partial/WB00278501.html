@@ -1,4 +1,14 @@
 <slider-banner-s v-if="isMobile" v-bind:slides="result.banner" device="mobile"></slider-banner-s>
 <slider-banner v-else v-bind:slides="result.banner" device="desktop"></slider-banner>
 
+<article class="section1">
+    <div class="container">
+        <img src="images/WB00278501/section1-logo.png" alt="">
+        <section-title
+            title="無論是身處醫材產業的您，或是即將進入醫材產業的電子業與機械業，完成ISO13485、GMP、GDP認證已經是基本門鑑"
+            :padding-top="0"
+        ></section-title>
+    </div>
+</article>
+
 <contact v-bind:multiple="false" source=""></contact>
