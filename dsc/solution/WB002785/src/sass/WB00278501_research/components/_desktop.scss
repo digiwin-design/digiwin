@@ -27,7 +27,7 @@ main .desktop {
             }
             @for $nth from 1 through 4 {
                 &.icon#{$nth} {
-                    background-image: image-url('WB00278501_research/nav-icon#{$nth}.png');
+                    background-image: url('../../images/WB00278501_research/nav-icon#{$nth}.png');
                     background-position: 50%;
                     background-repeat: no-repeat;
                 }

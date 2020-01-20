@@ -1,4 +1,47 @@
 @import '../common';
 @import 'components';
 
-main {}
+main {
+    .section1 {
+        @include bg('../../images/WB00278501/section1-bg-s.jpg');
+        padding: 70px 0;
+        .logo {
+            display: block;
+            margin: 0 auto 30px;
+        }
+        .sectionTitle > h1 {
+            color: #fff;
+            letter-spacing: getLetterSpacing(50);
+            line-height: 1.2;
+        }
+        section {
+            padding: 1.5em 1em;
+            background-color: #fff;
+            h1 {
+                margin-bottom: 5px;
+                color: #0083c7;
+                letter-spacing: getLetterSpacing(50);
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 30px;
+            }
+            p {
+                letter-spacing: getLetterSpacing(25);
+                &:nth-of-type(1) {
+                    margin-bottom: 1em;
+                    font-size: 17px;
+                    line-height: 24px;
+                }
+                &:nth-of-type(2) {
+                    text-align: right;
+                }
+            }
+            strong {
+                color: #f00;
+            }
+            + section {
+                margin-top: 10px;
+            }
+        }
+    }
+}

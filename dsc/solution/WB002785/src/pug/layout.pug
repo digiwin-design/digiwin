@@ -27,7 +27,7 @@ html(lang='zh-Hant-TW')
         // 後台上稿內容開始
         //- form
         link(rel='stylesheet', href='/tw/dsc/css/Eform/xcConfirm.css')
-        script(src='/tw/dsc/js/Eform/xcConfirm.js', defer)
+        script(src='/tw/dsc/js/Eform/xcConfirm.js')
 
         //- submenu
         link(rel='stylesheet', href='/tw/dsc/assets/submenu/submenu.css')
@@ -35,16 +35,15 @@ html(lang='zh-Hant-TW')
 
         //- swiper
         link(rel="stylesheet", href="assets/swiper.min.css")
-        script(src="assets/swiper.min.js", defer)
-        script(src="assets/vue-awesome-swiper.js", defer)
+        script(src="assets/swiper.min.js")
+        script(src="assets/vue-awesome-swiper.js")
 
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-        script(src="assets/color-converter.js", defer)
+        script(src="assets/color-converter.js")
         link(rel='stylesheet', href='/tw/dsc/css/reboot.css')
-        script(src='js/all.min.js', defer)
+        script(src='public/all.js')
         
         block includes
         
         main(v-cloak, v-if="result")
             block content
-        // 後台上稿內容結束

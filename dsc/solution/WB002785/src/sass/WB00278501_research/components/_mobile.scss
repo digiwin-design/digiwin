@@ -29,11 +29,15 @@ main .mobile {
                 outline: none;
             }
             &::after {
-                @include imgBg('plus-icon.png');
+                width: 20px;
+                height: 20px;
+                background-image: url('../../images/plus-icon.png');
                 content: '';
             }
             &.active::after {
-                @include imgBg('minus-icon.png');
+                width: 20px;
+                height: 20px;
+                background-image: url('../../images/minus-icon.png');
                 content: '';
             }
         }

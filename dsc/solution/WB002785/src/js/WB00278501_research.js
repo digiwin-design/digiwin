@@ -1,3 +1,5 @@
+import '../sass/WB00278501_research/style.scss';
+
 // Vue.use(VueAwesomeSwiper);
 
 const store = new Vuex.Store({
@@ -19,7 +21,7 @@ const store = new Vuex.Store({
     },
     actions: {
         getData(context) {
-            axios.get('db.json').then(res => {
+            axios.get('public/db.json').then(res => {
                 context.commit('setData', res.data.WB00278501_research);
                 app.$nextTick(() => {
                     // 依據選單高度設定main上方間距
