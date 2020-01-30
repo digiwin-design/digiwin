@@ -1,13 +1,14 @@
 # 官網檔案
 
-| 名稱        | 位置                                 | 備註                |
-| --------- | ---------------------------------- | ----------------- |
-| 後台上稿用樣板   | /tw/dsc/template/editor.html       |                   |
-| 後台上稿用重置樣式 | /tw/dsc/css/reboot.css             | 編譯前：./reboot.scss |
-| 全站共用 CSS  | /tw/dsc/css/all.css                |                   |
-| 全站共用 JS   | /tw/dsc/js/common.min.js           | 編譯前：./common.js   |
-| 研討會 Demo  | /tw/dsc/dev/demo/seminar/          |                   |
-| 原錯誤連結轉址用  | /tw/portal/page/index/id/1202.html |                   |
+| 名稱        | 位置                                 | 備註              |
+| --------- | ---------------------------------- | --------------- |
+| 後台上稿用樣板   | /tw/dsc/template/editor.html       | 第一種表單           |
+| 後台上稿用樣板   | /tw/dsc/template/editor2.html      | 第二種表單           |
+| 後台上稿用重置樣式 | /tw/dsc/css/reboot.css             | 原始檔：reboot.scss |
+| 全站共用 CSS  | /tw/dsc/css/all.css                |                 |
+| 全站共用 JS   | /tw/dsc/js/common.min.js           | 原始檔：common.js   |
+| 研討會 Demo  | /tw/dsc/dev/demo/seminar/          |                 |
+| 原錯誤連結轉址用  | /tw/portal/page/index/id/1202.html |                 |
 
 # 官網元件
 
@@ -29,13 +30,13 @@
 
 | 名稱        | 位置                         | 備註                                                                       |
 | --------- | -------------------------- | ------------------------------------------------------------------------ |
-| 文章        | /tw/article/               | 實際網址：./README.md                                                         |
+| 文章        | /tw/article/               | 實際網址於 README                                                             |
 | 活動        | /tw/dsc/activity/          |                                                                          |
 | 企業通電子報    | /tw/dsc/digital-newspaper/ |                                                                          |
 | 企業通雜誌     | /tw/dsc/mag/               |                                                                          |
 | 賀卡        | /tw/dsc/card/              |                                                                          |
 | 工業 4.0    | /tw/dsc/industry4/         |                                                                          |
-| CPL (實驗頁) | /tw/dsc/marketing/         | [Demo](http://10.20.88.75:8083/tw/dsc/marketing/WB002838/WB00283804.htm) |
+| CPL (實驗頁) | /tw/dsc/marketing/         | [Demo](https://www.digiwin.com/tw/dsc/marketing/WB002838/WB00283804.htm) |
 | 方案/行業     | /tw/dsc/solution/          |                                                                          |
 | 行業手機版     | /tw/dsc/solution/mobile/   |                                                                          |
 | ERP       | /tw/ERP/                   |                                                                          |
@@ -98,13 +99,13 @@
 - 正式  
   潘家鴈、李孟純、石渼華、黃郁雯、林佩君、張琇媚、黃子芸、沈家如、蔡任維、宋冠樺、李宜芳、王齡翊
 
-- 正式 (東南亞實驗頁)  
+- 正式 (東南亞 CPL：WB003008)  
   宋冠樺、李孟純、洪之文、石渼华、張琇媚、黃子芸、李宜芳、王齡翊
 
 - 測試  
   陳琬婷、林韓蕙、蔡承真、李孟純、謝元中
   
-  ## LINE/Email 登入紀錄
+  ## LINE / Email 登入紀錄
 
 - URL：http://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save
 
@@ -137,7 +138,7 @@
   ```
 
 - 呼叫時機
-1. LINE/Email 登入成功時
+1. LINE / Email 登入成功時
 
 2. 已登入狀態下進入文章頁面時
    

@@ -608,7 +608,7 @@ p {
   width: 120px;
   margin: 10px 0 0 10px;
   padding: 0;
-  background: url("/tw/eform/images/identCode.jpg") no-repeat center center;
+  background: url("https://www.digiwin.com/tw/dsc/images/Eform/identCode.jpg") no-repeat center center;
   border: none;
   color: #555;
   font: italic bold 20px/40px Arial;
@@ -621,7 +621,7 @@ p {
   width: 27px;
   height: 40px;
   margin: 10px 0 0 10px;
-  background: url("/tw/eform/images/renovCode.png") no-repeat center center;
+  background: url("https://www.digiwin.com/tw/eform/images/renovCode.png") no-repeat center center;
   cursor: pointer;
 }
 
