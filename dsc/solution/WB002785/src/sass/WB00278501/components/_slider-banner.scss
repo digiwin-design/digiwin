@@ -9,6 +9,7 @@ main .banner {
     &-slide {
         height: 409px;
         background-position: 50% 0;
+        background-size: cover;
         @media (min-width: $tablet-width + 1) {
             height: 472px;
         }
