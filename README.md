@@ -12,19 +12,19 @@
 
 # 官網元件
 
-| 名稱          | 位置                               | 備註             |
-| ----------- | -------------------------------- | -------------- |
-| 右下角浮動廣告     | /tw/dsc/assets/ad/               |                |
-| 活動結束 Banner | /tw/dsc/assets/EventEnd/         |                |
-| 各行各業區塊      | /tw/dsc/assets/index-industry/   | 首頁使用           |
-| 各行各業區塊      | /tw/dsc/assets/industry-list/    | IT 編列預算使用      |
-| 各行各業區塊      | /tw/dsc/assets/industry-list-v2/ | 行業使用           |
-| 登入&訂閱       | /tw/dsc/assets/login/            |                |
-| 繁/簡體站跳轉提示   | /tw/dsc/assets/popup/            |                |
-| 次級選單        | /tw/dsc/assets/submenu/          |                |
-| 次級選單手機版     | /tw/dsc/assets/submenu-spa/      |                |
-| 文章廣告 Banner | /tw/dsc/assets/article-ad/       |                |
-| 資料下載標題設置    | /tw/dsc/assets/resources/        | 資料來源為 Firebase |
+| 名稱          | 位置                               | 備註                                |
+| ----------- | -------------------------------- | --------------------------------- |
+| 右下角浮動廣告     | /tw/dsc/assets/ad/               |                                   |
+| 活動結束 Banner | /tw/dsc/assets/EventEnd/         |                                   |
+| 各行各業區塊      | /tw/dsc/assets/index-industry/   | 首頁使用                              |
+| 各行各業區塊      | /tw/dsc/assets/industry-list/    | IT 編列預算使用                         |
+| 各行各業區塊      | /tw/dsc/assets/industry-list-v2/ | 行業使用                              |
+| 登入&訂閱       | /tw/dsc/assets/login/            | 串接 LINE & Google reCAPTCHA (個人帳號) |
+| 繁/簡體站跳轉提示   | /tw/dsc/assets/popup/            |                                   |
+| 次級選單        | /tw/dsc/assets/submenu/          |                                   |
+| 次級選單手機版     | /tw/dsc/assets/submenu-spa/      |                                   |
+| 文章廣告 Banner | /tw/dsc/assets/article-ad/       |                                   |
+| 資料下載標題設置    | /tw/dsc/assets/resources/        | 資料來源為 Firebase (個人帳號)             |
 
 # 官網分類
 
