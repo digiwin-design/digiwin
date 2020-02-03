@@ -88,8 +88,8 @@ main.WB00278501 #news .news01:hover {
 main.WB00278501 #news .news02 {
     transition: all 0.2s ease-out;
     position: absolute;
-    top: 197px;
-    left: 400px;
+    top: 212px;
+    left: 480px;
 }
 
 main.WB00278501 #news .news02:hover {
