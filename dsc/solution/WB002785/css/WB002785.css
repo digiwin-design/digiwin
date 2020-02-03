@@ -5,7 +5,13 @@ main *, main *:before, main *:after {
 
 main.WB00278501 #banner {
     background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/bannerBg.jpg) no-repeat center top;
-		height:470px;
+    height:470px;
+}
+
+main.WB00278501 #banner a {
+    display: flex;
+    height: inherit;
+    align-items: center;
 }
 
 main.WB00278501 #banner.section {
@@ -57,6 +63,15 @@ main.WB00278501 #news .title {
     color: #FFF;
 }
 
+main.WB00278501 #news .news01,
+main.WB00278501 #news .news02,
+main.WB00278501 #news .news03,
+main.WB00278501 #news .news04,
+main.WB00278501 #news .news05 {
+    width: 372px;
+    height: 264px;
+}
+
 main.WB00278501 #news .news01 {
     transition: all 0.2s ease-out;
     position: absolute;
@@ -73,10 +88,8 @@ main.WB00278501 #news .news01:hover {
 main.WB00278501 #news .news02 {
     transition: all 0.2s ease-out;
     position: absolute;
-    width: 636px;
-    height: 183px;
-    top: 318px;
-    left: 218px;
+    top: 197px;
+    left: 400px;
 }
 
 main.WB00278501 #news .news02:hover {
@@ -86,10 +99,8 @@ main.WB00278501 #news .news02:hover {
 main.WB00278501 #news .news03 {
     transition: all 0.2s ease-out;
     position: absolute;
-    width: 636px;
-    height: 183px;
-    top: 437px;
-    left: 358px;
+    top: 517px;
+    left: 478px;
 }
 
 main.WB00278501 #news .news03:hover {
@@ -99,10 +110,8 @@ main.WB00278501 #news .news03:hover {
 main.WB00278501 #news .news04 {
     transition: all 0.2s ease-out;
     position: absolute;
-    width: 636px;
-    height: 183px;
-    top: 545px;
-    left: 43px;
+    top: 515px;
+    left: 33px;
 }
 
 main.WB00278501 #news .news04:hover {
@@ -112,10 +121,8 @@ main.WB00278501 #news .news04:hover {
 main.WB00278501 #news .news05 {
     transition: all 0.2s ease-out;
     position: absolute;
-    width: 636px;
-    height: 183px;
-    top: 651px;
-    left: 280px;
+    top: 371px;
+    left: 270px;
 }
 
 main.WB00278501 #news .news05:hover {
