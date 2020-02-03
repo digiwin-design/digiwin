@@ -32,13 +32,15 @@ main.WB00278501 #news {
     margin-top: 0px;
     background: url(https://www.digiwin.com/tw/dsc/solution/WB002785/images/news/bg.png) top no-repeat;
     overflow: hidden;
-    height: 800px;
+    height: 1200px;
+    padding-bottom: 0;
 }
 
 main.WB00278501 #news .content {
     width: 980px;
-    height: 1000px;
+    height: inherit;
     position: relative;
+    padding-bottom: 0;
 }
 
 main.WB00278501 #news .bg2 {
@@ -67,7 +69,8 @@ main.WB00278501 #news .news01,
 main.WB00278501 #news .news02,
 main.WB00278501 #news .news03,
 main.WB00278501 #news .news04,
-main.WB00278501 #news .news05 {
+main.WB00278501 #news .news05,
+main.WB00278501 #news .news06 {
     width: 372px;
     height: 264px;
 }
@@ -75,8 +78,6 @@ main.WB00278501 #news .news05 {
 main.WB00278501 #news .news01 {
     transition: all 0.2s ease-out;
     position: absolute;
-    width: 636px;
-    height: 183px;
     top: 213px;
     left: 32px;
 }
@@ -121,11 +122,22 @@ main.WB00278501 #news .news04:hover {
 main.WB00278501 #news .news05 {
     transition: all 0.2s ease-out;
     position: absolute;
-    top: 371px;
-    left: 270px;
+    top: 820px;
+    left: 33px;
 }
 
 main.WB00278501 #news .news05:hover {
+    transform: translateX(-30px) translateY(-20px);
+}
+
+main.WB00278501 #news .news06 {
+    transition: all 0.2s ease-out;
+    position: absolute;
+    top: 820px;
+    left: 478px;
+}
+
+main.WB00278501 #news .news06:hover {
     transform: translateX(-30px) translateY(-20px);
 }
 
