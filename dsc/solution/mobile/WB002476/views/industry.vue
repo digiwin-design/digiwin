@@ -38,10 +38,10 @@
                             <li>產業創新經營研究室-東海大學劉仁傑教授研究</li>
                         </ul>
                     </a>
-                    <a href="http://lean.thu.edu.tw/工業4-0泡沫化後的製造創新研討會1018四活動預告/" target="_blank">
+                    <a href="/tw/dsc/activity/MFT/WB002967/WB00296701.html" target="_blank">
                         <ul>
-                            <li><strong>劉仁傑教授 近期研討會活動</strong></li>
-                            <li>2018/10/18 「工業4.0泡沫化後的製造創新研討會」</li>
+                            <li><strong>劉仁傑教授 研討會活動＜課程講義免費索取＞</strong></li>
+                            <li>2019/07/09「未來智造，精實製造」</li>
                         </ul>
                     </a>
                 </div>
