@@ -1,3 +1,4 @@
+@import 'common/variable';
 @import 'common/helpers';
 @import 'common/family';
 @import 'common/reset';
@@ -294,6 +295,7 @@
         }
     }
     .seminarInfo-btn {
+        margin-top: 20px;
         width: 316px;
         line-height: 41px;
     }
@@ -439,7 +441,6 @@
         }
         .seminarInfo-text p {
             margin-top: 0;
-            margin-bottom: 20px;
         }
         #case .list {
             width: 50%;
@@ -496,7 +497,8 @@
                 align-self: auto;
             }
             .seminarInfo-btn {
-                margin: 0 auto;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }

@@ -29,7 +29,7 @@ main {
         font-size: 26px;
     }
     .header {
-        @include headerBg('seminar/header-bg.jpg', 'seminar/header-bg.jpg', 50% 100%, false);
+        @include headerBg('seminar/header-bg.jpg', 'seminar/header-bg.jpg', 50% 100%);
         .container {
             height: 340px;
             @media (min-width: $tablet-width + 1) {
