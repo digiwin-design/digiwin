@@ -1188,6 +1188,10 @@
                 "url": "WB00278301_case"
             },
             {
+                "text": "研討會",
+                "url": "seminar"
+            },
+            {
                 "text": "解決方案",
                 "url": "javascript:;",
                 "dropdowns": [

@@ -192,6 +192,10 @@
                 "url": "#/case"
             },
             {
+                "text": "研討會",
+                "url": "/tw/dsc/solution/WB002783/seminar.html"
+            },
+            {
                 "text": "解決方案",
                 "url": "javascript:;",
                 "dropdowns": [

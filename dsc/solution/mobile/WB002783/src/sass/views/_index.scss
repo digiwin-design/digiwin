@@ -53,7 +53,7 @@ main .index {
             position: relative;
             margin: 0 auto;
             padding-bottom: 65px;
-            width: 250px;
+            width: 300px;
             height: 290px;
             font-weight: bold;
             &::before {
@@ -206,6 +206,9 @@ main .index {
             @include btn(100%, 52px, #fff, #0194aa);
             color: #fff;
             font-weight: bold;
+            & + a {
+                margin-top: 1em;
+            }
         }
     }
     .section6 {
