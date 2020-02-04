@@ -453,7 +453,6 @@ main.WB00274201_law #law2 #boxD {
 main.WB00274201_law #law2 #boxD .box {
     margin: 0 auto;
     width: 960px;
-    height: 720px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 1px 5px 10px #999;
@@ -461,8 +460,13 @@ main.WB00274201_law #law2 #boxD .box {
     position: relative;
 }
 
+main.WB00274201_law #law2 #boxD .box a {
+    display: block;
+    padding: 50px 45px;
+}
+
 main.WB00274201_law #law2 #boxD img {
-    margin: 50px 45px;
+    max-width: 100%;
 }
 
 main.WB00274201_law #law2 #boxD h2 {
@@ -480,7 +484,7 @@ main.WB00274201_law #law2 #boxD h2 {
 main.WB00274201_law #law2 #boxD .box p {
     font-size: 16px;
     position: absolute;
-    top: 669px;
+    bottom: 30px;
     right: 55px;
     color: #666;
 }
