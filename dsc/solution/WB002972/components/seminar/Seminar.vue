@@ -17,6 +17,57 @@
             <h1>{{content.section1Title}}</h1>
             <div ref="accordion" class="accordion">
                 <h2 v-on:click="slideToggle">
+                    開啟新零售 實現全域營銷<span><i>more</i></span>
+                </h2>
+                <div class="accordion-content">
+                    <div class="container">
+                        <div class="accordion-col">
+                            <div class="accordion-illust">
+                                <img src="images/seminar/accordion/illust3.png" alt>
+                            </div>
+                            <div class="accordion-btns">
+                                <a href="/tw/dsc/activity/RTL/WB002993/" target="_blank">了解更多</a>
+                                <a href="#contact" class="js-nav" target="_blank">索取資料</a>
+                            </div>
+                        </div>
+                        <div class="accordion-col">
+                            <p>新零售翻轉產業生態，面對消費者思考模式的改變，該如何因應跨平台、多通路、多支付、碎片數據？</p>
+                            <dl>
+                                <dt>➤全通路融合線上線下</dt>
+                                <dd>會員經營X精準行銷，達到多來客、高回購率</dd>
+                                <dt>➤升級顧客體驗</dt>
+                                <dd>虛擬服務 X 有感場景，提高消費意願，加速成交	</dd>
+                                <dt>➤強化營運效能</dt>
+                                <dd>金流X物流X資訊流，藉數據驅動決策，贏得商機</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <h2 v-on:click="slideToggle">
+                    融合線上線下商機 開啟全通路經營布局<span><i>more</i></span>
+                </h2>
+                <div class="accordion-content">
+                    <div class="container">
+                        <div class="accordion-col">
+                            <div class="accordion-illust">
+                                <img src="images/seminar/accordion/illust4.png" alt>
+                            </div>
+                            <div class="accordion-btns">
+                                <a href="/tw/dsc/activity/RTL/WB003007/" target="_blank">了解更多</a>
+                                <a href="#contact" class="js-nav" target="_blank">索取資料</a>
+                            </div>
+                        </div>
+                        <div class="accordion-col">
+                            <p>
+                                找客戶就像大海撈針，如何吸客找到潛在客戶？<br>
+                                線上線下通路越多元，該怎麼融合零碎的消費足跡？<br>
+                                做行銷就像亂槍打鳥，無法精準抓到消費者需求？<br>
+                                從市場趨勢談起，解析業者在新零售議題下的未來商機，如何在廣大市場找到潛在顧客？從線上線下共融互通、打造有感的行銷服務，完整建立吸客、導客到留客的經營祕訣！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h2 v-on:click="slideToggle">
                     2019鼎新流通年會<span><i>more</i></span>
                 </h2>
                 <div class="accordion-content">
