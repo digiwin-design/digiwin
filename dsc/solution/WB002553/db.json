@@ -234,6 +234,44 @@
         "section2Desc": "或許，您以為... 同業都沒做，好像也還好？再觀望看看吧...<br>其實，很多企業都來鼎新上過課了！快看看大家都怎麼做！？",
         "accordion": [
             {
+                "title": "2019年7月 <i>選擇比努力更重要！60年的品牌從超越到跨越，堅持不變的品質與不框限未來可能</i>",
+                "contents": [
+                    {
+                        "html": "<p>通路獲利祕訣：突破現代通路經營趨勢，與競爭者不同的營運策略，如何穩固獲利來源？<br>逆勢成長關鍵：跳脫低價競爭戰，制定產品與價格策略上，如何吸引客戶買單？<br>降損提效控食安：生產製造一條龍，突破報廢瓶頸，從批號到溯源管理翻轉食安衝擊！</p>"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "/tw/dsc/activity/RTL/WB002974/",
+                        "text": "了解更多"
+                    },
+                    {
+                        "href": "#contact",
+                        "text": "索取資料"
+                    }
+                ],
+                "imgSrc": "images/seminar/accordion/illust8.jpg"
+            },
+            {
+                "title": "2019年6月 <i>如何突破國界限制，成功贏得在地市場</i>",
+                "contents": [
+                    {
+                        "html": "<p>從1→100→1000家，從台灣→兩岸→跨國，快樂檸檬(雅茗天地集團)創辦人現身說法，分享決定展店區域之經營秘訣，在內部管理如何建構「智慧供應鏈」以實現標準化、簡單化，來滿足營運上的快速擴張？在外部服務需展現品牌及商品的差異化優勢，才能成功地吸引消費者；然而，面對新零售浪潮下要如何讓營收持續成長？</p>"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "/tw/dsc/activity/RTL/WB002966/",
+                        "text": "了解更多"
+                    },
+                    {
+                        "href": "#contact",
+                        "text": "索取資料"
+                    }
+                ],
+                "imgSrc": "images/seminar/accordion/illust9.jpg"
+            },
+            {
                 "title": "2018年8月 <i>供需【連】的起、商機【鎖】的住，品牌價值再加乘</i>",
                 "contents": [
                     {
@@ -249,7 +287,8 @@
                         "href": "#contact",
                         "text": "索取資料"
                     }
-                ]
+                ],
+                "imgSrc": "images/seminar/accordion/illust1.jpg"
             },
             {
                 "title": "2018年6月 <i>逆勢翻轉食品餐飲業營收倍增新量能</i>",
@@ -267,7 +306,8 @@
                         "href": "#contact",
                         "text": "索取資料"
                     }
-                ]
+                ],
+                "imgSrc": "images/seminar/accordion/illust2.jpg"
             },
             {
                 "title": "2018年1月 <i>打造南向「台灣味」食品餐飲站穩東協市場第一步</i>",
@@ -285,7 +325,8 @@
                         "href": "#contact",
                         "text": "索取資料"
                     }
-                ]
+                ],
+                "imgSrc": "images/seminar/accordion/illust3.jpg"
             },
             {
                 "title": "2017年5月 <i>迎戰食品業必備優勢-以自主管理擊破食安風暴，從風險控管翻轉企業新契機</i>",
@@ -303,7 +344,8 @@
                         "href": "#contact",
                         "text": "索取資料"
                     }
-                ]
+                ],
+                "imgSrc": "images/seminar/accordion/illust4.jpg"
             },
             {
                 "title": "2016年5月 <i>食安衝擊ING，重理台灣食品業的突圍方略</i>",
@@ -321,7 +363,8 @@
                         "href": "#contact",
                         "text": "索取資料"
                     }
-                ]
+                ],
+                "imgSrc": "images/seminar/accordion/illust5.jpg"
             },
             {
                 "title": "2015年11月 <i>食安衝擊下，企業重理生意模式與營運新變革</i>",
@@ -339,7 +382,8 @@
                         "href": "#contact",
                         "text": "索取資料"
                     }
-                ]
+                ],
+                "imgSrc": "images/seminar/accordion/illust6.jpg"
             },
             {
                 "title": "2015年5月 <i>食安法開罰前，您要執行的4大應變關鍵！</i>",
@@ -357,7 +401,8 @@
                         "href": "#contact",
                         "text": "索取資料"
                     }
-                ]
+                ],
+                "imgSrc": "images/seminar/accordion/illust7.jpg"
             }
         ],
         "progressBars": [

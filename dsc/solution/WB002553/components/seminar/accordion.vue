@@ -11,7 +11,7 @@
                 <div class="container">
                     <div class="accordion-col">
                         <div class="accordion-illust">
-                            <img :src="'images/seminar/accordion/illust'+(idx+1)+'.jpg'" alt>
+                            <img :src="item.imgSrc" alt>
                         </div>
                         <div class="accordion-btns">
                             <a
