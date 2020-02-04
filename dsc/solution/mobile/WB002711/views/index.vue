@@ -56,8 +56,8 @@
 
             <article class="section6">
                 <div class="container">
-                    <section-title title="電子發票即將全面實施" padding-bottom="1em"></section-title>
-                    <p class="desc">自106年1月1日起停止核准營業人以電子計算機開立統一發票，最快107年1月1日全面停止使用電子計算機發票，政府法規總是來的又急又快，因應的腳步可不能慢。<br>因應法規的第一步從”了解”開始鼎新邀請PWC資誠企業館顧問主講研討會會中說明電子發票相關法規與實施要點...</p>
+                    <section-title title="輕鬆導入電子發票不是問題" padding-bottom="1em"></section-title>
+                    <p class="desc">自106年1月1日起停止核准營業人以電子計算機開立統一發票，最快110年1月1日全面停止使用電子計算機發票，政府法規總是來的又急又快，因應的腳步可不能慢。<br>因應法規的第一步從”了解”開始鼎新邀請PWC資誠企業館顧問主講研討會會中說明電子發票相關法規與實施要點...</p>
                     <a href="/tw/dsc/solution/WB002742/WB00274201.html" target="_blank">
                         <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                         了解更多
