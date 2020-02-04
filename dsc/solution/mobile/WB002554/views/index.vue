@@ -15,8 +15,8 @@
         <article class="section1">
             <div class="container">
                 <section-title
-                    title="塑膠產業接單吹起少量多樣風"
-                    desc="從上游原料供應到下游成品製造，塑膠產業已經開始少量多樣接單，究其原因無非是為了更高的毛利或是產業升級等重要考量。而以往<strong>次料成本、模具妥善、訂單排程、製造現場</strong>等塑膠業重視的管理議題又該如何隨著少量多樣作調整?"
+                    title="輕量化的塑膠材料將成為發展趨勢"
+                    desc="當少量多樣已成常態，再來是輕量化將成為發展趨勢，適用醫材、船舶、航太、電動機汽車等多種產品，塑膠產業在研發上必須更多著墨，少量多樣已是必備條件，生產的品質、研發的價值才是勝出的關鍵。"
                     padding-bottom="1em"
                 ></section-title>
             </div>
@@ -26,9 +26,9 @@
             <div class="container">
                 <div class="section1-list">
                     <ul>
-                        <li>少量多樣接單，引發那些轉變及衝擊?</li>
-                        <li>少量多樣接單，塑膠產業同業們怎麼做?</li>
-                        <li>少量多樣接單，內部作業流程與生產製造如何運作?</li>
+                        <li>面對市場變化和趨勢，該如何因應？</li>
+                        <li>塑膠產業如何符合高彈性和高效率？</li>
+                        <li>生產製造的作業流程應該如何運作？</li>
                     </ul>
                     <router-link :to="{ name: 'control', params: { tab: 5 } }">
                         <i class="material-icons">arrow_forward</i>
