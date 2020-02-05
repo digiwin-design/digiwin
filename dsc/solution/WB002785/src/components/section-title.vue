@@ -35,6 +35,7 @@ module.exports = {
 .sectionTitle h1 {
     max-width: 100%;
     font-size: 26px;
+    line-height: 1.2;
 }
 .sectionTitle p {
     margin-top: 0.5em;
