@@ -70,6 +70,9 @@ let app = new Vue({
             let finalPos = offset ? targetPos - offset : targetPos;
             window.scroll({ top: finalPos, left: 0, behavior: 'smooth' });
         },
+        linkTo(url) {
+            window.open(url);
+        },
     },
     created() {
         store.dispatch('getData');

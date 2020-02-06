@@ -34,11 +34,12 @@ module.exports = {
 }
 .sectionTitle h1 {
     max-width: 100%;
+    font-weight: bold;
     font-size: 26px;
     line-height: 1.2;
 }
 .sectionTitle p {
-    margin-top: 0.5em;
+    margin-top: .5em;
     max-width: 100%;
 }
 @media (min-width: 769px) {
@@ -46,4 +47,5 @@ module.exports = {
         font-size: 36px;
     }
 }
+
 </style>
