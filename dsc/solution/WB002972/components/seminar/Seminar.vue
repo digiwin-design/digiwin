@@ -26,7 +26,7 @@
                                 <img src="images/seminar/accordion/illust3.png" alt>
                             </div>
                             <div class="accordion-btns">
-                                <a href="/tw/dsc/activity/RTL/WB002993/" target="_blank">了解更多</a>
+                                <a href="/tw/dsc/activity/RTL/WB002993/web/" target="_blank">了解更多</a>
                                 <a href="#contact" class="js-nav" target="_blank">索取資料</a>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                                 <img src="images/seminar/accordion/illust4.png" alt>
                             </div>
                             <div class="accordion-btns">
-                                <a href="/tw/dsc/activity/RTL/WB003007/" target="_blank">了解更多</a>
+                                <a href="/tw/dsc/activity/RTL/WB003007/WB00300701.html" target="_blank">了解更多</a>
                                 <a href="#contact" class="js-nav" target="_blank">索取資料</a>
                             </div>
                         </div>
