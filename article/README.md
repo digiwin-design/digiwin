@@ -1,6 +1,9 @@
 # 初次環境建立指令
-1. `bower install`
-1. `gulp compile`
+`bower install`  
+`gulp compile`
+
+# 開發指令
+`gulp`
 
 # 對應網址
 | HTML | URL

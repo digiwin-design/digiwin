@@ -73,7 +73,7 @@ module.exports = {
             return 'https://misws.digiwin.com/SocialMediaMarketing/api/loglist/Save';
         },
         sitekey: function () {
-            return this.dev ? '6LennwITAAAAAOVHXsN6PfrFhF9kCNFJVn__Myan' : '6LfRfcEUAAAAACrGjmwhfLqKej_n2JD4zz9kppq8';
+            return this.dev ? '6Lfcw9YUAAAAANBlUjipucUOXYnNcD0VlIy_Ilxl' : '6Le8w9YUAAAAAK9DBSradzUyjkVPuYCntnrpu7hX';
         },
     },
     methods: {

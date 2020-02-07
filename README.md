@@ -1,30 +1,3 @@
-# 官網檔案
-
-| 名稱        | 位置                            | 備註                            |
-| --------- | ----------------------------- | ----------------------------- |
-| 後台上稿樣板    | /tw/dsc/template/editor.html  | 第一種表單                         |
-| 後台上稿樣板    | /tw/dsc/template/editor2.html | 第二種表單                         |
-| 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts 編譯 reboot.scss |
-| 全站共用 CSS  | /tw/dsc/css/all.css           |                               |
-| 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts 編譯 common.js   |
-| 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                               |
-
-# 官網元件
-
-| 名稱                | 位置                               | 備註                                                             |
-| ----------------- | -------------------------------- | -------------------------------------------------------------- |
-| 右下角浮動廣告           | /tw/dsc/assets/ad/               |                                                                |
-| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       |                                                                |
-| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         |                                                                |
-| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 透過 npm scripts 編譯 index-industry.js                            |
-| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 透過 npm scripts 編譯 industry.css                                 |
-| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 透過 npm scripts 編譯 industry.css                                 |
-| 登入 & 訂閱           | /tw/dsc/assets/login/            | 串接 LINE & Google reCAPTCHA (個人帳號)                              |
-| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已打包給外包商開發完畢                                                    |
-| 資料下載標題設置          | /tw/dsc/assets/resources/        | 1. 透過 npm scripts 編譯 industry.css<br/>2. 資料來源為 Firebase (個人帳號) |
-| 次級選單              | /tw/dsc/assets/submenu/          | 透過 npm scripts 編譯 submenu.js                                   |
-| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 透過 npm scripts 編譯 submenu.js                                   |
-
 # 官網分類
 
 | 名稱        | 位置                         | 備註                                                                       |
@@ -42,6 +15,43 @@
 | 404 Page  | /tw/dsc/404.html           |                                                                          |
 | ERP       | /tw/ERP/                   |                                                                          |
 | 產品        | /tw/software/              |                                                                          |
+
+# 官網檔案
+
+| 名稱        | 位置                            | 備註                            |
+| --------- | ----------------------------- | ----------------------------- |
+| 後台上稿樣板    | /tw/dsc/template/editor.html  | 表單一                           |
+| 後台上稿樣板    | /tw/dsc/template/editor2.html | 表單二                           |
+| 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts 編譯 reboot.scss |
+| 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts 編譯 common.js   |
+| 全站共用 CSS  | /tw/dsc/css/all.css           |                               |
+| 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                               |
+
+# 官網元件
+
+| 名稱                | 位置                               | 備註                                                      |
+| ----------------- | -------------------------------- | ------------------------------------------------------- |
+| 右下角浮動廣告           | /tw/dsc/assets/ad/               |                                                         |
+| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       |                                                         |
+| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         |                                                         |
+| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 透過 npm scripts 編譯 index-industry.js                     |
+| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 透過 npm scripts 編譯 industry.css                          |
+| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 透過 npm scripts 編譯 industry.css                          |
+| 登入 & 訂閱           | /tw/dsc/assets/login/            | 串接 LINE & Google reCAPTCHA                              |
+| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已委外上線                                                   |
+| 資料下載標題設置          | /tw/dsc/assets/resources/        | 1. 透過 npm scripts 編譯 industry.css<br/>2. 資料來源為 Firebase |
+| 次級選單              | /tw/dsc/assets/submenu/          | 透過 npm scripts 編譯 submenu.js                            |
+| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 透過 npm scripts 編譯 submenu.js                            |
+
+# Google 帳戶
+
+帳號：digiwin.design@gmail.com
+
+密碼："鼎新電腦"拼音 (含空白)
+
+註冊服務： reCAPTCHA、Firebase
+
+
 
 # 官網 API
 
