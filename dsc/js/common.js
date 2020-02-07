@@ -200,11 +200,14 @@ $(function () {
         }, 500);
     };
 
-    if (location.hostname !== 'www.digiwin.com') return;
-    document.querySelector('.nav').addEventListener('mouseenter', mouseenterHandler);
-    document.querySelector('.nav').addEventListener('mouseleave', mouseleaveHandler);
-    document.querySelector('#qcTopNavSheetWrapper').addEventListener('mouseenter', mouseenterHandler);
-    document.querySelector('#qcTopNavSheetWrapper').addEventListener('mouseleave', mouseleaveHandler);
+    if (document.querySelector('.nav')) {
+        document.querySelector('.nav').addEventListener('mouseenter', mouseenterHandler);
+        document.querySelector('.nav').addEventListener('mouseleave', mouseleaveHandler);
+    }
+    if (document.querySelector('#qcTopNavSheetWrapper')) {
+        document.querySelector('#qcTopNavSheetWrapper').addEventListener('mouseenter', mouseenterHandler);
+        document.querySelector('#qcTopNavSheetWrapper').addEventListener('mouseleave', mouseleaveHandler);
+    }
 });
 
 // 解決文章右側定位問題

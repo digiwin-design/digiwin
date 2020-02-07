@@ -1,30 +1,29 @@
 # 官網檔案
 
-| 名稱        | 位置                                 | 備註              |
-| --------- | ---------------------------------- | --------------- |
-| 後台上稿用樣板   | /tw/dsc/template/editor.html       | 第一種表單           |
-| 後台上稿用樣板   | /tw/dsc/template/editor2.html      | 第二種表單           |
-| 後台上稿用重置樣式 | /tw/dsc/css/reboot.css             | 原始檔：reboot.scss |
-| 全站共用 CSS  | /tw/dsc/css/all.css                |                 |
-| 全站共用 JS   | /tw/dsc/js/common.min.js           | 原始檔：common.js   |
-| 研討會 Demo  | /tw/dsc/dev/demo/seminar/          |                 |
-| 原錯誤連結轉址用  | /tw/portal/page/index/id/1202.html |                 |
+| 名稱        | 位置                            | 備註                            |
+| --------- | ----------------------------- | ----------------------------- |
+| 後台上稿樣板    | /tw/dsc/template/editor.html  | 第一種表單                         |
+| 後台上稿樣板    | /tw/dsc/template/editor2.html | 第二種表單                         |
+| 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts 編譯 reboot.scss |
+| 全站共用 CSS  | /tw/dsc/css/all.css           |                               |
+| 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts 編譯 common.js   |
+| 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                               |
 
 # 官網元件
 
-| 名稱          | 位置                               | 備註                                |
-| ----------- | -------------------------------- | --------------------------------- |
-| 右下角浮動廣告     | /tw/dsc/assets/ad/               |                                   |
-| 活動結束 Banner | /tw/dsc/assets/EventEnd/         |                                   |
-| 各行各業區塊      | /tw/dsc/assets/index-industry/   | 首頁使用                              |
-| 各行各業區塊      | /tw/dsc/assets/industry-list/    | IT 編列預算使用                         |
-| 各行各業區塊      | /tw/dsc/assets/industry-list-v2/ | 行業使用                              |
-| 登入&訂閱       | /tw/dsc/assets/login/            | 串接 LINE & Google reCAPTCHA (個人帳號) |
-| 繁/簡體站跳轉提示   | /tw/dsc/assets/popup/            | 已打包給外包商開發完畢                       |
-| 次級選單        | /tw/dsc/assets/submenu/          |                                   |
-| 次級選單手機版     | /tw/dsc/assets/submenu-spa/      |                                   |
-| 文章廣告 Banner | /tw/dsc/assets/article-ad/       |                                   |
-| 資料下載標題設置    | /tw/dsc/assets/resources/        | 資料來源為 Firebase (個人帳號)             |
+| 名稱                | 位置                               | 備註                                                             |
+| ----------------- | -------------------------------- | -------------------------------------------------------------- |
+| 右下角浮動廣告           | /tw/dsc/assets/ad/               |                                                                |
+| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       |                                                                |
+| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         |                                                                |
+| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 透過 npm scripts 編譯 index-industry.js                            |
+| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 透過 npm scripts 編譯 industry.css                                 |
+| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 透過 npm scripts 編譯 industry.css                                 |
+| 登入 & 訂閱           | /tw/dsc/assets/login/            | 串接 LINE & Google reCAPTCHA (個人帳號)                              |
+| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已打包給外包商開發完畢                                                    |
+| 資料下載標題設置          | /tw/dsc/assets/resources/        | 1. 透過 npm scripts 編譯 industry.css<br/>2. 資料來源為 Firebase (個人帳號) |
+| 次級選單              | /tw/dsc/assets/submenu/          | 透過 npm scripts 編譯 submenu.js                                   |
+| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 透過 npm scripts 編譯 submenu.js                                   |
 
 # 官網分類
 
@@ -32,17 +31,17 @@
 | --------- | -------------------------- | ------------------------------------------------------------------------ |
 | 文章        | /tw/article/               | 實際網址於 README                                                             |
 | 活動        | /tw/dsc/activity/          |                                                                          |
-| 企業通電子報    | /tw/dsc/digital-newspaper/ |                                                                          |
-| 企業通雜誌     | /tw/dsc/mag/               |                                                                          |
 | 賀卡        | /tw/dsc/card/              |                                                                          |
+| 測試用       | /tw/dsc/dev/               |                                                                          |
+| 企業通電子報    | /tw/dsc/digital-newspaper/ |                                                                          |
 | 工業 4.0    | /tw/dsc/industry4/         |                                                                          |
+| 企業通雜誌     | /tw/dsc/mag/               |                                                                          |
 | CPL (實驗頁) | /tw/dsc/marketing/         | [Demo](https://www.digiwin.com/tw/dsc/marketing/WB002838/WB00283804.htm) |
 | 方案/行業     | /tw/dsc/solution/          |                                                                          |
 | 行業手機版     | /tw/dsc/solution/mobile/   |                                                                          |
+| 404 Page  | /tw/dsc/404.html           |                                                                          |
 | ERP       | /tw/ERP/                   |                                                                          |
 | 產品        | /tw/software/              |                                                                          |
-| 測試用       | /tw/dsc/dev/               |                                                                          |
-| 404 Page  | /tw/dsc/404.html           |                                                                          |
 
 # 官網 API
 

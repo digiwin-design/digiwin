@@ -9,6 +9,7 @@
     "babel:submenu-spa": "npx babel -w dsc/assets/submenu-spa/submenu.js -o dsc/assets/submenu-spa/submenu.min.js",
     "babel:index-industry": "npx babel -w dsc/assets/index-industry/index-industry.js -o dsc/assets/index-industry/index-industry.min.js",
     "babel:resource": "npx babel -w dsc/assets/resources/script.js -o dsc/assets/resources/script.min.js",
+    "sass:industry-list": "node-sass -w --output-style compressed dsc/assets/industry-list/industry.scss dsc/assets/industry-list/industry.css",
     "sass:industry-list-v2": "node-sass -w --output-style compressed dsc/assets/industry-list-v2/industry.scss dsc/assets/industry-list-v2/industry.css",
     "sass:reboot": "node-sass -w --output-style compressed dsc/css/reboot.scss dsc/css/reboot.css"
   },
