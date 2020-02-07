@@ -1,6 +1,11 @@
 {
     "urlMap": [
         {
+            "name": "Demo",
+            "page": "demo",
+            "href": "http://industry4.digiwin.com/activity.htm#contact"
+        },
+        {
             "name": "工業4.0",
             "page": "industry4",
             "href": "http://industry4.digiwin.com/activity.htm#contact"

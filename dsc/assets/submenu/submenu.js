@@ -1,13 +1,18 @@
 (function () {
-    // dev
-    // let dir = '';
-    // let path = '/tw/dsc/solution/WB002554/WB00255401_Issue'.split('/');
-    // let hash = '#contact';
+    let dir, path, hash;
 
-    // final
-    let dir = '/tw/dsc/assets/submenu/';
-    let path = location.pathname.split('/');
-    let hash = location.hash;
+    if (location.pathname === '/tw/dsc/assets/submenu/demo.html') {
+        // demo
+        dir = '';
+        path = '/tw/dsc/solution/WB002554/WB00255401_Issue'.split('/');
+        hash = '#contact';
+    }
+    else {
+        // final
+        dir = '/tw/dsc/assets/submenu/';
+        path = location.pathname.split('/');
+        hash = location.hash;
+    }
 
     let id = path[path.length - 2];
     let page = path[path.length - 1].replace(/(.html|.htm)/g, '');

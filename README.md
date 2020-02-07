@@ -20,7 +20,7 @@
 | 各行各業區塊      | /tw/dsc/assets/industry-list/    | IT 編列預算使用                         |
 | 各行各業區塊      | /tw/dsc/assets/industry-list-v2/ | 行業使用                              |
 | 登入&訂閱       | /tw/dsc/assets/login/            | 串接 LINE & Google reCAPTCHA (個人帳號) |
-| 繁/簡體站跳轉提示   | /tw/dsc/assets/popup/            |                                   |
+| 繁/簡體站跳轉提示   | /tw/dsc/assets/popup/            | 已打包給外包商開發完畢                       |
 | 次級選單        | /tw/dsc/assets/submenu/          |                                   |
 | 次級選單手機版     | /tw/dsc/assets/submenu-spa/      |                                   |
 | 文章廣告 Banner | /tw/dsc/assets/article-ad/       |                                   |
@@ -58,30 +58,34 @@
 - Request Sample
   
   ```js
-  {
-    data: {
-        {
-            doc_no: "WB002554", // 文宣代號
-            source: "塑膠業管理次料成本、模具管理、訂單自動排程、製造現場管理...", // 資料頁面來源
-            page_dir: "http://www.digiwin.com/solution/WB002554/WB00255401.htm", // 網頁位置
-            company: "明明塑膠廠有限公司", // 公司名稱
-            telephone: "（02)29826682", // 聯絡電話
-            extension: "", // 分機
-            address: "", // 公司地址
-            contact_person: "張梅芬", // 聯絡人
-            email: "mmp88.a66@msa.hinet.net", // E-mail
-            mobile: "", // 行動電話
-            department: "採購", // 部門
-            job_title: "主管", // 索取職稱
-            req_sys: "", // 需求內容
-            dm_ask: "Y", // 其它
-            get_file: "", // 資料索取
-            query: "", // 索取內容
-            other: "", // 諮詢內容
-            country: "" // 跨國企業
-        }
+  let tJSON = {
+    doc_no: "WB002554", // 文宣代號
+    source: "塑膠業管理次料成本、模具管理、訂單自動排程、製造現場管理...", // 資料頁面來源
+    page_dir: "http://www.digiwin.com/solution/WB002554/WB00255401.htm", // 網頁位置
+    company: "明明塑膠廠有限公司", // 公司名稱
+    telephone: "（02)29826682", // 聯絡電話
+    extension: "", // 分機
+    address: "", // 公司地址
+    contact_person: "張梅芬", // 聯絡人
+    email: "mmp88.a66@msa.hinet.net", // E-mail
+    mobile: "", // 行動電話
+    department: "採購", // 部門
+    job_title: "主管", // 索取職稱
+    req_sys: "", // 需求內容
+    dm_ask: "Y", // 其它
+    get_file: "", // 資料索取
+    query: "", // 索取內容
+    other: "", // 諮詢內容
+    country: "" // 跨國企業
+  };
+  $.ajax({
+    type: 'POST',
+    url: 'http://misws.digiwin.com/WebPageData/Service.asmx/SaveData',
+    data: { data: JSON.stringify(tJSON) },
+    success(result) {
+      // get result
     }
-  }
+  });
   ```
 
 - Response Sample

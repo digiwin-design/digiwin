@@ -1,12 +1,17 @@
 (function () {
-    // dev
-    // let dir = '';
-    // let path = '/tw/dsc/solution/mobile/WB002839/index#/merchandise'.split('/');
-    // let hash = '';
+    let dir, path, hash;
 
-    // final
-    let dir = '/tw/dsc/assets/submenu-spa/';
-    let path = location.href.split('/');
+    if (location.pathname === '/tw/dsc/assets/submenu-spa/demo.html') {
+        // demo
+        dir = '';
+        path = '/tw/dsc/solution/mobile/WB002839/index#/merchandise'.split('/');
+        hash = '';
+    }
+    else {
+        // final
+        dir = '/tw/dsc/assets/submenu-spa/';
+        path = location.pathname.split('/');
+    }
 
     let id = path.find(value => value.startsWith('WB'));
     let page = '#/' + path[path.length - 1].replace(/(.html|.htm)/g, '');
