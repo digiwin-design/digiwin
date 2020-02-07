@@ -38,6 +38,9 @@ const store = new Vuex.Store({
 
 let app = new Vue({
     el: 'main',
+    components: {
+        'section-title': httpVueLoader('components/WB00278501_verify/section-title.vue'),
+    },
     computed: {
         isMobile() {
             return store.state.isMobile;

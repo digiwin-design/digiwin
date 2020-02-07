@@ -1,4 +1,81 @@
 @import '../common';
 @import 'components';
 
-main {}
+main {
+    .container {
+        max-width: 1000px;
+    }
+    .sectionTitle {
+        @media (min-width: $tablet-width + 1) {
+            align-items: flex-start;
+        }
+        h1 {
+            display: flex;
+            align-items: center;
+            @at-root {
+                main .sectionTitle.green h1 {
+                    color: #009ca2;
+                }
+                main .sectionTitle.white h1 {
+                    color: #fff;
+                }
+            }
+            &::before {
+                @media (min-width: $tablet-width + 1) {
+                    margin-right: 10px;
+                    width: 28px;
+                    height: 28px;
+                    background-size: contain;
+                    content: '';
+                    @at-root {
+                        main .sectionTitle.green h1::before {
+                            background-image: url(../../images/WB00278501_verify/title-icon-g.svg);
+                        }
+                        main .sectionTitle.white h1::before {
+                            background-image: url(../../images/WB00278501_verify/title-icon-w.svg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section1 {
+        padding-bottom: 45px;
+        background-color: #f4f3f3;
+        background-size: cover;
+        @media (min-width: $tablet-width + 1) {
+            @include bg('../../images/WB00278501_verify/section1-bg.jpg');
+            background-color: transparent;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .section2 {
+        @include bg('../../images/WB00278501_verify/section2-bg-s.jpg');
+        padding-bottom: 45px;
+        background-attachment: fixed;
+        background-size: cover;
+        @media (min-width: $tablet-width + 1) {
+            @include bg('../../images/WB00278501_verify/section2-bg.jpg');
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .section3 {
+        padding-bottom: 45px;
+        background-color: #f4f3f3;
+        background-size: cover;
+        @media (min-width: $tablet-width + 1) {
+            @include bg('../../images/WB00278501_verify/section3-bg.jpg');
+            background-color: transparent;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

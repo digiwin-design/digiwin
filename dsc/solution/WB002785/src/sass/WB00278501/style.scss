@@ -2,8 +2,6 @@
 @import 'components';
 
 main {
-    margin: 0 auto;
-    max-width: 1920px;
     .main-btn {
         @include btn(320px, 75px, #fff, #1bbbbd);
         display: block;
@@ -111,6 +109,7 @@ main {
     .section2 {
         @include bg('../../images/WB00278501/section2-bg-s.jpg');
         padding-bottom: 45px;
+        background-size: cover;
         @media (min-width: $tablet-width + 1) {
             background-image: url('../../images/WB00278501/section2-bg.jpg');
         }
@@ -228,6 +227,7 @@ main {
     .section6 {
         @include bg('../../images/WB00278501/section6-bg-s.jpg');
         padding-bottom: 45px;
+        background-size: cover;
         @media (min-width: $tablet-width + 1) {
             background-image: url('../../images/WB00278501/section6-bg.jpg');
         }
