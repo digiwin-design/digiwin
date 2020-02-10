@@ -20,8 +20,8 @@
 
 | 名稱        | 位置                            | 備註                            |
 | --------- | ----------------------------- | ----------------------------- |
-| 後台上稿樣板    | /tw/dsc/template/editor.html  | 表單一                           |
-| 後台上稿樣板    | /tw/dsc/template/editor2.html | 表單二                           |
+| 後台上稿樣板    | /tw/dsc/template/editor.html  | 表單一 (含二級選單)                           |
+| 後台上稿樣板    | /tw/dsc/template/editor2.html | 表單二 (含二級選單)                           |
 | 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts 編譯 reboot.scss |
 | 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts 編譯 common.js   |
 | 全站共用 CSS  | /tw/dsc/css/all.css           |                               |
@@ -205,3 +205,9 @@
     "msg": "" // 錯誤訊息
   }
   ```
+
+# 已完成專案
+
+[https://trello.com/b/pdhuI2vz/digiwin](https://trello.com/b/pdhuI2vz/digiwin)
+
+

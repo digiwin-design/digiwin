@@ -18,6 +18,10 @@
                             <h1 class="title" data-text="THE LATEST VEDIO">近期播出</h1>
                             <div class="content">
                                 <div class="content__illust">
+                                    <!-- 圖片 -->
+                                    <!-- <img src="" alt=""> -->
+
+                                    <!-- 影片 -->
                                     <div class="video-container">
                                         <iframe src="https://www.youtube.com/embed/hGvNevZG_OQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
