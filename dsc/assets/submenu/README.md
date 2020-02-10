@@ -2,7 +2,10 @@
 1. 在需要次選單的頁面(頂部底部模板)中引用 submenu.min.js 及 submenu.css 後插入 template。
 1. 將網址中的文宣編號與 submenu.json 做比對，如符合則產生對應的標題文字及選單內容。
 
-# submenu.json 欄位說明
+# 注意事項
+透過 npm scripts (babel:submenu) 編譯 submenu.js
+
+# submenu.json
 ```json
 [
     {

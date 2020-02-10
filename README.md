@@ -1,3 +1,18 @@
+# 安裝軟體
+
+- nvm-windows
+  [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases)
+  使用 NVM 安裝 Node.js (10.15.1)
+
+- Yarn
+  [https://classic.yarnpkg.com/zh-Hant/](https://classic.yarnpkg.com/zh-Hant/)
+
+- VSCode
+  [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+- gulp
+  `npm install gulp -g`
+
 # 官網分類
 
 | 名稱        | 位置                         | 備註                                                                       |
@@ -18,40 +33,38 @@
 
 # 官網檔案
 
-| 名稱        | 位置                            | 備註                            |
-| --------- | ----------------------------- | ----------------------------- |
-| 後台上稿樣板    | /tw/dsc/template/editor.html  | 表單一 (含二級選單)                           |
-| 後台上稿樣板    | /tw/dsc/template/editor2.html | 表單二 (含二級選單)                           |
-| 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts 編譯 reboot.scss |
-| 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts 編譯 common.js   |
-| 全站共用 CSS  | /tw/dsc/css/all.css           |                               |
-| 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                               |
+| 名稱        | 位置                            | 備註                                          |
+| --------- | ----------------------------- | ------------------------------------------- |
+| 後台上稿樣板    | /tw/dsc/template/editor.html  | 含次級選單 & 表單一                                 |
+| 後台上稿樣板    | /tw/dsc/template/editor2.html | 含次級選單 & 表單二                                 |
+| 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts (sass:reboot) 編譯 reboot.scss |
+| 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts (babel:common) 編譯 common.js  |
+| 全站共用 CSS  | /tw/dsc/css/all.css           |                                             |
+| 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                                             |
 
 # 官網元件
 
-| 名稱                | 位置                               | 備註                                                      |
-| ----------------- | -------------------------------- | ------------------------------------------------------- |
-| 右下角浮動廣告           | /tw/dsc/assets/ad/               |                                                         |
-| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       |                                                         |
-| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         |                                                         |
-| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 透過 npm scripts 編譯 index-industry.js                     |
-| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 透過 npm scripts 編譯 industry.css                          |
-| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 透過 npm scripts 編譯 industry.css                          |
-| 登入 & 訂閱           | /tw/dsc/assets/login/            | 串接 LINE & Google reCAPTCHA                              |
-| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已委外上線                                                   |
-| 資料下載標題設置          | /tw/dsc/assets/resources/        | 1. 透過 npm scripts 編譯 industry.css<br/>2. 資料來源為 Firebase |
-| 次級選單              | /tw/dsc/assets/submenu/          | 透過 npm scripts 編譯 submenu.js                            |
-| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 透過 npm scripts 編譯 submenu.js                            |
+| 名稱                | 位置                               | 備註                                                              |
+| ----------------- | -------------------------------- | --------------------------------------------------------------- |
+| 右下角浮動廣告           | /tw/dsc/assets/ad/               | 資料來源：db.json<br/>圖片位置： images/                                  |
+| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       | 資料來源：db.json<br/>圖片位置： images/                                  |
+| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         | 資料來源：db.json                                                    |
+| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 資料來源：index-industry.json<br/>圖片位置：/tw/dsc/images/index/         |
+| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 資料來源 & 圖片位置同上 (首頁用)                                             |
+| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 資料來源： industry.vue<br/>圖片位置： images/                            |
+| 登入 & 訂閱           | /tw/dsc/assets/login/            | 資料來源：<br/>1. LINE 後台、login.json (登入)<br/>2. subscribe.json (訂閱) |
+| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已委外上線                                                           |
+| 資料下載標題設置          | /tw/dsc/assets/resources/        | 資料來源為 Firebase                                                  |
+| 次級選單              | /tw/dsc/assets/submenu/          | 資料來源：submenu.json                                               |
+| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 資料來源：submenu.json                                               |
 
 # Google 帳戶
 
 帳號：digiwin.design@gmail.com
 
-密碼："鼎新電腦"拼音 (含空白)
+密碼：2u/3vup 2u04sl3
 
-註冊服務： reCAPTCHA、Firebase
-
-
+註冊服務： reCAPTCHA (用於登入驗證)、Firebase (存放資料下載標題)
 
 # 官網 API
 
@@ -209,5 +222,3 @@
 # 已完成專案
 
 [https://trello.com/b/pdhuI2vz/digiwin](https://trello.com/b/pdhuI2vz/digiwin)
-
-
