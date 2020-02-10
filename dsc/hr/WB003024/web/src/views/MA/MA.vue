@@ -23,7 +23,7 @@
         <article id="section1" class="section1">
             <section-title
                 title="<strong>賦能</strong>，夢想更接近"
-                desc="人才養成與發展是鼎新一直以的堅持，與我們一起引領企業數字化轉型"
+                desc="人才養成與發展是鼎新一直以來的堅持，與我們一起引領企業數字化轉型"
                 :padding-top="isMobile ? '55px' : '80px'"
                 class="container"
             ></section-title>
