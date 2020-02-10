@@ -10,8 +10,11 @@
 - VSCode  
   [https://code.visualstudio.com/docs/?dv=win32user](https://code.visualstudio.com/docs/?dv=win32user)
 
-- gulp (須先安裝 Node.js 後再輸入此指令)  
-  `npm install gulp -g`
+# 安裝套件
+
+1. `npm install gulp -g`
+
+2. `yarn`
 
 # 官網分類
 
