@@ -1,23 +1,23 @@
-# 安裝軟體
+# 開發工具
 
-- nvm-windows
-  [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases)
-  使用 NVM 安裝 Node.js (10.15.1)
+- nvm-windows  
+  https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip  
+  使用 NVM 安裝 Node.js 10.15.1 [(安裝說明)](https://oranwind.org/nvm-windows/)
 
-- Yarn
-  [https://classic.yarnpkg.com/zh-Hant/](https://classic.yarnpkg.com/zh-Hant/)
+- Yarn  
+  https://classic.yarnpkg.com/latest.msi
 
-- VSCode
-  [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- VSCode  
+  [https://code.visualstudio.com/docs/?dv=win32user](https://code.visualstudio.com/docs/?dv=win32user)
 
-- gulp
+- gulp (須先安裝 Node.js 後再輸入此指令)  
   `npm install gulp -g`
 
 # 官網分類
 
 | 名稱        | 位置                         | 備註                                                                       |
 | --------- | -------------------------- | ------------------------------------------------------------------------ |
-| 文章        | /tw/article/               | 實際網址於 README                                                             |
+| 文章        | /tw/article/               | 實際網址：README                                                              |
 | 活動        | /tw/dsc/activity/          |                                                                          |
 | 賀卡        | /tw/dsc/card/              |                                                                          |
 | 測試用       | /tw/dsc/dev/               |                                                                          |
@@ -44,19 +44,19 @@
 
 # 官網元件
 
-| 名稱                | 位置                               | 備註                                                              |
-| ----------------- | -------------------------------- | --------------------------------------------------------------- |
-| 右下角浮動廣告           | /tw/dsc/assets/ad/               | 資料來源：db.json<br/>圖片位置： images/                                  |
-| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       | 資料來源：db.json<br/>圖片位置： images/                                  |
-| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         | 資料來源：db.json                                                    |
-| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 資料來源：index-industry.json<br/>圖片位置：/tw/dsc/images/index/         |
-| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 資料來源 & 圖片位置同上 (首頁用)                                             |
-| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 資料來源： industry.vue<br/>圖片位置： images/                            |
-| 登入 & 訂閱           | /tw/dsc/assets/login/            | 資料來源：<br/>1. LINE 後台、login.json (登入)<br/>2. subscribe.json (訂閱) |
-| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已委外上線                                                           |
-| 資料下載標題設置          | /tw/dsc/assets/resources/        | 資料來源為 Firebase                                                  |
-| 次級選單              | /tw/dsc/assets/submenu/          | 資料來源：submenu.json                                               |
-| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 資料來源：submenu.json                                               |
+| 名稱                | 位置                               | 備註                                                                                                                                     |
+| ----------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| 右下角浮動廣告           | /tw/dsc/assets/ad/               | 資料來源：db.json<br/>圖片位置： images/                                                                                                         |
+| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       | 資料來源：db.json<br/>圖片位置： images/                                                                                                         |
+| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         | 資料來源：db.json                                                                                                                           |
+| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 資料來源：index-industry.json<br/>圖片位置：/tw/dsc/images/index/                                                                                |
+| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 資料來源 & 圖片位置同上 (首頁用)                                                                                                                    |
+| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 資料來源： industry.vue<br/>圖片位置： images/                                                                                                   |
+| 登入 & 訂閱           | /tw/dsc/assets/login/            | 資料來源：<br/>1. [LINE 後台](https://developers.line.biz/console/channel/1570741188/line-login)、login.json (登入用)<br/>2. subscribe.json (訂閱用) |
+| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已委外上線                                                                                                                                  |
+| 資料下載標題設置          | /tw/dsc/assets/resources/        | [設置頁面](https://www.digiwin.com/tw/dsc/assets/resources/)                                                                               |
+| 次級選單              | /tw/dsc/assets/submenu/          | 資料來源：submenu.json                                                                                                                      |
+| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 資料來源：submenu.json                                                                                                                      |
 
 # Google 帳戶
 
@@ -64,7 +64,7 @@
 
 密碼：2u/3vup 2u04sl3
 
-註冊服務： reCAPTCHA (用於登入驗證)、Firebase (存放資料下載標題)
+註冊服務： reCAPTCHA (登入驗證用)、Firebase (資料下載標題設置用)
 
 # 官網 API
 
