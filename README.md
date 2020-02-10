@@ -40,6 +40,7 @@
 | 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts (sass:reboot) 編譯 reboot.scss |
 | 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts (babel:common) 編譯 common.js  |
 | 全站共用 CSS  | /tw/dsc/css/all.css           |                                             |
+| 電腦/手機版轉址  | /tw/dsc/assets/awd-list.json  |                                             |
 | 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                                             |
 
 # 官網元件
