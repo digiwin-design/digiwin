@@ -24,12 +24,12 @@
 
 | 名稱        | 位置                         | 備註                                                                       |
 | --------- | -------------------------- | ------------------------------------------------------------------------ |
-| 文章        | /tw/article/               | 實際網址：README                                                              |
+| 文章        | /tw/article/               | HR產品、公司簡介                                                                |
 | 活動        | /tw/dsc/activity/          |                                                                          |
 | 賀卡        | /tw/dsc/card/              |                                                                          |
 | 測試用       | /tw/dsc/dev/               |                                                                          |
 | 企業通電子報    | /tw/dsc/digital-newspaper/ |                                                                          |
-| 工業 4.0    | /tw/dsc/industry4/         |                                                                          |
+| 工業 4.0    | /tw/dsc/industry4/         | 廠內智能物流、智能現場管理                                                            |
 | 企業通雜誌     | /tw/dsc/mag/               |                                                                          |
 | CPL (實驗頁) | /tw/dsc/marketing/         | [Demo](https://www.digiwin.com/tw/dsc/marketing/WB002838/WB00283804.htm) |
 | 方案/行業     | /tw/dsc/solution/          |                                                                          |
@@ -47,7 +47,7 @@
 | 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts (sass:reboot) 編譯 reboot.scss |
 | 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts (babel:common) 編譯 common.js  |
 | 全站共用 CSS  | /tw/dsc/css/all.css           |                                             |
-| 電腦/手機版轉址  | /tw/dsc/assets/awd-list.json  |                                             |
+| 電腦/手機版轉址  | /tw/dsc/assets/awd-list.json  | 行解用                                         |
 | 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                                             |
 
 # 官網元件
