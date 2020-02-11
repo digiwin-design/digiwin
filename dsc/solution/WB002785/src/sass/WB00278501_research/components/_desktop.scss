@@ -17,13 +17,15 @@ main .desktop {
             &::after {
                 position: absolute;
                 top: 100%;
+                left: 50%;
                 padding-top: 23px;
-                width: 100%;
                 content: attr(data-text);
                 text-align: center;
+                white-space: nowrap;
                 letter-spacing: getLetterSpacing(75);
                 font-size: 20px;
                 line-height: 1;
+                transform: translateX(-50%);
             }
             @for $nth from 1 through 4 {
                 &.icon#{$nth} {
@@ -172,9 +174,9 @@ main .desktop {
         &-hoverText {
             display: flex;
             p {
-                width: calc((100% - 1em) / 2);
+                width: calc((100% - 2em) / 2);
                 & + p {
-                    margin-left: 1em;
+                    margin-left: 2em;
                 }
             }
         }
