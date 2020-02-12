@@ -10,6 +10,7 @@ module.exports = {
     devtool: process.env.NODE_ENV === 'development' ? 'source-map' : '',
     context: path.resolve(__dirname, 'src'),
     entry: {
+        all: './js/all.js',
         WB00278501: './js/WB00278501.js',
         WB00278501_law: './js/WB00278501_law.js',
         WB00278501_verify: './js/WB00278501_verify.js',
