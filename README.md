@@ -7,8 +7,7 @@
 - Yarn  
   https://classic.yarnpkg.com/latest.msi
 
-- Ruby
-  
+- Ruby  
   https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.0-1/rubyinstaller-2.7.0-1-x64.exe
 
 - VSCode  
