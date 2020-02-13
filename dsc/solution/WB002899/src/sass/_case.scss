@@ -28,8 +28,8 @@ main.case {
         .title {
             margin-bottom: 40px;
         }
-        section:first-of-type {
-            margin-bottom: 60px;
+        section + section {
+            margin-top: 60px;
         }
         &-header {
             display: flex;
@@ -49,6 +49,9 @@ main.case {
                         }
                         &.illust2 {
                             @include bg('case/section1-illust2.jpg');
+                        }
+                        &.illust3 {
+                            @include bg('case/section1-illust3.png');
                         }
                     }
                 }
@@ -115,6 +118,9 @@ main.case {
                 padding-right: 50px;
                 padding-left: 50px;
             }
+            > *:first-child {
+                padding-top: 40px;
+            }
             img {
                 display: block;
             }
@@ -129,9 +135,6 @@ main.case {
                 }
                 &:not(:first-of-type) {
                     margin-top: 45px;
-                }
-                &:first-of-type {
-                    padding-top: 40px;
                 }
             }
             p {

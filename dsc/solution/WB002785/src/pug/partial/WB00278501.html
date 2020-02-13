@@ -11,7 +11,7 @@
             ></section-title>
         </div>
         <div class="sections">
-            <section v-for="section in result.section1" :key="section.title" @click="linkTo(section.link)">
+            <section v-for="section in result.section1" :key="section.title" v-on:click="linkTo(section.link)">
                 <h1 v-html="section.title"></h1>
                 <p v-html="section.content"></p>
                 <p>{{section.source}}</p>
