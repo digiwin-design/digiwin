@@ -18,7 +18,7 @@
 
             <StickyNav :links="result.links" v-if="!isMobile"></StickyNav>
 
-            <article id="section1" class="section1">
+            <article id="section1" class="section1 js-section">
                 <div class="container">
                     <h1 class="sectionTitle">2019法令政策新變革，準備好接招了嗎？</h1>
                     <ul class="section1-list">
@@ -29,7 +29,7 @@
                 </div>
             </article>
 
-            <article id="section2" class="section2">
+            <article id="section2" class="section2 js-section">
                 <div class="container">
                     <div class="sectionHeader">
                         <h1 class="sectionTitle">
@@ -70,7 +70,7 @@
                 </div>
             </article>
 
-            <article id="section3" class="section3">
+            <article id="section3" class="section3 js-section">
                 <div class="container">
                     <div class="sectionHeader">
                         <h1 class="sectionTitle">
@@ -89,7 +89,7 @@
                 </div>
             </article>
 
-            <article id="section4" class="section4">
+            <article id="section4" class="section4 js-section">
                 <div class="container">
                     <h1 class="sectionTitle">HRM全面支持</h1>
                     <h2 class="sectionDesc">現在開始主動出擊！善用鼎新HRM，人資改革不成問題！</h2>
@@ -97,7 +97,8 @@
                 </div>
             </article>
 
-            <Contact></Contact>
+            <Contact class="js-section"></Contact>
+            
             <Ad></Ad>
         </template>
     </main>
