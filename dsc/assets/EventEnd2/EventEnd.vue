@@ -1,7 +1,7 @@
 <template>
-    <div v-if="expired && id" class="endBanner" :class="{'is-hidden':isHidden}">
+    <div v-if="expired" class="endBanner" :class="{'is-hidden':isHidden}">
         <div class="endBanner-main">
-            <a :href="'https://www.digiwin.com/tw/zlsq.html?id=' + id" class="endBanner-link" target="_blank"></a>
+            <a :href="url" class="endBanner-link" target="_blank"></a>
             <div class="endBanner-container">
                 <img src="/tw/dsc/assets/EventEnd2/images/onair_end.png" class="endBanner-img">
                 <a href class="endBanner-close" @click.prevent="toggleHandler"></a>
@@ -19,6 +19,11 @@ module.exports = {
             expired: false,
             isHidden: false,
         };
+    },
+    computed: {
+        url: function () {
+            return this.id ? '/tw/zlsq.html?id=' + this.id : '/tw/resources.html';
+        }
     },
     methods: {
         toggleHandler: function toggleHandler() {
