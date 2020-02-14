@@ -55,19 +55,20 @@
 
 # 官網元件
 
-| 名稱                | 位置                               | 備註                                                                                                                                     |
-| ----------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| 右下角浮動廣告           | /tw/dsc/assets/ad/               | 資料來源：db.json<br/>圖片位置： images/                                                                                                         |
-| 文章廣告 Banner       | /tw/dsc/assets/article-ad/       | 資料來源：db.json<br/>圖片位置： images/                                                                                                         |
-| 活動結束 Banner       | /tw/dsc/assets/EventEnd/         | 資料來源：db.json                                                                                                                           |
-| 各行各業區塊 (首頁用)      | /tw/dsc/assets/index-industry/   | 資料來源：index-industry.json<br/>圖片位置：/tw/dsc/images/index/                                                                                |
-| 各行各業區塊 (行業用)      | /tw/dsc/assets/industry-list-v2/ | 資料來源 & 圖片位置同上 (首頁用)                                                                                                                    |
-| 各行各業區塊 (IT 編列預算用) | /tw/dsc/assets/industry-list/    | 資料來源： industry.vue<br/>圖片位置： images/                                                                                                   |
-| 登入 & 訂閱           | /tw/dsc/assets/login/            | 資料來源：<br/>1. [LINE 後台](https://developers.line.biz/console/channel/1570741188/line-login)、login.json (登入用)<br/>2. subscribe.json (訂閱用) |
-| 繁/簡體站跳轉提示         | /tw/dsc/assets/popup/            | 已委外上線                                                                                                                                  |
-| 資料下載標題設置          | /tw/dsc/assets/resources/        | [設置頁面](https://www.digiwin.com/tw/dsc/assets/resources/)                                                                               |
-| 次級選單              | /tw/dsc/assets/submenu/          | 資料來源：submenu.json                                                                                                                      |
-| 次級選單手機版           | /tw/dsc/assets/submenu-spa/      | 資料來源：submenu.json                                                                                                                      |
+| 名稱                  | 位置                               | 備註                                                                                                                                     |
+| ------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| 右下角浮動廣告             | /tw/dsc/assets/ad/               | 資料來源：db.json<br/>圖片位置： images/                                                                                                         |
+| 文章廣告 Banner         | /tw/dsc/assets/article-ad/       | 資料來源：db.json<br/>圖片位置： images/                                                                                                         |
+| 活動結束 Banner         | /tw/dsc/assets/EventEnd/         | 資料來源：db.json                                                                                                                           |
+| 活動結束 Banner (線上活動用) | /tw/dsc/assets/EventEnd2/        |                                                                                                                                        |
+| 各行各業區塊 (首頁用)        | /tw/dsc/assets/index-industry/   | 資料來源：index-industry.json<br/>圖片位置：/tw/dsc/images/index/                                                                                |
+| 各行各業區塊 (行業用)        | /tw/dsc/assets/industry-list-v2/ | 資料來源 & 圖片位置同上 (首頁用)                                                                                                                    |
+| 各行各業區塊 (IT 編列預算用)   | /tw/dsc/assets/industry-list/    | 資料來源： industry.vue<br/>圖片位置： images/                                                                                                   |
+| 登入 & 訂閱             | /tw/dsc/assets/login/            | 資料來源：<br/>1. [LINE 後台](https://developers.line.biz/console/channel/1570741188/line-login)、login.json (登入用)<br/>2. subscribe.json (訂閱用) |
+| 繁/簡體站跳轉提示           | /tw/dsc/assets/popup/            | 已委外上線                                                                                                                                  |
+| 資料下載標題設置            | /tw/dsc/assets/resources/        | [設置頁面](https://www.digiwin.com/tw/dsc/assets/resources/)                                                                               |
+| 次級選單                | /tw/dsc/assets/submenu/          | 資料來源：submenu.json                                                                                                                      |
+| 次級選單手機版             | /tw/dsc/assets/submenu-spa/      | 資料來源：submenu.json                                                                                                                      |
 
 # Google 帳戶
 
