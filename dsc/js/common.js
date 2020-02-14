@@ -260,13 +260,13 @@ $(function () {
     if (location.pathname !== '/tw/zlsq.html') return;
 
     const firebaseConfig = {
-        apiKey: 'AIzaSyAHt_p6RibnGGyi2PWES5kQi7K5-m_9lNs',
-        authDomain: 'digiwin-4a7d3.firebaseapp.com',
-        databaseURL: 'https://digiwin-4a7d3.firebaseio.com',
-        projectId: 'digiwin-4a7d3',
-        storageBucket: 'digiwin-4a7d3.appspot.com',
-        messagingSenderId: '306272678210',
-        appId: '1:306272678210:web:d0f8a849f5902ba0e498db'
+        apiKey: 'AIzaSyCun_SNGxWtqPEQYkL0d17XBRI0z-LobVY',
+        authDomain: 'digiwin-dc30c.firebaseapp.com',
+        databaseURL: 'https://digiwin-dc30c.firebaseio.com',
+        projectId: 'digiwin-dc30c',
+        storageBucket: 'digiwin-dc30c.appspot.com',
+        messagingSenderId: '52675222168',
+        appId: '1:52675222168:web:2ba46359f0c3a800af4eed'
     };
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);

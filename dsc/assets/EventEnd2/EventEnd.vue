@@ -7,7 +7,7 @@
                 <a href class="endBanner-close" @click.prevent="toggleHandler"></a>
             </div>
         </div>
-        <a href class="endBanner-open" @click.prevent="toggleHandler">留言諮詢</a>
+        <a href class="endBanner-open" @click.prevent="toggleHandler">預約回看</a>
     </div>
 </template>
 
