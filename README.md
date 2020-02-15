@@ -76,7 +76,7 @@
 
 密碼：2u/3vup 2u04sl3
 
-註冊服務： reCAPTCHA (登入驗證用)、Firebase (資料下載標題設置用)
+已註冊服務： reCAPTCHA (登入驗證用)、Firebase (資料下載標題設置用)、GitHub (Git Server)
 
 # 官網 API
 
