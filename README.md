@@ -18,13 +18,13 @@
 
 # 安裝套件
 
-1. `npm install -g gulp`
+`npm install -g gulp`
 
-2. `npm install -g bower`
+`npm install -g bower`
 
-3. `npm install -g @vue/cli`
+`npm install -g @vue/cli`
 
-4. `yarn`
+`yarn`
 
 # 官網分類
 
