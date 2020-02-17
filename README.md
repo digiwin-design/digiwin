@@ -85,7 +85,9 @@
 
 URL：[https://github.com/digiwin-design/digiwin.git](https://github.com/digiwin-design/digiwin.git)
 
-Git Server：GitHub (帳密同 Google 帳戶)
+GitHub 帳號：digiwin-design
+
+GitHub 密碼：2u/3vup 2u04sl3
 
 # 官網 API
 
