@@ -10,8 +10,7 @@
 - Ruby  
   https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.0-1/rubyinstaller-2.7.0-1-x64.exe
 
-- Git
-  
+- Git  
   https://github.com/git-for-windows/git/releases/download/v2.25.0.windows.1/Git-2.25.0-32-bit.exe
 
 - VSCode  
