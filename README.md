@@ -26,6 +26,22 @@
 
 `yarn`
 
+# Git Repository
+
+URL：[https://github.com/digiwin-design/digiwin.git](https://github.com/digiwin-design/digiwin.git)
+
+GitHub 帳號：digiwin-design
+
+GitHub 密碼：2u/3vup 2u04sl3
+
+# Google 帳戶
+
+帳號：[digiwin.design@gmail.com](mailto:digiwin.design@gmail.com)
+
+密碼：2u/3vup 2u04sl3
+
+已註冊服務： reCAPTCHA (登入驗證用)、Firebase (資料下載標題設置用)
+
 # 官網分類
 
 | 名稱        | 位置                         | 備註                                                                       |
@@ -43,18 +59,18 @@
 | 404 Page  | /tw/dsc/404.html           |                                                                          |
 | ERP       | /tw/ERP/                   |                                                                          |
 | 產品        | /tw/software/              |                                                                          |
+| 研討會 Demo  | /tw/dsc/dev/demo/seminar/  |                                                                          |
 
 # 官網檔案
 
-| 名稱        | 位置                            | 備註                                          |
-| --------- | ----------------------------- | ------------------------------------------- |
-| 後台上稿樣板    | /tw/dsc/template/editor.html  | 含次級選單 & 表單一                                 |
-| 後台上稿樣板    | /tw/dsc/template/editor2.html | 含次級選單 & 表單二                                 |
-| 後台上稿重置用樣式 | /tw/dsc/css/reboot.css        | 透過 npm scripts (sass:reboot) 編譯 reboot.scss |
-| 全站共用 JS   | /tw/dsc/js/common.min.js      | 透過 npm scripts (babel:common) 編譯 common.js  |
-| 全站共用 CSS  | /tw/dsc/css/all.css           |                                             |
-| 電腦/手機版轉址  | /tw/dsc/assets/awd-list.json  | 行解用                                         |
-| 研討會 Demo  | /tw/dsc/dev/demo/seminar/     |                                             |
+| 名稱         | 位置                            | 備註                                          |
+| ---------- | ----------------------------- | ------------------------------------------- |
+| 後台上稿樣板     | /tw/dsc/template/editor.html  | 含次級選單 & 表單一                                 |
+| 後台上稿樣板     | /tw/dsc/template/editor2.html | 含次級選單 & 表單二                                 |
+| 後台上稿重置用樣式  | /tw/dsc/css/reboot.css        | 透過 npm scripts (sass:reboot) 編譯 reboot.scss |
+| 全站共用 JS    | /tw/dsc/js/common.min.js      | 透過 npm scripts (babel:common) 編譯 common.js  |
+| 全站共用 CSS   | /tw/dsc/css/all.css           |                                             |
+| 電腦/手機版轉址清單 | /tw/dsc/assets/awd-list.json  | 行業解決方案用                                     |
 
 # 官網元件
 
@@ -72,22 +88,6 @@
 | 資料下載標題設置            | /tw/dsc/assets/resources/        | [設置頁面](https://www.digiwin.com/tw/dsc/assets/resources/)                                                                               |
 | 次級選單                | /tw/dsc/assets/submenu/          | 資料來源：submenu.json                                                                                                                      |
 | 次級選單手機版             | /tw/dsc/assets/submenu-spa/      | 資料來源：submenu.json                                                                                                                      |
-
-# Google 帳戶
-
-帳號：digiwin.design@gmail.com
-
-密碼：2u/3vup 2u04sl3
-
-已註冊服務： reCAPTCHA (登入驗證用)、Firebase (資料下載標題設置用)
-
-# Git Repository
-
-URL：[https://github.com/digiwin-design/digiwin.git](https://github.com/digiwin-design/digiwin.git)
-
-GitHub 帳號：digiwin-design
-
-GitHub 密碼：2u/3vup 2u04sl3
 
 # 官網 API
 
