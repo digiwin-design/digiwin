@@ -10,6 +10,10 @@
 - Ruby  
   https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.0-1/rubyinstaller-2.7.0-1-x64.exe
 
+- Git
+  
+  https://github.com/git-for-windows/git/releases/download/v2.25.0.windows.1/Git-2.25.0-32-bit.exe
+
 - VSCode  
   [https://code.visualstudio.com/docs/?dv=win32user](https://code.visualstudio.com/docs/?dv=win32user)
 
@@ -76,7 +80,13 @@
 
 密碼：2u/3vup 2u04sl3
 
-已註冊服務： reCAPTCHA (登入驗證用)、Firebase (資料下載標題設置用)、GitHub (Git Server)
+已註冊服務： reCAPTCHA (登入驗證用)、Firebase (資料下載標題設置用)
+
+# Git Repository
+
+URL：[https://github.com/digiwin-design/digiwin.git](https://github.com/digiwin-design/digiwin.git)
+
+Git Server：GitHub (帳密同 Google 帳戶)
 
 # 官網 API
 
