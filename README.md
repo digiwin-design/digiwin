@@ -28,7 +28,7 @@
 
 # Git Repository
 
-URL：[https://github.com/digiwin-design/digiwin.git](https://github.com/digiwin-design/digiwin.git)
+URL：https://digiwin-design@github.com/digiwin-design/digiwin.git
 
 GitHub 帳號：digiwin-design
 
