@@ -115,7 +115,7 @@
                     :padding-bottom="isMobile ? '2em' : '3.8em'"
                 ></section-title>
                 <div class="content">
-                    <a href="http://career.digiwin.com" target="_blank">校園徵才活動</a>
+                    <a href="http://career.digiwin.com" target="_blank">校園徵才活動</a> 
                     <a href="https://www.digiwin.com/tw/dsc/hr/WB003024/edm/WB00302402_edm.html" target="_blank">數位人才講座</a>
                 </div>
             </div>
