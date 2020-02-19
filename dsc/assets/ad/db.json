@@ -47,5 +47,47 @@
         "imgSrc": "https://www.digiwin.com/tw/dsc/assets/ad/images/20191209.jpg",
         "startTime": "2019-12-09",
         "endTime": "2019-12-13"
+    },
+    {
+        "url": "https://www.digiwin.com/tw/activity.html",
+        "adUrl": "https://www.digiwin.com/tw/dsc/activity/MFT/WB003030/WB00303000_index.html",
+        "imgSrc": "https://www.digiwin.com/tw/dsc/assets/ad/images/WB003030.jpg",
+        "startTime": "2019-12-09",
+        "endTime": "2019-12-13"
+    },
+    {
+        "url": "https://www.digiwin.com/tw/dsc/solution/WB002783/WB00278301.html",
+        "adUrl": "https://www.digiwin.com/tw/dsc/activity/MFT/WB003030/WB00303000_index.html",
+        "imgSrc": "https://www.digiwin.com/tw/dsc/assets/ad/images/WB003030.jpg",
+        "startTime": "2020-02-17",
+        "endTime": "2020-04-01"
+    },
+    {
+        "url": "https://www.digiwin.com/tw/case.html",
+        "adUrl": "https://www.digiwin.com/tw/dsc/activity/MFT/WB003030/WB00303000_index.html",
+        "imgSrc": "https://www.digiwin.com/tw/dsc/assets/ad/images/WB003030.jpg",
+        "startTime": "2020-02-17",
+        "endTime": "2020-04-01"
+    },
+    {
+        "url": "https://www.digiwin.com/tw/news.html",
+        "adUrl": "https://www.digiwin.com/tw/dsc/activity/MFT/WB003030/WB00303000_index.html",
+        "imgSrc": "https://www.digiwin.com/tw/dsc/assets/ad/images/WB003030.jpg",
+        "startTime": "2020-02-17",
+        "endTime": "2020-04-01"
+    },
+    {
+        "url": "https://www.digiwin.com/tw/contact/eform.html",
+        "adUrl": "https://www.digiwin.com/tw/dsc/activity/MFT/WB003030/WB00303000_index.html",
+        "imgSrc": "https://www.digiwin.com/tw/dsc/assets/ad/images/WB003030.jpg",
+        "startTime": "2020-02-17",
+        "endTime": "2020-04-01"
+    },
+    {
+        "url": "https://www.digiwin.com/tw/video.html",
+        "adUrl": "https://www.digiwin.com/tw/dsc/activity/MFT/WB003030/WB00303000_index.html",
+        "imgSrc": "https://www.digiwin.com/tw/dsc/assets/ad/images/WB003030.jpg",
+        "startTime": "2020-02-17",
+        "endTime": "2020-04-01"
     }
 ]
