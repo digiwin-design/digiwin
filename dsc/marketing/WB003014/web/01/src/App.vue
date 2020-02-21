@@ -23,7 +23,7 @@
 
                                     <!-- 影片 -->
                                     <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/hGvNevZG_OQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                       <iframe src="https://www.youtube.com/embed/Sd11MiQrdlU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="content__text">
@@ -31,7 +31,7 @@
                                     <p class="content__text-subtitle">{{result.latest.subtitle}}</p>
                                     <p class="content__text-content">{{result.latest.content}}</p>
                                     <p class="content__text-time">{{result.latest.time}}</p>
-                                    <a :href="result.latest.link" target="_blank" class="mainLink calendar">立即申請預約回看</a>
+                                    <a :href="result.latest.link" target="_blank" class="mainLink calendar">了解詳情</a>
                                 </div>
                             </div>
                         </div>
