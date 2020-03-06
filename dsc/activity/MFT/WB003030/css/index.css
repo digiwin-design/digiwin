@@ -291,7 +291,7 @@ a{
 }
 .h_margin{
   margin-top: 230px;
-  margin-bottom: 115px;
+  margin-bottom: 80px;
 }
 .pContent {
   display: block;
@@ -344,12 +344,13 @@ main{
 #recent{
   overflow: hidden;
 }
-#recent h2,#agenda h2,#live_t h2,#period h2{
+#recent h2,#agenda h2,#live_t h2,#period h2,#reward h2{
   color: #fff;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-#recent h2 span,#agenda h2 span,#live_t h2 span,#period h2 span{
+#recent h2 span,#agenda h2 span,#live_t h2 span,
+#period h2 span,#reward h2 span{
   display: block;
   position: relative;
   text-align: center;
@@ -366,11 +367,11 @@ main{
   height: 1px;
 }
 #recent h2 span::before,#agenda h2 span::before,
-#live_t h2 span::before,#period h2 span::before{
+#live_t h2 span::before,#period h2 span::before,#reward h2 span::before{
   left: 0;
 }
 #recent h2 span::after,#agenda h2 span::after,
-#live_t h2 span::after,#period h2 span::after
+#live_t h2 span::after,#period h2 span::after,#reward h2 span::after
 {
   right: 0;
 }
@@ -664,6 +665,36 @@ main{
 .c_bg_d{
   background: #72f99b;
 }
+
+#reward h2 span::before,#reward h2 span::after
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  background: #fff;
+  width: 460px;
+  height: 1px;
+}
+.ipdaImg{
+  width: 100%;
+  overflow: hidden;
+}
+.ftxt{
+  text-align: left;
+}
+.ftxt span{
+  font-weight: bold;
+  font-size: 26px;
+  color: #e4ff03;
+}
+.mtxt{
+  padding-top:10px;
+  padding-bottom: 90px;
+  text-align: left;
+}
+.Img1{
+  margin-right: 120px;
+}
 .signupsd{
   margin-top: 40px;
   margin-bottom: 35px;
@@ -870,13 +901,13 @@ main{
     background-size: cover;
   }
 
-  #recent h2,#agenda h2,#live_t h2,#period h2{
+  #recent h2,#agenda h2,#live_t h2,#period h2,#reward h2{
     color: #fff;
     font-size: 36px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  #recent h2 span,#agenda h2 span,#live_t h2 span,#period h2 span{
+  #recent h2 span,#agenda h2 span,#live_t h2 span,#period h2 span,#reward h2 span{
     display: block;
     position: relative;
     text-align: center;
@@ -893,11 +924,11 @@ main{
     height: 1px;
   }
   #recent h2 span::before,#agenda h2 span::before,
-  #live_t h2 span::before,#period h2 span::before{
+  #live_t h2 span::before,#period h2 span::before,#reward h2 span::before{
     left: 0;
   }
   #recent h2 span::after,#agenda h2 span::after,
-  #live_t h2 span::after,#period h2 span::after
+  #live_t h2 span::after,#period h2 span::after,#reward h2 span::after
   {
     right: 0;
   }
@@ -1023,6 +1054,25 @@ main{
   }
   .h_tit {
     font-size: 18px;
+  }
+  #reward h2 span::before,#reward h2 span::after
+  {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: #fff;
+    width: 15%;
+    height: 1px;
+  }
+  .ipadImg{
+    padding: 0 5%;
+    text-align: justify;
+  }
+  .mtxt{
+    padding-bottom: 5%;
+  }
+  .Img1{
+    margin-bottom: 15%;
   }
   .px1 br{
     display: none;
