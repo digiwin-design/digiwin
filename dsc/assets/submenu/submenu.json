@@ -1005,6 +1005,50 @@
             }
         ]
     },
+     {
+        "id": "WB002741b",
+        "title": "勞基法新修法",
+        "menus": [
+            {
+                "text": "勞基法新修法首頁",
+                "url": "WB00274101"
+            },
+            {
+                "text": "法規怎麼說",
+                "url": "WB00274101_law"
+            },
+            {
+                "text": "衝擊與影響",
+                "url": "WB00274101_effect",
+                "dropdowns": [
+                    {
+                        "text": "法規衝擊與企業因應",
+                        "url": "WB00274101_effect#effect"
+                    },
+                    {
+                        "text": "專家怎麼說?",
+                        "url": "WB00274101_effect#expert"
+                    }
+                ]
+            },
+            {
+                "text": "解決方案",
+                "url": "WB00274101_aboutsolution"
+            },
+            {
+                "text": "HR人力資源",
+                "url": "WB00274101_HR"
+            },
+            {
+                "text": "前往各行業",
+                "url": "WB00274101_aboutsolution#ALL"
+            },
+            {
+                "text": "聯絡我們",
+                "url": "#contact"
+            }
+        ]
+    },   
     {
         "id": "WB002513",
         "title": "電子業",
