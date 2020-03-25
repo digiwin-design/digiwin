@@ -1007,41 +1007,31 @@
     },
      {
         "id": "WB002741b",
-        "title": "勞基法新修法",
+        "title": "人資相關法令",
         "menus": [
             {
-                "text": "勞基法新修法首頁",
-                "url": "WB00274101"
+                "text": "首頁",
+                "url": "index"
             },
             {
-                "text": "法規怎麼說",
-                "url": "WB00274101_law"
+                "text": "勞動事件法",
+                "url": "WB00274101_2"
             },
             {
-                "text": "衝擊與影響",
-                "url": "WB00274101_effect",
-                "dropdowns": [
-                    {
-                        "text": "法規衝擊與企業因應",
-                        "url": "WB00274101_effect#effect"
-                    },
-                    {
-                        "text": "專家怎麼說?",
-                        "url": "WB00274101_effect#expert"
-                    }
-                ]
+                "text": "因應勞檢",
+                "url": "WB00274101_3"
             },
             {
                 "text": "解決方案",
-                "url": "WB00274101_aboutsolution"
+                "url": "WB00274101_4"
             },
             {
-                "text": "HR人力資源",
-                "url": "WB00274101_HR"
+                "text": "行動應用",
+                "url": "WB00274101_5"
             },
             {
-                "text": "前往各行業",
-                "url": "WB00274101_aboutsolution#ALL"
+                "text": "輔導案例",
+                "url": "WB00274101_6"
             },
             {
                 "text": "聯絡我們",

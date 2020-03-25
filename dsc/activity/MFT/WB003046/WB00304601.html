@@ -28,7 +28,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Yahoo webmasters -->
 <meta name="msvalidate.01" content="422AE217DDD4B8932908D8E3CFFB4F89" />
 <!-- End Yahoo webmasters -->
-
 </head>
 
 <body>
@@ -75,18 +74,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </table></td>
   </tr>
 </table>
-<!--活動結束-索取資料banner開始-->
-    <!-- 
-        【線下活動截止Banner】
-        連結總表位置：/tw/dsc/assets/EventEnd/db.json
+ <!--活動結束-索取資料banner開始-->
+  <!-- 
+        【活動截止Banner】
         end-date：活動日期
-        page：文宣編號
+        id：資料下載網址參數(ID)
     -->
-    <div id="endBanner"><Event-end end-date="2020/03/27" page="WB002783" :url-map="urlMap"></Event-end></div>
-    <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&amp;flags=gated"></script>
-    <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/tw/dsc/assets/EventEnd/eventEnd.js"></script>
-<!--結束-->
+  <div id="endBanner">
+    <Event-end end-date="2020/03/20" id="2146"></Event-end>
+  </div>
+  <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&amp;flags=gated"></script>
+  <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
+  <script src="/tw/dsc/assets/axios.min.js"></script>
+  <script src="/tw/dsc/assets/EventEnd2/eventEnd.js"></script>
+  <!--結束-->
 </body>
 </html>

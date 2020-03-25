@@ -82,17 +82,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </tr>
 </table>
 <!--活動結束-索取資料banner開始-->
-    <!-- 
-        【活動截止Banner】
-        連結總表位置：/tw/dsc/assets/EventEnd/db.json
+  <!-- 
+        【線上活動截止Banner】
         end-date：活動日期
-        page：文宣編號
+        id：資料下載網址參數(ID)
     -->
-<div id="endBanner"><Event-end end-date="2020/03/18" page="WB002899" :url-map="urlMap"></Event-end></div>
-    <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&amp;flags=gated"></script>
-    <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/tw/dsc/assets/EventEnd/eventEnd.js"></script>
-<!--結束-->
+  <div id="endBanner">
+    <Event-end end-date="2020/03/18" id="2182"></Event-end>
+  </div>
+  <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&amp;flags=gated"></script>
+  <script src="/tw/dsc/assets/vuejs/vue-all-dev.js"></script>
+  <script src="/tw/dsc/assets/axios.min.js"></script>
+  <script src="/tw/dsc/assets/EventEnd2/eventEnd.js"></script>
+  <!--結束-->
+
 </body>
 </html>
