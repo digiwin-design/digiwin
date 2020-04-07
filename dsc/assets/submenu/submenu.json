@@ -780,8 +780,19 @@
                 "url": "seminar"
             },
             {
-                "text": "代理同業經驗分享",
-                "url": "WB00280101_case"
+                "text": "成功案例",
+                "url": "javascript:;",
+                "dropdowns": [
+                    {
+                        "text": "歐亞科技",
+                        "url": "WB00280101_case2",
+                        "target": "_blank"
+                    },
+                    {
+                        "text": "其他案例",
+                        "url": "WB00280101_case"
+                    }
+                ]
             },
             {
                 "text": "聯絡我們",
@@ -962,7 +973,7 @@
         ]
     },
     {
-        "id": "WB002741",
+        "id": "WB002741old",
         "title": "勞基法新修法",
         "menus": [
             {
@@ -1006,7 +1017,7 @@
         ]
     },
      {
-        "id": "WB002741b",
+        "id": "WB002741",
         "title": "人資相關法令",
         "menus": [
             {
@@ -1015,23 +1026,23 @@
             },
             {
                 "text": "勞動事件法",
-                "url": "WB00274101_2"
+                "url": "law"
             },
             {
                 "text": "因應勞檢",
-                "url": "WB00274101_3"
+                "url": "respond"
             },
             {
                 "text": "解決方案",
-                "url": "WB00274101_4"
+                "url": "solution"
             },
             {
                 "text": "行動應用",
-                "url": "WB00274101_5"
+                "url": "mobile"
             },
             {
                 "text": "輔導案例",
-                "url": "WB00274101_6"
+                "url": "case"
             },
             {
                 "text": "聯絡我們",

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+main *, main *:before, main *:after {
+    box-sizing: content-box;
+}
+main #qaContent ul, main li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main #qaContent {
+  width: 980px;
+}
+main #qaContent h3 {
+  width: 1000px;
+  height: 340px;
+  text-indent: -9999px;
+}
+main #qaContent h3.qa_group_1 {
+  background: url(../images/law02.png) no-repeat;
+}
+main #qaContent ul.accordionPart {
+  margin: 10px 10px 50px 30px;
+}
+main #qaContent ul.accordionPart li {
+  border-bottom: solid 1px #e3e3e3;
+  padding-bottom: 12px;
+  margin-top: 12px;
+}
+main #qaContent ul.accordionPart li .qa_title {
+  background: url(../images/icon_q_a.png) no-repeat 0px 0px;
+  padding-left: 60px;
+  font-size: 19px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  line-height: 50px;
+  color: #000;
+  cursor: pointer;
+}
+main #qaContent ul.accordionPart li .qa_title p {
+  line-height: 1.6;
+}
+main #qaContent ul.accordionPart li .qa_title_on {
+  text-decoration: underline;
+  background: url(../images/icon_q_a2.png) no-repeat 0px 0px;
+}
+main #qaContent ul.accordionPart li .qa_content {
+  margin: 15px 0 15px 0;
+  width: 850px;
+  background: url(../images/icon_q_a.png) no-repeat 0px -150px;
+  padding-left: 60px;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  color: #363636;
+  line-height: 50px;
+}
+main #qaContent ul.accordionPart li .qa_content p {
+  line-height: 1.5;
+}
