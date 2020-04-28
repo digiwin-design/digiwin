@@ -1,9 +1,9 @@
 {
     "latest": {
         "title": "數位應用價值講堂",
-        "subtitle": "2020鼎新企業高峰線上年會",
-        "content": "因應疫情致全球供應鏈遭受攻擊，企業面對市場環境「不確定性」加劇，該如何快速應變、強化免疫力，將危機化為轉機！邀請產官學專家開講，抗疫系列線上直播，免費報名！",
-        "link": "/tw/dsc/activity/MFT/WB003030/WB00303000_index.html"
+        "subtitle": "疫情衝擊下，以思維決策翻轉經營困境",
+        "content": "3天轉型網購經營，5天訂單提升40%！在新冠肺炎衝擊下，「威斯汀烘焙」是怎麼做到的？從門市轉型網購經營、從消費者需求再出發、重新塑整企業營運！",
+        "link": "https://www.digiwin.com/tw/dsc/activity/RTL/WB003060/WB00306001.html"
     },
     "category": [
         {
@@ -28,20 +28,20 @@
             "tags": ["數位應用價值", "管理議題"]
         },
         {
-            "video": "https://youtu.be/qvh57vmnFEU",
-            "tags": ["數位應用價值", "備料政策"]
+            "video": "https://youtu.be/uwPo1UPONOE",
+            "tags": ["遠距會議", "居家辦公", "新冠肺炎"]
         },
         {
-            "video": "https://youtu.be/kt0RV1RtpZk",
-            "tags": ["美中貿易戰", "數位化轉型"]
+            "video": "https://youtu.be/rlh2GXqeVa8",
+            "tags": ["數位應用管理", "HR", "新冠肺炎"]
         },
         {
             "video": "https://youtu.be/1GfHtDT0vaw",
             "tags": ["新零售", "全域營銷"]
         },
         {
-            "video": "https://youtu.be/u7BGwQ4pY2k",
-            "tags": ["新零售", "全域營銷"]
+            "video": "https://youtu.be/vIEXbzwIAy4",
+            "tags": ["數位轉型", "工業4.0"]
         }
     ],
     "videoList": [
@@ -127,12 +127,30 @@
             "linkText": "直播活動回看"
         },
         {
+            "category": 1,
+            "titleType": "數位轉型<br>趨勢講堂",
+            "titleName": "2020鼎新企業高峰線上年會",
+            "contentText": "因應疫情致全球遭受衝擊，企業面對市場環境「不確定性」加劇，企業該如何快速應變、強化免疫力？特別規劃從經濟面、營運面、產業面、職能面規劃多場線上直播，邀您一同參與！",
+            "imgUrl": "list14.jpg",
+            "link": "/tw/dsc/activity/MFT/WB003030/WB00303000_index.html",
+            "linkText": "直播活動回看"
+        },
+        {
             "category": 2,
             "titleType": "智慧工廠<br>線上參訪",
             "titleName": "君牧塑膠線上參訪",
             "contentText": "由標竿企業轉型團隊現身說法，從轉型實證分享、各站點導覽解說、智能方案實證經驗分享交流，帶您走進製造現場，看見「傳統產業」逐步實現「智慧工廠」的轉型之路。",
             "imgUrl": "list12.jpg",
             "link": "/tw/activity/1964.html",
+            "linkText": "案例影片及講義下載"
+        },
+        {
+            "category": 2,
+            "titleType": "智慧工廠<br>線上參訪",
+            "titleName": "力肯實業線上參訪(金屬業)",
+            "contentText": "手工具產業市場越來越競爭，如開發中國家產業的迅速發展，持續對我國造成威脅，如何透過數據應用做到精進管理，提升營運體質，找到抗衡未來不確定性的企業運營效能呢？",
+            "imgUrl": "list16.jpg",
+            "link": "/tw/activity/2247.html",
             "linkText": "案例影片及講義下載"
         },
         {
@@ -160,6 +178,15 @@
             "contentText": "由專家顧問解析碩陽電機進行價值交付管理升級的契機、瓶頸與成功關鍵為何？剖析存貨管理之目的，以及運用動態存貨調控流程的實證作為和成效！",
             "imgUrl": "list13.jpg",
             "link": "/tw/activity/2078.html",
+            "linkText": "直播活動回看"
+        },
+        {
+            "category": 3,
+            "titleType": "數位應用<br>價值講堂",
+            "titleName": "工程業專案管理全指南！",
+            "contentText": "工程業專案執行過程中，如何在價格、品質、技術、服務間取捨，擬定適切的經營發展策略，一直都是經營者的重要挑戰。面對不同專案，工程業應如何活用資源確保利潤？",
+            "imgUrl": "list15.jpg",
+            "link": "/tw/activity/2168.html",
             "linkText": "直播活動回看"
         }
     ]

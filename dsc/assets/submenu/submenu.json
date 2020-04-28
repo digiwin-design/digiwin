@@ -489,6 +489,10 @@
                     {
                         "text": "庫存方案",
                         "url": "inventory"
+                    },
+                    {
+                        "text": "費用控管",
+                        "url": "cost_control"
                     }
                 ]
             },

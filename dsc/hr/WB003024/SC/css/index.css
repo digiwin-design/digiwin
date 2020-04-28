@@ -43,12 +43,14 @@ section {
     min-width: 1200px;
     max-width: 1920px;
     font-size: 0;
+    margin: 0 auto;
 }
 .container {
     position: relative;
     width: 1200px;
     margin: 0 auto;
 }
+
 /*banner*/
 #banner{
     position: relative;

@@ -53,10 +53,12 @@ body { font-size:100%;}
 }
 /*▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ 內容 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃*/
 
-.a1_p2 .a1_title_main,.a1_p3 .a1_title_main,.a1_p4 .a1_title_main,.a1_p5 .a1_title_main,.a1_p6 .a1_title_main {
+.a1_p0 .a1_title_main,.a1_p2 .a1_title_main,.a1_p3 .a1_title_main,.a1_p4 .a1_title_main,.a1_p5 .a1_title_main,.a1_p6 .a1_title_main {
     padding: 60px 0 25px;
     font-size: 36px;
+    line-height: 1.5
 }
+.a1_p0 {background-color: #e8fdf9;background-image: url("../images/solution/p0_bg.png");background-position: center top;}
 .orange_block {
     font-size: 24px;
     background-color: #f27c25;
@@ -65,6 +67,36 @@ body { font-size:100%;}
     display: inline-block;
     margin-top: 30px;
 }
+
+.orange_block:hover {
+
+    background-color: #ff903f;
+
+}
+.a1_p0 .green_block {
+    font-size: 24px;
+    background-color: #3aaa8c;
+    color: #fff !important;
+    padding: 25px 65px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right:50px; 
+}
+.green_block {
+    font-size: 24px;
+    background-color: #3aaa8c;
+    color: #fff !important;
+    padding: 25px 65px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.green_block:hover {
+
+    background-color: #32c69e;
+
+}
+
 
 .a1_p3 {background-color: #ffeac2;}
 .p3_block_wrap * {
@@ -270,10 +302,40 @@ a.p4_link {
 	.p3_block {    max-width: 142px;    margin: 0 10px;}
 	.p3_block p {    font-size: 20px;}
 	.a1_tab1 {    margin: 60px 20px;}
+    .a1_p0 .green_block {
+    font-size: 24px;
+    background-color: #3aaa8c;
+    color: #fff !important;
+    padding: 25px 65px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right:0px; 
+}
 	
 }
 
 @media screen and (max-width: 768px) {	
+.a1_p0 .orange_block {
+    margin: 30px 10px 0;
+    width: 90%;
+    height: 70px;
+    line-height: 70px;
+    padding: 0;
+} 
+.a1_p0 .green_block {
+    margin: 30px 10px 0;
+    width: 90%;
+    height: 70px;
+    line-height: 70px;
+    padding: 0;
+}
+.a1_p2 .orange_block {
+    margin: 30px 10px 0;
+    width: 90%;
+    height: 70px;
+    line-height: 70px;
+    padding: 0;
+} 
 .a1_p1 {background-image: url("../images/solution/phone/top_bg.png");height: 420px; }	
 .a1_p1 .br_hide	{display: inline-block;}
 .a1_p1 .a1_title_main {    font-size: 36px;}
@@ -342,12 +404,25 @@ a.p4_link {
 .a1_p1 span {    font-size: 36px;}	
 .a1_p2 .a1_ver_web{display: none;}
 .a1_p2 .a1_ver_phone{display: inline-block}	
+
+.a1_p0 .a1_ver_web{display: none;}
+.a1_p0 .a1_ver_phone{display: inline-block} 
 	
 	
 .orange_block {    margin: 30px 10px 0;    padding: 25px 50px;}
+
+.a1_p0 .orange_block {
+    margin: 30px 10px 0;
+    width: 90%;
+    height: 70px;
+    line-height: 70px;
+    padding: 0;
+}   
+    
+
 .a1_p2 .orange_block {
     margin: 30px 10px 0;
-    width: 330px;
+    width: 90%;
     height: 70px;
     line-height: 70px;
     padding: 0;

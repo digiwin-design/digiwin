@@ -19,12 +19,12 @@
                             <div class="content">
                                 <div class="content__illust">
                                     <!-- 圖片 -->
-                                    <!-- <img src="" alt=""> -->
+                                    <img src="images\latest-illust.jpg" alt="記銘工業線上參訪">
 
                                     <!-- 影片 -->
-                                    <div class="video-container">
+                                    <!-- <div class="video-container">
                                        <iframe src="https://www.youtube.com/embed/Sd11MiQrdlU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="content__text">
                                     <h2><i class="logo sm"></i>{{result.latest.title}}</h2>

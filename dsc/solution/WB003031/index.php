@@ -584,7 +584,7 @@
             <div id="contactTxt" class="clearfix">
                 <h2>資料索取與諮詢</h2>
                 <div id="info">
-                    <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，謝謝！</p>
+                    <p>請填寫下方資料便於盡快為您服務。<br>若您需要立即的支援與服務，請直撥免付費專線 <span class="highLight">0800-888-162</span>，越南鼎捷<span class="highLight">+84-917438361</span>，謝謝！</p>
                     <ul>
                         <li class="line">
                             <a href="https://acho.tw/acho/f/aB6q9" target="_blank"></a>
@@ -654,7 +654,8 @@
                 <p class="thxparg"></p>
                 <p class="suprtCall">
                     <span>如需要立即的支援與服務，</span>
-                    <span>請直撥免付費專線 0800-888-162，謝謝！</span>
+                    <span>請直撥免付費專線 0800-888-162，</span>
+                    <span>越南鼎捷+84-91743836，謝謝！</span>
                 </p>
                 <p class="thxSourLoad1">
                     <a id="SourLoadLink" href="" target="_blank">資料下載</a>
