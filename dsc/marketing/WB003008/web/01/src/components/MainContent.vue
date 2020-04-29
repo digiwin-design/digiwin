@@ -6,7 +6,7 @@
                 <img src="title1.png" alt class="Img_s pc" />
                 <img src="title2.png" alt class="mImg_s m-mobile" />
                 <p class="Txt_p">最適合企業在東南亞發展使用的全方位ERP產品，符合在地稅制法規，滿足製造業行業特性，依企業各階段發展規模，提供高品質、高效益的東南亞在地化服務(越南、馬來西亞、泰國皆有營業據點)。</p>
-                <HeaderForm></HeaderForm>
+                <!-- <HeaderForm></HeaderForm> -->
             </div>
         </section>
         <!--视角-->
