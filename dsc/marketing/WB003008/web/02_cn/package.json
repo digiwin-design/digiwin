@@ -16,7 +16,7 @@
     "expose-loader": "^0.7.5",
     "jquery": "^3.4.1",
     "mobile-detect": "^1.4.3",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.10",
