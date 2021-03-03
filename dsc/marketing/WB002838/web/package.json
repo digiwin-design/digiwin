@@ -23,7 +23,7 @@
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "nuxt": "^2.4.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "stickyfill": "^1.1.1-strict",
